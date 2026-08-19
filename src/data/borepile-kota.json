@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "jakarta",
+    "name": "Jakarta",
+    "wilayah": "jabodetabek",
+    "image": "/imgs/borepile-gedung-universitas-paramadina.jpg",
+    "location": "Jakarta Pusat, Selatan, Barat, Timur, Utara",
+    "description": "Kontraktor bore pile terpercaya di Jakarta. Didukung tenaga ahli berpengalaman.",
+    "badge": "Bore Pile",
+    "url": "/jasa/bore-pile/jakarta/"
+  },
+  {
+    "slug": "bekasi",
+    "name": "Bekasi",
+    "wilayah": "jabodetabek",
+    "image": "/imgs/borepile-tambun-utara-bekasi.webp",
+    "location": "Bekasi, Cikarang, Tambun",
+    "description": "Melayani Bekasi, Cikarang, Tambun dengan kualitas terbaik.",
+    "badge": "Bore Pile",
+    "url": "/jasa/bore-pile/bekasi/"
+  },
+  {
+    "slug": "tangerang",
+    "name": "Tangerang",
+    "wilayah": "jabodetabek",
+    "image": "/imgs/pengecoran-beton.jpg",
+    "location": "Tangerang, BSD, Karawaci",
+    "description": "Melayani Tangerang, BSD, Karawaci dengan tenaga profesional.",
+    "badge": "Bore Pile",
+    "url": "/jasa/bore-pile/tangerang/"
+  },
+  {
+    "slug": "depok",
+    "name": "Depok",
+    "wilayah": "jabodetabek",
+    "image": "/imgs/borepile-dekat-gedung.jpg",
+    "location": "Depok & Sekitarnya",
+    "description": "Melayani seluruh wilayah Depok dengan tenaga ahli berpengalaman.",
+    "badge": "Bore Pile",
+    "url": "/jasa/bore-pile/depok/"
+  },
+  {
+    "slug": "bogor",
+    "name": "Bogor",
+    "wilayah": "jabodetabek",
+    "image": "/imgs/borepile-asrama-pesantren-az-zikra-bogor-agung-perkasa.jpg",
+    "location": "Bogor & Sekitarnya",
+    "description": "Solusi pondasi untuk tanah lunak di Bogor dengan kualitas terbaik.",
+    "badge": "Bore Pile",
+    "url": "/jasa/bore-pile/bogor/"
+  },
+  {
+    "slug": "bandung",
+    "name": "Bandung",
+    "wilayah": "jawa-barat",
+    "image": "/imgs/borepile-dekat-dinding.webp",
+    "location": "Bandung & Sekitarnya",
+    "description": "Melayani Bandung dan sekitarnya dengan tenaga profesional.",
+    "badge": "Bore Pile",
+    "url": "/jasa/bore-pile/bandung/"
+  },
+  {
+    "slug": "karawang",
+    "name": "Karawang",
+    "wilayah": "jawa-barat",
+    "image": "/imgs/borepile-dan-truk-molen.webp",
+    "location": "Karawang, KIIC, Suryacipta",
+    "description": "Melayani kawasan industri Karawang dengan tenaga profesional.",
+    "badge": "Bore Pile",
+    "url": "/jasa/bore-pile/karawang/"
+  },
+  {
+    "slug": "semarang",
+    "name": "Semarang",
+    "wilayah": "jawa-tengah",
+    "image": "/imgs/borepile-mesin-biru.webp",
+    "location": "Semarang & Sekitarnya",
+    "description": "Melayani Semarang dan sekitarnya dengan kualitas terbaik.",
+    "badge": "Bore Pile",
+    "url": "/jasa/bore-pile/semarang/"
+  },
+  {
+    "slug": "surabaya",
+    "name": "Surabaya",
+    "wilayah": "jawa-timur",
+    "image": "/imgs/borepile-pondasi-rumah.jpg",
+    "location": "Surabaya & Sekitarnya",
+    "description": "Melayani Surabaya dan sekitarnya dengan tenaga ahli berpengalaman.",
+    "badge": "Bore Pile",
+    "url": "/jasa/bore-pile/surabaya/"
+  }
+]

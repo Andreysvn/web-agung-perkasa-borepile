@@ -1,11 +1,372 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// src/pages/index.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Home">
+    
+    <!-- ===== HEADER / HERO ===== -->
+    <header class="header" id="home">
+        <div class="header-content">
+            <h1>Jasa Bore Pile & Strauss Pile</h1>
+            <p>Menyediakan jasa bore pile dan strauss pile pengalaman lebih dari 10 tahun di proyek, harga terjangkau dengan kualitas terbaik.</p>
+            <div class="header-buttons">
+                <a href="/harga/bore-pile-2026.html" class="btn-primary promo-btn">Harga & Kalkulator Bore Pile</a>
+                <a href="#services" class="btn-secondary">Layanan Kami</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== LAYANAN KAMI ===== -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Layanan Kami</h2>
+            <p class="section-subtitle">Kami menyediakan jasa pondasi untuk kebutuhan konstruksi Anda</p>
+            
+            <div class="services-grid">
+                <!-- Card 1: Borepile -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="/imgs/layanan-bore-pile-mesin-mini-crane.jpg" alt="Jasa Borepile" loading="lazy" decoding="async">
+                        <div class="service-hover-content">
+                            <h3>Detail Borepile</h3>
+                            <p>Klik untuk melihat spesifikasi teknis lengkap</p>
+                            <span class="service-hover-icon"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Jasa Borepile Mesin</h3>
+                        <p>Borepile pondasi dalam yang dibuat dengan metode pengeboran menggunakan mesin <strong>mini crane atau gawangan</strong>. Pondasi ini cocok untuk proyek sedang hingga besar saat kondisi tanah lunak, pengeboran tanah mencapai kedalaman 30m dengan diameter 30cm sampai 110cm.</p>
+                        <div class="service-features-collapse">
+                            <button class="features-toggle-btn" aria-label="Lihat spesifikasi borepile">
+                                <span class="toggle-text">Lihat Spesifikasi</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="features-content">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Kedalaman hingga 30 meter</li>
+                                    <li><i class="fas fa-check"></i> Diameter 30cm, 40cm, 50cm, 60cm, 70cm, 80cm, 90cm, 100cm, 110cm</li>
+                                    <li><i class="fas fa-check"></i> Cocok untuk kondisi tanah lunak dan proyek sedang hingga besar seperti rumah maupun gedung bertingkat</li>
+                                    <li><i class="fas fa-check"></i> Minim getaran dan dampak lingkungan</li>
+                                    <li><i class="fas fa-check"></i> Kapasitas beban tinggi</li>
+                                </ul>
+                                <div class="service-tech-specs">
+                                    <h4>Spesifikasi Teknis:</h4>
+                                    <div class="specs-grid">
+                                        <div class="spec-item"><i class="fas fa-ruler-combined"></i><span>Diameter: 30-110cm</span></div>
+                                        <div class="spec-item"><i class="fas fa-tachometer-alt"></i><span>Kedalaman: hingga 30m</span></div>
+                                        <div class="spec-item"><i class="fas fa-weight-hanging"></i><span>Beban: 50-200 ton</span></div>
+                                        <div class="spec-item"><i class="fas fa-clock"></i><span>Waktu: 2-4 titik/hari</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-service-quote">Minta Penawaran</a>
+                    </div>
+                </div>
+                
+                <!-- Card 2: Strauss Pile -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="/imgs/hasil-lubang-borepile.jpg" alt="Jasa Strauss Pile" loading="lazy" decoding="async">
+                        <div class="service-hover-content">
+                            <h3>Detail Strauss Pile</h3>
+                            <p>Klik untuk melihat spesifikasi teknis lengkap</p>
+                            <span class="service-hover-icon"><i class="fas fa-search-plus"></i></span>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Jasa Strauss Pile</h3>
+                        <p>Strauss pile adalah pondasi dalam dengan metode <strong>pengeboran secara manual</strong> dengan sistem <strong>bor tangan yaitu menggunakan tenaga manusia</strong>. Pondasi ini cocok untuk proyek kecil hingga menengah dengan kedalaman hingga 10 meter dan diameter 20cm-40cm.</p>
+                        <div class="service-features-collapse">
+                            <button class="features-toggle-btn" aria-label="Lihat spesifikasi strauss pile">
+                                <span class="toggle-text">Lihat Spesifikasi</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="features-content">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Kedalaman hingga 10 meter</li>
+                                    <li><i class="fas fa-check"></i> Diameter 20cm, 25cm, 30cm, 40cm</li>
+                                    <li><i class="fas fa-check"></i> Cocok untuk area sempit dan terbatas</li>
+                                    <li><i class="fas fa-check"></i> Biaya lebih ekonomis untuk proyek kecil seperti rumah tinggal maupun bangunan kecil lainnya</li>
+                                    <li><i class="fas fa-check"></i> Getaran hampir tidak ada, minim dampak lingkungan</li>
+                                </ul>
+                                <div class="service-tech-specs">
+                                    <h4>Spesifikasi Teknis:</h4>
+                                    <div class="specs-grid">
+                                        <div class="spec-item"><i class="fas fa-ruler-combined"></i><span>Diameter: 20-40cm</span></div>
+                                        <div class="spec-item"><i class="fas fa-tachometer-alt"></i><span>Kedalaman: hingga 10m</span></div>
+                                        <div class="spec-item"><i class="fas fa-weight-hanging"></i><span>Beban: 10-30 ton</span></div>
+                                        <div class="spec-item"><i class="fas fa-clock"></i><span>Waktu: 1-3 titik/hari</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-service-quote">Minta Penawaran</a>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-center mt-2">
+                <a href="/jasa/index.html">Lihat detail harga bore pile untuk wilayah Anda →</a>
+            </p>
+            
+            <div class="service-cta">
+                <button id="compareServicesBtn" class="btn-secondary" aria-label="Bandingkan layanan borepile dan strauss pile">
+                    <i class="fas fa-balance-scale"></i> Bandingkan Layanan
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HARGA BORE PILE ===== -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Harga Bore Pile Terbaru 2026</h2>
+            <p class="section-subtitle">Harga berdasarkan diameter dan kedalaman pengeboran</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="/imgs/borepile-meruya-jakarta.jpg" alt="Harga Bore Pile 2026" loading="lazy">
+                    <div class="project-info">
+                        <h3>Harga Bore Pile 2026 & Kalkulator</h3>
+                        <p>Estimasi biaya bore pile diameter 30-100cm. Hitung biaya bore pile menggunakan kalkulator otomatis yang kami sediakan.</p>
+                        <a href="/harga/bore-pile-2026.html" class="btn btn-primary">Lihat Harga & Kalkulator →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/imgs/borepile-mesin-biru.jpg" alt="Harga Bore Pile Diameter 30cm" loading="lazy">
+                    <div class="project-info">
+                        <h3>Harga Bore Pile Diameter 30cm</h3>
+                        <p>Khusus untuk rumah 1-2 lantai. Harga mulai dari Rp120.000/m (mesin) & Rp70.000/m (manual atau strauss pile).</p>
+                        <a href="/harga/bore-pile-30cm.html" class="btn btn-primary">Lihat Harga & Kalkulator →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PORTOFOLIO ===== -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portofolio Kami</h2>
+            <p class="section-subtitle">Beberapa proyek yang telah kami selesaikan</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item"><img src="/imgs/borepile-gedung-universitas-paramadina.jpg" alt="Proyek bore pile mini crane untuk gedung Universitas Paramadina di Kecamatan Cipayung, Jakarta Timur" loading="lazy"><div class="portfolio-overlay"><h3>Proyek Gedung Universitas Paramadina</h3><p>Kec. Cipayung, Jakarta Timur - 72 titik</p><a href="/imgs/borepile-gedung-universitas-paramadina.jpg" class="btn-portfolio">Lihat Detail</a></div></div>
+                <div class="portfolio-item"><img src="/imgs/bore-pile-rumah-di-pik.jpg" alt="Proyek bore pile mini crane untuk rumah di Pantai Indah Kapuk, Jakarta Utara" loading="lazy"><div class="portfolio-overlay"><h3>Proyek Bangunan PIK</h3><p>Jakarta Utara - 27 titik</p><a href="/imgs/bore-pile-rumah-di-pik.jpg" class="btn-portfolio">Lihat Detail</a></div></div>
+                <div class="portfolio-item"><img src="/imgs/borepile-meruya-jakarta.webp" alt="Proyek bore pile mini crane untuk bangunan di Puri Kembangan, Jakarta Barat" loading="lazy"><div class="portfolio-overlay"><h3>Proyek Puri Kembangan</h3><p>Jakarta Barat - 35 titik</p><a href="/imgs/borepile-meruya-jakarta.jpg" class="btn-portfolio">Lihat Detail</a></div></div>
+                <div class="portfolio-item"><img src="/imgs/borepile-asrama-pesantren-az-zikra-bogor-agung-perkasa.jpg" alt="Proyek bore pile mini crane untuk bangunan pesantren di samping masjid AZ Zikra di Gunung Sindur, Bogor" loading="lazy"><div class="portfolio-overlay"><h3>Proyek Asrama Pesantren AZ Zikra</h3><p>Gunung Sindur, Bogor - Ø30, kedalaman 8m, 80 titik</p><a href="/imgs/borepile-asrama-pesantren-az-zikra-bogor-agung-perkasa.jpg" class="btn-portfolio">Lihat Detail</a></div></div>
+                <div class="portfolio-item"><img src="/imgs/borepile-di-pinggir-sungai.jpg" alt="Proyek bore pile mini crane di samping sungai untuk pembuatan jembatan kecil" loading="lazy"><div class="portfolio-overlay"><h3>Proyek Jembatan</h3><p>12 titik</p><a href="/imgs/borepile-di-pinggir-sungai.jpg" class="btn-portfolio">Lihat Detail</a></div></div>
+                <div class="portfolio-item"><img src="/imgs/pengecoran-beton-borepile.webp" alt="Proses pengecoran bore pile di Pulo Gadung, Jakarta Timur" loading="lazy"><div class="portfolio-overlay"><h3>Proses pengecoran</h3><p>43 titik</p><a href="/imgs/pengecoran-beton-borepile.webp" class="btn-portfolio">Lihat Detail</a></div></div>
+            </div>
+            <div class="portfolio-cta"><a href="/galeri/gallery.html" class="btn-primary">Lihat foto proyek Lainnya</a></div>
+        </div>
+    </section>
+
+    <!-- ===== TENTANG KAMI ===== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Tentang Kami</h2>
+                <p class="lead">Agung Perkasa Borepile adalah spesialis pengeboran pondasi yang telah berpengalaman lebih dari 10 tahun dalam menyediakan jasa borepile dan strauss pile untuk berbagai proyek konstruksi.</p>
+                <p>Kami memiliki tim ahli yang berpengalaman dan peralatan modern untuk menjamin kualitas pekerjaan yang maksimal. Setiap proyek kami kerjakan dengan standar keselamatan dan kualitas yang sesuai.</p>
+                <div class="highlight-box"><p>"Pondasi yang kuat menentukan umur bangunan. Itulah mengapa banyak kontraktor mempercayakan proyek konstruksi mereka pada keahlian kami."</p></div>
+                
+                <div class="about-expert-box">
+                    <i class="fas fa-user-tie"></i>
+                    <div>
+                        <h3>Dipimpin oleh Tim Berpengalaman</h3>
+                        <p>Agung Perkasa dikelola langsung oleh praktisi pondasi dengan pengalaman lebih dari 10 tahun di lapangan. Setiap proyek dikerjakan langsung oleh tim ahli kami yang sangat berpengalaman dalam pembuatan pondasi bore pile & strauss pile.</p>
+                    </div>
+                </div>
+                
+                <div class="about-features">
+                    <div class="feature-item"><i class="fas fa-tools feature-icon"></i><div class="feature-text"><h4>Memakai alat yang baik</h4><p>Memakai mesin bor berkualitas dan terawat</p></div></div>
+                    <div class="feature-item"><i class="fas fa-medal feature-icon"></i><div class="feature-text"><h4>Tim Ahli</h4><p>Memiliki tim ahli dan berpengalaman dalam pembuatan pondasi</p></div></div>
+                    <div class="feature-item"><i class="fas fa-award feature-icon"></i><div class="feature-text"><h4>Komitmen Kualitas</h4><p>Satu-satunya kontraktor borepile dengan garansi 6 tahun</p></div></div>
+                    <div class="feature-item"><i class="fas fa-check-circle feature-icon"></i><div class="feature-text"><h4>Berpengalaman</h4><p>Sudah menyelesaikan berbagai proyek selama 10 tahun lebih</p></div></div>
+                    <div class="feature-item"><i class="fas fa-bolt feature-icon"></i><div class="feature-text"><h4>Efisiensi waktu</h4><p>Pengerjaan lebih cepat dan tetap berkualitas karena didukung tim ahli</p></div></div>
+                </div>
+                <a href="#contact" class="cta-button">Tanya Gratis ke Owner pondasi Kami <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="about-image">
+                <img src="/imgs/perakitan-besi-tulangan.jpg" alt="Tim Ahli Pondasi Kami" class="featured-image" loading="lazy">
+                <div class="image-badge"><div class="badge-number">10+</div><div class="badge-text">Tahun Berpengalaman</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+            <p class="section-subtitle">Temukan jawaban untuk pertanyaan umum tentang layanan kami</p>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" aria-label="Jawaban perbedaan borepile dan strauss pile">Apa perbedaan utama antara borepile dan strauss pile? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p><strong>Borepile</strong> menggunakan mesin bor dan alat khusus (mini crane, gawangan, maupun hidrolik seperti SANY), kedalaman hingga 30m (alat SANY mudah menembus bebatuan dan lapisan tanah keras), diameter bisa 30-110cm. <strong>Strauss pile</strong> menggunakan bor manual (menggunakan tenaga manusia), kedalaman hingga 10m, diameter 20-40cm. Perbedaan utamanya adalah borepile menggunakan alat berat sedangkan strauss pile menggunakan tenaga manusia, proses pengerjaannya tetap sama yaitu pengeboran, perakitan besi tulangan, dan pengecoran beton langsung di area proyek (tidak seperti tiang pancang).</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-label="Jawaban kelebihan dan kekurangan borepile">Apa kelebihan dan kekurangan borepile? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p><strong>Kelebihan:</strong> Kapasitas beban tinggi (mampu menahan berat bangunan), cocok tanah lunak, kedalaman hingga 30m, minim getaran tanah. <strong>Kekurangan:</strong> Biaya lebih tinggi, perlu area luas untuk mobilisasi alat (mini crane).</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-label="Jawaban kisaran biaya borepile">Berapa kisaran biaya para jasa borepile dan strauss pile? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p><strong>Harga terbaru 2026:</strong> Borepile mesin mulai Rp120.000/m, Borepile manual mulai Rp75.000/m. Estimasi biaya dapat dihitung menggunakan kalkulator di artikel kami</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-label="Jawaban lama waktu pengerjaan">Berapa lama waktu pengerjaan untuk menyelesaikan pondasi bore pile atau strauss pile? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Borepile: 2-4 titik/hari. Strauss Pile: 1-3 titik/hari. Untuk 15 titik borepile,Diameter 30cm estimasi 1 minggu. Kami menyediakan layanan kalkulator untuk menghitung estimasi biaya dan waktu pengerjaan, cek kalkulator kami di artikel "harga bore pile diameter 30cm"</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Apa perbedaan bore pile dengan tiang pancang (pile driving)? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p><strong>Perbedaan utama:</strong></p>
+                        <ul>
+                            <li><strong>Cara pemasangan:</strong> Bore pile dengan pengeboran (minim getaran), tiang pancang dengan pemukulan (getaran besar).</li>
+                            <li><strong>Kedalaman:</strong> Bore pile bisa mencapai 30m, tiang pancang maksimal 15-20m.</li>
+                            <li><strong>Getaran:</strong> Bore pile minim getaran (aman untuk bangunan sekitar), tiang pancang getaran besar (bisa merusak bangunan tetangga).</li>
+                            <li><strong>Biaya:</strong> Bore pile lebih mahal, tiang pancang lebih murah.</li>
+                            <li><strong>Cocok untuk:</strong> Bore pile untuk tanah lunak & area padat, tiang pancang untuk tanah keras & area luas.</li>
+                        </ul>
+                        <p><strong>Kesimpulan:</strong> Untuk proyek di pemukiman padat atau tanah lunak, bore pile lebih aman. Untuk proyek di tanah keras dengan area luas, tiang pancang bisa jadi pilihan ekonomis.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Apakah bore pile aman untuk bangunan tetangga sekitar saya? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p><strong>Sangat aman.</strong> Bore pile menggunakan metode pengeboran, bukan pemukulan seperti tiang pancang. Jadi getaran yang dihasilkan sangat sedikit sehingga tidak merusak bangunan di sekitarnya. Bore pile berbeda dengan tiang pancang yang menghasilkan getaran besar dan bisa menyebabkan tanah bergetar dan merusak bangunan sekitar.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Apakah wajib ada data sondir sebelum bore pile? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p><strong>SANGAT WAJIB.</strong> Data sondir (soil test) sangat penting untuk menentukan kedalaman bore pile yang tepat untuk mencapai tanah keras atau kedalaman yang diperlukan. Tanpa data sondir, kekuatan pondasi bangunan tidak dapat dijamin.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Mana yang lebih baik untuk rumah 2 lantai: bore pile atau tiang pancang? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p><strong>Kami lebih merekomendasikan bore pile.</strong> Karena: (1) Tidak mengganggu bangunan sekitar karena minimnya getaran, (2) Tidak terlalu menimbulkan polusi suara yang sangat berisik dan mengganggu tetangga sekitar, (3) Bisa mencapai tanah keras di kedalaman yang lebih dalam, (4) Lebih aman untuk tanah lunak di Jakarta yang sering mengalami penurunan tanah. Tiang pancang hanya cocok jika tanah sudah keras di kedalaman dangkal dan area proyek luas.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Apakah bore pile untuk rumah 1 lantai terlalu berlebihan? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p><strong>Tidak berlebihan.</strong> Karena rumah 1 lantai di tanah lunak atau bekas rawa, bore pile diameter 30cm dengan kedalaman 4-6 meter sudah cukup untuk menahan beban bangunan (biasanya sering memakai strauss pile). Harga bore pile manual/strauss pile mulai dari Rp65.000/m, sangat terjangkau untuk rumah 1 lantai di jakarta. Keuntungan lainnya memakai borepile manual (strauss pile) adalah sangat sedikit menimbulkan getaran tanah dan polusi suara.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Apakah Agung Perkasa melayani proyek di luar Jakarta? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Benar. Kami melayani seluruh wilayah Jabodetabek (Jakarta, Bekasi, Bogor, Depok, Tangerang) dan seluruh wilayah di Pulau Jawa.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Apakah ada survei lokasi gratis? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Ya. Kami menyediakan konsultasi dan survei lokasi untuk wilayah Jabodetabek. Hubungi tim Agung Perkasa Borepile untuk penjadwalan survei.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Berapa diameter bore pile yang cocok untuk rumah tinggal? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Untuk rumah 1–2 lantai umumnya menggunakan diameter 20–30 cm. Namun ukuran yang tepat harus ditentukan berdasarkan hasil sondir dan perhitungan struktur bangunan.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Bagaimana cara mendapatkan penawaran harga bore pile? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>Anda cukup mengirimkan lokasi proyek, gambar kerja, dan data sondir. Tim Agung Perkasa Borepile akan membantu membuat penawaran harga yang sesuai.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KONTAK ===== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-info">
+                <h2 class="section-title">Hubungi Kami</h2>
+                <p>Silakan hubungi kami untuk konsultasi gratis atau penawaran proyek Anda.</p>
+                <div class="contact-details">
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h3>Alamat</h3><p>Jl. Sunter Muara II, RT17/RW05, Sunter Agung, Kec. Tj. Priok, Jkt Utara, DKI Jakarta 14350</p></div></div>
+                    <div class="contact-item"><i class="fas fa-phone-alt"></i><div><h3>Telepon</h3><p>+62 857 1027 7854</p></div></div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i><div><h3>Email</h3><p>admin@agungperkasaborepile.com</p></div></div>
+                    <div class="contact-item"><i class="fas fa-clock"></i><div><h3>Jam Operasional</h3><p>Senin - Minggu: 07.00 - 23.00 WIB</p></div></div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group"><label for="name">Nama Anda</label><input type="text" id="name" name="name" placeholder="Nama lengkap" required></div>
+                    <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="Alamat email" required></div>
+                    <div class="form-group"><label for="phone">Nomor Telepon</label><input type="tel" id="phone" name="phone" placeholder="Nomor telepon aktif" required></div>
+                    <div class="form-group"><label for="service">Jenis Layanan</label><select id="service" name="service" required><option value="">Pilih Layanan</option><option value="borepile">Jasa Borepile</option><option value="strauss">Jasa Strauss Pile</option><option value="consultation">Konsultasi</option><option value="other">Lainnya</option></select></div>
+                    <div class="form-group"><label for="message">Pesan</label><textarea id="message" name="message" rows="5" placeholder="Detail kebutuhan proyek Anda" required></textarea></div>
+                    <button type="submit" class="btn-primary">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAPS ===== -->
+    <section class="maps">
+        <div class="container">
+            <h2 class="section-title">Lokasi Kami</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1493743!2d106.8534975!3d-6.1493743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f53da64d7ca7%3A0x3586221410f9d181!2sAgung%20Perkasa%20Bore%20Pile!5e0!3m2!1sid!2sid!4v1622811397456!5m2!1sid!2sid&show_rating=true" 
+                    width="100%" 
+                    height="350" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    title="Google Maps Lokasi Agung Perkasa Borepile">
+                </iframe>
+            </div>
+            <div class="map-button">
+                <a href="https://maps.google.com/?q=Agung+Perkasa+Bore+Pile" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                   🗺️ Buka di Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ARTIKEL BLOG ===== -->
+    <section class="articles-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Artikel Blog</h2>
+                <p class="section-subtitle">Informasi penting seputar pondasi bore pile dan konstruksi</p>
+            </div>
+            
+            <div class="articles-grid">
+                <article class="article-card">
+                    <a href="/artikel/bore-pile-vs-strauss-pile.html" class="article-link">
+                        <div class="article-image">
+                            <img src="/imgs/borepile-dekat-dinding.webp" alt="Borepile vs Strauss Pile" loading="lazy">
+                            <span class="article-category">Perbandingan</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Borepile vs Strauss Pile</h3>
+                            <p class="article-excerpt">Perbandingan lengkap antara bore pile mesin dan strauss pile manual dari segi biaya, kedalaman, dan jenis proyek yang cocok.</p>
+                            <div class="article-meta">
+                                <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                <span class="article-read-more">Baca selengkapnya →</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="article-card">
+                    <a href="/artikel/borepile-vs-tiang-pancang.html" class="article-link">
+                        <div class="article-image">
+                            <img src="/imgs/hasil-lubang-borepile.webp" alt="Bore Pile vs Tiang Pancang" loading="lazy">
+                            <span class="article-category">Tips</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Bore Pile VS Tiang Pancang</h3>
+                            <p class="article-excerpt">Perbedaan mendasar antara bore pile dan tiang pancang, kelebihan, kekurangan, serta biaya yang perlu Anda persiapkan.</p>
+                            <div class="article-meta">
+                                <span class="article-date"><i class="far fa-calendar-alt"></i> Mei 2026</span>
+                                <span class="article-read-more">Baca selengkapnya →</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            
+            <div class="articles-cta">
+                <a href="/artikel/index.html" class="btn-articles-all">
+                    <i class="fas fa-newspaper"></i> Lihat Semua Artikel
+                </a>
+            </div>
+        </div>
+    </section>
+
+</BaseLayout>

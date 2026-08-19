@@ -1,0 +1,70 @@
+---
+// src/components/global/ScrollTop.astro
+---
+
+<button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas">
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<style>
+  .scroll-top {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: #e67e22;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  .scroll-top.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .scroll-top:hover {
+    background: #d35400;
+    transform: translateY(-3px);
+  }
+
+  @media (max-width: 768px) {
+    .scroll-top {
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+      bottom: 80px;
+      right: 16px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const scrollTopBtn = document.getElementById('scrollTop');
+    
+    if (scrollTopBtn) {
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.classList.add('active');
+        } else {
+          scrollTopBtn.classList.remove('active');
+        }
+      });
+
+      scrollTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  });
+</script>

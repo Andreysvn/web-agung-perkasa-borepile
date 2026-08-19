@@ -1,0 +1,121 @@
+[
+  {
+    "id": 1,
+    "category": "borepile",
+    "image": "/imgs/borepile-gedung-universitas-paramadina.jpg",
+    "label": "Universitas Paramadina",
+    "detail": "Bore pile mini crane Ø40cm di Cipayung, Jakarta Timur"
+  },
+  {
+    "id": 2,
+    "category": "proses",
+    "image": "/imgs/pengecoran-beton.jpg",
+    "label": "Pengecoran Beton",
+    "detail": "Proses pengecoran bore pile menggunakan truk molen"
+  },
+  {
+    "id": 3,
+    "category": "borepile",
+    "image": "/imgs/borepile-mini-crane-pantai-mutiara.jpeg",
+    "label": "Pantai Mutiara",
+    "detail": "Bore pile mini crane Ø30cm di Pantai Mutiara, Jakarta Utara"
+  },
+  {
+    "id": 4,
+    "category": "borepile",
+    "image": "/imgs/borepile-asrama-pesantren-az-zikra-bogor-agung-perkasa.jpg",
+    "label": "Asrama Pesantren AZ Zikra",
+    "detail": "Bore pile mini crane Ø40cm, kedalaman 8m, 80 titik di Gunung Sindur, Bogor"
+  },
+  {
+    "id": 5,
+    "category": "borepile",
+    "image": "/imgs/borepile-di-depan-mall-puri-indah-agung-perkasa.jpg",
+    "label": "Mall Puri Indah",
+    "detail": "Bore pile mini crane Ø40cm, kedalaman 9m, 38 titik di Jakarta Barat"
+  },
+  {
+    "id": 6,
+    "category": "borepile",
+    "image": "/imgs/bore-pile-rumah-green-mansion-jakarta-barat-agung-perkasa.jpeg",
+    "label": "Perumahan Green Mansion",
+    "detail": "Bore pile mini crane Ø30cm, kedalaman 12m, 58 titik di Jakarta Barat"
+  },
+  {
+    "id": 7,
+    "category": "borepile",
+    "image": "/imgs/bore-pile-rumah-di-pik.jpg",
+    "label": "Rumah PIK",
+    "detail": "Bore pile mini crane Ø30cm di Pantai Indah Kapuk, Jakarta Utara"
+  },
+  {
+    "id": 8,
+    "category": "borepile",
+    "image": "/imgs/bore-pile-mini-crane-dukuh-patra.jpeg",
+    "label": "Dukuh Patra",
+    "detail": "Bore pile mini crane metode dry boring Ø40cm di Jakarta Selatan"
+  },
+  {
+    "id": 9,
+    "category": "borepile",
+    "image": "/imgs/borepile-meruya-jakarta.jpg",
+    "label": "Puri Kembangan",
+    "detail": "Bore pile mini crane Ø40cm untuk rumah di Jakarta Barat"
+  },
+  {
+    "id": 10,
+    "category": "borepile",
+    "image": "/imgs/bore-pile-gading-serpong-medang-tangerang.jpeg",
+    "label": "Gading Serpong",
+    "detail": "Bore pile mini crane metode wash boring di Tangerang"
+  },
+  {
+    "id": 11,
+    "category": "borepile",
+    "image": "/imgs/borepile-mini-crane-dan-tiang-pancang.jpeg",
+    "label": "Serenade Lagoon",
+    "detail": "Bore pile mini crane di Serenade Lagoon III, Jakarta Utara"
+  },
+  {
+    "id": 12,
+    "category": "borepile",
+    "image": "/imgs/borepile-tambun-utara-bekasi.webp",
+    "label": "Tambun Utara",
+    "detail": "Bore pile mini crane Ø50cm di Bekasi"
+  },
+  {
+    "id": 13,
+    "category": "borepile",
+    "image": "/imgs/borepile-mangga-besar-jakarta.webp",
+    "label": "Mangga Besar",
+    "detail": "Bore pile mini crane Ø40cm di Jakarta Pusat"
+  },
+  {
+    "id": 14,
+    "category": "borepile",
+    "image": "/imgs/bore-pile-pantai-indah-kapuk-25-mei-2026.webp",
+    "label": "Proyek PIK",
+    "detail": "Bore pile mini crane Ø30cm di Jakarta Utara"
+  },
+  {
+    "id": 15,
+    "category": "proses",
+    "image": "/imgs/perakitan-besi-tulangan.jpg",
+    "label": "Perakitan Besi Tulangan",
+    "detail": "Proses perakitan besi sebelum pengecoran"
+  },
+  {
+    "id": 16,
+    "category": "proses",
+    "image": "/imgs/pengecoran-beton-borepile.webp",
+    "label": "Pengecoran Beton",
+    "detail": "Proses pengecoran menggunakan molen mini di Jakarta"
+  },
+  {
+    "id": 17,
+    "category": "strauss",
+    "image": "/imgs/hasil-lubang-borepile.webp",
+    "label": "Strauss Pile Manual",
+    "detail": "Strauss pile Ø30cm di Pondok Pinang, Jakarta Selatan"
+  }
+]
