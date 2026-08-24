@@ -1,0 +1,29 @@
+---
+// src/components/ui/CtaBar.astro — judul/subteks fix sesuai pilot; utama WA hijau + sekunder tel outline oranye
+import Icon from './Icon.astro';
+import config from '../../data/config.json';
+interface Props { waText: string }
+const { waText } = Astro.props;
+const waHref = `https://wa.me/${config.company.whatsapp}?text=${encodeURIComponent(waText)}`;
+---
+<section class="apx-ctabar">
+  <div class="apx-container apx-ctabar-inner">
+    <div>
+      <h2>Butuh bore pile untuk proyek Anda?</h2>
+      <p>Dapatkan penawaran harga bore pile 2026 terbaru</p>
+    </div>
+    <div class="apx-ctabar-actions">
+      <a href={waHref} class="apx-btn apx-btn-wa" target="_blank" rel="noopener noreferrer"><Icon name="whatsapp" size={18} /> Konsultasi Gratis via WA</a>
+      <a href={`tel:${config.company.phone.replace(/\s/g, '')}`} class="apx-btn apx-btn-outline"><Icon name="phone" size={16} /> {config.company.phone}</a>
+    </div>
+  </div>
+</section>
+<style>
+  .apx-ctabar { background: linear-gradient(135deg, var(--apx-navy), var(--apx-navy-2)); color: #fff; margin-block: 48px; }
+  .apx-ctabar-inner { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; padding-block: 36px; }
+  .apx-ctabar h2 { margin: 0 0 4px; font-size: clamp(20px, 3vw, 26px); font-weight: 800; }
+  .apx-ctabar p { margin: 0; color: rgb(255 255 255 / .75); }
+  .apx-ctabar-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .apx-ctabar-actions :global(.apx-btn-outline) { box-shadow: inset 0 0 0 2px var(--apx-orange); }
+  .apx-ctabar-actions :global(.apx-btn-outline:hover) { background: rgb(211 84 0 / .25); }
+</style>

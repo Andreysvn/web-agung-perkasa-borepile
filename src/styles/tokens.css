@@ -1,0 +1,21 @@
+:root {
+  --apx-navy: #0d2b52;
+  --apx-navy-2: #1a3a6e;
+  --apx-blue: #3498db;
+  --apx-orange: #d35400;
+  --apx-orange-2: #b84700;
+  --apx-wa: #25d366;
+  --apx-wa-2: #1da851;
+  --apx-tint: #f0f7ff;
+  --apx-bg: #ffffff;
+  --apx-text: #1e293b;
+  --apx-muted: #64748b;
+  --apx-border: #e2e8f0;
+  --apx-radius-sm: 8px;
+  --apx-radius: 12px;
+  --apx-radius-lg: 16px;
+  --apx-shadow-1: 0 1px 3px rgb(13 43 82 / .08);
+  --apx-shadow-2: 0 8px 24px rgb(13 43 82 / .12);
+  --apx-container: 1140px;
+  --apx-font: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+}

@@ -1,0 +1,73 @@
+---
+// src/components/global/v2/Footer.astro
+import Icon from '../../ui/Icon.astro';
+import config from '../../../data/config.json';
+---
+<footer class="apx-footer">
+  <div class="apx-container apx-footer-grid">
+    <div>
+      <h3>{config.siteName}</h3>
+      <p>Spesialis pondasi borepile mesin & manual dengan pengalaman lebih dari 10 tahun di JABODETABEK dan seluruh Pulau Jawa.</p>
+      <div class="apx-social">
+        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><Icon name="facebook" size={16} /></a>
+        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Icon name="instagram" size={16} /></a>
+      </div>
+    </div>
+    <div>
+      <h3>Layanan</h3>
+      <ul>
+        <li><a href="/jasa/bore-pile/">Jasa Bore Pile</a></li>
+        <li><a href="/jasa/strauss-pile/jakarta.html">Jasa Strauss Pile</a></li>
+        <li><a href="/jasa/bore-pile/">Jasa Bore Pile Mesin</a></li>
+        <li><a href="/jasa/strauss-pile/jakarta.html">Jasa Bore Pile Manual</a></li>
+        <li><a href="/harga/bore-pile-2026.html">Kalkulator Biaya Bore Pile</a></li>
+        <li><a href="/#contact">Konsultasi Pondasi Dalam</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Tentang Kami</h3>
+      <ul>
+        <li><a href="/#about">Tentang Kami</a></li>
+        <li><a href="/galeri/gallery.html">Galeri</a></li>
+        <li><a href="/artikel/">Blog Artikel</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Kontak</h3>
+      <ul>
+        <li><Icon name="map-pin" size={14} /> {config.company.address}</li>
+        <li><Icon name="phone" size={14} /> {config.company.phone}</li>
+        <li><Icon name="mail" size={14} /> {config.company.email}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="apx-footer-bottom">
+    <div class="apx-container">
+      <p>&copy; {new Date().getFullYear()} {config.siteName}. All Rights Reserved.</p>
+      <div class="apx-footer-links">
+        <a href="#">Kebijakan Privasi</a> |
+        <a href="#">Syarat & Ketentuan</a> |
+        <a href="/galeri/gallery.html">Galeri</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .apx-footer { background: var(--apx-navy); color: rgb(255 255 255 / .75); margin-top: 64px; font-size: .9rem; }
+  .apx-footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; padding-block: 48px 32px; }
+  .apx-footer h3 { color: #fff; font-size: 1rem; margin: 0 0 14px; font-weight: 800; }
+  .apx-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .apx-footer a { color: rgb(255 255 255 / .75); text-decoration: none; }
+  .apx-footer a:hover { color: #fff; }
+  .apx-footer li { display: flex; gap: 8px; align-items: baseline; }
+  .apx-footer li :global(svg) { flex-shrink: 0; color: var(--apx-blue); transform: translateY(2px); }
+  .apx-social { display: flex; gap: 10px; margin-top: 14px; }
+  .apx-social a { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: rgb(255 255 255 / .1); color: #fff; transition: background .2s ease; }
+  .apx-social a:hover { background: var(--apx-orange); }
+  .apx-footer-bottom { border-top: 1px solid rgb(255 255 255 / .12); padding-block: 14px; font-size: .78rem; color: rgb(255 255 255 / .5); text-align: center; }
+  .apx-footer-bottom p { margin: 0; }
+  .apx-footer-links { margin-top: 8px; }
+  .apx-footer-links a { color: rgb(255 255 255 / .5); margin-inline: 6px; }
+  .apx-footer-links a:hover { color: var(--apx-orange); }
+</style>

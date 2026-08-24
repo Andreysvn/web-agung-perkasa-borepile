@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenu.addEventListener('click', function() {
             this.classList.toggle('active');
             navMenu.classList.toggle('active');
+            this.setAttribute('aria-expanded', navMenu.classList.contains('active') ? 'true' : 'false');
             
             if (navMenu.classList.contains('active')) {
                 document.body.style.overflow = 'hidden';
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
                 navMenu.classList.remove('active');
+                    mobileMenu.setAttribute('aria-expanded', 'false');
                 document.body.style.overflow = '';
             });
         });

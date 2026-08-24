@@ -1,28 +1,89 @@
 ---
 // src/layouts/BaseLayout.astro
 import config from '../data/config.json';
+import {
+  organizationSchema as organizationSchemaBase,
+  websiteSchema as websiteSchemaBase,
+  localBusinessSchema as localBusinessSchemaBase,
+  schemaPhone
+} from '../lib/schema.js';
 import Navbar from '../components/global/Navbar.astro';
 import Footer from '../components/global/Footer.astro';
 import WhatsAppFloat from '../components/global/WhatsAppFloat.astro';
 import ScrollTop from '../components/global/ScrollTop.astro';
+import ApxStyles from '../components/global/v2/ApxStyles.astro';
+import NavbarV2 from '../components/global/v2/Navbar.astro';
+import FooterV2 from '../components/global/v2/Footer.astro';
+import WhatsAppFloatV2 from '../components/global/v2/WhatsAppFloat.astro';
+import ScrollTopV2 from '../components/global/v2/ScrollTop.astro';
 
 export interface Props {
   title: string;
+  titleOverride?: string;
+  ogTitle?: string;
+  twTitle?: string;
   description?: string;
   keywords?: string;
   image?: string;
   ogType?: string;
+  bodyClass?: string;
+  design?: 'legacy' | 'v2';
+  localBusinessOverride?: object;
+  organizationOverride?: object;
+  includeWebsiteSchema?: boolean;
 }
 
 const { 
   title, 
+  titleOverride,
+  ogTitle,
+  twTitle,
   description = config.meta.description, 
   keywords = config.meta.keywords,
   image = config.meta.ogImage,
-  ogType = 'website'
+  ogType = 'website',
+  bodyClass = '',
+  design = 'legacy',
+  localBusinessOverride,
+  organizationOverride,
+  includeWebsiteSchema = true
 } = Astro.props;
 
-const siteTitle = `${title} | ${config.siteName}`;
+const isV2 = design === 'v2';
+
+const siteTitle = titleOverride ?? `${title} | ${config.siteName}`;
+const headOgTitle = ogTitle ?? siteTitle;
+const headTwTitle = twTitle ?? siteTitle;
+
+const siteUrl = Astro.site ?? new URL(config.siteUrl);
+const canonicalUrl = new URL(Astro.url.pathname.replace(/index\.html$/, ''), siteUrl).href;
+
+const organizationSchema = organizationSchemaBase(
+  organizationOverride !== undefined ? organizationOverride : {
+    "alternateName": "Agung Perkasa Bore Pile",
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${config.siteUrl}/imgs/logo-agung-perkasa-transparan.png`
+    },
+    "description": config.company.description,
+    "telephone": schemaPhone,
+    "email": config.company.email
+  }
+);
+
+const websiteSchema = websiteSchemaBase({
+  "description": config.company.description,
+  "inLanguage": "id-ID"
+});
+
+const localBusinessSchema = localBusinessSchemaBase(localBusinessOverride ?? {
+  "description": config.company.description,
+  "priceRange": "Rp70.000 - Rp350.000",
+  "sameAs": [
+    config.company.social.facebook,
+    config.company.social.instagram
+  ]
+});
 ---
 
 <!DOCTYPE html>
@@ -35,7 +96,7 @@ const siteTitle = `${title} | ${config.siteName}`;
     
     <title>{siteTitle}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content={keywords} />
+    {keywords && <meta name="keywords" content={keywords} />}
     <meta name="author" content={config.siteName} />
     <meta name="robots" content="index, follow" />
     <meta name="google-site-verification" content="QjaIirR3-qW7bARIyez5S0_WPeMjPJSqn6tnK44ZYMo" />
@@ -45,7 +106,7 @@ const siteTitle = `${title} | ${config.siteName}`;
     <meta name="geo.placename" content="Indonesia" />
     
     <!-- ===== CANONICAL URL ===== -->
-    <link rel="canonical" href={Astro.url.href} />
+    <link rel="canonical" href={canonicalUrl} />
     
     <!-- ===== FAVICON ===== -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -55,11 +116,11 @@ const siteTitle = `${title} | ${config.siteName}`;
     <link rel="manifest" href="/site.webmanifest" />
     
     <!-- ===== OPEN GRAPH ===== -->
-    <meta property="og:title" content={siteTitle} />
+    <meta property="og:title" content={headOgTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
     <meta property="og:locale" content="id_ID" />
-    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={image} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -67,99 +128,47 @@ const siteTitle = `${title} | ${config.siteName}`;
     
     <!-- ===== TWITTER CARD ===== -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:title" content={headTwTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
     
     <!-- ===== PRECONNECT & DNS PREFETCH ===== -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-    <link rel="preconnect" href="https://unpkg.com" crossorigin />
+    {!isV2 && (
+      <>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+        <link rel="preconnect" href="https://unpkg.com" crossorigin />
+      </>
+    )}
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     
     <!-- ===== FONT AWESOME (Non-blocking) ===== -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+    {!isV2 && (
+      <>
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+      </>
+    )}
     
     <!-- ===== AREFHS ANALYTICS ===== -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
     
     <!-- ===== GLOBAL CSS ===== -->
-    <link rel="stylesheet" href="/css/style.css" />
+    {!isV2 && <link rel="stylesheet" href="/css/style.css" />}
+    {isV2 && (
+      <>
+        <link rel="preload" href="/fonts/plus-jakarta-sans-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+        <ApxStyles />
+      </>
+    )}
     
     <!-- ===== SCHEMA ORGANIZATION ===== -->
-    <script type="application/ld+json" set:html>
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": "https://agungperkasaborepile.com/#organization",
-        "name": "${config.siteName}",
-        "alternateName": "Agung Perkasa Bore Pile",
-        "url": "${config.siteUrl}/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "${config.siteUrl}/imgs/logo-agung-perkasa-transparan.png"
-        },
-        "description": "${config.company.description}",
-        "telephone": "${config.company.phone}",
-        "email": "${config.company.email}",
-        "sameAs": [
-          "${config.company.social.facebook}",
-          "${config.company.social.instagram}"
-        ]
-      }
-    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
     
     <!-- ===== SCHEMA WEBSITE ===== -->
-    <script type="application/ld+json" set:html>
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": "${config.siteUrl}/#website",
-        "name": "${config.siteName}",
-        "url": "${config.siteUrl}/",
-        "description": "${config.company.description}",
-        "publisher": {
-          "@id": "${config.siteUrl}/#organization"
-        },
-        "inLanguage": "id-ID"
-      }
-    </script>
+    {includeWebsiteSchema && <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />}
     
     <!-- ===== SCHEMA LOCAL BUSINESS ===== -->
-    <script type="application/ld+json" set:html>
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "@id": "${config.siteUrl}/#localbusiness",
-        "name": "${config.siteName}",
-        "url": "${config.siteUrl}/",
-        "parentOrganization": {
-          "@id": "${config.siteUrl}/#organization"
-        },
-        "image": "${config.siteUrl}/imgs/logo-agung-perkasa-transparan.png",
-        "description": "${config.company.description}",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Jl. Sunter Muara II, RT.17/RW.05, Sunter Agung",
-          "addressLocality": "Jakarta Utara",
-          "addressRegion": "DKI Jakarta",
-          "postalCode": "14350",
-          "addressCountry": "ID"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -6.1493743,
-          "longitude": 106.8534975
-        },
-        "telephone": "${config.company.phone}",
-        "priceRange": "Rp70.000 - Rp350.000",
-        "openingHours": ["Mo-Su 07:00-23:00"],
-        "sameAs": [
-          "${config.company.social.facebook}",
-          "${config.company.social.instagram}"
-        ]
-      }
-    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
     
     <!-- ===== GOOGLE TAG MANAGER ===== -->
     <script>
@@ -180,7 +189,7 @@ const siteTitle = `${title} | ${config.siteName}`;
     </script>
     
 </head>
-<body>
+<body class={bodyClass}>
     
     <!-- ===== GTM NOSCRIPT ===== -->
     <noscript>
@@ -191,7 +200,7 @@ const siteTitle = `${title} | ${config.siteName}`;
     <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
     
     <!-- ===== NAVBAR ===== -->
-    <Navbar />
+    {isV2 ? <NavbarV2 /> : <Navbar />}
     
     <!-- ===== MAIN CONTENT ===== -->
     <main id="main-content">
@@ -199,16 +208,16 @@ const siteTitle = `${title} | ${config.siteName}`;
     </main>
     
     <!-- ===== FOOTER ===== -->
-    <Footer />
+    {isV2 ? <FooterV2 /> : <Footer />}
     
     <!-- ===== WHATSAPP FLOAT ===== -->
-    <WhatsAppFloat />
+    {isV2 ? <WhatsAppFloatV2 /> : <WhatsAppFloat />}
     
     <!-- ===== SCROLL TOP ===== -->
-    <ScrollTop />
+    {isV2 ? <ScrollTopV2 /> : <ScrollTop />}
     
     <!-- ===== GLOBAL JS ===== -->
-    <script src="/js/script.js" defer></script>
+    {!isV2 && <script src="/js/script.js" defer></script>}
     
 </body>
 </html>

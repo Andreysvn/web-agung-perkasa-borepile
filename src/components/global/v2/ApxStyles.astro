@@ -1,0 +1,11 @@
+---
+// src/components/global/v2/ApxStyles.astro
+// Pakai ?raw + inline style (bukan import css biasa): Astro mem-bundle css dari modul yang
+// sekadar di-import BaseLayout ke SEMUA halaman legacy. String ?raw hanya tercetak saat
+// komponen ini benar-benar dirender (design="v2").
+import tokensCss from '../../../styles/tokens.css?raw';
+import baseCss from '../../../styles/base.css?raw';
+const apxCss = tokensCss + '\n' + baseCss;
+---
+
+<style is:global set:html={apxCss} />

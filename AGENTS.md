@@ -1,581 +1,88 @@
-# CLAUDE.md
+# AGENTS.md
 
-## Tentang Project
+Catatan: `CLAUDE.md` adalah salinan file ini. Jika isinya berbeda, ikuti file ini. `README.md` hanyalah boilerplate starter Astro — abaikan.
 
-Project ini adalah migrasi website **Agung Perkasa Borepile** dari website lama berbasis HTML, CSS, dan JavaScript menjadi website berbasis Astro.
+## Project
 
-Website lama adalah **source of truth**.
+Website **Agung Perkasa Borepile** (jasa bore pile & strauss pile, seluruh konten Bahasa Indonesia) di Astro. **Migrasi dari HTML legacy SELESAI** (2026-08-23, 33 halaman, terverifikasi identik dengan situs lama; sumber legacy masih bisa dilihat lewat riwayat git).
 
-Tujuan utama Claude adalah memigrasikan website ke Astro dengan hasil yang semirip mungkin dengan website lama.
+Fase sekarang: **pemeliharaan, optimasi, dan ekspansi**. Target pemilik:
 
-### PENTING
+- Optimasi teknikal & konten halaman existing — **prioritas halaman jasa** (banyak yang kontennya masih salinan legacy tipis).
+- **Ekspansi SEO lokal ke seluruh wilayah Jawa** — akan ada banyak halaman kota/area baru.
+- Halaman **jasa & harga rutin di-update**; **artikel baru berkala**.
+- Membangun sinyal **E-E-A-T**: konten terbaru, terlengkap, tepercaya di niche bore pile.
+- **Performa (prioritas pemilik 2026-08-24): web harus kencang & cepat** — dikerjakan TANPA mengubah tampilan/konten. Baseline pasca-revert v2: 8 file CSS ±235 KB + 8 JS ±103 KB semuanya unminified & berisi rule/kode tak terpakai; ditambah beban pihak ketiga (Font Awesome CDN, GTM, Ahrefs, Google Maps embed). Arah: minify/bersihkan CSS-JS, pangkas yang nganggur, kendalikan beban pihak ketiga; ukur dengan PageSpeed/CWV dulu biar prioritasnya jelas.
+- **Efisiensi perawatan lewat satu sumber data** — tanggal, harga, kontak, dan data apa pun yang berulang antar halaman wajib hidup di `src/data/*.json` / frontmatter (lihat pola `harga.json`), bukan di-hardcode per halaman. Konsolidasi boleh dilakukan bertahap selama output build tetap ringan dan konten terverifikasi tidak berubah (`tools/verify-renovasi.ps1` bisa dipakai sebagai alat banding sebelum-vs-sesudah).
 
-**Ini adalah project migrasi, bukan redesign.**
+Prinsip efisiensi wajib: **jangan membuat halaman baru dengan menyalin markup lama satu-satu**. Bangun/maintain sistem data-driven — satu entri data (JSON/frontmatter) → satu halaman lengkap dengan meta + schema. Rawat template sekali, semua halaman ikut.
 
-Jangan mengubah desain, konten, struktur visual, fungsi, URL, atau SEO tanpa instruksi eksplisit.
+## Renovasi desain (DIHENTIKAN sementara oleh pemilik, 2026-08-24)
 
----
+**Status: semua 33 halaman kembali memakai desain legacy.** Pemilik sudah cek visual pilot v2 dan tidak menyukainya, jadi `/harga/bore-pile-2026.html` dikembalikan ke desain lama penuh (halaman `.astro` mandiri ala halaman harga lainnya: CSS `/css/harga.css`, JS `/js/script.js` + `/js/harga-calculator.js` + injeksi `window.__PRICING__`, navbar/footer inline). Verifikasi pasca-revert: `tools/verify-renovasi.ps1` (title/desc/canonical/h1/h2-h3/JSON-LD) lolos semua dan teks terlihat 100% identik dengan snapshot pra-v2 (`%TEMP%\opencode\renovasi-snapshot\harga-bore-pile-2026-before.html`; snapshot juga tersalin aman sebagai acuan).
 
-# Aturan Utama Claude
+Konsekuensi yang berlaku sekarang:
 
-## 1. Jangan Menebak
+1. **Aset v2 DORMAN** — masih ada di repo tapi tidak direferensikan halaman mana pun, jangan dipakai/diperluas tanpa instruksi: `src/styles/tokens.css` + `base.css`, `public/fonts/plus-jakarta-sans-latin-var.woff2`, komponen `src/components/global/v2/*`, blok `src/components/ui/*`, port kalkulator `src/scripts/harga-calculator.ts`, wiring dual-mode di `BaseLayout`.
+2. **Desain navbar v2 diarsipkan** eksplisit di `docs/arsip-desain/navbar-v2/` (`Navbar.astro` + `CATATAN.md` berisi daftar dependensinya kalau mau dihidupkan lagi).
+3. **Renovasi pause sampai pemilik putuskan arah baru.** Dokumen lama (`docs/superpowers/specs/2026-08-24-renovasi-design.md`, rencana batch) hanya referensi historis; keputusan desain yang tadinya "dikunci" sudah tidak aktif. Aturan yang tetap berlaku kapan pun renovasi dilanjutkan: SEO/konten tidak boleh berubah saat ganti kulit (verifikasi via `tools/verify-renovasi.ps1`), file legacy `public/css|js` jangan diedit selama masih dipakai, NOL dependensi baru.
 
-Sebelum mengubah kode:
+## Optimasi performa (pilot selesai 2026-08-25, rollout menunggu OK visual pemilik)
 
-* Periksa file yang berkaitan.
-* Periksa struktur project.
-* Periksa implementasi website lama.
-* Cari component atau utility yang sudah ada.
-* Pahami hubungan antara HTML, CSS, JavaScript, dan asset.
+Pilot optimasi **tanpa mengubah desain/konten** sudah selesai di 2 halaman: `/harga/bore-pile-2026.html` dan `/jasa/bore-pile/jakarta.html`. Perubahan: Font Awesome CDN (~300 KB) diganti SVG inline via komponen `src/components/icons/FaIcon.astro` (7 ikon: arrow-up, calendar-alt regular, chevron-down, facebook-f, instagram, newspaper, whatsapp; path resmi FA Free 6.4.0; tag `<i class="fas|far|fab fa-*">` dipertahankan sebagai wrapper agar semua CSS legacy yang menyasar `.fa-*`/elemen `i` tetap berlaku), eksekusi GTM ditunda sampai event `window load` (tracking tetap jalan), preconnect cdnjs/unpkg dibuang di kedua halaman tsb. Hasil terukur (Lighthouse mobile lokal): transfer -295 KB (-41% s/d -54%), LCP 2,7 dtk → 1,7 dtk, skor 93–95 → 98–99. Verifikasi: teks & SEO identik 100% vs snapshot (`tools/verify-renovasi.ps1` + diff teks penuh); snapshot before/after di `%TEMP%\opencode\perf-before|after`.
 
-Jangan langsung membuat implementasi berdasarkan asumsi.
+Aturan rollout & catatan penting:
 
-Jika informasi yang dibutuhkan tersedia di project, **baca project terlebih dahulu sebelum bertanya atau membuat asumsi**.
+1. **31 halaman lain masih pakai Font Awesome CDN** — rollout pola yang sama dilakukan SETELAH pemilik cek visual 2 pilot dan bilang lanjut. Jangan mass-edit tanpa instruksi.
+2. Cara ganti: hapus `<link rel="preload">`+noscript FA dan preconnect cdnjs/unpkg, ganti tiap `<i class="..."></i>` jadi `<FaIcon class="..." />`, bungkus isi skrip GTM dengan `window.addEventListener('load', ...)`. Cek dulu daftar ikon unik per halaman (bisa lebih dari 7) — kalau ada ikon baru, ambil path SVG-nya dari paket `@fortawesome/fontawesome-free@6.4.0` (perhatikan style solid/regular/brands harus sesuai prefix `fas/far/fab`), tambahkan ke map `ICONS` di `FaIcon.astro`.
+3. **Bahaya encoding**: JANGAN edit file .astro via `Get-Content`/`Set-Content` PowerShell biasa — PS 5.1 membaca UTF-8 tanpa BOM sebagai ANSI dan merusak semua karakter non-ASCII (emoji 📌📍, Ø, ×, →). Sudah pernah terjadi & berhasil dipulihkan. Pakai tool Edit/Write, atau `[IO.File]::ReadAllBytes`/`WriteAllText` dengan `UTF8Encoding($false)`.
+4. Faktanya sudah efisien, jangan disentuh lagi: iframe Google Maps & hampir semua gambar sudah `loading="lazy"`; CSS/JS lokal sudah dikompres Brotli oleh hosting (style.css hanya ~10 KB over-the-wire); hosting = Hostinger/LiteSpeed.
+5. Ukur performa: PSI API anonim sering 429 dari IP ini; alternatif andal = Lighthouse lokal via `npx lighthouse <url> --quiet --chrome-flags="--headless=new"` (Chrome + Node tersedia), atau preview server `npm run preview` di port 4321 untuk menguji hasil build sebelum deploy.
 
----
+## Perintah
 
-# 2. Website Lama Adalah Referensi Utama
+- `npm run dev` — dev server di `localhost:4321`. Cek dulu apakah sudah berjalan; jangan menjalankan dua server.
+- `npm run build` — satu-satunya verifikasi otomatis (tidak ada script lint/test/typecheck). Wajib lolos sebelum task dinyatakan selesai.
+- `npm run preview` — serve hasil build dari `dist/`.
+- Node >= 22.12.0 (lihat `engines` di package.json). Satu-satunya dependency adalah `astro` — jangan menambah library/framework untuk masalah yang bisa diselesaikan Astro atau vanilla browser API.
 
-Ketika memigrasikan halaman dari website lama:
+## Arsitektur
 
-1. Baca HTML asli.
-2. Baca CSS yang digunakan.
-3. Baca JavaScript yang digunakan.
-4. Periksa asset dan gambar.
-5. Periksa link.
-6. Periksa metadata.
-7. Pahami responsive behavior.
-8. Baru buat implementasi Astro.
+- `astro.config.mjs` memakai `build.format: 'file'` → setiap route menghasilkan `/path.html`, bukan `/path/index.html`. `site` diset ke domain produksi — jangan dihapus.
+- Tidak ada lagi `.html` konten di `public/`. URL lama gaya direktori (`/jasa/`, `/x/index.html`) di-redirect 301 oleh `public/.htaccess` menuju `/x.html` (hosting produksi: Hostinger, Apache/LiteSpeed; deploy = upload isi `dist/` ke `public_html/`). Kalau suatu saat menambah URL direktori-style lagi, tambahkan rule `RewriteRule ^x(/index\.html)?/?$ /x.html [R=301,L]`.
+- 33 halaman Astro: `/`, `/jasa/`, `/jasa/bore-pile/` (hub kota), 9 halaman kota (`/jasa/bore-pile/{jakarta,bandung,bekasi,bogor,depok,karawang,semarang,surabaya,tangerang}.html`), 8 halaman area flat (`/jasa/bore-pile-{cikarang,bintaro,bsd,cibubur,ciputat,karawaci,pamulang,tangerang-selatan}.html`), `/jasa/strauss-pile/jakarta.html`, `/harga/bore-pile-2026.html`, `/harga/bore-pile-{30,40,50,60,80}cm.html`, `/artikel.html` + 3 artikel (`bore-pile-vs-strauss-pile`, `borepile-vs-tiang-pancang`, `proses-bore-pile`), `/galeri/gallery.html`, `/alat.html`.
+- Satu sumber data wajib (jangan hardcode nilainya di halaman):
+  - `src/data/config.json` — identitas, kontak (WA/telp/email), sosial media, meta default.
+  - `src/data/harga.json` — semua harga + `priceUpdatedAt`. Alur update harga = edit JSON ini → build; tanggal di halaman harga terinterpolasi via `Intl.DateTimeFormat('id-ID')` (pola: `src/pages/harga/bore-pile-30cm.astro`).
+  - `src/data/borepile-kota.json`, `src/data/galeri.json`.
+  - `src/data/harga-arsip-hidrolik.json` — arsip mesin hidrolik/SANY nonaktif; belum direferensikan, jangan dihapus.
+- Komponen: `BaseLayout` (`src/layouts/`) dual-mode — prop `design: 'legacy' | 'v2'` (default legacy) + `localBusinessOverride`. Mode v2 memuat `tokens.css`+`base.css` via `ApxStyles` + preload font, TIDAK memuat `/css/style.css` & `/js/script.js`; komponen global otomatis diambil dari `src/components/global/v2/*` (namespace class `apx-*`). Saat ini TIDAK ada halaman yang memakai mode v2; `index.astro` memakai BaseLayout mode legacy, dan `/harga/bore-pile-2026.html` halaman `.astro` mandiri ala legacy seperti sibling harga lainnya. Halaman lain menyalin `<head>` + navbar/footer inline ala legacy — belum boleh di-swap ke komponen tanpa instruksi karena tidak 100% identik.
+- Schema identitas berulang (Organization/WebSite/LocalBusiness) dibangun lewat `src/lib/schema.js` (`schemaPhone` = format rapat tanpa spasi), dirender `<script type="application/ld+json" set:html={JSON.stringify(...)}>` — jangan menulis isi script JSON-LD sebagai template literal. Blok schema unik per halaman (BreadcrumbList, FAQPage, Product, dll.) ditulis literal di halamannya.
+- CSS/JS tetap vanilla di `public/css/` & `public/js/`, path absolut (`/css/style.css`, `/js/script.js`); perilaku JS lama harus sama persis.
 
-Jangan menganggap kode lama harus diubah hanya karena struktur kodenya terlihat kurang modern.
+## Aturan kerja
 
-Yang harus dipertahankan adalah **hasil akhir website**.
+- 33 halaman hasil migrasi adalah baseline legacy: jangan ubah desain/konten/URL/fungsinya tanpa instruksi eksplisit. Task optimasi boleh menyentuhnya hanya sebatas scope yang diminta.
+- Perubahan seminimal mungkin; jangan refactor di luar scope task.
+- Bug lama yang tidak menghalangi task: biarkan dan laporkan, jangan perbaiki sendiri.
+- Semua konten dan copywriting dalam Bahasa Indonesia.
+- Kalau membuat halaman baru (ekspansi wilayah/artikel), gunakan pola template data-driven yang konsisten — jangan tiru gaya markup legacy per-halaman yang tidak seragam.
 
----
+## Backlog optimasi (dikerjakan per instruksi, jangan mass-edit sekaligus)
 
-# 3. Jangan Redesign
+- Halaman jasa & area: konten tipis, struktur heading/meta perlu audit; prioritas pemilik.
+- 8 halaman area flat masih konten versi lama persis — menunggu optimasi.
+- Nomor WA ganda tersebar di beberapa halaman (`6285710277854` standar vs `6282233569632`) — konsolidasi menunggu keputusan nomor mana yang benar.
+- Navbar/footer/WA-float inline di halaman migrasi belum diganti komponen Astro (menunggu verifikasi visual).
 
-Claude **dilarang melakukan redesign secara otomatis**.
+## SEO
 
-Jangan:
+- `public/sitemap.xml` dan `public/robots.txt` dikelola manual — update keduanya setiap menambah/mengubah URL. Saat ini 33 URL = 33 halaman; pertahankan sinkron. Setelah deploy, submit ulang sitemap di Google Search Console.
+- Canonical di-hardcode ke domain produksi `https://agungperkasaborepile.com`.
+- Link internal mati di markup inline hasil salinan legacy (mis. `/artikel/artikel.html`, `/harga/harga-*`, link ke artikel/subhalaman alat yang belum ada) dipertahankan apa adanya selama halamannya memang belum dibuat; begitu halaman tujuan dibuat, barulah linknya boleh diperbaiki. Komponen `Navbar`/`Footer` Astro boleh langsung dibereskan (sudah: strauss-pile → jakarta.html, harga → bore-pile-2026.html, galeri → gallery.html).
 
-* Mengubah warna.
-* Mengubah font.
-* Mengubah layout.
-* Mengubah spacing.
-* Mengubah ukuran elemen.
-* Mengubah navbar.
-* Mengubah footer.
-* Mengubah button.
-* Mengubah card.
-* Mengubah hero.
-* Mengubah gambar.
-* Mengubah animasi.
-* Mengubah responsive behavior.
-* Mengubah copywriting.
-* Mengubah struktur konten.
+## Git
 
-Jika Claude merasa desain dapat dibuat lebih bagus:
+Working tree hampir selalu berisi perubahan WIP milik pengguna yang belum di-commit — jangan revert, stash, atau overwrite. Jangan commit/push tanpa diminta. Remote: `github.com/Andreysvn/web-agung-perkasa-borepile`.
 
-> **Jangan ubah.**
-
-Perbaikan desain hanya boleh dilakukan jika pengguna secara eksplisit meminta redesign.
-
----
-
-# 4. Pertahankan Konten
-
-Jangan mengubah isi website lama.
-
-Pertahankan:
-
-* Judul
-* Heading
-* Paragraph
-* Deskripsi layanan
-* Harga
-* Informasi bisnis
-* Kontak
-* WhatsApp
-* Alamat
-* CTA
-* FAQ
-* Tabel
-* Link
-* Image
-* Alt text
-* Metadata
-* Schema
-
-Jangan membuat copywriting baru kecuali diminta.
-
-Jangan menghapus konten yang dianggap "tidak penting".
-
----
-
-# 5. Migrasi ke Astro
-
-Gunakan Astro sebagai framework utama.
-
-Utamakan:
-
-* `.astro` components
-* Astro pages
-* Astro layouts
-* Static generation
-* Reusable components jika memang diperlukan
-
-Jangan menggunakan React, Vue, Svelte, atau framework lain hanya untuk menyelesaikan masalah sederhana yang dapat ditangani langsung oleh Astro atau browser.
-
-Jika project memang sudah menggunakan framework component tertentu, pertahankan penggunaan tersebut selama masih diperlukan.
-
----
-
-# 6. Componentization
-
-Gunakan component yang reusable jika memang masuk akal.
-
-Contoh:
-
-```text
-Header
-Navbar
-Footer
-Hero
-Button
-Breadcrumb
-Gallery
-FAQ
-CTA
-WhatsAppButton
-```
-
-Namun jangan membuat component hanya demi membuat component.
-
-Sebelum membuat component baru:
-
-1. Cari component yang sudah ada.
-2. Jika bisa digunakan kembali, gunakan kembali.
-3. Jika tidak ada, baru buat component baru.
-4. Jangan melakukan abstraksi berlebihan.
-
-Prioritasnya adalah **hasil website**, bukan jumlah component.
-
----
-
-# 7. CSS
-
-Pertahankan CSS lama selama masih relevan.
-
-Jangan mengganti seluruh CSS hanya karena Astro memiliki cara lain untuk mengelola style.
-
-Pertahankan:
-
-* warna
-* typography
-* spacing
-* layout
-* breakpoint
-* media query
-* animation
-* transition
-* hover
-* responsive behavior
-
-Jika perlu melakukan perubahan CSS untuk memperbaiki bug, ubah seminimal mungkin.
-
-Setelah perubahan CSS, pastikan tidak merusak halaman lain.
-
----
-
-# 8. JavaScript
-
-Pertahankan seluruh fungsi JavaScript website lama.
-
-Sebelum menghapus atau mengganti JavaScript:
-
-1. Cari semua tempat JavaScript tersebut digunakan.
-2. Pahami fungsinya.
-3. Pastikan tidak ada dependency tersembunyi.
-4. Pastikan behavior tetap sama setelah migrasi.
-
-Jika JavaScript perlu disesuaikan dengan Astro, lakukan perubahan seminimal mungkin.
-
----
-
-# 9. URL dan SEO
-
-Jangan mengubah URL website lama tanpa instruksi.
-
-Pertahankan:
-
-* URL
-* internal links
-* canonical
-* title
-* meta description
-* heading hierarchy
-* alt text
-* structured data
-* sitemap
-* robots.txt
-* Open Graph
-
-SEO tidak boleh mengalami regression akibat migrasi.
-
----
-
-# 10. Asset
-
-Sebelum membuat atau mencari asset baru:
-
-> Periksa asset yang sudah tersedia di project.
-
-Gunakan asset lama jika tersedia.
-
-Jangan mengganti gambar hanya karena ada gambar yang menurut Claude lebih bagus.
-
-Pertahankan:
-
-* gambar
-* icon
-* font
-* logo
-* favicon
-* video
-* asset lainnya
-
----
-
-# Workflow Claude
-
-Gunakan workflow berikut ketika mengerjakan task.
-
-## Tahap 1 — Inspect
-
-Sebelum coding:
-
-* Periksa struktur project.
-* Periksa file terkait.
-* Periksa implementasi lama.
-* Periksa component yang tersedia.
-* Periksa asset.
-
-Jangan langsung melakukan perubahan besar.
-
----
-
-## Tahap 2 — Plan
-
-Pahami apa yang harus dimigrasikan.
-
-Identifikasi:
-
-* halaman yang terpengaruh
-* component yang diperlukan
-* CSS yang diperlukan
-* JavaScript yang diperlukan
-* asset yang diperlukan
-* kemungkinan masalah responsive
-* kemungkinan masalah routing
-* kemungkinan masalah SEO
-
-Untuk perubahan kecil, tidak perlu membuat rencana panjang.
-
----
-
-## Tahap 3 — Implement
-
-Implementasikan perubahan sekecil mungkin.
-
-Prinsip:
-
-> **Minimal change, maximum compatibility.**
-
-Jangan melakukan refactor besar yang tidak berhubungan dengan task.
-
----
-
-## Tahap 4 — Verify
-
-Setelah perubahan:
-
-1. Jalankan development server.
-2. Periksa halaman.
-3. Periksa console.
-4. Periksa layout.
-5. Periksa responsive.
-6. Periksa link.
-7. Periksa asset.
-8. Periksa fungsi JavaScript.
-
-Jika memungkinkan, bandingkan dengan website lama.
-
----
-
-## Tahap 5 — Fix
-
-Jika terdapat:
-
-* error
-* bug
-* missing asset
-* CSS conflict
-* routing problem
-* JavaScript error
-* responsive issue
-* hydration issue
-
-perbaiki masalah tersebut.
-
-Jangan mengubah desain untuk menyelesaikan bug jika bug dapat diperbaiki dengan perubahan yang lebih kecil.
-
----
-
-# Development Server
-
-Saat menjalankan development server, gunakan:
-
-```bash
-astro dev --background
-```
-
-Untuk mengelola server:
-
-```bash
-astro dev status
-astro dev logs
-astro dev stop
-```
-
-Sebelum menjalankan server baru, periksa apakah server sudah berjalan.
-
-Jangan menjalankan beberapa development server yang tidak diperlukan.
-
----
-
-# Testing dan Build
-
-Setelah perubahan yang signifikan, jalankan pemeriksaan yang tersedia di project.
-
-Minimal pastikan:
-
-```bash
-npm run build
-```
-
-berhasil.
-
-Jika project memiliki:
-
-* lint
-* typecheck
-* test
-
-jalankan pemeriksaan yang relevan.
-
-Jangan menganggap pekerjaan selesai hanya karena halaman terlihat benar di browser jika production build masih gagal.
-
----
-
-# Saat Menemukan Bug Lama
-
-Jika menemukan bug yang sudah ada sebelum migrasi:
-
-* Jangan otomatis memperbaikinya jika tidak diperlukan.
-* Tentukan apakah bug tersebut mempengaruhi migrasi.
-* Jika tidak berhubungan dengan task, jangan melakukan perubahan besar.
-
-Jika bug menghambat fungsi website atau menyebabkan migrasi gagal:
-
-> Perbaiki dengan perubahan seminimal mungkin.
-
----
-
-# Saat Menemukan Fitur yang Kurang
-
-Jika website Astro belum memiliki fitur yang ada di website lama:
-
-1. Periksa implementasi website lama.
-2. Pahami behavior-nya.
-3. Implementasikan kembali di Astro.
-4. Pertahankan desain dan behavior asli.
-
-Jangan membuat versi baru hanya karena lebih mudah.
-
----
-
-# Saat Menemukan Perbedaan Visual
-
-Jika versi Astro terlihat berbeda dengan website lama:
-
-**Jangan langsung menganggap versi Astro lebih baik.**
-
-Cari penyebab perbedaannya.
-
-Periksa:
-
-* CSS
-* inherited styles
-* font
-* ukuran container
-* margin
-* padding
-* breakpoint
-* image size
-* image aspect ratio
-* JavaScript
-* DOM structure
-
-Kemudian perbaiki agar hasilnya kembali mendekati website lama.
-
----
-
-# Dokumentasi Astro
-
-Gunakan dokumentasi resmi Astro sebagai referensi:
-
-https://docs.astro.build
-
-Untuk routing:
-
-https://docs.astro.build/en/guides/routing/
-
-Untuk Astro Components:
-
-https://docs.astro.build/en/basics/astro-components/
-
-Untuk framework components:
-
-https://docs.astro.build/en/guides/framework-components/
-
-Untuk content:
-
-https://docs.astro.build/en/guides/content-collections/
-
-Untuk styling:
-
-https://docs.astro.build/en/guides/styling/
-
-Untuk internationalization:
-
-https://docs.astro.build/en/guides/internationalization/
-
-Jika menghadapi masalah Astro yang tidak jelas, **gunakan dokumentasi resmi terlebih dahulu daripada menebak API Astro**.
-
----
-
-# Dependency
-
-Jangan install dependency baru tanpa alasan yang jelas.
-
-Sebelum menggunakan package baru:
-
-1. Periksa apakah Astro sudah memiliki solusi.
-2. Periksa dependency yang sudah tersedia.
-3. Gunakan browser API jika sudah mencukupi.
-4. Gunakan dependency baru hanya jika benar-benar diperlukan.
-
-Jangan menambahkan library hanya untuk menyelesaikan masalah sederhana.
-
----
-
-# Git
-
-Jangan melakukan operasi Git yang berisiko tanpa instruksi.
-
-Jangan:
-
-* `git reset --hard`
-* `git clean -fd`
-* force push
-* menghapus branch
-* menghapus commit
-
-tanpa instruksi eksplisit.
-
-Jangan mengubah pekerjaan pengguna yang belum di-commit.
-
-Jika terdapat perubahan lokal yang bukan bagian dari task, **jangan hapus atau overwrite perubahan tersebut**.
-
----
-
-# Aturan Keamanan Perubahan
-
-Sebelum melakukan perubahan besar:
-
-* Pastikan file yang akan diubah memang berkaitan dengan task.
-* Jangan mengubah file yang tidak diperlukan.
-* Jangan menghapus file lama sebelum memastikan migrasi sudah berhasil.
-* Jangan melakukan mass replacement tanpa memahami dampaknya.
-
-Jika sebuah perubahan berpotensi mempengaruhi banyak halaman, periksa dampaknya terlebih dahulu.
-
----
-
-# Prioritas
-
-Jika harus memilih antara beberapa hal, gunakan urutan prioritas berikut:
-
-1. **Konten asli**
-2. **Desain asli**
-3. **Fungsi asli**
-4. **URL**
-5. **SEO**
-6. **Responsive behavior**
-7. **Perbaikan bug**
-8. **Maintainability**
-9. **Code cleanliness**
-10. **Optimisasi tambahan**
-
-Jangan mengorbankan nomor 1–7 hanya demi nomor 8–10.
-
----
-
-# Definition of Done
-
-Task migrasi dianggap selesai jika:
-
-* Konten asli tetap ada.
-* Desain tetap sama.
-* Layout tetap sama.
-* Responsive tetap bekerja.
-* JavaScript tetap bekerja.
-* Semua link bekerja.
-* Asset berhasil dimuat.
-* URL tetap benar.
-* SEO tetap terjaga.
-* Tidak ada error akibat migrasi.
-* Production build berhasil.
-
-Hasil akhirnya harus terlihat seperti:
-
-> **Website Agung Perkasa Borepile yang sama, tetapi dibangun menggunakan Astro.**
-
-Bukan redesign.
-
-Bukan rebranding.
-
-Bukan website baru.
-
-**Ini adalah migrasi.**
-
----
-
-# Prinsip Terakhir
-
-Selalu ingat:
-
-> **Jangan mengubah sesuatu hanya karena bisa diubah.**
-
-> **Jangan memperbaiki sesuatu yang sebenarnya tidak rusak.**
-
-> **Jangan mendesain ulang sesuatu yang tidak diminta untuk didesain ulang.**
-
-> **Jika ada fitur di website lama, migrasikan.**
-
-> **Jika migrasi menyebabkan bug, perbaiki.**
-
-> **Jika kurang, rebuild berdasarkan implementasi website lama.**
-
-> **Website lama adalah referensi utama.**
+Referensi: dokumentasi resmi Astro di https://docs.astro.build — baca dulu sebelum menebak API Astro.

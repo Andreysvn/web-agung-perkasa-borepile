@@ -6,6 +6,8 @@
     "image": "/imgs/borepile-gedung-universitas-paramadina.jpg",
     "location": "Jakarta Pusat, Selatan, Barat, Timur, Utara",
     "description": "Kontraktor bore pile terpercaya di Jakarta. Didukung tenaga ahli berpengalaman.",
+    "areas": ["Jakarta Pusat", "Jakarta Selatan", "Jakarta Barat", "Jakarta Timur", "Jakarta Utara"],
+    "localContext": "Melayani proyek rumah, ruko, gudang, dan bangunan bertingkat di seluruh wilayah Jakarta dengan akses lokasi yang beragam.",
     "badge": "Bore Pile",
     "url": "/jasa/bore-pile/jakarta/"
   },
@@ -16,6 +18,8 @@
     "image": "/imgs/borepile-tambun-utara-bekasi.webp",
     "location": "Bekasi, Cikarang, Tambun",
     "description": "Melayani Bekasi, Cikarang, Tambun dengan kualitas terbaik.",
+    "areas": ["Bekasi Barat", "Bekasi Timur", "Cikarang", "Tambun"],
+    "localContext": "Melayani kawasan perumahan padat dan kawasan industri Bekasi, Cikarang, serta Tambun.",
     "badge": "Bore Pile",
     "url": "/jasa/bore-pile/bekasi/"
   },
@@ -26,6 +30,8 @@
     "image": "/imgs/pengecoran-beton.jpg",
     "location": "Tangerang, BSD, Karawaci",
     "description": "Melayani Tangerang, BSD, Karawaci dengan tenaga profesional.",
+    "areas": ["Tangerang Kota", "BSD", "Serpong", "Karawaci"],
+    "localContext": "Melayani proyek konstruksi di Tangerang, BSD, Serpong, dan Karawaci dengan penyesuaian akses alat ke lokasi.",
     "badge": "Bore Pile",
     "url": "/jasa/bore-pile/tangerang/"
   },
@@ -36,6 +42,8 @@
     "image": "/imgs/borepile-dekat-gedung.jpg",
     "location": "Depok & Sekitarnya",
     "description": "Melayani seluruh wilayah Depok dengan tenaga ahli berpengalaman.",
+    "areas": ["Depok", "Beji", "Cimanggis", "Sawangan"],
+    "localContext": "Melayani proyek rumah tinggal dan bangunan komersial di Depok dan area sekitarnya.",
     "badge": "Bore Pile",
     "url": "/jasa/bore-pile/depok/"
   },
@@ -46,6 +54,8 @@
     "image": "/imgs/borepile-asrama-pesantren-az-zikra-bogor-agung-perkasa.jpg",
     "location": "Bogor & Sekitarnya",
     "description": "Solusi pondasi untuk tanah lunak di Bogor dengan kualitas terbaik.",
+    "areas": ["Bogor Kota", "Cibinong", "Gunung Putri", "Cileungsi"],
+    "localContext": "Melayani proyek di Bogor, Cibinong, Gunung Putri, dan Cileungsi dengan mempertimbangkan kondisi serta akses lokasi.",
     "badge": "Bore Pile",
     "url": "/jasa/bore-pile/bogor/"
   },
@@ -56,6 +66,8 @@
     "image": "/imgs/borepile-dekat-dinding.webp",
     "location": "Bandung & Sekitarnya",
     "description": "Melayani Bandung dan sekitarnya dengan tenaga profesional.",
+    "areas": ["Bandung", "Cimahi", "Kabupaten Bandung"],
+    "localContext": "Melayani kebutuhan pondasi bore pile untuk proyek konstruksi di Bandung dan wilayah sekitarnya.",
     "badge": "Bore Pile",
     "url": "/jasa/bore-pile/bandung/"
   },
@@ -66,6 +78,8 @@
     "image": "/imgs/borepile-dan-truk-molen.webp",
     "location": "Karawang, KIIC, Suryacipta",
     "description": "Melayani kawasan industri Karawang dengan tenaga profesional.",
+    "areas": ["Karawang Kota", "KIIC", "Suryacipta"],
+    "localContext": "Melayani proyek rumah, ruko, dan kawasan industri di Karawang termasuk KIIC dan Suryacipta.",
     "badge": "Bore Pile",
     "url": "/jasa/bore-pile/karawang/"
   },
@@ -76,6 +90,8 @@
     "image": "/imgs/borepile-mesin-biru.webp",
     "location": "Semarang & Sekitarnya",
     "description": "Melayani Semarang dan sekitarnya dengan kualitas terbaik.",
+    "areas": ["Semarang", "Kendal", "Demak"],
+    "localContext": "Melayani proyek konstruksi di Semarang dan wilayah sekitar dengan perencanaan mobilisasi sesuai lokasi.",
     "badge": "Bore Pile",
     "url": "/jasa/bore-pile/semarang/"
   },
@@ -86,6 +102,8 @@
     "image": "/imgs/borepile-pondasi-rumah.jpg",
     "location": "Surabaya & Sekitarnya",
     "description": "Melayani Surabaya dan sekitarnya dengan tenaga ahli berpengalaman.",
+    "areas": ["Surabaya", "Sidoarjo", "Gresik"],
+    "localContext": "Melayani proyek konstruksi di Surabaya, Sidoarjo, dan Gresik dengan tim berpengalaman.",
     "badge": "Bore Pile",
     "url": "/jasa/bore-pile/surabaya/"
   }

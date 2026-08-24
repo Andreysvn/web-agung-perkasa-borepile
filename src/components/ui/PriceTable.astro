@@ -1,0 +1,36 @@
+---
+// src/components/ui/PriceTable.astro
+interface Props { caption: string; head: string[]; rows: (string | number)[][]; highlightRows?: number[] }
+const { caption, head, rows, highlightRows = [] } = Astro.props;
+---
+<div class="apx-tablewrap">
+  <table class="apx-price-table">
+    <caption>{caption}</caption>
+    <thead><tr>{head.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+    <tbody>
+      {rows.map((cells, i) => (
+        <tr class:list={{ "is-tint": highlightRows.includes(i) }}>
+          {cells.map((c, j) => (
+            <td data-label={head[j]}>{j === 1 ? <Fragment set:html={c} /> : c}</td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+<style>
+  .apx-tablewrap { overflow-x: auto; border: 1px solid var(--apx-border); border-radius: var(--apx-radius); box-shadow: var(--apx-shadow-1); }
+  .apx-price-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  .apx-price-table caption { text-align: left; padding: 10px 14px; font-size: .8rem; color: var(--apx-muted); }
+  .apx-price-table th { background: var(--apx-navy); color: #fff; text-align: left; padding: 12px 14px; font-weight: 700; white-space: nowrap; }
+  .apx-price-table td { padding: 11px 14px; border-top: 1px solid var(--apx-border); vertical-align: top; }
+  .apx-price-table tbody tr:nth-child(even):not(.is-tint) { background: var(--apx-tint); }
+  .apx-price-table tr.is-tint { background: #f9f9f9; }
+  .apx-price-table td:nth-child(2) { color: var(--apx-orange); font-weight: 800; white-space: nowrap; }
+  @media (max-width: 640px) {
+    .apx-price-table thead { display: none; }
+    .apx-price-table tr { display: block; border-top: 1px solid var(--apx-border); padding: 6px 0; }
+    .apx-price-table td { display: flex; justify-content: space-between; gap: 12px; border: 0; }
+    .apx-price-table td::before { content: attr(data-label); color: var(--apx-muted); font-weight: 600; }
+  }
+</style>

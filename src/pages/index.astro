@@ -1,9 +1,10 @@
 ---
 // src/pages/index.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
+import config from '../data/config.json';
 ---
 
-<BaseLayout title="Home">
+<BaseLayout title="Jasa Bore Pile Profesional Terpercaya" bodyClass="home">
 
     <!-- ===== HEADER / HERO ===== -->
     <header class="header" id="home">
@@ -229,7 +230,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div class="faq-container">
                 <div class="faq-item">
                     <button class="faq-question" aria-label="Jawaban perbedaan borepile dan strauss pile">Apa perbedaan utama antara borepile dan strauss pile? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p><strong>Borepile</strong> menggunakan mesin bor dan alat khusus (mini crane, gawangan, maupun hidrolik seperti SANY), kedalaman hingga 30m (alat SANY mudah menembus bebatuan dan lapisan tanah keras), diameter bisa 30-110cm. <strong>Strauss pile</strong> menggunakan bor manual (menggunakan tenaga manusia), kedalaman hingga 10m, diameter 20-40cm. Perbedaan utamanya adalah borepile menggunakan alat berat sedangkan strauss pile menggunakan tenaga manusia, proses pengerjaannya tetap sama yaitu pengeboran, perakitan besi tulangan, dan pengecoran beton langsung di area proyek (tidak seperti tiang pancang).</p></div>
+                    <div class="faq-answer"><p><strong>Borepile</strong> menggunakan mesin bor mini crane atau gawangan, kedalaman hingga 30m dan diameter bisa 30-110cm. <strong>Strauss pile</strong> menggunakan bor manual (menggunakan tenaga manusia), kedalaman hingga 10m, diameter 20-40cm. Perbedaan utamanya adalah borepile menggunakan mesin sedangkan strauss pile menggunakan tenaga manusia, proses pengerjaannya tetap sama yaitu pengeboran, perakitan besi tulangan, dan pengecoran beton langsung di area proyek (tidak seperti tiang pancang).</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" aria-label="Jawaban kelebihan dan kekurangan borepile">Apa kelebihan dan kekurangan borepile? <i class="fas fa-chevron-down"></i></button>
@@ -271,7 +272,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">Apakah bore pile untuk rumah 1 lantai terlalu berlebihan? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p><strong>Tidak berlebihan.</strong> Karena rumah 1 lantai di tanah lunak atau bekas rawa, bore pile diameter 30cm dengan kedalaman 4-6 meter sudah cukup untuk menahan beban bangunan (biasanya sering memakai strauss pile). Harga bore pile manual/strauss pile mulai dari Rp65.000/m, sangat terjangkau untuk rumah 1 lantai di jakarta. Keuntungan lainnya memakai borepile manual (strauss pile) adalah sangat sedikit menimbulkan getaran tanah dan polusi suara.</p></div>
+                    <div class="faq-answer"><p><strong>Tidak berlebihan.</strong> Karena rumah 1 lantai di tanah lunak atau bekas rawa, bore pile diameter 30cm dengan kedalaman 4-6 meter sudah cukup untuk menahan beban bangunan (biasanya sering memakai strauss pile). Harga bore pile manual/strauss pile mulai dari Rp75.000/m, sangat terjangkau untuk rumah 1 lantai di jakarta. Keuntungan lainnya memakai borepile manual (strauss pile) adalah sangat sedikit menimbulkan getaran tanah dan polusi suara.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">Apakah Agung Perkasa melayani proyek di luar Jakarta? <i class="fas fa-chevron-down"></i></button>
@@ -398,9 +399,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <h2 class="section-title">Hubungi Kami</h2>
                 <p>Silakan hubungi kami untuk konsultasi gratis atau penawaran proyek Anda.</p>
                 <div class="contact-details">
-                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h3>Alamat</h3><p>Jl. Sunter Muara II, RT17/RW05, Sunter Agung, Kec. Tj. Priok, Jkt Utara, DKI Jakarta 14350</p></div></div>
-                    <div class="contact-item"><i class="fas fa-phone-alt"></i><div><h3>Telepon</h3><p>+62 857 1027 7854</p></div></div>
-                    <div class="contact-item"><i class="fas fa-envelope"></i><div><h3>Email</h3><p>admin@agungperkasaborepile.com</p></div></div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h3>Alamat</h3><p>{config.company.address}</p></div></div>
+                    <div class="contact-item"><i class="fas fa-phone-alt"></i><div><h3>Telepon</h3><p>{config.company.phone}</p></div></div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i><div><h3>Email</h3><p>{config.company.email}</p></div></div>
                     <div class="contact-item"><i class="fas fa-clock"></i><div><h3>Jam Operasional</h3><p>Senin - Minggu: 07.00 - 23.00 WIB</p></div></div>
                 </div>
             </div>

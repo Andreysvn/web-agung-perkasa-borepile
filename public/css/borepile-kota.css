@@ -575,10 +575,10 @@ body {
 .illustration-img img {
     width: 100%;
     max-width: 400px;
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    aspect-ratio: 372 / 350;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .illustration-img .caption {

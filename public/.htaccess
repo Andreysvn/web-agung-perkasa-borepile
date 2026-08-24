@@ -1,0 +1,31 @@
+# Agung Perkasa Borepile - redirect URL lama ke halaman Astro (.html)
+# Menggantikan stub meta-refresh; hosting: Hostinger (Apache/LiteSpeed)
+
+RewriteEngine On
+
+# Beranda: /index.html -> /
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Halaman kota bore pile (URL lama: /jasa/bore-pile/<kota>/ atau .../index.html)
+RewriteRule ^jasa/bore-pile/jakarta(/index\.html)?/?$ /jasa/bore-pile/jakarta.html [R=301,L]
+RewriteRule ^jasa/bore-pile/bandung(/index\.html)?/?$ /jasa/bore-pile/bandung.html [R=301,L]
+RewriteRule ^jasa/bore-pile/bekasi(/index\.html)?/?$ /jasa/bore-pile/bekasi.html [R=301,L]
+RewriteRule ^jasa/bore-pile/tangerang(/index\.html)?/?$ /jasa/bore-pile/tangerang.html [R=301,L]
+RewriteRule ^jasa/bore-pile/depok(/index\.html)?/?$ /jasa/bore-pile/depok.html [R=301,L]
+RewriteRule ^jasa/bore-pile/bogor(/index\.html)?/?$ /jasa/bore-pile/bogor.html [R=301,L]
+RewriteRule ^jasa/bore-pile/karawang(/index\.html)?/?$ /jasa/bore-pile/karawang.html [R=301,L]
+RewriteRule ^jasa/bore-pile/semarang(/index\.html)?/?$ /jasa/bore-pile/semarang.html [R=301,L]
+RewriteRule ^jasa/bore-pile/surabaya(/index\.html)?/?$ /jasa/bore-pile/surabaya.html [R=301,L]
+
+# Hub kota
+RewriteRule ^jasa/bore-pile(/index\.html)?/?$ /jasa/bore-pile.html [R=301,L]
+
+# Strauss pile Jakarta
+RewriteRule ^jasa/strauss-pile/jakarta(/index\.html)?/?$ /jasa/strauss-pile/jakarta.html [R=301,L]
+
+# Halaman induk jasa
+RewriteRule ^jasa(/index\.html)?/?$ /jasa.html [R=301,L]
+
+# Alat & artikel
+RewriteRule ^alat(/index\.html)?/?$ /alat.html [R=301,L]
+RewriteRule ^artikel(/index\.html)?/?$ /artikel.html [R=301,L]

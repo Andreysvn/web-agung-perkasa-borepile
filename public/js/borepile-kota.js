@@ -222,21 +222,10 @@
         40: 120000,
     };
 
-    const hargaSany = {
-        30: 0,
-        40: 0,
-        50: 0,
-        60: 0,
-        80: 0,
-        90: 0,
-        100: 0,
-        110: 0,
-    };
 
     // ===== DIAMETER OPTIONS =====
     const diameterMesin = [30, 40, 50, 60, 80];
     const diamerManual = [20, 25, 30, 40];
-    const diameterSany = [30, 40, 50, 60, 80, 90, 100, 110];
 
     // ===== STATE =====
     let currentMethod = 'mesin';
@@ -269,8 +258,7 @@
         } else {
             options = [
                 { value: 'minicrane', label: 'Mini Crane' },
-                { value: 'gawangan', label: 'Gawangan' },
-                { value: 'sany', label: 'Hidrolik (SANY)' }
+                { value: 'gawangan', label: 'Gawangan' }
             ];
             labelText = 'Pilih Jenis Mesin';
         }
@@ -300,8 +288,6 @@
         let options = [];
         if (currentMethod === 'manual' || currentMachine === 'strauss') {
             options = diameterManual;
-        } else if (currentMachine === 'sany') {
-            options = diameterSany;
         } else {
             options = diameterMesin;
         }
@@ -335,8 +321,6 @@
     function getHargaPerMeter(diameter) {
         if (currentMethod === 'manual' || currentMachine === 'strauss') {
             return hargaManual[diameter] || 0;
-        } else if (currentMachine === 'sany') {
-            return hargaSany[diameter] || 0;
         } else {
             return hargaMesin[diameter] || 0;
         }
@@ -344,7 +328,6 @@
 
     function getMinimalOrder() {
         if (currentMethod === 'manual' || currentMachine === 'strauss') return 100;
-        if (currentMachine === 'sany') return 1200;
         return 200;
     }
 
@@ -355,15 +338,11 @@
         if (currentMethod === 'manual' || currentMachine === 'strauss') {
             return { min: 2, max: 3 };
         }
-        if (currentMachine === 'sany') {
-            return { min: 0, max: 0 };
-        }
         return { min: 3, max: 4 };
     }
 
     function getNamaAlat() {
         if (currentMethod === 'manual' || currentMachine === 'strauss') return 'Strauss Pile (Manual)';
-        if (currentMachine === 'sany') return 'SANY Hidrolik';
         if (currentMachine === 'gawangan') return 'Gawangan';
         return 'Mini Crane';
     }

@@ -131,38 +131,62 @@
     const orderInfo = document.getElementById('orderInfo');
     const methodBtns = document.querySelectorAll('.method-btn');
     const machineSelect = document.getElementById('machineSelect');
+    const machineChoices = createChoiceContainer(machineSelect, 'machineChoices', 'Pilihan jenis mesin');
+    const diameterChoices = createChoiceContainer(diameterSelect, 'diameterChoices', 'Pilihan diameter');
+
+    function createChoiceContainer(select, id, label) {
+        if (!select) return null;
+        select.classList.add('calculator-native-select');
+        const existing = document.getElementById(id);
+        if (existing) return existing;
+        const container = document.createElement('div');
+        container.id = id;
+        container.className = 'choice-grid' + (id === 'diameterChoices' ? ' diameter-choices' : '');
+        container.setAttribute('role', 'group');
+        container.setAttribute('aria-label', label);
+        select.insertAdjacentElement('afterend', container);
+        return container;
+    }
+
+    function renderChoices(container, options, selectedValue, onSelect) {
+        if (!container) return;
+        container.innerHTML = '';
+        options.forEach(function(optionData) {
+            const value = String(optionData.value);
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'choice-button' + (value === String(selectedValue) ? ' active' : '');
+            button.dataset.value = value;
+            button.textContent = optionData.label;
+            button.setAttribute('aria-pressed', value === String(selectedValue) ? 'true' : 'false');
+            button.addEventListener('click', function() {
+                onSelect(value);
+            });
+            container.appendChild(button);
+        });
+    }
+
+    function updateChoiceState(container, selectedValue) {
+        if (!container) return;
+        container.querySelectorAll('.choice-button').forEach(function(button) {
+            const active = button.dataset.value === String(selectedValue);
+            button.classList.toggle('active', active);
+            button.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+    }
 
     // ===== HARGA PER METER =====
-    const hargaMesin = {
-        30: 120000,
-        40: 135000,
-        50: 190000,
-        60: 0,
-        80: 0,
-    };
-
-    const hargaManual = {
-        20: 75000,
-        25: 85000,
-        30: 100000,
-        40: 120000,
-    };
-
-    const hargaSany = {
-        30: 0,
-        40: 0,
-        50: 0,
-        60: 0,
-        80: 0,
-        90: 0,
-        100: 0,
-        110: 0,
-    };
+    const pricing = window.__PRICING__;
+    const hargaMesin = pricing
+        ? Object.fromEntries(pricing.mesin.map(item => [item.diameter, item.price]))
+        : { 30: 120000, 40: 135000, 50: 190000, 60: 0, 80: 0 };
+    const hargaManual = pricing
+        ? Object.fromEntries(pricing.manual.map(item => [item.diameter, item.price]))
+        : { 20: 75000, 25: 85000, 30: 100000, 40: 120000 };
 
     // ===== DIAMETER OPTIONS =====
-    const diameterMesin = [30, 40, 50, 60, 80];
-    const diameterManual = [20, 25, 30, 40];
-    const diameterSany = [30, 40, 50, 60, 80, 90, 100, 110];
+    const diameterMesin = pricing ? pricing.mesin.map(item => item.diameter) : [30, 40, 50, 60, 80];
+    const diameterManual = pricing ? pricing.manual.map(item => item.diameter) : [20, 25, 30, 40];
 
     // ===== STATE =====
     let currentMethod = 'mesin';
@@ -199,8 +223,7 @@
             // Kalo mesin, tampilin semua opsi mesin
             options = [
                 { value: 'minicrane', label: 'Mini Crane' },
-                { value: 'gawangan', label: 'Gawangan' },
-                { value: 'sany', label: 'Hidrolik (SANY)' }
+                { value: 'gawangan', label: 'Gawangan' }
             ];
             // Ubah label balik ke "Pilih Jenis Mesin"
             const label = document.querySelector('#machineSelectRow label');
@@ -223,6 +246,14 @@
             machineSelect.value = options[0].value;
             currentMachine = options[0].value;
         }
+
+        renderChoices(machineChoices, options, currentMachine, function(value) {
+            currentMachine = value;
+            machineSelect.value = value;
+            updateChoiceState(machineChoices, value);
+            updateDiameterOptions();
+            hitungTotal();
+        });
     }
 
     function updateDiameterOptions() {
@@ -231,8 +262,6 @@
         let options = [];
         if (currentMethod === 'manual') {
             options = diameterManual;
-        } else if (currentMachine === 'sany') {
-            options = diameterSany;
         } else {
             options = diameterMesin;
         }
@@ -261,14 +290,19 @@
             priceInput.dataset.numeric = '';
         }
 
+        renderChoices(diameterChoices, options.map(function(d) { return { value: d, label: d + ' cm' }; }), diameterSelect.value, function(value) {
+            diameterSelect.value = value;
+            if (priceInput) priceInput.value = '';
+            updateChoiceState(diameterChoices, value);
+            hitungTotal();
+        });
+
         hitungTotal();
     }
 
     function getHargaPerMeter(diameter) {
         if (currentMethod === 'manual' || currentMachine === 'strauss') {
             return hargaManual[diameter] || 0;
-        } else if (currentMachine === 'sany') {
-            return hargaSany[diameter] || 0;
         } else {
             return hargaMesin[diameter] || 0;
         }
@@ -276,20 +310,19 @@
 
     function getMinimalOrder() {
         if (currentMethod === 'manual' || currentMachine === 'strauss') return 100;
-        if (currentMachine === 'sany') return 1200;
-        if (currentMachine === 'gawangan') return 150;
+        if (pricing && pricing.equipment[currentMachine]) return pricing.equipment[currentMachine].minOrder;
+        if (currentMachine === 'gawangan') return 200;
         return 200;
     }
 
     function getKecepatanPerHari() {
+        if (pricing && pricing.equipment[currentMachine]) return pricing.equipment[currentMachine].speed;
         if (currentMethod === 'manual' || currentMachine === 'strauss') return { min: 2, max: 3 };
-        if (currentMachine === 'sany') return { min: 15, max: 25 };
         return { min: 2, max: 4 };
     }
 
     function getNamaAlat() {
         if (currentMethod === 'manual' || currentMachine === 'strauss') return 'Strauss Pile (Manual)';
-        if (currentMachine === 'sany') return 'SANY Hidrolik';
         if (currentMachine === 'gawangan') return 'Gawangan';
         return 'Mini Crane';
     }

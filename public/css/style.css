@@ -520,10 +520,10 @@ ul {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
-  border-radius: 2px;
+  width: 72px;
+  height: 3px;
+  background: var(--secondary-color);
+  border-radius: 0;
 }
 
 .blog {
@@ -2941,6 +2941,7 @@ ul {
     border: 1px solid #e2e8f0;
     border-radius: 12px;
     padding: 20px;
+  min-width: 0;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
@@ -3024,7 +3025,7 @@ ul {
 @media (min-width: 768px) {
     /* Provinsi Jawa Barat, Tengah, Timur berjejer 3 kolom di laptop */
     .areas-container {
-        grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
     }
     
     /* Di Layar Lebar, tombol Jabodetabek ukurannya pas mengikuti teks (tidak dipaksa 2 kolom) */

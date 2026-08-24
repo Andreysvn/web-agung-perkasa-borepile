@@ -1,5 +1,6 @@
 {
   "lastUpdate": "2026-08-19",
+  "priceUpdatedAt": "2026-08-19",
   "mesin": [
     { "diameter": 30, "price": 120000, "maxDepth": 30, "suitable": "Rumah 1-2 lantai" },
     { "diameter": 40, "price": 135000, "maxDepth": 30, "suitable": "Ruko, kantor 2-3 lantai" },
@@ -13,19 +14,9 @@
     { "diameter": 30, "price": 100000, "maxDepth": 10, "suitable": "Rumah 1-2 lantai (tanah padat)" },
     { "diameter": 40, "price": 120000, "maxDepth": 10, "suitable": "Ruko 2 lantai (tanah padat)" }
   ],
-  "sany": [
-    { "diameter": 40, "price": 0, "maxDepth": 27, "suitable": "Proyek skala menengah" },
-    { "diameter": 50, "price": 0, "maxDepth": 27, "suitable": "Proyek skala menengah" },
-    { "diameter": 60, "price": 0, "maxDepth": 27, "suitable": "Proyek skala menengah" },
-    { "diameter": 80, "price": 0, "maxDepth": 27, "suitable": "Proyek skala menengah" },
-    { "diameter": 90, "price": 0, "maxDepth": 27, "suitable": "Proyek skala menengah" },
-    { "diameter": 100, "price": 0, "maxDepth": 27, "suitable": "Proyek skala menengah" },
-    { "diameter": 110, "price": 0, "maxDepth": 27, "suitable": "Proyek skala menengah" }
-  ],
   "equipment": {
     "minicrane": { "name": "Mini Crane", "minOrder": 200, "speed": { "min": 2, "max": 4 } },
     "gawangan": { "name": "Gawangan", "minOrder": 200, "speed": { "min": 2, "max": 4 } },
-    "sany": { "name": "Hidrolik SANY", "minOrder": 1200, "speed": { "min": 15, "max": 25 } },
     "strauss": { "name": "Strauss Pile (Manual)", "minOrder": 100, "speed": { "min": 2, "max": 3 } }
   }
 }
