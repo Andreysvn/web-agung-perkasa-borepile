@@ -1,7 +1,7 @@
 ---
 import config from '../../data/config.json';
 
-
+import FaIcon from '../../components/icons/FaIcon.astro';
 ---
 <!DOCTYPE html>
 <html lang="id">
@@ -18,7 +18,7 @@ import config from '../../data/config.json';
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="QjaIirR3-qW7bARIyez5S0_WPeMjPJSqn6tnK44ZYMo">
     
-    <link rel="canonical" href="https://agungperkasaborepile.com/proses-jasa.html" />
+    <link rel="canonical" href="https://agungperkasaborepile.com/artikel/proses-bore-pile.html" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -32,7 +32,7 @@ import config from '../../data/config.json';
     <meta property="og:description" content="Proses jasa borepile kami, dari pengeboran, perakitan besi, sampai pengecoran beton.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
-    <meta property="og:url" content="https://agungperkasaborepile.com/proses-jasa.html">
+    <meta property="og:url" content="https://agungperkasaborepile.com/artikel/proses-bore-pile.html">
     <meta property="og:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -49,14 +49,7 @@ import config from '../../data/config.json';
     <meta name="geo.placename" content="Jakarta">
     
     <!-- Preconnect & DNS Prefetch -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    
-    <!-- Font Awesome Non-Blocking Load -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
     <!-- Ahrefs Analytics -->
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
     
@@ -96,12 +89,11 @@ import config from '../../data/config.json';
             <ul class="nav-menu" role="list">
                 <li role="listitem"><a href="/">Beranda</a></li>
                 <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan <i class="fas fa-chevron-down"></i></span>
+                    <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
-                        <li><a href="/jasa/">Jasa </a></li>
-                        <li><a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a></li>
-                        <li><a href="/harga/bore-pile-30cm.html">Strauss Pile</a></li>
-                        <li><a href="/#services">Bore Pile Hidrolik</a></li>
+                        <li><a href="/jasa/">Jasa Pusat</a></li>
+                        <li><a href="/jasa/bore-pile/">Bore Pile Mesin</a></li>
+                        <li><a href="/jasa/strauss-pile/jakarta.html">Strauss Pile</a></li>
                     </ul>
                 </li>
                 <li role="listitem"><a href="/artikel/">Artikel</a></li>
@@ -156,19 +148,19 @@ import config from '../../data/config.json';
                                 <div class="step-features">
                                     <h4>Spesifikasi Pengeboran:</h4>
                                     <ul class="features-list">
-                                        <li><i class="fas fa-check-circle"></i><div><strong>Kedalaman Presisi</strong><span>Hingga 30 meter dengan akurasi tinggi</span></div></li>
-                                        <li><i class="fas fa-check-circle"></i><div><strong>Diameter Bervariasi</strong><span>30cm hingga 110cm sesuai kebutuhan</span></div></li>
-                                        <li><i class="fas fa-check-circle"></i><div><strong>Minim Getaran</strong><span>Aman untuk bangunan di sekitarnya</span></div></li>
+                                        <li><FaIcon class="fas fa-check-circle" /><div><strong>Kedalaman Presisi</strong><span>Hingga 30 meter dengan akurasi tinggi</span></div></li>
+                                        <li><FaIcon class="fas fa-check-circle" /><div><strong>Diameter Bervariasi</strong><span>30cm hingga 110cm sesuai kebutuhan</span></div></li>
+                                        <li><FaIcon class="fas fa-check-circle" /><div><strong>Minim Getaran</strong><span>Aman untuk bangunan di sekitarnya</span></div></li>
                                     </ul>
                                 </div>
                                 <div class="step-timeline">
                                     <h4>Estimasi Waktu:</h4>
                                     <div class="timeline-items">
-                                        <div class="timeline-item"><i class="fas fa-clock"></i><span>1-4 titik per hari</span></div>
-                                        <div class="timeline-item"><i class="fas fa-hourglass-start"></i><span>Tergantung kondisi tanah</span></div>
+                                        <div class="timeline-item"><FaIcon class="fas fa-clock" /><span>1-4 titik per hari</span></div>
+                                        <div class="timeline-item"><FaIcon class="fas fa-hourglass-start" /><span>Tergantung kondisi tanah</span></div>
                                     </div>
                                 </div>
-                                <button class="toggle-details-btn" aria-expanded="false">Lihat Detail Teknis <i class="fas fa-chevron-down"></i></button>
+                                <button class="toggle-details-btn" aria-expanded="false">Lihat Detail Teknis <FaIcon class="fas fa-chevron-down" /></button>
                                 <div class="technical-details" style="display: none;">
                                     <div class="tech-spec-grid">
                                         <div class="tech-spec-item"><h5>Kedalaman</h5><p>Hingga 30 meter</p></div>
@@ -181,7 +173,7 @@ import config from '../../data/config.json';
                         </div>
                     </div>
 
-                    <div class="step-connector"><div class="connector-icon"><i class="fas fa-arrow-down"></i></div></div>
+                    <div class="step-connector"><div class="connector-icon"><FaIcon class="fas fa-arrow-down" /></div></div>
 
                     <!-- STEP 2: PEMASANGAN BESI -->
                     <div class="proses-step">
@@ -204,19 +196,19 @@ import config from '../../data/config.json';
                                 <div class="step-features">
                                     <h4>Spesifikasi Pemasangan Besi:</h4>
                                     <ul class="features-list">
-                                        <li><i class="fas fa-check-circle"></i><div><strong>Besi Standar SNI</strong><span>U32, U39, atau sesuai permintaan</span></div></li>
-                                        <li><i class="fas fa-check-circle"></i><div><strong>Pemasangan Presisi</strong><span>Sesuai desain untuk kekuatan yang maksimal</span></div></li>
-                                        <li><i class="fas fa-check-circle"></i><div><strong>Pengecekan kondisi</strong><span>Pengecekan semua pengerjaan perakitan sebelum pengecoran beton</span></div></li>
+                                        <li><FaIcon class="fas fa-check-circle" /><div><strong>Besi Standar SNI</strong><span>U32, U39, atau sesuai permintaan</span></div></li>
+                                        <li><FaIcon class="fas fa-check-circle" /><div><strong>Pemasangan Presisi</strong><span>Sesuai desain untuk kekuatan yang maksimal</span></div></li>
+                                        <li><FaIcon class="fas fa-check-circle" /><div><strong>Pengecekan kondisi</strong><span>Pengecekan semua pengerjaan perakitan sebelum pengecoran beton</span></div></li>
                                     </ul>
                                 </div>
                                 <div class="step-timeline">
                                     <h4>Estimasi Waktu:</h4>
                                     <div class="timeline-items">
-                                        <div class="timeline-item"><i class="fas fa-clock"></i><span>1-4 titik per hari</span></div>
-                                        <div class="timeline-item"><i class="fas fa-hourglass-start"></i><span>Sesuai jadwal pengeboran</span></div>
+                                        <div class="timeline-item"><FaIcon class="fas fa-clock" /><span>1-4 titik per hari</span></div>
+                                        <div class="timeline-item"><FaIcon class="fas fa-hourglass-start" /><span>Sesuai jadwal pengeboran</span></div>
                                     </div>
                                 </div>
-                                <button class="toggle-details-btn" aria-expanded="false">Lihat Detail Teknis <i class="fas fa-chevron-down"></i></button>
+                                <button class="toggle-details-btn" aria-expanded="false">Lihat Detail Teknis <FaIcon class="fas fa-chevron-down" /></button>
                                 <div class="technical-details" style="display: none;">
                                     <div class="tech-spec-grid">
                                         <div class="tech-spec-item"><h5>Jenis Besi</h5><p>U32, U39</p></div>
@@ -229,7 +221,7 @@ import config from '../../data/config.json';
                         </div>
                     </div>
 
-                    <div class="step-connector"><div class="connector-icon"><i class="fas fa-arrow-down"></i></div></div>
+                    <div class="step-connector"><div class="connector-icon"><FaIcon class="fas fa-arrow-down" /></div></div>
 
                     <!-- STEP 3: PENUANGAN BETON -->
                     <div class="proses-step">
@@ -252,19 +244,19 @@ import config from '../../data/config.json';
                                 <div class="step-features">
                                     <h4>Spesifikasi Penuangan Beton:</h4>
                                     <ul class="features-list">
-                                        <li><i class="fas fa-check-circle"></i><div><strong>Beton Berkualitas</strong><span>Mutu K250 - K300 atau sesuai permintaan</span></div></li>
-                                        <li><i class="fas fa-check-circle"></i><div><strong>Kontrol Kualitas</strong><span>Slump test dan kuat tekan</span></div></li>
-                                        <li><i class="fas fa-check-circle"></i><div><strong>Curing Process</strong><span>Perawatan beton 28 hari</span></div></li>
+                                        <li><FaIcon class="fas fa-check-circle" /><div><strong>Beton Berkualitas</strong><span>Mutu K250 - K300 atau sesuai permintaan</span></div></li>
+                                        <li><FaIcon class="fas fa-check-circle" /><div><strong>Kontrol Kualitas</strong><span>Slump test dan kuat tekan</span></div></li>
+                                        <li><FaIcon class="fas fa-check-circle" /><div><strong>Curing Process</strong><span>Perawatan beton 28 hari</span></div></li>
                                     </ul>
                                 </div>
                                 <div class="step-timeline">
                                     <h4>Estimasi Waktu:</h4>
                                     <div class="timeline-items">
-                                        <div class="timeline-item"><i class="fas fa-clock"></i><span>1-4 titik per hari</span></div>
-                                        <div class="timeline-item"><i class="fas fa-hourglass-start"></i><span>Pengerasan 28 hari optimal</span></div>
+                                        <div class="timeline-item"><FaIcon class="fas fa-clock" /><span>1-4 titik per hari</span></div>
+                                        <div class="timeline-item"><FaIcon class="fas fa-hourglass-start" /><span>Pengerasan 28 hari optimal</span></div>
                                     </div>
                                 </div>
-                                <button class="toggle-details-btn" aria-expanded="false">Lihat Detail Teknis <i class="fas fa-chevron-down"></i></button>
+                                <button class="toggle-details-btn" aria-expanded="false">Lihat Detail Teknis <FaIcon class="fas fa-chevron-down" /></button>
                                 <div class="technical-details" style="display: none;">
                                     <div class="tech-spec-grid">
                                         <div class="tech-spec-item"><h5>Mutu Beton</h5><p>K250 - K300</p></div>
@@ -306,13 +298,13 @@ import config from '../../data/config.json';
                     <div class="comparison-accordion borepile active">
                         <button class="comparison-accordion-header" aria-expanded="true">
                             <span class="header-left">
-                                <span class="header-icon"><i class="fas fa-drill"></i></span>
+                                <span class="header-icon"><FaIcon class="fas fa-drill" /></span>
                                 <span>
                                     <h3>Borepile</h3>
                                     <span class="header-subtitle">Untuk Proyek Sedang - Besar</span>
                                 </span>
                             </span>
-                            <span class="header-arrow"><i class="fas fa-chevron-down"></i></span>
+                            <span class="header-arrow"><FaIcon class="fas fa-chevron-down" /></span>
                         </button>
                         <div class="comparison-accordion-body">
                             <ul class="comparison-list">
@@ -330,13 +322,13 @@ import config from '../../data/config.json';
                     <div class="comparison-accordion strauss">
                         <button class="comparison-accordion-header" aria-expanded="false">
                             <span class="header-left">
-                                <span class="header-icon"><i class="fas fa-user-cog"></i></span>
+                                <span class="header-icon"><FaIcon class="fas fa-user-cog" /></span>
                                 <span>
                                     <h3>Strauss Pile</h3>
                                     <span class="header-subtitle">Untuk Proyek Kecil - Sedang</span>
                                 </span>
                             </span>
-                            <span class="header-arrow"><i class="fas fa-chevron-down"></i></span>
+                            <span class="header-arrow"><FaIcon class="fas fa-chevron-down" /></span>
                         </button>
                         <div class="comparison-accordion-body">
                             <ul class="comparison-list">
@@ -363,7 +355,7 @@ import config from '../../data/config.json';
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="true">
                             Berapa lama waktu yang dibutuhkan untuk menyelesaikan setiap tahapan?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer show">
                             <p>Pengeboran, pemasangan tulangan, dan pengecoran biasanya 2-4 titik perhari bore pile mesin, dan 1-3 titik perhari untuk manual. Total per titik biasanya selesai dalam satu hari kerja. Untuk beton perlu waktu curing atau pengerasan selama 28 hari untuk mencapai kekuatan optimal.</p>
@@ -372,7 +364,7 @@ import config from '../../data/config.json';
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
                             Apakah proses borepile akan merusak bangunan di sekitarnya?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Tidak. Kami menggunakan teknik pengeboran yang minim getaran, berbeda dengan tiang pancang yang menghasilkan getaran besar. Jadi proses borepile aman untuk bangunan di sekitarnya.</p>
@@ -381,7 +373,7 @@ import config from '../../data/config.json';
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
                             Jenis dan kualitas besi tulangan apa yang dipakai?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Biasanya teknisi menggunakan besi tulangan standar SNI, umumnya U32 atau U39, dengan ukuran sesuai desain struktur. Semua material dipilih untuk memastikan kekuatan dan ketahanan pondasi, kebanyakan client juga hanya menggunakan jasa bore pile saja dengan memakai material sendiri.</p>
@@ -390,7 +382,7 @@ import config from '../../data/config.json';
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
                             Bagaimana kalian menjamin kualitas di setiap tahap?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Tim kami adalah orang berpengalaman yang sudah ahli dibidang bore pile dan strauss pile sehingga kualitas pengerjaan selalu terjaga.</p>
@@ -399,7 +391,7 @@ import config from '../../data/config.json';
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
                             Apakah pekerjaan ini memiliki garansi?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Ya, kami memberikan garansi untuk pekerjaan pondasi sesuai ketentuan. Jika ada masalah yang disebabkan oleh pelaksanaan kami, tim kami siap ganti rugi dan memperbaiki tanpa biaya tambahan. Jika ada kendala diluar kami, maka itu adalah tanggung jawab pribadi.</p>
@@ -483,11 +475,11 @@ import config from '../../data/config.json';
        target="_blank" 
        rel="noopener noreferrer" 
        aria-label="Chat konsultasi melalui WhatsApp">
-       <i class="fab fa-whatsapp"></i>
+       <FaIcon class="fab fa-whatsapp" />
     </a>
     
     <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas">
-        <i class="fas fa-arrow-up"></i>
+        <FaIcon class="fas fa-arrow-up" />
     </button>
 
     <!-- ===== SCHEMA MARKUP ===== -->
@@ -499,7 +491,8 @@ import config from '../../data/config.json';
         "@type": "BreadcrumbList",
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://agungperkasaborepile.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Proses Jasa", "item": "https://agungperkasaborepile.com/proses-jasa.html" }
+            { "@type": "ListItem", "position": 2, "name": "Artikel", "item": "https://agungperkasaborepile.com/artikel.html" },
+            { "@type": "ListItem", "position": 3, "name": "Proses Jasa", "item": "https://agungperkasaborepile.com/artikel/proses-bore-pile.html" }
         ]
     }
     </script>

@@ -2,6 +2,7 @@
 import config from '../../data/config.json';
 import { organizationSchema, localBusinessSchema } from '../../lib/schema.js';
 
+import FaIcon from '../../components/icons/FaIcon.astro';
 const orgLd = JSON.stringify(organizationSchema());
 
 const localBusinessLd = JSON.stringify(localBusinessSchema({
@@ -58,14 +59,9 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <meta name="geo.placename" content="Cikarang">
     
     <!-- Preconnect -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
     <!-- Font Awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
     <!-- Ahrefs Analytics -->
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
     
@@ -98,7 +94,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
              <ul class="nav-menu" role="list">
                 <li role="listitem"><a href="/">Beranda</a></li>
                 <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan <i class="fas fa-chevron-down"></i></span>
+                    <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
                         <li><a href="/jasa/">Jasa </a></li>
                         <li><a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a></li>
@@ -163,8 +159,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                             <select id="machineSelect">
                                 <option value="minicrane">Mini Crane</option>
                                 <option value="gawangan">Gawangan</option>
-                                <option value="sany">Hidrolik (SANY)</option>
-                            </select>
+                                </select>
                             <div class="price-hint">*Harga dan minimal order berbeda tiap alat</div>
                         </div>
                     </div>
@@ -253,18 +248,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </table>
                 </div>
 
-                <h3>Bore Pile Mesin Hidrolik (Sany SR65)</h3>
-                <div class="table-responsive">
-                    <table class="price-table">
-                        <caption>Tabel harga bore pile mesin hidrolik Sany SR65 per meter</caption>
-                        <thead>
-                            <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>40-110 cm</td><td><strong>Hubungi Kami</strong></td><td>20-27 meter</td><td>Proyek skala menengah</td></tr>
-                        </tbody>
-                    </table>
-                </div>
+                
             </section>
 
               <a href="/jasa/">Lihat Jasa Bore Pile & Strauss Pile untuk wilayah Anda â†’</a>
@@ -546,7 +530,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Berapa kedalaman bore pile yang ideal untuk tanah di Cikarang?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Untuk wilayah Cikarang, kedalaman bore pile bervariasi tergantung lokasi. <strong>Kawasan industri</strong> tanah timbunan lunak, membutuhkan kedalaman 12-20 meter. <strong>Cikarang Selatan</strong> lebih padat, cukup 8-15 meter. Data sondir sangat menentukan kedalaman pasti.</p>
@@ -556,7 +540,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apakah bore pile cocok untuk kawasan industri Cikarang?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Sangat cocok. Kawasan industri Cikarang memiliki tanah timbunan yang lunak. Bore pile Ã˜40-50cm dengan kedalaman 15-20 meter adalah solusi paling tepat untuk pabrik, gudang, dan bangunan industri. Kami sudah banyak mengerjakan proyek di kawasan tersebut.</p>
@@ -566,7 +550,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apa perbedaan tanah di Cikarang dengan Jakarta untuk bore pile?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p><strong>Cikarang</strong> memiliki tanah timbunan dan bekas rawa yang lebih lunak, terutama di kawasan industri. <strong>Jakarta</strong> tanahnya juga lunak tetapi dengan karakteristik yang berbeda. Metode <strong>wash boring</strong> lebih sering digunakan di Cikarang untuk tanah berair. Kami selalu menyesuaikan metode berdasarkan kondisi tanah di lokasi proyek Anda.</p>
@@ -576,7 +560,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Berapa biaya mobilisasi bore pile ke Cikarang?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Biaya mobilisasi tergantung jarak dari gudang kami di Jakarta Utara: <strong>Cikarang Pusat</strong> Rp3-3.5 juta, <strong>Cikarang Barat/Timur</strong> Rp3.5-4 juta, <strong>Cikarang Selatan/Utara</strong> Rp3.5-4.5 juta. Untuk proyek di bawah 200m (mesin) atau 100m (manual), biaya mobilisasi bisa lebih tinggi proporsional.</p>
@@ -586,7 +570,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apa keunggulan bore pile dibandingkan tiang pancang di Cikarang?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Di Cikarang yang banyak area perumahan dan kawasan industri, bore pile lebih unggul karena <strong>minim getaran dan suara</strong>. Tidak seperti tiang pancang yang menimbulkan getaran keras dan bisa merusak dinding tetangga atau mengganggu aktivitas pabrik. Selain itu, metode wash boring sangat efektif untuk tanah timbunan di Cikarang.</p>
@@ -596,7 +580,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apakah bisa survey lokasi dulu sebelum eksekusi bore pile di Cikarang?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Bisa. Kami siap melakukan <strong>survey lokasi gratis</strong> ke seluruh wilayah Cikarang. Tim teknis kami akan cek akses jalan, kondisi tanah, dan memberikan rekomendasi diameter serta kedalaman terbaik untuk proyek Anda. Konsultasi tanpa biaya.</p>
@@ -623,7 +607,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Borepile vs Strauss Pile</h3>
                                     <p class="article-excerpt">Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik.</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                         <span class="article-read-more">Baca selengkapnya â†’</span>
                                     </div>
                                 </div>
@@ -639,7 +623,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Harga Bore Pile Diameter 30cm</h3>
                                     <p class="article-excerpt">Lihat harga terbaru 2026 untuk bore pile diameter 30cm.</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                         <span class="article-read-more">Baca selengkapnya â†’</span>
                                     </div>
                                 </div>
@@ -655,7 +639,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Harga Bore Pile Jakarta 2026</h3>
                                     <p class="article-excerpt">Informasi terkini tentang harga bore pile di wilayah Jakarta untuk tahun 2026.</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                         <span class="article-read-more">Baca selengkapnya â†’</span>
                                     </div>
                                 </div>
@@ -664,7 +648,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </div>
                     <div class="articles-cta">
                         <a href="/artikel/artikel.html" class="btn-articles-all">
-                            <i class="fas fa-newspaper"></i> Lihat Semua Artikel
+                            <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
                         </a>
                     </div>
                 </div>
@@ -743,8 +727,8 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <h3>Agung Perkasa Borepile</h3>
                     <p>Spesialis pondasi borepile mesin & strauss pile (bore pile manual). Pengalaman lebih dari 10 tahun di Cikarang dan sekitarnya.</p>
                     <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
+                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -785,10 +769,10 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
        target="_blank" 
        rel="noopener noreferrer" 
        aria-label="Chat konsultasi melalui WhatsApp">
-       <i class="fab fa-whatsapp"></i>
+       <FaIcon class="fab fa-whatsapp" />
     </a>
     
-    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
+    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><FaIcon class="fas fa-arrow-up" /></button>
 
            <!-- ============================================================
          SCHEMA MARKUP - CIKARANG

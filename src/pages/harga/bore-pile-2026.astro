@@ -1,4 +1,4 @@
-?---
+---
 import pricing from '../../data/harga.json';
 import { organizationSchema, localBusinessSchema } from '../../lib/schema.js';
 import FaIcon from '../../components/icons/FaIcon.astro';
@@ -21,8 +21,6 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
     month: 'long',
     year: 'numeric'
 }).format(new Date(`${pricing.priceUpdatedAt}T00:00:00`));
-
-const pricingJs = JSON.stringify(pricing);
 ---
 <!DOCTYPE html>
 <html lang="id">
@@ -76,9 +74,7 @@ const pricingJs = JSON.stringify(pricing);
 
     <!-- CSS & JS EKSTERNAL -->
     <link rel="stylesheet" href="/css/harga.css">
-    <script is:inline set:html={`window.__PRICING__ = ${pricingJs};`} />
-    <script is:inline src="/js/script.js" defer></script>
-    <script is:inline src="/js/harga-calculator.js" defer></script>
+    <script is:inline src="/js/harga.js" defer></script>
 </head>
 
 <body>
@@ -111,15 +107,13 @@ const pricingJs = JSON.stringify(pricing);
                     <ul class="dropdown-content">
                         <li><a href="/jasa/">Pusat Layanan</a></li>
                         <li><a href="/jasa/bore-pile/">Bore Pile Mesin</a></li>
-                        <li><a href="/jasa/strauss-pile/">Strauss Pile</a></li>
+                        <li><a href="/jasa/strauss-pile/jakarta.html">Strauss Pile</a></li>
                     </ul>
                 </li>
                 <li class="dropdown" role="listitem">
                     <span class="dropbtn">Alat<FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
-                        <li><a href="/jasa/">Jasa </a></li>
-                        <li><a href="/alat/">Bore Pile Mesin</a></li>
-                        <li><a href="/alat/strauss-pile/">Strauss Pile</a></li>
+                        <li><a href="/alat/">Alat Kami</a></li>
                     </ul>
                 </li>
                 <li role="listitem"><a href="/artikel/">Artikel</a></li>
@@ -135,7 +129,7 @@ const pricingJs = JSON.stringify(pricing);
             <nav class="breadcrumb" aria-label="Breadcrumb navigasi">
                 <a href="/">Beranda</a>
                 <span class="separator">/</span>
-                <a href="/harga/">Harga</a>
+                <a href="/harga/bore-pile-2026.html">Harga</a>
                 <span class="separator">/</span>
                 <span class="current" aria-current="page">Harga Bore Pile 2026</span>
             </nav>
@@ -887,7 +881,7 @@ const pricingJs = JSON.stringify(pricing);
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 Agung Perkasa Borepile. All Rights Reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Agung Perkasa Borepile. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -945,7 +939,7 @@ const pricingJs = JSON.stringify(pricing);
         "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "IDR",
-            "lowPrice": "70000",
+            "lowPrice": "75000",
             "highPrice": "190000",
             "offerCount": "8",
             "availability": "https://schema.org/InStock",

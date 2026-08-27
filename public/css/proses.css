@@ -818,3 +818,166 @@
     margin: 0;
     line-height: 1.7;
 }
+
+/* ============================================================
+   INTERACTIVE FEATURES (Prototype)
+   ============================================================ */
+
+/* --- Sticky Progress Bar --- */
+.proses-progress {
+    position: sticky;
+    top: 60px;
+    z-index: 90;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    padding: 12px 0;
+    transition: box-shadow 0.3s;
+}
+
+.proses-progress-inner {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 0 20px;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.progress-step:hover {
+    background: #f0f4f8;
+}
+
+.progress-step .progress-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: all 0.4s ease;
+    flex-shrink: 0;
+}
+
+.progress-step.active .progress-num {
+    background: linear-gradient(135deg, var(--secondary-color), #3498db);
+    color: white;
+    transform: scale(1.15);
+    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.4);
+}
+
+.progress-step.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.progress-step.completed .progress-num {
+    background: #27ae60;
+    color: white;
+}
+
+.progress-connector {
+    width: 40px;
+    height: 2px;
+    background: #e0e0e0;
+    flex-shrink: 0;
+    transition: background 0.4s;
+}
+
+.progress-connector.filled {
+    background: linear-gradient(90deg, #27ae60, var(--secondary-color));
+}
+
+/* --- Scroll Animations --- */
+.proses-step {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.proses-step.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.step-connector {
+    opacity: 0;
+    transform: scaleY(0);
+    transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
+}
+
+.step-connector.visible {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* --- Step hover glow --- */
+.proses-step.visible:hover {
+    border-left-color: var(--primary-color);
+    box-shadow: 0 15px 40px rgba(26, 58, 110, 0.12);
+}
+
+/* --- Timeline summary animation --- */
+.proses-summary {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
+}
+
+.proses-summary.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Progress bar mobile --- */
+@media (max-width: 600px) {
+    .progress-step .progress-label {
+        display: none;
+    }
+    .progress-step {
+        padding: 6px 10px;
+    }
+    .progress-connector {
+        width: 24px;
+    }
+    .proses-progress {
+        top: 50px;
+    }
+}
+
+/* --- Smooth anchor scroll --- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Pulse animation for active step number --- */
+@keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.5); }
+    70% { box-shadow: 0 0 0 10px rgba(52, 152, 219, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
+}
+
+.progress-step.active .progress-num {
+    animation: pulse-ring 2s infinite;
+}

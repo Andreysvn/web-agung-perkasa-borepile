@@ -1,7 +1,8 @@
 ---
-import config from '../../data/config.json';
-import pricing from '../../data/harga.json';
-import { organizationSchema, localBusinessSchema } from '../../lib/schema.js';
+import config from '../../../../data/config.json';
+import pricing from '../../../../data/harga.json';
+import { organizationSchema, localBusinessSchema } from '../../../../lib/schema.js';
+import FaIcon from '../../../../components/icons/FaIcon.astro';
 
 const orgLd = JSON.stringify(organizationSchema());
 
@@ -41,7 +42,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="QjaIirR3-qW7bARIyez5S0_WPeMjPJSqn6tnK44ZYMo">
     
-    <link rel="canonical" href="https://agungperkasaborepile.com/harga/bore-pile-60cm.html" />
+    <link rel="canonical" href="https://agungperkasaborepile.com/harga/bore-pile/60cm.html" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -72,13 +73,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     <meta name="geo.placename" content="Jakarta">
     
     <!-- Preconnect & DNS Prefetch -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    
-    <!-- Font Awesome Non-Blocking Load -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Ahrefs Analytics -->
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
@@ -113,12 +108,12 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
              <ul class="nav-menu" role="list">
                 <li role="listitem"><a href="/">Beranda</a></li>
                 <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan <i class="fas fa-chevron-down"></i></span>
+                    <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
                         <li><a href="/jasa/">Jasa </a></li>
-                        <li><a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a></li>
-                        <li><a href="/harga/bore-pile-30cm.html">Strauss Pile</a></li>
-                        <li><a href="/#services">Bore Pile Hidrolik</a></li>
+                        <li><a href="/jasa/bore-pile/">Bore Pile Mesin</a></li>
+                        <li><a href="/jasa/strauss-pile/jakarta.html">Strauss Pile</a></li>
+                        <li><a href="/alat/">Bore Pile Hidrolik</a></li>
                     </ul>
                 </li>
                 <li role="listitem"><a href="/artikel/">Artikel</a></li>
@@ -134,7 +129,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
             <nav class="breadcrumb" aria-label="Breadcrumb navigasi">
                 <a href="/">Beranda</a>
                 <span class="separator">/</span>
-                <a href="/harga/">Harga</a>
+                <a href="/harga/bore-pile-2026.html">Harga</a>
                 <span class="separator">/</span>
                 <span class="current" aria-current="page">Harga Bore Pile Diameter 60cm</span>
             </nav>
@@ -468,7 +463,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
             </section>
 
             <p>Butuh harga khusus untuk jasa bore pile 60cm di Jakarta? 
-            <a href="/jasa/bore-pile-jakarta.html">Lihat jasa & harga bore pile Jakarta â†’</a>
+            <a href="/jasa/bore-pile/jakarta.html">Lihat jasa & harga bore pile Jakarta â†’</a>
             </p>
 
             <!-- ===== MATERIAL DARI KAMI ===== -->
@@ -623,7 +618,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="faq-item">
                         <button class="faq-question">
                             Apakah bore pile diameter 60cm cukup kuat untuk hotel 4 lantai?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p><strong>Sangat cukup.</strong> Dengan daya dukung 60-85 ton per titik dan kedalaman 12-18 meter, diameter 60cm mampu menahan beban hotel 4 lantai dengan aman. Bahkan untuk gedung 5 lantai pun masih kuat dengan perhitungan struktur yang tepat.</p>
@@ -633,7 +628,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="faq-item">
                         <button class="faq-question">
                             Berapa standar harga jasa bor diameter 60cm?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Standar harga jasa bor diameter 60cm: <strong>Rp240.000/m</strong> untuk mesin, dan <strong>Hubungi Kami</strong> untuk manual (Strauss Pile). Harga sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton (belum termasuk material).</p>
@@ -643,7 +638,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="faq-item">
                         <button class="faq-question">
                             Berapa kedalaman maksimal bore pile diameter 60cm?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Untuk bore pile mesin (mini crane & gawangan) diameter 60cm, kedalaman maksimal mencapai <strong>30 meter</strong>. Untuk bore pile manual (Strauss Pile) diameter 60cm, kedalaman maksimal <strong>10 meter</strong>. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir di lokasi proyek Anda.</p>
@@ -653,7 +648,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="faq-item">
                         <button class="faq-question">
                             Berapa jumlah titik ideal untuk bore pile diameter 60cm?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Untuk hotel atau gedung dengan luas 400-800mÂ², jumlah titik ideal antara <strong>25-50 titik</strong>. Konsultasikan dengan tim teknis kami untuk perhitungan yang akurat sesuai gambar bangunan dan hasil sondir tanah.</p>
@@ -663,7 +658,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="faq-item">
                         <button class="faq-question">
                             Apakah bore pile diameter 60cm bisa dikerjakan manual (Strauss Pile)?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p><strong>Bisa.</strong> Bore pile manual (Strauss Pile) diameter 60cm bisa dikerjakan dengan kedalaman maksimal <strong>10 meter</strong>. Cocok untuk proyek di area terbatas dengan tanah padat. Harga lebih ekonomis, namun kapasitas daya dukung terbatas pada kedalaman tersebut.</p>
@@ -673,7 +668,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="faq-item">
                         <button class="faq-question">
                             Apakah melayani area Bekasi, Tangerang, Bogor?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Betul. Kami melayani area <strong>Jabodetabek</strong> (Jakarta, Bekasi, Bogor, Depok, Tangerang) untuk proyek diameter 60cm dengan alat yang memadai.</p>
@@ -683,7 +678,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="faq-item">
                         <button class="faq-question">
                             Apakah melayani area luar Jabodetabek?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Ya. Kami melayani seluruh area pulau Jawa untuk proyek skala besar dengan diameter 60cm, dengan biaya mobilisasi yang disesuaikan.</p>
@@ -693,7 +688,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="faq-item">
                         <button class="faq-question">
                             Berapa biaya total bore pile 60cm untuk hotel 4 lantai?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Untuk hotel 4 lantai dengan luas 400-800mÂ², biasanya membutuhkan <strong>25-40 titik</strong> bore pile diameter 60cm dengan kedalaman 12-18 meter. Estimasi biaya jasa bor (belum termasuk material):</p>
@@ -717,7 +712,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
             <!-- ===== INTERNAL LINK ===== -->
             <div class="internal-link-box">
                 <p><strong>Baca Juga Harga Bore Pile:</strong><br>
-                <a href="/jasa/bore-pile-jakarta.html">Jakarta</a> | 
+                <a href="/jasa/bore-pile/jakarta.html">Jakarta</a> | 
                 <a href="/jasa/bore-pile-bekasi.html">Bekasi</a> | 
                 <a href="/jasa/bore-pile-tangerang.html">Tangerang</a> | 
                 <a href="/jasa/bore-pile-depok.html">Depok</a> | 
@@ -747,7 +742,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                             <h3>Harga Bore Pile 2026</h3>
                             <p class="article-excerpt">Lihat harga terbaru untuk semua diameter bore pile terbaru 2026, lengkap dengan kalkulator estimasi biaya.</p>
                             <div class="article-meta">
-                                <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                 <span class="article-read-more">Baca selengkapnya â†’</span>
                             </div>
                         </div>
@@ -763,7 +758,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                             <h3>Perbedaan Bore Pile dan Strauss Pile</h3>
                             <p class="article-excerpt">Perbandingan lengkap agar Anda dapat memilih jenis pondasi yang tepat antara bore pile mesin dan manual.</p>
                             <div class="article-meta">
-                                <span class="article-date"><i class="far fa-calendar-alt"></i> Mei 2026</span>
+                                <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Mei 2026</span>
                                 <span class="article-read-more">Baca selengkapnya â†’</span>
                             </div>
                         </div>
@@ -779,7 +774,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                             <h3>Harga Bore Pile Diameter 40cm</h3>
                             <p class="article-excerpt">Harga Bore Pile Diameter 40cm terbaru 2026, cocok untuk ruko, kantor, dan bangunan sedang.</p>
                             <div class="article-meta">
-                                <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                 <span class="article-read-more">Baca selengkapnya â†’</span>
                             </div>
                         </div>
@@ -788,7 +783,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
             </div>
             <div class="articles-cta">
                 <a href="/artikel/index.html" class="btn-articles-all">
-                    <i class="fas fa-newspaper"></i> Lihat Semua Artikel
+                    <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
                 </a>
             </div>
         </div>
@@ -856,8 +851,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <h3>Agung Perkasa Borepile</h3>
                     <p>Spesialis pondasi borepile diameter 60cm untuk hotel, gedung perkantoran, rumah sakit, dan bangunan komersial di Jakarta dan sekitarnya. Kontraktor borepile terpercaya dengan pengalaman lebih dari 10 tahun.</p>
                     <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
+                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -898,10 +893,10 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
        target="_blank" 
        rel="noopener noreferrer" 
        aria-label="Chat konsultasi melalui WhatsApp">
-       <i class="fab fa-whatsapp"></i>
+       <FaIcon class="fab fa-whatsapp" />
     </a>
     
-    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
+    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><FaIcon class="fas fa-arrow-up" /></button>
 
     <!-- ===== SCHEMA MARKUP ===== -->
     <script type="application/ld+json" set:html={orgLd} />
@@ -923,7 +918,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Harga",
-                "item": "https://agungperkasaborepile.com/harga/"
+                "item": "https://agungperkasaborepile.com/harga/bore-pile-2026.html"
             },
             {
                 "@type": "ListItem",

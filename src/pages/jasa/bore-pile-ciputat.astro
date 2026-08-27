@@ -1,5 +1,6 @@
 ---
 import config from '../../data/config.json';
+import FaIcon from '../../components/icons/FaIcon.astro';
 ---
 <!DOCTYPE html>
 <html lang="id">
@@ -14,7 +15,7 @@ import config from '../../data/config.json';
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="QjaIirR3-qW7bARIyez5S0_WPeMjPJSqn6tnK44ZYMo">
     
-    <link rel="canonical" href="https://agungperkasaborepile.com/bore-pile-ciputat.html" />
+    <link rel="canonical" href="https://agungperkasaborepile.com/jasa/bore-pile-ciputat.html" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
@@ -28,7 +29,7 @@ import config from '../../data/config.json';
     <meta property="og:description" content="Harga bore pile Ciputat mulai Rp70.000/m (manual) & Rp120.000/m (mesin). Kalkulator gratis. Garansi 6 tahun. Melayani seluruh Ciputat.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
-    <meta property="og:url" content="https://agungperkasaborepile.com/bore-pile-ciputat.html">
+    <meta property="og:url" content="https://agungperkasaborepile.com/jasa/bore-pile-ciputat.html">
     <meta property="og:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
     <meta property="og:site_name" content="Agung Perkasa Borepile">
     
@@ -43,353 +44,13 @@ import config from '../../data/config.json';
     <meta name="geo.placename" content="Ciputat, Tangerang Selatan">
     
     <!-- Preconnect -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
     <!-- Font Awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
     <!-- Ahrefs Analytics -->
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
     
-    <style is:inline>
-        /* ========== FONT DISPLAY SWAP UNTUK PERFORMANCE ========== */
-        @font-face {
-            font-family: 'FontAwesome';
-            font-display: swap;
-            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2') format('woff2');
-        }
-        
-        /* ========== STYLE ========== */
-        :root {
-            --primary-color: #1a3a6e;
-            --secondary-color: #e67e22;
-            --dark-color: #2c3e50;
-            --text-color: #333;
-            --white: #fff;
-            --light-gray: #f8f9fa;
-            --text-light: #6c757d;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background: var(--white);
-        }
-        
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        /* NAVBAR */
-        .navbar {
-            background: var(--primary-color);
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .navbar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--white); font-weight: bold; }
-        .logo img { width: 45px; height: 45px; object-fit: contain; }
-        .logo span { font-size: 0.9rem; line-height: 1.2; }
-        .nav-menu { display: flex; list-style: none; gap: 20px; }
-        .nav-menu a { color: var(--white); text-decoration: none; font-weight: 500; }
-        .nav-menu a:hover { color: var(--secondary-color); }
-        .btn-nav { background: #d35400; padding: 8px 16px; border-radius: 30px; }
-        .btn-nav:hover { background: #a04000; color: white !important; }
-        .menu-toggle { display: none; flex-direction: column; cursor: pointer; background: transparent; border: none; padding: 10px; }
-        .menu-toggle .bar { width: 25px; height: 3px; background: white; margin: 3px 0; transition: 0.3s; }
-        @media (max-width: 768px) {
-            .menu-toggle { display: flex; }
-            .nav-menu { position: fixed; left: -100%; top: 75px; flex-direction: column; background: var(--primary-color); width: 100%; text-align: center; transition: 0.3s; padding: 20px 0; gap: 15px; }
-            .nav-menu.active { left: 0; }
-        }
-        
-        /* MAIN CONTENT */
-        .blog-container { max-width: 980px; margin: 0 auto; padding: 120px 30px 50px; }
-        @media (max-width: 768px) { .blog-container { padding: 100px 20px 40px; } }
-        
-        .breadcrumb { padding: 0.8rem 0; margin-bottom: 1rem; font-size: 0.8rem; }
-        .breadcrumb a { color: #0d3b6e; text-decoration: underline; }
-        .breadcrumb .separator { margin: 0 0.3rem; color: #555; }
-        .breadcrumb .current { color: #333; font-weight: 500; }
-        
-        .update-badge { background: #2e7d32; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.85rem; margin-bottom: 1.5rem; display: inline-block; }
-        
-        /* CALCULATOR BOX */
-        .calculator-box {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 100%);
-            border-radius: 20px;
-            padding: 1.2rem;
-            margin: 1.5rem 0;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            border: 1px solid rgba(26,58,110,0.2);
-        }
-        .method-selector { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-        .method-btn { flex: 1; padding: 12px; background: white; border: 2px solid #ddd; border-radius: 10px; cursor: pointer; text-align: center; font-weight: 600; transition: all 0.3s ease; }
-        .method-btn.active { border-color: #d35400; background: #d35400; color: #fff; }
-        .calculator-form-group { margin-bottom: 1rem; }
-        .calculator-form-group label { display: block; font-weight: 600; margin-bottom: 0.4rem; font-size: 0.9rem; }
-        .calculator-form-group select, .calculator-form-group input { width: 100%; padding: 10px 12px; border: 2px solid #ddd; border-radius: 10px; font-size: 0.95rem; }
-        .calculator-result { background: white; border-radius: 15px; padding: 1.2rem; margin-top: 1.2rem; text-align: center; border: 2px solid var(--primary-color); }
-        .calculator-result .total-price { font-size: 1.6rem; font-weight: bold; color: var(--primary-color); }
-        .btn-wa { background: #25D366; width: 100%; padding: 12px; color: white; border: none; border-radius: 10px; font-weight: bold; margin-top: 1rem; cursor: pointer; }
-        .btn-wa:hover { background: #128C7E; }
-        .calculator-note { font-size: 0.7rem; color: #555; margin-top: 0.8rem; text-align: center; }
-        @media (min-width: 768px) {
-            .calculator-box { padding: 1.8rem; }
-            .form-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-            .calculator-result .total-price { font-size: 2rem; }
-        }
-        
-        /* TABEL HARGA */
-        .price-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .price-table th { background: var(--primary-color); color: white; padding: 10px; text-align: center; }
-        .price-table td { padding: 8px; border: 1px solid #ddd; text-align: center; }
-        .price-table tr:nth-child(even) { background: #f9f9f9; }
-        .table-responsive { overflow-x: auto; margin: 1rem 0; }
-        
-        /* AREA KELURAHAN CIPUTAT */
-        .area-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .area-card { background: #f5f5f5; border-radius: 12px; padding: 1rem; border-left: 4px solid #d35400; }
-        .area-card h3 { color: var(--primary-color); margin-bottom: 0.5rem; font-size: 1rem; }
-        .area-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .area-tags span { background: white; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; border: 1px solid #ccc; }
-        
-        /* INFO GRID */
-        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.8rem; margin: 1.2rem 0; }
-        .info-card { background: #f0f7ff; padding: 0.8rem; border-radius: 10px; border-left: 4px solid var(--primary-color); }
-        .info-card h3 { color: var(--primary-color); margin-bottom: 0.3rem; font-size: 1rem; }
-        
-        /* ILLUSTRATION ROW */
-        .illustration-row { display: flex; flex-wrap: wrap; gap: 1.5rem; margin: 1.5rem 0; align-items: center; }
-        .illustration-img { flex: 1; min-width: 200px; text-align: center; }
-        .illustration-img img { 
-            width: 100%; 
-            max-width: 400px; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            aspect-ratio: 400 / 250;
-            object-fit: cover;
-        }
-        .illustration-img .caption { font-size: 0.7rem; color: #555; margin-top: 0.3rem; }
-        .illustration-text { flex: 1.5; }
-        
-        /* FAQ */
-        .faq-container { margin: 1.5rem 0; }
-        .faq-item { background: white; border-radius: 12px; margin-bottom: 0.8rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 1px solid #ddd; overflow: hidden; }
-        .faq-question { width: 100%; background: #f5f5f5; border: none; text-align: left; padding: 1rem 1.2rem; font-weight: 600; color: #0d3b6e; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .faq-question i { transition: transform 0.3s; color: #d35400; }
-        .faq-question.active i { transform: rotate(180deg); }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; padding: 0 1.2rem; }
-        .faq-answer.show { max-height: 300px; padding: 0 1.2rem 1rem 1.2rem; }
-        
-        .btn-wa-konsultasi { display: inline-block; background: #25D366; color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; }
-        .btn-wa-konsultasi:hover { background: #128C7E; }
-        
-        /* SOCIAL MEDIA LINKS */
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 50%;
-            color: white;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        .social-links a:hover {
-            background: var(--secondary-color, #e67e22);
-            transform: translateY(-3px);
-        }
-        
-        .footer { background: linear-gradient(135deg, var(--primary-color), var(--dark-color)); color: white; padding: 60px 0 0; margin-top: 60px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 40px; }
-        .footer-col h3 { color: white; margin-bottom: 20px; position: relative; padding-bottom: 10px; }
-        .footer-col h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background: #d35400; }
-        .footer-col p, .footer-col li { color: rgba(255,255,255,0.8); font-size: 0.85rem; }
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 8px; }
-        .footer-col a { color: rgba(255,255,255,0.8); text-decoration: underline; }
-        .footer-bottom { background: rgba(0,0,0,0.2); padding: 20px; text-align: center; font-size: 0.8rem; }
-        
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; width: 56px; height: 56px; background: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; z-index: 100; text-decoration: none; }
-        .scroll-top { position: fixed; bottom: 100px; right: 30px; width: 48px; height: 48px; background: #d35400; color: white; border: none; border-radius: 50%; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 99; }
-        .scroll-top.active { opacity: 1; visibility: visible; }
-        
-        .text-center { text-align: center; }
-        .mt-2 { margin-top: 2rem; }
-        
-        @media (max-width: 768px) {
-            .method-selector { flex-direction: column; }
-            .whatsapp-float { width: 50px; height: 50px; font-size: 1.5rem; bottom: 20px; right: 20px; }
-            .scroll-top { width: 44px; height: 44px; bottom: 80px; right: 20px; }
-            .illustration-row { flex-direction: column; }
-            .info-grid { grid-template-columns: 1fr; }
-            .area-grid { grid-template-columns: 1fr; }
-        }
-        
-        .skip-link { position: absolute; top: -40px; left: 0; background: var(--primary-color); color: white; padding: 8px; text-decoration: none; z-index: 1001; }
-        .skip-link:focus { top: 0; }
-        
-        a:not(.btn-nav):not(.btn-wa-konsultasi):not(.whatsapp-float) { text-decoration: underline; }
-
-        /* ===== BLOG SECTION STYLES ===== */
-        .blog {
-            padding: 60px 0;
-            background-color: var(--light-gray, #f8f9fa);
-        }
-        
-        .section-title {
-            font-size: clamp(1.6rem, 5vw, 2.2rem);
-            color: var(--primary-color, #1a3a6e);
-            text-align: center;
-            margin-bottom: 15px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--secondary-color, #e67e22), #3498db);
-            border-radius: 2px;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            color: var(--text-light, #6c757d);
-            font-size: clamp(0.85rem, 3vw, 1rem);
-        }
-        
-        .blog-grid,
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
-        }
-        
-        .project-card {
-            background: var(--white, #fff);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-        }
-        
-        .project-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-            display: block;
-        }
-        
-        .project-card:hover img {
-            transform: scale(1.03);
-        }
-        
-        .project-info {
-            padding: 20px;
-        }
-        
-        .project-info h3 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            color: var(--primary-color, #1a3a6e);
-            line-height: 1.4;
-        }
-        
-        .project-info p {
-            font-size: 0.85rem;
-            color: var(--text-light, #6c757d);
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-        
-        .project-info .btn,
-        .project-info .btn-primary {
-            display: inline-block;
-            padding: 8px 18px;
-            background: var(--secondary-color, #e67e22);
-            color: white;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .project-info .btn-primary:hover {
-            background: #d35400;
-            transform: translateY(-2px);
-        }
-        
-        .portfolio-cta {
-            text-align: center;
-            margin-top: 30px;
-        }
-        
-        .portfolio-cta .btn-primary {
-            display: inline-block;
-            padding: 12px 30px;
-            background: var(--primary-color, #1a3a6e);
-            color: white;
-            border-radius: 40px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-        
-        .portfolio-cta .btn-primary:hover {
-            background: var(--secondary-color, #e67e22);
-            transform: translateY(-2px);
-        }
-        
-        @media (max-width: 768px) {
-            .blog { padding: 40px 0; }
-            .blog-grid, .projects-grid { grid-template-columns: 1fr; gap: 20px; }
-            .project-card img { height: 160px; }
-            .project-info { padding: 15px; }
-            .project-info h3 { font-size: 1rem; }
-            .section-subtitle { margin-bottom: 30px; padding: 0 15px; }
-            .portfolio-cta .btn-primary { padding: 10px 24px; font-size: 0.9rem; }
-        }
-        
-        @media (prefers-reduced-motion: reduce) {
-            .project-card, .project-card img, .project-info .btn-primary { transition: none; }
-            .project-card:hover { transform: none; }
-        }
-    </style>
+    <link rel="stylesheet" href="/css/borepile-kota.css">
 </head>
 <body>
      <!-- Google Tag Manager -->
@@ -728,12 +389,12 @@ import config from '../../data/config.json';
             <section>
                 <h2 style="color: var(--primary-color); margin: 30px 0 10px;">Pertanyaan Umum Seputar Bore Pile Ciputat</h2>
                 <div class="faq-container">
-                    <div class="faq-item"><button class="faq-question">Apakah bore pile cocok untuk kondisi tanah di Ciputat? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Sangat cocok. Ciputat memiliki area dengan tanah yang bervariasi, dari tanah eksisting di pusat kota hingga tanah yang lebih lunak di beberapa wilayah perbatasan. Bore pile bisa mencapai tanah keras di kedalaman 6-15 meter tergantung lokasi, memberikan pondasi yang stabil untuk bangunan Anda.</p></div></div>
-                    <div class="faq-item"><button class="faq-question">Berapa biaya mobilisasi alat ke Ciputat? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Untuk wilayah Ciputat: mesin mini crane sekitar Rp2-3 juta, manual sekitar Rp1-2 juta. Biaya tergantung jarak dari gudang kami di Jakarta Utara ke lokasi proyek Anda. Untuk daerah Bintaro biasanya Rp2-2.5 juta karena lebih dekat.</p></div></div>
-                    <div class="faq-item"><button class="faq-question">Apakah melayani proyek di Bintaro dan sekitarnya? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Ya. Kami melayani seluruh wilayah Ciputat dan sekitarnya termasuk Bintaro, Pondok Ranji, Rempoa, Cirendeu, dan Jurang Mangu. Mobilisasi ke area ini sudah kami lakukan rutin.</p></div></div>
-                    <div class="faq-item"><button class="faq-question">Berapa lama waktu pengerjaan bore pile untuk rumah di Ciputat? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Untuk 16 titik diameter 30cm kedalaman 12m, estimasi 5-7 hari kerja. Kalkulator di atas bisa memberi estimasi lebih akurat.</p></div></div>
-                    <div class="faq-item"><button class="faq-question">Apakah wajib ada data sondir untuk proyek di Ciputat? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Sangat wajib. Data sondir menentukan kedalaman bore pile yang tepat sesuai kondisi tanah Ciputat yang bervariasi.</p></div></div>
-                    <div class="faq-item"><button class="faq-question">Bisa pakai material sendiri untuk proyek di Ciputat? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Bisa. Harga di atas untuk jasa pengeboran saja (sudah termasuk perakitan besi & pengecoran beton). Kami terima material dari klien.</p></div></div>
+                    <div class="faq-item"><button class="faq-question">Apakah bore pile cocok untuk kondisi tanah di Ciputat? <FaIcon class="fas fa-chevron-down" /></button><div class="faq-answer"><p>Sangat cocok. Ciputat memiliki area dengan tanah yang bervariasi, dari tanah eksisting di pusat kota hingga tanah yang lebih lunak di beberapa wilayah perbatasan. Bore pile bisa mencapai tanah keras di kedalaman 6-15 meter tergantung lokasi, memberikan pondasi yang stabil untuk bangunan Anda.</p></div></div>
+                    <div class="faq-item"><button class="faq-question">Berapa biaya mobilisasi alat ke Ciputat? <FaIcon class="fas fa-chevron-down" /></button><div class="faq-answer"><p>Untuk wilayah Ciputat: mesin mini crane sekitar Rp2-3 juta, manual sekitar Rp1-2 juta. Biaya tergantung jarak dari gudang kami di Jakarta Utara ke lokasi proyek Anda. Untuk daerah Bintaro biasanya Rp2-2.5 juta karena lebih dekat.</p></div></div>
+                    <div class="faq-item"><button class="faq-question">Apakah melayani proyek di Bintaro dan sekitarnya? <FaIcon class="fas fa-chevron-down" /></button><div class="faq-answer"><p>Ya. Kami melayani seluruh wilayah Ciputat dan sekitarnya termasuk Bintaro, Pondok Ranji, Rempoa, Cirendeu, dan Jurang Mangu. Mobilisasi ke area ini sudah kami lakukan rutin.</p></div></div>
+                    <div class="faq-item"><button class="faq-question">Berapa lama waktu pengerjaan bore pile untuk rumah di Ciputat? <FaIcon class="fas fa-chevron-down" /></button><div class="faq-answer"><p>Untuk 16 titik diameter 30cm kedalaman 12m, estimasi 5-7 hari kerja. Kalkulator di atas bisa memberi estimasi lebih akurat.</p></div></div>
+                    <div class="faq-item"><button class="faq-question">Apakah wajib ada data sondir untuk proyek di Ciputat? <FaIcon class="fas fa-chevron-down" /></button><div class="faq-answer"><p>Sangat wajib. Data sondir menentukan kedalaman bore pile yang tepat sesuai kondisi tanah Ciputat yang bervariasi.</p></div></div>
+                    <div class="faq-item"><button class="faq-question">Bisa pakai material sendiri untuk proyek di Ciputat? <FaIcon class="fas fa-chevron-down" /></button><div class="faq-answer"><p>Bisa. Harga di atas untuk jasa pengeboran saja (sudah termasuk perakitan besi & pengecoran beton). Kami terima material dari klien.</p></div></div>
                 </div>
             </section>
 
@@ -826,8 +487,8 @@ import config from '../../data/config.json';
                     <h3>Agung Perkasa Borepile</h3>
                     <p>Spesialis pondasi borepile mesin & manual. Pengalaman 10+ tahun di Jakarta, Ciputat, Tangerang Selatan, dan sekitarnya.</p>
                     <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
+                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -856,8 +517,8 @@ import config from '../../data/config.json';
         </div>
     </footer>
 
-    <a href="https://wa.me/6282233569632" class="whatsapp-float" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+    <a href="https://wa.me/6282233569632" class="whatsapp-float" target="_blank" rel="noopener noreferrer"><FaIcon class="fab fa-whatsapp" /></a>
+    <button class="scroll-top" id="scrollTop"><FaIcon class="fas fa-arrow-up" /></button>
 
     <script is:inline>
         const scrollTop = document.getElementById('scrollTop');

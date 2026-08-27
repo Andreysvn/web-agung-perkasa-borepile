@@ -2,6 +2,7 @@
 import config from '../../../../data/config.json';
 import { organizationSchema, localBusinessSchema } from '../../../../lib/schema.js';
 
+import FaIcon from '../../../../components/icons/FaIcon.astro';
 const orgLd = JSON.stringify(organizationSchema());
 
 const localBusinessLd = JSON.stringify(localBusinessSchema({
@@ -33,7 +34,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="QjaIirR3-qW7bARIyez5S0_WPeMjPJSqn6tnK44ZYMo">
     
-    <link rel="canonical" href="https://agungperkasaborepile.com/jasa/bore-pile-semarang.html" />
+    <link rel="canonical" href="https://agungperkasaborepile.com/jasa/bore-pile/semarang.html" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -47,7 +48,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <meta property="og:description" content="Jasa Bore Pile Semarang terpercaya. Harga Mesin Rp120.000/m, manual Rp70.000/m. Melayani Semarang, Ungaran, dan sekitarnya. Konsultasi gratis.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
-    <meta property="og:url" content="https://agungperkasaborepile.com/jasa/bore-pile-semarang.html">
+    <meta property="og:url" content="https://agungperkasaborepile.com/jasa/bore-pile/semarang.html">
     <meta property="og:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
     <meta property="og:site_name" content="Agung Perkasa Borepile">
     
@@ -62,14 +63,9 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <meta name="geo.placename" content="Semarang">
     
     <!-- Preconnect -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
     <!-- Font Awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
     <!-- Ahrefs Analytics -->
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
     
@@ -102,7 +98,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
              <ul class="nav-menu" role="list">
                 <li role="listitem"><a href="/">Beranda</a></li>
                 <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan <i class="fas fa-chevron-down"></i></span>
+                    <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
                         <li><a href="/jasa/">Jasa </a></li>
                         <li><a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a></li>
@@ -550,7 +546,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Berapa kedalaman bore pile yang ideal untuk tanah di Semarang?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Untuk wilayah Semarang, kedalaman bore pile bervariasi tergantung lokasi. <strong>Wilayah utara (pesisir)</strong> tanahnya lunak, membutuhkan kedalaman 12-20 meter. <strong>Wilayah selatan (perbukitan)</strong> lebih padat, cukup 8-15 meter. Data sondir sangat menentukan kedalaman pasti.</p>
@@ -560,7 +556,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apakah bore pile cocok untuk proyek di pesisir Semarang?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Sangat cocok. Semarang utara memiliki tanah pesisir yang lunak dan berair. Metode <strong>wash boring</strong> sangat efektif untuk tanah berair. Bore pile diameter 30-50cm dengan kedalaman 12-18 meter adalah solusi paling tepat untuk bangunan di pesisir Semarang.</p>
@@ -570,7 +566,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apa perbedaan tanah di Semarang utara dan selatan?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p><strong>Semarang utara</strong> tanahnya lunak dan berair karena dekat pantai. <strong>Semarang selatan (Ungaran)</strong> tanahnya berbukit dan lebih padat. Kami selalu menyesuaikan metode dan kedalaman berdasarkan kondisi tanah di lokasi proyek Anda.</p>
@@ -580,7 +576,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Berapa biaya mobilisasi bore pile ke Semarang?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Biaya mobilisasi tergantung jarak dari gudang kami di Jakarta Utara: <strong>Semarang Pusat</strong> Rp5-6 juta, <strong>Ungaran</strong> Rp6-7 juta, <strong>Semarang Utara</strong> Rp5-6 juta. Untuk proyek di bawah 200m (mesin) atau 100m (manual), biaya mobilisasi bisa lebih tinggi proporsional.</p>
@@ -590,7 +586,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apa keunggulan bore pile dibandingkan tiang pancang di Semarang?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Di Semarang yang banyak area perumahan dan pesisir, bore pile lebih unggul karena <strong>minim getaran dan suara</strong>. Tidak seperti tiang pancang yang menimbulkan getaran keras dan bisa merusak dinding tetangga. Metode wash boring sangat efektif untuk tanah pesisir di Semarang utara.</p>
@@ -600,7 +596,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apakah bisa survey lokasi dulu sebelum eksekusi bore pile di Semarang?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Bisa. Kami siap melakukan <strong>survey lokasi gratis</strong> ke seluruh wilayah Semarang. Tim teknis kami akan cek akses jalan, kondisi tanah, dan memberikan rekomendasi diameter serta kedalaman terbaik untuk proyek Anda. Konsultasi tanpa biaya.</p>
@@ -627,7 +623,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Borepile vs Strauss Pile</h3>
                                     <p class="article-excerpt">Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik.</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                         <span class="article-read-more">Baca selengkapnya â†’</span>
                                     </div>
                                 </div>
@@ -643,7 +639,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Harga Bore Pile Diameter 30cm</h3>
                                     <p class="article-excerpt">Lihat harga terbaru 2026 untuk bore pile diameter 30cm.</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                         <span class="article-read-more">Baca selengkapnya â†’</span>
                                     </div>
                                 </div>
@@ -659,7 +655,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Harga Bore Pile Jakarta 2026</h3>
                                     <p class="article-excerpt">Informasi terkini tentang harga bore pile di wilayah Jakarta untuk tahun 2026.</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                         <span class="article-read-more">Baca selengkapnya â†’</span>
                                     </div>
                                 </div>
@@ -668,7 +664,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </div>
                     <div class="articles-cta">
                         <a href="/artikel/artikel.html" class="btn-articles-all">
-                            <i class="fas fa-newspaper"></i> Lihat Semua Artikel
+                            <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
                         </a>
                     </div>
                 </div>
@@ -750,8 +746,8 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <h3>Agung Perkasa Borepile</h3>
                     <p>Spesialis pondasi borepile mesin & strauss pile (bore pile manual). Pengalaman lebih dari 10 tahun di Semarang dan sekitarnya.</p>
                     <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
+                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -792,10 +788,10 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
        target="_blank" 
        rel="noopener noreferrer" 
        aria-label="Chat konsultasi melalui WhatsApp">
-       <i class="fab fa-whatsapp"></i>
+       <FaIcon class="fab fa-whatsapp" />
     </a>
     
-    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
+    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><FaIcon class="fas fa-arrow-up" /></button>
 
            <!-- ============================================================
          SCHEMA MARKUP - SEMARANG

@@ -2,6 +2,7 @@
 import config from '../../../../data/config.json';
 import { organizationSchema, localBusinessSchema } from '../../../../lib/schema.js';
 
+import FaIcon from '../../../../components/icons/FaIcon.astro';
 const orgLd = JSON.stringify(organizationSchema());
 
 const localBusinessLd = JSON.stringify(localBusinessSchema({
@@ -28,7 +29,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="QjaIirR3-qW7bARIyez5S0_WPeMjPJSqn6tnK44ZYMo">
     
-    <link rel="canonical" href="https://agungperkasaborepile.com/jasa/bore-pile-depok.html" />
+    <link rel="canonical" href="https://agungperkasaborepile.com/jasa/bore-pile/depok.html" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -42,7 +43,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <meta property="og:description" content="Jasa Bore Pile Depok terpercaya. Harga Mesin Rp120.000/m, manual Rp75.000/m. Melayani Depok, Cinere, Sawangan, Cimanggis, Bojongsari. Konsultasi gratis.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
-    <meta property="og:url" content="https://agungperkasaborepile.com/jasa/bore-pile-depok.html">
+    <meta property="og:url" content="https://agungperkasaborepile.com/jasa/bore-pile/depok.html">
     <meta property="og:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
     <meta property="og:site_name" content="Agung Perkasa Borepile">
     
@@ -57,14 +58,9 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <meta name="geo.placename" content="Depok">
     
     <!-- Preconnect -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
     <!-- Font Awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
     <!-- Ahrefs Analytics -->
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
     
@@ -83,10 +79,12 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
      <!-- Google tag (gtag.js) - Google Ads -->
 <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-16649506462"></script>
 <script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-16649506462');
+  window.addEventListener('load', function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-16649506462');
+  });
 </script>
     <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
     
@@ -105,7 +103,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
              <ul class="nav-menu" role="list">
                 <li role="listitem"><a href="/">Beranda</a></li>
                 <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan <i class="fas fa-chevron-down"></i></span>
+                    <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
                         <li><a href="/jasa/">Jasa </a></li>
                         <li><a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a></li>
@@ -553,7 +551,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Berapa kedalaman bore pile yang ideal untuk tanah di Depok?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Untuk wilayah Depok, kedalaman bore pile bervariasi tergantung lokasi. <strong>Wilayah utara (Beji, Pondok Cina)</strong> mirip tanah Jakarta, membutuhkan kedalaman 10-15 meter. <strong>Wilayah selatan (Cinere, Sawangan)</strong> lebih berbukit, cukup 8-12 meter. <strong>Wilayah bekas rawa (Cimanggis, Tapos)</strong> membutuhkan 12-18 meter. Data sondir sangat menentukan kedalaman pasti tanah keras.</p>
@@ -563,7 +561,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apakah bore pile cocok untuk perumahan baru di Sawangan dan Cinere?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Sangat cocok. Sawangan dan Cinere adalah wilayah dengan banyak perumahan baru. Tanah di sana relatif padat, tetapi perlu pengecekan sondir untuk menentukan kedalaman yang tepat. Kami juga sudah banyak mengerjakan proyek di perumahan Sawangan dan Cinere.</p>
@@ -573,7 +571,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apa perbedaan tanah di Depok utara dan selatan?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p><strong>Depok utara</strong> (Beji, Pancoran Mas) tanahnya mirip tanah Jakarta, lebih lunak karena dekat dengan aliran sungai. <strong>Depok selatan</strong> (Cinere, Sawangan) tanahnya lebih berbukit dan padat karena merupakan peralihan menuju Bogor. Kami selalu menyesuaikan metode dan kedalaman berdasarkan kondisi tanah di lokasi proyek Anda.</p>
@@ -583,7 +581,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Berapa biaya mobilisasi bore pile ke Depok?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Biaya mobilisasi tergantung jarak dari gudang kami di Jakarta Utara: <strong>Depok utara</strong> Rp2.5-3 juta, <strong>Depok selatan</strong> Rp3-4 juta. Untuk proyek di bawah 200m (mesin) atau 100m (manual), biaya mobilisasi bisa lebih tinggi proporsional.</p>
@@ -593,7 +591,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apa keunggulan bore pile dibandingkan tiang pancang di Depok?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Di Depok yang banyak area perumahan padat, bore pile lebih unggul karena <strong>minim getaran dan suara</strong>. Tidak seperti tiang pancang yang menimbulkan getaran keras dan bisa merusak dinding tetangga. Selain itu, bore pile bisa mencapai kedalaman yang lebih dalam untuk tanah yang bervariasi di Depok.</p>
@@ -603,7 +601,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apakah bisa survey lokasi dulu sebelum eksekusi bore pile di Depok?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Bisa. Kami siap melakukan <strong>survey lokasi gratis</strong> ke seluruh wilayah Depok. Kami akan cek akses jalan, kondisi tanah, pasokan listrik dan air (jika wash boring). Konsultasi tanpa biaya hubungi kami untuk BOQ.</p>
@@ -630,7 +628,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Borepile vs Strauss Pile</h3>
                                     <p class="article-excerpt">Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik.</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                         <span class="article-read-more">Baca selengkapnya â†’</span>
                                     </div>
                                 </div>
@@ -646,7 +644,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Harga Bore Pile Diameter 30cm</h3>
                                     <p class="article-excerpt">Lihat harga terbaru 2026 untuk bore pile diameter 30cm.</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                         <span class="article-read-more">Baca selengkapnya â†’</span>
                                     </div>
                                 </div>
@@ -662,7 +660,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Bore Pile VS Tiang Pancang</h3>
                                     <p class="article-excerpt">Perbedaan bore pile dan tiang pancang: Kelebihan dan kekurangan, serta biaya mana yang lebih murah untuk proyek saya?</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Mei 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Mei 2026</span>
                                         <span class="article-read-more">Baca selengkapnya â†’</span>
                                     </div>
                                 </div>
@@ -671,7 +669,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </div>
                     <div class="articles-cta">
                         <a href="/artikel/artikel.html" class="btn-articles-all">
-                            <i class="fas fa-newspaper"></i> Lihat Semua Artikel
+                            <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
                         </a>
                     </div>
                 </div>
@@ -747,8 +745,8 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <h3>Agung Perkasa Borepile</h3>
                     <p>Spesialis pondasi borepile mesin & strauss pile (bore pile manual). Pengalaman lebih dari 10 tahun di Depok dan sekitarnya.</p>
                     <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
+                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -789,10 +787,10 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
        target="_blank" 
        rel="noopener noreferrer" 
        aria-label="Chat konsultasi melalui WhatsApp">
-       <i class="fab fa-whatsapp"></i>
+       <FaIcon class="fab fa-whatsapp" />
     </a>
     
-    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
+    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><FaIcon class="fas fa-arrow-up" /></button>
 
            <!-- ============================================================
          SCHEMA MARKUP - DEPOK

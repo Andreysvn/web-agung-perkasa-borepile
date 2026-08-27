@@ -1,6 +1,7 @@
 ---
 // src/components/global/Navbar.astro
 import config from '../../data/config.json';
+import FaIcon from '../icons/FaIcon.astro';
 ---
 
 <nav class="navbar" aria-label="Navigasi utama">
@@ -28,14 +29,14 @@ import config from '../../data/config.json';
     <ul class="nav-menu" role="list">
       <li role="listitem"><a href="/">Beranda</a></li>
       <li class="dropdown" role="listitem">
-        <span class="dropbtn">Layanan <i class="fas fa-chevron-down"></i></span>
+        <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
         <ul class="dropdown-content">
           <li><a href="/jasa/bore-pile/">Jasa Bore Pile Mesin (Mini Crane)</a></li>
           <li><a href="/jasa/strauss-pile/jakarta.html">Jasa Strauss Pile (Manual)</a></li>
         </ul>
       </li>
       <li class="dropdown" role="listitem">
-        <span class="dropbtn">Alat <i class="fas fa-chevron-down"></i></span>
+        <span class="dropbtn">Alat <FaIcon class="fas fa-chevron-down" /></span>
         <ul class="dropdown-content">
           <li><a href="/alat/index.html#bore-pile">Bore Pile</a></li>
           <li><a href="/alat/index.html#strauss-pile">Strauss Pile</a></li>

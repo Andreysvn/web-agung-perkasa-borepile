@@ -1,7 +1,7 @@
 ---
 import config from '../../data/config.json';
 
-
+import FaIcon from '../../components/icons/FaIcon.astro';
 ---
 <!DOCTYPE html>
 <html lang="id">
@@ -50,14 +50,7 @@ import config from '../../data/config.json';
     <meta name="geo.placename" content="Jakarta">
     
     <!-- Preconnect & DNS Prefetch -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    
-    <!-- Font Awesome Non-Blocking Load -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
     <link rel="stylesheet" href="/css/style.css">
     
     <!-- Ahrefs Analytics -->
@@ -617,16 +610,16 @@ import config from '../../data/config.json';
                     <p>Spesialis pondasi borepile dan strauss pile dengan pengalaman lebih dari 10 tahun melayani proyek konstruksi di Pulau Jawa.</p>
                     <div class="social-links">
                         <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            <FaIcon class="fab fa-facebook-f" />
                         </a>
                         <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                            <FaIcon class="fab fa-instagram" />
                         </a>
                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            <FaIcon class="fab fa-linkedin-in" />
                         </a>
                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                            <FaIcon class="fab fa-youtube" />
                         </a>
                     </div>
                 </div>
@@ -652,10 +645,10 @@ import config from '../../data/config.json';
                 <div class="footer-col">
                     <h3>Kontak</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Jl. Sunter Muara II, Jakarta Utara</li>
-                        <li><i class="fas fa-phone-alt" aria-hidden="true"></i> +62 822 3356 9632</li>
-                        <li><i class="fas fa-envelope" aria-hidden="true"></i> agungperkasaborepile@gmail.com</li>
-                        <li><i class="fas fa-clock" aria-hidden="true"></i> Senin-Minggu: 07.00-23.00</li>
+                        <li><FaIcon class="fas fa-map-marker-alt" /> Jl. Sunter Muara II, Jakarta Utara</li>
+                        <li><FaIcon class="fas fa-phone-alt" /> +62 822 3356 9632</li>
+                        <li><FaIcon class="fas fa-envelope" /> agungperkasaborepile@gmail.com</li>
+                        <li><FaIcon class="fas fa-clock" /> Senin-Minggu: 07.00-23.00</li>
                     </ul>
                 </div>
             </div>
@@ -674,12 +667,12 @@ import config from '../../data/config.json';
 
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/6282233569632" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Hubungi via WhatsApp" title="Hubungi via WhatsApp">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <FaIcon class="fab fa-whatsapp" />
     </a>
     
     <!-- Scroll to Top Button -->
     <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas">
-        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        <FaIcon class="fas fa-arrow-up" />
     </button>
 
     <script is:inline>

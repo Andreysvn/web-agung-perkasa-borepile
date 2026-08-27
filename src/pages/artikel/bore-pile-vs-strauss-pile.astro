@@ -1,7 +1,7 @@
 ---
 import config from '../../data/config.json';
 
-
+import FaIcon from '../../components/icons/FaIcon.astro';
 ---
 <!DOCTYPE html>
 <html lang="id">
@@ -48,14 +48,7 @@ import config from '../../data/config.json';
     <meta name="geo.placename" content="Jakarta">
     
     <!-- Preconnect & DNS Prefetch -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    
-    <!-- Font Awesome Non-Blocking Load -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
     <!-- Ahrefs Analytics -->
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
     
@@ -95,7 +88,7 @@ import config from '../../data/config.json';
            <ul class="nav-menu" role="list">
                 <li role="listitem"><a href="/">Beranda</a></li>
                 <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan <i class="fas fa-chevron-down"></i></span>
+                    <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
                         <li><a href="/jasa/">Jasa </a></li>
                         <li><a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a></li>
@@ -126,9 +119,9 @@ import config from '../../data/config.json';
             <div class="article-header">
                 <h1>Borepile vs Strauss Pile: Perbedaan, Keunggulan, dan Kekurangannya</h1>
                 <div class="article-meta">
-                    <span><i class="fas fa-calendar-alt"></i> 19 Juni 2026</span>
-                    <span><i class="fas fa-user"></i> Agung Perkasa Borepile</span>
-                    <span><i class="fas fa-clock"></i> 8 menit baca</span>
+                    <span><FaIcon class="fas fa-calendar-alt" /> 19 Juni 2026</span>
+                    <span><FaIcon class="fas fa-user" /> Agung Perkasa Borepile</span>
+                    <span><FaIcon class="fas fa-clock" /> 8 menit baca</span>
                 </div>
             </div>
 
@@ -290,7 +283,7 @@ import config from '../../data/config.json';
     <div class="faq-item">
         <button class="faq-question">
             Mana yang lebih kuat, bore pile atau strauss pile?
-            <i class="fas fa-chevron-down"></i>
+            <FaIcon class="fas fa-chevron-down" />
         </button>
         <div class="faq-answer">
             <p><strong>Bore pile jauh lebih kuat.</strong> Bore pile mampu menahan beban hingga 200+ ton dengan kedalaman 30 meter, sedangkan strauss pile hanya 10-30 ton dengan kedalaman 10 meter. Untuk bangunan bertingkat atau beban berat, bore pile adalah pilihan yang tepat.</p>
@@ -300,7 +293,7 @@ import config from '../../data/config.json';
     <div class="faq-item">
         <button class="faq-question">
             Apakah strauss pile bisa untuk rumah 2 lantai?
-            <i class="fas fa-chevron-down"></i>
+            <FaIcon class="fas fa-chevron-down" />
         </button>
         <div class="faq-answer">
             <p><strong>Bisa, dengan catatan.</strong> Strauss pile bisa digunakan untuk rumah 2 lantai jika kondisi tanah sudah keras di kedalaman 5-8 meter dan beban bangunan tidak terlalu berat. Namun untuk hasil lebih aman, kami sarankan bore pile untuk rumah 2 lantai.</p>
@@ -310,7 +303,7 @@ import config from '../../data/config.json';
     <div class="faq-item">
         <button class="faq-question">
             Berapa perbedaan harga bore pile dan strauss pile?
-            <i class="fas fa-chevron-down"></i>
+            <FaIcon class="fas fa-chevron-down" />
         </button>
         <div class="faq-answer">
             <p>Harga bore pile <strong>Rp120.000 - 400.000/m</strong>(tergantung diameter), harga tersebut untuk pengeboran, perakitan besi, dan pengecoran saja (belum termasuk material dan biaya tambahan lainnya), sedangkan strauss pile <strong>Rp70.000 - 100.000/m</strong>. Perbedaan harga sekitar 50-70% lebih murah untuk strauss pile, tetapi dengan kapasitas beban yang lebih rendah.</p>
@@ -320,7 +313,7 @@ import config from '../../data/config.json';
     <div class="faq-item">
         <button class="faq-question">
             Apakah bore pile bisa dikerjakan di gang sempit?
-            <i class="fas fa-chevron-down"></i>
+            <FaIcon class="fas fa-chevron-down" />
         </button>
         <div class="faq-answer">
             <p><strong>Tidak bisa.</strong> Bore pile membutuhkan akses jalan yang cukup lebar untuk mobilisasi alat berat seperti mini crane. Untuk area gang sempit, <strong>strauss pile</strong> adalah solusi yang tepat karena mobilisasi alatnya lebih fleksibel.</p>
@@ -330,7 +323,7 @@ import config from '../../data/config.json';
     <div class="faq-item">
         <button class="faq-question">
             Berapa kedalaman maksimal bore pile dan strauss pile?
-            <i class="fas fa-chevron-down"></i>
+            <FaIcon class="fas fa-chevron-down" />
         </button>
         <div class="faq-answer">
             <p><strong>Bore pile:</strong> hingga 30 meter (mini crane). <strong>Strauss pile:</strong> hingga 10 meter (manual). Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir.</p>
@@ -340,7 +333,7 @@ import config from '../../data/config.json';
     <div class="faq-item">
         <button class="faq-question">
             Apakah ada garansi untuk pekerjaan bore pile?
-            <i class="fas fa-chevron-down"></i>
+            <FaIcon class="fas fa-chevron-down" />
         </button>
         <div class="faq-answer">
             <p><strong>Ya.</strong> Kami memberikan garansi untuk pekerjaan pondasi sesuai ketentuan. Jika ada masalah yang disebabkan oleh pelaksanaan kami, tim kami siap ganti rugi dan memperbaiki tanpa biaya tambahan.</p>
@@ -365,7 +358,7 @@ import config from '../../data/config.json';
                                     <h3>Harga Bore Pile Diameter 30cm</h3>
                                     <p class="article-excerpt">Lihat harga terbaru 2026 untuk bore pile diameter 30cm.</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                         <span class="article-read-more">Baca selengkapnya →</span>
                                     </div>
                                 </div>
@@ -381,7 +374,7 @@ import config from '../../data/config.json';
                                     <h3>Bore Pile VS Tiang Pancang</h3>
                                     <p class="article-excerpt">Perbedaan bore pile dan tiang pancang: Kelebihan dan kekurangan, serta biaya mana yang lebih murah untuk proyek saya?</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Mei 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Mei 2026</span>
                                         <span class="article-read-more">Baca selengkapnya →</span>
                                     </div>
                                 </div>
@@ -391,7 +384,7 @@ import config from '../../data/config.json';
                 </div>
                 <div class="articles-cta">
                     <a href="/artikel/index.html" class="btn-articles-all">
-                        <i class="fas fa-newspaper"></i> Lihat Semua Artikel
+                        <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
                     </a>
                 </div>
             </section>
@@ -423,8 +416,8 @@ import config from '../../data/config.json';
                     <h3>Agung Perkasa Borepile</h3>
                     <p>Spesialis pondasi borepile mesin & manual dengan pengalaman lebih dari 10 tahun di Jabodetabek dan seluruh Pulau Jawa.</p>
                     <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
+                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -465,10 +458,10 @@ import config from '../../data/config.json';
        target="_blank" 
        rel="noopener noreferrer" 
        aria-label="Chat konsultasi melalui WhatsApp">
-       <i class="fab fa-whatsapp"></i>
+       <FaIcon class="fab fa-whatsapp" />
     </a>
     
-    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
+    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><FaIcon class="fas fa-arrow-up" /></button>
 
     <!-- ===== SCHEMA MARKUP ===== -->
 

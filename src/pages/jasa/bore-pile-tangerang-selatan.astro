@@ -2,6 +2,7 @@
 import config from '../../data/config.json';
 import { organizationSchema, localBusinessSchema } from '../../lib/schema.js';
 
+import FaIcon from '../../components/icons/FaIcon.astro';
 const orgLd = JSON.stringify(organizationSchema());
 
 const localBusinessLd = JSON.stringify(localBusinessSchema({
@@ -66,14 +67,9 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <meta name="geo.placename" content="Tangerang Selatan">
     
     <!-- Preconnect -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
     <!-- Font Awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
     <!-- Ahrefs Analytics -->
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
     
@@ -106,7 +102,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
              <ul class="nav-menu" role="list">
                 <li role="listitem"><a href="/">Beranda</a></li>
                 <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan <i class="fas fa-chevron-down"></i></span>
+                    <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
                         <li><a href="/jasa/">Jasa </a></li>
                         <li><a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a></li>
@@ -171,8 +167,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                             <select id="machineSelect">
                                 <option value="minicrane">Mini Crane</option>
                                 <option value="gawangan">Gawangan</option>
-                                <option value="sany">Hidrolik (SANY)</option>
-                            </select>
+                                </select>
                             <div class="price-hint">*Harga dan minimal order berbeda tiap alat</div>
                         </div>
                     </div>
@@ -261,18 +256,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </table>
                 </div>
 
-                <h3>Bore Pile Mesin Hidrolik (Sany SR65)</h3>
-                <div class="table-responsive">
-                    <table class="price-table">
-                        <caption>Tabel harga bore pile mesin hidrolik Sany SR65 per meter</caption>
-                        <thead>
-                            <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>40-110 cm</td><td><strong>Hubungi Kami</strong></td><td>20-27 meter</td><td>Proyek skala menengah</td></tr>
-                        </tbody>
-                    </table>
-                </div>
+                
             </section>
 
               <a href="/jasa/">Lihat Jasa Bore Pile & Strauss Pile untuk wilayah Anda â†’</a>
@@ -554,7 +538,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Berapa kedalaman bore pile yang ideal untuk tanah di Tangerang Selatan?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Untuk wilayah Tangerang Selatan, kedalaman bore pile bervariasi tergantung lokasi. <strong>Kawasan BSD dan Serpong</strong> tanah timbunan/lempung, membutuhkan kedalaman 10-18 meter. <strong>Pamulang dan Ciputat</strong> relatif lebih padat, cukup 8-14 meter. Data sondir sangat menentukan kedalaman pasti.</p>
@@ -564,7 +548,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apakah bore pile cocok untuk proyek apartemen di BSD dan Serpong?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Sangat cocok. Proyek <a href="http://jurnal.polinema.ac.id/index.php/jos-mrk/article/view/5751" target="_blank" rel="noopener noreferrer">Rusun Rawa Buntu Serpong</a> menggunakan bored pile diameter 1m dengan kedalaman 25m untuk gedung 32 lantai. Ini membuktikan bore pile mampu menahan beban bangunan bertingkat tinggi di tanah Tangerang Selatan.</p>
@@ -574,7 +558,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apa perbedaan tanah di BSD dan Pamulang?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p><strong>BSD dan Serpong</strong> tanahnya didominasi tanah timbunan dan lempung kelanauan, membutuhkan pengeboran lebih dalam. <strong>Pamulang dan Ciputat</strong> tanahnya relatif lebih padat karena sudah banyak terbangun. Kami selalu menyesuaikan metode dan kedalaman berdasarkan kondisi tanah di lokasi proyek Anda.</p>
@@ -584,7 +568,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Berapa biaya mobilisasi bore pile ke Tangerang Selatan?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Biaya mobilisasi tergantung jarak dari gudang kami di Jakarta Utara: <strong>BSD/Serpong</strong> Rp2.5-3.5 juta, <strong>Pamulang/Ciputat</strong> Rp3-4 juta. Untuk proyek di bawah 200m (mesin) atau 100m (manual), biaya mobilisasi bisa lebih tinggi proporsional.</p>
@@ -594,7 +578,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apa keunggulan bore pile dibandingkan tiang pancang di Tangerang Selatan?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Di Tangerang Selatan yang banyak area perumahan dan kawasan BSD yang padat, bore pile lebih unggul karena <strong>minim getaran dan suara</strong>. Tidak seperti tiang pancang yang menimbulkan getaran keras dan bisa merusak dinding tetangga. Penelitian di <a href="https://repository.pnj.ac.id/id/eprint/26696/" target="_blank" rel="noopener noreferrer">Gedung GTS 01 BSD</a> membuktikan bore pile sangat efektif untuk tanah Tangerang Selatan.</p>
@@ -604,7 +588,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <div class="faq-item">
             <button class="faq-question">
                 Apakah bisa survey lokasi dulu sebelum eksekusi bore pile di Tangerang Selatan?
-                <i class="fas fa-chevron-down"></i>
+                <FaIcon class="fas fa-chevron-down" />
             </button>
             <div class="faq-answer">
                 <p>Bisa. Kami siap melakukan <strong>survey lokasi gratis</strong> ke seluruh wilayah Tangerang Selatan. Tim teknis kami akan cek akses jalan, kondisi tanah, dan memberikan rekomendasi diameter serta kedalaman terbaik untuk proyek Anda. Konsultasi tanpa biaya.</p>
@@ -631,7 +615,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Borepile vs Strauss Pile</h3>
                                     <p class="article-excerpt">Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik.</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                         <span class="article-read-more">Baca selengkapnya â†’</span>
                                     </div>
                                 </div>
@@ -647,7 +631,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Harga Bore Pile Diameter 30cm</h3>
                                     <p class="article-excerpt">Lihat harga terbaru 2026 untuk bore pile diameter 30cm.</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                         <span class="article-read-more">Baca selengkapnya â†’</span>
                                     </div>
                                 </div>
@@ -663,7 +647,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Harga Bore Pile Jakarta 2026</h3>
                                     <p class="article-excerpt">Informasi terkini tentang harga bore pile di wilayah Jakarta untuk tahun 2026.</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                         <span class="article-read-more">Baca selengkapnya â†’</span>
                                     </div>
                                 </div>
@@ -672,7 +656,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </div>
                     <div class="articles-cta">
                         <a href="/artikel/artikel.html" class="btn-articles-all">
-                            <i class="fas fa-newspaper"></i> Lihat Semua Artikel
+                            <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
                         </a>
                     </div>
                 </div>
@@ -749,8 +733,8 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <h3>Agung Perkasa Borepile</h3>
                     <p>Spesialis pondasi borepile mesin & strauss pile (bore pile manual). Pengalaman lebih dari 10 tahun di Tangerang Selatan dan sekitarnya.</p>
                     <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
+                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -791,10 +775,10 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
        target="_blank" 
        rel="noopener noreferrer" 
        aria-label="Chat konsultasi melalui WhatsApp">
-       <i class="fab fa-whatsapp"></i>
+       <FaIcon class="fab fa-whatsapp" />
     </a>
     
-    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
+    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><FaIcon class="fas fa-arrow-up" /></button>
 
            <!-- ============================================================
          SCHEMA MARKUP - TANGERANG SELATAN

@@ -1,7 +1,8 @@
 ---
-import config from '../../data/config.json';
-import pricing from '../../data/harga.json';
-import { organizationSchema, localBusinessSchema } from '../../lib/schema.js';
+import config from '../../../../data/config.json';
+import pricing from '../../../../data/harga.json';
+import { organizationSchema, localBusinessSchema } from '../../../../lib/schema.js';
+import FaIcon from '../../../../components/icons/FaIcon.astro';
 
 const orgLd = JSON.stringify(organizationSchema());
 
@@ -13,7 +14,8 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         { "@type": "City", "name": "Depok" },
         { "@type": "City", "name": "Tangerang" },
         { "@type": "City", "name": "Bogor" }
-    ]
+    ],
+        "priceRange": "Rp70.000 - Rp350.000"
 }));
 
 const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
@@ -26,9 +28,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     month: 'long',
     year: 'numeric'
 }).format(new Date(`${pricing.priceUpdatedAt}T00:00:00`));
----
-
-<!DOCTYPE html>
+---<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -42,7 +42,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="QjaIirR3-qW7bARIyez5S0_WPeMjPJSqn6tnK44ZYMo">
     
-    <link rel="canonical" href="https://agungperkasaborepile.com/harga/bore-pile-50cm.html" />
+    <link rel="canonical" href="https://agungperkasaborepile.com/harga/bore-pile/50cm.html" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -73,13 +73,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     <meta name="geo.placename" content="Jakarta">
     
     <!-- Preconnect & DNS Prefetch -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    
-    <!-- Font Awesome Non-Blocking Load -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Ahrefs Analytics -->
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
@@ -91,7 +85,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
 
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6GBTKJB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- Google Tag Manager -->
+     <!-- Google Tag Manager -->
     <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -114,12 +108,12 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
              <ul class="nav-menu" role="list">
                 <li role="listitem"><a href="/">Beranda</a></li>
                 <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan <i class="fas fa-chevron-down"></i></span>
+                    <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
                         <li><a href="/jasa/">Jasa </a></li>
-                        <li><a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a></li>
-                        <li><a href="/harga/bore-pile-30cm.html">Strauss Pile</a></li>
-                        <li><a href="/#services">Bore Pile Hidrolik</a></li>
+                        <li><a href="/jasa/bore-pile/">Bore Pile Mesin</a></li>
+                        <li><a href="/jasa/strauss-pile/jakarta.html">Strauss Pile</a></li>
+                        <li><a href="/alat/">Bore Pile Hidrolik</a></li>
                     </ul>
                 </li>
                 <li role="listitem"><a href="/artikel/">Artikel</a></li>
@@ -135,7 +129,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
             <nav class="breadcrumb" aria-label="Breadcrumb navigasi">
                 <a href="/">Beranda</a>
                 <span class="separator">/</span>
-                <a href="/harga/">Harga</a>
+                <a href="/harga/bore-pile-2026.html">Harga</a>
                 <span class="separator">/</span>
                 <span class="current" aria-current="page">Harga Bore Pile Diameter 50cm</span>
             </nav>
@@ -153,7 +147,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
             <div class="page-meta">
                 <span>Update: {formattedUpdate}</span> |
                 <span>Agung Perkasa</span> |
-                <span>📍 Melayani JABODETABEK & Seluruh Pulau Jawa</span>
+                <span>ðŸ“ Melayani JABODETABEK & Seluruh Pulau Jawa</span>
             </div>
 
             <div class="illustration-row">
@@ -193,9 +187,9 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                         <div class="calculator-form-group">
                             <label for="diameterSelect">Diameter (cm)</label>
                             <select id="diameterSelect">
-                                <option value="30">30 cm</option>
+                                 <option value="30">30 cm</option>
                                 <option value="40">40 cm</option>
-                                <option value="50" selected>50 cm</option>
+                                <option value="50"selected>50 cm</option>
                                 <option value="60">60 cm</option>
                                 <option value="80">80 cm</option>
                                 <option value="90">90 cm</option>
@@ -235,64 +229,66 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                 </div>
             </section>
 
-            <section aria-labelledby="table-heading">
-                <h2 id="table-heading" class="section-heading">Tabel Harga Bore Pile 50cm Terbaru 2026 (Jasa Bor Saja)</h2>
-                <p>Berikut <strong>harga JASA PENGEBORAN SAJA</strong> (belum termasuk material beton & besi) untuk wilayah Jakarta dan sekitarnya. Untuk diameter 50cm, kami rekomendasikan metode mesin karena efisiensi dan kekuatan maksimal.</p>
+           <!-- ===== SECTION TABEL HARGA ===== -->
+<section aria-labelledby="table-heading">
+    <h2 id="table-heading" class="section-heading">Tabel Harga Bore Pile 50cm Terbaru 2026 (Jasa Bor Saja)</h2>
+    <p>Berikut <strong>harga JASA PENGEBORAN SAJA</strong> (belum termasuk material beton & besi) untuk wilayah Jakarta dan sekitarnya. Untuk diameter 50cm, kami rekomendasikan metode mesin karena efisiensi dan kekuatan maksimal.</p>
 
-                <h3>Bore Pile Mesin (Mini Crane)</h3>
-                <div class="table-responsive">
-                    <table class="price-table">
-                        <caption>Tabel harga bore pile mesin (mini crane) per meter</caption>
-                        <thead>
-                            <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>30 cm</td><td>120.000</td><td>30 meter</td><td>Rumah 1-2 lantai</td></tr>
-                            <tr><td>40 cm</td><td>135.000</td><td>30 meter</td><td>Ruko, kantor 2-3 lantai</td></tr>
-                            <tr class="row-highlight">
-                                <td><strong>50 cm</strong></td>
-                                <td><strong>190.000</strong></td>
-                                <td><strong>30 meter</strong></td>
-                                <td><strong>Gudang, pabrik kecil, ruko besar 3-4 lantai, showroom</strong></td>
-                            </tr>
-                            <tr class="row-alt"><td>60 cm</td><td>Hubungi Kami</td><td>30 meter</td><td>Hotel 3-4 lantai</td></tr>
-                            <tr><td>80 cm</td><td>Hubungi Kami</td><td>30 meter</td><td>Gedung 5-8 lantai</td></tr>
-                        </tbody>
-                    </table>
-                </div>
+    <h3>Bore Pile Mesin (Mini Crane)</h3>
+    <div class="table-responsive">
+        <table class="price-table">
+            <caption>Tabel harga bore pile mesin (mini crane) per meter</caption>
+            <thead>
+                <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>30 cm</td><td>120.000</td><td>30 meter</td><td>Rumah 1-2 lantai</td></tr>
+                <tr><td>40 cm</td><td>135.000</td><td>30 meter</td><td>Ruko, kantor 2-3 lantai</td></tr>
+                <tr class="row-highlight">
+                    <td><strong>50 cm</strong></td>
+                    <td><strong>190.000</strong></td>
+                    <td><strong>30 meter</strong></td>
+                    <td><strong>Gudang, pabrik kecil, ruko besar 3-4 lantai, showroom</strong></td>
+                </tr>
+                <tr class="row-alt"><td>60 cm</td><td>Hubungi Kami</td><td>30 meter</td><td>Hotel 3-4 lantai</td></tr>
+                <tr><td>80 cm</td><td>Hubungi Kami</td><td>30 meter</td><td>Gedung 5-8 lantai</td></tr>
+            </tbody>
+        </table>
+    </div>
 
-                <h3>Bore Pile Manual (Strauss Pile)</h3>
-                <div class="table-responsive">
-                    <table class="price-table">
-                        <caption>Tabel harga bore pile manual (strauss pile) per meter</caption>
-                        <thead>
-                            <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>20 cm</td><td>75.000</td><td>10 meter</td><td>Area sangat sempit</td></tr>
-                            <tr><td>25 cm</td><td>85.000</td><td>10 meter</td><td>Gang kecil</td></tr>
-                            <tr><td>30 cm</td><td>100.000</td><td>10 meter</td><td>Rumah 1-2 lantai</td></tr>
-                            <tr><td>40 cm</td><td>120.000</td><td>10 meter</td><td>Ruko, kantor, bangunan 2 lantai</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="price-hint"><strong>Catatan:</strong> Bore pile manual tidak tersedia untuk diameter 50cm karena keterbatasan tenaga manusia. Semua pengerjaan diameter 50cm menggunakan mesin (mini crane, gawangan, dan hidrolik) untuk hasil maksimal.</p>
+    <h3>Bore Pile Manual (Strauss Pile)</h3>
+    <div class="table-responsive">
+        <table class="price-table">
+            <caption>Tabel harga bore pile manual (strauss pile) per meter</caption>
+            <thead>
+                <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>20 cm</td><td>75.000</td><td>10 meter</td><td>Area sangat sempit</td></tr>
+                <tr><td>25 cm</td><td>85.000</td><td>10 meter</td><td>Gang kecil</td></tr>
+                <tr><td>30 cm</td><td>100.000</td><td>10 meter</td><td>Rumah 1-2 lantai</td></tr>
+                <tr><td>40 cm</td><td>120.000</td><td>10 meter</td><td>Ruko, kantor, bangunan 2 lantai</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="price-hint"><strong>Catatan:</strong> Bore pile manual tidak tersedia untuk diameter 50cm karena keterbatasan tenaga manusia. Semua pengerjaan diameter 50cm menggunakan mesin (mini crane, gawangan, dan hidrolik) untuk hasil maksimal.</p>
 
-                <h3>Bore Pile Mesin Hidrolik (Sany SR65)</h3>
-                <div class="table-responsive">
-                    <table class="price-table">
-                        <caption>Tabel harga bore pile mesin hidrolik Sany SR65 per meter</caption>
-                        <thead>
-                            <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td><strong>50</strong>-110cm</td><td><strong>Hubungi Kami</strong></td><td>20-27 meter</td><td>Proyek skala menengah</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <a href="/jasa/">Lihat Jasa Bore Pile & Strauss Pile untuk wilayah Anda →</a>
+    <h3>Bore Pile Mesin Hidrolik (Sany SR65)</h3>
+    <div class="table-responsive">
+        <table class="price-table">
+            <caption>Tabel harga bore pile mesin hidrolik Sany SR65 per meter</caption>
+            <thead>
+                <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>50</strong>-110cm</td><td><strong>Hubungi Kami</strong></td><td>20-27 meter</td><td>Proyek skala menengah</td></tr>
+            </tbody>
+        </table>
+    </div>
+                <a href="/jasa/">Lihat Jasa Bore Pile & Strauss Pile untuk wilayah Anda â†’</a>
             </section>
 
+            <!-- ===== FAKTOR YANG MEMPENGARUHI HARGA ===== -->
             <section aria-labelledby="factors-heading">
                 <h2 id="factors-heading" class="section-heading">Faktor yang Mempengaruhi Harga Bore Pile 50cm</h2>
 
@@ -326,10 +322,11 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                 </div>
             </section>
 
+            <!-- ===== ESTIMASI BIAYA TAMBAHAN ===== -->
             <section>
                 <h2 class="section-heading-sm">Estimasi Biaya Tambahan untuk diameter 50cm</h2>
                 <div class="info-grid">
-                    <div class="info-card"><h3>🚛 Mobilisasi Alat Bore Pile</h3><p>Mesin mini crane: Rp2-3jt | Mesin hidrolik (Sany): 25-30jt | Strauss pile (bore pile manual): Rp1jt</p></div>
+                    <div class="info-card"><h3>ðŸš› Mobilisasi Alat Bore Pile</h3><p>Mesin mini crane: Rp2-3jt | Mesin hidrolik (Sany): 25-30jt | Strauss pile (bore pile manual): Rp1jt</p></div>
                     <div class="info-card"><h3>Minimal Order</h3><p>Mesin mini crane dan gawangan: 200 meter | Mesin Hidrolik: 1200 meter | Strauss Pile (Manual): 100m</p></div>
                     <div class="info-card"><h3>Sedot Lumpur</h3><p>Jika memakai bore pile mesin gawangan dan mini crane menggunakan metode <strong>wash boring (bor basah)</strong>, perkiraan biaya tambahannya sekitar: Rp800.000 - Rp1.200.000/rit (tergantung volume)</p></div>
                     <div class="info-card"><h3>Data Sondir</h3><p>Sangat wajib untuk menentukan kedalaman pengeboran yang tepat hingga mencapai tanah keras</p></div>
@@ -339,13 +336,14 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
             <div class="tips-section">
                 <h3 class="tips-heading">Tips memilih diameter:</h3>
                 <ul>
-                    <li><strong>30 cm</strong> → rumah 1-2 lantai</li>
-                    <li><strong>40 cm</strong> → ruko, kantor, rumah sakit, bangunan 2-3 lantai</li>
-                    <li><strong>50 cm</strong> → gudang, pabrik kecil, ruko besar 3-4 lantai, showroom</li>
-                    <li><strong>60-110 cm</strong> → hotel, gedung bertingkat</li>
+                    <li><strong>30 cm</strong> â†’ rumah 1-2 lantai</li>
+                    <li><strong>40 cm</strong> â†’ ruko, kantor, rumah sakit, bangunan 2-3 lantai</li>
+                    <li><strong>50 cm</strong> â†’ gudang, pabrik kecil, ruko besar 3-4 lantai, showroom</li>
+                    <li><strong>60-110 cm</strong> â†’ hotel, gedung bertingkat</li>
                 </ul>
             </div>
 
+            <!-- ===== CONTOH PROYEK NYATA ===== -->
             <section class="project-examples-section">
                 <h2 class="project-heading">Contoh Hitungan Proyek Diameter 50cm</h2>
 
@@ -361,8 +359,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                         <div class="project-text">
                             <div class="info-card">
                                 <h3>Gudang di Dunex Sunter, Jakarta Utara</h3>
-                                <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane Ø50cm, kedalaman 15m, 30 titik<br>
-                                <strong>Biaya jasa:</strong> 15m × Rp190.000 × 30 = <strong class="price-total">Rp85.500.000</strong><br>
+                                <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane Ã˜50cm, kedalaman 15m, 30 titik<br>
+                                <strong>Biaya jasa:</strong> 15m Ã— Rp190.000 Ã— 30 = <strong class="price-total">Rp85.500.000</strong><br>
                                 <strong>+ mobilisasi:</strong> Rp3.500.000<br>
                                 <strong>Total:</strong> <strong class="price-total">Rp89.000.000</strong><br>
                                 <strong>Waktu:</strong> 10-14 hari kerja</p>
@@ -383,8 +381,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                         <div class="project-text">
                             <div class="info-card">
                                 <h3>Ruko Besar di Meruya, Jakarta Barat</h3>
-                                <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane Ø50cm, kedalaman 12m, 24 titik<br>
-                                <strong>Biaya jasa:</strong> 12m × Rp190.000 × 24 = <strong class="price-total">Rp54.720.000</strong><br>
+                                <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane Ã˜50cm, kedalaman 12m, 24 titik<br>
+                                <strong>Biaya jasa:</strong> 12m Ã— Rp190.000 Ã— 24 = <strong class="price-total">Rp54.720.000</strong><br>
                                 <strong>+ mobilisasi:</strong> Rp3.000.000<br>
                                 <strong>Total:</strong> <strong class="price-total">Rp57.720.000</strong><br>
                                 <strong>Waktu:</strong> 8-12 hari kerja</p>
@@ -405,8 +403,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                         <div class="project-text">
                             <div class="info-card">
                                 <h3>Gedung di Jakarta Pusat</h3>
-                                <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane Ø50cm, kedalaman 14m, 28 titik<br>
-                                <strong>Biaya jasa:</strong> 14m × Rp190.000 × 28 = <strong class="price-total">Rp74.480.000</strong><br>
+                                <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane Ã˜50cm, kedalaman 14m, 28 titik<br>
+                                <strong>Biaya jasa:</strong> 14m Ã— Rp190.000 Ã— 28 = <strong class="price-total">Rp74.480.000</strong><br>
                                 <strong>+ mobilisasi:</strong> Rp3.000.000<br>
                                 <strong>Total:</strong> <strong class="price-total">Rp77.480.000</strong><br>
                                 <strong>Waktu:</strong> 9-13 hari kerja</p>
@@ -417,12 +415,13 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
 
                 <div class="project-note">
                     <p>
-                        <strong>📌 Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, 
+                        <strong>ðŸ“Œ Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, 
                         <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan.
                     </p>
                 </div>
             </section>
 
+            <!-- ===== PERBANDINGAN DIAMETER ===== -->
             <section aria-labelledby="comparison-heading">
                 <h2 id="comparison-heading" class="section-heading">Perbandingan Diameter 50cm vs 40cm vs 60cm</h2>
                 <p>Diameter 50cm adalah pilihan ideal untuk proyek industri skala menengah. Berikut perbandingannya:</p>
@@ -457,6 +456,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                 <p class="price-hint" style="text-align: left;">Daya dukung di atas adalah estimasi untuk kedalaman 12-15 meter di tanah keras. Butuh info <a href="/harga/bore-pile-40cm.html">Harga Bore Pile 40cm?</a> dan <a href="/harga/bore-pile-80cm.html">Harga Bore Pile 80cm?</a> serta <a href="/harga/bore-pile-2026.html">Harga Bore Pile 2026?</a></p>
             </section>
 
+            <!-- ===== KEUNTUNGAN ===== -->
             <section aria-labelledby="advantages-heading">
                 <h2 id="advantages-heading" class="section-heading">Keuntungan Memilih Bore Pile Diameter 50cm</h2>
                 <div class="info-grid">
@@ -467,6 +467,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                 </div>
             </section>
 
+            <!-- ===== DAYA DUKUNG ===== -->
             <section aria-labelledby="capacity-heading">
                 <h2 id="capacity-heading" class="section-heading">Daya Dukung Bore Pile Diameter 50cm</h2>
                 <div class="illustration-row">
@@ -488,9 +489,10 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
             </section>
 
             <p>Butuh harga khusus untuk jasa bore pile di Jakarta? 
-            <a href="/jasa/bore-pile-jakarta.html">Lihat jasa & harga bore pile Jakarta →</a>
+            <a href="/jasa/bore-pile/jakarta.html">Lihat jasa & harga bore pile Jakarta â†’</a>
             </p>
 
+            <!-- ===== MATERIAL DARI KAMI ===== -->
             <section>
                 <h2 class="section-heading">Bisa Pakai Material Dari Kami</h2>
                 <p>Tidak ingin repot cari material sendiri? Agung Perkasa juga menyediakan paket lengkap jasa bor + material besi & beton:</p>
@@ -505,11 +507,15 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                 <p class="price-hint">*Harga paket dapat disesuaikan dengan spesifikasi material yang Anda inginkan (K225, K250, K300, dll).</p>
             </section>
 
-            <div class="commitment-box">
-                <div class="icon" aria-hidden="true">🛡️</div>
-                <p><strong>Komitmen & Garansi Mutu</strong><br>Kami memberikan garansi penuh atas kualitas dalam pengerjaan proyek. Kami menjamin kualitas terbaik karena didukung oleh tim ahli kami yang sangat berpengalaman membuat pondasi dalam (khususnya bore pile)</p>
-            </div>
+            <!-- ===== KOMITMEN & GARANSI ===== -->
+           <div class="commitment-box">
+    <div class="icon" aria-hidden="true">ðŸ›¡ï¸</div>
+    <p><strong>Komitmen & Garansi Mutu</strong><br>Kami memberikan garansi penuh atas kualitas dalam pengerjaan proyek. Kami menjamin kualitas terbaik karena didukung oleh tim ahli kami yang sangat berpengalaman membuat pondasi dalam (khususnya bore pile)</p>
+</div>
 
+            <!-- ============================================================
+                 WHY CHOOSE US & EQUIPMENT - KHUSUS DIAMETER 50CM
+                 ============================================================ -->
             <div class="why-section">
                 <h2 class="why-title">Kenapa pilih Agung Perkasa untuk Bore Pile Diameter 50cm?</h2>
                 <p class="why-sub">Ini alasan kenapa banyak orang percaya sama Agung Perkasa untuk proyek bore pile diameter 50cm.</p>
@@ -533,6 +539,9 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     </div>
                 </div>
 
+                <!-- ============================================================
+                     PORTOFOLIO PROYEK BORE PILE DIAMETER 50CM
+                     ============================================================ -->
                 <section class="portfolio-jakarta-section">
                     <h2 class="portfolio-jakarta-title">Portofolio Proyek Bore Pile Diameter 50cm</h2>
                     <p class="portfolio-jakarta-sub">Berikut salah satu proyek bore pile diameter 50cm yang sudah kami kerjakan.</p>
@@ -540,6 +549,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="proyek-jakarta-box">
                         <p class="proyek-jakarta-heading">Dokumentasi proyek bore pile diameter 50cm:</p>
                         <div class="proyek-jakarta-grid" style="grid-template-columns: 1fr; max-width: 500px; margin: 0 auto;">
+
                             <div class="proyek-jakarta-item">
                                 <img src="/imgs/borepile-gudang-dunex-sunter.webp" 
                                      alt="Proses bore pile mini crane diameter 50cm untuk gudang Dunex Sunter, Jakarta Utara" 
@@ -548,13 +558,14 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                                      onerror="this.src='/imgs/logo-agung-perkasa.webp'">
                                 <div class="proyek-jakarta-caption">
                                     <span class="proyek-jakarta-label">Dunex Sunter, Jakarta Utara</span>
-                                    <span class="proyek-jakarta-detail">Bore pile mini crane Ø50cm untuk gudang</span>
+                                    <span class="proyek-jakarta-detail">Bore pile mini crane Ã˜50cm untuk gudang</span>
                                 </div>
                             </div>
+
                         </div>
                         <p class="proyek-jakarta-link">
                             Ingin lihat lebih banyak? 
-                            <a href="/galeri/gallery.html">Kunjungi galeri proyek kami →</a>
+                            <a href="/galeri/gallery.html">Kunjungi galeri proyek kami â†’</a>
                         </p>
                     </div>
                 </section>
@@ -563,6 +574,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                 <p class="equip-sub">Kami memiliki beberapa alat untuk pekerjaan bore pile diameter 50cm, antara lain:</p>
 
                 <div class="equip-grid">
+                    <!-- 1. Mini Crane -->
                     <div class="equip-item">
                         <img class="equip-img" src="/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg" 
                              alt="Mesin bore pile mini crane Agung Perkasa untuk bore pile diameter 50cm" 
@@ -577,6 +589,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                         </div>
                     </div>
 
+                    <!-- 2. Gawangan -->
                     <div class="equip-item">
                         <img class="equip-img" src="/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg" 
                              alt="Mesin bore pile gawangan Agung Perkasa untuk bore pile diameter 50cm di area terbatas" 
@@ -591,6 +604,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                         </div>
                     </div>
 
+                    <!-- 3. Strauss Pile (Manual) -->
                     <div class="equip-item">
                         <img class="equip-img" src="/imgs/icons/strauss-pile-icon-agung-perkasa.svg" 
                              alt="Strauss pile (bore pile manual) untuk area terbatas" 
@@ -605,6 +619,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                         </div>
                     </div>
 
+                    <!-- 4. Mesin Hidrolik Sany -->
                     <div class="equip-item">
                         <img class="equip-img" src="/imgs/icons/bore-pile-mesin-hidrolik-icon-agung-perkasa.svg" 
                              alt="Mesin bor hidrolik Sany untuk proyek bore pile skala sedang hingga besar" 
@@ -621,13 +636,15 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                 </div>
             </div>
 
+            <!-- ===== FAQ ===== -->
             <section>
                 <h2 class="section-heading">Pertanyaan Umum Seputar Bore Pile Diameter 50cm</h2>
                 <div class="faq-container">
+
                     <div class="faq-item">
                         <button class="faq-question">
                             Apakah bore pile diameter 50cm cukup kuat untuk gudang 2 lantai?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p><strong>Sangat cukup.</strong> Dengan daya dukung 40-60 ton per titik, diameter 50cm mampu menahan beban gudang 2 lantai dengan aman. Bahkan untuk gudang 3 lantai pun masih kuat dengan kedalaman yang tepat.</p>
@@ -637,7 +654,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="faq-item">
                         <button class="faq-question">
                             Berapa standar harga jasa bor diameter 50cm?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Standar harga jasa bor diameter 50cm: <strong>mesin Rp190.000/m</strong> untuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton (harga belum termasuk material).</p>
@@ -647,7 +664,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="faq-item">
                         <button class="faq-question">
                             Apakah bore pile diameter 50cm bisa dikerjakan manual?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p><strong>Tidak direkomendasikan.</strong> Bore pile manual maksimal hanya mampu diameter 40cm. Untuk diameter 50cm, kami wajib menggunakan mesin mini crane untuk hasil yang maksimal dan sesuai standar.</p>
@@ -657,17 +674,17 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="faq-item">
                         <button class="faq-question">
                             Berapa jumlah titik ideal untuk bore pile diameter 50cm?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
-                            <p>Untuk gudang atau pabrik dengan luas 300-500m², jumlah titik ideal antara <strong>20-35 titik</strong>. Untuk ruko besar dengan luas 200-300m², jumlah titik ideal antara <strong>16-25 titik</strong>. Konsultasikan dengan tim teknis kami untuk perhitungan yang akurat sesuai gambar bangunan.</p>
+                            <p>Untuk gudang atau pabrik dengan luas 300-500mÂ², jumlah titik ideal antara <strong>20-35 titik</strong>. Untuk ruko besar dengan luas 200-300mÂ², jumlah titik ideal antara <strong>16-25 titik</strong>. Konsultasikan dengan tim teknis kami untuk perhitungan yang akurat sesuai gambar bangunan.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
                             Apakah melayani area Bekasi, Tangerang, Bogor?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Betul. Kami melayani area <strong>Jabodetabek</strong> (Jakarta, Bekasi, Bogor, Depok, Tangerang) untuk proyek diameter 50cm.</p>
@@ -677,7 +694,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="faq-item">
                         <button class="faq-question">
                             Apakah melayani area luar Jabodetabek?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Ya. Kami melayani seluruh area pulau Jawa untuk proyek skala besar dengan diameter 50cm.</p>
@@ -687,7 +704,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
                             Berapa kedalaman maksimal bore pile diameter 50cm?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Untuk bore pile mesin (mini crane) diameter 50cm, kedalaman maksimal mencapai <strong>30 meter</strong>. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir di lokasi proyek Anda.</p>
@@ -697,28 +714,31 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
                             Berapa biaya total bore pile 50cm untuk gudang?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
-                            <p>Untuk gudang dengan luas 300-500m², biasanya membutuhkan <strong>20-35 titik</strong> bore pile diameter 50cm dengan kedalaman 10-15 meter. Estimasi biaya jasa bor (belum termasuk material):</p>
+                            <p>Untuk gudang dengan luas 300-500mÂ², biasanya membutuhkan <strong>20-35 titik</strong> bore pile diameter 50cm dengan kedalaman 10-15 meter. Estimasi biaya jasa bor (belum termasuk material):</p>
                             <ul>
-                                <li><strong>Mesin (Mini Crane):</strong> Rp190.000/m × 12m × 25 titik = <strong>Rp57.000.000</strong> + mobilisasi Rp3-3,5jt</li>
+                                <li><strong>Mesin (Mini Crane):</strong> Rp190.000/m Ã— 12m Ã— 25 titik = <strong>Rp57.000.000</strong> + mobilisasi Rp3-3,5jt</li>
                             </ul>
                             <p>Gunakan <a href="#calculator-heading">kalkulator di atas</a> untuk menghitung estimasi biaya proyek Anda secara lebih akurat.</p>
                         </div>
                     </div>
+
                 </div>
             </section>
 
+            <!-- ===== CTA ===== -->
             <div class="cta-box">
                 <h3>Butuh bore pile untuk proyek anda?</h3>
                 <p>Dapatkan penawaran harga untuk bore pile diameter 50cm</p>
                 <a href={`https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Saya%20dari%20website%20ingin%20menanyakan%20terkait%20penawaran%20harga%20bore%20pile%20diameter%2050cm.`} class="btn-wa-konsultasi" aria-label="Konsultasi gratis via WhatsApp">Konsultasi Gratis via WA</a>
             </div>
 
+            <!-- ===== INTERNAL LINK ===== -->
             <div class="internal-link-box">
                 <p><strong>Baca Juga Harga Bore Pile:</strong><br>
-                <a href="/jasa/bore-pile-jakarta.html">Jakarta</a> | 
+                <a href="/jasa/bore-pile/jakarta.html">Jakarta</a> | 
                 <a href="/jasa/bore-pile-bekasi.html">Bekasi</a> | 
                 <a href="/jasa/bore-pile-tangerang.html">Tangerang</a> | 
                 <a href="/jasa/bore-pile-depok.html">Depok</a> | 
@@ -730,6 +750,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
         </div>
     </main>
 
+    <!-- ===== ARTIKEL SECTION ===== -->
     <section class="articles-section" id="blog">
         <div class="container">
             <div class="section-header">
@@ -747,8 +768,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                             <h3>Harga Bore Pile 2026</h3>
                             <p class="article-excerpt">Lihat harga terbaru untuk semua diameter bore pile terbaru 2026, lengkap dengan kalkulator estimasi biaya.</p>
                             <div class="article-meta">
-                                <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
-                                <span class="article-read-more">Baca selengkapnya →</span>
+                                <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
+                                <span class="article-read-more">Baca selengkapnya â†’</span>
                             </div>
                         </div>
                     </a>
@@ -763,8 +784,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                             <h3>Perbedaan Bore Pile dan Strauss Pile</h3>
                             <p class="article-excerpt">Perbandingan lengkap agar Anda dapat memilih jenis pondasi yang tepat antara bore pile mesin dan manual.</p>
                             <div class="article-meta">
-                                <span class="article-date"><i class="far fa-calendar-alt"></i> Mei 2026</span>
-                                <span class="article-read-more">Baca selengkapnya →</span>
+                                <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Mei 2026</span>
+                                <span class="article-read-more">Baca selengkapnya â†’</span>
                             </div>
                         </div>
                     </a>
@@ -779,8 +800,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                             <h3>Harga Bore Pile Diameter 40cm</h3>
                             <p class="article-excerpt">Harga Bore Pile Diameter 40cm terbaru 2026, cocok untuk ruko, kantor, dan bangunan sedang.</p>
                             <div class="article-meta">
-                                <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
-                                <span class="article-read-more">Baca selengkapnya →</span>
+                                <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
+                                <span class="article-read-more">Baca selengkapnya â†’</span>
                             </div>
                         </div>
                     </a>
@@ -788,13 +809,14 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
             </div>
             <div class="articles-cta">
                 <a href="/artikel/index.html" class="btn-articles-all">
-                    <i class="fas fa-newspaper"></i> Lihat Semua Artikel
+                    <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
                 </a>
             </div>
         </div>
     </section>
 
-    <div class="area-layanan-wrapper">
+    <!-- ===== AREA LAYANAN ===== -->
+     <div class="area-layanan-wrapper">
         <h2>Cakupan Area Layanan Kami - Seluruh Pulau Jawa</h2>
         <p>Agung Perkasa Borepile melayani proyek konstruksi di seluruh wilayah Pulau Jawa berikut ini.</p>
         <div class="area-grid-detail">
@@ -806,9 +828,10 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
         </div>
     </div>
 
+    <!-- ===== MAPS ===== -->
     <div class="maps-container">
         <div class="maps-card">
-            <h3 class="maps-title">📍 Lokasi Kami di Jakarta</h3>
+            <h3 class="maps-title">ðŸ“ Lokasi Kami di Jakarta</h3>
             <p class="maps-address">
                 <strong>Agung Perkasa Borepile</strong><br>
                 Jl. Sunter Muara II, RT.17/RW.05, Sunter Agung, Kec. Tj. Priok,<br>
@@ -835,6 +858,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
         </div>
     </div>
 
+    <!-- ===== PUBLISHER BOX ===== -->
     <div class="publisher-box">
         <div class="publisher-inner">
             <img src="/imgs/logo-agung-perkasa-transparan.webp" alt="Logo Agung Perkasa Borepile" loading="lazy" width="60" height="60">
@@ -845,6 +869,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
         </div>
     </div>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -852,8 +877,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                     <h3>Agung Perkasa Borepile</h3>
                     <p>Spesialis pondasi borepile diameter 50cm untuk gudang, pabrik, dan bangunan komersial di Jakarta dan sekitarnya. Kontraktor borepile terpercaya dengan pengalaman lebih dari 10 tahun.</p>
                     <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
+                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -888,24 +913,23 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
         </div>
     </footer>
 
+    <!-- ===== WHATSAPP FLOAT & SCROLL TOP ===== -->
     <a href={`https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Saya%20dari%20website%20ingin%20menanyakan%20terkait%20penawaran%20harga%20bore%20pile%20diameter%2050cm.`} 
        class="whatsapp-float" 
        target="_blank" 
        rel="noopener noreferrer" 
        aria-label="Chat konsultasi melalui WhatsApp">
-       <i class="fab fa-whatsapp"></i>
+       <FaIcon class="fab fa-whatsapp" />
     </a>
     
-    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
+    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><FaIcon class="fas fa-arrow-up" /></button>
 
-    <script define:vars={{ pricing: pricing }}>
-        window.__PRICING__ = pricing;
-    </script>
-
+    <!-- ===== SCHEMA MARKUP ===== -->
     <script type="application/ld+json" set:html={orgLd} />
+
     <script type="application/ld+json" set:html={localBusinessLd} />
 
-    <script type="application/ld+json" is:inline>
+    <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -920,7 +944,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Harga",
-                "item": "https://agungperkasaborepile.com/harga/"
+                "item": "https://agungperkasaborepile.com/harga/bore-pile-2026.html"
             },
             {
                 "@type": "ListItem",
@@ -932,7 +956,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     }
     </script>
 
-    <script type="application/ld+json" is:inline>
+    <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Product",
@@ -960,77 +984,77 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     }
     </script>
 
-    <script type="application/ld+json" is:inline>
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Apakah bore pile diameter 50cm cukup kuat untuk gudang 2 lantai?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sangat cukup. Dengan daya dukung 40-60 ton per titik, diameter 50cm mampu menahan beban gudang 2 lantai dengan aman. Bahkan untuk gudang 3 lantai pun masih kuat dengan kedalaman yang tepat."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Berapa standar harga jasa bor diameter 50cm?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Standar harga jasa bor diameter 50cm: mesin Rp190.000/m untuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton (belum termasuk material)."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Apakah bore pile diameter 50cm bisa dikerjakan manual?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Tidak direkomendasikan. Bore pile manual maksimal hanya mampu diameter 40cm. Untuk diameter 50cm, kami wajib menggunakan mesin mini crane untuk hasil yang maksimal dan sesuai standar."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Berapa jumlah titik ideal untuk bore pile diameter 50cm?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Untuk gudang atau pabrik dengan luas 300-500m², jumlah titik ideal antara 20-35 titik. Konsultasikan dengan tim teknis kami untuk perhitungan yang akurat sesuai gambar bangunan."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Berapa kedalaman maksimal bore pile diameter 50cm?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Untuk bore pile mesin (mini crane) diameter 50cm, kedalaman maksimal mencapai 30 meter. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Berapa biaya total bore pile 50cm untuk gudang?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Untuk gudang dengan luas 300-500m², biasanya membutuhkan 20-35 titik bore pile diameter 50cm dengan kedalaman 10-15 meter. Estimasi biaya jasa bor mesin sekitar Rp57.000.000 + mobilisasi. Gunakan kalkulator di halaman untuk perhitungan lebih akurat."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Apakah melayani area Bekasi, Tangerang, Bogor?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ya. Kami melayani seluruh Jabodetabek (Jakarta, Bekasi, Bogor, Depok, Tangerang) dan sekitarnya."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Apakah melayani area luar Jabodetabek?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ya. Kami melayani seluruh area pulau Jawa untuk proyek skala besar dengan diameter 50cm."
-                }
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Apakah bore pile diameter 50cm cukup kuat untuk gudang 2 lantai?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sangat cukup. Dengan daya dukung 40-60 ton per titik, diameter 50cm mampu menahan beban gudang 2 lantai dengan aman. Bahkan untuk gudang 3 lantai pun masih kuat dengan kedalaman yang tepat."
             }
-        ]
-    }
-    </script>
+        },
+        {
+            "@type": "Question",
+            "name": "Berapa standar harga jasa bor diameter 50cm?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Standar harga jasa bor diameter 50cm: mesin Rp190.000/m untuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton (belum termasuk material)."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Apakah bore pile diameter 50cm bisa dikerjakan manual?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tidak direkomendasikan. Bore pile manual maksimal hanya mampu diameter 40cm. Untuk diameter 50cm, kami wajib menggunakan mesin mini crane untuk hasil yang maksimal dan sesuai standar."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Berapa jumlah titik ideal untuk bore pile diameter 50cm?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Untuk gudang atau pabrik dengan luas 300-500mÂ², jumlah titik ideal antara 20-35 titik. Konsultasikan dengan tim teknis kami untuk perhitungan yang akurat sesuai gambar bangunan."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Berapa kedalaman maksimal bore pile diameter 50cm?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Untuk bore pile mesin (mini crane) diameter 50cm, kedalaman maksimal mencapai 30 meter. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Berapa biaya total bore pile 50cm untuk gudang?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Untuk gudang dengan luas 300-500mÂ², biasanya membutuhkan 20-35 titik bore pile diameter 50cm dengan kedalaman 10-15 meter. Estimasi biaya jasa bor mesin sekitar Rp57.000.000 + mobilisasi. Gunakan kalkulator di halaman untuk perhitungan lebih akurat."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Apakah melayani area Bekasi, Tangerang, Bogor?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya. Kami melayani seluruh Jabodetabek (Jakarta, Bekasi, Bogor, Depok, Tangerang) dan sekitarnya."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Apakah melayani area luar Jabodetabek?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya. Kami melayani seluruh area pulau Jawa untuk proyek skala besar dengan diameter 50cm."
+            }
+        }
+    ]
+}
+</script>
 </body>
 </html>

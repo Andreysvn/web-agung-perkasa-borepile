@@ -2,6 +2,7 @@
 import config from '../../data/config.json';
 import { organizationSchema, schemaPhone } from '../../lib/schema.js';
 
+import FaIcon from '../../components/icons/FaIcon.astro';
 const orgLd = JSON.stringify(organizationSchema({
     "alternateName": "Agung Perkasa Bore Pile",
     "description": "Spesialis pondasi bore pile dan strauss pile melayani Jabodetabek dan seluruh Jawa.",
@@ -24,7 +25,7 @@ const orgLd = JSON.stringify(organizationSchema({
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="QjaIirR3-qW7bARIyez5S0_WPeMjPJSqn6tnK44ZYMo">
 
-    <link rel="canonical" href="https://agungperkasaborepile.com/jasa/" />
+    <link rel="canonical" href="https://agungperkasaborepile.com/alat.html" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -38,7 +39,7 @@ const orgLd = JSON.stringify(organizationSchema({
     <meta property="og:description" content="Pusat layanan jasa bore pile dan strauss pile untuk seluruh Indonesia. Konsultasi gratis.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
-    <meta property="og:url" content="https://agungperkasaborepile.com/jasa/">
+    <meta property="og:url" content="https://agungperkasaborepile.com/alat.html">
     <meta property="og:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
     <meta property="og:site_name" content="Agung Perkasa Borepile">
 
@@ -49,13 +50,9 @@ const orgLd = JSON.stringify(organizationSchema({
     <meta name="twitter:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
 
     <!-- Preconnect -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
     <!-- Font Awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-
     <!-- Ahrefs Analytics -->
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
 
@@ -89,7 +86,7 @@ const orgLd = JSON.stringify(organizationSchema({
              <ul class="nav-menu" role="list">
                 <li role="listitem"><a href="/">Beranda</a></li>
                 <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan Kami<i class="fas fa-chevron-down"></i></span>
+                    <span class="dropbtn">Layanan Kami<FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
                         <li><a href="/jasa/">Pusat Layanan</a></li>
                         <li><a href="/jasa/bore-pile/">Bore Pile Mesin</a></li>
@@ -97,7 +94,7 @@ const orgLd = JSON.stringify(organizationSchema({
                     </ul>
                 </li>
                  <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Alat<i class="fas fa-chevron-down"></i></span>
+                    <span class="dropbtn">Alat<FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
                         <li><a href="/jasa/">Jasa </a></li>
                         <li><a href="/alat/index.html#bore-pile">Bore Pile Mesin</a></li>
@@ -111,7 +108,6 @@ const orgLd = JSON.stringify(organizationSchema({
             </ul>
         </div>
     </nav>
-
 
     <!-- ===== MAIN ===== -->
     <main id="main-content">
@@ -151,7 +147,7 @@ const orgLd = JSON.stringify(organizationSchema({
                 <p class="card-sub">Mesin Mini Crane, Gawangan, Mini Pile</p>
                 <p>Solusi pondasi dalam untuk rumah tinggal, ruko, jembatan, gudang, gedung bertingkat. diameter 30-80cm, kedalaman hingga 30m.</p>
                 <span class="btn-type btn-type-primary">
-                    Cari Lokasi <i class="fas fa-arrow-right"></i>
+                    Cari Lokasi <FaIcon class="fas fa-arrow-right" />
                 </span>
             </div>
         </a>
@@ -168,7 +164,7 @@ const orgLd = JSON.stringify(organizationSchema({
                 <p class="card-sub">Manual</p>
                 <p>Solusi ekonomis untuk rumah tinggal, ruko, dan proyek dengan lahan terbatas. Pengerjaan cepat dan fleksibel.</p>
                 <span class="btn-type btn-type-secondary">
-                    Cari Lokasi <i class="fas fa-arrow-right"></i>
+                    Cari Lokasi <FaIcon class="fas fa-arrow-right" />
                 </span>
             </div>
         </a>
@@ -235,7 +231,7 @@ const orgLd = JSON.stringify(organizationSchema({
                     <span class="tag-secondary">30 m</span>
                     <span>Mesin</span>
                 </div>
-                <span class="equip-link">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                <span class="equip-link">Lihat Detail <FaIcon class="fas fa-arrow-right" /></span>
             </div>
         </a>
 
@@ -260,7 +256,7 @@ const orgLd = JSON.stringify(organizationSchema({
                     <span class="tag-secondary">30 m</span>
                     <span>Mesin</span>
                 </div>
-                <span class="equip-link">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                <span class="equip-link">Lihat Detail <FaIcon class="fas fa-arrow-right" /></span>
             </div>
         </a>
 
@@ -285,7 +281,7 @@ const orgLd = JSON.stringify(organizationSchema({
                     <span class="tag-secondary">10 m</span>
                     <span>Manual</span>
                 </div>
-                <span class="equip-link">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                <span class="equip-link">Lihat Detail <FaIcon class="fas fa-arrow-right" /></span>
             </div>
         </a>
 
@@ -303,7 +299,7 @@ const orgLd = JSON.stringify(organizationSchema({
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
                             Apa perbedaan Bore Pile dan Strauss Pile?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p><strong>Bore Pile</strong> menggunakan mesin mini crane atau gawangan, cocok untuk rumah, ruko, gudang, dan bangunan bertingkat. <strong>Strauss Pile</strong> dikerjakan secara manual, lebih ekonomis dan cocok untuk rumah tinggal atau ruko.</p>
@@ -312,7 +308,7 @@ const orgLd = JSON.stringify(organizationSchema({
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
                             Berapa biaya bore pile per meter?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Harga mulai dari <strong>Rp75.000 - Rp120.000/meter</strong> tergantung diameter, kedalaman, dan jenis alat yang digunakan. Untuk penawaran spesifik, silakan konsultasi gratis melalui WhatsApp.</p>
@@ -321,7 +317,7 @@ const orgLd = JSON.stringify(organizationSchema({
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
                             Apakah melayani proyek skala kecil (rumah tinggal)?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Ya! Kami melayani berbagai skala proyek, dari rumah tinggal 1 lantai hingga gedung bertingkat tinggi. Untuk proyek kecil, kami rekomendasikan <strong>Strauss Pile</strong> yang lebih ekonomis.</p>
@@ -330,7 +326,7 @@ const orgLd = JSON.stringify(organizationSchema({
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
                             Berapa lama waktu pengerjaan?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Waktu pengerjaan bervariasi tergantung jumlah titik dan kedalaman. Rata-rata <strong>3-4 titik per hari</strong> untuk bore pile mesin, dan <strong>2-3 titik per hari</strong> untuk strauss pile manual.</p>
@@ -346,7 +342,7 @@ const orgLd = JSON.stringify(organizationSchema({
                 <h3> Hubungi Kami</h3>
                 <p>Konsultasi gratis. Kami akan membantu menghitung estimasi biaya dan memilih metode terbaik.</p>
                 <a href={`https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Saya%20dari%20website%20Pusat%20Layanan%20ingin%20konsultasi%20soal%20bore%20pile.`} class="btn-wa-cta" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-whatsapp"></i> Konsultasi Gratis via WhatsApp
+                    <FaIcon class="fab fa-whatsapp" /> Konsultasi Gratis via WhatsApp
                 </a>
             </section>
 
@@ -355,12 +351,12 @@ const orgLd = JSON.stringify(organizationSchema({
 
     <!-- ===== WHATSAPP FLOAT ===== -->
     <a href={`https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Saya%20dari%20website%20Pusat%20Layanan%20ingin%20konsultasi%20soal%20bore%20pile.`} class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat konsultasi melalui WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+        <FaIcon class="fab fa-whatsapp" />
     </a>
 
     <!-- ===== SCROLL TOP ===== -->
     <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas">
-        <i class="fas fa-arrow-up"></i>
+        <FaIcon class="fas fa-arrow-up" />
     </button>
 
     <footer class="footer">
@@ -370,8 +366,8 @@ const orgLd = JSON.stringify(organizationSchema({
                     <h3>Agung Perkasa Borepile</h3>
                     <p>Spesialis pondasi borepile mesin & strauss pile (bore pile manual). Pengalaman lebih dari 10 tahun di Jakarta dan sekitarnya.</p>
                     <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
+                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
                     </div>
                 </div>
                 <div class="footer-col">

@@ -2,6 +2,7 @@
 import config from '../../../../data/config.json';
 import { organizationSchema, localBusinessSchema, schemaPhone } from '../../../../lib/schema.js';
 
+import FaIcon from '../../../../components/icons/FaIcon.astro';
 const orgLd = JSON.stringify(organizationSchema());
 
 const localBusinessLd = JSON.stringify(localBusinessSchema({
@@ -25,7 +26,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="QjaIirR3-qW7bARIyez5S0_WPeMjPJSqn6tnK44ZYMo">
     
-    <link rel="canonical" href="https://agungperkasaborepile.com/jasa/strauss-pile-jakarta.html" />
+    <link rel="canonical" href="https://agungperkasaborepile.com/jasa/strauss-pile/jakarta.html" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -39,7 +40,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <meta property="og:description" content="Jasa Strauss Pile (bore pile manual) Jakarta. Harga mulai Rp75.000/m. Solusi lahan sempit. Kalkulator biaya. Konsultasi gratis.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
-    <meta property="og:url" content="https://agungperkasaborepile.com/jasa/strauss-pile-jakarta">
+    <meta property="og:url" content="https://agungperkasaborepile.com/jasa/strauss-pile/jakarta.html">
     <meta property="og:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
     <meta property="og:site_name" content="Agung Perkasa Borepile">
     
@@ -54,14 +55,9 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <meta name="geo.placename" content="Jakarta">
     
     <!-- Preconnect -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
     <!-- Font Awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
     <!-- Ahrefs Analytics -->
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
     
@@ -105,7 +101,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <ul class="nav-menu" role="list">
                 <li role="listitem"><a href="/">Beranda</a></li>
                 <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan Kami<i class="fas fa-chevron-down"></i></span>
+                    <span class="dropbtn">Layanan Kami<FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
                         <li><a href="/jasa/">Pusat Layanan</a></li>
                         <li><a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a></li>
@@ -113,7 +109,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </ul>
                 </li>
                 <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Alat<i class="fas fa-chevron-down"></i></span>
+                    <span class="dropbtn">Alat<FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
                         <li><a href="/alat/">Bore Pile Mesin</a></li>
                         <li><a href="/alat/strauss-pile/">Strauss Pile</a></li>
@@ -412,7 +408,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <div class="faq-item">
                         <button class="faq-question">
                             Apa itu Strauss Pile?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Strauss Pile adalah metode pondasi dalam yang dikerjakan secara manual menggunakan tenaga manusia. Juga dikenal sebagai <strong>bore pile manual</strong>. Cocok untuk lahan sempit dan akses terbatas.</p>
@@ -422,7 +418,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <div class="faq-item">
                         <button class="faq-question">
                             Berapa minimal order Strauss Pile di Jakarta?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Minimal order <strong>100 meter</strong>. Untuk volume di bawah itu, silakan hubungi admin kami untuk penawaran khusus.</p>
@@ -432,7 +428,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <div class="faq-item">
                         <button class="faq-question">
                             Apakah Strauss Pile aman untuk tanah rawa atau bekas sawah di Jakarta?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Aman untuk tanah dengan kondisi padat. Untuk tanah rawa atau bekas sawah, kami rekomendasikan <a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a> yang bisa mencapai kedalaman 30 meter.</p>
@@ -442,7 +438,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <div class="faq-item">
                         <button class="faq-question">
                             Berapa lama waktu pengerjaan Strauss Pile untuk rumah di Jakarta?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Untuk 12 titik diameter 30cm kedalaman 9m, estimasi <strong>4-6 hari kerja</strong>. Waktu bisa berbeda tergantung kondisi tanah dan akses lokasi.</p>
@@ -452,7 +448,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <div class="faq-item">
                         <button class="faq-question">
                             Apakah Strauss Pile bisa dikerjakan di lahan sangat sempit?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Sangat bisa. Strauss Pile justru dirancang untuk lahan sempit dan gang yang tidak bisa dijangkau mesin. Mobilisasi bisa pakai motor.</p>
@@ -462,7 +458,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <div class="faq-item">
                         <button class="faq-question">
                             Berapa biaya mobilisasi Strauss Pile ke berbagai wilayah Jakarta?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Biaya mobilisasi tergantung jarak dari gudang kami di Sunter, Jakarta Utara: <strong>Jakarta Pusat & Utara</strong> Rp1-1.2 juta, <strong>Jakarta Barat & Timur</strong> Rp1.2-1.3 juta, <strong>Jakarta Selatan</strong> Rp1.3-1.5 juta.</p>
@@ -472,7 +468,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <div class="faq-item">
                         <button class="faq-question">
                             Apakah Strauss Pile butuh data sondir?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Sangat disarankan. Data sondir menentukan kedalaman tanah keras yang bervariasi: Jakarta Utara bisa 25-30m, Jakarta Selatan 10-20m. Tanpa sondir, risiko pondasi ambles sangat tinggi.</p>
@@ -482,7 +478,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <div class="faq-item">
                         <button class="faq-question">
                             Apakah bisa menggunakan material beton & besi sendiri untuk proyek Strauss Pile di Jakarta?
-                            <i class="fas fa-chevron-down"></i>
+                            <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
                             <p>Bisa. Harga di atas untuk <strong>jasa pengeboran saja</strong> (sudah termasuk perakitan besi tulangan & pengecoran). Jika Anda punya material sendiri, kami siap kerjakan. Pastikan material sesuai standar SNI untuk hasil pondasi yang kokoh.</p>
@@ -510,7 +506,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Borepile vs Strauss Pile</h3>
                                     <p class="article-excerpt">Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik.</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                         <span class="article-read-more">Baca selengkapnya →</span>
                                     </div>
                                 </div>
@@ -526,7 +522,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Harga Bore Pile Diameter 30cm</h3>
                                     <p class="article-excerpt">Lihat harga terbaru 2026 untuk bore pile diameter 30cm.</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Juni 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
                                         <span class="article-read-more">Baca selengkapnya →</span>
                                     </div>
                                 </div>
@@ -542,7 +538,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <h3>Bore Pile VS Tiang Pancang</h3>
                                     <p class="article-excerpt">Perbedaan bore pile dan tiang pancang: Kelebihan dan kekurangan, serta biaya mana yang lebih murah untuk proyek saya?</p>
                                     <div class="article-meta">
-                                        <span class="article-date"><i class="far fa-calendar-alt"></i> Mei 2026</span>
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Mei 2026</span>
                                         <span class="article-read-more">Baca selengkapnya →</span>
                                     </div>
                                 </div>
@@ -552,7 +548,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                 </div>
                 <div class="articles-cta">
                     <a href="/artikel/index.html" class="btn-articles-all">
-                        <i class="fas fa-newspaper"></i> Lihat Semua Artikel
+                        <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
                     </a>
                 </div>
             </section>
@@ -626,8 +622,8 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <h3>Agung Perkasa Borepile</h3>
                     <p>Spesialis pondasi borepile mesin & strauss pile. Pengalaman lebih dari 10 tahun di Jakarta dan sekitarnya.</p>
                     <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
+                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -670,10 +666,10 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
        target="_blank" 
        rel="noopener noreferrer" 
        aria-label="Chat konsultasi melalui WhatsApp">
-       <i class="fab fa-whatsapp"></i>
+       <FaIcon class="fab fa-whatsapp" />
     </a>
     
-    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
+    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><FaIcon class="fas fa-arrow-up" /></button>
 
     <!-- ===== SCHEMA MARKUP ===== -->
     <!-- Organization -->

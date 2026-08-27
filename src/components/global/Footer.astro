@@ -1,6 +1,7 @@
 ---
 // src/components/global/Footer.astro
 import config from '../../data/config.json';
+import FaIcon from '../icons/FaIcon.astro';
 ---
 
 <footer class="footer">
@@ -16,7 +17,7 @@ import config from '../../data/config.json';
             rel="noopener noreferrer" 
             aria-label="Facebook"
           >
-            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            <FaIcon class="fab fa-facebook-f" />
           </a>
           <a 
             href={config.company.social.instagram} 
@@ -24,7 +25,7 @@ import config from '../../data/config.json';
             rel="noopener noreferrer" 
             aria-label="Instagram"
           >
-            <i class="fab fa-instagram" aria-hidden="true"></i>
+            <FaIcon class="fab fa-instagram" />
           </a>
         </div>
       </div>
@@ -50,9 +51,9 @@ import config from '../../data/config.json';
       <div class="footer-col">
         <h3>Kontak</h3>
         <ul>
-          <li><i class="fas fa-map-marker-alt"></i> {config.company.address}</li>
-          <li><i class="fas fa-phone-alt"></i> {config.company.phone}</li>
-          <li><i class="fas fa-envelope"></i> {config.company.email}</li>
+          <li><FaIcon class="fas fa-map-marker-alt" /> {config.company.address}</li>
+          <li><FaIcon class="fas fa-phone-alt" /> {config.company.phone}</li>
+          <li><FaIcon class="fas fa-envelope" /> {config.company.email}</li>
         </ul>
       </div>
     </div>

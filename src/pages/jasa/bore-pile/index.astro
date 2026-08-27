@@ -2,6 +2,7 @@
 import config from '../../../data/config.json';
 import { organizationSchema, schemaPhone } from '../../../lib/schema.js';
 
+import FaIcon from '../../../components/icons/FaIcon.astro';
 const orgLd = JSON.stringify(organizationSchema({
     "alternateName": "Agung Perkasa Bore Pile",
     "logo": {
@@ -26,7 +27,7 @@ const orgLd = JSON.stringify(organizationSchema({
     <meta name="description" content="Cari jasa bore pile di kota Anda. Melayani Jakarta, Bekasi, Tangerang, Depok, Bogor, Bandung, Karawang, Semarang, Surabaya. Harga mulai Rp70.000/m.">
     <meta name="robots" content="index, follow">
 
-    <link rel="canonical" href="https://agungperkasaborepile.com/jasa/bore-pile/" />
+    <link rel="canonical" href="https://agungperkasaborepile.com/jasa/bore-pile.html" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -51,13 +52,9 @@ const orgLd = JSON.stringify(organizationSchema({
     <meta name="twitter:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
 
     <!-- Preconnect -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
     <!-- Font Awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-
     <!-- Ahrefs Analytics -->
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
 
@@ -91,7 +88,7 @@ const orgLd = JSON.stringify(organizationSchema({
              <ul class="nav-menu" role="list">
                 <li role="listitem"><a href="/">Beranda</a></li>
                 <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan Kami<i class="fas fa-chevron-down"></i></span>
+                    <span class="dropbtn">Layanan Kami<FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
                         <li><a href="/jasa/">Pusat Layanan</a></li>
                         <li><a href="/jasa/bore-pile/">Bore Pile Mesin</a></li>
@@ -100,7 +97,7 @@ const orgLd = JSON.stringify(organizationSchema({
                     </ul>
                 </li>
                  <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Alat<i class="fas fa-chevron-down"></i></span>
+                    <span class="dropbtn">Alat<FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
                         <li><a href="/jasa/">Jasa </a></li>
                         <li><a href="/alat/">Bore Pile Mesin</a></li>
@@ -131,7 +128,7 @@ const orgLd = JSON.stringify(organizationSchema({
 
             <!-- ===== HERO ===== -->
             <section class="jasa-hero" style="background: linear-gradient(135deg, #0a2540 0%, #1a4a7a 100%);">
-                <span class="hero-badge"><i class="fas fa-microscope"></i> Bore Pile</span>
+                <span class="hero-badge"><FaIcon class="fas fa-microscope" /> Bore Pile</span>
                 <h1>Cari Jasa Bore Pile di Kota Anda</h1>
                 <p>Temukan kontraktor bore pile terdekat dengan harga terbaik. Mesin mini crane, gawangan, diameter 30-80cm, kedalaman hingga 30m, Hidrolik diameter 40-110cm kedalaman hingga 60m.</p>
             </section>
@@ -141,7 +138,7 @@ const orgLd = JSON.stringify(organizationSchema({
                  ============================================================ -->
             <section class="jasa-search-section">
                 <div class="jasa-search-box">
-                    <i class="fas fa-search search-icon"></i>
+                    <FaIcon class="fas fa-search search-icon" />
                     <input type="text" id="jasaSearch" placeholder="Cari kota layanan bore pile... (contoh: Jakarta, Bekasi)">
                 </div>
 
@@ -175,9 +172,9 @@ const orgLd = JSON.stringify(organizationSchema({
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
                             <h3>Jakarta</h3>
-                            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Jakarta Pusat, Selatan, Barat, Timur, Utara</div>
+                            <div class="card-location"><FaIcon class="fas fa-map-marker-alt" /> Jakarta Pusat, Selatan, Barat, Timur, Utara</div>
                             <p class="card-desc">Kontraktor bore pile terpercaya di Jakarta. Didukung tenaga ahli berpengalaman.</p>
-                            <span class="btn-card">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                            <span class="btn-card">Lihat Detail <FaIcon class="fas fa-arrow-right" /></span>
                         </div>
                     </a>
 
@@ -187,9 +184,9 @@ const orgLd = JSON.stringify(organizationSchema({
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
                             <h3>Bekasi</h3>
-                            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Bekasi, Cikarang, Tambun</div>
+                            <div class="card-location"><FaIcon class="fas fa-map-marker-alt" /> Bekasi, Cikarang, Tambun</div>
                             <p class="card-desc">Melayani Bekasi, Cikarang, Tambun dengan kualitas terbaik.</p>
-                            <span class="btn-card">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                            <span class="btn-card">Lihat Detail <FaIcon class="fas fa-arrow-right" /></span>
                         </div>
                     </a>
 
@@ -199,9 +196,9 @@ const orgLd = JSON.stringify(organizationSchema({
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
                             <h3>Tangerang</h3>
-                            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Tangerang, BSD, Karawaci</div>
+                            <div class="card-location"><FaIcon class="fas fa-map-marker-alt" /> Tangerang, BSD, Karawaci</div>
                             <p class="card-desc">Melayani Tangerang, BSD, Karawaci dengan tenaga profesional.</p>
-                            <span class="btn-card">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                            <span class="btn-card">Lihat Detail <FaIcon class="fas fa-arrow-right" /></span>
                         </div>
                     </a>
 
@@ -211,9 +208,9 @@ const orgLd = JSON.stringify(organizationSchema({
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
                             <h3>Depok</h3>
-                            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Depok & Sekitarnya</div>
+                            <div class="card-location"><FaIcon class="fas fa-map-marker-alt" /> Depok & Sekitarnya</div>
                             <p class="card-desc">Melayani seluruh wilayah Depok dengan tenaga ahli berpengalaman.</p>
-                            <span class="btn-card">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                            <span class="btn-card">Lihat Detail <FaIcon class="fas fa-arrow-right" /></span>
                         </div>
                     </a>
 
@@ -223,9 +220,9 @@ const orgLd = JSON.stringify(organizationSchema({
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
                             <h3>Bogor</h3>
-                            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Bogor & Sekitarnya</div>
+                            <div class="card-location"><FaIcon class="fas fa-map-marker-alt" /> Bogor & Sekitarnya</div>
                             <p class="card-desc">Solusi pondasi untuk tanah lunak di Bogor dengan kualitas terbaik.</p>
-                            <span class="btn-card">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                            <span class="btn-card">Lihat Detail <FaIcon class="fas fa-arrow-right" /></span>
                         </div>
                     </a>
 
@@ -235,9 +232,9 @@ const orgLd = JSON.stringify(organizationSchema({
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
                             <h3>Bandung</h3>
-                            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Bandung & Sekitarnya</div>
+                            <div class="card-location"><FaIcon class="fas fa-map-marker-alt" /> Bandung & Sekitarnya</div>
                             <p class="card-desc">Melayani Bandung dan sekitarnya dengan tenaga profesional.</p>
-                            <span class="btn-card">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                            <span class="btn-card">Lihat Detail <FaIcon class="fas fa-arrow-right" /></span>
                         </div>
                     </a>
 
@@ -247,9 +244,9 @@ const orgLd = JSON.stringify(organizationSchema({
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
                             <h3>Karawang</h3>
-                            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Karawang, KIIC, Suryacipta</div>
+                            <div class="card-location"><FaIcon class="fas fa-map-marker-alt" /> Karawang, KIIC, Suryacipta</div>
                             <p class="card-desc">Melayani kawasan industri Karawang dengan tenaga profesional.</p>
-                            <span class="btn-card">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                            <span class="btn-card">Lihat Detail <FaIcon class="fas fa-arrow-right" /></span>
                         </div>
                     </a>
 
@@ -259,9 +256,9 @@ const orgLd = JSON.stringify(organizationSchema({
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
                             <h3>Semarang</h3>
-                            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Semarang & Sekitarnya</div>
+                            <div class="card-location"><FaIcon class="fas fa-map-marker-alt" /> Semarang & Sekitarnya</div>
                             <p class="card-desc">Melayani Semarang dan sekitarnya dengan kualitas terbaik.</p>
-                            <span class="btn-card">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                            <span class="btn-card">Lihat Detail <FaIcon class="fas fa-arrow-right" /></span>
                         </div>
                     </a>
 
@@ -271,9 +268,9 @@ const orgLd = JSON.stringify(organizationSchema({
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
                             <h3>Surabaya</h3>
-                            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Surabaya & Sekitarnya</div>
+                            <div class="card-location"><FaIcon class="fas fa-map-marker-alt" /> Surabaya & Sekitarnya</div>
                             <p class="card-desc">Melayani Surabaya dan sekitarnya dengan tenaga ahli berpengalaman.</p>
-                            <span class="btn-card">Lihat Detail <i class="fas fa-arrow-right"></i></span>
+                            <span class="btn-card">Lihat Detail <FaIcon class="fas fa-arrow-right" /></span>
                         </div>
                     </a>
 
@@ -315,7 +312,7 @@ const orgLd = JSON.stringify(organizationSchema({
                 <h3> Hubungi Kami</h3>
                 <p>Konsultasi gratis dengan tim engineer kami. Kami akan membantu menemukan layanan terbaik di kota Anda.</p>
                 <a href={`https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Saya%20dari%20website%20Bore%20Pile%20ingin%20konsultasi%20soal%20lokasi%20proyek.`} class="btn-wa-cta" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-whatsapp"></i> Konsultasi Gratis via WhatsApp
+                    <FaIcon class="fab fa-whatsapp" /> Konsultasi Gratis via WhatsApp
                 </a>
             </section>
 
@@ -324,12 +321,12 @@ const orgLd = JSON.stringify(organizationSchema({
 
     <!-- ===== WHATSAPP FLOAT ===== -->
     <a href={`https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Saya%20dari%20website%20Bore%20Pile%20ingin%20konsultasi.`} class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat konsultasi melalui WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+        <FaIcon class="fab fa-whatsapp" />
     </a>
 
     <!-- ===== SCROLL TOP ===== -->
     <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas">
-        <i class="fas fa-arrow-up"></i>
+        <FaIcon class="fas fa-arrow-up" />
     </button>
 
     <footer class="footer">
@@ -339,8 +336,8 @@ const orgLd = JSON.stringify(organizationSchema({
                     <h3>Agung Perkasa Borepile</h3>
                     <p>Spesialis pondasi borepile mesin & strauss pile (bore pile manual). Pengalaman lebih dari 10 tahun di Jakarta dan sekitarnya.</p>
                     <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
+                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
                     </div>
                 </div>
                 <div class="footer-col">
