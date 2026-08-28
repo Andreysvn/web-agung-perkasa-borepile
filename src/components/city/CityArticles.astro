@@ -1,0 +1,51 @@
+---
+import FaIcon from '../icons/FaIcon.astro';
+
+interface Props {
+    articles: Array<{
+        href: string;
+        image: string;
+        imageAlt: string;
+        category: string;
+        title: string;
+        excerpt: string;
+        date: string;
+    }>;
+}
+
+const { articles } = Astro.props;
+---
+
+<section class="articles-section" id="blog">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Artikel Blog</h2>
+            <p class="section-subtitle">Insight pondasi dan konstruksi untuk membantu keputusan proyek Anda.</p>
+        </div>
+        <div class="articles-grid">
+            {articles.map((article) => (
+                <article class="article-card">
+                    <a href={article.href} class="article-link">
+                        <div class="article-image">
+                            <img src={article.image} alt={article.imageAlt} loading="lazy">
+                            <span class="article-category">{article.category}</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>{article.title}</h3>
+                            <p class="article-excerpt">{article.excerpt}</p>
+                            <div class="article-meta">
+                                <span class="article-date"><FaIcon class="far fa-calendar-alt" /> {article.date}</span>
+                                <span class="article-read-more">Baca selengkapnya →</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            ))}
+        </div>
+    </div>
+    <div class="articles-cta">
+        <a href="/artikel/index.html" class="btn-articles-all">
+            <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
+        </a>
+    </div>
+</section>

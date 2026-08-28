@@ -117,5 +117,40 @@
     "image": "/imgs/hasil-lubang-borepile.webp",
     "label": "Strauss Pile Manual",
     "detail": "Strauss pile Ø30cm di Pondok Pinang, Jakarta Selatan"
+  },
+  {
+    "id": 18,
+    "category": "borepile",
+    "image": "/imgs/logo-agung-perkasa.webp",
+    "label": "Rumah Citra 6 Depok",
+    "detail": "Bore pile mini crane Ø40cm, kedalaman 10m, 45 titik di Depok"
+  },
+  {
+    "id": 19,
+    "category": "borepile",
+    "image": "/imgs/logo-agung-perkasa.webp",
+    "label": "Ruko Karawang",
+    "detail": "Bore pile mini crane Ø50cm untuk ruko 3 lantai di Karawang"
+  },
+  {
+    "id": 20,
+    "category": "proses",
+    "image": "/imgs/logo-agung-perkasa.webp",
+    "label": "Pengeboran Tanah Liat",
+    "detail": "Proses pengeboran dengan mesin mini crane di area tanah liat"
+  },
+  {
+    "id": 21,
+    "category": "borepile",
+    "image": "/imgs/logo-agung-perkasa.webp",
+    "label": "Gedung Kantor Semarang",
+    "detail": "Bore pile hidrolik Ø60cm, kedalaman 15m, 120 titik di Semarang"
+  },
+  {
+    "id": 22,
+    "category": "strauss",
+    "image": "/imgs/logo-agung-perkasa.webp",
+    "label": "Rumah Tangerang Selatan",
+    "detail": "Strauss pile Ø30cm untuk rumah 2 lantai di Tangerang Selatan"
   }
 ]

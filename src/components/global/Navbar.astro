@@ -31,8 +31,9 @@ import FaIcon from '../icons/FaIcon.astro';
       <li class="dropdown" role="listitem">
         <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
         <ul class="dropdown-content">
-          <li><a href="/jasa/bore-pile/">Jasa Bore Pile Mesin (Mini Crane)</a></li>
-          <li><a href="/jasa/strauss-pile/jakarta.html">Jasa Strauss Pile (Manual)</a></li>
+          <li><a href="/jasa/">Pusat Layanan</a></li>
+          <li><a href="/jasa/bore-pile/">Bore Pile Mesin</a></li>
+          <li><a href="/jasa/strauss-pile/jakarta.html">Strauss Pile</a></li>
         </ul>
       </li>
       <li class="dropdown" role="listitem">
@@ -53,14 +54,16 @@ import FaIcon from '../icons/FaIcon.astro';
 <style>
   /* ===== NAVBAR ===== */
   .navbar {
-    background: #1a3a6e;
     padding: 15px 0;
     position: fixed;
     width: 100%;
+    left: 0;
+    right: 0;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: visible;
   }
 
   .navbar .container {
@@ -207,16 +210,24 @@ import FaIcon from '../icons/FaIcon.astro';
   .dropdown-content {
     display: none !important;
     position: absolute !important;
-    background-color: #1a3a6e;
     min-width: 220px !important;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 1001;
     border-radius: 8px;
     top: 100% !important;
     left: 0 !important;
     width: max-content !important;
     list-style: none;
     padding: 10px 0;
+  }
+
+  .dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
   }
 
   .dropdown-content li a {
@@ -306,11 +317,10 @@ import FaIcon from '../icons/FaIcon.astro';
       left: 0 !important;
       right: 0 !important;
       width: 100% !important;
-      max-height: calc(100vh - 72px) !important;
-      background: #1a3a6e !important;
+      max-height: calc(100vh - 60px) !important;
       flex-direction: column !important;
       align-items: stretch !important;
-      padding: 18px 24px 28px !important;
+      padding: 8px 16px 20px !important;
       gap: 2px !important;
       transition: top 0.35s ease !important;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
@@ -323,7 +333,7 @@ import FaIcon from '../icons/FaIcon.astro';
     }
 
     .nav-menu.active {
-      top: 72px !important;
+      top: 56px !important;
     }
 
     .nav-menu a {

@@ -1,0 +1,80 @@
+---
+import pricing from '../../data/harga.json';
+
+interface Props {
+    cityName: string;
+}
+
+const { cityName } = Astro.props;
+---
+
+<section aria-labelledby="calculator-heading">
+    <div class="calculator-box">
+        <h2 id="calculator-heading">Kalkulator Estimasi Biaya Bore Pile & Strauss Pile {cityName}</h2>
+        
+        <div class="method-selector" role="group" aria-label="Pilih metode bore pile">
+            <button class="method-btn active" data-method="mesin" aria-pressed="true">Bore Pile Mesin</button>
+            <button class="method-btn" data-method="manual" aria-pressed="false">Bore Pile Manual</button>
+        </div>
+        
+        <div class="form-row" id="machineSelectRow">
+            <div class="calculator-form-group">
+                <label for="machineSelect">Pilih Jenis Mesin</label>
+                <select id="machineSelect">
+                    <option value="minicrane">Mini Crane</option>
+                    <option value="gawangan">Gawangan</option>
+                </select>
+                <div class="price-hint">*Harga dan minimal order berbeda tiap alat</div>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="calculator-form-group">
+                <label for="diameterSelect">Diameter (cm)</label>
+                <select id="diameterSelect">
+                    <option value="30" selected>30 cm</option>
+                    <option value="40">40 cm</option>
+                    <option value="50">50 cm</option>
+                    <option value="60">60 cm</option>
+                    <option value="80">80 cm</option>
+                    <option value="90">90 cm</option>
+                    <option value="100">100 cm</option>
+                    <option value="110">110 cm</option>
+                </select>
+            </div>
+            <div class="calculator-form-group">
+                <label for="priceInput">Harga Jasa per Meter (Rp)</label>
+                <input type="text" id="priceInput" inputmode="numeric" placeholder="Kosongkan untuk harga standar" value="">
+                <div class="price-hint">*Kosongkan untuk harga standar tabel</div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="calculator-form-group">
+                <label for="depthInput">Kedalaman (meter)</label>
+                <input type="text" id="depthInput" inputmode="numeric" placeholder="Contoh: 12" value="12">
+            </div>
+            <div class="calculator-form-group">
+                <label for="pointsInput">Jumlah Titik</label>
+                <input type="number" id="pointsInput" value="16" min="1" max="500" step="1">
+            </div>
+        </div>
+        
+        <div class="calculator-result" aria-live="polite">
+            <p class="result-label">Estimasi Total Biaya JASA BOR</p>
+            <div class="total-price" id="totalPrice">Rp 0</div>
+            <div class="detail-price" id="detailPrice"></div>
+            <div class="estimation-time" id="estimationTime">Estimasi waktu: -</div>
+            <div class="order-info" id="orderInfo"></div>
+        </div>
+        
+        <button onclick="sendToWA()" class="btn-wa" aria-label="Konsultasikan ke WhatsApp">Konsultasikan ke WhatsApp</button>
+        <div class="calculator-note">*Estimasi untuk jasa pengeboran saja (belum termasuk material beton & besi). Minimal order: Mini Crane 200m, Gawangan 200m, Manual 100m. Di bawah itu bisa hubungi admin kami untuk penawaran lebih lanjut.</div>
+    </div>
+</section>
+
+<script define:vars={{ pricing }}>
+    window.__PRICING__ = pricing;
+</script>
+<script src="/js/jasa.js" defer></script>
+<script src="/js/harga-calculator.js" defer></script>

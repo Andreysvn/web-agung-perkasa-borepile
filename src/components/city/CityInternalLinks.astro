@@ -1,0 +1,20 @@
+---
+interface Props {
+    internalLinks: Array<{
+        text: string;
+        href: string;
+    }>;
+}
+
+const { internalLinks } = Astro.props;
+---
+
+<div class="internal-link-box">
+    <p><strong>Baca Juga Harga Bore Pile:</strong><br>
+    {internalLinks.map((link, i) => (
+        <Fragment>
+            <a href={link.href}>{link.text}</a>
+            {i < internalLinks.length - 1 && ' | '}
+        </Fragment>
+    ))}</p>
+</div>

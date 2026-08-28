@@ -1,0 +1,63 @@
+---
+interface Props {
+    localPrices: {
+        mesin: Array<{ diameter: string; price: number; depth: string; suitable: string }>;
+        manual: Array<{ diameter: string; price: number; depth: string; suitable: string }>;
+    };
+    cityName: string;
+    highlightDiameter?: string;
+}
+
+const { localPrices, cityName, highlightDiameter = '' } = Astro.props;
+
+const formatPrice = (price: number) => {
+    return price > 0 ? price.toLocaleString('id-ID') : 'Hubungi Kami';
+};
+
+const isHighlighted = (d: string) => d === highlightDiameter;
+---
+
+<section aria-labelledby="table-heading">
+    <h2 id="table-heading" class="section-heading">Tabel Harga Bore Pile {cityName} 2026 (Jasa Bor Saja)</h2>
+    <p>Berikut <strong>harga JASA PENGEBORAN SAJA</strong> (belum termasuk material beton & besi) untuk wilayah {cityName} dan sekitarnya. Kedalaman pengeboran bergantung pada diameter dan kondisi lapisan tanah, pastikan cek sondir tanah dahulu agar mengetahui kedalaman yang tepat untuk pengeboran hingga mencapai tanah keras.</p>
+
+    <h3>Bore Pile Mesin (Mini Crane & Gawangan)</h3>
+    <div class="table-responsive">
+        <table class="price-table">
+            <caption>Tabel harga bore pile mesin (mini crane & gawangan) per meter</caption>
+            <thead>
+                <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
+            </thead>
+            <tbody>
+                {localPrices.mesin.map((item) => (
+                    <tr class={isHighlighted(item.diameter) ? 'row-highlight' : ''}>
+                        <td><strong>{item.diameter} cm</strong></td>
+                        <td><strong>{formatPrice(item.price)}</strong></td>
+                        <td><strong>{item.depth}</strong></td>
+                        <td><strong>{item.suitable}</strong></td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Strauss Pile (Bore Pile Manual)</h3>
+    <div class="table-responsive">
+        <table class="price-table">
+            <caption>Tabel harga Strauss Pile (bore pile manual) per meter</caption>
+            <thead>
+                <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
+            </thead>
+            <tbody>
+                {localPrices.manual.map((item) => (
+                    <tr class={isHighlighted(item.diameter) ? 'row-highlight' : ''}>
+                        <td><strong>{item.diameter} cm</strong></td>
+                        <td><strong>{formatPrice(item.price)}</strong></td>
+                        <td><strong>{item.depth}</strong></td>
+                        <td><strong>{item.suitable}</strong></td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    </div>
+</section>

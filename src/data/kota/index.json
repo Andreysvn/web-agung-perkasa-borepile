@@ -1,0 +1,11 @@
+[
+  { "slug": "jakarta", "name": "Jakarta", "geoRegion": "ID-JK" },
+  { "slug": "bandung", "name": "Bandung", "geoRegion": "ID-JB" },
+  { "slug": "bekasi", "name": "Bekasi", "geoRegion": "ID-JB" },
+  { "slug": "bogor", "name": "Bogor", "geoRegion": "ID-JB" },
+  { "slug": "depok", "name": "Depok", "geoRegion": "ID-JB" },
+  { "slug": "karawang", "name": "Karawang", "geoRegion": "ID-JB" },
+  { "slug": "semarang", "name": "Semarang", "geoRegion": "ID-JT" },
+  { "slug": "surabaya", "name": "Surabaya", "geoRegion": "ID-JI" },
+  { "slug": "tangerang", "name": "Tangerang", "geoRegion": "ID-BT" }
+]

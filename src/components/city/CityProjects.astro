@@ -1,0 +1,63 @@
+---
+interface Props {
+    projects: Array<{
+        hasImage?: boolean;
+        image?: string;
+        imageAlt?: string;
+        imageCaption?: string;
+        title: string;
+        specs: string;
+        method?: string;
+        costLines: string[];
+        mobilization?: string;
+        total: string;
+        time: string;
+    }>;
+    cityName: string;
+    note?: string;
+}
+
+const { projects, cityName, note } = Astro.props;
+---
+
+<section class="project-examples-section">
+    <h2 class="project-heading">Contoh Hitungan Proyek Nyata di {cityName}</h2>
+
+    {projects.map((project) => (
+        <div class="project-card">
+            <div class="project-row">
+                {project.hasImage && project.image && (
+                    <div class="project-img">
+                        <img src={project.image} alt={project.imageAlt || ''} loading="lazy">
+                        {project.imageCaption && (
+                            <div class="project-caption">{project.imageCaption}</div>
+                        )}
+                    </div>
+                )}
+                <div class="project-text">
+                    <div class="info-card">
+                        <h3>{project.title}</h3>
+                        <p set:html={project.specs}></p>
+                        {project.method && <p><strong>Metode:</strong> {project.method}</p>}
+                        <p>
+                            {project.costLines.map((line) => (
+                                <Fragment set:html={line + '<br>'}></Fragment>
+                            ))}
+                            {project.mobilization && (
+                                <Fragment set:html={`<strong>+ mobilisasi:</strong> ${project.mobilization}<br>`}></Fragment>
+                            )}
+                            <strong>Total:</strong> <strong class="price-total">{project.total}</strong><br>
+                            <strong>Waktu:</strong> {project.time}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    ))}
+
+    {note && (
+        <div class="project-note">
+            <p set:html={note}></p>
+        </div>
+    )}
+</section>

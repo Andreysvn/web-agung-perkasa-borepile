@@ -2,6 +2,8 @@
 import pricing from '../../data/harga.json';
 import { organizationSchema, localBusinessSchema } from '../../lib/schema.js';
 import FaIcon from '../../components/icons/FaIcon.astro';
+import Navbar from '../../components/global/Navbar.astro';
+import Footer from '../../components/global/Footer.astro';
 
 const orgLd = JSON.stringify(organizationSchema());
 
@@ -88,41 +90,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
     <!-- End Google Tag Manager -->
     <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
 
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar" aria-label="Navigasi utama">
-        <div class="container">
-            <a href="/" class="logo" aria-label="Agung Perkasa Borepile - Beranda">
-                <img src="/imgs/logo-agung-perkasa-transparan.webp" alt="Logo Agung Perkasa Borepile" width="45" height="45">
-                <span>Agung Perkasa <br>Borepile</span>
-            </a>
-            <button class="menu-toggle" id="mobile-menu" aria-label="Menu navigasi" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul class="nav-menu" role="list">
-                <li role="listitem"><a href="/">Beranda</a></li>
-                <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan Kami<FaIcon class="fas fa-chevron-down" /></span>
-                    <ul class="dropdown-content">
-                        <li><a href="/jasa/">Pusat Layanan</a></li>
-                        <li><a href="/jasa/bore-pile/">Bore Pile Mesin</a></li>
-                        <li><a href="/jasa/strauss-pile/jakarta.html">Strauss Pile</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Alat<FaIcon class="fas fa-chevron-down" /></span>
-                    <ul class="dropdown-content">
-                        <li><a href="/alat/">Alat Kami</a></li>
-                    </ul>
-                </li>
-                <li role="listitem"><a href="/artikel/">Artikel</a></li>
-                <li role="listitem"><a href="/#about">Tentang Kami</a></li>
-                <li role="listitem"><a href="/#faq">FAQ</a></li>
-                <li role="listitem"><a href="/galeri/gallery.html" class="btn-nav">Galeri</a></li>
-            </ul>
-        </div>
-    </nav>
+    <Navbar />
 
     <main id="main-content">
         <div class="blog-container">
@@ -447,7 +415,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                         </tbody>
                     </table>
                 </div>
-                <p class="price-hint" style="text-align: left;">Daya dukung di atas adalah estimasi untuk kedalaman 10-12 meter di tanah keras. Butuh info <a href="/harga/bore-pile-30cm.html">Harga Bore Pile 30cm?</a> | <a href="/harga/bore-pile-40cm.html">Harga Bore Pile 40cm?</a> | <a href="/harga/bore-pile-50cm.html">Harga Bore Pile 50cm?</a></p>
+                <p class="price-hint" style="text-align: left;">Daya dukung di atas adalah estimasi untuk kedalaman 10-12 meter di tanah keras. Butuh info <a href="/harga/bore-pile/30cm.html">Harga Bore Pile 30cm?</a> | <a href="/harga/bore-pile/40cm.html">Harga Bore Pile 40cm?</a> | <a href="/harga/bore-pile/50cm.html">Harga Bore Pile 50cm?</a></p>
             </section>
 
             <!-- ===== KEUNTUNGAN ===== -->
@@ -474,7 +442,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
             </section>
 
             <p>Butuh harga khusus untuk jasa bore pile di Jakarta?
-            <a href="/jasa/bore-pile-jakarta.html">Lihat jasa & harga bore pile Jakarta -&gt;</a>
+            <a href="/jasa/bore-pile/jakarta.html">Lihat jasa & harga bore pile Jakarta -&gt;</a>
             </p>
 
             <!-- ===== MATERIAL DARI KAMI ===== -->
@@ -688,14 +656,14 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
             <div class="internal-link-box">
                 <p>
                     <strong>Baca Juga Harga Bore Pile:</strong><br>
-                    <a href="/jasa/bore-pile-jakarta.html">Jakarta</a> |
-                    <a href="/jasa/bore-pile-bekasi.html">Bekasi</a> |
-                    <a href="/jasa/bore-pile-tangerang.html">Tangerang</a> |
-                    <a href="/jasa/bore-pile-depok.html">Depok</a> |
-                    <a href="/jasa/bore-pile-bogor.html">Bogor</a> |
-                    <a href="/harga/bore-pile-30cm.html">Harga 30cm</a> |
-                    <a href="/harga/bore-pile-40cm.html">Harga 40cm</a> |
-                    <a href="/harga/bore-pile-50cm.html">Harga 50cm</a>
+                    <a href="/jasa/bore-pile/jakarta.html">Jakarta</a> |
+                    <a href="/jasa/bore-pile/bekasi.html">Bekasi</a> |
+                    <a href="/jasa/bore-pile/tangerang.html">Tangerang</a> |
+                    <a href="/jasa/bore-pile/depok.html">Depok</a> |
+                    <a href="/jasa/bore-pile/bogor.html">Bogor</a> |
+                    <a href="/harga/bore-pile/30cm.html">Harga 30cm</a> |
+                    <a href="/harga/bore-pile/40cm.html">Harga 40cm</a> |
+                    <a href="/harga/bore-pile/50cm.html">Harga 50cm</a>
                 </p>
             </div>
         </div>
@@ -742,7 +710,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                     </a>
                 </article>
                 <article class="article-card">
-                    <a href="/harga/bore-pile-30cm.html" class="article-link">
+                    <a href="/harga/bore-pile/30cm.html" class="article-link">
                         <div class="article-image">
                             <img src="/imgs/borepile-pulo-gadung-jakarta.webp" alt="Harga Bore Pile Diameter 30cm" loading="lazy">
                             <span class="article-category">Harga</span>
@@ -759,7 +727,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                 </article>
             </div>
             <div class="articles-cta">
-                <a href="/artikel/index.html" class="btn-articles-all"><FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel</a>
+                <a href="/artikel.html" class="btn-articles-all"><FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel</a>
             </div>
         </div>
     </section>
@@ -838,53 +806,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
         </div>
     </div>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Agung Perkasa Borepile</h3>
-                    <p>Spesialis pondasi borepile mesin & manual dengan pengalaman lebih dari 10 tahun di Jabodetabek dan seluruh Pulau Jawa.</p>
-                    <div class="social-links">
-                        <a href="https://facebook.com/profile.php?id=61563968365179" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
-                        <a href="https://instagram.com/agungperkasaborepile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Layanan</h3>
-                    <ul>
-                        <li><a href="/jasa/">Jasa Bore Pile</a></li>
-                        <li><a href="/jasa/">Jasa Strauss Pile</a></li>
-                        <li><a href="/harga/bore-pile-2026.html">Jasa Bore Pile Mesin</a></li>
-                        <li><a href="/harga/bore-pile-30cm.html">Jasa Bore Pile Manual</a></li>
-                        <li><a href="/harga/bore-pile-2026.html">Kalkulator Biaya Bore Pile</a></li>
-                        <li><a href="/#contact">Konsultasi Pondasi Dalam</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Tentang Kami</h3>
-                    <ul>
-                        <li><a href="/#about">Tentang Kami</a></li>
-                        <li><a href="/galeri/">Galeri</a></li>
-                        <li><a href="/artikel/">Blog Artikel</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Kontak</h3>
-                    <ul>
-                        <li>Alamat: Jl. Sunter Muara II, RT.17/RW.05, Sunter Agung, Jakarta Utara</li>
-                        <li>Telp: +62 857 1027 7854</li>
-                        <li>Email: admin@agungperkasaborepile.com</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; {new Date().getFullYear()} Agung Perkasa Borepile. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <Footer />
 
     <!-- ===== WHATSAPP FLOAT & SCROLL TOP ===== -->
     <a href="https://wa.me/6285710277854?text=Halo%20Pak%2C%20Saya%20dari%20website%20ingin%20menanyakan%20terkait%20penawaran%20harga%20bore%20pile%202026." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat konsultasi melalui WhatsApp">

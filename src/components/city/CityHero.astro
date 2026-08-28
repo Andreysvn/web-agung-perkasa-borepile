@@ -1,0 +1,26 @@
+---
+interface Props {
+    data: {
+        heroImage: string;
+        heroAlt: string;
+        heroCaption: string;
+        heroWidth?: string;
+        heroHeight?: string;
+        heroText: string;
+        cityName: string;
+    };
+}
+
+const { data } = Astro.props;
+const { heroImage, heroAlt, heroCaption, heroWidth = '350', heroHeight = '372', heroText, cityName } = data;
+---
+
+<div class="illustration">
+    <div class="illustration-img">
+        <img src={heroImage} alt={heroAlt} title={`Bore Pile Mini Crane ${cityName}`} width={heroWidth} height={heroHeight} fetchpriority="high">
+        <div class="caption">{heroCaption}</div>
+    </div>
+    <div class="illustration-text">
+        <p set:html={heroText}></p>
+    </div>
+</div>

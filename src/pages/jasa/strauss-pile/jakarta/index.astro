@@ -3,6 +3,8 @@ import config from '../../../../data/config.json';
 import { organizationSchema, localBusinessSchema, schemaPhone } from '../../../../lib/schema.js';
 
 import FaIcon from '../../../../components/icons/FaIcon.astro';
+import Navbar from '../../../../components/global/Navbar.astro';
+import Footer from '../../../../components/global/Footer.astro';
 const orgLd = JSON.stringify(organizationSchema());
 
 const localBusinessLd = JSON.stringify(localBusinessSchema({
@@ -76,52 +78,19 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <!-- End Google Tag Manager -->
     
     <!-- Google tag (gtag.js) - Google Ads -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-16649506462"></script>
+    <script is:inline defer src="https://www.googletagmanager.com/gtag/js?id=AW-16649506462"></script>
     <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-16649506462');
+      window.addEventListener('load', function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16649506462');
+      });
     </script>
     
     <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
     
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar" aria-label="Navigasi utama">
-        <div class="container">
-            <a href="/" class="logo" aria-label="Agung Perkasa Borepile - Beranda">
-                <img src="/imgs/logo-agung-perkasa-transparan.webp" alt="Logo Agung Perkasa Borepile" width="45" height="45">
-                <span>Agung Perkasa <br>Borepile</span>
-            </a>
-            <button class="menu-toggle" id="mobile-menu" aria-label="Menu navigasi" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul class="nav-menu" role="list">
-                <li role="listitem"><a href="/">Beranda</a></li>
-                <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan Kami<FaIcon class="fas fa-chevron-down" /></span>
-                    <ul class="dropdown-content">
-                        <li><a href="/jasa/">Pusat Layanan</a></li>
-                        <li><a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a></li>
-                        <li><a href="/jasa/strauss-pile-jakarta.html">Strauss Pile Manual</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Alat<FaIcon class="fas fa-chevron-down" /></span>
-                    <ul class="dropdown-content">
-                        <li><a href="/alat/">Bore Pile Mesin</a></li>
-                        <li><a href="/alat/strauss-pile/">Strauss Pile</a></li>
-                    </ul>
-                </li>
-                <li role="listitem"><a href="/artikel/">Artikel</a></li>
-                <li role="listitem"><a href="/#about">Tentang Kami</a></li>
-                <li role="listitem"><a href="/#faq">FAQ</a></li>
-                <li role="listitem"><a href="/galeri/gallery.html" class="btn-nav">Galeri</a></li>
-            </ul>
-        </div>
-    </nav>
+    <Navbar />
 
     <main id="main-content">
         <div class="blog-container">
@@ -157,7 +126,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <p><strong>Harga jasa Strauss Pile Jakarta 2026</strong> untuk jasa pengeboran saja mulai dari <strong>Rp75.000/m</strong>.
                         <a href="/harga/bore-pile-2026.html">Lihat daftar harga bore pile 2026 lengkap di sini</a>. 
                     Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Jakarta Pusat, Barat, Selatan, Timur, dan Utara.</p>
-                    <p><strong>Butuh kapasitas lebih besar?</strong> <a href="/jasa/bore-pile-jakarta.html">Cek layanan Bore Pile Mesin kami →</a></p>
+                    <p><strong>Butuh kapasitas lebih besar?</strong> <a href="/jasa/bore-pile/jakarta.html">Cek layanan Bore Pile Mesin kami →</a></p>
                 </div>
             </div>
 
@@ -431,7 +400,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                             <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
-                            <p>Aman untuk tanah dengan kondisi padat. Untuk tanah rawa atau bekas sawah, kami rekomendasikan <a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a> yang bisa mencapai kedalaman 30 meter.</p>
+                            <p>Aman untuk tanah dengan kondisi padat. Untuk tanah rawa atau bekas sawah, kami rekomendasikan <a href="/jasa/bore-pile/jakarta.html">Bore Pile Mesin</a> yang bisa mencapai kedalaman 30 meter.</p>
                         </div>
                     </div>
 
@@ -513,7 +482,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                             </a>
                         </article>
                         <article class="article-card">
-                            <a href="/harga/bore-pile-30cm.html" class="article-link">
+                            <a href="/harga/bore-pile/30cm.html" class="article-link">
                                 <div class="article-image">
                                     <img src="/imgs/hasil-lubang-borepile.webp" alt="Hasil lubang bore pile diameter 30cm yang sudah dimasukan tulangan besi struktur pondasi" loading="lazy">
                                     <span class="article-category">Harga</span>
@@ -547,7 +516,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </div>
                 </div>
                 <div class="articles-cta">
-                    <a href="/artikel/index.html" class="btn-articles-all">
+                    <a href="/artikel.html" class="btn-articles-all">
                         <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
                     </a>
                 </div>
@@ -562,12 +531,12 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
 
             <!-- ===== INTERNAL LINK ===== -->
             <div class="internal-link-box">
-                <p><strong>Butuh kapasitas lebih besar?</strong> <a href="/jasa/bore-pile-jakarta.html">Cek layanan Bore Pile Mesin kami →</a></p>
+                <p><strong>Butuh kapasitas lebih besar?</strong> <a href="/jasa/bore-pile/jakarta.html">Cek layanan Bore Pile Mesin kami →</a></p>
                 <p><strong>Baca Juga Harga Bore Pile:</strong><br>
-                <a href="/jasa/bore-pile-bekasi.html">Bekasi</a> | 
-                <a href="/jasa/bore-pile-tangerang.html">Tangerang</a> | 
-                <a href="/jasa/bore-pile-depok.html">Depok</a> | 
-                <a href="/jasa/bore-pile-bogor.html">Bogor</a></p>
+                <a href="/jasa/bore-pile/bekasi.html">Bekasi</a> | 
+                <a href="/jasa/bore-pile/tangerang.html">Tangerang</a> | 
+                <a href="/jasa/bore-pile/depok.html">Depok</a> | 
+                <a href="/jasa/bore-pile/bogor.html">Bogor</a></p>
                 <a href="/harga/bore-pile-2026.html">Harga Bore Pile 2026</a> 
             </div>
         </div>
@@ -614,51 +583,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         </div>
     </div>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Agung Perkasa Borepile</h3>
-                    <p>Spesialis pondasi borepile mesin & strauss pile. Pengalaman lebih dari 10 tahun di Jakarta dan sekitarnya.</p>
-                    <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Layanan</h3>
-                    <ul>
-                        <li><a href="/jasa/">Layanan Kami</a></li>
-                        <li><a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a></li>
-                        <li><a href="/jasa/strauss-pile-jakarta.html">Strauss Pile Manual</a></li>
-                        <li><a href="/harga/bore-pile-2026.html">Kalkulator Biaya</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Tentang Kami</h3>
-                    <ul>
-                        <li><a href="/#about">Tentang Kami</a></li>
-                        <li><a href="/galeri/">Galeri</a></li>
-                        <li><a href="/artikel/">Blog Artikel</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Kontak</h3>
-                    <ul>
-                        <li>Alamat: Jl. Sunter Muara II, RT.17/RW.05, Sunter Agung, Jakarta Utara</li>
-                        <li>Telp: {config.company.phone}</li>
-                        <li>Email: {config.company.email}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; {new Date().getFullYear()} {config.siteName}. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <Footer />
 
     <!-- ===== WHATSAPP FLOAT ===== -->
     <a href={`https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Saya%20dari%20website%20ingin%20menanyakan%20terkait%20penawaran%20harga%20Strauss%20Pile%20untuk%20proyek%20Jakarta.`} 
@@ -700,7 +625,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Strauss Pile Jakarta",
-                "item": "https://agungperkasaborepile.com/jasa/strauss-pile-jakarta.html"
+                "item": "https://agungperkasaborepile.com/jasa/strauss-pile/jakarta.html"
             }
         ]
     }

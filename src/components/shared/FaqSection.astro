@@ -1,0 +1,30 @@
+---
+import FaIcon from '../icons/FaIcon.astro';
+
+interface Props {
+    faq: Array<{ question: string; answer: string }>;
+    cityName: string;
+    sectionTitle?: string;
+}
+
+const { faq, cityName, sectionTitle = '' } = Astro.props;
+
+const heading = sectionTitle || `Pertanyaan Umum Seputar Bore Pile ${cityName}`;
+---
+
+<section>
+    <h2 class="section-heading">{heading}</h2>
+    <div class="faq-container">
+        {faq.map((item) => (
+            <div class="faq-item">
+                <button class="faq-question">
+                    {item.question}
+                    <FaIcon class="fas fa-chevron-down" />
+                </button>
+                <div class="faq-answer">
+                    <p set:html={item.answer}></p>
+                </div>
+            </div>
+        ))}
+    </div>
+</section>

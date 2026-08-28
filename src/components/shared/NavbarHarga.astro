@@ -1,0 +1,53 @@
+---
+import FaIcon from '../icons/FaIcon.astro';
+
+interface Props {
+    diameter?: string;
+}
+
+const { diameter = '' } = Astro.props;
+
+const isHargaActive = (d: string) => {
+    return d === diameter ? 'active' : '';
+};
+---
+
+<nav class="navbar" aria-label="Navigasi utama">
+    <div class="container">
+        <a href="/" class="logo" aria-label="Agung Perkasa Borepile - Beranda">
+            <img src="/imgs/logo-agung-perkasa-transparan.webp" alt="Logo Agung Perkasa Borepile" width="45" height="45">
+            <span>Agung Perkasa <br>Borepile</span>
+        </a>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Menu navigasi" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="nav-menu" role="list">
+            <li role="listitem"><a href="/">Beranda</a></li>
+            <li class="dropdown" role="listitem">
+                <span class="dropbtn">Layanan<FaIcon class="fas fa-chevron-down" /></span>
+                <ul class="dropdown-content">
+                    <li><a href="/jasa/">Jasa</a></li>
+                    <li><a href="/jasa/bore-pile/jakarta.html">Bore Pile Mesin</a></li>
+                    <li><a href="/jasa/strauss-pile/jakarta.html">Strauss Pile</a></li>
+                    <li><a href="/#services">Bore Pile Hidrolik</a></li>
+                </ul>
+            </li>
+            <li class="dropdown" role="listitem">
+                <span class="dropbtn">Harga<FaIcon class="fas fa-chevron-down" /></span>
+                <ul class="dropdown-content">
+                    <li><a href="/harga/bore-pile-2026.html" class={isHargaActive('2026')}>Bore Pile 2026</a></li>
+                    <li><a href="/harga/bore-pile/30cm.html" class={isHargaActive('30cm')}>Harga 30cm</a></li>
+                    <li><a href="/harga/bore-pile/40cm.html" class={isHargaActive('40cm')}>Harga 40cm</a></li>
+                    <li><a href="/harga/bore-pile/50cm.html" class={isHargaActive('50cm')}>Harga 50cm</a></li>
+                    <li><a href="/harga/bore-pile/60cm.html" class={isHargaActive('60cm')}>Harga 60cm</a></li>
+                    <li><a href="/harga/bore-pile/80cm.html" class={isHargaActive('80cm')}>Harga 80cm</a></li>
+                </ul>
+            </li>
+            <li role="listitem"><a href="/galeri/gallery.html" class="btn-nav">Galeri</a></li>
+            <li role="listitem"><a href="/artikel.html">Artikel</a></li>
+            <li role="listitem"><a href="/#contact">Hubungi</a></li>
+        </ul>
+    </div>
+</nav>

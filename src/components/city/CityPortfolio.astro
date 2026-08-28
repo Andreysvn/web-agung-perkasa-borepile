@@ -1,0 +1,47 @@
+---
+interface Props {
+    portfolio: {
+        title?: string;
+        subtitle?: string;
+        heading?: string;
+        items: Array<{
+            image: string;
+            imageAlt: string;
+            label: string;
+            detail: string;
+            width?: string;
+            height?: string;
+        }>;
+    };
+    cityName: string;
+}
+
+const { portfolio, cityName } = Astro.props;
+const title = portfolio.title || `Portofolio Proyek Bore Pile di ${cityName}`;
+const subtitle = portfolio.subtitle || `Berikut beberapa proyek bore pile yang sudah kami kerjakan di berbagai wilayah ${cityName}.`;
+const heading = portfolio.heading || `Dokumentasi proyek bore pile ${cityName.toLowerCase()}:`;
+---
+
+<section class={`portfolio-${cityName.toLowerCase().replace(/\s+/g, '-')}-section`}>
+    <h2 class={`portfolio-${cityName.toLowerCase().replace(/\s+/g, '-')}-title`}>{title}</h2>
+    <p class={`portfolio-${cityName.toLowerCase().replace(/\s+/g, '-')}-sub`}>{subtitle}</p>
+
+    <div class={`proyek-${cityName.toLowerCase().replace(/\s+/g, '-')}-box`}>
+        <p class={`proyek-${cityName.toLowerCase().replace(/\s+/g, '-')}-heading`}>{heading}</p>
+        <div class={`proyek-${cityName.toLowerCase().replace(/\s+/g, '-')}-grid`}>
+            {portfolio.items.map((item) => (
+                <div class={`proyek-${cityName.toLowerCase().replace(/\s+/g, '-')}-item`}>
+                    <img src={item.image} alt={item.imageAlt} loading="lazy" width={item.width || '400'} height={item.height || '300'}>
+                    <div class={`proyek-${cityName.toLowerCase().replace(/\s+/g, '-')}-caption`}>
+                        <span class={`proyek-${cityName.toLowerCase().replace(/\s+/g, '-')}-label`}>{item.label}</span>
+                        <span class={`proyek-${cityName.toLowerCase().replace(/\s+/g, '-')}-detail`}>{item.detail}</span>
+                    </div>
+                </div>
+            ))}
+        </div>
+        <p class={`proyek-${cityName.toLowerCase().replace(/\s+/g, '-')}-link`}>
+            Ingin lihat lebih banyak? 
+            <a href="/galeri/gallery.html">Kunjungi galeri proyek kami →</a>
+        </p>
+    </div>
+</section>

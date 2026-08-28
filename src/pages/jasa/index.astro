@@ -4,6 +4,8 @@ import pricing from '../../data/harga.json';
 import { organizationSchema, schemaPhone } from '../../lib/schema.js';
 
 import FaIcon from '../../components/icons/FaIcon.astro';
+import Navbar from '../../components/global/Navbar.astro';
+import Footer from '../../components/global/Footer.astro';
 const orgLd = JSON.stringify(organizationSchema({
     "alternateName": "Agung Perkasa Bore Pile",
     "logo": {
@@ -84,43 +86,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
 
     <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
 
-    <!-- ===== NAVBAR ===== -->
-   <nav class="navbar" aria-label="Navigasi utama">
-        <div class="container">
-            <a href="/" class="logo" aria-label="Agung Perkasa Borepile - Beranda">
-                <img src="/imgs/logo-agung-perkasa-transparan.webp" alt="Logo Agung Perkasa Borepile" width="45" height="45">
-                <span>Agung Perkasa <br>Borepile</span>
-            </a>
-            <button class="menu-toggle" id="mobile-menu" aria-label="Menu navigasi" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-             <ul class="nav-menu" role="list">
-                <li role="listitem"><a href="/">Beranda</a></li>
-                <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan Kami<FaIcon class="fas fa-chevron-down" /></span>
-                    <ul class="dropdown-content">
-                        <li><a href="/jasa/">Pusat Layanan</a></li>
-                        <li><a href="/jasa/bore-pile/">Bore Pile Mesin</a></li>
-                        <li><a href="/jasa/strauss-pile/">Strauss Pile</a></li>
-                    </ul>
-                </li>
-                 <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Alat<FaIcon class="fas fa-chevron-down" /></span>
-                    <ul class="dropdown-content">
-                        <li><a href="/jasa/">Jasa </a></li>
-                        <li><a href="/alat/index.html#bore-pile">Bore Pile Mesin</a></li>
-                        <li><a href="/alat/index.html#strauss-pile">Strauss Pile</a></li>
-                    </ul>
-                </li>
-                <li role="listitem"><a href="/artikel/">Artikel</a></li>
-                <li role="listitem"><a href="/#about">Tentang Kami</a></li>
-                <li role="listitem"><a href="/#faq">FAQ</a></li>
-                <li role="listitem"><a href="/galeri/gallery.html" class="btn-nav">Galeri</a></li>
-            </ul>
-        </div>
-    </nav>
+    <Navbar />
 
     <!-- ===== MAIN ===== -->
     <main id="main-content">
@@ -390,49 +356,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
         <FaIcon class="fas fa-arrow-up" />
     </button>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Agung Perkasa Borepile</h3>
-                    <p>Spesialis pondasi borepile mesin & strauss pile (bore pile manual). Pengalaman lebih dari 10 tahun di Jakarta dan sekitarnya.</p>
-                    <div class="social-links">
-                        <a href="https://facebook.com/profile.php?id=61563968365179" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
-                        <a href="https://instagram.com/agungperkasaborepile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Layanan</h3>
-                    <ul>
-                        <li><a href="/jasa/">Layanan Kami</a></li>
-                        <li><a href="/jasa/bore-pile/">Jasa Bore Pile</a></li>
-                        <li><a href="/jasa/strauss-pile/">Jasa Strauss Pile</a></li>
-                        <li><a href="/jasa/bore-pile/">Jasa Bore Pile Mesin</a></li>
-                        <li><a href="/jasa/strauss-pile/">Jasa Bore Pile Manual</a></li>
-                        <li><a href="/harga/bore-pile-2026.html">Kalkulator Biaya Bore Pile</a></li>
-                        <li><a href="/#contact">Konsultasi Pondasi Dalam</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Tentang Kami</h3>
-                    <ul><li><a href="/#about">Tentang Kami</a></li><li><a href="/galeri/">Galeri</a></li><li><a href="/artikel/">Blog Artikel</a></li></ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Kontak</h3>
-                    <ul>
-                        <li>Alamat: Jl. Sunter Muara II, RT.17/RW.05, Sunter Agung, Jakarta Utara</li>
-                        <li>Telp: {config.company.phone}</li>
-                        <li>Email: {config.company.email}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; {new Date().getFullYear()} {config.siteName}. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <Footer />
     <!-- ===== JS EXTERNAL ===== -->
     <script src="/js/jasa.js" defer></script>
 

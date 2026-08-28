@@ -103,7 +103,6 @@
         if (noResults) {
             noResults.style.display = visibleCount === 0 ? 'block' : 'none';
         }
-        resetLoadMore();
     }
 
     filterChips.forEach(function(chip) {
@@ -199,71 +198,6 @@
     });
 
     console.log('Galeri siap dengan ' + galleryCards.length + ' foto');
-
-    // ==================== LOAD MORE ====================
-    var LOAD_INITIAL = 8;
-    var LOAD_MORE = 8;
-    var loadedCount = LOAD_INITIAL;
-    var loadMoreBtn = document.getElementById('loadMoreBtn');
-    var loadMoreCount = document.getElementById('loadMoreCount');
-    var loadMoreWrap = document.getElementById('loadMoreWrap');
-
-    function initLoadMore() {
-        var allCards = Array.from(galleryCards);
-        allCards.forEach(function(card, i) {
-            if (i >= LOAD_INITIAL) {
-                card.classList.add('hidden');
-            }
-        });
-        updateLoadMoreUI();
-    }
-
-    function showMoreCards() {
-        var hiddenCards = Array.from(galleryCards).filter(function(c) {
-            return c.classList.contains('hidden') && c.style.display !== 'none';
-        });
-        var toShow = hiddenCards.slice(0, LOAD_MORE);
-        toShow.forEach(function(card) {
-            card.classList.remove('hidden');
-        });
-        loadedCount += toShow.length;
-        updateLoadMoreUI();
-    }
-
-    function updateLoadMoreUI() {
-        var visibleTotal = Array.from(galleryCards).filter(function(c) {
-            return c.style.display !== 'none';
-        }).length;
-        var hiddenRemaining = visibleTotal - loadedCount;
-
-        if (hiddenRemaining <= 0) {
-            loadMoreWrap.style.display = 'none';
-        } else {
-            loadMoreWrap.style.display = 'block';
-            loadMoreCount.textContent = 'Menampilkan ' + loadedCount + ' dari ' + visibleTotal + ' foto';
-        }
-    }
-
-    function resetLoadMore() {
-        loadedCount = LOAD_INITIAL;
-        var allCards = Array.from(galleryCards);
-        allCards.forEach(function(card, i) {
-            if (i >= LOAD_INITIAL && card.style.display !== 'none') {
-                card.classList.add('hidden');
-            }
-        });
-        updateLoadMoreUI();
-    }
-
-    if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', showMoreCards);
-    }
-
-    if (galleryCards.length > LOAD_INITIAL) {
-        initLoadMore();
-    } else if (loadMoreWrap) {
-        loadMoreWrap.style.display = 'none';
-    }
 
     // ==================== ARTIKEL ANIMASI (Intersection Observer) ====================
     var articleCards = document.querySelectorAll('.article-card');

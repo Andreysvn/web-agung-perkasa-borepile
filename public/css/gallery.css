@@ -1174,3 +1174,112 @@ body {
 .gallery-card.hidden {
     display: none;
 }
+
+/* ===== PAGINATION ===== */
+.gallery-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 40px 0 20px;
+    flex-wrap: wrap;
+}
+
+.pagination-info {
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.pagination-link,
+.pagination-prev,
+.pagination-next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 42px;
+    padding: 0 14px;
+    background: var(--white);
+    color: var(--primary-color);
+    border: 2px solid #e0e0e0;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.pagination-link:hover,
+.pagination-prev:hover,
+.pagination-next:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 58, 110, 0.25);
+}
+
+.pagination-prev,
+.pagination-next {
+    gap: 6px;
+    font-size: 0.85rem;
+}
+
+.pagination-prev svg,
+.pagination-next svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.25s ease;
+}
+
+.pagination-prev:hover svg {
+    transform: translateX(-3px);
+}
+
+.pagination-next:hover svg {
+    transform: translateX(3px);
+}
+
+.pagination-current {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 42px;
+    padding: 0 14px;
+    background: var(--primary-color);
+    color: var(--white);
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(26, 58, 110, 0.2);
+}
+
+.pagination-dots {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 42px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 480px) {
+    .gallery-pagination { gap: 5px; }
+    .pagination-link,
+    .pagination-prev,
+    .pagination-next,
+    .pagination-current {
+        min-width: 38px;
+        height: 38px;
+        font-size: 0.82rem;
+        padding: 0 10px;
+    }
+}

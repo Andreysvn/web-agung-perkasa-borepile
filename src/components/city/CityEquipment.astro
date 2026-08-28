@@ -1,0 +1,35 @@
+---
+interface Props {
+    equipment: {
+        items: Array<{
+            image: string;
+            imageAlt: string;
+            iconFallback: string;
+            name: string;
+            description: string;
+        }>;
+    };
+    cityName: string;
+}
+
+const { equipment, cityName } = Astro.props;
+---
+
+<h3 class="equip-title">Alat yang Kami gunakan di lapangan</h3>
+<p class="equip-sub">Kami memiliki beberapa alat untuk pekerjaan bore pile, antara lain:</p>
+
+<div class="equip-grid">
+    {equipment.items.map((item) => (
+        <div class="equip-item">
+            <img class="equip-img" src={item.image} alt={item.imageAlt} loading="lazy">
+            <div class="equip-info">
+                <div class="equip-icon-inline">
+                    <img src="/imgs/logo-agung-perkasa.webp" alt={`Ikon ${item.name}`} width="24" height="24" onerror={`this.src='${item.iconFallback}'`}>
+                    <h4>{item.name}</h4>
+                </div>
+                <p>{item.description}</p>
+                <span class="equip-tag">Agung Perkasa</span>
+            </div>
+        </div>
+    ))}
+</div>

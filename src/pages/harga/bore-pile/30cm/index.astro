@@ -79,6 +79,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     
     <!-- CSS & JS EKSTERNAL -->
     <link rel="stylesheet" href="/css/harga.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
     <script is:inline src="/js/harga.js" defer></script>
 </head>
 
@@ -355,7 +356,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                         <div class="project-img">
                             <img src="/imgs/borepile-pulo-gadung-jakarta.webp" 
                                  alt="Pengeboran bore pile mini crane diameter 30cm untuk rumah di Pulo Gadung, Jakarta Timur" 
-                                 loading="lazy">
+                                 loading="lazy"
+                                 data-lightbox>
                             <div class="project-caption">Bore Pile mini crane di Pulo Gadung, Jakarta Timur</div>
                         </div>
                         <div class="project-text">
@@ -376,7 +378,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                         <div class="project-img">
                             <img src="/imgs/borepile-depok.webp" 
                                  alt="Pengeboran bore pile mini crane diameter 30cm untuk ruko di Depok" 
-                                 loading="lazy">
+                                 loading="lazy"
+                                 data-lightbox>
                             <div class="project-caption">Bore Pile mini crane di Depok</div>
                         </div>
                         <div class="project-text">
@@ -397,7 +400,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                         <div class="project-img">
                             <img src="/imgs/strauss-pile-pondok-pinang.webp" onerror="this.src='/imgs/logo-agung-perkasa.webp'"
                                  alt="Proses bore pile manual pakai tenaga manusia (strauss pile) di Pondok Pinang, Jakarta Selatan" 
-                                 loading="lazy">
+                                 loading="lazy"
+                                 data-lightbox>
                             <div class="project-caption">Bore Pile manual di Pondok Pinang, Jakarta Selatan</div>
                         </div>
                         <div class="project-text">
@@ -554,7 +558,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                             <img src="/imgs/borepile-mangga-besar-jakarta.webp" 
                                  alt="Proyek bore pile diameter 30cm untuk ruko di Mangga Besar, Jakarta Pusat" 
                                  loading="lazy"
-                                 width="400" height="300">
+                                 width="400" height="300" data-lightbox>
                             <div class="proyek-jakarta-caption">
                                 <span class="proyek-jakarta-label">Mangga Besar, Jakarta Pusat</span>
                                 <span class="proyek-jakarta-detail">Bore pile mini crane Ã˜30cm untuk ruko di area Mangga Besar</span>
@@ -565,7 +569,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                             <img src="/imgs//bore-pile-rumah-green-mansion-jakarta-barat-agung-perkasa.jpeg" 
                                  alt="Proyek bore pile mini crane metode wash boring diameter 30cm, kedalaman 12m, 58 titik untuk rumah di Perumahan Green Mansion, Jakarta Barat" 
                                  loading="lazy"
-                                 width="400" height="300">
+                                 width="400" height="300" data-lightbox>
                             <div class="proyek-jakarta-caption">
                                 <span class="proyek-jakarta-label">Perumahan Green Mansion, Jakarta Barat</span>
                                 <span class="proyek-jakarta-detail">Bore pile mini crane Ã˜30cm, kedalaman 12m, 58 titik untuk rumah di area Green Mansion, Jakarta Barat</span>
@@ -1066,5 +1070,6 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     ]
 }
 </script>
+    <script is:inline src="/js/lightbox.js"></script>
 </body>
 </html>

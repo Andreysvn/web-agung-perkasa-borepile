@@ -1,0 +1,28 @@
+---
+interface Props {
+    factors: Array<{ title: string; text: string }>;
+    sondirNote: string;
+    cityName: string;
+}
+
+const { factors, sondirNote, cityName } = Astro.props;
+---
+
+<section aria-labelledby="factors-heading">
+    <h2 id="factors-heading" class="section-heading">Faktor yang Mempengaruhi Harga Bore Pile {cityName}</h2>
+
+    <p><strong>Harga bore pile {cityName} tidak sama untuk setiap proyek.</strong> Berikut {factors.length} faktor utama yang menyebabkan perbedaan biaya jasa bore pile di {cityName}:</p>
+
+    <div class="info-grid">
+        {factors.map((factor, i) => (
+            <div class="info-card">
+                <h3>{i + 1}. {factor.title}</h3>
+                <p set:html={factor.text}></p>
+            </div>
+        ))}
+    </div>
+
+    <div class="sondir-note">
+        <strong set:html={sondirNote}></strong>
+    </div>
+</section>

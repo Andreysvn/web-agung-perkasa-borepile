@@ -80,6 +80,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     
     <!-- CSS & JS EKSTERNAL -->
     <link rel="stylesheet" href="/css/harga.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
     <script is:inline src="/js/harga.js" defer></script>
 </head>
 
@@ -353,7 +354,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                             <img src="/imgs/borepile-gudang-dunex-sunter.webpp" 
                                  alt="Proyek bore pile diameter 50cm untuk gudang Dunex Sunter" 
                                  loading="lazy"
-                                 onerror="this.src='/imgs/logo-agung-perkasa.webp'">
+                                 onerror="this.src='/imgs/logo-agung-perkasa.webp'"
+                                 data-lightbox>
                             <div class="project-caption">Bore Pile mini crane diameter 50cm untuk gudang di Sunter</div>
                         </div>
                         <div class="project-text">
@@ -375,7 +377,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                             <img src="/imgs/borepile-gedung-jakarta-barat.webp" 
                                  alt="Proyek bore pile diameter 50cm untuk ruko besar di Meruya, Jakarta Barat" 
                                  loading="lazy"
-                                 onerror="this.src='/imgs/logo-agung-perkasa.webp'">
+                                 onerror="this.src='/imgs/logo-agung-perkasa.webp'"
+                                 data-lightbox>
                             <div class="project-caption">Bore Pile mini crane diameter 50cm untuk ruko besar di Meruya</div>
                         </div>
                         <div class="project-text">
@@ -397,7 +400,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                             <img src="/imgs/borepile-gedung-jakarta-pusat.webp" 
                                  alt="Proyek bore pile diameter 50cm untuk gedung di Cempaka Putih" 
                                  loading="lazy"
-                                 onerror="this.src='/imgs/logo-agung-perkasa.webp'">
+                                 onerror="this.src='/imgs/logo-agung-perkasa.webp'"
+                                 data-lightbox>
                             <div class="project-caption">Bore Pile mini crane diameter 50cm untuk gedung</div>
                         </div>
                         <div class="project-text">
@@ -555,7 +559,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                                      alt="Proses bore pile mini crane diameter 50cm untuk gudang Dunex Sunter, Jakarta Utara" 
                                      loading="lazy"
                                      width="400" height="300"
-                                     onerror="this.src='/imgs/logo-agung-perkasa.webp'">
+                                     onerror="this.src='/imgs/logo-agung-perkasa.webp'"
+                                     data-lightbox>
                                 <div class="proyek-jakarta-caption">
                                     <span class="proyek-jakarta-label">Dunex Sunter, Jakarta Utara</span>
                                     <span class="proyek-jakarta-detail">Bore pile mini crane Ã˜50cm untuk gudang</span>
@@ -1056,5 +1061,6 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     ]
 }
 </script>
+    <script is:inline src="/js/lightbox.js"></script>
 </body>
 </html>

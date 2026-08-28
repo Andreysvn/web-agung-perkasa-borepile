@@ -1,0 +1,213 @@
+{
+  "slug": "tangerang",
+  "name": "Tangerang",
+  "year": 2026,
+  "geoRegion": "ID-BT",
+  "geoPlacename": "Tangerang",
+  "heroImage": "/imgs/jasa-bore-pile-tangerang-agung-perkasa.webp",
+  "heroAlt": "Proses pengeboran bore pile mini crane di Tangerang untuk pondasi rumah di Tangerang",
+  "heroCaption": "Proses pengeboran bore pile menggunakan alat mini crane di Tangerang",
+  "heroWidth": 350,
+  "heroHeight": 372,
+  "heroText": "Harga jasa bore pile Tangerang 2026 untuk jasa pengeboran saja mulai dari Rp120.000/m untuk mesin (mini crane), dan manual atau strauss pile mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026.html\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Tangerang Kota, Kabupaten, Cipondoh, Karawaci, Curug, Cikupa.",
+  "localBusinessDesc": "Jasa bore pile Tangerang terpercaya. Harga mesin Rp120.000/m, manual Rp75.000/m. Melayani seluruh Tangerang dan sekitarnya.",
+  "mobilizationCost": "Mini crane: Rp2-4jt | Strauss pile (bore pile manual): Rp1-1.5jt",
+  "manualPriceMin": 75000,
+  "manualPriceMax": 120000,
+  "localPrices": {
+    "manualMin": 75000,
+    "manualMax": 120000,
+    "mesin": [
+      { "diameter": "30 cm", "price": 120000, "depth": "30 meter", "suitable": "Rumah 1-2 lantai" },
+      { "diameter": "40 cm", "price": 135000, "depth": "30 meter", "suitable": "Ruko, kantor" },
+      { "diameter": "50 cm", "price": 190000, "depth": "30 meter", "suitable": "Gudang, pabrik kecil" },
+      { "diameter": "60 cm", "price": null, "depth": "30 meter", "suitable": "Hotel 3-4 lantai" },
+      { "diameter": "80 cm", "price": null, "depth": "30 meter", "suitable": "Gedung 5-8 lantai" }
+    ],
+    "manual": [
+      { "diameter": "20 cm", "price": 75000, "depth": "10 meter", "suitable": "Area sangat sempit" },
+      { "diameter": "25 cm", "price": 85000, "depth": "10 meter", "suitable": "Gang kecil" },
+      { "diameter": "30 cm", "price": 100000, "depth": "10 meter", "suitable": "Rumah, ruko 1-2 lantai (tanah padat)" },
+      { "diameter": "40 cm", "price": 120000, "depth": "10 meter", "suitable": "Rumah, ruko 2 lantai (tanah padat)" }
+    ],
+    "hasHidrolik": true
+  },
+  "factors": [
+    {
+      "title": "Diameter & Kedalaman",
+      "text": "Semakin besar diameter (30cm, 40cm, 50cm, dst) dan semakin dalam pengeboran yang diperlukan hingga tanah keras area Tangerang, maka biaya per meter semakin tinggi."
+    },
+    {
+      "title": "Kondisi Tanah Tangerang",
+      "text": "Tanah di area pesisir seperti Teluknaga dan Kosambi cenderung lunak ( bekas rawa atau sawah), sehingga butuh pengeboran lebih dalam hingga tanah keras. Sebaliknya, area berbukit seperti Curug dan Cikupa umumnya kondisi tanah lebih stabil, biaya bore pile di Tangerang bisa bervariasi tergantung lokasi."
+    },
+    {
+      "title": "Jarak Proyek Dari Gudang Kami",
+      "text": "Biaya mobilisasi alat sudah kami sesuaikan sesuai jarak dari gudang kami."
+    },
+    {
+      "title": "Volume Pekerjaan",
+      "text": "Minimal order jasa bore pile Tangerang untuk mesin (mini crane & gawangan) adalah 200 meter, sedangkan strauss pile manual 100 meter. Untuk volume di bawah itu, silakan hubungi admin kami untuk penawaran harga khusus."
+    },
+    {
+      "title": "Akses Lokasi & Zona Industri",
+      "text": "Area industri seperti Cikupa dan Balaraja memiliki akses jalan yang lebih lebar untuk mobilisasi alat besar. Namun, area permukiman padat di Tangerang Kota membutuhkan perencanaan mobilisasi lebih matang."
+    },
+    {
+      "title": "Jenis & Skala Proyek di Tangerang",
+      "text": "Proyek rumah tinggal pribadi atau perorangan di Tangerang umumnya memiliki harga lebih terjangkau dibandingkan proyek skala besar seperti kontraktor, developer, atau proyek pemerintah di wilayah Tangerang."
+    }
+  ],
+  "sondirNote": "Tips proyek bore pile di Tangerang: Untuk area panti seperti Teluknaga atau Kosambi, kedalaman tanah keras bisa mencapai 20-25 meter. Untuk area berbukit seperti Curug atau Cikupa, umumnya lebih dangkal di 8-15 meter. Lakukan pengecekan data sondir tanah Tangerang terlebih dahulu agar kedalaman pengeboran bisa ditentukan secara tepat. Konsultasikan proyek bore pile Tangerang Anda dengan tim teknis kami untuk penawaran harga yang sesuai.",
+  "projects": [
+    {
+      "title": "Rumah di Gading Serpong",
+      "image": "/imgs/bore-pile-gading-serpong-medang-tangerang.webp",
+      "imageAlt": "Proses pengerjaan bore pile mini crane metode bor kering di Gading Serpong, Tangerang",
+      "imageCaption": "Bore Pile mini crane metode bor kering di Gading Serpong, Tangerang",
+      "specs": "Bore pile mesin mini crane Ø30cm, kedalaman 13m, 24 titik<br>Metode: Dry Boring (Bor kering)",
+      "costCalc": "10m × Rp125.000 × 24 = Rp39.000.000",
+      "mobilization": "+ mobilisasi: Rp3.000.000",
+      "total": "Rp42.000.000",
+      "time": "6-8 hari kerja",
+      "hasImage": true
+    },
+    {
+      "title": "Proyek di Cikupa",
+      "image": "",
+      "imageAlt": "Proses pengerjaan bore pile mini crane di Cikupa, Kabupaten Tangerang",
+      "imageCaption": "Bore Pile mesin mini crane di Cikupa, Kabupaten Tangerang",
+      "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 20 titik<br>Metode: Wash Boring (Bor basah)",
+      "costCalc": "14m × Rp135.000 × 20 = Rp37.800.000",
+      "mobilization": "+ mobilisasi: Rp3.500.000",
+      "total": "Rp41.300.000",
+      "time": "5-7 hari kerja",
+      "hasImage": false
+    },
+    {
+      "title": "Rumah di Cipondoh",
+      "image": "",
+      "imageAlt": "Proses pengerjaan bore pile manual (strauss pile) di Cipondoh, Tangerang",
+      "imageCaption": "Strauss Pile (bore pile manual) di Cipondoh, Tangerang",
+      "specs": "Strauss pile (bore pile manual) Ø30cm, kedalaman 6m, 26 titik",
+      "costCalc": "6m × Rp95.000 × 26 = Rp14.820.000",
+      "mobilization": "+ mobilisasi: Rp1.500.000",
+      "total": "Rp16.320.000",
+      "time": "8-10 hari kerja",
+      "hasImage": false
+    }
+  ],
+  "whyUs": [
+    { "title": "Memakai alat yang baik", "desc": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, dan strauss pile." },
+    { "title": "Efisiensi waktu & Komitmen kualitas", "desc": "Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam, khususnya bore pile di Tangerang. Kecuali ada kendala teknis di luar kendali." },
+    { "title": "Tim Ahli", "desc": "Memiliki tim ahli dalam pengerjaan bore pile di Tangerang, khususnya membuat pondasi dalam." },
+    { "title": "Tim berpengalaman di area Tangerang", "desc": "Lebih dari sepuluh tahun mengerjakan proyek di Tangerang. Mulai dari proyek rumah tinggal pribadi hingga proyek komersial. Mulai dari proyek Pribadi, Mandor, dan Developer." }
+  ],
+  "equipment": {
+    "description": "Kami memiliki beberapa alat untuk pekerjaan bore pile, antara lain:",
+    "items": [
+      {
+        "name": "Mini Crane",
+        "desc": "Kapasitas sedang, untuk diameter 30-80 cm, kedalaman sampai 30m meter. Mini Crane cocok untuk lokasi yang cukup luas dan membutuhkan akses yang baik untuk mobilisasi alat dan pengerjaan. Cocok untuk membuat rumah, ruko, gudang, dan bangunan bertingkat."
+      },
+      {
+        "name": "Gawangan",
+        "desc": "Gawangan cocok untuk area yang tidak bisa diakses oleh mini crane. Karena ukuran dan bentuknya yang tidak sebesar mini crane, gawangan cocok untuk area yang memiliki akses terbatas (tidak muat jika mini crane lewat). Diameter 30-80 cm, paling sering digunakan untuk membuat rumah, ruko, dan bangunan 1-2 lantai lainnya di gang sempit."
+      },
+      {
+        "name": "Strauss Pile (bore pile manual)",
+        "desc": "Alat bor manual full menggunakan tenaga manusia dalam proses pengeboran (diputar oleh tukang bore pile), memakai metode dry boring (bor kering). Diameter 20-40cm, cocok untuk lokasi seperti di gang sempit dan area terbatas lainnya yang tidak bisa dijangkau mini crane dan gawangan, karena mobilisasi yang lebih fleksibel (bisa menggunakan motor)."
+      },
+      {
+        "name": "Mesin Hidrolik SANY",
+        "desc": "Mesin hidrolik SANY untuk proyek bore pile skala besar. Kapasitas diameter besar dan kedalaman hingga 30+ meter. Cocok untuk proyek gedung bertingkat, jembatan, dan infrastruktur besar di Tangerang."
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Portofolio Proyek Bore Pile di Tangerang",
+    "subtitle": "Berikut beberapa proyek bore pile yang sudah kami kerjakan di berbagai wilayah Tangerang Kota dan Kabupaten.",
+    "items": [
+      {
+        "image": "/imgs/bore-pile-gading-serpong-medang-tangerang-juni-2026.jpg",
+        "imageAlt": "Proses bore pile mini crane di Gading Serpong, Tangerang",
+        "label": "Proyek di Gading Serpong",
+        "detail": "Bore pile mini crane Ø30cm, untuk rumah di Gading Serpong, Tangerang"
+      },
+      {
+        "image": "/imgs/bore-pile-mini-crane-dry-boring-alam-sutera-tangerang-agung-perkasa-20-juni-2026.webp",
+        "imageAlt": "Proses bore pile mini crane metode dry boring di Alam Sutera, Tangerang",
+        "label": "Proyek di Alam Sutera",
+        "detail": "Bore pile mini crane Ø30cm, untuk rumah di Alam Sutera, Tangerang"
+      }
+    ]
+  },
+  "kecamatan": {
+    "Tangerang Kota": ["Cipondoh", "Karawaci", "Periuk", "Neglasari", "Batuceper", "Tangerang", "Benda", "Larangan", "Pinang"],
+    "Kabupaten Tangerang": ["Curug", "Cikupa", "Cisoka", "Balaraja", "Sepatan", "Teluknaga", "Kosambi", "Pasar Kemis", "Kresek", "Rajeg", "Sukadiri"]
+  },
+  "faq": [
+    {
+      "q": "Berapa kedalaman tanah keras di Tangerang untuk proyek bore pile?",
+      "a": "Kedalaman tanah keras di Tangerang bervariasi: <strong>Area pesisir (Teluknaga, Kosambi)</strong> bisa mencapai 20-25 meter karena tanah lunak bekas rawa. <strong>Area berbukit (Curug, Cikupa)</strong> umumnya lebih dangkal di 8-15 meter. Kami rekomendasikan cek sondir sebelum eksekusi untuk menentukan kedalaman yang tepat."
+    },
+    {
+      "q": "Apakah bore pile bisa dikerjakan di zona industri Cikupa dan Balaraja?",
+      "a": "Bisa. Zona industri seperti <strong>Cikupa dan Balaraja</strong> memiliki akses jalan yang lebih lebar untuk mobilisasi alat besar seperti mini crane dan mesin hidrolik SANY. Kami sudah berpengalaman mengerjakan proyek bore pile di kawasan industri Tangerang."
+    },
+    {
+      "q": "Apakah ada perbedaan biaya bore pile di Tangerang Kota vs Kabupaten?",
+      "a": "Biaya jasa pengeboran per meter relatif sama. Yang membedakan adalah <strong>biaya mobilisasi</strong>: Tangerang Kota (Cipondoh, Karawaci, Larangan) umumnya lebih dekat, mobilisasi Rp2-3 juta. Kabupaten (Cikupa, Balaraja, Kresek) bisa Rp3-4 juta tergantung jarak."
+    },
+    {
+      "q": "Berapa biaya mobilisasi bore pile ke berbagai wilayah Tangerang?",
+      "a": "Biaya mobilisasi tergantung jarak dari gudang kami: <strong>Tangerang Kota (Cipondoh, Karawaci, Periuk)</strong> Rp2-3 juta, <strong>Kabupaten (Cikupa, Balaraja, Pasar Kemis)</strong> Rp3-4 juta, <strong>Pesisir (Teluknaga, Kosambi)</strong> Rp3-4 juta. Manual (Strauss Pile) Rp1-1.5 juta."
+    },
+    {
+      "q": "Apa keunggulan bore pile dibanding tiang pancang untuk proyek di Tangerang?",
+      "a": "Bore pile lebih fleksibel untuk area terbatas seperti <strong>gang sempit di Tangerang Kota</strong> (bisa pakai Strauss Pile), tidak menimbulkan getaran berlebih (aman untuk bangunan sekitar), dan bisa disesuaikan kedalamannya berdasarkan data sondir. Tiang pancang lebih cocok untuk proyek skala besar dengan kondisi tanah tertentu."
+    },
+    {
+      "q": "Apakah bisa survei lokasi sebelum mulai proyek bore pile di Tangerang?",
+      "a": "Bisa. Kami menyediakan <strong>survei lokasi gratis</strong> untuk proyek bore pile di Tangerang. Tim kami akan datang ke lokasi untuk mengecek kondisi tanah, akses jalan, dan memberikan penawaran harga yang sesuai. Hubungi admin kami untuk menjadwalkan survei."
+    }
+  ],
+  "articles": [
+    {
+      "href": "/artikel/bore-pile-vs-strauss-pile.html",
+      "image": "/imgs/borepile-dekat-dinding.webp",
+      "imageAlt": "Bore pile mini crane di sebelah dinding (hampir menyentuh dinding)",
+      "category": "Perbandingan",
+      "title": "Borepile vs Strauss Pile",
+      "excerpt": "Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik.",
+      "date": "Juni 2026"
+    },
+    {
+      "href": "/harga/bore-pile-30cm.html",
+      "image": "/imgs/hasil-lubang-borepile.webp",
+      "imageAlt": "Hasil lubang bore pile diameter 30cm yang sudah dimasukan tulangan besi struktur pondasi",
+      "category": "Harga",
+      "title": "Harga Bore Pile Diameter 30cm",
+      "excerpt": "Lihat harga terbaru 2026 untuk bore pile diameter 30cm.",
+      "date": "Juni 2026"
+    },
+    {
+      "href": "/jasa/bore-pile-jakarta.html",
+      "image": "/imgs/borepile-dan-truk-molen.webp",
+      "imageAlt": "Harga bore pile Jakarta 2026 terbaru",
+      "category": "Harga",
+      "title": "Harga Bore Pile Jakarta 2026",
+      "excerpt": "Informasi terkini tentang harga bore pile di wilayah Jakarta untuk tahun 2026.",
+      "date": "Juni 2026"
+    }
+  ],
+  "internalLinks": [
+    { "href": "/jasa/bore-pile/jakarta.html", "label": "Jakarta" },
+    { "href": "/jasa/bore-pile/bekasi.html", "label": "Bekasi" },
+    { "href": "/jasa/bore-pile/depok.html", "label": "Depok" },
+    { "href": "/jasa/bore-pile/bogor.html", "label": "Bogor" },
+    { "href": "/harga/bore-pile-2026.html", "label": "Harga Bore Pile 2026" }
+  ],
+  "hasGoogleAds": true,
+  "googleAdsId": "AW-16649506462"
+}

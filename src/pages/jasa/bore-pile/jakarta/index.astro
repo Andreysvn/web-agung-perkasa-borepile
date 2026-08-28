@@ -4,13 +4,15 @@ import pricing from '../../../../data/harga.json';
 import cities from '../../../../data/borepile-kota.json';
 import { organizationSchema, localBusinessSchema } from '../../../../lib/schema.js';
 import FaIcon from '../../../../components/icons/FaIcon.astro';
+import Navbar from '../../../../components/global/Navbar.astro';
+import Footer from '../../../../components/global/Footer.astro';
 
 const city = cities.find((item) => item.slug === 'jakarta');
 
 const orgLd = JSON.stringify(organizationSchema());
 
 const localBusinessLd = JSON.stringify(localBusinessSchema({
-    "description": "Jasa bore pile Jakarta terpercaya. Harga mesin Rp120.000/m, manual Rp75.000/m. Melayani seluruh Jakarta dan sekitarnya.",
+    "description": "Jasa bore pile Jakarta terpercaya. Harga mesin Rp120.000/m, manual Rp70.000/m. Melayani seluruh Jakarta dan sekitarnya.",
     "areaServed": [
         { "@type": "City", "name": "Jakarta" }
     ]
@@ -48,7 +50,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
     
     <!-- Open Graph -->
     <meta property="og:title" content="Jasa & Harga Bore Pile Jakarta 2026 | Agung Perkasa">
-    <meta property="og:description" content="Jasa Bore Pile Jakarta terpercaya. Harga Mesin mulai dari Rp120.000/m, manual Rp75.000/m. Konsultasi gratis. Melayani seluruh Jakarta.">
+    <meta property="og:description" content="Jasa Bore Pile Jakarta terpercaya. Harga Mesin mulai dari Rp120.000/m, manual Rp70.000/m. Konsultasi gratis. Melayani seluruh Jakarta.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
     <meta property="og:url" content="https://agungperkasaborepile.com/jasa/bore-pile/jakarta.html">
@@ -58,7 +60,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Jasa & Harga Bore Pile Jakarta 2026">
-    <meta name="twitter:description" content="Harga bore pile Jakarta mulai Rp75.000/m (manual) & Rp120.000/m (mesin). Kalkulator bore pile. Konsultasi gratis. Melayani seluruh Jakarta.">
+    <meta name="twitter:description" content="Harga bore pile Jakarta mulai Rp70.000/m (manual) & Rp120.000/m (mesin). Kalkulator bore pile. Konsultasi gratis. Melayani seluruh Jakarta.">
     <meta name="twitter:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
     
     <!-- Geo Tags -->
@@ -73,6 +75,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
     
     <!-- CSS EKSTERNAL -->
     <link rel="stylesheet" href="/css/borepile-kota.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6GBTKJB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -84,7 +87,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
     })(window,document,'script','dataLayer','GTM-P6GBTKJB');});</script>
     <!-- End Google Tag Manager -->
      <!-- Google tag (gtag.js) - Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16649506462"></script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=AW-16649506462"></script>
 <script>
   window.addEventListener('load', function() {
     window.dataLayer = window.dataLayer || [];
@@ -95,43 +98,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
 </script>
     <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
     
-    <!-- ===== NAVBAR ===== -->
-   <nav class="navbar" aria-label="Navigasi utama">
-        <div class="container">
-            <a href="/" class="logo" aria-label="Agung Perkasa Borepile - Beranda">
-                <img src="/imgs/logo-agung-perkasa-transparan.webp" alt="Logo Agung Perkasa Borepile" width="45" height="45">
-                <span>Agung Perkasa <br>Borepile</span>
-            </a>
-            <button class="menu-toggle" id="mobile-menu" aria-label="Menu navigasi" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-             <ul class="nav-menu" role="list">
-                <li role="listitem"><a href="/">Beranda</a></li>
-                <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan Kami<FaIcon class="fas fa-chevron-down" /></span>
-                    <ul class="dropdown-content">
-                        <li><a href="/jasa/">Pusat Layanan</a></li>
-                        <li><a href="/jasa/bore-pile/">Bore Pile Mesin</a></li>
-                        <li><a href="/jasa/strauss-pile/">Strauss Pile</a></li>
-                    </ul>
-                </li>
-                 <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Alat<FaIcon class="fas fa-chevron-down" /></span>
-                    <ul class="dropdown-content">
-                        <li><a href="/jasa/">Jasa </a></li>
-                        <li><a href="/alat/index.html#bore-pile">Bore Pile Mesin</a></li>
-                        <li><a href="/alat/index.html#strauss-pile">Strauss Pile</a></li>
-                    </ul>
-                </li>
-                <li role="listitem"><a href="/artikel/">Artikel</a></li>
-                <li role="listitem"><a href="/#about">Tentang Kami</a></li>
-                <li role="listitem"><a href="/#faq">FAQ</a></li>
-                <li role="listitem"><a href="/galeri/gallery.html" class="btn-nav">Galeri</a></li>
-            </ul>
-        </div>
-    </nav>
+    <Navbar />
 
     <main id="main-content">
         <div class="blog-container">
@@ -161,7 +128,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                     <div class="caption">Proses pengeboran bore pile menggunakan alat mini crane di Jakarta</div>
                 </div>
                 <div class="illustration-text">
-                    <p><strong>Harga jasa bore pile Jakarta 2026</strong> untuk jasa pengeboran saja mulai dari <strong>Rp120.000/m untuk mesin (mini crane)</strong>, dan manual atau <strong>strauss pile mulai dari Rp75.000/m</strong>.
+                    <p><strong>Harga jasa bore pile Jakarta 2026</strong> untuk jasa pengeboran saja mulai dari <strong>Rp120.000/m untuk mesin (mini crane)</strong>, dan manual atau <strong>strauss pile mulai dari Rp70.000/m</strong>.
                         <a href="/harga/bore-pile-2026.html">Lihat daftar harga bore pile 2026 lengkap di sini</a>. 
                     Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Jakarta Pusat, Barat, Selatan, Timur, dan Utara.</p>
                 </div>
@@ -237,6 +204,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
             </script>
             <script src="/js/jasa.js" defer></script>
             <script src="/js/harga-calculator.js" defer></script>
+            <script src="/js/lightbox.js" defer></script>
 
             <section aria-labelledby="table-heading">
                 <h2 id="table-heading" class="section-heading">Tabel Harga Bore Pile Jakarta 2026 (Jasa Bor Saja)</h2>
@@ -267,7 +235,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                             <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>20 cm</td><td><strong>75.000</strong></td><td>10 meter</td><td>Area sangat sempit</td></tr>
+                            <tr><td>20 cm</td><td><strong>70.000</strong></td><td>10 meter</td><td>Area sangat sempit</td></tr>
                             <tr><td>25 cm</td><td><strong>85.000</strong></td><td>10 meter</td><td>Gang kecil</td></tr>
                             <tr><td>30 cm</td><td><strong>100.000</strong></td><td>10 meter</td><td>Rumah, ruko 1-2 lantai (tanah padat)</td></tr>
                             <tr><td>40 cm</td><td><strong>120.000</strong></td><td>10 meter</td><td>Rumah, ruko 2 lantai (tanah padat)</td></tr>
@@ -338,7 +306,8 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                         <div class="project-img">
                             <img src="/imgs/bore-pile-kering-dukuh-patra.webp" 
                                  alt="Proses pengerjaan bore pile mini crane metode bor kering di Dukuh Patra, Jakarta Selatan 27 Mei 2026" 
-                                 loading="lazy">
+                                 loading="lazy"
+                                 data-lightbox>
                             <div class="project-caption">Bore Pile mini crane metode bor kering di Dukuh Patra, Jakarta Selatan</div>
                         </div>
                         <div class="project-text">
@@ -360,7 +329,8 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                         <div class="project-img">
                             <img src="/imgs/borepile-jakarta-timur-14-mei-2026.webp" 
                                  alt="Proses pengerjaan bore pile mini crane di Pulogadung, Jakarta Timur" 
-                                 loading="lazy">
+                                 loading="lazy"
+                                 data-lightbox>
                             <div class="project-caption">Bore Pile mesin mini crane di Pulogadung, Jakarta Timur</div>
                         </div>
                         <div class="project-text">
@@ -382,7 +352,8 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                         <div class="project-img">
                             <img src="/imgs/hasil-lubang-borepile.webp" 
                                  alt="Proses pengerjaan bore pile manual (strauss pile) di Kelapa Gading, Jakarta Utara" 
-                                 loading="lazy">
+                                 loading="lazy"
+                                 data-lightbox>
                             <div class="project-caption">Strauss Pile (bore pile manual) di Kelapa Gading, Jakarta Utara</div>
                         </div>
                         <div class="project-text">
@@ -409,7 +380,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
             </section>
 
             <p>Butuh harga khusus untuk diameter 30cm? 
-                <a href="/harga/bore-pile-30cm.html">Lihat detail harga bore pile diameter 30cm →</a>
+                <a href="/harga/bore-pile/30cm.html">Lihat detail harga bore pile diameter 30cm →</a>
             </p>
 
             <section>
@@ -436,6 +407,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                                 <img src="/imgs/borepile-gedung-universitas-paramadina-jaktim.webp" 
                                      alt="Proses bore pile mini crane diameter 40cm metode wash boring untuk gedung Universitas Paramadina Jakarta Timur" 
                                      loading="lazy"
+                                     data-lightbox
                                      width="400" height="300">
                                 <div class="proyek-jakarta-caption">
                                     <span class="proyek-jakarta-label">Universitas Paramadina</span>
@@ -446,6 +418,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                                 <img src="/imgs/borepile-meruya-jakarta.webp" 
                                      alt="Proses bore pile mini crane metode wash boring diameter 40cm untuk rumah di Meruya, Jakarta Barat" 
                                      loading="lazy"
+                                     data-lightbox
                                      width="400" height="300">
                                 <div class="proyek-jakarta-caption">
                                     <span class="proyek-jakarta-label">Proyek di Meruya</span>
@@ -456,6 +429,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                                 <img src="/imgs/bore-pile-rumah-green-mansion-jakarta-barat-agung-perkasa.jpeg" 
                                      alt="Proses bore pile mini crane diameter 30, kedalaman 12 meter, 58 titik metode wash boring untuk rumah di Meruya, Jakarta Barat" 
                                      loading="lazy"
+                                     data-lightbox
                                      width="400" height="300">
                                 <div class="proyek-jakarta-caption">
                                     <span class="proyek-jakarta-label">Rumah di Green Mansion, Jakarta Barat</span>
@@ -466,6 +440,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                                 <img src="/imgs/bore-pile-mini-crane-serenade-lagoon-5-juni-2026-timemark.webp" 
                                      alt="Proses bore pile mini crane diameter 30 kedalaman 9m dan 40 kedalaman 18 meter, metode wash boring untuk rumah di Pantai Indah Kapuk Serenade Lagoon III, Jakarta Utara" 
                                      loading="lazy"
+                                     data-lightbox
                                      width="400" height="300">
                                 <div class="proyek-jakarta-caption">
                                     <span class="proyek-jakarta-label">Rumah di Serenade Lagoon III, Pantai Indah Kapuk, Jakarta Utara</span>
@@ -659,7 +634,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                             </a>
                         </article>
                         <article class="article-card">
-                            <a href="/harga/bore-pile-30cm.html" class="article-link">
+                            <a href="/harga/bore-pile/30cm.html" class="article-link">
                                 <div class="article-image">
                                     <img src="/imgs/hasil-lubang-borepile.webp" alt="Hasil lubang bore pile diameter 30cm yang sudah dimasukan tulangan besi struktur pondasi" loading="lazy">
                                     <span class="article-category">Harga</span>
@@ -693,7 +668,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                     </div>
                 </div>
                 <div class="articles-cta">
-                    <a href="/artikel/index.html" class="btn-articles-all">
+                    <a href="/artikel.html" class="btn-articles-all">
                         <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
                     </a>
                 </div>
@@ -707,10 +682,10 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
 
             <div class="internal-link-box">
                 <p><strong>Baca Juga Harga Bore Pile:</strong><br>
-                <a href="/jasa/bore-pile-bekasi.html">Bekasi</a> | 
-                <a href="/jasa/bore-pile-tangerang.html">Tangerang</a> | 
-                <a href="/jasa/bore-pile-depok.html">Depok</a> | 
-                <a href="/jasa/bore-pile-bogor.html">Bogor</a></p>
+                <a href="/jasa/bore-pile/bekasi.html">Bekasi</a> | 
+                <a href="/jasa/bore-pile/tangerang.html">Tangerang</a> | 
+                <a href="/jasa/bore-pile/depok.html">Depok</a> | 
+                <a href="/jasa/bore-pile/bogor.html">Bogor</a></p>
                 <a href="/harga/bore-pile-2026.html">Harga Bore Pile 2026</a> 
             </div>
         </div>
@@ -755,49 +730,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Agung Perkasa Borepile</h3>
-                    <p>Spesialis pondasi borepile mesin & strauss pile (bore pile manual). Pengalaman lebih dari 10 tahun di Jakarta dan sekitarnya.</p>
-                    <div class="social-links">
-                        <a href="https://facebook.com/profile.php?id=61563968365179" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
-                        <a href="https://instagram.com/agungperkasaborepile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Layanan</h3>
-                    <ul>
-                        <li><a href="/jasa/">Layanan Kami</a></li>
-                        <li><a href="/jasa/bore-pile/">Jasa Bore Pile</a></li>
-                        <li><a href="/jasa/strauss-pile/">Jasa Strauss Pile</a></li>
-                        <li><a href="/jasa/bore-pile/">Jasa Bore Pile Mesin</a></li>
-                        <li><a href="/jasa/strauss-pile/">Jasa Bore Pile Manual</a></li>
-                        <li><a href="/harga/bore-pile-2026.html">Kalkulator Biaya Bore Pile</a></li>
-                        <li><a href="/#contact">Konsultasi Pondasi Dalam</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Tentang Kami</h3>
-                    <ul><li><a href="/#about">Tentang Kami</a></li><li><a href="/galeri/">Galeri</a></li><li><a href="/artikel/">Blog Artikel</a></li></ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Kontak</h3>
-                    <ul>
-                        <li>Alamat: Jl. Sunter Muara II, RT.17/RW.05, Sunter Agung, Jakarta Utara</li>
-                        <li>Telp: {config.company.phone}</li>
-                        <li>Email: {config.company.email}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; {new Date().getFullYear()} {config.siteName}. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <Footer />
 
     <a href={`https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Saya%20dari%20website%20ingin%20menanyakan%20terkait%20penawaran%20harga%20bore%20pile%20untuk%20proyek%20Jakarta.`} class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat konsultasi melalui WhatsApp">
         <FaIcon class="fab fa-whatsapp" />
@@ -908,11 +841,11 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
                         "@type": "Service",
                         "name": "Bore Pile Manual Strauss Pile Jakarta"
                     },
-                    "price": "75000",
+                    "price": "70000",
                     "priceCurrency": "IDR",
                     "priceSpecification": {
                         "@type": "UnitPriceSpecification",
-                        "price": "75000",
+                        "price": "70000",
                         "priceCurrency": "IDR",
                         "unitText": "meter"
                     },
@@ -933,7 +866,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Jasa Bore Pile Jakarta 2026",
-        "description": "Jasa bore pile Jakarta dengan harga mulai Rp120.000/m untuk mesin dan manual mulai Rp75.000/m (strauss pile). Melayani seluruh Jakarta Pusat, Barat, Selatan, Timur, dan Utara.",
+        "description": "Jasa bore pile Jakarta dengan harga mulai Rp120.000/m untuk mesin dan manual mulai Rp70.000/m (strauss pile). Melayani seluruh Jakarta Pusat, Barat, Selatan, Timur, dan Utara.",
         "brand": {
             "@type": "Brand",
             "name": "Agung Perkasa Borepile"
@@ -941,7 +874,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
         "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "IDR",
-            "lowPrice": "75000",
+            "lowPrice": "70000",
             "highPrice": "350000",
             "offerCount": "8",
             "availability": "https://schema.org/InStock",

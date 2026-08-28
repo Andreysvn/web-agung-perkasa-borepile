@@ -2,6 +2,8 @@
 import config from '../../data/config.json';
 
 import FaIcon from '../../components/icons/FaIcon.astro';
+import Navbar from '../../components/global/Navbar.astro';
+import Footer from '../../components/global/Footer.astro';
 ---
 <!DOCTYPE html>
 <html lang="id">
@@ -74,35 +76,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
     
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6GBTKJB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
-    <!-- NAVBAR - SAMA PERSIS DENGAN HALAMAN 30/40/50CM -->
-    <nav class="navbar" aria-label="Navigasi utama">
-        <div class="container">
-            <a href="/" class="logo" aria-label="Agung Perkasa Borepile - Beranda">
-                <img src="/imgs/logo-agung-perkasa-transparan.webp" alt="Logo Agung Perkasa Borepile" loading="lazy" width="45" height="45">
-                <span>Agung Perkasa <br>Borepile</span>
-            </a>
-            <button class="menu-toggle" id="mobile-menu" aria-label="Menu navigasi" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul class="nav-menu" role="list">
-                <li role="listitem"><a href="/">Beranda</a></li>
-                <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
-                    <ul class="dropdown-content">
-                        <li><a href="/jasa/">Jasa Pusat</a></li>
-                        <li><a href="/jasa/bore-pile/">Bore Pile Mesin</a></li>
-                        <li><a href="/jasa/strauss-pile/jakarta.html">Strauss Pile</a></li>
-                    </ul>
-                </li>
-                <li role="listitem"><a href="/artikel/">Artikel</a></li>
-                <li role="listitem"><a href="/#about">Tentang Kami</a></li>
-                <li role="listitem"><a href="/#faq">FAQ</a></li>
-                <li role="listitem"><a href="/galeri/gallery.html" class="btn-nav">Galeri</a></li>
-            </ul>
-        </div>
-    </nav>
+    <Navbar />
 
     <main id="main-content">
         <!-- HEADER SECTION -->
@@ -405,9 +379,9 @@ import FaIcon from '../../components/icons/FaIcon.astro';
         <div style="max-width: 980px; margin: 2rem auto; padding: 0 20px; text-align: center;">
             <div class="internal-link-box" style="max-width: 600px; margin: 0 auto;">
                 <p><strong>Baca Juga:</strong><br>
-                <a href="/harga/bore-pile-30cm.html">Harga Bore Pile 30cm</a> | 
-                <a href="/harga/bore-pile-40cm.html">Harga Bore Pile 40cm</a> | 
-                <a href="/harga/bore-pile-50cm.html">Harga Bore Pile 50cm</a> | 
+                <a href="/harga/bore-pile/30cm.html">Harga Bore Pile 30cm</a> | 
+                <a href="/harga/bore-pile/40cm.html">Harga Bore Pile 40cm</a> | 
+                <a href="/harga/bore-pile/50cm.html">Harga Bore Pile 50cm</a> | 
                 <a href="/harga/bore-pile-2026.html">Harga Bore Pile 2026</a>
                 </p>
             </div>
@@ -426,48 +400,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Agung Perkasa Borepile</h3>
-                    <p>Spesialis pondasi borepile mesin &amp; strauss pile dengan pengalaman lebih dari 10 tahun di Jakarta dan sekitarnya.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Layanan</h3>
-                    <ul>
-                        <li><a href="/jasa/">Jasa Bore pile</a></li>
-                        <li><a href="/harga/bore-pile-30cm.html">Jasa Strauss Pile</a></li>
-                        <li><a href="/#services">Konsultasi Pondasi</a></li>
-                        <li><a href="/harga/bore-pile-2026.html">Kalkulator biaya bore pile</a></li>
-                        <li><a href="/harga/bore-pile-2026.html">Pengeboran Tanah</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Tentang Kami</h3>
-                    <ul>
-                        <li><a href="/#about">Tentang Kami</a></li>
-                        <li><a href="/galeri/gallery.html">Galeri</a></li>
-                        <li><a href="/artikel/artikel.html">Blog Artikel</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Kontak</h3>
-                    <ul>
-                        <li>Jl. Sunter Muara II, RT17/RW05, Sunter Agung, Kec. Tj. Priok, Jkt Utara, DKI Jakarta 14350</li>
-                        <li>+62 857 1027 7854</li>
-                        <li>{config.company.email}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; {new Date().getFullYear()} {config.siteName}. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <Footer />
 
     <!-- TOMBOL WHATSAPP -->
     <a href={`https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Saya%20dari%20website%20ingin%20menanyakan%20terkait%20penawaran%20harga%20bore%20pile.`} 

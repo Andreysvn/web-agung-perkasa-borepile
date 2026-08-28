@@ -1,0 +1,22 @@
+---
+interface Props {
+    whyUs: Array<{ title: string; description: string }>;
+    cityName: string;
+}
+
+const { whyUs, cityName } = Astro.props;
+---
+
+<div class="why-section">
+    <h2 class="why-title">Kenapa pilih Agung Perkasa untuk Bore Pile di {cityName}?</h2>
+    <p class="why-sub">Ini alasan kenapa banyak orang {cityName} percaya sama Agung Perkasa.</p>
+
+    <div class="reasons-grid">
+        {whyUs.map((item) => (
+            <div class="reason-card">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+            </div>
+        ))}
+    </div>
+</div>

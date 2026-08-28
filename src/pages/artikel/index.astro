@@ -2,6 +2,8 @@
 import config from '../../data/config.json';
 
 import FaIcon from '../../components/icons/FaIcon.astro';
+import Navbar from '../../components/global/Navbar.astro';
+import Footer from '../../components/global/Footer.astro';
 ---
 <!DOCTYPE html>
 <html lang="id">
@@ -390,29 +392,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6GBTKJB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
-    <!-- NAVBAR LENGKAP -->
-    <nav class="navbar" aria-label="Navigasi utama">
-        <div class="container">
-            <a href="/" class="logo" aria-label="Agung Perkasa Borepile - Beranda">
-                <img src="/imgs/logo-agung-perkasa-transparan.png" alt="Logo Agung Perkasa Borepile" loading="lazy" width="45" height="45">
-                <span>Agung Perkasa <br>Borepile</span>
-            </a>
-            <button class="menu-toggle" id="mobile-menu" aria-label="Menu navigasi" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul class="nav-menu" role="list">
-                <li role="listitem"><a href="/">Beranda</a></li>
-                <li role="listitem"><a href="/#services">Layanan</a></li>
-                <li role="listitem"><a href="/#about">Tentang Kami</a></li>
-                <li role="listitem"><a href="/artikel/index.html" class="active">Artikel</a></li>
-                <li role="listitem"><a href="/galeri/gallery.html">Galeri</a></li>
-                <li role="listitem"><a href="/#contact">Kontak</a></li>
-                <li role="listitem"><a href="/#portfolio">Portofolio</a></li>
-            </ul>
-        </div>
-    </nav>
+    <Navbar />
 
     <!-- MAIN CONTENT -->
     <main id="main-content">
@@ -444,7 +424,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                         <ul>
                             <li><a href="/artikel/bore-pile-vs-strauss-pile.html"> Bore Pile vs Strauss Pile</a></li>
                             <li><a href="/harga/bore-pile-2026.html"> Harga Bore Pile 2026 Terbaru</a></li>
-                            <li><a href="/harga/bore-pile-30cm.html"> Harga Bore Pile 30cm</a></li>
+                            <li><a href="/harga/bore-pile/30cm.html"> Harga Bore Pile 30cm</a></li>
                             <li><a href="/artikel/borepile-vs-tiang-pancang.html"> Borepile vs Tiang Pancang: Mana yang Tepat?</a></li>
                         </ul>
                     </div>
@@ -598,75 +578,10 @@ import FaIcon from '../../components/icons/FaIcon.astro';
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="logo">
-                        <img src="imgs/logo-agung-perkasa-transparan.png" alt="Agung Perkasa Borepile" loading="lazy" width="45" height="45">
-                        <span>Agung Perkasa<br>Borepile</span>
-                    </div>
-                    <p>Spesialis pondasi borepile dan strauss pile dengan pengalaman lebih dari 10 tahun melayani proyek konstruksi di Pulau Jawa.</p>
-                    <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <FaIcon class="fab fa-facebook-f" />
-                        </a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <FaIcon class="fab fa-instagram" />
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <FaIcon class="fab fa-linkedin-in" />
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                            <FaIcon class="fab fa-youtube" />
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Layanan</h3>
-                    <ul><li><a href="/jasa/index.html">Jasa Bore pile</a></li><li><a href="/harga/bore-pile-30cm.html">Jasa Strauss Pile</a></li><li><a href="/#services">Konsultasi Pondasi</a></li><li><a href="/#contact">Kalkulator biaya bore pile</a></li><li><a href="/harga/bore-pile-2026.html">Pengeboran Tanah</a></li></ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Tentang Kami</h3>
-                    <ul><li><a href="/#about">Tentang Kami</a></li><li><a href="/gallery.html">Galeri</a></li><li><a href="/artikel.html">Blog Artikel</a></li></ul>
-                </div>
-                    
-                </div>
-                <div class="footer-col">
-                    <h3>Navigasi</h3>
-                    <ul>
-                        <li><a href="/">Beranda</a></li>
-                        <li><a href="/artikel/index.html">Artikel</a></li>
-                        <li><a href="/galeri/gallery.html">Galeri</a></li>
-                        <li><a href="/#contact">Kontak</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Kontak</h3>
-                    <ul>
-                        <li><FaIcon class="fas fa-map-marker-alt" /> Jl. Sunter Muara II, Jakarta Utara</li>
-                        <li><FaIcon class="fas fa-phone-alt" /> +62 822 3356 9632</li>
-                        <li><FaIcon class="fas fa-envelope" /> agungperkasaborepile@gmail.com</li>
-                        <li><FaIcon class="fas fa-clock" /> Senin-Minggu: 07.00-23.00</li>
-                    </ul>
-                </div>
-            </div>
-        
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; {new Date().getFullYear()} {config.siteName}. All Rights Reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Kebijakan Privasi</a>
-                    <a href="#">Syarat & Ketentuan</a>
-                    <a href="#">Sitemap</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <Footer />
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/6282233569632" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Hubungi via WhatsApp" title="Hubungi via WhatsApp">
+    <a href="https://wa.me/6285710277854" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Hubungi via WhatsApp" title="Hubungi via WhatsApp">
         <FaIcon class="fab fa-whatsapp" />
     </a>
     
@@ -803,7 +718,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
             "longitude": "106.8534975"
         },
         "url": "https://agungperkasaborepile.com/",
-        "telephone": "+6282233569632",
+        "telephone": "+6285710277854",
         "priceRange": "Rp85.000 - Rp350.000",
         "openingHours": "Mo-Su 00:00-23:59",
         "areaServed": [

@@ -80,6 +80,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     
     <!-- CSS & JS EKSTERNAL -->
     <link rel="stylesheet" href="/css/harga.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
     <script is:inline src="/js/harga.js" defer></script>
 </head>
 
@@ -359,7 +360,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                         <div class="project-img">
                             <img src="/imgs/borepile-gedung-universitas-paramadina-jaktim.webp" 
                                  alt="Proyek bore pile diameter 40cm untuk gedung Universitas Paramadina Jakarta Timur" 
-                                 loading="lazy">
+                                 loading="lazy"
+                                 data-lightbox>
                             <div class="project-caption">Bore Pile mini crane diameter 40cm untuk gedung universitas</div>
                         </div>
                         <div class="project-text">
@@ -380,7 +382,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                         <div class="project-img">
                             <img src="/imgs/borepile-meruya-jakarta.webp" 
                                  alt="Proyek bore pile diameter 40cm untuk ruko di Meruya, Jakarta Barat" 
-                                 loading="lazy">
+                                 loading="lazy"
+                                 data-lightbox>
                             <div class="project-caption">Bore Pile mini crane diameter 40cm untuk ruko di Meruya</div>
                         </div>
                         <div class="project-text">
@@ -401,7 +404,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                         <div class="project-img">
                             <img src="/imgs/strauss-pile-pondok-pinang.webp" onerror="this.src='/imgs/logo-agung-perkasa.webp'"
                                  alt="Proses bore pile manual diameter 40cm (strauss pile) di area terbatas" 
-                                 loading="lazy">
+                                 loading="lazy"
+                                 data-lightbox>
                             <div class="project-caption">Bore Pile manual diameter 40cm di area terbatas</div>
                         </div>
                         <div class="project-text">
@@ -557,7 +561,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                                 <img src="/imgs/borepile-gedung-universitas-paramadina-jaktim.webp" 
                                      alt="Proyek bore pile diameter 40cm untuk gedung Universitas Paramadina Jakarta Timur" 
                                      loading="lazy"
-                                     width="400" height="300">
+                                     width="400" height="300" data-lightbox>
                                 <div class="proyek-jakarta-caption">
                                     <span class="proyek-jakarta-label">Universitas Paramadina, Jakarta Timur</span>
                                     <span class="proyek-jakarta-detail">Bore pile mini crane Ã˜40cm untuk gedung universitas</span>
@@ -567,7 +571,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                                 <img src="/imgs/borepile-asrama-pesantren-az-zikra-bogor-agung-perkasa.jpg" 
                                      alt="Proyek bore pile diameter 40cm, kedalaman 8m, 80 titik untuk gedung Bangunan asrama pesantren AZ Zikra di Gunung Sindur, Bogor" 
                                      loading="lazy"
-                                     width="400" height="300">
+                                     width="400" height="300" data-lightbox>
                                 <div class="proyek-jakarta-caption">
                                     <span class="proyek-jakarta-label">Asrama Pesantren AZ Zikra Gunung Sindur, Bogor</span>
                                     <span class="proyek-jakarta-detail">Bore pile mini crane Ã˜40cm untuk bangunan asrama pesantren di area masjid AZ Zikra</span>
@@ -577,7 +581,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                                 <img src="/imgs/borepile-di-depan-mall-puri-indah-agung-perkasa.jpg" 
                                      alt="Proyek bore pile diameter 40cm, kedalaman 9m, 38 titik untuk bangunan di depan mall puri indah, Jakarta Barat" 
                                      loading="lazy"
-                                     width="400" height="300">
+                                     width="400" height="300" data-lightbox>
                                 <div class="proyek-jakarta-caption">
                                     <span class="proyek-jakarta-label">Depan Mall Puri Indah, Jakarta Barat</span>
                                     <span class="proyek-jakarta-detail">Bore pile mini crane Ã˜40cm untuk bangunan di depan Mall Puri Indah</span>
@@ -1079,5 +1083,6 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     ]
 }
 </script>
+    <script is:inline src="/js/lightbox.js"></script>
 </body>
 </html>

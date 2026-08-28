@@ -1,0 +1,30 @@
+---
+interface Props {
+    kecamatan: {
+        groups: Array<{
+            area: string;
+            tags: string[];
+        }>;
+    };
+    cityName: string;
+}
+
+const { kecamatan, cityName } = Astro.props;
+---
+
+<section>
+    <h2 class="section-heading-center">Wilayah Layanan Bore Pile di {cityName}</h2>
+    <p>Kami melayani seluruh kecamatan di bawah ini. Proyek siap kami kerjakan.</p>
+    <div class="area-grid">
+        {kecamatan.groups.map((group) => (
+            <div class="area-card">
+                <h3>{group.area}</h3>
+                <div class="area-tags">
+                    {group.tags.map((tag) => (
+                        <span>{tag}</span>
+                    ))}
+                </div>
+            </div>
+        ))}
+    </div>
+</section>

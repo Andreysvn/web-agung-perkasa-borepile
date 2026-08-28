@@ -1,14 +1,25 @@
 ---
 import config from '../../../../data/config.json';
+import pricing from '../../../../data/harga.json';
 import { organizationSchema, localBusinessSchema, schemaPhone } from '../../../../lib/schema.js';
 
 import FaIcon from '../../../../components/icons/FaIcon.astro';
+import Navbar from '../../../../components/global/Navbar.astro';
+import Footer from '../../../../components/global/Footer.astro';
 const orgLd = JSON.stringify(organizationSchema());
 
+const mesinMulai = pricing.mesin.find((item) => item.price > 0).price.toLocaleString('id-ID');
+const manualMulai = pricing.manual.find((item) => item.price > 0).price.toLocaleString('id-ID');
+const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+}).format(new Date(`${pricing.priceUpdatedAt}T00:00:00`));
+
 const localBusinessLd = JSON.stringify(localBusinessSchema({
-    "description": "Jasa bore pile Bandung terpercaya. Harga mesin Rp120.000/m, manual Rp70.000/m. Melayani seluruh Bandung dan sekitarnya.",
+    "description": `Jasa bore pile Bandung terpercaya. Harga mesin Rp${mesinMulai}/m, manual Rp${manualMulai}/m. Melayani seluruh Bandung dan sekitarnya.`,
     "openingHours": "Mo-Su 07:00-23:00",
-    "priceRange": "Rp70.000 - Rp350.000",
+    "priceRange": `Rp${manualMulai} - Rp350.000`,
     "areaServed": [
         { "@type": "City", "name": "Bandung" },
         { "@type": "City", "name": "Cimahi" }
@@ -24,7 +35,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     
     <title>Jasa & Harga Bore Pile Bandung 2026 Terpercaya | Agung Perkasa</title>
     
-    <meta name="description" content="Jasa Bore Pile & Strauss pile Bandung terpercaya. Harga Mesin mulai Rp120.000/m, manual Rp70.000/m. Melayani Bandung, Cimahi, dan sekitarnya. Konsultasi gratis.">
+    <meta name="description" content={`Jasa Bore Pile & Strauss pile Bandung terpercaya. Harga Mesin mulai Rp${mesinMulai}/m, manual Rp${manualMulai}/m. Melayani Bandung, Cimahi, dan sekitarnya. Konsultasi gratis.`}>
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="QjaIirR3-qW7bARIyez5S0_WPeMjPJSqn6tnK44ZYMo">
     
@@ -39,7 +50,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     
     <!-- Open Graph -->
     <meta property="og:title" content="Jasa & Harga Bore Pile Bandung 2026 | Agung Perkasa">
-    <meta property="og:description" content="Jasa Bore Pile Bandung terpercaya. Harga Mesin Rp120.000/m, manual Rp70.000/m. Melayani Bandung, Cimahi, dan sekitarnya. Konsultasi gratis.">
+    <meta property="og:description" content={`Jasa Bore Pile Bandung terpercaya. Harga Mesin Rp${mesinMulai}/m, manual Rp${manualMulai}/m. Melayani Bandung, Cimahi, dan sekitarnya. Konsultasi gratis.`}>
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
     <meta property="og:url" content="https://agungperkasaborepile.com/jasa/bore-pile/bandung.html">
@@ -49,7 +60,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Jasa & Harga Bore Pile Bandung 2026">
-    <meta name="twitter:description" content="Jasa bore pile Bandung terpercaya. Harga mesin Rp120.000/m, manual Rp70.000/m. Konsultasi gratis.">
+    <meta name="twitter:description" content={`Jasa bore pile Bandung terpercaya. Harga mesin Rp${mesinMulai}/m, manual Rp${manualMulai}/m. Konsultasi gratis.`}>
     <meta name="twitter:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
     
     <!-- Geo Tags -->
@@ -65,6 +76,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     
     <!-- CSS EKSTERNAL -->
     <link rel="stylesheet" href="/css/borepile-kota.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6GBTKJB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -77,36 +89,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <!-- End Google Tag Manager -->
     <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
     
-    <!-- NAVBAR -->
-    <nav class="navbar" aria-label="Navigasi utama">
-        <div class="container">
-            <a href="/" class="logo" aria-label="Agung Perkasa Borepile - Beranda">
-                <img src="/imgs/logo-agung-perkasa-transparan.webp" alt="Logo Agung Perkasa Borepile" width="45" height="45">
-                <span>Agung Perkasa <br>Borepile</span>
-            </a>
-            <button class="menu-toggle" id="mobile-menu" aria-label="Menu navigasi" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-             <ul class="nav-menu" role="list">
-                <li role="listitem"><a href="/">Beranda</a></li>
-                <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
-                    <ul class="dropdown-content">
-                        <li><a href="/jasa/">Jasa </a></li>
-                        <li><a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a></li>
-                        <li><a href="/harga/bore-pile-30cm.html">Strauss Pile</a></li>
-                        <li><a href="/#services">Bore Pile Hidrolik</a></li>
-                    </ul>
-                </li>
-                <li role="listitem"><a href="/artikel/">Artikel</a></li>
-                <li role="listitem"><a href="/#about">Tentang Kami</a></li>
-                <li role="listitem"><a href="/#faq">FAQ</a></li>
-                <li role="listitem"><a href="/galeri/gallery.html" class="btn-nav">Galeri</a></li>
-            </ul>
-        </div>
-    </nav>
+    <Navbar />
 
     <main id="main-content">
         <div class="blog-container">
@@ -123,7 +106,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <div class="page-meta">
                 <span>Update: 02 Agustus 2026</span> |
                 <span>Tim Agung Perkasa</span> |
-                <span>ðŸ“ Bandung & Sekitarnya</span>
+                <span>Ã°Å¸â€œÂ Bandung & Sekitarnya</span>
             </div>
 
             <div class="update-badge">
@@ -136,7 +119,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <div class="caption">Proses pengeboran bore pile menggunakan alat mini crane di Bandung</div>
                 </div>
                 <div class="illustration-text">
-                    <p><strong>Harga jasa bore pile Bandung 2026</strong> untuk jasa pengeboran saja mulai dari <strong>Rp120.000/m untuk mesin (mini crane)</strong>, dan manual atau <strong>strauss pile mulai dari Rp70.000/m</strong>.
+                    <p><strong>Harga jasa bore pile Bandung 2026</strong> untuk jasa pengeboran saja mulai dari <strong>Rp{mesinMulai}/m untuk mesin (mini crane)</strong>, dan manual atau <strong>strauss pile mulai dari Rp{manualMulai}/m</strong>.
                         <a href="/harga/bore-pile-2026.html">Lihat daftar harga bore pile 2026 lengkap di sini</a>. 
                     Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda. Melayani seluruh Bandung, Cimahi, dan sekitarnya.</p>
                 </div>
@@ -157,7 +140,6 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                             <select id="machineSelect">
                                 <option value="minicrane">Mini Crane</option>
                                 <option value="gawangan">Gawangan</option>
-                                <option value="sany">Hidrolik (SANY)</option>
                             </select>
                             <div class="price-hint">*Harga dan minimal order berbeda tiap alat</div>
                         </div>
@@ -204,11 +186,15 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </div>
                     
                     <button onclick="sendToWA()" class="btn-wa" aria-label="Konsultasikan ke WhatsApp">Konsultasikan ke WhatsApp</button>
-                    <div class="calculator-note">*Estimasi untuk jasa pengeboran saja (belum termasuk material beton & besi). Minimal order: Mini Crane 200m, Gawangan 150m, SANY 400m, Manual 100m. Di bawah itu bisa hubungi admin kami untuk penawaran lebih lanjut.</div>
+                    <div class="calculator-note">*Estimasi untuk jasa pengeboran saja (belum termasuk material beton & besi). Minimal order: Mini Crane 200m, Gawangan 200m, Manual 100m. Di bawah itu bisa hubungi admin kami untuk penawaran lebih lanjut.</div>
                 </div>
             </section>
 
-            <script is:inline src="/js/borepile-kota.js" defer></script>
+            <script define:vars={{ pricing }}>
+                window.__PRICING__ = pricing;
+            </script>
+            <script src="/js/jasa.js" defer></script>
+            <script src="/js/harga-calculator.js" defer></script>
 
             <section aria-labelledby="table-heading">
                 <h2 id="table-heading" class="section-heading">Tabel Harga Bore Pile Bandung 2026 (Jasa Bor Saja)</h2>
@@ -261,7 +247,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                 </div>
             </section>
 
-              <a href="/jasa/">Lihat Jasa Bore Pile & Strauss Pile untuk wilayah Anda â†’</a>
+              <a href="/jasa/">Lihat Jasa Bore Pile & Strauss Pile untuk wilayah Anda Ã¢â€ â€™</a>
 
             <section aria-labelledby="factors-heading">
                 <h2 id="factors-heading" class="section-heading">Faktor yang Mempengaruhi Harga Bore Pile Bandung 2026</h2>
@@ -303,7 +289,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <section>
                 <h2 class="section-heading-sm">Estimasi Biaya Tambahan di Bandung</h2>
                 <div class="info-grid">
-                    <div class="info-card"><h3>ðŸš› Mobilisasi Alat</h3><p>Mini crane: Rp5-7jt | Hidrolik (Sany): 25-30jt | Strauss pile: Rp2-3jt</p></div>
+                    <div class="info-card"><h3>Ã°Å¸Å¡â€º Mobilisasi Alat</h3><p>Mini crane: Rp5-7jt | Hidrolik (Sany): 25-30jt | Strauss pile: Rp2-3jt</p></div>
                     <div class="info-card"><h3>Minimal Order</h3><p>Mini crane & gawangan: 200m | Hidrolik: 1200m | Strauss Pile: 100m</p></div>
                     <div class="info-card"><h3>Sedot Lumpur</h3><p>Metode wash boring: Rp800.000 - Rp1.200.000/rit (tergantung volume)</p></div>
                     <div class="info-card"><h3>Data Sondir</h3><p>Wajib untuk menentukan kedalaman pengeboran yang tepat hingga tanah keras</p></div>
@@ -313,9 +299,9 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <div class="tips-section">
                 <h3 class="tips-heading">Tips Memilih Diameter Bore Pile untuk Proyek di Bandung</h3>
                 <ul>
-                    <li><strong>30 cm</strong> â†’ rumah 1-2 lantai (paling banyak dipilih)</li>
-                    <li><strong>40-50 cm</strong> â†’ ruko, kantor, gudang, rumah sakit</li>
-                    <li><strong>60-110 cm</strong> â†’ hotel, gedung bertingkat, apartemen</li>
+                    <li><strong>30 cm</strong> Ã¢â€ â€™ rumah 1-2 lantai (paling banyak dipilih)</li>
+                    <li><strong>40-50 cm</strong> Ã¢â€ â€™ ruko, kantor, gudang, rumah sakit</li>
+                    <li><strong>60-110 cm</strong> Ã¢â€ â€™ hotel, gedung bertingkat, apartemen</li>
                 </ul>
             </div>
 
@@ -328,15 +314,16 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <div class="project-img">
                 <img src="/imgs/borepile-mesin-biru.webp" 
                      alt="Proyek bore pile mini crane di Dago Bandung untuk rumah mewah" 
-                     loading="lazy">
+                     loading="lazy"
+                     data-lightbox="project">
                 <div class="project-caption">Bore Pile mini crane di Dago Bandung</div>
             </div>
             <div class="project-text">
                 <div class="info-card">
                     <h3>Rumah Mewah di Dago, Bandung</h3>
-                    <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane Ã˜30cm, kedalaman 12m, 20 titik<br>
+                    <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane ÃƒËœ30cm, kedalaman 12m, 20 titik<br>
                     <strong>Metode:</strong> Dry Boring (Bor kering) - tanah berbukit</p>
-                    <p><strong>Biaya jasa:</strong> 12m Ã— Rp120.000 Ã— 20 = Rp28.800.000<br>
+                    <p><strong>Biaya jasa:</strong> 12m Ãƒâ€” Rp120.000 Ãƒâ€” 20 = Rp28.800.000<br>
                     <strong>+ mobilisasi:</strong> Rp6.000.000<br>
                     <strong>Total:</strong> <strong class="price-total">Rp34.800.000</strong><br>
                     <strong>Waktu pengerjaan:</strong> 6-8 hari kerja</p>
@@ -351,9 +338,9 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <div class="project-text" style="flex: 1; min-width: 100%;">
                 <div class="info-card">
                     <h3>Perumahan di Cikaum, Bandung</h3>
-                    <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane Ã˜40cm, kedalaman 14m, 22 titik<br>
+                    <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane ÃƒËœ40cm, kedalaman 14m, 22 titik<br>
                     <strong>Metode:</strong> Dry Boring (Bor kering)</p>
-                    <p><strong>Biaya jasa:</strong> 14m Ã— Rp135.000 Ã— 22 = Rp41.580.000<br>
+                    <p><strong>Biaya jasa:</strong> 14m Ãƒâ€” Rp135.000 Ãƒâ€” 22 = Rp41.580.000<br>
                     <strong>+ mobilisasi:</strong> Rp6.000.000<br>
                     <strong>Total:</strong> <strong class="price-total">Rp47.580.000</strong><br>
                     <strong>Waktu pengerjaan:</strong> 7-10 hari kerja</p>
@@ -368,8 +355,8 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <div class="project-text" style="flex: 1; min-width: 100%;">
                 <div class="info-card">
                     <h3>Rumah 1 Lantai di Dayeuhkolot, Bandung</h3>
-                    <p><strong>Spesifikasi:</strong> Strauss pile (bore pile manual) Ã˜30cm, kedalaman 6m, 14 titik</p>
-                    <p><strong>Biaya jasa:</strong> 6m Ã— Rp80.000 Ã— 14 = Rp6.720.000<br>
+                    <p><strong>Spesifikasi:</strong> Strauss pile (bore pile manual) ÃƒËœ30cm, kedalaman 6m, 14 titik</p>
+                    <p><strong>Biaya jasa:</strong> 6m Ãƒâ€” Rp80.000 Ãƒâ€” 14 = Rp6.720.000<br>
                     <strong>+ mobilisasi:</strong> Rp2.000.000<br>
                     <strong>Total:</strong> <strong class="price-total">Rp8.720.000</strong><br>
                     <strong>Waktu pengerjaan:</strong> 4-6 hari kerja</p>
@@ -380,14 +367,14 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
 
                 <div class="project-note">
                     <p>
-                        <strong>ðŸ“Œ Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, 
+                        <strong>Ã°Å¸â€œÅ’ Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, 
                         <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di Bandung.
                     </p>
                 </div>
             </section>
 
             <p>Butuh harga khusus untuk diameter 30cm? 
-                <a href="/harga/bore-pile-30cm.html">Lihat detail harga bore pile diameter 30cm â†’</a>
+                <a href="/harga/bore-pile/30cm.html">Lihat detail harga bore pile diameter 30cm Ã¢â€ â€™</a>
             </p>
 
            <section>
@@ -417,17 +404,18 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                             <img src="/imgs/borepile-mesin-biru.webp" 
                                  alt="Proyek bore pile mini crane di Dago Bandung" 
                                  loading="lazy"
-                                 width="400" height="300">
+                                 width="400" height="300"
+                                 data-lightbox="project">
                             <div class="proyek-jakarta-caption">
                                 <span class="proyek-jakarta-label">Dago, Bandung</span>
-                                <span class="proyek-jakarta-detail">Bore pile mini crane Ã˜30cm untuk rumah mewah</span>
+                                <span class="proyek-jakarta-detail">Bore pile mini crane ÃƒËœ30cm untuk rumah mewah</span>
                             </div>
                         </div>
                         
                     </div>
                     <p class="proyek-jakarta-link">
                         Ingin lihat lebih banyak? 
-                        <a href="/galeri/gallery.html">Kunjungi galeri proyek kami â†’</a>
+                        <a href="/galeri/gallery.html">Kunjungi galeri proyek kami Ã¢â€ â€™</a>
                     </p>
                 </div>
             </section>
@@ -618,13 +606,13 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <p class="article-excerpt">Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik.</p>
                                     <div class="article-meta">
                                         <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
-                                        <span class="article-read-more">Baca selengkapnya â†’</span>
+                                        <span class="article-read-more">Baca selengkapnya Ã¢â€ â€™</span>
                                     </div>
                                 </div>
                             </a>
                         </article>
                         <article class="article-card">
-                            <a href="/harga/bore-pile-30cm.html" class="article-link">
+                            <a href="/harga/bore-pile/30cm.html" class="article-link">
                                 <div class="article-image">
                                     <img src="/imgs/hasil-lubang-borepile.webp" alt="Harga bore pile diameter 30cm untuk pondasi rumah" loading="lazy">
                                     <span class="article-category">Harga</span>
@@ -634,13 +622,13 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <p class="article-excerpt">Lihat harga terbaru 2026 untuk bore pile diameter 30cm.</p>
                                     <div class="article-meta">
                                         <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
-                                        <span class="article-read-more">Baca selengkapnya â†’</span>
+                                        <span class="article-read-more">Baca selengkapnya Ã¢â€ â€™</span>
                                     </div>
                                 </div>
                             </a>
                         </article>
                         <article class="article-card">
-                            <a href="/jasa/bore-pile-jakarta.html" class="article-link">
+                            <a href="/jasa/bore-pile/jakarta.html" class="article-link">
                                 <div class="article-image">
                                     <img src="/imgs/borepile-dan-truk-molen.webp" alt="Harga bore pile Jakarta 2026 terbaru" loading="lazy">
                                     <span class="article-category">Harga</span>
@@ -650,14 +638,14 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <p class="article-excerpt">Informasi terkini tentang harga bore pile di wilayah Jakarta untuk tahun 2026.</p>
                                     <div class="article-meta">
                                         <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
-                                        <span class="article-read-more">Baca selengkapnya â†’</span>
+                                        <span class="article-read-more">Baca selengkapnya Ã¢â€ â€™</span>
                                     </div>
                                 </div>
                             </a>
                         </article>
                     </div>
                     <div class="articles-cta">
-                        <a href="/artikel/artikel.html" class="btn-articles-all">
+                        <a href="/artikel.html" class="btn-articles-all">
                             <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
                         </a>
                     </div>
@@ -672,15 +660,15 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
 
             <div class="internal-link-box">
                 <p><strong>Baca Juga Harga Bore Pile:</strong><br>
-                <a href="/jasa/bore-pile-jakarta.html">Jakarta</a> | 
-                <a href="/jasa/bore-pile-bekasi.html">Bekasi</a> | 
-                <a href="/jasa/bore-pile-tangerang.html">Tangerang</a> | 
-                <a href="/jasa/bore-pile-depok.html">Depok</a> | 
-                <a href="/jasa/bore-pile-bogor.html">Bogor</a> | 
+                <a href="/jasa/bore-pile/jakarta.html">Jakarta</a> | 
+                <a href="/jasa/bore-pile/bekasi.html">Bekasi</a> | 
+                <a href="/jasa/bore-pile/tangerang.html">Tangerang</a> | 
+                <a href="/jasa/bore-pile/depok.html">Depok</a> | 
+                <a href="/jasa/bore-pile/bogor.html">Bogor</a> | 
                 <a href="/jasa/bore-pile-tangerang-selatan.html">Tangerang Selatan</a> | 
-                <a href="/jasa/bore-pile-karawang.html">Karawang</a> | 
+                <a href="/jasa/bore-pile/karawang.html">Karawang</a> | 
                 <a href="/jasa/bore-pile-cikarang.html">Cikarang</a> | 
-                <a href="/jasa/bore-pile-surabaya.html">Surabaya</a></p>
+                <a href="/jasa/bore-pile/surabaya.html">Surabaya</a></p>
                 <a href="/harga/bore-pile-2026.html">Harga Bore Pile 2026</a> 
             </div>
         </div>
@@ -689,7 +677,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <!-- MAPS -->
     <div class="maps-container">
         <div class="maps-card">
-            <h3 class="maps-title">ðŸ“ Lokasi Kami</h3>
+            <h3 class="maps-title">Ã°Å¸â€œÂ Lokasi Kami</h3>
             <p class="maps-address">
                 <strong>Agung Perkasa Borepile</strong><br>
                 Jl. Sunter Muara II, RT.17/RW.05, Sunter Agung, Kec. Tj. Priok,<br>
@@ -715,7 +703,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         </a>
             <!-- TAMBAHKAN INI -->
 <p class="maps-note">
-    <strong>ðŸ“ Melayani seluruh wilayah Bandung</strong> konsultasi & survei lokasi bisa dilakukan langsung di tempat proyek Anda.
+    <strong>Ã°Å¸â€œÂ Melayani seluruh wilayah Bandung</strong> konsultasi & survei lokasi bisa dilakukan langsung di tempat proyek Anda.
 </p>
         </div>
     </div>
@@ -732,48 +720,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     </div>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Agung Perkasa Borepile</h3>
-                    <p>Spesialis pondasi borepile mesin & strauss pile (bore pile manual). Pengalaman lebih dari 10 tahun di Bandung dan sekitarnya.</p>
-                    <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Layanan</h3>
-                    <ul>
-                        <li><a href="/jasa/">Jasa Bore Pile</a></li>
-                        <li><a href="/jasa/">Jasa Strauss Pile</a></li>
-                        <li><a href="/harga/bore-pile-2026.html">Jasa Bore Pile Mesin</a></li>
-                        <li><a href="/harga/bore-pile-30cm.html">Jasa Bore Pile Manual</a></li>
-                        <li><a href="/harga/bore-pile-2026.html">Kalkulator Biaya Bore Pile</a></li>
-                        <li><a href="/#contact">Konsultasi Pondasi Dalam</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Tentang Kami</h3>
-                    <ul><li><a href="/#about">Tentang Kami</a></li><li><a href="/galeri/">Galeri</a></li><li><a href="/artikel/">Blog Artikel</a></li></ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Kontak</h3>
-                    <ul>
-                        <li>Jl. Sunter Muara II, RT.17/RW.05, Sunter Agung, Jakarta Utara</li>
-                        <li>Telp: {config.company.phone}</li>
-                        <li>Email: {config.company.email}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; {new Date().getFullYear()} {config.siteName}. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <Footer />
 
     <!-- WHATSAPP FLOAT -->
     <a href={`https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Saya%20dari%20website%20ingin%20menanyakan%20terkait%20penawaran%20harga%20bore%20pile%20untuk%20proyek%20Bandung.`} 
@@ -993,5 +940,6 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     ]
 }
 </script>
+    <script is:inline src="/js/lightbox.js"></script>
 </body>
 </html>

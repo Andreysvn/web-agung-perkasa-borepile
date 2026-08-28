@@ -1,0 +1,69 @@
+---
+import config from '../../data/config.json';
+import FaIcon from '../icons/FaIcon.astro';
+
+interface Props {
+    cityName: string;
+    footerDescription: string;
+    mapsNote?: string;
+}
+
+const { cityName, footerDescription, mapsNote = '' } = Astro.props;
+---
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Agung Perkasa Borepile</h3>
+                <p>{footerDescription}</p>
+                <div class="social-links">
+                    <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <FaIcon class="fab fa-facebook-f" />
+                    </a>
+                    <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <FaIcon class="fab fa-instagram" />
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Layanan</h3>
+                <ul>
+                    <li><a href="/jasa/">Layanan Kami</a></li>
+                    <li><a href="/jasa/bore-pile/">Jasa Bore Pile</a></li>
+                    <li><a href="/jasa/strauss-pile/jakarta.html">Jasa Strauss Pile</a></li>
+                    <li><a href="/jasa/bore-pile/">Jasa Bore Pile Mesin</a></li>
+                    <li><a href="/jasa/strauss-pile/jakarta.html">Jasa Bore Pile Manual</a></li>
+                    <li><a href="/harga/bore-pile-2026.html">Kalkulator Biaya Bore Pile</a></li>
+                    <li><a href="/#contact">Konsultasi Pondasi Dalam</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Tentang Kami</h3>
+                <ul>
+                    <li><a href="/#about">Tentang Kami</a></li>
+                    <li><a href="/galeri/gallery.html">Galeri</a></li>
+                    <li><a href="/artikel.html">Blog Artikel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Kontak</h3>
+                <ul>
+                    <li><FaIcon class="fas fa-map-marker-alt" /> {config.company.address}</li>
+                    <li><FaIcon class="fas fa-phone-alt" /> {config.company.phone}</li>
+                    <li><FaIcon class="fas fa-envelope" /> {config.company.email}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>&copy; 2026 {config.siteName}. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Kebijakan Privasi</a> |
+                <a href="#">Syarat & Ketentuan</a> |
+                <a href="/galeri/gallery.html">Galeri</a>
+            </div>
+        </div>
+    </div>
+</footer>

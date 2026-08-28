@@ -80,6 +80,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     
     <!-- CSS & JS EKSTERNAL -->
     <link rel="stylesheet" href="/css/harga.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
     <script is:inline src="/js/harga.js" defer></script>
 </head>
 
@@ -358,7 +359,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                             <img src="/imgs/borepile-gedung-jakarta-barat.webp" 
                                  alt="Proyek bore pile diameter 60cm untuk hotel di Jakarta" 
                                  loading="lazy"
-                                 onerror="this.src='/imgs/logo-agung-perkasa.webp'">
+                                 onerror="this.src='/imgs/logo-agung-perkasa.webp'"
+                                 data-lightbox>
                             <div class="project-caption">Bore Pile diameter 60cm untuk proyek hotel</div>
                         </div>
                         <div class="project-text">
@@ -380,7 +382,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                             <img src="/imgs/strauss-pile-pondok-pinang.webp" 
                                  alt="Proyek bore pile manual diameter 60cm untuk gedung di area terbatas" 
                                  loading="lazy"
-                                 onerror="this.src='/imgs/logo-agung-perkasa.webp'">
+                                 onerror="this.src='/imgs/logo-agung-perkasa.webp'"
+                                 data-lightbox>
                             <div class="project-caption">Strauss Pile diameter 60cm untuk area terbatas</div>
                         </div>
                     </div>
@@ -529,7 +532,8 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                                      alt="Proyek bore pile diameter 60cm untuk hotel di Jakarta Barat" 
                                      loading="lazy"
                                      width="400" height="300"
-                                     onerror="this.src='/imgs/logo-agung-perkasa.webp'">
+                                     onerror="this.src='/imgs/logo-agung-perkasa.webp'"
+                                     data-lightbox>
                                 <div class="proyek-jakarta-caption">
                                     <span class="proyek-jakarta-label">Hotel, Jakarta Barat</span>
                                     <span class="proyek-jakarta-detail">Bore pile Ã˜60cm untuk hotel 4 lantai</span>
@@ -1022,5 +1026,6 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     ]
 }
 </script>
+    <script is:inline src="/js/lightbox.js"></script>
 </body>
 </html>

@@ -1,0 +1,197 @@
+{
+  "slug": "karawang",
+  "name": "Karawang",
+  "year": 2026,
+  "geoRegion": "ID-JB",
+  "geoPlacename": "Karawang",
+  "heroImage": "/imgs/borepile-mesin-biru.webp",
+  "heroAlt": "Proses pengeboran bore pile mini crane di Karawang untuk proyek industri",
+  "heroCaption": "Proses pengeboran bore pile menggunakan alat mini crane di Karawang",
+  "heroWidth": 350,
+  "heroHeight": 372,
+  "heroText": "Harga jasa bore pile Karawang 2026 untuk jasa pengeboran saja mulai dari Rp120.000/m untuk mesin (mini crane), dan manual atau strauss pile mulai dari Rp70.000/m. <a href=\"/harga/bore-pile-2026.html\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Karawang, KIIC, Suryacipta, dan sekitarnya.",
+  "localBusinessDesc": "Jasa bore pile Karawang terpercaya. Harga mesin Rp120.000/m, manual Rp70.000/m. Melayani seluruh Karawang, KIIC, Suryacipta, dan sekitarnya.",
+  "mobilizationCost": "Mini crane: Rp3.5-5jt | Strauss pile (bore pile manual): Rp1.5-2jt",
+  "manualPriceMin": 70000,
+  "manualPriceMax": 120000,
+  "localPrices": {
+    "manualMin": 70000,
+    "manualMax": 120000,
+    "mesin": [
+      { "diameter": "30 cm", "price": 120000, "depth": "30 meter", "suitable": "Rumah 1-2 lantai" },
+      { "diameter": "40 cm", "price": 135000, "depth": "30 meter", "suitable": "Ruko, kantor" },
+      { "diameter": "50 cm", "price": 190000, "depth": "30 meter", "suitable": "Gudang, pabrik kecil" },
+      { "diameter": "60 cm", "price": null, "depth": "30 meter", "suitable": "Hotel 3-4 lantai" },
+      { "diameter": "80 cm", "price": null, "depth": "30 meter", "suitable": "Gedung 5-8 lantai" }
+    ],
+    "manual": [
+      { "diameter": "20 cm", "price": 70000, "depth": "10 meter", "suitable": "Area sangat sempit" },
+      { "diameter": "25 cm", "price": 75000, "depth": "10 meter", "suitable": "Gang kecil" },
+      { "diameter": "30 cm", "price": 80000, "depth": "10 meter", "suitable": "Rumah, ruko 1-2 lantai (tanah padat)" },
+      { "diameter": "40 cm", "price": 100000, "depth": "10 meter", "suitable": "Rumah, ruko 2 lantai (tanah padat)" }
+    ],
+    "hasHidrolik": true
+  },
+  "factors": [
+    {
+      "title": "Diameter & Kedalaman",
+      "text": "Semakin besar diameter (30cm, 40cm, 50cm, dst) dan semakin dalam pengeboran yang diperlukan hingga tanah keras di Karawang, maka biaya per meter semakin tinggi."
+    },
+    {
+      "title": "Kondisi Tanah Karawang",
+      "text": "Tanah di Karawang bervariasi. Wilayah industri (KIIC, Suryacipta) tanahnya keras dan berbatu. Wilayah pesisir (Pedes, Cilamaya) tanahnya lebih lunak. Karawang dikenal dengan tanah merah dan lempung yang berbeda dengan tanah Jakarta."
+    },
+    {
+      "title": "Jarak Proyek Dari Gudang Kami",
+      "text": "Biaya mobilisasi alat disesuaikan dengan jarak dari gudang kami di Jakarta Utara. Karawang (Rp3.5-5jt) tergantung lokasi (KIIC, Suryacipta, atau pusat kota)."
+    },
+    {
+      "title": "Volume Pekerjaan",
+      "text": "Minimal order jasa bore pile Karawang: mesin 200 meter, strauss pile 100 meter, hidrolik 1200 meter. Hubungi kami untuk volume di bawah itu."
+    },
+    {
+      "title": "Akses & Tingkat Kesulitan Lapangan",
+      "text": "Kawasan industri (KIIC, Suryacipta) akses luas, perumahan padat di pusat kota akses terbatas. Ini mempengaruhi biaya pengerjaan."
+    },
+    {
+      "title": "Jenis & Skala Proyek di Karawang",
+      "text": "Proyek rumah tinggal pribadi di Karawang lebih terjangkau, sementara proyek pabrik di KIIC atau gudang di Suryacipta memiliki spesifikasi dan biaya berbeda."
+    }
+  ],
+  "sondirNote": "Tips untuk proyek bore pile di Karawang: Lakukan pengecekan data sondir tanah Karawang terlebih dahulu agar kedalaman pengeboran bisa ditentukan secara tepat. Perhatikan perbedaan karakteristik tanah antara Karawang (tanah merah/lempung) dan tanah di Jabodetabek.",
+  "projects": [
+    {
+      "title": "Pabrik di KIIC Karawang",
+      "image": "/imgs/borepile-mesin-biru.webp",
+      "imageAlt": "Proyek bore pile mini crane di KIIC Karawang untuk pabrik",
+      "imageCaption": "Bore Pile mini crane di KIIC Karawang",
+      "specs": "Bore pile mesin mini crane Ø50cm, kedalaman 15m, 24 titik<br>Metode: Dry Boring (Bor kering) - tanah keras",
+      "costCalc": "15m × Rp190.000 × 24 = Rp68.400.000",
+      "mobilization": "Rp4.000.000",
+      "total": "Rp72.400.000",
+      "time": "8-12 hari kerja",
+      "hasImage": true
+    },
+    {
+      "title": "Gudang di Suryacipta Karawang",
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null,
+      "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 12m, 20 titik<br>Metode: Dry Boring (Bor kering)",
+      "costCalc": "12m × Rp135.000 × 20 = Rp32.400.000",
+      "mobilization": "Rp4.000.000",
+      "total": "Rp36.400.000",
+      "time": "5-7 hari kerja",
+      "hasImage": false
+    },
+    {
+      "title": "Rumah 2 Lantai di Karawang Kota",
+      "image": null,
+      "imageAlt": null,
+      "imageCaption": null,
+      "specs": "Strauss pile (bore pile manual) Ø30cm, kedalaman 6m, 15 titik",
+      "costCalc": "6m × Rp80.000 × 15 = Rp7.200.000",
+      "mobilization": "Rp1.500.000",
+      "total": "Rp8.700.000",
+      "time": "4-6 hari kerja",
+      "hasImage": false
+    }
+  ],
+  "whyUs": [
+    { "title": "Memakai alat yang baik", "desc": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, strauss pile, dan mesin Hidrolik Rotary Drilling (Sany)." },
+    { "title": "Efisiensi waktu & Komitmen kualitas", "desc": "Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam, khususnya bore pile di Karawang." },
+    { "title": "Tim Ahli", "desc": "Memiliki tim ahli dalam pengerjaan bore pile di Karawang, khususnya untuk proyek di kawasan industri dan perumahan." },
+    { "title": "Tim berpengalaman di area Karawang", "desc": "Lebih dari sepuluh tahun mengerjakan proyek di Karawang. Mulai dari proyek rumah tinggal pribadi hingga proyek pabrik di KIIC dan Suryacipta." }
+  ],
+  "equipment": {
+    "description": "Kami memiliki beberapa alat untuk pekerjaan bore pile, antara lain:",
+    "items": [
+      { "name": "Mini Crane", "desc": "Kapasitas sedang, diameter 30-80 cm, kedalaman sampai 30m. Cocok untuk rumah, ruko, pabrik di Karawang." },
+      { "name": "Gawangan", "desc": "Untuk area yang tidak bisa diakses mini crane. Diameter 30-80 cm, cocok untuk gang sempit di Karawang." },
+      { "name": "Strauss Pile (Manual)", "desc": "Alat bor manual full tenaga manusia, metode dry boring. Diameter 20-40cm, cocok untuk gang sempit di Karawang yang tidak bisa dijangkau crane." },
+      { "name": "Mesin Hidrolik Sany", "desc": "Untuk proyek sedang hingga besar: hotel, gedung, pabrik. Diameter 60-120 cm, kedalaman hingga 60 meter." }
+    ]
+  },
+  "portfolio": {
+    "title": "Portofolio Proyek Bore Pile di Karawang",
+    "subtitle": "Berikut beberapa proyek bore pile yang sudah kami kerjakan di berbagai wilayah Karawang.",
+    "items": [
+      {
+        "image": "/imgs/borepile-mesin-biru.webp",
+        "imageAlt": "Proyek bore pile mini crane di KIIC Karawang",
+        "label": "KIIC Karawang",
+        "detail": "Bore pile mini crane Ø50cm untuk pabrik di KIIC"
+      }
+    ]
+  },
+  "kecamatan": {
+    "Karawang Kota": ["Karawang Barat", "Karawang Timur", "Karawang Utara", "Karawang Selatan", "Teluk Jambe", "Telukjambe Barat", "Telukjambe Timur"],
+    "Kawasan Industri": ["KIIC Karawang", "Suryacipta", "Karawang New Industri City", "Kutawaluya", "Majalaya"],
+    "Karawang Pesisir & Selatan": ["Cilamaya", "Cilamaya Kulon", "Pedes", "Tempuran", "Rengasdengklok", "Rawamerta", "Tirtajaya"]
+  },
+  "faq": [
+    {
+      "q": "Berapa kedalaman bore pile yang ideal untuk tanah di Karawang?",
+      "a": "Untuk wilayah Karawang, kedalaman bore pile bervariasi tergantung lokasi. Kawasan industri (KIIC, Suryacipta) tanahnya keras dan berbatu, kedalaman 10-18 meter. Wilayah pesisir (Cilamaya, Pedes) tanahnya lebih lunak, membutuhkan 12-20 meter. Karawang Kota cukup 8-15 meter. Data sondir sangat menentukan kedalaman pasti."
+    },
+    {
+      "q": "Apakah bore pile cocok untuk kawasan industri KIIC dan Suryacipta?",
+      "a": "Sangat cocok. Kawasan industri KIIC dan Suryacipta memiliki tanah yang keras dan berbatu, ideal untuk metode dry boring (bor kering). Bore pile Ø40-50cm dengan kedalaman 12-18 meter adalah solusi paling tepat untuk pabrik, gudang, dan bangunan industri. Kami sudah banyak mengerjakan proyek di kawasan tersebut."
+    },
+    {
+      "q": "Apa perbedaan tanah di Karawang dengan Jakarta untuk bore pile?",
+      "a": "Karawang memiliki tanah merah dan lempung yang cenderung lebih keras, dengan batuan di beberapa area (terutama kawasan industri). Jakarta tanahnya lebih lunak dan berair. Oleh karena itu, metode dry boring lebih sering digunakan di Karawang, sementara wash boring lebih umum di Jakarta. Kami selalu menyesuaikan metode berdasarkan kondisi tanah di lokasi proyek Anda."
+    },
+    {
+      "q": "Berapa biaya mobilisasi bore pile ke Karawang?",
+      "a": "Biaya mobilisasi tergantung jarak dari gudang kami di Jakarta Utara: Karawang Kota Rp3.5-4.5 juta, KIIC/Suryacipta Rp4-5 juta, Karawang Selatan/Pesisir Rp4.5-5.5 juta. Untuk proyek di bawah 200m (mesin) atau 100m (manual), biaya mobilisasi bisa lebih tinggi proporsional."
+    },
+    {
+      "q": "Apa keunggulan bore pile dibandingkan tiang pancang di Karawang?",
+      "a": "Di Karawang yang banyak area perumahan dan kawasan industri, bore pile lebih unggul karena minim getaran dan suara. Tidak seperti tiang pancang yang menimbulkan getaran keras dan bisa merusak dinding tetangga atau mengganggu aktivitas pabrik. Selain itu, metode dry boring sangat efektif untuk tanah keras di Karawang."
+    },
+    {
+      "q": "Apakah bisa survey lokasi dulu sebelum eksekusi bore pile di Karawang?",
+      "a": "Bisa. Kami siap melakukan survey lokasi gratis ke seluruh wilayah Karawang. Tim teknis kami akan cek akses jalan, kondisi tanah, dan memberikan rekomendasi diameter serta kedalaman terbaik untuk proyek Anda. Konsultasi tanpa biaya."
+    }
+  ],
+  "articles": [
+    {
+      "href": "/artikel/bore-pile-vs-strauss-pile.html",
+      "image": "/imgs/borepile-dekat-dinding.webp",
+      "imageAlt": "Perbandingan bore pile vs strauss pile untuk pondasi bangunan",
+      "category": "Perbandingan",
+      "title": "Borepile vs Strauss Pile",
+      "excerpt": "Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik.",
+      "date": "Juni 2026"
+    },
+    {
+      "href": "/harga/bore-pile-30cm.html",
+      "image": "/imgs/hasil-lubang-borepile.webp",
+      "imageAlt": "Harga bore pile diameter 30cm untuk pondasi rumah",
+      "category": "Harga",
+      "title": "Harga Bore Pile Diameter 30cm",
+      "excerpt": "Lihat harga terbaru 2026 untuk bore pile diameter 30cm.",
+      "date": "Juni 2026"
+    },
+    {
+      "href": "/jasa/bore-pile-jakarta.html",
+      "image": "/imgs/borepile-dan-truk-molen.webp",
+      "imageAlt": "Harga bore pile Jakarta 2026 terbaru",
+      "category": "Harga",
+      "title": "Harga Bore Pile Jakarta 2026",
+      "excerpt": "Informasi terkini tentang harga bore pile di wilayah Jakarta untuk tahun 2026.",
+      "date": "Juni 2026"
+    }
+  ],
+  "internalLinks": [
+    { "href": "/jasa/bore-pile/jakarta.html", "label": "Jakarta" },
+    { "href": "/jasa/bore-pile/bekasi.html", "label": "Bekasi" },
+    { "href": "/jasa/bore-pile/tangerang.html", "label": "Tangerang" },
+    { "href": "/jasa/bore-pile/depok.html", "label": "Depok" },
+    { "href": "/jasa/bore-pile/bogor.html", "label": "Bogor" },
+    { "href": "/harga/bore-pile-2026.html", "label": "Harga Bore Pile 2026" }
+  ],
+  "hasGoogleAds": false,
+  "googleAdsId": null
+}

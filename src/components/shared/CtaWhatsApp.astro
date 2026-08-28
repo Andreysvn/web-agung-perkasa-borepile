@@ -1,0 +1,18 @@
+---
+import config from '../../data/config.json';
+
+interface Props {
+    cityName: string;
+}
+
+const { cityName } = Astro.props;
+
+const waMessage = encodeURIComponent(`Halo Pak, Saya dari website ingin menanyakan terkait penawaran harga bore pile untuk proyek ${cityName}.`);
+const waUrl = `https://wa.me/${config.company.whatsapp}?text=${waMessage}`;
+---
+
+<div class="cta-box">
+    <h3>Butuh jasa bore pile di {cityName}?</h3>
+    <p>Dapatkan penawaran harga dari kami.</p>
+    <a href={waUrl} class="btn-wa-konsultasi" aria-label="Konsultasi gratis via WhatsApp">Konsultasi Gratis via WA</a>
+</div>
