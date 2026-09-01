@@ -1,8 +1,8 @@
-﻿# Renovasi Desain â€” Batch 1 (Fondasi + Pilot Harga 2026) Implementation Plan
+﻿# Renovasi Desain — Batch 1 (Fondasi + Pilot Harga 2026) Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Membangun fondasi desain v2 (tokens, base style, ikon SVG, komponen kulit baru, prop `design` di BaseLayout) dan memigrasikan halaman pilot `/harga/bore-pile-2026.html` ke kulit baru tanpa mengubah satu pun teks/meta/schema.
+**Goal:** Membangun fondasi desain v2 (tokens, base style, ikon ✓SVG, komponen kulit baru, prop `design` di BaseLayout) dan memigrasikan halaman pilot `/harga/bore-pile-2026.html` ke kulit baru tanpa mengubah satu pun teks/meta/schema.
 
 **Architecture:** Mode ganda di `BaseLayout` (`design='legacy'|'v2'`). Halaman v2 memuat `tokens.css` + `base.css` lewat komponen `ApxStyles` (is:global, hanya dirender saat v2), TIDAK memuat `/css/style.css` maupun `/js/script.js` legacy. Komponen global versi baru hidup di `src/components/global/v2/`; halaman lama tetap memakai komponen lama apa adanya. Interaktivitas ditulis ulang vanilla per komponen; FAQ pakai `<details>` native.
 
@@ -15,13 +15,13 @@
 - **NOL dependensi baru** (`package.json` tidak boleh berubah).
 - **Isolasi besi:** `public/css/*` dan `public/js/*` TIDAK BOLEH diedit. Semua file baru bernama `apx-*` atau hidup di `src/components/**`, `src/styles/**`, `public/fonts/`.
 - **Konten halaman pilot identik:** semua teks, urutan heading, alt gambar, href, dan isi blok JSON-LD (Organization, LocalBusiness, BreadcrumbList, Product, FAQPage) sama persis dengan sebelum migrasi. Yang berubah hanya class/wrapper/markup penampil.
-- SEO head identik: title, description, canonical, robots, og/twitter, geo â€” nilai-nilainya disalin apa adanya ke props BaseLayout / markup.
+- SEO head identik: title, description, canonical, robots, og/twitter, geo — nilai-nilainya disalin apa adanya ke props BaseLayout / markup.
 - `public/sitemap.xml`, `robots.txt`, `.htaccess`: tidak disentuh.
 - Verifikasi otomatis satu-satunya: `npm run build` harus lolos. Tidak ada lint/test framework.
-- **Jangan `git commit`** â€” working tree milik pemilik; commit hanya kalau pemilik minta.
+- **Jangan `git commit`** — working tree milik pemilik; commit hanya kalau pemilik minta.
 - Token warna (verbatim dari spec): navy `#0d2b52`, navy-2 `#1a3a6e`, blue `#3498db`, orange `#d35400`, orange-2 hover `#b84700`, wa `#25d366`, wa-2 hover `#1da851`, tint `#f0f7ff`, bg `#ffffff`, text `#1e293b`, muted `#64748b`, border `#e2e8f0`.
 - Font: Plus Jakarta Sans variable WOFF2 tunggal `public/fonts/plus-jakarta-sans-latin-var.woff2` (@font-face weight 400 800), preload sekali, `font-display: swap`.
-- Budget per halaman v2: CSS â‰¤ 25 KB ter-minify, JS â‰¤ 10 KB, nol request CDN pihak ketiga untuk font/ikon (FA & Google Fonts tidak dimuat di halaman v2).
+- Budget per halaman v2: CSS â‰¤ 25 KB ter-minify, JS â‰¤ 10 KB, nol request CDN pihak ketiga untuk font/ikon ✓(FA & Google Fonts tidak dimuat di halaman v2).
 
 ---
 
@@ -64,7 +64,7 @@ $ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 S
 $css = Invoke-RestMethod -Uri "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" -Headers @{ "User-Agent" = $ua }
 $css | Select-String -Pattern "/\* latin \*/|url\((https://[^)]+\.woff2)\)|font-weight: (\d+)" -AllMatches
 ```
-Expected: output menampilkan per blok `/* latin */` sebuah URL `.woff2` + `font-weight` 400/600/800. Catat pasangan (weight â†’ URL latin; abaikan blok subset lain seperti latin-ext/vietnamese).
+Expected: output menampilkan per blok `/* latin */` sebuah URL `.woff2` + `font-weight` 400/600/800. Catat pasangan (weight → URL latin; abaikan blok subset lain seperti latin-ext/vietnamese).
 
 - [ ] **Step 2: Unduh tiga file latin**
 
@@ -76,7 +76,7 @@ Invoke-WebRequest -Uri "<URL_600>" -OutFile public\fonts\plus-jakarta-sans-latin
 Invoke-WebRequest -Uri "<URL_800>" -OutFile public\fonts\plus-jakarta-sans-latin-800.woff2
 Get-ChildItem public\fonts | Select-Object Name, Length
 ```
-Expected: 3 file ada, masing-masing ~15â€“30 KB. Kalau total > 120 KB, ulangi dengan subset lain yang lebih kecil â€” jangan lanjut.
+Expected: 3 file ada, masing-masing ~15–30 KB. Kalau total > 120 KB, ulangi dengan subset lain yang lebih kecil — jangan lanjut.
 
 ---
 
@@ -88,7 +88,7 @@ Expected: 3 file ada, masing-masing ~15â€“30 KB. Kalau total > 120 KB, ulan
 
 **Interfaces:**
 - Consumes: font dari Task 2.
-- Produces: variabel `--apx-*` + kelas dasar `.apx-container`, `.apx-btn`, `.apx-btn-wa`, `.skip-link` â€” dipakai semua komponen v2 dan halaman pilot.
+- Produces: variabel `--apx-*` + kelas dasar `.apx-container`, `.apx-btn`, `.apx-btn-wa`, `.skip-link` — dipakai semua komponen v2 dan halaman pilot.
 
 - [ ] **Step 1: Tulis `src/styles/tokens.css`**
 
@@ -187,7 +187,7 @@ a { color: var(--apx-blue); }
 - [ ] **Step 3: Build**
 
 Run: `npm run build`
-Expected: sukses (file belum direferensikan â€” build hanya memastikan tidak ada yang rusak).
+Expected: sukses (file belum direferensikan — build hanya memastikan tidak ada yang rusak).
 
 ---
 
@@ -197,14 +197,14 @@ Expected: sukses (file belum direferensikan â€” build hanya memastikan tida
 - Create: `src/components/ui/Icon.astro`
 
 **Interfaces:**
-- Produces: `import Icon from '../ui/Icon.astro'` â†’ `<Icon name="whatsapp" size={24} />`.
-- Nama ikon yang wajib tersedia (kebutuhan pilot + footer/navbar v2): `chevron-down`, `arrow-up`, `arrow-right`, `newspaper`, `calendar`, `whatsapp`, `facebook`, `instagram`, `map-pin`, `phone`, `mail`, `check`, `shield`.
+- Produces: `import Icon from '../ui/Icon.astro'` → `<Icon name="whatsapp" size={24} />`.
+- Nama ikon ✓yang wajib tersedia (kebutuhan pilot + footer/navbar v2): `chevron-down`, `arrow-up`, `arrow-right`, `newspaper`, `calendar`, `whatsapp`, `facebook`, `instagram`, `map-pin`, `phone`, `mail`, `check`, `shield`.
 
 - [ ] **Step 1: Buat kerangka komponen**
 
 ```astro
 ---
-// src/components/ui/Icon.astro â€” SVG inline, sumber path: Bootstrap Icons 1.11.3 (MIT)
+// src/components/ui/Icon.astro — SVG inline, sumber path: Bootstrap Icons 1.11.3 (MIT)
 const icons: Record<string, string> = {};
 const { name, size = 20 } = Astro.props;
 const d = icons[name];
@@ -442,7 +442,7 @@ import config from '../../../data/config.json';
 
 - [ ] **Step 2: Footer v2**
 
-Struktur kolom sama dengan `src/components/global/Footer.astro` (judul, urutan link, teks kontak dari `config.json` â€” salin apa adanya), ganti kulit:
+Struktur kolom sama dengan `src/components/global/Footer.astro` (judul, urutan link, teks kontak dari `config.json` — salin apa adanya), ganti kulit:
 
 ```astro
 ---
@@ -604,12 +604,12 @@ Expected: sukses.
 **Interfaces:**
 - Consumes: `Icon.astro`, token.
 - Produces (signature yang dipakai Task 9):
-  - `<SectionTitle label="HARGA" title="â€¦">` slot opsional subteks.
-  - `<InfoCard title="â€¦">` slot isi; prop `highlight?: boolean`.
-  - `<PriceTable caption="â€¦" head={[â€¦]} rows={[[â€¦], â€¦]} highlightRows={[2]} />` â€” `highlightRows` = indeks baris 0-based yang diberi latar tint (menggantikan `style="background:#f9f9f9"` legacy).
-  - `<FaqAccordion items={[{ q: "â€¦", a: "â€¦" }]} />`.
-  - `<CtaBar waText="â€¦" />` â€” judul/subteks fix sesuai pilot; tombol oranye "Minta Penawaran" (anchor `#contact` tidak ada di halaman ini â†’ tombol utama = WA hijau + sekunder tel: oranye outline).
-  - `<Breadcrumb items={[{ name: "Beranda", href: "/" }, â€¦]} />` â€” item terakhir tanpa href, `aria-current="page"`.
+  - `<SectionTitle label="HARGA" title="…">` slot opsional subteks.
+  - `<InfoCard title="…">` slot isi; prop `highlight?: boolean`.
+  - `<PriceTable caption="…" head={[…]} rows={[[…], …]} highlightRows={[2]} />` — `highlightRows` = indeks baris 0-based yang diberi latar tint (menggantikan `style="background:#f9f9f9"` legacy).
+  - `<FaqAccordion items={[{ q: "…", a: "…" }]} />`.
+  - `<CtaBar waText="…" />` — judul/subteks fix sesuai pilot; tombol oranye "Minta Penawaran" (anchor `#contact` tidak ada di halaman ini → tombol utama = WA hijau + sekunder tel: oranye outline).
+  - `<Breadcrumb items={[{ name: "Beranda", href: "/" }, …]} />` — item terakhir tanpa href, `aria-current="page"`.
 
 - [ ] **Step 1: SectionTitle**
 
@@ -802,14 +802,14 @@ Expected: sukses.
 
 - [ ] **Step 1: Baca sumber**
 
-Baca penuh `public/js/harga-calculator.js` (407 baris). Pahami: toggle metode mesin/manual, chips pilihan mesin & diameter, format rupiah pada input, hitung total = kedalaman Ã— harga Ã— titik, estimasi waktu dari `equipment.*.speed`, peringatan minimal order, format pesan WA di `sendToWA()`.
+Baca penuh `public/js/harga-calculator.js` (407 baris). Pahami: toggle metode mesin/manual, chips pilihan mesin & diameter, format rupiah pada input, hitung total = kedalaman × harga × titik, estimasi waktu dari `equipment.*.speed`, peringatan minimal order, format pesan WA di `sendToWA()`.
 
 - [ ] **Step 2: Tulis port**
 
 Buat modul yang mengekspor fungsi `initCalculator(root)` dan `sendToWA()`, membaca pricing dari `(document.getElementById('calculator-heading').closest('section')).querySelector('[data-pricing]').dataset.pricing` (JSON string). Salin logika & format keluaran **persis** dari file sumber (angka, pemisah ribuan `id-ID`, teks peringatan minimal order, format pesan WA). Ganti referensi class legacy (`method-btn`, dst.) dengan class `apx-calc-*` yang akan dipakai markup Task 10. Daftarkan sebagai modul halaman: `<script> import ... </script>` di pilot (Astro bundle + defer otomatis).
 
 Acceptance (dicek manual setelah Task 10):
-- Input: Mesin, Mini Crane, 30cm, kedalaman 12, 16 titik, harga kosong â†’ hasil & teks estimasi waktu SAMA dengan kalkulator di `npm run preview` versi legacy (bandingkan angka `totalPrice`, `detailPrice`, `estimationTime`, `orderInfo`).
+- Input: Mesin, Mini Crane, 30cm, kedalaman 12, 16 titik, harga kosong → hasil & teks estimasi waktu SAMA dengan kalkulator di `npm run preview` versi legacy (bandingkan angka `totalPrice`, `detailPrice`, `estimationTime`, `orderInfo`).
 - `sendToWA()` membuka URL `wa.me` dengan teks pesan format sama seperti versi lama (nomor tujuan sama).
 
 - [ ] **Step 3: Build**
@@ -885,43 +885,43 @@ OG image & type: `ogType="article"`, `image="https://agungperkasaborepile.com/im
       ...
 ```
 
-Hapus baris komentar palsu `<nav-yang-sudah...>` â€” BaseLayout merender navbar; halaman mulai dari header. Struktur lanjutan: setiap section legacy dibungkus `<section class="apx-section">` (atau `apx-section alt` untuk latar tint) dengan ISI TEKS DISALIN PERSIS:
+Hapus baris komentar palsu `<nav-yang-sudah...>` — BaseLayout merender navbar; halaman mulai dari header. Struktur lanjutan: setiap section legacy dibungkus `<section class="apx-section">` (atau `apx-section alt` untuk latar tint) dengan ISI TEKS DISALIN PERSIS:
 
 | Bagian lama (baris) | Kulit baru |
 |---|---|
-| illustration-row (161â€“171) | `apx-figure-row`: foto + teks sama, `width/height` sudah ada |
-| calculator-box (173â€“238) | `apx-calc`: markup ID sama semua (machineSelect, dst.), tombol metode `class="apx-calc-method"`, `data-pricing={JSON.stringify(pricing)}` di root section, tombol WA `onclick="sendToWA()"`, note sama |
-| tabel harga (241â€“286) | `PriceTable` Ã—2 (head `["Diameter","Harga (Rp/m)","Kedalaman Maks","Cocok Untuk"]`, rows dari `pricing.mesin`/`pricing.manual`; sel harga: `item.price ? \`Rp${item.price.toLocaleString('id-ID')}\` : 'Hubungi Kami'` â€” cek baseline: sel asli hanya angka + strong; ikuti baseline) |
-| factors (289â€“320) | grid `InfoCard` Ã—5 + `sondir-note` â†’ `apx-note` |
-| biaya tambahan (323â€“331) | grid `InfoCard` Ã—4 |
-| tips (333â€“340) | `apx-tips` (daftar sama) |
-| contoh proyek (343â€“415) | `apx-project` kartu: foto + InfoCard, teks spesifikasi disalin persis termasuk `<strong class="price-total">` |
-| perbandingan (418â€“463) | `PriceTable` dengan `highlightRows={[2,4]}` (baris 50cm & 80cm bergaris `#f9f9f9` di lama) + paragraf hint sama |
-| keuntungan (466â€“474) | grid `InfoCard` Ã—4 |
-| material (481â€“505) | grid `InfoCard` Ã—3 + hint |
-| garansi (508â€“511) | `apx-guarantee` (blok tint hijau lembut â†’ ubah ke tint biru brand; teks sama) |
-| why-section + portfolio + equip (516â€“644) | `apx-why`: reasons-grid â†’ InfoCard ringkas; portfolio grid foto sama (width/height sudah ada); equip grid sama (ikon SVG lokal `/imgs/icons/*.svg` tetap dipakai) |
-| FAQ (647â€“732) | `<FaqAccordion items={faqItems} />` â€” teks dari `faqItems` persis sama |
-| cta-box (735â€“739) | `<CtaBar waMessage={WA_MSG} />` |
-| internal-link-box (742â€“753) | `apx-links` (semua href & label sama) |
+| illustration-row (161–171) | `apx-figure-row`: foto + teks sama, `width/height` sudah ada |
+| calculator-box (173–238) | `apx-calc`: markup ID sama semua (machineSelect, dst.), tombol metode `class="apx-calc-method"`, `data-pricing={JSON.stringify(pricing)}` di root section, tombol WA `onclick="sendToWA()"`, note sama |
+| tabel harga (241–286) | `PriceTable` ×2 (head `["Diameter","Harga (Rp/m)","Kedalaman Maks","Cocok Untuk"]`, rows dari `pricing.mesin`/`pricing.manual`; sel harga: `item.price ? \`Rp${item.price.toLocaleString('id-ID')}\` : 'Hubungi Kami'` — cek baseline: sel asli hanya angka + strong; ikuti baseline) |
+| factors (289–320) | grid `InfoCard` ×5 + `sondir-note` → `apx-note` |
+| biaya tambahan (323–331) | grid `InfoCard` ×4 |
+| tips (333–340) | `apx-tips` (daftar sama) |
+| contoh proyek (343–415) | `apx-project` kartu: foto + InfoCard, teks spesifikasi disalin persis termasuk `<strong class="price-total">` |
+| perbandingan (418–463) | `PriceTable` dengan `highlightRows={[2,4]}` (baris 50cm & 80cm bergaris `#f9f9f9` di lama) + paragraf hint sama |
+| keuntungan (466–474) | grid `InfoCard` ×4 |
+| material (481–505) | grid `InfoCard` ×3 + hint |
+| garansi (508–511) | `apx-guarantee` (blok tint hijau lembut → ubah ke tint biru brand; teks sama) |
+| why-section + portfolio + equip (516–644) | `apx-why`: reasons-grid → InfoCard ringkas; portfolio grid foto sama (width/height sudah ada); equip grid sama (ikon ✓SVG lokal `/imgs/icons/*.svg` tetap dipakai) |
+| FAQ (647–732) | `<FaqAccordion items={faqItems} />` — teks dari `faqItems` persis sama |
+| cta-box (735–739) | `<CtaBar waMessage={WA_MSG} />` |
+| internal-link-box (742–753) | `apx-links` (semua href & label sama) |
 
-Bagian DI LUAR `main` tetap dirender dalam BaseLayout slot secara berurutan: artikel-section (759â€“821, kartu artikel pakai `Icon` untuk calendar/newspaper, teks sama), area layanan (824â€“834, `apx-area` grid, teks sama), maps (837â€“864, iframe & alamat sama), publisher-box (867â€“875, teks sama). Navbar/Footer/WA-float/scroll-top TIDAK ditulis di halaman (otomatis dari BaseLayout v2).
+Bagian DI LUAR `main` tetap dirender dalam BaseLayout slot secara berurutan: artikel-section (759–821, kartu artikel pakai `Icon` untuk calendar/newspaper, teks sama), area layanan (824–834, `apx-area` grid, teks sama), maps (837–864, iframe & alamat sama), publisher-box (867–875, teks sama). Navbar/Footer/WA-float/scroll-top TIDAK ditulis di halaman (otomatis dari BaseLayout v2).
 
-- [ ] **Step 3: Schema â€” salin 4 blok literal**
+- [ ] **Step 3: Schema — salin 4 blok literal**
 
-Blok `BreadcrumbList`, `Product`, `FAQPage` dari file lama (baris 933â€“1059) disalin **apa adanya** sebagai `<script type="application/ld+json">` literal. Blok Organization & LocalBusiness TIDAK disalin lagi â€” BaseLayout sudah me-render keduanya; pastikan argumen `localBusinessSchema({...})` di BaseLayout menghasilkan field sama: description pilot berbeda dari default BaseLayout!
+Blok `BreadcrumbList`, `Product`, `FAQPage` dari file lama (baris 933–1059) disalin **apa adanya** sebagai `<script type="application/ld+json">` literal. Blok Organization & LocalBusiness TIDAK disalin lagi — BaseLayout sudah me-render keduanya; pastikan argumen `localBusinessSchema({...})` di BaseLayout menghasilkan field sama: description pilot berbeda dari default BaseLayout!
 
-  **Konflik diketahui:** BaseLayout me-render LocalBusiness dengan description default situs, sedangkan pilot punya description sendiri + `areaServed`. Solusi: tambah prop opsional `localBusinessOverride?: object` di BaseLayout â€” jika ada, dipakai menggantikan argumen default. Isi dengan objek persis dari pilot lama (baris 8â€“17).
+  **Konflik diketahui:** BaseLayout me-render LocalBusiness dengan description default situs, sedangkan pilot punya description sendiri + `areaServed`. Solusi: tambah prop opsional `localBusinessOverride?: object` di BaseLayout — jika ada, dipakai menggantikan argumen default. Isi dengan objek persis dari pilot lama (baris 8–17).
 
 - [ ] **Step 4: Scoped style halaman**
 
-Tulis `<style>` di akhir file halaman berisi: `.apx-post` (max-width 860px), `.apx-post-hero` (latar navy, teks putih, radius bawah, padding 40px 24px; title putih 800 clamp(26px,4vw,38px)), `.apx-badge` (pill oranye), `.apx-post-meta` (rgb putih .75), `.apx-section` (padding-block 40px; `.alt` background tint, full-bleed via negative margin tidak perlu â€” cukup latar di wrapper luar), grid `.apx-grid` (repeat(auto-fit,minmax(220px,1fr)); gap 16px), `.apx-calc` (kartu putih border, result blok navy: label putih, `#totalPrice` oranye 800 32px), `.apx-note`, `.apx-tips`, `.apx-project`, `.apx-guarantee`, `.apx-why`, `.apx-links`, `.apx-area`, `.apx-publisher`. Semua warna via `var(--apx-*)`.
+Tulis `<style>` di akhir file halaman berisi: `.apx-post` (max-width 860px), `.apx-post-hero` (latar navy, teks putih, radius bawah, padding 40px 24px; title putih 800 clamp(26px,4vw,38px)), `.apx-badge` (pill oranye), `.apx-post-meta` (rgb putih .75), `.apx-section` (padding-block 40px; `.alt` background tint, full-bleed via negative margin tidak perlu — cukup latar di wrapper luar), grid `.apx-grid` (repeat(auto-fit,minmax(220px,1fr)); gap 16px), `.apx-calc` (kartu putih border, result blok navy: label putih, `#totalPrice` oranye 800 32px), `.apx-note`, `.apx-tips`, `.apx-project`, `.apx-guarantee`, `.apx-why`, `.apx-links`, `.apx-area`, `.apx-publisher`. Semua warna via `var(--apx-*)`.
 
 - [ ] **Step 5: Build + verifikasi identik**
 
 Run: `npm run build`
 
-Lalu jalankan verifikasi (simpan sebagai `tools/verify-renovasi.ps1` di repo â€” boleh dibuat, bukan file legacy):
+Lalu jalankan verifikasi (simpan sebagai `tools/verify-renovasi.ps1` di repo — boleh dibuat, bukan file legacy):
 
 ```powershell
 param([string]$Before, [string]$After)
@@ -954,9 +954,9 @@ npm run build; if ($?) {
     -After "dist\harga\bore-pile-2026.html"
 }
 ```
-Expected: `OK:` untuk keenam kunci; exit code 0. Kalau BEDA: perbaiki halaman sampai lolos â€” JANGAN ubah baseline.
+Expected: `OK:` untuk keenam kunci; exit code 0. Kalau BEDA: perbaiki halaman sampai lolos — JANGAN ubah baseline.
 
-Catatan: `hx` bisa beda jika komponen menambah/mengubah heading â€” bandingkan manual; teks heading konten HARUS sama, heading fungsional komponen (mis. h2 CtaBar yang menggantikan h3 cta-box lama) diterima asal teksnya sama persis dengan yang lama.
+Catatan: `hx` bisa beda jika komponen menambah/mengubah heading — bandingkan manual; teks heading konten HARUS sama, heading fungsional komponen (mis. h2 CtaBar yang menggantikan h3 cta-box lama) diterima asal teksnya sama persis dengan yang lama.
 
 - [ ] **Step 6: Verifikasi manual interaksi**
 
@@ -974,16 +974,16 @@ Cek: navbar sticky & dropdown & menu mobile jalan; kalkulator hitung sama dengan
 ```powershell
 $r = Invoke-RestMethod "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://agungperkasaborepile.com/harga/bore-pile-2026.html&strategy=mobile"
 ```
-Catatan: URL produksi belum berkulit baru â€” gunakan hasil deploy atau `npm run preview` + PSI via Chrome Lighthouse lokal (`npx` tidak boleh â€” pakai Chrome DevTools â†’ Lighthouse mobile) terhadap `localhost:4321`. Expected: Performance â‰¥ 90 mobile; catat LCP/CLS.
+Catatan: URL produksi belum berkulit baru — gunakan hasil deploy atau `npm run preview` + PSI via Chrome Lighthouse lokal (`npx` tidak boleh — pakai Chrome DevTools → Lighthouse mobile) terhadap `localhost:4321`. Expected: Performance â‰¥ 90 mobile; catat LCP/CLS.
 
 - [ ] **Step 2: Laporkan ke pemilik**
 
-Sertakan: hasil verifikasi identik (6Ã—OK), skor Lighthouse, screenshot desktop+mobile, daftar file baru. Tunggu cek visual pemilik SEBELUM batch berikutnya. Jangan commit kecuali diminta.
+Sertakan: hasil verifikasi identik (6×OK), skor Lighthouse, screenshot desktop+mobile, daftar file baru. Tunggu cek visual pemilik SEBELUM batch berikutnya. Jangan commit kecuali diminta.
 
 ---
 
 ## Self-Review
 
-1. **Spec coverage:** tokens âœ“(T3) font âœ“(T2,T3) ikon âœ“(T4) BaseLayout pintu âœ“(T5) Navbar/Footer/WA/ScrollTop v2 âœ“(T6,T7) komponen ui âœ“(T8) kalkulator dari harga.json âœ“(T9,T10) pilot migrasi âœ“(T10) verifikasi identik âœ“(T10.5) PSI âœ“(T11) isolasi legacy âœ“(constraint + T5 gating) anti-slop âœ“(foto asli & teks asli dipertahankan T10).
-2. **Placeholder scan:** Task 9 Step 2 merujuk file sumber untuk port â€” disengaja (port 1:1 dari file nyata, bukan TBD). Task 10 faqItems merujuk baris file lama dengan instruksi "persis sama" â€” sumber jelas dan terukur.
-3. **Type consistency:** nama komponen/props konsisten (`design`, `ApxStyles`, `items`, `rows`, `highlightRows`, `waMessage`, `data-pricing`, `__APX_PRICING__` â†’ dirapikan jadi data-attribute saja di T9/T10).
+1. **Spec coverage:** tokens ✓(T3) font ✓(T2,T3) ikon ✓(T2,T3) token-map ✓
+2. **Placeholder scan:** Task 9 Step 2 merujuk file sumber untuk port — disengaja (port 1:1 dari file nyata, bukan TBD). Task 10 faqItems merujuk baris file lama dengan instruksi "persis sama" — sumber jelas dan terukur.
+3. **Type consistency:** nama komponen/props konsisten (`design`, `ApxStyles`, `items`, `rows`, `highlightRows`, `waMessage`, `data-pricing`, `__APX_PRICING__` → dirapikan jadi data-attribute saja di T9/T10).

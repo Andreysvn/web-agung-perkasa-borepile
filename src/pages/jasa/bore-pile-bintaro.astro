@@ -51,6 +51,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
     
     <link rel="stylesheet" href="/css/borepile-kota.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
@@ -93,7 +94,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
             <div style="margin-bottom: 20px; color: #6c757d; font-size: 0.85rem;">
                 <span>Update: 02 Agustus 2026</span> |
                 <span>Tim Agung Perkasa</span> |
-                <span>ðŸ“ Bintaro & Sekitarnya (Bintaro Sektor 1-9, Pondok Aren, Pondok Ranji)</span>
+                <span>📍 Bintaro & Sekitarnya (Bintaro Sektor 1-9, Pondok Aren, Pondok Ranji)</span>
             </div>
 
             <div class="update-badge">
@@ -103,7 +104,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
             <!-- LEAD SINGKAT + GAMBAR (LCP - tanpa lazy load) -->
             <div class="illustration-row">
                 <div class="illustration-img">
-                    <img src="imgs/borepile-mesin-biru.webp" alt="Proses pengeboran bore pile menggunakan mesin mini crane di Bintaro" width="400" height="250" fetchpriority="high">
+                    <img src="imgs/borepile-mesin-biru.webp" alt="Proses pengeboran bore pile menggunakan mesin mini crane di Bintaro" width="400" height="250" fetchpriority="high" data-lightbox>
                     <div class="caption">Proses pengeboran bore pile dengan mini crane di Bintaro</div>
                 </div>
                 <div class="illustration-text">
@@ -215,7 +216,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                     const points = parseInt(pointsInput.value);
                     const totalPrice = pricePerM * depthForCalc * points;
                     totalPriceDiv.innerHTML = formatRp(totalPrice);
-                    detailPriceDiv.innerHTML = `${formatRp(pricePerM)}/m Ã— ${depthForCalc}m Ã— ${points} titik = ${formatRp(totalPrice)}${warningMsg}`;
+                    detailPriceDiv.innerHTML = `${formatRp(pricePerM)}/m × ${depthForCalc}m × ${points} titik = ${formatRp(totalPrice)}${warningMsg}`;
                     
                     let days = currentMethod === 'mesin' ? Math.ceil(points / (depthForCalc < 10 ? 3.5 : 2.5)) : Math.ceil(points / 2.5);
                     estimationTimeDiv.innerHTML = `Estimasi waktu: ${days} hari kerja${warningMsg}`;
@@ -285,25 +286,25 @@ import FaIcon from '../../components/icons/FaIcon.astro';
             <section>
                 <h2 style="color: var(--primary-color); margin: 25px 0 10px;">Biaya Tambahan di Bintaro</h2>
                 <div class="info-grid">
-                    <div class="info-card"><h3>ðŸš› Mobilisasi Alat</h3><p>Mesin mini crane: Rp3-5jt | Manual: Rp1-2jt (Bintaro & sekitarnya)</p></div>
-                    <div class="info-card"><h3>ðŸ“ Minimal Order</h3><p>Mesin: 200 meter | Manual: 100 meter, di bawah itu bisa hubungi kami</p></div>
-                    <div class="info-card"><h3>ðŸ’§ Sedot Lumpur</h3><p>Rp800.000 - Rp1.200.000/rit (tergantung volume)</p></div>
-                    <div class="info-card"><h3>ðŸ“Š Data Sondir</h3><p>Sangat wajib untuk menentukan kedalaman tepat</p></div>
+                    <div class="info-card"><h3>🚛 Mobilisasi Alat</h3><p>Mesin mini crane: Rp3-5jt | Manual: Rp1-2jt (Bintaro & sekitarnya)</p></div>
+                    <div class="info-card"><h3>📏 Minimal Order</h3><p>Mesin: 200 meter | Manual: 100 meter, di bawah itu bisa hubungi kami</p></div>
+                    <div class="info-card"><h3>💧 Sedot Lumpur</h3><p>Rp800.000 - Rp1.200.000/rit (tergantung volume)</p></div>
+                    <div class="info-card"><h3>📊 Data Sondir</h3><p>Sangat wajib untuk menentukan kedalaman tepat</p></div>
                 </div>
             </section>
 
             <!-- GAMBAR PERBANDINGAN DIAMETER -->
             <div class="illustration-row">
                 <div class="illustration-img">
-                    <img src="imgs/hasil-lubang-borepile.webp" alt="Lubang bore pile yang dimasukan tulangan besi sebelum pengecoran beton di Bintaro" width="400" height="250" loading="lazy">
+                    <img src="imgs/hasil-lubang-borepile.webp" alt="Lubang bore pile yang dimasukan tulangan besi sebelum pengecoran beton di Bintaro" width="400" height="250" loading="lazy" data-lightbox>
                     <div class="caption">Lubang bore pile sebelum pengecoran beton</div>
                 </div>
                 <div class="illustration-text">
                     <h3 style="color: var(--primary-color);">Tips memilih diameter:</h3>
                     <ul>
-                        <li><strong>30 cm</strong> â†’ rumah 1-2 lantai (paling banyak dipilih)</li>
-                        <li><strong>40-50 cm</strong> â†’ ruko, kantor, gudang, rumah sakit</li>
-                        <li><strong>60-80 cm</strong> â†’ hotel, gedung bertingkat</li>
+                        <li><strong>30 cm</strong> → rumah 1-2 lantai (paling banyak dipilih)</li>
+                        <li><strong>40-50 cm</strong> → ruko, kantor, gudang, rumah sakit</li>
+                        <li><strong>60-80 cm</strong> → hotel, gedung bertingkat</li>
                     </ul>
                 </div>
             </div>
@@ -313,17 +314,17 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                 <h2 style="color: var(--primary-color); margin: 25px 0 10px;">Contoh Hitungan Proyek di Bintaro</h2>
                 <div class="info-grid">
                     <div class="info-card">
-                        <h3>ðŸ˜ï¸ Rumah 2 Lantai di Bintaro Sektor 3</h3>
-                        <p><strong>Spesifikasi:</strong> Bore pile mesin Ã˜30cm, kedalaman 12m, 16 titik<br>
-                        <strong>Biaya jasa:</strong> 12m Ã— Rp120.000 Ã— 16 = Rp23.040.000<br>
+                        <h3>🏢 Rumah 2 Lantai di Bintaro Sektor 3</h3>
+                        <p><strong>Spesifikasi:</strong> Bore pile mesin Ø30cm, kedalaman 12m, 16 titik<br>
+                        <strong>Biaya jasa:</strong> 12m × Rp120.000 × 16 = Rp23.040.000<br>
                         <strong>+ mobilisasi:</strong> Rp3.500.000<br>
                         <strong>Total:</strong> <strong>Rp26.540.000</strong><br>
                         <strong>Waktu:</strong> 5-7 hari kerja</p>
                     </div>
                     <div class="info-card">
-                        <h3>ðŸ  Rumah 1 Lantai di Pondok Ranji Bintaro</h3>
-                        <p><strong>Spesifikasi:</strong> Bore pile manual Ã˜30cm, kedalaman 6m, 12 titik<br>
-                        <strong>Biaya jasa:</strong> 6m Ã— Rp80.000 Ã— 12 = Rp5.760.000<br>
+                        <h3>🏡 Rumah 1 Lantai di Pondok Ranji Bintaro</h3>
+                        <p><strong>Spesifikasi:</strong> Bore pile manual Ø30cm, kedalaman 6m, 12 titik<br>
+                        <strong>Biaya jasa:</strong> 6m × Rp80.000 × 12 = Rp5.760.000<br>
                         <strong>+ mobilisasi:</strong> Rp1.500.000<br>
                         <strong>Total:</strong> <strong>Rp7.260.000</strong><br>
                         <strong>Waktu:</strong> 3-5 hari kerja</p>
@@ -333,13 +334,13 @@ import FaIcon from '../../components/icons/FaIcon.astro';
 
             <div class="illustration-row">
                 <div class="illustration-img">
-                    <img src="imgs/borepile-dan-truk-molen.webp" alt="Proses pengerjaan bore pile di kawasan Bintaro Tangerang Selatan" width="400" height="250" loading="lazy">
+                    <img src="imgs/borepile-dan-truk-molen.webp" alt="Proses pengerjaan bore pile di kawasan Bintaro Tangerang Selatan" width="400" height="250" loading="lazy" data-lightbox>
                     <div class="caption">Proses pengerjaan bore pile di kawasan Bintaro</div>
                 </div>
                 <div class="illustration-text">
 
             <p>Butuh harga khusus untuk diameter 30cm? 
-            <a href="harga-bore-pile-30cm.html">Lihat detail harga bore pile diameter 30cm â†’</a>
+            <a href="/harga/bore-pile/30cm.html">Lihat detail harga bore pile diameter 30cm →</a>
             </p>
                 </div>
             </div>
@@ -349,7 +350,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                 <h2 style="color: var(--primary-color); margin: 30px 0 10px;">Bore Pile untuk Kawasan Premium Bintaro</h2>
                 <p>Bintaro adalah kawasan premium di Tangerang Selatan dengan <strong>perkembangan properti yang sangat pesat</strong>. Wilayah ini dikenal dengan perumahan kelas atas, apartemen, dan pusat perbelanjaan modern. Bore pile menjadi pilihan utama pondasi di Bintaro karena minim getaran dan daya dukung tinggi.</p>
                 
-                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">ðŸ˜ï¸ Area Prioritas di Bintaro</h3>
+                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">🏢 Area Prioritas di Bintaro</h3>
                 <ul style="margin-bottom: 15px; margin-left: 20px;">
                     <li><strong>Bintaro Sektor 1-9</strong> - pusat kawasan dengan berbagai proyek properti</li>
                     <li><strong>Pondok Aren</strong> - area penyangga Bintaro dengan banyak perumahan</li>
@@ -357,7 +358,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                     <li><strong>Rempoa, Cirendeu, Jurang Mangu</strong> - area perbatasan dengan Jakarta Selatan</li>
                 </ul>
                 
-                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">ðŸ—ï¸ Jenis Proyek yang Dominan di Bintaro</h3>
+                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">🏗️ Jenis Proyek yang Dominan di Bintaro</h3>
                 <ul style="margin-bottom: 15px; margin-left: 20px;">
                     <li><strong>Rumah mewah 2-3 lantai</strong> - menggunakan bore pile diameter 30-40 cm</li>
                     <li><strong>Ruko dan perkantoran</strong> - diameter 40-50 cm untuk bangunan 3-5 lantai</li>
@@ -365,15 +366,15 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                     <li><strong>Sekolah dan fasilitas umum</strong> - proyek dengan standar keamanan tinggi</li>
                 </ul>
                 
-                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">ðŸš— Akses dan Mobilisasi ke Bintaro</h3>
+                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">🚗 Akses dan Mobilisasi ke Bintaro</h3>
                 <p>Bintaro terletak strategis di perbatasan Jakarta Selatan dan Tangerang Selatan, dengan akses melalui tol Pondok Aren - Bintaro, Jl. Bintaro Raya, dan Jl. Ciledug Raya. <strong>Biaya mobilisasi mesin mini crane ke Bintaro sekitar Rp3-5 juta</strong>, tergantung lokasi spesifik proyek.</p>
                 
-                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">ðŸ¥ Proyek di Sekitar Rumah Sakit dan Pusat Perbelanjaan</h3>
+                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">🏥 Proyek di Sekitar Rumah Sakit dan Pusat Perbelanjaan</h3>
                 <p>Bintaro memiliki banyak fasilitas publik seperti Bintaro Plaza, Bintaro Xchange, RS Premier Bintaro, dan berbagai sekolah internasional. Proyek di area ini biasanya membutuhkan bore pile dengan diameter 40-50 cm untuk bangunan 3-4 lantai.</p>
                 
-                <p><strong>ðŸ’¡ Tips untuk proyek di Bintaro:</strong> Tanah di Bintaro umumnya cukup stabil dan padat. Berdasarkan pengalaman kami, kedalaman bore pile yang dibutuhkan biasanya 8-15 meter tergantung lokasi spesifik. Pastikan Anda memiliki data sondir agar kami bisa menentukan kedalaman yang tepat dan efisien.</p>
+                <p><strong>💡 Tips untuk proyek di Bintaro:</strong> Tanah di Bintaro umumnya cukup stabil dan padat. Berdasarkan pengalaman kami, kedalaman bore pile yang dibutuhkan biasanya 8-15 meter tergantung lokasi spesifik. Pastikan Anda memiliki data sondir agar kami bisa menentukan kedalaman yang tepat dan efisien.</p>
                 
-                <p><strong>ðŸ“ Proyek terbanyak kami di Bintaro:</strong> Bintaro Sektor 3, Bintaro Sektor 7, Pondok Aren, Pondok Ranji, dan perumahan cluster di sekitar Jl. Bintaro Raya.</p>
+                <p><strong>📍 Proyek terbanyak kami di Bintaro:</strong> Bintaro Sektor 3, Bintaro Sektor 7, Pondok Aren, Pondok Ranji, dan perumahan cluster di sekitar Jl. Bintaro Raya.</p>
             </section>
 
             <!-- DAFTAR AREA BINTARO (SEO LOKAL) -->
@@ -409,7 +410,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                             <div class="project-info">
                                 <h3>Borepile vs Strauss Pile</h3>
                                 <p>Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik.</p>
-                                <a href="bore-pile-vs-strauss.html" class="btn btn-primary">Baca Artikel â†’</a>
+                                <a href="bore-pile-vs-strauss.html" class="btn btn-primary">Baca Artikel →</a>
                             </div>
                         </div>
                         <div class="project-card">
@@ -417,7 +418,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                             <div class="project-info">
                                 <h3>Harga Bore Pile Diameter 30cm</h3>
                                 <p>Lihat harga terbaru 2026 untuk bore pile diameter 30cm.</p>
-                                <a href="harga-bore-pile-30cm.html" class="btn btn-primary">Baca Artikel â†’</a>
+                                <a href="/harga/bore-pile/30cm.html" class="btn btn-primary">Baca Artikel →</a>
                             </div>
                         </div>
                         <div class="project-card">
@@ -425,7 +426,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                             <div class="project-info">
                                 <h3>Harga Bore Pile Jakarta 2026</h3>
                                 <p>Informasi terkini tentang harga bore pile di wilayah Jakarta.</p>
-                                <a href="bore-pile-jakarta.html" class="btn btn-primary">Baca Artikel â†’</a>
+                                <a href="/jasa/bore-pile/jakarta.html" class="btn btn-primary">Baca Artikel →</a>
                             </div>
                         </div>
                     </div>
@@ -443,12 +444,12 @@ import FaIcon from '../../components/icons/FaIcon.astro';
             </div>
 
             <div style="margin-top: 30px; padding: 15px; background: #f5f7fa; border-radius: 12px; text-align: center;">
-                <p style="margin: 0;"><strong>ðŸ“ Layanan juga tersedia di kota lain:</strong><br>
-                <a href="bore-pile-jakarta.html">Jakarta</a> | 
-                <a href="bore-pile-bekasi.html">Bekasi</a> | 
-                <a href="bore-pile-tangerang.html">Tangerang</a> | 
-                <a href="bore-pile-depok.html">Depok</a> |
-                <a href="bore-pile-bogor.html">Bogor</a> |
+                <p style="margin: 0;"><strong>📍 Layanan juga tersedia di kota lain:</strong><br>
+                <a href="/jasa/bore-pile/jakarta.html">Jakarta</a> | 
+                <a href="/jasa/bore-pile/bekasi.html">Bekasi</a> | 
+                <a href="/jasa/bore-pile/tangerang.html">Tangerang</a> | 
+                <a href="/jasa/bore-pile/depok.html">Depok</a> |
+                <a href="/jasa/bore-pile/bogor.html">Bogor</a> |
                 <a href="bore-pile-ciputat.html">Ciputat</a> |
                 <a href="bore-pile-bsd.html">BSD</a> |
                 <a href="bore-pile-pamulang.html">Pamulang</a>
@@ -498,7 +499,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                     <h3>Layanan</h3>
                     <ul>
                         <li><a href="harga-bore-pile-2026.html">Jasa Borepile Mesin</a></li>
-                        <li><a href="harga-bore-pile-30cm.html">Jasa Borepile Manual</a></li>
+                        <li><a href="/harga/bore-pile/30cm.html">Jasa Borepile Manual</a></li>
                         <li><a href="/#contact">Konsultasi Pondasi</a></li>
                         <li><a href="/#about">Tentang Kami</a></li>
                     </ul>
@@ -564,6 +565,34 @@ import FaIcon from '../../components/icons/FaIcon.astro';
     }
     </script>
 
+    <!-- ===== SCHEMA BREADCRUMB ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Beranda",
+                "item": "https://agungperkasaborepile.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Jasa",
+                "item": "https://agungperkasaborepile.com/jasa/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Bore Pile Bintaro",
+                "item": "https://agungperkasaborepile.com/jasa/bore-pile-bintaro.html"
+            }
+        ]
+    }
+    </script>
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -578,5 +607,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
         ]
     }
     </script>
+
+    <script is:inline src="/js/lightbox.js"></script>
 </body>
 </html>

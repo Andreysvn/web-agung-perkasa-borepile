@@ -30,7 +30,7 @@
       { "diameter": "30 cm", "price": 100000, "depth": "10 meter", "suitable": "Rumah, ruko 1-2 lantai (tanah padat)" },
       { "diameter": "40 cm", "price": 120000, "depth": "10 meter", "suitable": "Rumah, ruko 2 lantai (tanah padat)" }
     ],
-    "hasHidrolik": true
+    "hasHidrolik": false
   },
   "factors": [
     {
@@ -117,10 +117,6 @@
       {
         "name": "Strauss Pile (bore pile manual)",
         "desc": "Alat bor manual full menggunakan tenaga manusia dalam proses pengeboran (diputar oleh tukang bore pile), memakai metode dry boring (bor kering). Diameter 20-40cm, cocok untuk lokasi seperti di gang sempit dan area terbatas lainnya yang tidak bisa dijangkau mini crane dan gawangan, karena mobilisasi yang lebih fleksibel (bisa menggunakan motor)."
-      },
-      {
-        "name": "Mesin Hidrolik SANY",
-        "desc": "Mesin hidrolik SANY untuk proyek bore pile skala besar. Kapasitas diameter besar dan kedalaman hingga 30+ meter. Cocok untuk proyek gedung bertingkat, jembatan, dan infrastruktur besar di Tangerang."
       }
     ]
   },
@@ -153,7 +149,7 @@
     },
     {
       "q": "Apakah bore pile bisa dikerjakan di zona industri Cikupa dan Balaraja?",
-      "a": "Bisa. Zona industri seperti <strong>Cikupa dan Balaraja</strong> memiliki akses jalan yang lebih lebar untuk mobilisasi alat besar seperti mini crane dan mesin hidrolik SANY. Kami sudah berpengalaman mengerjakan proyek bore pile di kawasan industri Tangerang."
+      "a": "Bisa. Zona industri seperti <strong>Cikupa dan Balaraja</strong> memiliki akses jalan yang lebih lebar untuk mobilisasi alat besar seperti mini crane. Kami sudah berpengalaman mengerjakan proyek bore pile di kawasan industri Tangerang."
     },
     {
       "q": "Apakah ada perbedaan biaya bore pile di Tangerang Kota vs Kabupaten?",

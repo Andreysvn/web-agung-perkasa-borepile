@@ -66,6 +66,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     
     <!-- CSS EKSTERNAL -->
     <link rel="stylesheet" href="/css/borepile-kota.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6GBTKJB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -77,8 +78,8 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     })(window,document,'script','dataLayer','GTM-P6GBTKJB');</script>
     <!-- End Google Tag Manager -->
      <!-- Google tag (gtag.js) - Google Ads -->
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-16649506462"></script>
-<script is:inline>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=AW-16649506462"></script>
+<script>
   window.addEventListener('load', function() {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -106,9 +107,9 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
                     <ul class="dropdown-content">
                         <li><a href="/jasa/">Jasa </a></li>
-                        <li><a href="/jasa/bore-pile-jakarta.html">Bore Pile Mesin</a></li>
-                        <li><a href="/harga/bore-pile-30cm.html">Strauss Pile</a></li>
-                        <li><a href="/#services">Bore Pile Hidrolik</a></li>
+                        <li><a href="/jasa/bore-pile/jakarta.html">Bore Pile Mesin</a></li>
+                        <li><a href="/harga/bore-pile/30cm.html">Strauss Pile</a></li>
+
                     </ul>
                 </li>
                 <li role="listitem"><a href="/artikel/">Artikel</a></li>
@@ -134,7 +135,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <div class="page-meta">
                 <span>Update: 02 Agustus 2026</span> |
                 <span>Agung Perkasa</span> |
-                <span>ðŸ“ Depok & Sekitarnya</span>
+                <span>📍 Depok & Sekitarnya</span>
             </div>
 
             <div class="update-badge">
@@ -143,7 +144,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
 
             <div class="illustration">
                 <div class="illustration-img">
-                    <img src="/imgs/jasa-bore-pile-depok-agung-perkasa.webp" alt="Proses pengeboran bore pile mini crane di Depok untuk pondasi bangunan di Depok" title="Bore Pile Mini Crane Depok" width="350" height="372" fetchpriority="high">
+                    <img src="/imgs/jasa-bore-pile-depok-agung-perkasa.webp" alt="Proses pengeboran bore pile mini crane di Depok untuk pondasi bangunan di Depok" title="Bore Pile Mini Crane Depok" width="350" height="372" fetchpriority="high" data-lightbox>
                     <div class="caption">Proses pengeboran bore pile menggunakan alat mini crane di Depok</div>
                 </div>
                 <div class="illustration-text">
@@ -168,7 +169,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                             <select id="machineSelect">
                                 <option value="minicrane">Mini Crane</option>
                                 <option value="gawangan">Gawangan</option>
-                                <option value="sany">Hidrolik (SANY)</option>
+
                             </select>
                             <div class="price-hint">*Harga dan minimal order berbeda tiap alat</div>
                         </div>
@@ -215,7 +216,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </div>
                     
                     <button onclick="sendToWA()" class="btn-wa" aria-label="Konsultasikan ke WhatsApp">Konsultasikan ke WhatsApp</button>
-                    <div class="calculator-note">*Estimasi untuk jasa pengeboran saja (belum termasuk material beton & besi). Minimal order: Mini Crane 200m, Gawangan 150m, SANY 400m, Manual 100m. Di bawah itu bisa hubungi admin kami untuk penawaran lebih lanjut.</div>
+                    <div class="calculator-note">*Estimasi untuk jasa pengeboran saja (belum termasuk material beton & besi). Minimal order: Mini Crane 200m, Gawangan 150m, Manual 100m. Di bawah itu bisa hubungi admin kami untuk penawaran lebih lanjut.</div>
                 </div>
             </section>
 
@@ -258,21 +259,10 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </table>
                 </div>
 
-                <h3>Bore Pile Mesin Hidrolik (Sany SR65)</h3>
-                <div class="table-responsive">
-                    <table class="price-table">
-                        <caption>Tabel harga bore pile mesin hidrolik Sany SR65 per meter</caption>
-                        <thead>
-                            <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>40-110 cm</td><td><strong>Hubungi Kami</strong></td><td>20-27 meter</td><td>Proyek skala menengah</td></tr>
-                        </tbody>
-                    </table>
-                </div>
+
             </section>
 
-              <a href="/jasa/">Lihat Jasa Bore Pile & Strauss Pile untuk wilayah Anda â†’</a>
+              <a href="/jasa/">Lihat Jasa Bore Pile & Strauss Pile untuk wilayah Anda →</a>
 
             <section aria-labelledby="factors-heading">
                 <h2 id="factors-heading" class="section-heading">Faktor yang Mempengaruhi Harga Bore Pile Depok 2026</h2>
@@ -282,7 +272,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                 <div class="info-grid">
                     <div class="info-card">
                         <h3>1. Diameter & Kedalaman</h3>
-                        <p>Semakin besar diameter (30cm, 40cm, 50cm, dst) dan semakin dalam pengeboran yang hingga tanah keras (misal 15-18 meter), maka biaya per meter semakin tinggi karena biaya ditentukan oleh diameter dan kedalaman mÂ¹ atau meter lari.</p>
+                        <p>Semakin besar diameter (30cm, 40cm, 50cm, dst) dan semakin dalam pengeboran yang hingga tanah keras (misal 15-18 meter), maka biaya per meter semakin tinggi karena biaya ditentukan oleh diameter dan kedalaman m¹ atau meter lari.</p>
                     </div>
                     <div class="info-card">
                         <h3>2. Kondisi Tanah Depok</h3>
@@ -294,7 +284,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </div>
                     <div class="info-card">
                         <h3>4. Volume Pekerjaan</h3>
-                        <p>Minimal order jasa bore pile Depok: mesin 200 meter, strauss pile 100 meter, hidrolik 1200 meter. Hubungi kami untuk volume di bawah itu.</p>
+                        <p>Minimal order jasa bore pile Depok: mesin 200 meter, strauss pile 100 meter. Hubungi kami untuk volume di bawah itu.</p>
                     </div>
                     <div class="info-card">
                         <h3>5. Akses & Tingkat Kesulitan Lapangan</h3>
@@ -314,8 +304,8 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <section>
                 <h2 class="section-heading-sm">Estimasi Biaya Tambahan di Depok</h2>
                 <div class="info-grid">
-                    <div class="info-card"><h3>ðŸš› Mobilisasi Alat</h3><p>Mini crane: Rp2.5-4jt | Hidrolik (Sany): 25-30jt | Strauss pile: Rp1-1.5jt</p></div>
-                    <div class="info-card"><h3>Minimal Order</h3><p>Mini crane & gawangan: 200m | Hidrolik: 1200m | Strauss Pile: 100m</p></div>
+                    <div class="info-card"><h3>🚛 Mobilisasi Alat</h3><p>Mini crane: Rp2.5-4jt | Strauss pile: Rp1-1.5jt</p></div>
+                    <div class="info-card"><h3>Minimal Order</h3><p>Mini crane & gawangan: 200m | Strauss Pile: 100m</p></div>
                     <div class="info-card"><h3>Sedot Lumpur</h3><p>Metode wash boring: Rp800.000 - Rp1.200.000/rit (tergantung volume)</p></div>
                     <div class="info-card"><h3>Data Sondir</h3><p>Wajib untuk menentukan kedalaman pengeboran yang tepat hingga tanah keras</p></div>
                 </div>
@@ -324,9 +314,9 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <div class="tips-section">
                 <h3 class="tips-heading">Tips Memilih Diameter Bore Pile untuk Proyek di Depok</h3>
                 <ul>
-                    <li><strong>30 cm</strong> â†’ rumah 1-2 lantai (paling banyak dipilih)</li>
-                    <li><strong>40-50 cm</strong> â†’ ruko, kantor, gudang, rumah sakit</li>
-                    <li><strong>60-110 cm</strong> â†’ hotel, gedung bertingkat, pabrik</li>
+                    <li><strong>30 cm</strong> → rumah 1-2 lantai (paling banyak dipilih)</li>
+                    <li><strong>40-50 cm</strong> → ruko, kantor, gudang, rumah sakit</li>
+                    <li><strong>60-110 cm</strong> → hotel, gedung bertingkat, pabrik</li>
                 </ul>
             </div>
 
@@ -339,15 +329,15 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <div class="project-img">
                 <img src="/imgs/borepile-dekat-gedung.jpg" 
                      alt="Proyek b" 
-                     loading="lazy">
+                     loading="lazy" data-lightbox>
                 <div class="project-caption">Bore Pile mini crane di sebelah Zamzam Tower, Pancoran Mas, Depok</div>
             </div>
             <div class="project-text">
                 <div class="info-card">
                     <h3>Bangunan, Depok</h3>
-                    <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane Ã˜40cm, kedalaman 13m, 34 titik<br>
+                    <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane Ø40cm, kedalaman 13m, 34 titik<br>
                     <strong>Metode:</strong> Wash Boring (Bor basah)</p>
-                    <p><strong>Biaya jasa:</strong> 13m Ã— Rp135.000 Ã— 34 = Rp59.670.000<br>
+                    <p><strong>Biaya jasa:</strong> 13m × Rp135.000 × 34 = Rp59.670.000<br>
                     <strong>+ mobilisasi:</strong> Rp3.000.000<br>
                     <strong>Total:</strong> <strong class="price-total">Rp62.070.000</strong><br>
                     <strong>Waktu pengerjaan:</strong> 8-10 hari kerja</p>
@@ -362,9 +352,9 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <div class="project-text" style="flex: 1; min-width: 100%;">
                 <div class="info-card">
                     <h3>Ruko di Sawangan, Depok</h3>
-                    <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane Ã˜40cm, kedalaman 13m, 18 titik<br>
+                    <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane Ø40cm, kedalaman 13m, 18 titik<br>
                     <strong>Metode:</strong> Wash Boring (Bor basah)</p>
-                    <p><strong>Biaya jasa:</strong> 13m Ã— Rp135.000 Ã— 18 = Rp31.590.000<br>
+                    <p><strong>Biaya jasa:</strong> 13m × Rp135.000 × 18 = Rp31.590.000<br>
                     <strong>+ mobilisasi:</strong> Rp3.500.000<br>
                     <strong>Total:</strong> <strong class="price-total">Rp35.090.000</strong><br>
                     <strong>Waktu pengerjaan:</strong> 5-7 hari kerja</p>
@@ -379,8 +369,8 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <div class="project-text" style="flex: 1; min-width: 100%;">
                 <div class="info-card">
                     <h3>Rumah 1 Lantai di Cimanggis, Depok</h3>
-                    <p><strong>Spesifikasi:</strong> Strauss pile (bore pile manual) Ã˜30cm, kedalaman 6m, 18 titik</p>
-                    <p><strong>Biaya jasa:</strong> 6m Ã— Rp95.000 Ã— 23 = Rp13.110.000<br>
+                    <p><strong>Spesifikasi:</strong> Strauss pile (bore pile manual) Ø30cm, kedalaman 6m, 18 titik</p>
+                    <p><strong>Biaya jasa:</strong> 6m × Rp95.000 × 23 = Rp13.110.000<br>
                     <strong>+ mobilisasi:</strong> Rp1.500.000<br>
                     <strong>Total:</strong> <strong class="price-total">Rp14.610.000</strong><br>
                     <strong>Waktu pengerjaan:</strong> 8-10 hari kerja</p>
@@ -391,19 +381,19 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
 
                 <div class="project-note">
                     <p>
-                        <strong>ðŸ“Œ Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, 
+                        <strong>📌 Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, 
                         <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di Depok.
                     </p>
                 </div>
             </section>
 
             <p>Butuh harga khusus untuk diameter 30cm? 
-                <a href="/harga/bore-pile-30cm.html">Lihat detail harga bore pile diameter 30cm â†’</a>
+                <a href="/harga/bore-pile/30cm.html">Lihat detail harga bore pile diameter 30cm →</a>
             </p>
 
            <section>
     <h2 class="section-heading-center">Mengapa Bore Pile Pilihan Tepat untuk Tanah Depok?</h2>
-    <p>Depok memiliki karakteristik tanah yang bervariasi, mulai dari <strong>tanah lunak di wilayah utara</strong> (Beji, Pondok Cina) yang mirip tanah Jakarta, hingga <strong>tanah berbukit di wilayah selatan</strong> (Cinere, Sawangan). Proyek <a href="https://repository.pnj.ac.id/id/eprint/20032/" target="_blank" rel="noopener noreferrer">LRT Jakarta Phase 1B Velodromeâ€“Manggarai</a> menggunakan bore pile dengan kedalaman 40 meter, menunjukkan efektivitas metode ini untuk wilayah sekitar Jakarta, termasuk Depok . Metode bore pile menjadi solusi pondasi paling tepat karena:</p>
+    <p>Depok memiliki karakteristik tanah yang bervariasi, mulai dari <strong>tanah lunak di wilayah utara</strong> (Beji, Pondok Cina) yang mirip tanah Jakarta, hingga <strong>tanah berbukit di wilayah selatan</strong> (Cinere, Sawangan). Proyek <a href="https://repository.pnj.ac.id/id/eprint/20032/" target="_blank" rel="noopener noreferrer">LRT Jakarta Phase 1B Velodrome–Manggarai</a> menggunakan bore pile dengan kedalaman 40 meter, menunjukkan efektivitas metode ini untuk wilayah sekitar Jakarta, termasuk Depok . Metode bore pile menjadi solusi pondasi paling tepat karena:</p>
     <ul>
         <li><strong>Kedalaman hingga 30 meter</strong> - mampu menembus lapisan tanah lunak di Depok hingga <a href="https://repository.pnj.ac.id/id/eprint/29186/" target="_blank" rel="noopener noreferrer">mencapai tanah keras</a>.</li>
         <li><strong>Diameter fleksibel (30-110cm)</strong> - bisa disesuaikan dengan beban bangunan, cocok untuk rumah, ruko, rumah sakit, gudang, jembatan, hingga gedung bertingkat seperti apartemen dan hotel di Depok.</li>
@@ -429,17 +419,17 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                             <img src="/imgs/bore-pile-di-depan-zam-zam-tower-depok-agung-perkasa.jpg" 
                                  alt="Proyek bore pile mini crane di Cinere Depok" 
                                  loading="lazy"
-                                 width="400" height="300">
+                                 width="400" height="300" data-lightbox>
                             <div class="proyek-jakarta-caption">
                                 <span class="proyek-jakarta-label">Sebelah Zamzam Tower di Pancoran Mas, Depok</span>
-                                <span class="proyek-jakarta-detail">Bore pile mini crane Ã˜40cm untuk bangunan di area sebelah zamzam tower depok</span>
+                                <span class="proyek-jakarta-detail">Bore pile mini crane Ø40cm untuk bangunan di area sebelah zamzam tower depok</span>
                             </div>
                         </div>
                         
                     </div>
                     <p class="proyek-jakarta-link">
                         Ingin lihat lebih banyak? 
-                        <a href="/galeri/gallery.html">Kunjungi galeri proyek kami â†’</a>
+                        <a href="/galeri/gallery.html">Kunjungi galeri proyek kami →</a>
                     </p>
                 </div>
             </section>
@@ -451,7 +441,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                 <div class="reasons-grid">
                     <div class="reason-card">
                         <h3>Memakai alat yang baik</h3>
-                        <p>Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, strauss pile, dan mesin Hidrolik Rotary Drilling (Sany).</p>
+                        <p>Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, strauss pile.</p>
                     </div>
                     <div class="reason-card">
                         <h3>Efisiensi waktu & Komitmen kualitas</h3>
@@ -513,19 +503,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                         </div>
                     </div>
                     
-                    <div class="equip-item">
-                        <img class="equip-img" src="/imgs/icons/bore-pile-mesin-hidrolik-icon-agung-perkasa.svg" 
-                             alt="Ikon mesin bor hidrolik Sany untuk proyek skala besar di Depok" 
-                             loading="lazy">
-                        <div class="equip-info">
-                            <div class="equip-icon-inline">
-                                <img src="/imgs/logo-agung-perkasa.webp" alt="Logo Agung Perkasa" width="24" height="24">
-                                <h4>Mesin Hidrolik Sany</h4>
-                            </div>
-                            <p>Untuk proyek sedang hingga besar: hotel, gedung, pabrik. Diameter 60-120 cm, kedalaman hingga 60 meter.</p>
-                            <span class="equip-tag">Agung Perkasa</span>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 
@@ -629,13 +607,13 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <p class="article-excerpt">Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik.</p>
                                     <div class="article-meta">
                                         <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
-                                        <span class="article-read-more">Baca selengkapnya â†’</span>
+                                        <span class="article-read-more">Baca selengkapnya →</span>
                                     </div>
                                 </div>
                             </a>
                         </article>
                         <article class="article-card">
-                            <a href="/harga/bore-pile-30cm.html" class="article-link">
+                            <a href="/harga/bore-pile/30cm.html" class="article-link">
                                 <div class="article-image">
                                     <img src="/imgs/hasil-lubang-borepile.webp" alt="Harga bore pile diameter 30cm untuk pondasi rumah" loading="lazy">
                                     <span class="article-category">Harga</span>
@@ -645,7 +623,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <p class="article-excerpt">Lihat harga terbaru 2026 untuk bore pile diameter 30cm.</p>
                                     <div class="article-meta">
                                         <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
-                                        <span class="article-read-more">Baca selengkapnya â†’</span>
+                                        <span class="article-read-more">Baca selengkapnya →</span>
                                     </div>
                                 </div>
                             </a>
@@ -661,14 +639,14 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                                     <p class="article-excerpt">Perbedaan bore pile dan tiang pancang: Kelebihan dan kekurangan, serta biaya mana yang lebih murah untuk proyek saya?</p>
                                     <div class="article-meta">
                                         <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Mei 2026</span>
-                                        <span class="article-read-more">Baca selengkapnya â†’</span>
+                                        <span class="article-read-more">Baca selengkapnya →</span>
                                     </div>
                                 </div>
                             </a>
                         </article>
                     </div>
                     <div class="articles-cta">
-                        <a href="/artikel/artikel.html" class="btn-articles-all">
+                        <a href="/artikel.html" class="btn-articles-all">
                             <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
                         </a>
                     </div>
@@ -683,10 +661,10 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
 
             <div class="internal-link-box">
                 <p><strong>Baca Juga Harga Bore Pile:</strong><br>
-                <a href="/jasa/bore-pile-jakarta.html">Jakarta</a> | 
-                <a href="/jasa/bore-pile-bekasi.html">Bekasi</a> | 
-                <a href="/jasa/bore-pile-tangerang.html">Tangerang</a> | 
-                <a href="/jasa/bore-pile-bogor.html">Bogor</a></p>
+                <a href="/jasa/bore-pile/jakarta.html">Jakarta</a> | 
+                <a href="/jasa/bore-pile/bekasi.html">Bekasi</a> | 
+                <a href="/jasa/bore-pile/tangerang.html">Tangerang</a> | 
+                <a href="/jasa/bore-pile/bogor.html">Bogor</a></p>
                 <a href="/harga/bore-pile-2026.html">Harga Bore Pile 2026</a> 
             </div>
         </div>
@@ -695,7 +673,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     <!-- MAPS -->
     <div class="maps-container">
         <div class="maps-card">
-            <h3 class="maps-title">ðŸ“ Lokasi Kami</h3>
+            <h3 class="maps-title">📍 Lokasi Kami</h3>
             <p class="maps-address">
                 <strong>Agung Perkasa Borepile</strong><br>
                 Jl. Sunter Muara II, RT.17/RW.05, Sunter Agung, Kec. Tj. Priok,<br>
@@ -721,7 +699,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         </a>
             <!-- TAMBAHKAN INI -->
 <p class="maps-note">
-    <strong>ðŸ“ Melayani seluruh wilayah Depok</strong> konsultasi & survei lokasi bisa dilakukan langsung di tempat proyek Anda.
+    <strong>📍 Melayani seluruh wilayah Depok</strong> konsultasi & survei lokasi bisa dilakukan langsung di tempat proyek Anda.
 </p>
         </div>
     </div>
@@ -755,14 +733,14 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                         <li><a href="/jasa/">Jasa Bore Pile</a></li>
                         <li><a href="/jasa/">Jasa Strauss Pile</a></li>
                         <li><a href="/harga/bore-pile-2026.html">Jasa Bore Pile Mesin</a></li>
-                        <li><a href="/harga/bore-pile-30cm.html">Jasa Bore Pile Manual</a></li>
+                        <li><a href="/harga/bore-pile/30cm.html">Jasa Bore Pile Manual</a></li>
                         <li><a href="/harga/bore-pile-2026.html">Kalkulator Biaya Bore Pile</a></li>
                         <li><a href="/#contact">Konsultasi Pondasi Dalam</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Tentang Kami</h3>
-                    <ul><li><a href="/#about">Tentang Kami</a></li><li><a href="/galeri/">Galeri</a></li><li><a href="/artikel/">Blog Artikel</a></li></ul>
+                    <ul><li><a href="/#about">Tentang Kami</a></li><li><a href="/galeri/gallery.html">Galeri</a></li><li><a href="/artikel/">Blog Artikel</a></li></ul>
                 </div>
                 <div class="footer-col">
                     <h3>Kontak</h3>
@@ -824,7 +802,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Bore Pile Depok",
-                "item": "https://agungperkasaborepile.com/jasa/bore-pile-depok.html"
+                "item": "https://agungperkasaborepile.com/jasa/bore-pile/depok.html"
             }
         ]
     }
@@ -933,7 +911,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             "offerCount": "8",
             "availability": "https://schema.org/InStock",
             "itemCondition": "https://schema.org/NewCondition",
-            "url": "https://agungperkasaborepile.com/jasa/bore-pile-depok.html"
+            "url": "https://agungperkasaborepile.com/jasa/bore-pile/depok.html"
         },
         "areaServed": {
             "@type": "City",
@@ -999,5 +977,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     ]
 }
 </script>
+
+    <script is:inline src="/js/lightbox.js"></script>
 </body>
 </html>

@@ -30,7 +30,7 @@
       { "diameter": "30 cm", "price": 80000, "depth": "10 meter", "suitable": "Rumah, ruko 1-2 lantai (tanah padat)" },
       { "diameter": "40 cm", "price": 100000, "depth": "10 meter", "suitable": "Rumah, ruko 2 lantai (tanah padat)" }
     ],
-    "hasHidrolik": true
+    "hasHidrolik": false
   },
   "factors": [
     {
@@ -47,7 +47,7 @@
     },
     {
       "title": "Volume Pekerjaan",
-      "text": "Minimal order jasa bore pile Karawang: mesin 200 meter, strauss pile 100 meter, hidrolik 1200 meter. Hubungi kami untuk volume di bawah itu."
+      "text": "Minimal order jasa bore pile Karawang: mesin 200 meter, strauss pile 100 meter. Hubungi kami untuk volume di bawah itu."
     },
     {
       "title": "Akses & Tingkat Kesulitan Lapangan",
@@ -98,7 +98,7 @@
     }
   ],
   "whyUs": [
-    { "title": "Memakai alat yang baik", "desc": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, strauss pile, dan mesin Hidrolik Rotary Drilling (Sany)." },
+    { "title": "Memakai alat yang baik", "desc": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, dan strauss pile." },
     { "title": "Efisiensi waktu & Komitmen kualitas", "desc": "Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam, khususnya bore pile di Karawang." },
     { "title": "Tim Ahli", "desc": "Memiliki tim ahli dalam pengerjaan bore pile di Karawang, khususnya untuk proyek di kawasan industri dan perumahan." },
     { "title": "Tim berpengalaman di area Karawang", "desc": "Lebih dari sepuluh tahun mengerjakan proyek di Karawang. Mulai dari proyek rumah tinggal pribadi hingga proyek pabrik di KIIC dan Suryacipta." }
@@ -108,8 +108,7 @@
     "items": [
       { "name": "Mini Crane", "desc": "Kapasitas sedang, diameter 30-80 cm, kedalaman sampai 30m. Cocok untuk rumah, ruko, pabrik di Karawang." },
       { "name": "Gawangan", "desc": "Untuk area yang tidak bisa diakses mini crane. Diameter 30-80 cm, cocok untuk gang sempit di Karawang." },
-      { "name": "Strauss Pile (Manual)", "desc": "Alat bor manual full tenaga manusia, metode dry boring. Diameter 20-40cm, cocok untuk gang sempit di Karawang yang tidak bisa dijangkau crane." },
-      { "name": "Mesin Hidrolik Sany", "desc": "Untuk proyek sedang hingga besar: hotel, gedung, pabrik. Diameter 60-120 cm, kedalaman hingga 60 meter." }
+      { "name": "Strauss Pile (Manual)", "desc": "Alat bor manual full tenaga manusia, metode dry boring. Diameter 20-40cm, cocok untuk gang sempit di Karawang yang tidak bisa dijangkau crane." }
     ]
   },
   "portfolio": {

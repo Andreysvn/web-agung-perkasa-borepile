@@ -51,6 +51,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
     
     <link rel="stylesheet" href="/css/borepile-kota.css">
+    <link rel="stylesheet" href="/css/lightbox.css">
 </head>
 <body>
      <!-- Google Tag Manager -->
@@ -100,7 +101,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
             <div style="margin-bottom: 20px; color: #6c757d; font-size: 0.85rem;">
                 <span>Update: 02 Agustus 2026</span> |
                 <span>Tim Agung Perkasa</span> |
-                <span>ðŸ“ BSD City, Serpong & Sekitarnya (Tangerang Selatan)</span>
+                <span>📍 BSD City, Serpong & Sekitarnya (Tangerang Selatan)</span>
             </div>
 
             <div class="update-badge">
@@ -110,7 +111,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
             <!-- LEAD SINGKAT + GAMBAR (LCP - tanpa lazy load) -->
             <div class="illustration-row">
                 <div class="illustration-img">
-                    <img src="imgs/borepile-mesin-biru.webp" alt="Proses pengeboran bore pile menggunakan mesin mini crane di BSD Serpong" width="400" height="250" fetchpriority="high">
+                    <img src="imgs/borepile-mesin-biru.webp" alt="Proses pengeboran bore pile menggunakan mesin mini crane di BSD Serpong" width="400" height="250" fetchpriority="high" data-lightbox>
                     <div class="caption">Proses pengeboran bore pile dengan mini crane di BSD Serpong</div>
                 </div>
                 <div class="illustration-text">
@@ -222,7 +223,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                     const points = parseInt(pointsInput.value);
                     const totalPrice = pricePerM * depthForCalc * points;
                     totalPriceDiv.innerHTML = formatRp(totalPrice);
-                    detailPriceDiv.innerHTML = `${formatRp(pricePerM)}/m Ã— ${depthForCalc}m Ã— ${points} titik = ${formatRp(totalPrice)}${warningMsg}`;
+                    detailPriceDiv.innerHTML = `${formatRp(pricePerM)}/m × ${depthForCalc}m × ${points} titik = ${formatRp(totalPrice)}${warningMsg}`;
                     
                     let days = currentMethod === 'mesin' ? Math.ceil(points / (depthForCalc < 10 ? 3.5 : 2.5)) : Math.ceil(points / 2.5);
                     estimationTimeDiv.innerHTML = `Estimasi waktu: ${days} hari kerja${warningMsg}`;
@@ -293,25 +294,25 @@ import FaIcon from '../../components/icons/FaIcon.astro';
             <section>
                 <h2 style="color: var(--primary-color); margin: 25px 0 10px;">Biaya Tambahan di BSD Serpong</h2>
                 <div class="info-grid">
-                    <div class="info-card"><h3>ðŸš› Mobilisasi Alat</h3><p>Mesin mini crane: Rp3-5jt | Manual: Rp1-2jt (BSD & sekitarnya)</p></div>
-                    <div class="info-card"><h3>ðŸ“ Minimal Order</h3><p>Mesin: 200 meter | Manual: 100 meter, di bawah itu bisa hubungi kami</p></div>
-                    <div class="info-card"><h3>ðŸ’§ Sedot Lumpur</h3><p>Rp800.000 - Rp1.200.000/rit (tergantung volume)</p></div>
-                    <div class="info-card"><h3>ðŸ“Š Data Sondir</h3><p>Sangat wajib untuk menentukan kedalaman tepat</p></div>
+                    <div class="info-card"><h3>🚛 Mobilisasi Alat</h3><p>Mesin mini crane: Rp3-5jt | Manual: Rp1-2jt (BSD & sekitarnya)</p></div>
+                    <div class="info-card"><h3>📏 Minimal Order</h3><p>Mesin: 200 meter | Manual: 100 meter, di bawah itu bisa hubungi kami</p></div>
+                    <div class="info-card"><h3>💧 Sedot Lumpur</h3><p>Rp800.000 - Rp1.200.000/rit (tergantung volume)</p></div>
+                    <div class="info-card"><h3>📊 Data Sondir</h3><p>Sangat wajib untuk menentukan kedalaman tepat</p></div>
                 </div>
             </section>
 
             <!-- GAMBAR PERBANDINGAN DIAMETER -->
             <div class="illustration-row">
                 <div class="illustration-img">
-                    <img src="imgs/hasil-lubang-borepile.webp" alt="Lubang bore pile yang dimasukan tulangan besi sebelum pengecoran beton di BSD Serpong" width="400" height="250" loading="lazy">
+                    <img src="imgs/hasil-lubang-borepile.webp" alt="Lubang bore pile yang dimasukan tulangan besi sebelum pengecoran beton di BSD Serpong" width="400" height="250" loading="lazy" data-lightbox>
                     <div class="caption">Lubang bore pile sebelum pengecoran beton</div>
                 </div>
                 <div class="illustration-text">
                     <h3 style="color: var(--primary-color);">Tips memilih diameter:</h3>
                     <ul>
-                        <li><strong>30 cm</strong> â†’ rumah 1-2 lantai (paling banyak dipilih)</li>
-                        <li><strong>40-50 cm</strong> â†’ ruko, kantor, gudang, rumah sakit</li>
-                        <li><strong>60-80 cm</strong> â†’ hotel, gedung bertingkat</li>
+                        <li><strong>30 cm</strong> → rumah 1-2 lantai (paling banyak dipilih)</li>
+                        <li><strong>40-50 cm</strong> → ruko, kantor, gudang, rumah sakit</li>
+                        <li><strong>60-80 cm</strong> → hotel, gedung bertingkat</li>
                     </ul>
                 </div>
             </div>
@@ -321,17 +322,17 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                 <h2 style="color: var(--primary-color); margin: 25px 0 10px;">Contoh Hitungan Proyek di BSD Serpong</h2>
                 <div class="info-grid">
                     <div class="info-card">
-                        <h3>ðŸ¢ Proyek Perkantoran di BSD Sektor 1</h3>
-                        <p><strong>Spesifikasi:</strong> Bore pile mesin Ã˜40cm, kedalaman 15m, 25 titik<br>
-                        <strong>Biaya jasa:</strong> 15m Ã— Rp135.000 Ã— 25 = Rp50.625.000<br>
+                        <h3>🏢 Proyek Perkantoran di BSD Sektor 1</h3>
+                        <p><strong>Spesifikasi:</strong> Bore pile mesin Ø40cm, kedalaman 15m, 25 titik<br>
+                        <strong>Biaya jasa:</strong> 15m × Rp135.000 × 25 = Rp50.625.000<br>
                         <strong>+ mobilisasi:</strong> Rp4.000.000<br>
                         <strong>Total:</strong> <strong>Rp54.625.000</strong><br>
                         <strong>Waktu:</strong> 10-14 hari kerja</p>
                     </div>
                     <div class="info-card">
-                        <h3>ðŸ  Rumah 2 Lantai di Greenwich Park BSD</h3>
-                        <p><strong>Spesifikasi:</strong> Bore pile mesin Ã˜30cm, kedalaman 12m, 16 titik<br>
-                        <strong>Biaya jasa:</strong> 12m Ã— Rp120.000 Ã— 16 = Rp23.040.000<br>
+                        <h3>🏡 Rumah 2 Lantai di Greenwich Park BSD</h3>
+                        <p><strong>Spesifikasi:</strong> Bore pile mesin Ø30cm, kedalaman 12m, 16 titik<br>
+                        <strong>Biaya jasa:</strong> 12m × Rp120.000 × 16 = Rp23.040.000<br>
                         <strong>+ mobilisasi:</strong> Rp3.000.000<br>
                         <strong>Total:</strong> <strong>Rp26.040.000</strong><br>
                         <strong>Waktu:</strong> 5-7 hari kerja</p>
@@ -341,13 +342,13 @@ import FaIcon from '../../components/icons/FaIcon.astro';
 
             <div class="illustration-row">
                 <div class="illustration-img">
-                    <img src="imgs/borepile-dan-truk-molen.webp" alt="Proses pengerjaan bore pile di kawasan BSD Serpong Tangerang Selatan" width="400" height="250" loading="lazy">
+                    <img src="imgs/borepile-dan-truk-molen.webp" alt="Proses pengerjaan bore pile di kawasan BSD Serpong Tangerang Selatan" width="400" height="250" loading="lazy" data-lightbox>
                     <div class="caption">Proses pengerjaan bore pile di kawasan BSD Serpong</div>
                 </div>
                 <div class="illustration-text">
 
             <p>Butuh harga khusus untuk diameter 30cm? 
-            <a href="harga-bore-pile-30cm.html">Lihat detail harga bore pile diameter 30cm â†’</a>
+            <a href="/harga/bore-pile/30cm.html">Lihat detail harga bore pile diameter 30cm →</a>
             </p>
                 </div>
             </div>
@@ -357,7 +358,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                 <h2 style="color: var(--primary-color); margin: 30px 0 10px;">Bore Pile untuk Proyek Skala Besar di BSD City</h2>
                 <p>BSD City adalah kawasan pengembangan terpadu dengan berbagai proyek <strong>infrastruktur, perkantoran, hunian premium, dan pusat perbelanjaan</strong>. Bore pile menjadi pilihan utama untuk proyek di BSD karena:</p>
                 
-                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">ðŸ¢ Proyek Perkantoran dan Komersial</h3>
+                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">🏢 Proyek Perkantoran dan Komersial</h3>
                 <ul style="margin-bottom: 15px; margin-left: 20px;">
                     <li>Bore pile diameter 40-60 cm untuk gedung 5-10 lantai</li>
                     <li>Kedalaman 15-20 meter mencapai tanah keras</li>
@@ -365,20 +366,20 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                     <li>Telah mengerjakan proyek di <strong>BSD Sektor 1, 2, 3, 4, 5, 6, 7, 8, 9</strong></li>
                 </ul>
                 
-                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">ðŸ—ï¸ Proyek Infrastruktur (Underpass & Flyover)</h3>
+                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">🏗️ Proyek Infrastruktur (Underpass & Flyover)</h3>
                 <p>Proyek <strong>underpass BSD dan flyover Serpong</strong> menggunakan bore pile karena metode pengeboran tidak mengganggu lalu lintas dan bangunan sekitar. Diameter yang digunakan biasanya 60-80 cm dengan kedalaman hingga 25 meter.</p>
                 
-                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">ðŸ  Perumahan Premium di BSD</h3>
+                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">🏡 Perumahan Premium di BSD</h3>
                 <ul style="margin-bottom: 15px; margin-left: 20px;">
                     <li><strong>Greenwich Park</strong> - rumah mewah dengan bore pile diameter 30-40 cm</li>
                     <li><strong>Nusa Loka</strong> - perumahan modern dengan tanah eksisting</li>
                     <li><strong>BSD Junction Area</strong> - mixed use dengan bore pile diameter 40-50 cm</li>
                 </ul>
                 
-                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">ðŸš— Akses dan Mobilisasi ke BSD</h3>
+                <h3 style="color: var(--primary-color); margin: 20px 0 10px;">🚗 Akses dan Mobilisasi ke BSD</h3>
                 <p>BSD terletak di Tangerang Selatan dengan akses tol Jakarta-Merak. Biaya mobilisasi mesin sekitar Rp3-5 juta tergantung lokasi spesifik proyek di BSD.</p>
                 
-                <p><strong>ðŸ’¡ Tips untuk proyek di BSD:</strong> Pastikan Anda memiliki data sondir. Tanah di BSD umumnya baik, namun variasi kedalaman tanah keras bisa berbeda antar sektor.</p>
+                <p><strong>💡 Tips untuk proyek di BSD:</strong> Pastikan Anda memiliki data sondir. Tanah di BSD umumnya baik, namun variasi kedalaman tanah keras bisa berbeda antar sektor.</p>
             </section>
 
             <!-- DAFTAR KELURAHAN BSD SERPONG (SEO LOKAL) -->
@@ -414,7 +415,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                             <div class="project-info">
                                 <h3>Borepile vs Strauss Pile</h3>
                                 <p>Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik.</p>
-                                <a href="bore-pile-vs-strauss.html" class="btn btn-primary">Baca Artikel â†’</a>
+                                <a href="bore-pile-vs-strauss.html" class="btn btn-primary">Baca Artikel →</a>
                             </div>
                         </div>
                         <div class="project-card">
@@ -422,7 +423,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                             <div class="project-info">
                                 <h3>Harga Bore Pile Diameter 30cm</h3>
                                 <p>Lihat harga terbaru 2026 untuk bore pile diameter 30cm.</p>
-                                <a href="harga-bore-pile-30cm.html" class="btn btn-primary">Baca Artikel â†’</a>
+                                <a href="/harga/bore-pile/30cm.html" class="btn btn-primary">Baca Artikel →</a>
                             </div>
                         </div>
                         <div class="project-card">
@@ -430,7 +431,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                             <div class="project-info">
                                 <h3>Harga Bore Pile Jakarta 2026</h3>
                                 <p>Informasi terkini tentang harga bore pile di wilayah Jakarta.</p>
-                                <a href="bore-pile-jakarta.html" class="btn btn-primary">Baca Artikel â†’</a>
+                                <a href="/jasa/bore-pile/jakarta.html" class="btn btn-primary">Baca Artikel →</a>
                             </div>
                         </div>
                     </div>
@@ -448,12 +449,12 @@ import FaIcon from '../../components/icons/FaIcon.astro';
             </div>
 
             <div style="margin-top: 30px; padding: 15px; background: #f5f7fa; border-radius: 12px; text-align: center;">
-                <p style="margin: 0;"><strong>ðŸ“ Layanan juga tersedia di kota lain:</strong><br>
-                <a href="bore-pile-jakarta.html">Jakarta</a> | 
-                <a href="bore-pile-bekasi.html">Bekasi</a> | 
-                <a href="bore-pile-tangerang.html">Tangerang</a> | 
-                <a href="bore-pile-depok.html">Depok</a> |
-                <a href="bore-pile-bogor.html">Bogor</a> |
+                <p style="margin: 0;"><strong>📍 Layanan juga tersedia di kota lain:</strong><br>
+                <a href="/jasa/bore-pile/jakarta.html">Jakarta</a> | 
+                <a href="/jasa/bore-pile/bekasi.html">Bekasi</a> | 
+                <a href="/jasa/bore-pile/tangerang.html">Tangerang</a> | 
+                <a href="/jasa/bore-pile/depok.html">Depok</a> |
+                <a href="/jasa/bore-pile/bogor.html">Bogor</a> |
                 <a href="bore-pile-ciputat.html">Ciputat</a>
                 </p>
             </div>
@@ -501,7 +502,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
                     <h3>Layanan</h3>
                     <ul>
                         <li><a href="harga-bore-pile-2026.html">Jasa Borepile Mesin</a></li>
-                        <li><a href="harga-bore-pile-30cm.html">Jasa Borepile Manual</a></li>
+                        <li><a href="/harga/bore-pile/30cm.html">Jasa Borepile Manual</a></li>
                         <li><a href="/#contact">Konsultasi Pondasi</a></li>
                         <li><a href="/#about">Tentang Kami</a></li>
                     </ul>
@@ -567,6 +568,34 @@ import FaIcon from '../../components/icons/FaIcon.astro';
     }
     </script>
 
+    <!-- ===== SCHEMA BREADCRUMB ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Beranda",
+                "item": "https://agungperkasaborepile.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Jasa",
+                "item": "https://agungperkasaborepile.com/jasa/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Bore Pile BSD",
+                "item": "https://agungperkasaborepile.com/jasa/bore-pile-bsd.html"
+            }
+        ]
+    }
+    </script>
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -581,5 +610,7 @@ import FaIcon from '../../components/icons/FaIcon.astro';
         ]
     }
     </script>
+
+    <script is:inline src="/js/lightbox.js"></script>
 </body>
 </html>
