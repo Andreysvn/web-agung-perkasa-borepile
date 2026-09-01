@@ -2,112 +2,266 @@
 
 Catatan: `CLAUDE.md` adalah salinan file ini. Jika isinya berbeda, ikuti file ini. `README.md` hanyalah boilerplate starter Astro — abaikan.
 
+## PERINGATAN PENTING UNTUK AI
+
+**JANGAN ubah halaman tanpa konteks yang jelas.** Sebelumnya ada AI yang salah ubah halaman dan membuatnya acak-acakan. **Ikuti instruksi di bawah dengan tepat.**
+
+---
+
 ## Project
 
-Website **Agung Perkasa Borepile** (jasa bore pile & strauss pile, seluruh konten Bahasa Indonesia) di Astro. **Migrasi dari HTML legacy SELESAI** (2026-08-23, 33 halaman, terverifikasi identik dengan situs lama; sumber legacy masih bisa dilihat lewat riwayat git).
+Website **Agung Perkasa Borepile** (jasa bore pile & strauss pile, seluruh konten Bahasa Indonesia) di Astro. **Migrasi dari HTML legacy SELESAI** (2026-08-23, 33 halaman, terverifikasi identik dengan situs lama).
 
-Fase sekarang: **pemeliharaan, optimasi, dan ekspansi**. Target pemilik:
+**Fase sekarang: Refactor untuk konsistensi, performa, dan kemudahan perawatan.**
 
-- Optimasi teknikal & konten halaman existing — **prioritas halaman jasa** (banyak yang kontennya masih salinan legacy tipis).
-- **Ekspansi SEO lokal ke seluruh wilayah Jawa** — akan ada banyak halaman kota/area baru.
-- Halaman **jasa & harga rutin di-update**; **artikel baru berkala**.
-- Membangun sinyal **E-E-A-T**: konten terbaru, terlengkap, tepercaya di niche bore pile.
-- **Performa (prioritas pemilik 2026-08-24): web harus kencang & cepat** — dikerjakan TANPA mengubah tampilan/konten. Arah: minify/bersihkan CSS-JS, pangkas yang nganggur, kendalikan beban pihak ketiga; ukur dengan PageSpeed/CWV dulu biar prioritasnya jelas.
-- **Efisiensi perawatan lewat satu sumber data** — tanggal, harga, kontak, dan data apa pun yang berulang antar halaman wajib hidup di `src/data/*.json` / frontmatter (lihat pola `harga.json`), bukan di-hardcode per halaman.
+### Target Pemilik
 
-**Arsitektur: site statis, setiap halaman .astro mandiri.** Tidak ada template dinamis berbasis data JSON. Efisiensi perawatan dicapai dengan:
-1. **Komponen Astro bersama** — `Navbar.astro`, `Footer.astro`, `FaIcon.astro` di-import ke setiap halaman; ubah sekali, semua halaman ikut.
-2. **Satu sumber data** — `harga.json` untuk harga, `config.json` untuk kontak/identitas, `schema.js` untuk JSON-LD Organization/LocalBusiness.
-3. **Pola konsisten ala Jakarta** — Jakarta adalah patokan (reference). Setiap halaman baru WAJIB mengikuti pola Jakarta: struktur section, schema (BreadcrumbList + FAQPage + Product), Google Ads `defer` + `load` wrapper, navbar/footer komponen, FaIcon SVG inline.
+1. **Konsisten** - Semua halaman pakai layout yang sama
+2. **Ringan** - Shared modules, tidak ada duplikasi
+3. **Cepat** - Cache efektif, HTTP requests minimal
+4. **Mudah dirawat** - Update 1 file → semua halaman ikut
+5. **Design sama** - HTML output identik, CSS tetap sama
 
-Prinsip efisiensi wajib: **jangan membuat halaman baru dengan menyalin markup lama satu-satu**. Tiru pola Jakarta — struktur, schema, komponen, performa.
+### Kontak
 
-## Arah kerja aktif (Keputusan Pemilik 2026-08-31)
+- **WhatsApp**: `6285710277854` (HANYA ini yang benar, jangan pakai nomor lain)
+- **Domain**: `https://agungperkasaborepile.com`
+- **Remote**: `github.com/Andreysvn/web-agung-perkasa-borepile`
 
-**Fokus Utama Saat Ini: Master Plan Efisiensi & SEO (Tanpa Mengubah Desain Legacy).**
-Urutan pengerjaan yang disetujui:
-1. **Fase 1: Sistem Template Hybrid (Sedang Dikerjakan).** Merombak halaman monolitik (dimulai dari `jakarta/index.astro`) menjadi file ringkas (~50 baris) yang merakit komponen modular (`src/components/city/*` & `shared/*`) dan menarik data dari JSON (`src/data/kota/*.json` & `harga.json`). **Aturan Arsitektur Baru:** TETAP gunakan 1 file `.astro` per kota (jangan gunakan route dinamis `[slug].astro`) agar struktur tetap fleksibel jika ada kota yang butuh section khusus. Tampilan visual & SEO meta tidak boleh berubah 1%.
-2. **Fase 2: Kecepatan & Performa.** Setelah template rapi, hapus Font Awesome CDN (ganti ke SVG inline), minify CSS/JS lokal, defer GTM/Ads, dan lazy-load elemen berat. Target: PageSpeed 100.
-3. **Fase 3: Ekspansi Local SEO.** Duplikasi template Jakarta ke seluruh kota/area di Pulau Jawa menggunakan JSON data yang unik per wilayah.
-4. **Fase 4: E-E-A-T & Anti-AI Slop.** Hapus bahasa robot, hindari testimoni palsu, perbanyak foto asli & data lapangan nyata.
-5. **Fase 5: Redesign Modern.** Dilakukan paling akhir setelah ranking 1 dan traffic stabil.
+---
 
-**Patokan Halaman:** Halaman **Jakarta** (`src/pages/jasa/bore-pile/jakarta/index.astro`) adalah *Pilot Project* dan *Template Induk*. Jika sukses, pola ini direplikasi ke semua halaman.
+## ATURAN PALING PENTING
 
-## Renovasi desain (DIHENTIKAN sementara oleh pemilik, 2026-08-24)
+### ❌ JANGAN LAKUKAN INI
 
-**Status: semua 33 halaman kembali memakai desain legacy.** Pemilik sudah cek visual pilot v2 dan tidak menyukainya, jadi `/harga/bore-pile-2026.html` dikembalikan ke desain lama penuh (halaman `.astro` mandiri ala halaman harga lainnya: CSS `/css/harga.css`, JS `/js/script.js` + `/js/harga-calculator.js` + injeksi `window.__PRICING__`, navbar/footer inline). Verifikasi pasca-revert: `tools/verify-renovasi.ps1` (title/desc/canonical/h1/h2-h3/JSON-LD) lolos semua dan teks terlihat 100% identik dengan snapshot pra-v2 (`%TEMP%\opencode\renovasi-snapshot\harga-bore-pile-2026-before.html`; snapshot juga tersalin aman sebagai acuan).
+1. **JANGAN ubah desain/konten** - Refactor hanya menyentuh kode, bukan tampilan
+2. **JANGAN pakai nomor WA lain** - Hanya `6285710277854`
+3. **JANGAN edit file CSS/JS legacy** di `public/css/` dan `public/js/` selama masih dipakai
+4. **JANGAN tambah dependency baru** - Hanya pakai Astro dan vanilla JS
+5. **JANGAN revert/stash/overwrite** working tree tanpa izin
+6. **JANGAN commit/push** tanpa diminta
+7. **JANGAN edit file .astro via PowerShell Get-Content/Set-Content** - Rusak encoding UTF-8
 
-Konsekuensi yang berlaku sekarang:
+### ✅ WAJIB LAKUKAN INI
 
-1. **Aset v2 DORMAN** — masih ada di repo tapi tidak direferensikan halaman mana pun, jangan dipakai/diperluas tanpa instruksi: `src/styles/tokens.css` + `base.css`, `public/fonts/plus-jakarta-sans-latin-var.woff2`, komponen `src/components/global/v2/*`, blok `src/components/ui/*`, port kalkulator `src/scripts/harga-calculator.ts`, wiring dual-mode di `BaseLayout`.
-2. **Desain navbar v2 diarsipkan** eksplisit di `docs/arsip-desain/navbar-v2/` (`Navbar.astro` + `CATATAN.md` berisi daftar dependensinya kalau mau dihidupkan lagi).
-3. **Renovasi pause sampai pemilik putuskan arah baru.** Dokumen lama (`docs/superpowers/specs/2026-08-24-renovasi-design.md`, rencana batch) hanya referensi historis; keputusan desain yang tadinya "dikunci" sudah tidak aktif. Aturan yang tetap berlaku kapan pun renovasi dilanjutkan: SEO/konten tidak boleh berubah saat ganti kulit (verifikasi via `tools/verify-renovasi.ps1`), file legacy `public/css|js` jangan diedit selama masih dipakai, NOL dependensi baru.
+1. **Selalu test dengan `npm run build`** setelah ubah file
+2. **Pastikan HTML output identik** dengan sebelum refactor
+3. **Mulai dari Jakarta sebagai pilot** sebelum replikasi
+4. **Backup dulu** sebelum ubah file besar
+5. **Ikuti pola Jakarta** untuk semua halaman baru
 
-## Optimasi performa (pilot selesai 2026-08-25; rollout ke halaman lain)
+---
 
-Pilot optimasi **tanpa mengubah desain/konten** sudah selesai di 2 halaman: `/harga/bore-pile-2026.html` dan `/jasa/bore-pile/jakarta.html`. Perubahan: Font Awesome CDN (~300 KB) diganti SVG inline via komponen `src/components/icons/FaIcon.astro` (7 ikon: arrow-up, calendar-alt regular, chevron-down, facebook-f, instagram, newspaper, whatsapp; path resmi FA Free 6.4.0; tag `<i class="fas|far|fab fa-*">` dipertahankan sebagai wrapper agar semua CSS legacy yang menyasar `.fa-*`/elemen `i` tetap berlaku), eksekusi GTM ditunda sampai event `window load` (tracking tetap jalan), preconnect cdnjs/unpkg dibuang di kedua halaman tsb. Hasil terukur (Lighthouse mobile lokal): transfer -295 KB (-41% s/d -54%), LCP 2,7 dtk → 1,7 dtk, skor 93–95 → 98–99. Verifikasi: teks & SEO identik 100% vs snapshot (`tools/verify-renovasi.ps1` + diff teks penuh); snapshot before/after di `%TEMP%\opencode\perf-before|after`.
+## REFACTOR PLAN (Keputusan Pemilik 2026-09-01)
 
-Aturan rollout & catatan penting:
+### Scope
 
-1. **31 halaman lain masih pakai Font Awesome CDN** — sesuai keputusan pemilik 2026-08-25, TIDAK ada mass-edit manual; pola SVG inline + GTM defer diterapkan saat halaman dimigrasi satu per satu.
-2. Cara ganti: hapus `<link rel="preload">`+noscript FA dan preconnect cdnjs/unpkg, ganti tiap `<i class="..."></i>` jadi `<FaIcon class="..." />`, bungkus isi skrip GTM dengan `window.addEventListener('load', ...)`. Cek dulu daftar ikon unik per halaman (bisa lebih dari 7) — kalau ada ikon baru, ambil path SVG-nya dari paket `@fortawesome/fontawesome-free@6.4.0` (perhatikan style solid/regular/brands harus sesuai prefix `fas/far/fab`), tambahkan ke map `ICONS` di `FaIcon.astro`.
-3. **Bahaya encoding**: JANGAN edit file .astro via `Get-Content`/`Set-Content` PowerShell biasa — PS 5.1 membaca UTF-8 tanpa BOM sebagai ANSI dan merusak semua karakter non-ASCII (emoji 📌📍, Ø, ×, →). Sudah pernah terjadi & berhasil dipulihkan. Pakai tool Edit/Write, atau `[IO.File]::ReadAllBytes`/`WriteAllText` dengan `UTF8Encoding($false)`.
-4. Faktanya sudah efisien, jangan disentuh lagi: iframe Google Maps & hampir semua gambar sudah `loading="lazy"`; CSS/JS lokal sudah dikompres Brotli oleh hosting (style.css hanya ~10 KB over-the-wire); hosting = Hostinger/LiteSpeed.
-5. Ukur performa: PSI API anonim sering 429 dari IP ini; alternatif andal = Lighthouse lokal via `npx lighthouse <url> --quiet --chrome-flags="--headless=new"` (Chrome + Node tersedia), atau preview server `npm run preview` di port 4321 untuk menguji hasil build sebelum deploy.
+**41 halaman akan direfactor (kecuali beranda):**
 
-## Perintah
+| # | Kategori | Halaman | Jumlah |
+|---|----------|---------|--------|
+| 1 | **Kota** | Jakarta, Bandung, Bekasi, Bogor, Depok, Karawang, Semarang, Surabaya, Tangerang | 9 |
+| 2 | **Harga** | 30cm, 40cm, 50cm, 60cm, 80cm | 5 |
+| 3 | **Area** | Cikarang, Bintaro, BSD, Cibubur, Ciputat, Karawaci, Pamulang, Tangerang Selatan | 8 |
+| 4 | **Artikel** | Index + 10 artikel | 11 |
+| 5 | **Galeri** | Gallery + Gallery-2 | 2 |
+| 6 | **Alat** | Index + 3 alat sub-pages | 4 |
+| 7 | **Strauss Pile** | Jakarta | 1 |
+| 8 | **Jasa** | Index (hub kota) | 1 |
+| | **TOTAL** | | **41** |
 
-- `npm run dev` — dev server di `localhost:4321`. Cek dulu apakah sudah berjalan; jangan menjalankan dua server.
-- `npm run build` — satu-satunya verifikasi otomatis (tidak ada script lint/test/typecheck). Wajib lolos sebelum task dinyatakan selesai.
-- `npm run preview` — serve hasil build dari `dist/`.
-- Node >= 22.12.0 (lihat `engines` di package.json). Satu-satunya dependency adalah `astro` — jangan menambah library/framework untuk masalah yang bisa diselesaikan Astro atau vanilla browser API.
+**Beranda:** TIDAK DIREFACTOR (tetap pakai BaseLayout yang ada).
 
-## Arsitektur
+### Urutan Pengerjaan
 
-- `astro.config.mjs` memakai `build.format: 'file'` → setiap route menghasilkan `/path.html`, bukan `/path/index.html`. `site` diset ke domain produksi — jangan dihapus.
-- Tidak ada lagi `.html` konten di `public/`. URL lama gaya direktori (`/jasa/`, `/x/index.html`) di-redirect 301 oleh `public/.htaccess` menuju `/x.html` (hosting produksi: Hostinger, Apache/LiteSpeed; deploy = upload isi `dist/` ke `public_html/`). Kalau suatu saat menambah URL direktori-style lagi, tambahkan rule `RewriteRule ^x(/index\.html)?/?$ /x.html [R=301,L]`.
-- 44 halaman Astro: `/`, `/jasa/`, `/jasa/bore-pile/` (hub kota), 9 halaman kota (`/jasa/bore-pile/{jakarta,bandung,bekasi,bogor,depok,karawang,semarang,surabaya,tangerang}.html`), 8 halaman area flat (`/jasa/bore-pile-{cikarang,bintaro,bsd,cibubur,ciputat,karawaci,pamulang,tangerang-selatan}.html`), `/jasa/strauss-pile/jakarta.html`, `/harga/bore-pile-2026.html`, `/harga/bore-pile-{30,40,50,60,80}cm.html`, `/artikel.html` + 10 artikel, `/galeri/gallery.html` + `gallery-2.html`, `/alat.html` + 3 alat sub-pages.
-- Satu sumber data wajib (jangan hardcode nilainya di halaman):
-  - `src/data/config.json` — identitas, kontak (WA/telp/email), sosial media, meta default.
-  - `src/data/harga.json` — semua harga + `priceUpdatedAt`. Alur update harga = edit JSON ini → build; tanggal di halaman harga terinterpolasi via `Intl.DateTimeFormat('id-ID')` (pola: `src/pages/harga/bore-pile-30cm.astro`).
-  - `src/data/borepile-kota.json`, `src/data/galeri.json`.
-  - `src/data/harga-arsip-hidrolik.json` — arsip mesin hidrolik/SANY nonaktif; belum direferensikan, jangan dihapus.
-- Komponen: `Navbar.astro`, `Footer.astro`, `FaIcon.astro` di `src/components/` — di-import ke setiap halaman. Mode v2 DORMAN (tidak dipakai). `index.astro` memakai BaseLayout mode legacy; halaman lain menyalin `<head>` + navbar/footer inline ala legacy — belum boleh di-swap ke komponen tanpa instruksi karena tidak 100% identik.
-- Schema identitas berulang (Organization/WebSite/LocalBusiness) dibangun lewat `src/lib/schema.js` (`schemaPhone` = format rapat tanpa spasi), dirender `<script type="application/ld+json" set:html={JSON.stringify(...)}>` — jangan menulis isi script JSON-LD sebagai template literal. Blok schema unik per halaman (BreadcrumbList, FAQPage, Product, dll.) ditulis literal di halamannya.
-- CSS/JS tetap vanilla di `public/css/` & `public/js/`, path absolut (`/css/style.css`, `/js/script.js`); perilaku JS lama harus sama persis.
-- `public/js/jasa.js` — UI dasar (navbar, mobile menu, dropdown, scroll-top, FAQ) untuk `jasa/index.astro`. Sudah ringan (130 baris), tidak ada search.
-- `public/js/harga.js` — All-in-one (navbar + mobile menu + FAQ + kalkulator + scroll-top) untuk halaman harga. Termasuk interactive diameter/machine choice-grid.
-- `public/js/proses.js` — Interactive UI untuk `artikel/proses-bore-pile.html`: scroll-triggered animations, sticky progress bar, step navigation, toggle details, FAQ, comparison accordion. Rewrite dari versi lama (2026-08-26).
-- `public/js/blog.js` — DIHAPUS (2026-08-26). File mati, tidak direferensikan halaman manapun. Filter artikel di-handle inline di `artikel/index.astro`.
+```
+1. Buat shared scripts (6 files)
+2. Buat layouts (6 files)
+3. Buat components (12 files)
+4. Refactor JAKARTA sebagai PILOT
+5. Test & verify Jakarta
+6. Replikasi ke kota lain
+7. Final test
+```
 
-## Aturan kerja
+**⚠️ JANGAN skip urutan ini! Jakarta WAJIB selesai dulu sebagai patokan.**
 
-- 33 halaman hasil migrasi adalah baseline legacy: jangan ubah desain/konten/URL/fungsinya tanpa instruksi eksplisit. Task optimasi boleh menyentuhnya hanya sebatas scope yang diminta.
-- Perubahan seminimal mungkin; jangan refactor di luar scope task.
-- Bug lama yang tidak menghalangi task: biarkan dan laporkan, jangan perbaiki sendiri.
-- Semua konten dan copywriting dalam Bahasa Indonesia.
-- Kalau membuat halaman baru (ekspansi wilayah/artikel), gunakan pola Jakarta sebagai patokan — ikuti struktur section, schema, komponen, performa yang sama.
+---
 
-## Backlog optimasi (dikerjakan per instruksi, jangan mass-edit sekaligus)
+## TEKNIS REFACTOR
 
-- Halaman jasa & area: konten tipis, struktur heading/meta perlu audit; prioritas pemilik.
-- 8 halaman area flat masih konten versi lama persis — menunggu optimasi.
-- Nomor WA ganda tersebar di beberapa halaman (`6285710277854` standar vs `6282233569632`) — keputusan pemilik: seragamkan ke `6285710277854`; eksekusinya saat halaman dimigrasi satu per satu.
-- Navbar/footer/WA-float inline di halaman migrasi belum diganti komponen Astro (menunggu verifikasi visual).
-- **Galeri** perlu paginasi/load-more (keputusan pemilik 2026-08-26: pakai "load more" modern). Gambar bisa JPG/WebP terserah pemilik.
-- **Halaman harga diameter** belum punya FAQ schema (2026-08-26). Breadcrumb schema juga belum ada di beberapa halaman.
-- **Google Ads script** load tanpa `defer` di 5 halaman kota (Jakarta, Bekasi, Bogor, Depok, Tangerang) — perlu dikonsistenkan via GTM.
+### 1. Shared Scripts (6 files)
+
+```
+src/scripts/shared/
+├── navbar.js       → Navbar shrink, mobile menu, dropdown (~2KB)
+├── faq.js          → FAQ accordion (~0.5KB)
+├── scrolltop.js    → Scroll top button (~0.5KB)
+├── calculator.js   → Kalkulator bore pile (~5KB)
+├── lightbox.js     → Lightbox gallery (~1KB)
+└── breadcrumb.js   → Breadcrumb active state (~0.5KB)
+```
+
+### 2. Layouts (6 files)
+
+```
+src/layouts/
+├── KotaLayout.astro      ← 9 kota + 8 area = 17 halaman
+├── HargaLayout.astro     ← 5 harga + 1 strauss pile = 6 halaman
+├── ArtikelLayout.astro   ← 11 artikel
+├── GaleriLayout.astro    ← 2 galeri
+├── AlatLayout.astro      ← 4 alat
+└── JasaLayout.astro      ← 1 jasa (hub kota)
+```
+
+### 3. Components (12 files)
+
+```
+src/components/
+├── shared/
+│   ├── Navbar.astro         → Navbar (props: activeItem)
+│   ├── Footer.astro         → Footer (props: description)
+│   ├── WhatsAppFloat.astro  → WhatsApp float button
+│   ├── ScrollTop.astro      → Scroll top button
+│   ├── CtaBox.astro         → CTA box section
+│   ├── ArtikelSection.astro → Artikel section di atas footer
+│   ├── Breadcrumb.astro     → Breadcrumb navigation
+│   └── Hero.astro           → Hero section
+├── city/
+│   ├── Calculator.astro     → Kalkulator bore pile
+│   ├── PriceTable.astro     → Tabel harga
+│   ├── FAQ.astro            → FAQ accordion
+│   └── Projects.astro       → Contoh proyek
+```
+
+---
+
+## JAKARTA SEBAGAI PATOKAN
+
+### File
+
+```
+src/pages/jasa/bore-pile/jakarta/index.astro (949 baris → ~80 baris setelah refactor)
+```
+
+### Struktur Section (Urutan Wajib)
+
+1. Breadcrumb (Beranda > Jasa > Bore Pile Jakarta)
+2. H1 + page-meta (update date, author, lokasi) + update-badge
+3. CityHero (ilustrasi + deskripsi harga)
+4. CityCalculator (kalkulator estimasi biaya)
+5. PriceTable (tabel harga mesin + manual)
+6. CityFactors (faktor yang mempengaruhi harga, 5 faktor)
+7. CityAdditionalCosts (biaya tambahan)
+8. CityTips (tips memilih diameter)
+9. CityProjects (contoh hitungan proyek nyata + foto)
+10. CityWhy (kenapa pilih Agung Perkasa)
+11. CityEquipment (alat yang digunakan)
+12. CityPortfolio (dokumentasi proyek)
+13. CityKecamatan (wilayah layanan per kecamatan)
+14. FaqSection (FAQ 6 pertanyaan)
+15. CityArticles (artikel blog 3 artikel)
+16. CityInternalLinks (link ke kota lain)
+17. CtaBox ("Butuh jasa bore pile di Jakarta?" + tombol WA)
+18. Maps (Google Maps embed)
+19. Publisher box
+20. Footer
+21. WhatsApp float
+22. Scroll-top button
+23. Schema markup
+
+### Data Jakarta
+
+- **File**: `src/data/kota/jakarta.json` (380 baris)
+- **Harga manual**: mulai Rp70.000/m (20cm)
+- **Harga mesin**: mulai Rp120.000/m (30cm)
+- **Kedalaman mesin**: 12-26 meter
+- **Kedalaman manual**: 4-8 meter
+
+### CSS & JS untuk Halaman Kota
+
+- **CSS**: `/css/borepile-kota.css` (26.3KB, minified)
+- **JS**: Shared scripts saja (navbar.js, faq.js, scrolltop.js, calculator.js)
+
+---
+
+## DATA SOURCES (Satu Sumber Data)
+
+### File yang Sudah Ada
+
+- `src/data/config.json` — identitas, kontak, sosial media
+- `src/data/harga.json` — semua harga + `priceUpdatedAt`
+- `src/data/borepile-kota.json` — data kota
+- `src/data/galeri.json` — data galeri
+
+### Prinsip
+
+**Satu data, banyak halaman.** Kalau harga berubah, edit 1 file → semua halaman ikut.
+
+---
+
+## ARSITEKTUR ASTRO
+
+- `astro.config.mjs` memakai `build.format: 'file'` → setiap route menghasilkan `/path.html`
+- `site` diset ke domain produksi — jangan dihapus
+- 44 halaman Astro total
+- Satu sumber data wajib (jangan hardcode nilainya di halaman)
+
+---
+
+## PERFORMANCE
+
+### Yang Sudah Dioptimasi
+
+- Font Awesome CDN → SVG inline (7 ikon)
+- GTM ditunda sampai `window load`
+- Preconnect cdnjs/unpkg dibuang
+- CSS/JS lokal sudah dikompres Brotli
+
+### Yang Perlu Dioptimasi
+
+- 31 halaman lain masih pakai Font Awesome CDN
+- 3 CSS files belum minified (artikel.css, gallery.css, proses.css)
+- 6 JS files belum minified
+- WhatsApp number salah di `script.js` (lines 225, 256)
+
+---
 
 ## SEO
 
-- `public/sitemap.xml` dan `public/robots.txt` dikelola manual — update keduanya setiap menambah/mengubah URL. Saat ini 44 URL = 44 halaman; pertahankan sinkron. Setelah deploy, submit ulang sitemap di Google Search Console.
-- **Konsistensi og:url**: Sudah diperbaiki massal 2026-08-26 (24 file). Pastikan og:url = canonical di semua halaman baru. Pola: halaman `src/pages/x/y/index.astro` → canonical + og:url = `/x/y.html`.
-- Canonical di-hardcode ke domain produksi `https://agungperkasaborepile.com`.
-- Link internal mati di markup inline hasil salinan legacy (mis. `/artikel/artikel.html`, `/harga/harga-*`, link ke artikel/subhalaman alat yang belum ada) dipertahankan apa adanya selama halamannya memang belum dibuat; begitu halaman tujuan dibuat, barulah linknya boleh diperbaiki. Komponen `Navbar`/`Footer` Astro boleh langsung dibereskan (sudah: strauss-pile → jakarta.html, harga → bore-pile-2026.html, galeri → gallery.html).
+- Canonical di-hardcode ke domain produksi
+- og:url = canonical di semua halaman
+- Schema identitas (Organization/WebSite/LocalBusiness) di `src/lib/schema.js`
+- Schema unik per halaman (Breadcrumb, FAQ, Service) ditulis inline
 
-## Git
+---
 
-Working tree hampir selalu berisi perubahan WIP milik pengguna yang belum di-commit — jangan revert, stash, atau overwrite. Jangan commit/push tanpa diminta. Remote: `github.com/Andreysvn/web-agung-perkasa-borepile`.
+## PERINTAH
 
-Referensi: dokumentasi resmi Astro di https://docs.astro.build — baca dulu sebelum menebak API Astro.
+- `npm run dev` — dev server di `localhost:4321`
+- `npm run build` — verifikasi otomatis (wajib lolos)
+- `npm run preview` — serve hasil build dari `dist/`
+- Node >= 22.12.0
+
+---
+
+## ATURAN KERJA
+
+1. 33 halaman hasil migrasi adalah baseline legacy: **jangan ubah desain/konten/URL/fungsinya** tanpa instruksi eksplisit
+2. Perubahan seminimal mungkin; **jangan refactor di luar scope task**
+3. Bug lama yang tidak menghalangi task: **biarkan dan laporkan**, jangan perbaiki sendiri
+4. Semua konten dan copywriting dalam **Bahasa Indonesia**
+5. Kalau membuat halaman baru, **gunakan pola Jakarta sebagai patokan**
+
+---
+
+## GIT
+
+Working tree hampir selalu berisi perubahan WIP milik pengguna yang belum di-commit — **jangan revert, stash, atau overwrite**. Jangan commit/push tanpa diminta.
+
+---
+
+## REFERENSI
+
+- Dokumentasi Astro: https://docs.astro.build
+- Baca dulu sebelum menebak API Astro
