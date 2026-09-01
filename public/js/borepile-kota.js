@@ -225,7 +225,7 @@
 
     // ===== DIAMETER OPTIONS =====
     const diameterMesin = [30, 40, 50, 60, 80];
-    const diamerManual = [20, 25, 30, 40];
+    const diameterManual = [20, 25, 30, 40];
 
     // ===== STATE =====
     let currentMethod = 'mesin';
