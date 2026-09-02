@@ -8,7 +8,8 @@ interface Props {
         title: string;
         specs: string;
         method?: string;
-        costLines: string[];
+        costLines?: string[];
+        costCalc?: string;
         mobilization?: string;
         total: string;
         time: string;
@@ -40,9 +41,11 @@ const { projects, cityName, note } = Astro.props;
                         <p set:html={project.specs}></p>
                         {project.method && <p><strong>Metode:</strong> {project.method}</p>}
                         <p>
-                            {project.costLines.map((line) => (
+                            {project.costLines ? project.costLines.map((line) => (
                                 <Fragment set:html={line + '<br>'}></Fragment>
-                            ))}
+                            )) : project.costCalc ? (
+                                <Fragment set:html={project.costCalc + '<br>'}></Fragment>
+                            ) : null}
                             {project.mobilization && (
                                 <Fragment set:html={`<strong>+ mobilisasi:</strong> ${project.mobilization}<br>`}></Fragment>
                             )}

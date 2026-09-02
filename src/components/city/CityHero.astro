@@ -7,12 +7,12 @@ interface Props {
         heroWidth?: string;
         heroHeight?: string;
         heroText: string;
-        cityName: string;
+        name: string;
     };
 }
 
 const { data } = Astro.props;
-const { heroImage, heroAlt, heroCaption, heroWidth = '350', heroHeight = '372', heroText, cityName } = data;
+const { heroImage, heroAlt, heroCaption, heroWidth = '350', heroHeight = '372', heroText, name: cityName } = data;
 ---
 
 <div class="illustration">

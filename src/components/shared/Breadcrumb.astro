@@ -1,0 +1,23 @@
+---
+interface Props {
+    items: Array<{ label: string; href?: string }>;
+}
+
+const { items } = Astro.props;
+---
+
+<nav class="breadcrumb" aria-label="Breadcrumb navigasi">
+    {items.map((item, index) => {
+        const isLast = index === items.length - 1;
+        return (
+            <>
+                {isLast ? (
+                    <span class="current" aria-current="page">{item.label}</span>
+                ) : (
+                    <a href={item.href}>{item.label}</a>
+                )}
+                {!isLast && <span class="separator">/</span>}
+            </>
+        );
+    })}
+</nav>

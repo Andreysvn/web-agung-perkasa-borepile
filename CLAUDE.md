@@ -52,9 +52,9 @@ Website **Agung Perkasa Borepile** (jasa bore pile & strauss pile, seluruh konte
 
 ---
 
-## REFACTOR PLAN (Keputusan Pemilik 2026-09-01)
+## REFACTOR PLAN (Keputusan Pemilik 2026-09-02)
 
-### Scope
+### Scope Awal
 
 **41 halaman akan direfactor (kecuali beranda):**
 
@@ -72,19 +72,83 @@ Website **Agung Perkasa Borepile** (jasa bore pile & strauss pile, seluruh konte
 
 **Beranda:** TIDAK DIREFACTOR (tetap pakai BaseLayout yang ada).
 
-### Urutan Pengerjaan
+**Target akhir:** Ekspansi ke **100+ halaman local SEO** setelah fondasi solid.
+
+### 4 Fase Pengerjaan
+
+**⚠️ JANGAN skip urutan fase! Setiap fase WAJIB selesai dan diverifikasi sebelum lanjut.**
+
+#### FASE 1 — Fondasi (Jakarta Pilot)
 
 ```
 1. Buat shared scripts (6 files)
-2. Buat layouts (6 files)
+2. Buat KotaLayout.astro — membungkus SEMUANYA:
+   - <head> lengkap (meta, OG, canonical, CSS)
+   - Schema JSON-LD (Organization, LocalBusiness, Breadcrumb, FAQ, Service)
+   - Navbar
+   - <slot /> (konten spesifik kota)
+   - Google Maps embed
+   - Publisher box (identitas Agung Perkasa)
+   - CtaBox
+   - Footer
+   - WhatsApp float + Scroll-top
+   - JS scripts (navbar, faq, scrolltop, calculator)
 3. Buat components (12 files)
-4. Refactor JAKARTA sebagai PILOT
-5. Test & verify Jakarta
-6. Replikasi ke kota lain
-7. Final test
+4. Refactor JAKARTA sebagai PILOT menggunakan KotaLayout
+   → Target: jakarta/index.astro menyusut ke ~30-50 baris
+5. Test & verify Jakarta — npm run build lolos, tampilan identik
+6. Standarisasi format JSON kota (buat template/schema wajib)
 ```
 
-**⚠️ JANGAN skip urutan ini! Jakarta WAJIB selesai dulu sebagai patokan.**
+#### FASE 2 — Konsistensi (Replikasi + Bug Fix)
+
+```
+1. Replikasi Jakarta ke 8 kota lain (Bandung, Bekasi, dst.)
+2. Replikasi ke 8 area flat (Bintaro, BSD, dst.)
+3. Refactor halaman harga, artikel, galeri, alat, jasa, strauss pile
+4. Fix bug performa yang sudah diketahui:
+   - Font Awesome CDN → SVG inline di SEMUA halaman
+   - Minify 3 CSS (artikel.css, gallery.css, proses.css)
+   - Minify 6 JS files
+   - Fix nomor WA salah di script.js (baris 225, 256)
+5. Verifikasi semua 41 halaman: build lolos, tampilan identik dengan legacy
+```
+
+#### FASE 3 — Performa (PageSpeed Hijau)
+
+```
+1. Audit PageSpeed Insights (mobile & desktop) untuk halaman Jakarta
+2. Optimasi berdasarkan hasil audit:
+   - Critical CSS inline di <head> (above-the-fold)
+   - Defer/async semua JS non-kritis
+   - Lazy load semua gambar di bawah fold
+   - Semua gambar format WebP dengan dimensi eksplisit (width/height)
+   - Preload font/resource kritis
+   - Eliminasi render-blocking resources
+3. Optimasi Core Web Vitals:
+   - LCP (Largest Contentful Paint) < 2.5s
+   - INP (Interaction to Next Paint) < 200ms
+   - CLS (Cumulative Layout Shift) < 0.1
+4. Security headers (CSP, X-Frame-Options, X-Content-Type-Options)
+5. Pastikan kompatibel Hostinger DAN Cloudflare Pages
+6. Re-audit PageSpeed — target skor 90+ mobile, 95+ desktop
+```
+
+#### FASE 4 — Ekspansi 100+ Halaman Local SEO
+
+```
+1. Konversi halaman kota ke dynamic route [slug].astro
+   → 1 file template + N file JSON = N halaman otomatis
+   → Tambah kota baru = tambah 1 file JSON saja
+2. Buat 100+ file JSON data kota/kecamatan/area baru
+3. Setiap halaman otomatis dapat:
+   - Kalkulator harga, tabel harga, FAQ
+   - Maps embed, publisher box, schema markup
+   - Navbar, footer, WhatsApp float konsisten
+4. Pastikan konten unik per kota (BUKAN copy-paste thin content)
+5. Auto-generate sitemap.xml untuk semua halaman
+6. Verifikasi: build lolos, tidak ada thin content, schema valid
+```
 
 ---
 
@@ -211,28 +275,88 @@ src/pages/jasa/bore-pile/jakarta/index.astro (949 baris → ~80 baris setelah re
 
 ## PERFORMANCE
 
+### Target
+
+- **PageSpeed Insights**: 90+ mobile, 95+ desktop
+- **Core Web Vitals**: LCP < 2.5s, INP < 200ms, CLS < 0.1
+- **Total page weight**: < 500KB per halaman (termasuk gambar)
+
 ### Yang Sudah Dioptimasi
 
-- Font Awesome CDN → SVG inline (7 ikon)
+- Font Awesome CDN → SVG inline (7 ikon, hanya di Jakarta)
 - GTM ditunda sampai `window load`
 - Preconnect cdnjs/unpkg dibuang
 - CSS/JS lokal sudah dikompres Brotli
 
-### Yang Perlu Dioptimasi
+### Yang Perlu Dioptimasi (Fase 2 & 3)
 
-- 31 halaman lain masih pakai Font Awesome CDN
-- 3 CSS files belum minified (artikel.css, gallery.css, proses.css)
-- 6 JS files belum minified
-- WhatsApp number salah di `script.js` (lines 225, 256)
+- [ ] 31 halaman lain masih pakai Font Awesome CDN → ubah ke SVG inline
+- [ ] 3 CSS files belum minified (artikel.css, gallery.css, proses.css)
+- [ ] 6 JS files belum minified
+- [ ] WhatsApp number salah di `script.js` (lines 225, 256) → `6285710277854`
+- [ ] Critical CSS inline di `<head>` untuk above-the-fold content
+- [ ] Defer/async semua JS non-kritis
+- [ ] Lazy load gambar di bawah fold (`loading="lazy"`)
+- [ ] Semua gambar pakai format WebP + dimensi eksplisit (`width`/`height`) untuk CLS
+- [ ] Preload resource kritis (CSS utama, font jika ada)
+- [ ] Eliminasi render-blocking resources
+- [ ] Hapus CSS/JS yang tidak terpakai (unused code)
 
 ---
 
-## SEO
+## SEO TEKNIKAL
+
+### Yang Sudah Ada
 
 - Canonical di-hardcode ke domain produksi
 - og:url = canonical di semua halaman
 - Schema identitas (Organization/WebSite/LocalBusiness) di `src/lib/schema.js`
 - Schema unik per halaman (Breadcrumb, FAQ, Service) ditulis inline
+- Konten full Bahasa Indonesia, keyword lokal di setiap halaman kota
+
+### Checklist Teknikal (Fase 2 & 3)
+
+**Meta & Head:**
+- [ ] Title tag unik per halaman (< 60 karakter)
+- [ ] Meta description unik per halaman (< 160 karakter)
+- [ ] Canonical URL benar di setiap halaman
+- [ ] og:title, og:description, og:image di setiap halaman
+- [ ] Favicon lengkap (sudah ada)
+
+**Schema Markup:**
+- [ ] Organization schema valid (sudah ada)
+- [ ] LocalBusiness schema valid di setiap halaman kota
+- [ ] BreadcrumbList schema di setiap halaman
+- [ ] FAQPage schema di halaman yang punya FAQ
+- [ ] Service schema di halaman jasa
+- [ ] Validasi semua schema via Google Rich Results Test
+
+**Crawlability & Indexing:**
+- [ ] robots.txt benar (tidak memblokir halaman penting)
+- [ ] sitemap.xml lengkap dan up-to-date (auto-generate untuk 100+ halaman)
+- [ ] Tidak ada orphan pages (semua halaman punya internal link)
+- [ ] Tidak ada broken links (internal maupun eksternal)
+- [ ] Redirect 301 dari URL lama ke URL baru (`.htaccess` + `_redirects`)
+
+**Gambar:**
+- [ ] Semua gambar punya `alt` text deskriptif (Bahasa Indonesia)
+- [ ] Format WebP untuk semua gambar konten
+- [ ] Dimensi eksplisit (`width`/`height`) di setiap `<img>`
+- [ ] Lazy loading untuk gambar di bawah fold
+
+**Aksesibilitas (Mempengaruhi Skor Audit):**
+- [ ] Heading hierarchy benar (H1 → H2 → H3, tidak loncat)
+- [ ] Semua link punya teks deskriptif (bukan "klik di sini")
+- [ ] Semua tombol/link interaktif punya `aria-label` jika perlu
+- [ ] Kontras warna memenuhi WCAG AA (jangan ubah warna, cek saja)
+- [ ] Semantic HTML (`<nav>`, `<main>`, `<article>`, `<section>`, `<footer>`)
+
+**Security (Mempengaruhi Skor Audit):**
+- [ ] HTTPS aktif (sudah ada via hosting)
+- [ ] Security headers: `X-Content-Type-Options: nosniff`
+- [ ] Security headers: `X-Frame-Options: DENY`
+- [ ] Security headers: `Referrer-Policy: strict-origin-when-cross-origin`
+- [ ] Tidak ada mixed content (HTTP di halaman HTTPS)
 
 ---
 

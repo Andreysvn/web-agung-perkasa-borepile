@@ -1,0 +1,19 @@
+---
+interface Props {
+    description?: string;
+}
+
+const { 
+    description = "Spesialis pondasi borepile mesin & strauss pile (bore pile manual). Pengalaman lebih dari 10 tahun di Jakarta dan sekitarnya." 
+} = Astro.props;
+---
+
+<div class="publisher-box">
+    <div class="publisher-inner">
+        <img src="/imgs/logo-agung-perkasa-transparan.webp" alt="Logo Agung Perkasa Borepile" width="60" height="60" loading="lazy" />
+        <div>
+            <h4>Dipublikasikan oleh Agung Perkasa Borepile</h4>
+            <p>{description}</p>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 ---
 interface Props {
-    whyUs: Array<{ title: string; description: string }>;
+    whyUs: Array<{ title: string; description?: string; desc?: string }>;
     cityName: string;
 }
 
@@ -15,7 +15,7 @@ const { whyUs, cityName } = Astro.props;
         {whyUs.map((item) => (
             <div class="reason-card">
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <p>{item.description || item.desc || ''}</p>
             </div>
         ))}
     </div>

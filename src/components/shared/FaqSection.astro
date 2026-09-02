@@ -2,12 +2,12 @@
 import FaIcon from '../icons/FaIcon.astro';
 
 interface Props {
-    faq: Array<{ question: string; answer: string }>;
-    cityName: string;
+    faq: Array<{ question?: string; answer?: string; q?: string; a?: string }>;
+    cityName?: string;
     sectionTitle?: string;
 }
 
-const { faq, cityName, sectionTitle = '' } = Astro.props;
+const { faq, cityName = '', sectionTitle = '' } = Astro.props;
 
 const heading = sectionTitle || `Pertanyaan Umum Seputar Bore Pile ${cityName}`;
 ---
@@ -18,11 +18,11 @@ const heading = sectionTitle || `Pertanyaan Umum Seputar Bore Pile ${cityName}`;
         {faq.map((item) => (
             <div class="faq-item">
                 <button class="faq-question">
-                    {item.question}
+                    {item.question || item.q}
                     <FaIcon class="fas fa-chevron-down" />
                 </button>
                 <div class="faq-answer">
-                    <p set:html={item.answer}></p>
+                    <p set:html={item.answer || item.a}></p>
                 </div>
             </div>
         ))}

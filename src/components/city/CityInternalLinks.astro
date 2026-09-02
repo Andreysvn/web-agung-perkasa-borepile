@@ -1,7 +1,8 @@
 ---
 interface Props {
     internalLinks: Array<{
-        text: string;
+        text?: string;
+        label?: string;
         href: string;
     }>;
 }
@@ -13,7 +14,7 @@ const { internalLinks } = Astro.props;
     <p><strong>Baca Juga Harga Bore Pile:</strong><br>
     {internalLinks.map((link, i) => (
         <Fragment>
-            <a href={link.href}>{link.text}</a>
+            <a href={link.href}>{link.text || link.label}</a>
             {i < internalLinks.length - 1 && ' | '}
         </Fragment>
     ))}</p>

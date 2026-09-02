@@ -1,12 +1,14 @@
 ---
 interface Props {
     equipment: {
+        description?: string;
         items: Array<{
-            image: string;
-            imageAlt: string;
-            iconFallback: string;
             name: string;
-            description: string;
+            desc?: string;
+            description?: string;
+            image?: string;
+            imageAlt?: string;
+            iconFallback?: string;
         }>;
     };
     cityName: string;
@@ -21,13 +23,17 @@ const { equipment, cityName } = Astro.props;
 <div class="equip-grid">
     {equipment.items.map((item) => (
         <div class="equip-item">
-            <img class="equip-img" src={item.image} alt={item.imageAlt} loading="lazy">
+            {item.image ? (
+                <img class="equip-img" src={item.image} alt={item.imageAlt || item.name} loading="lazy" />
+            ) : (
+                <img class="equip-img" src="/imgs/logo-agung-perkasa.webp" alt={`Ikon ${item.name}`} width="80" height="80" loading="lazy" />
+            )}
             <div class="equip-info">
                 <div class="equip-icon-inline">
-                    <img src="/imgs/logo-agung-perkasa.webp" alt={`Ikon ${item.name}`} width="24" height="24" onerror={`this.src='${item.iconFallback}'`}>
+                    <img src="/imgs/logo-agung-perkasa.webp" alt={`Ikon ${item.name}`} width="24" height="24" />
                     <h4>{item.name}</h4>
                 </div>
-                <p>{item.description}</p>
+                <p>{item.desc || item.description || ''}</p>
                 <span class="equip-tag">Agung Perkasa</span>
             </div>
         </div>
