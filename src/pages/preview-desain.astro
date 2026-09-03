@@ -1,26 +1,26 @@
 ﻿---
-import KotaLayout from '../../../../layouts/KotaLayout.astro';
-import pricing from '../../../../data/harga.json';
-import jakartaData from '../../../../data/kota/jakarta.json';
+import DraftLayout from '../layouts/DraftLayout.astro';
+import pricing from '../data/harga.json';
+import jakartaData from '../data/kota/jakarta.json';
 
 // Components
-import Breadcrumb from '../../../../components/shared/Breadcrumb.astro';
-import PageMeta from '../../../../components/shared/PageMeta.astro';
-import CityHero from '../../../../components/city/CityHero.astro';
-import CityCalculator from '../../../../components/city/CityCalculator.astro';
-import PriceTable from '../../../../components/shared/PriceTable.astro';
-import CityFactors from '../../../../components/city/CityFactors.astro';
-import CityAdditionalCosts from '../../../../components/city/CityAdditionalCosts.astro';
-import CityTips from '../../../../components/city/CityTips.astro';
-import CityProjects from '../../../../components/city/CityProjects.astro';
-import CitySoil from '../../../../components/city/CitySoil.astro';
-import CityWhyUs from '../../../../components/city/CityWhyUs.astro';
-import CityEquipment from '../../../../components/city/CityEquipment.astro';
-import CityPortfolio from '../../../../components/city/CityPortfolio.astro';
-import CityKecamatan from '../../../../components/city/CityKecamatan.astro';
-import FaqSection from '../../../../components/shared/FaqSection.astro';
-import CityArticles from '../../../../components/city/CityArticles.astro';
-import CityInternalLinks from '../../../../components/city/CityInternalLinks.astro';
+import Breadcrumb from '../components/shared/Breadcrumb.astro';
+import PageMeta from '../components/shared/PageMeta.astro';
+import CityHero from '../components/city/CityHero.astro';
+import CityCalculator from '../components/city/CityCalculator.astro';
+import PriceTable from '../components/shared/PriceTable.astro';
+import CityFactors from '../components/city/CityFactors.astro';
+import CityAdditionalCosts from '../components/city/CityAdditionalCosts.astro';
+import CityTips from '../components/city/CityTips.astro';
+import CityProjects from '../components/city/CityProjects.astro';
+import CitySoil from '../components/city/CitySoil.astro';
+import CityWhyUs from '../components/city/CityWhyUs.astro';
+import CityEquipment from '../components/city/CityEquipment.astro';
+import CityPortfolio from '../components/city/CityPortfolio.astro';
+import CityKecamatan from '../components/city/CityKecamatan.astro';
+import FaqSection from '../components/shared/FaqSection.astro';
+import CityArticles from '../components/city/CityArticles.astro';
+import CityInternalLinks from '../components/city/CityInternalLinks.astro';
 
 // Format harga untuk meta deskripsi
 const mesinMulai = pricing.mesin.find((item) => item.price > 0)?.price.toLocaleString('id-ID') || "120.000";
@@ -86,7 +86,7 @@ const productSchema = JSON.stringify({
     "areaServed": { "@type": "City", "name": jakartaData.name }
 });
 ---
-<KotaLayout
+<DraftLayout
     title={seoTitle}
     description={seoDesc}
     canonical={canonical}
@@ -146,6 +146,7 @@ const productSchema = JSON.stringify({
     <CityProjects projects={jakartaData.projects} cityName={jakartaData.name} note={jakartaData.projectNote} />
 
     <!-- Section 9.5: Soil Reasoning -->
+    
     <CitySoil soilReasons={jakartaData.soilReasons} />
 
     <!-- Section 10: Why Us -->
@@ -168,5 +169,8 @@ const productSchema = JSON.stringify({
 
     <!-- Section 16: Internal Links -->
     <CityInternalLinks internalLinks={jakartaData.internalLinks} />
-</KotaLayout>
+</DraftLayout>
+
+
+
 

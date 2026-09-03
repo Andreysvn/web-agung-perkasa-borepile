@@ -1,0 +1,40 @@
+﻿---
+interface Props {
+    soilReasons?: {
+        title: string;
+        description: string;
+        points: Array<{ title: string; desc: string }>;
+        conclusion?: string;
+    };
+}
+const { soilReasons } = Astro.props;
+---
+{soilReasons && (
+<section class="soil-section">
+    <div class="container">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 1.5rem;">
+            {soilReasons.title}
+        </h2>
+        <p class="soil-desc" set:html={soilReasons.description}></p>
+        <ul>
+            {soilReasons.points.map((point: any) => (
+                <li>
+                    <strong>{point.title}</strong> - <span set:html={point.desc}></span>
+                </li>
+            ))}
+        </ul>
+        {soilReasons.conclusion && (
+            <div class="soil-conclusion" set:html={soilReasons.conclusion}></div>
+        )}
+    </div>
+</section>
+)}
+<style>
+    .soil-section { margin-bottom: var(--space-xl); }
+    .soil-desc { margin-bottom: 1.5rem; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center; }
+    .soil-section ul { list-style-type: none; padding-left: 0; max-width: 800px; margin-left: auto; margin-right: auto; }
+    .soil-section li { margin-bottom: 1rem; line-height: 1.6; padding-left: 1.5rem; position: relative; }
+    .soil-section li::before { content: "\2713"; position: absolute; left: 0; color: var(--brand-accent); font-weight: bold; }
+    .soil-conclusion { max-width: 800px; margin-left: auto; margin-right: auto; margin-top: 1.5rem; }
+    .soil-conclusion p { margin-bottom: 1rem; line-height: 1.6; }
+</style>

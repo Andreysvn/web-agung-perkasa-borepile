@@ -7,16 +7,20 @@ interface Props {
 const { whyUs, cityName } = Astro.props;
 ---
 
-<div class="why-section">
-    <h2 class="why-title">Kenapa pilih Agung Perkasa untuk Bore Pile di {cityName}?</h2>
-    <p class="why-sub">Ini alasan kenapa banyak orang {cityName} percaya sama Agung Perkasa.</p>
+<section class="why-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Kenapa pilih Agung Perkasa untuk Bore Pile di {cityName}?</h2>
+            <p class="section-subtitle">Ini alasan kenapa banyak orang {cityName} percaya sama Agung Perkasa.</p>
+        </div>
 
-    <div class="reasons-grid">
-        {whyUs.map((item) => (
-            <div class="reason-card">
-                <h3>{item.title}</h3>
-                <p>{item.description || item.desc || ''}</p>
-            </div>
-        ))}
+        <div class="reasons-grid">
+            {whyUs.map((item) => (
+                <div class="reason-card">
+                    <h3>{item.title}</h3>
+                    <p>{item.description || item.desc || ''}</p>
+                </div>
+            ))}
+        </div>
     </div>
-</div>
+</section>

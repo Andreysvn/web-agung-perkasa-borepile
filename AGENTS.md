@@ -78,14 +78,20 @@ Website **Agung Perkasa Borepile** (jasa bore pile & strauss pile, seluruh konte
 
 **⚠️ JANGAN skip urutan fase! Setiap fase WAJIB selesai dan diverifikasi sebelum lanjut.**
 
-#### FASE 1 — Fondasi (Jakarta Pilot) - **SELESAI (Menunggu fix visual minor)**
+#### FASE 1 — Fondasi (Jakarta Pilot) - **SELESAI (100% APPROVED)**
 
 - [x] Standarisasi format JSON & Props Komponen (7 prop mismatch diperbaiki).
 - [x] Buat `KotaLayout.astro` (Membungkus Head, Meta, Navbar, Footer, Schema, Maps, CTA, WA, dll).
 - [x] Buat komponen baru yang kurang (Breadcrumb, PageMeta, Maps, Publisher, dll).
 - [x] Refactor `jakarta/index.astro` menjadi ringkas dengan `KotaLayout`.
-- [x] Test build lolos (44 halaman, 0 error) dan HTML output terverifikasi memiliki 29/29 elemen penting.
-- [ ] *Pending: Fix error tulisan (typo/mojibake/styling) berdasarkan temuan visual pemilik.*
+- [x] Test build lolos (44 halaman, 0 error) dan HTML output terverifikasi.
+- [x] **Fix Visual & Tipografi Selesai**: 
+      - Mojibake (Ø, ×) dibersihkan dari seluruh JSON.
+      - Scroll-top fix (Cyan #06b6d4, polos).
+      - Kalkulator kontras (Bg biru pastel, form putih, garis putus-putus).
+      - SVG Inline Icon (0 HTTP request untuk kaca pembesar dan ikon lain, tanpa FontAwesome).
+      - Layout fix (CTA artikel masuk ke dalam container).
+      - Copywriting EYD (spasi, tanda baca, huruf kapital dirapikan tanpa mengubah gaya bahasa asli pengguna).
 
 #### FASE 2 — Konsistensi (Replikasi + Bug Fix) - **(BERIKUTNYA)**
 

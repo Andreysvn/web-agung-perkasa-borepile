@@ -78,41 +78,34 @@ Website **Agung Perkasa Borepile** (jasa bore pile & strauss pile, seluruh konte
 
 **⚠️ JANGAN skip urutan fase! Setiap fase WAJIB selesai dan diverifikasi sebelum lanjut.**
 
-#### FASE 1 — Fondasi (Jakarta Pilot)
+#### FASE 1 — Fondasi (Jakarta Pilot) - **SELESAI (100% APPROVED)**
 
-```
-1. Buat shared scripts (6 files)
-2. Buat KotaLayout.astro — membungkus SEMUANYA:
-   - <head> lengkap (meta, OG, canonical, CSS)
-   - Schema JSON-LD (Organization, LocalBusiness, Breadcrumb, FAQ, Service)
-   - Navbar
-   - <slot /> (konten spesifik kota)
-   - Google Maps embed
-   - Publisher box (identitas Agung Perkasa)
-   - CtaBox
-   - Footer
-   - WhatsApp float + Scroll-top
-   - JS scripts (navbar, faq, scrolltop, calculator)
-3. Buat components (12 files)
-4. Refactor JAKARTA sebagai PILOT menggunakan KotaLayout
-   → Target: jakarta/index.astro menyusut ke ~30-50 baris
-5. Test & verify Jakarta — npm run build lolos, tampilan identik
-6. Standarisasi format JSON kota (buat template/schema wajib)
-```
+- [x] Standarisasi format JSON & Props Komponen (7 prop mismatch diperbaiki).
+- [x] Buat `KotaLayout.astro` (Membungkus Head, Meta, Navbar, Footer, Schema, Maps, CTA, WA, dll).
+- [x] Buat komponen baru yang kurang (Breadcrumb, PageMeta, Maps, Publisher, dll).
+- [x] Refactor `jakarta/index.astro` menjadi ringkas dengan `KotaLayout`.
+- [x] Test build lolos (44 halaman, 0 error) dan HTML output terverifikasi.
+- [x] **Fix Visual & Tipografi Selesai**: 
+      - Mojibake (Ø, ×) dibersihkan dari seluruh JSON.
+      - Scroll-top fix (Cyan #06b6d4, polos).
+      - Kalkulator kontras (Bg biru pastel, form putih, garis putus-putus).
+      - SVG Inline Icon (0 HTTP request untuk kaca pembesar dan ikon lain, tanpa FontAwesome).
+      - Layout fix (CTA artikel masuk ke dalam container).
+      - Copywriting EYD (spasi, tanda baca, huruf kapital dirapikan tanpa mengubah gaya bahasa asli pengguna).
 
-#### FASE 2 — Konsistensi (Replikasi + Bug Fix)
+#### FASE 2 — Konsistensi (Replikasi + Bug Fix) - **(BERIKUTNYA)**
 
-```
-1. Replikasi Jakarta ke 8 kota lain (Bandung, Bekasi, dst.)
-2. Replikasi ke 8 area flat (Bintaro, BSD, dst.)
-3. Refactor halaman harga, artikel, galeri, alat, jasa, strauss pile
-4. Fix bug performa yang sudah diketahui:
-   - Font Awesome CDN → SVG inline di SEMUA halaman
-   - Minify 3 CSS (artikel.css, gallery.css, proses.css)
-   - Minify 6 JS files
-   - Fix nomor WA salah di script.js (baris 225, 256)
-5. Verifikasi semua 41 halaman: build lolos, tampilan identik dengan legacy
-```
+**Tugas Utama yang Harus Dikerjakan:**
+- [ ] Replikasi `KotaLayout` ke 8 kota lain (Bandung, Bekasi, Bogor, Depok, Karawang, Semarang, Surabaya, Tangerang).
+- [ ] Replikasi `KotaLayout` ke 8 area flat (Bintaro, BSD, Cibubur, Ciputat, Karawaci, Pamulang, Tangsel).
+- [ ] Konsolidasi Navbar dan Footer (Hapus `NavbarKota` & `FooterKota`, pakai `Navbar` & `Footer` global untuk semua).
+- [ ] Refactor halaman harga, artikel, galeri, alat, jasa, strauss pile memakai layout masing-masing.
+- [ ] Fix bug performa yang sudah diketahui:
+   - Font Awesome CDN → ganti SVG inline di SEMUA halaman.
+   - Minify 3 CSS (artikel, gallery, proses).
+   - Minify 6 JS files.
+   - Fix nomor WA yang salah di `script.js` (baris 225, 256) menjadi `6285710277854`.
+- [ ] Verifikasi semua 41 halaman: build lolos, tampilan konsisten.
 
 #### FASE 3 — Performa (PageSpeed Hijau)
 

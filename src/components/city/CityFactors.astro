@@ -1,4 +1,4 @@
----
+﻿---
 interface Props {
     factors: Array<{ title: string; text: string }>;
     sondirNote: string;
@@ -23,6 +23,7 @@ const { factors, sondirNote, cityName } = Astro.props;
     </div>
 
     <div class="sondir-note">
-        <strong set:html={sondirNote}></strong>
+        <p set:html={sondirNote}></p>
     </div>
 </section>
+

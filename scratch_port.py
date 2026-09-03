@@ -1,4 +1,4 @@
-﻿---
+﻿code = '''---
 interface Props {
     portfolio: {
         title?: string;
@@ -44,8 +44,12 @@ const heading = portfolio.heading || `Dokumentasi proyek bore pile ${cityName.to
             ))}
         </div>
         <p class="portfolio-city-link">
-            Ingin lihat lebih banyak?&nbsp;<a href="/galeri/gallery.html">Kunjungi galeri proyek kami &rarr;</a>
+            Ingin lihat lebih banyak? 
+            <a href="/galeri/gallery.html">Kunjungi galeri proyek kami &rarr;</a>
         </p>
     </div>
 </section>
+'''
 
+with open('src/components/city/CityPortfolio.astro', 'w', encoding='utf-8') as f:
+    f.write(code)
