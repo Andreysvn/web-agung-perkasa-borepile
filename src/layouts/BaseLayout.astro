@@ -1,4 +1,4 @@
----
+﻿---
 // src/layouts/BaseLayout.astro
 import config from '../data/config.json';
 import {
@@ -18,11 +18,13 @@ import WhatsAppFloatV2 from '../components/global/v2/WhatsAppFloat.astro';
 import ScrollTopV2 from '../components/global/v2/ScrollTop.astro';
 
 export interface Props {
+  disableGlobalJs?: boolean;
   title: string;
   titleOverride?: string;
   ogTitle?: string;
   twTitle?: string;
   description?: string;
+  disableGlobalCss?: boolean;
   keywords?: string;
   image?: string;
   ogType?: string;
@@ -33,7 +35,8 @@ export interface Props {
   includeWebsiteSchema?: boolean;
 }
 
-const { 
+const {
+  disableGlobalJs = false, 
   title, 
   titleOverride,
   ogTitle,
@@ -46,7 +49,8 @@ const {
   design = 'legacy',
   localBusinessOverride,
   organizationOverride,
-  includeWebsiteSchema = true
+  includeWebsiteSchema = true,
+    disableGlobalCss = false
 } = Astro.props;
 
 const isV2 = design === 'v2';
@@ -139,7 +143,7 @@ const localBusinessSchema = localBusinessSchemaBase(localBusinessOverride ?? {
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
     
     <!-- ===== GLOBAL CSS ===== -->
-    {!isV2 && <link rel="stylesheet" href="/css/style.css" />}
+    {!isV2 && !disableGlobalCss && <link rel="stylesheet" href="/css/style.css" />}
     {isV2 && (
       <>
         <link rel="preload" href="/fonts/plus-jakarta-sans-latin-var.woff2" as="font" type="font/woff2" crossorigin />
@@ -174,6 +178,7 @@ const localBusinessSchema = localBusinessSchemaBase(localBusinessOverride ?? {
       gtag('config', 'AW-16649506462');
     </script>
     
+    <slot name="head" />
 </head>
 <body class={bodyClass}>
     
@@ -203,7 +208,7 @@ const localBusinessSchema = localBusinessSchemaBase(localBusinessOverride ?? {
     {isV2 ? <ScrollTopV2 /> : <ScrollTop />}
     
     <!-- ===== GLOBAL JS ===== -->
-    {!isV2 && <script src="/js/script.js" defer></script>}
+    {!isV2 && !disableGlobalJs && <script src="/js/script.js" defer></script>}
     
 </body>
 </html>

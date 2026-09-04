@@ -120,7 +120,6 @@ const waLink = `https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Sa
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <meta name="theme-color" content="#1a365d">
-
     <title>{title}</title>
 
     <meta name="description" content={description}>
@@ -210,18 +209,21 @@ const waLink = `https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Sa
         </div>
     </main>
 
-    <!-- ===== CTA BOX ===== -->
-    <div class="cta-box">
-        <h3>{finalCtaTitle}</h3>
-        <p>{finalCtaText}</p>
-        <a href={waLink} class="btn-wa-konsultasi" target="_blank" rel="noopener noreferrer" aria-label="Konsultasi gratis via WhatsApp">Konsultasi Gratis via WA</a>
+    <!-- ===== CTA, MAPS, PUBLISHER (WRAPPED IN CONTAINER) ===== -->
+    <div class="container">
+        <!-- ===== CTA BOX ===== -->
+        <div class="cta-box">
+            <h3>{finalCtaTitle}</h3>
+            <p>{finalCtaText}</p>
+            <a href={waLink} class="btn-wa-konsultasi" target="_blank" rel="noopener noreferrer" aria-label="Konsultasi gratis via WhatsApp">Konsultasi Gratis via WA</a>
+        </div>
+
+        <!-- ===== GOOGLE MAPS ===== -->
+        <GoogleMapsEmbed cityName={cityName} mapsNote={mapsNote} />
+
+        <!-- ===== PUBLISHER BOX ===== -->
+        <PublisherBox description={publisherDesc} />
     </div>
-
-    <!-- ===== GOOGLE MAPS ===== -->
-    <GoogleMapsEmbed cityName={cityName} mapsNote={mapsNote} />
-
-    <!-- ===== PUBLISHER BOX ===== -->
-    <PublisherBox description={publisherDesc} />
 
     <Footer />
 

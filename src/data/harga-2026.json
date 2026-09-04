@@ -1,0 +1,228 @@
+{
+  "slug": "harga/bore-pile-2026",
+  "name": "Jawa & Jabodetabek",
+  "year": 2026,
+  "geoRegion": "ID",
+  "geoPlacename": "Indonesia",
+  "heroImage": "/imgs/pengecoran-beton-borepile.webp",
+  "heroAlt": "Proses pengecoran beton pada lubang bore pile",
+  "heroCaption": "Proses pengecoran bore pile",
+  "heroWidth": 400,
+  "heroHeight": 250,
+  "heroText": "<strong>Harga bore pile 2026</strong> terbaru untuk jasa pengeboran mulai dari <strong>Rp120.000/m untuk mesin (mini crane)</strong>, dan manual atau <strong>strauss pile mulai dari Rp75.000/m</strong>. Kalkulator ini dibuat untuk menghitung estimasi <strong>total biaya</strong> jasa borepile dari berbagai diameter (mesin & manual), bisa mengatur harga sendiri sesuai keinginan. Dibuat oleh tim Agung Perkasa Borepile dari data proyek nyata yang kami kerjakan di lapangan.",
+  "localBusinessDesc": "Harga bore pile 2026 terbaru dan terpercaya. Harga mesin mulai Rp120.000/m, manual mulai Rp75.000/m.",
+  "sondirNote": "Penting: Di Pulau Jawa bagian pesisir utara (seperti Jakarta Utara atau Semarang), tanah keras bisa sangat dalam. Kami sangat menyarankan Anda melakukan tes sondir tanah terlebih dahulu agar pondasi bore pile bisa dirancang dengan efisien dan tepat sasaran.",
+  "whyUs": [
+    {
+      "title": "Memakai alat yang baik",
+      "description": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, dan strauss pile."
+    },
+    {
+      "title": "Efisiensi waktu & Komitmen kualitas",
+      "description": "Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam."
+    },
+    {
+      "title": "Tim Ahli",
+      "description": "Memiliki tim ahli dalam pengerjaan bore pile, khususnya membuat pondasi dalam untuk berbagai jenis bangunan."
+    },
+    {
+      "title": "Tim berpengalaman",
+      "description": "Lebih dari sepuluh tahun mengerjakan proyek bore pile. Mulai dari proyek rumah tinggal pribadi hingga proyek komersial dan industri."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Apa perbedaan bore pile mesin dan manual?",
+      "answer": "Bore pile mesin pakai mini crane, kedalaman hingga 30 meter, biaya lebih tinggi. Bore pile manual pakai tenaga manusia, kedalaman 10 meter, lebih ekonomis untuk proyek kecil dan area sempit."
+    },
+    {
+      "question": "Metode mana yang cocok untuk proyek rumah saya?",
+      "answer": "Jika ingin membuat rumah 2 lantai ke atas atau tanah bekas rawa kami sarankan menggunakan bore pile mesin. Jika hanya rumah 1 lantai, area sempit, budget terbatas bisa menggunakan bore pile manual."
+    },
+    {
+      "question": "Berapa minimal order untuk jasa bore pile?",
+      "answer": "Bore pile mesin (mini crane & gawangan) minimal 200 meter. Bore pile manual minimal 100 meter. Di bawah itu bisa hubungi admin untuk penawaran khusus."
+    },
+    {
+      "question": "Bisa pakai material sendiri untuk bore pile?",
+      "answer": "Sangat bisa. Harga di atas untuk jasa bor saja, material bisa Anda sediakan sendiri. Kami juga menyediakan paket lengkap dengan material."
+    },
+    {
+      "question": "Apa yang mempengaruhi harga bore pile?",
+      "answer": "Diameter, kedalaman pengeboran, kondisi tanah, jarak lokasi proyek dari gudang kami, volume pekerjaan, dan tingkat kesulitan proyek."
+    },
+    {
+      "question": "Berapa kedalaman maksimal bore pile?",
+      "answer": "Untuk bore pile mesin (mini crane) kedalaman maksimal mencapai 30 meter. Untuk bore pile manual (strauss pile) kedalaman maksimal 10 meter. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir."
+    }
+  ],
+  "portfolio": {
+    "title": "Portofolio Proyek Bore Pile",
+    "subtitle": "Berikut beberapa proyek bore pile berbagai diameter yang sudah kami kerjakan.",
+    "heading": "Dokumentasi proyek bore pile:",
+    "items": [
+      {
+        "image": "/imgs/borepile-pulo-gadung-jakarta.webp",
+        "imageAlt": "Proyek bore pile diameter 30cm untuk rumah di Pulo Gadung, Jakarta Timur 14 Mei 2026 (difoto menggunakan aplikasi timemark)",
+        "label": "Pulo Gadung, Jakarta Timur",
+        "detail": "Bore pile mini crane diameter 30cm untuk rumah 2 lantai"
+      },
+      {
+        "image": "/imgs/borepile-gedung-universitas-paramadina-jaktim.webp",
+        "imageAlt": "Proyek bore pile diameter 40cm untuk gedung Universitas Paramadina, Jakarta Timur",
+        "label": "Universitas Paramadina, Jakarta Timur",
+        "detail": "Bore pile mini crane diameter 40cm untuk gedung universitas"
+      },
+      {
+        "image": "/imgs/borepile-tambun-utara-bekasi.webp",
+        "imageAlt": "Proyek bore pile mini crane di kawasan industri Tambun Bekasi",
+        "label": "Tambun Utara, Bekasi",
+        "detail": "Bore pile mini crane diameter 50cm di Tambun Utara, Bekasi"
+      }
+    ]
+  },
+  "equipment": {
+    "items": [
+      {
+        "name": "Mini Crane",
+        "description": "Kapasitas sedang, untuk diameter 30-80 cm, kedalaman sampai 30 meter. Mini Crane cocok untuk lokasi yang cukup luas dan membutuhkan akses yang baik untuk mobilisasi alat dan pengerjaan. Cocok untuk membuat rumah, ruko, gudang, dan bangunan bertingkat.",
+        "imageAlt": "Mesin bore pile mini crane Agung Perkasa",
+        "image": "/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg"
+      },
+      {
+        "name": "Gawangan",
+        "description": "Mesin bor gawangan bisa jadi solusi alternatif bagi lokasi yang sangat sempit dan tidak bisa dijangkau oleh mini crane, seperti di gang sempit atau di dalam bangunan yang sudah jadi.",
+        "imageAlt": "Alat bore pile gawangan",
+        "image": "/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg"
+      },
+      {
+        "name": "Strauss Pile (Manual)",
+        "description": "Bore pile manual (strauss pile) adalah metode pembuatan pondasi menggunakan tenaga manusia, alat yang praktis dan ringkas, tidak bising. Sangat cocok untuk pondasi bangunan 1 hingga 2 lantai dan area yang sangat terbatas.",
+        "imageAlt": "Alat strauss pile manual",
+        "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg"
+      }
+    ],
+    "description": "Kami memiliki beberapa alat untuk pekerjaan bore pile, antara lain:"
+  },
+  "areaLayanan": {
+    "title": "Cakupan Area Layanan Kami - Seluruh Pulau Jawa",
+    "subtitle": "Agung Perkasa Borepile melayani proyek konstruksi di seluruh wilayah Pulau Jawa berikut ini.",
+    "groups": [
+      {
+        "area": "JABODETABEK & Sekitarnya",
+        "tags": [
+          "Jakarta",
+          "Bogor",
+          "Depok",
+          "Tangerang",
+          "Tangerang Selatan",
+          "Bekasi",
+          "Cibubur",
+          "Cikarang"
+        ]
+      },
+      {
+        "area": "Banten",
+        "tags": [
+          "Serang",
+          "Cilegon",
+          "Tangerang",
+          "Tangerang Selatan",
+          "Pandeglang",
+          "Lebak"
+        ]
+      },
+      {
+        "area": "Jawa Barat",
+        "tags": [
+          "Bandung",
+          "Cimahi",
+          "Cirebon",
+          "Karawang",
+          "Sukabumi",
+          "Tasikmalaya",
+          "Majalengka",
+          "Purwakarta",
+          "Sumedang",
+          "Garut"
+        ]
+      },
+      {
+        "area": "Jawa Tengah",
+        "tags": [
+          "Semarang",
+          "Solo",
+          "Pekalongan",
+          "Tegal",
+          "Salatiga",
+          "Magelang",
+          "Kudus",
+          "Jepara",
+          "Demak",
+          "Boyolali",
+          "Klaten",
+          "Purwokerto",
+          "Cilacap"
+        ]
+      },
+      {
+        "area": "Jawa Timur",
+        "tags": [
+          "Surabaya",
+          "Malang",
+          "Sidoarjo",
+          "Mojokerto",
+          "Jember",
+          "Banyuwangi",
+          "Madiun",
+          "Kediri",
+          "Blitar",
+          "Pasuruan",
+          "Probolinggo",
+          "Lamongan",
+          "Gresik",
+          "Tuban"
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "hasImage": true,
+      "title": "Rumah 2 Lantai di Jakarta Timur",
+      "image": "/imgs/borepile-pulo-gadung-jakarta.webp",
+      "imageAlt": "Pengeboran bore pile mini crane diameter 30cm untuk rumah di Pulo Gadung, Jakarta Timur",
+      "imageCaption": "Bore Pile mini crane di Pulo Gadung, Jakarta Timur",
+      "specs": "Bore pile mesin mini crane diameter 30cm, kedalaman 12m, 27 titik",
+      "costCalc": "12m x Rp120.000 x 27 = Rp38.880.000",
+      "mobilization": "+ mobilisasi: Rp3.000.000",
+      "total": "Rp41.880.000",
+      "time": "6-7 hari kerja"
+    },
+    {
+      "hasImage": true,
+      "title": "Ruko di Meruya, Jakarta Barat",
+      "image": "/imgs/borepile-meruya-jakarta.webp",
+      "imageAlt": "Pengeboran bore pile mini crane diameter 40cm untuk ruko di Meruya, Jakarta Barat",
+      "imageCaption": "Bore Pile mini crane di Meruya, Jakarta Barat",
+      "specs": "Bore pile mesin mini crane diameter 40cm, kedalaman 12m, 20 titik",
+      "costCalc": "12m x Rp135.000 x 20 = Rp32.400.000",
+      "mobilization": "+ mobilisasi: Rp3.000.000",
+      "total": "Rp35.400.000",
+      "time": "5-7 hari kerja"
+    },
+    {
+      "hasImage": true,
+      "title": "Rumah 1 Lantai (Manual) di Jakarta Selatan",
+      "image": "/imgs/bore-pile-kering-dukuh-patra.webp",
+      "imageAlt": "Proses bore pile manual pakai tenaga manusia (strauss pile)",
+      "imageCaption": "Bore Pile manual di area terbatas",
+      "specs": "Strauss pile (bore pile manual) diameter 30cm, kedalaman 6m, 19 titik",
+      "costCalc": "6m x Rp80.000 x 19 = Rp9.120.000",
+      "mobilization": "+ mobilisasi: Rp1.000.000",
+      "total": "Rp10.120.000",
+      "time": "7-9 hari kerja"
+    }
+  ],
+  "projectNote": "Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan."
+}

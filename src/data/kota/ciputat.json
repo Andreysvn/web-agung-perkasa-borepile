@@ -1,0 +1,370 @@
+{
+  "slug": "bore-pile-ciputat",
+  "name": "Ciputat",
+  "year": 2026,
+  "geoRegion": "ID-BT",
+  "geoPlacename": "Ciputat, Indonesia",
+  "heroImage": "/imgs/jasa-bore-pile-tangerang-agung-perkasa.webp",
+  "heroAlt": "Proses pengeboran bore pile mini crane di Tangerang untuk pondasi rumah di Tangerang",
+  "heroCaption": "Proses pengeboran bore pile menggunakan alat mini crane di Tangerang",
+  "heroWidth": 350,
+  "heroHeight": 372,
+  "heroText": "<strong>Harga bore pile Ciputat 2026</strong> untuk jasa pengeboran saja mulai dari <strong>Rp120.000/m untuk mesin (mini crane)</strong>, dan manual atau strauss pile mulai dari <strong>Rp70.000/m</strong>. \n                    Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Ciputat, Ciputat Timur, Sawah Baru, Sawah Lama, Serua, dan kawasan Bintaro.",
+  "localBusinessDesc": "Harga bore pile Ciputat 2026: mesin Rp120.000/m, manual Rp70.000/m. Jasa bore pile Ciputat terpercaya. Kalkulator gratis. Garansi 6 tahun. Melayani Ciputat, Ciputat Timur, Sawah Baru, Sawah Lama, Serua, Bintaro.",
+  "mobilizationCost": "Mini crane: Rp2-4jt | Strauss pile (bore pile manual): Rp1-1.5jt",
+  "manualPriceMin": 75000,
+  "manualPriceMax": 120000,
+  "localPrices": {
+    "manualMin": 75000,
+    "manualMax": 120000,
+    "mesin": [
+      {
+        "diameter": "30 cm",
+        "price": 120000,
+        "depth": "30 meter",
+        "suitable": "Rumah 1-2 lantai"
+      },
+      {
+        "diameter": "40 cm",
+        "price": 135000,
+        "depth": "30 meter",
+        "suitable": "Ruko, kantor"
+      },
+      {
+        "diameter": "50 cm",
+        "price": 190000,
+        "depth": "30 meter",
+        "suitable": "Gudang, pabrik kecil"
+      },
+      {
+        "diameter": "60 cm",
+        "price": null,
+        "depth": "30 meter",
+        "suitable": "Hotel 3-4 lantai"
+      },
+      {
+        "diameter": "80 cm",
+        "price": null,
+        "depth": "30 meter",
+        "suitable": "Gedung 5-8 lantai"
+      }
+    ],
+    "manual": [
+      {
+        "diameter": "20 cm",
+        "price": 75000,
+        "depth": "10 meter",
+        "suitable": "Area sangat sempit"
+      },
+      {
+        "diameter": "25 cm",
+        "price": 85000,
+        "depth": "10 meter",
+        "suitable": "Gang kecil"
+      },
+      {
+        "diameter": "30 cm",
+        "price": 100000,
+        "depth": "10 meter",
+        "suitable": "Rumah, ruko 1-2 lantai (tanah padat)"
+      },
+      {
+        "diameter": "40 cm",
+        "price": 120000,
+        "depth": "10 meter",
+        "suitable": "Rumah, ruko 2 lantai (tanah padat)"
+      }
+    ],
+    "hasHidrolik": false
+  },
+  "factors": [
+    {
+      "title": "Diameter & Kedalaman",
+      "text": "Semakin besar diameter (30cm, 40cm, 50cm, dst) dan semakin dalam pengeboran yang diperlukan hingga tanah keras area Tangerang, maka biaya per meter semakin tinggi."
+    },
+    {
+      "title": "Kondisi Tanah Tangerang",
+      "text": "Tanah di area pesisir seperti Teluknaga dan Kosambi cenderung lunak ( bekas rawa atau sawah), sehingga butuh pengeboran lebih dalam hingga tanah keras. Sebaliknya, area berbukit seperti Curug dan Cikupa umumnya kondisi tanah lebih stabil, biaya bore pile di Tangerang bisa bervariasi tergantung lokasi."
+    },
+    {
+      "title": "Jarak Proyek Dari Gudang Kami",
+      "text": "Biaya mobilisasi alat sudah kami sesuaikan sesuai jarak dari gudang kami."
+    },
+    {
+      "title": "Volume Pekerjaan",
+      "text": "Minimal order jasa bore pile Tangerang untuk mesin (mini crane & gawangan) adalah 200 meter, sedangkan strauss pile manual 100 meter. Untuk volume di bawah itu, silakan hubungi admin kami untuk penawaran harga khusus."
+    },
+    {
+      "title": "Akses Lokasi & Zona Industri",
+      "text": "Area industri seperti Cikupa dan Balaraja memiliki akses jalan yang lebih lebar untuk mobilisasi alat besar. Namun, area permukiman padat di Tangerang Kota membutuhkan perencanaan mobilisasi lebih matang."
+    },
+    {
+      "title": "Jenis & Skala Proyek di Tangerang",
+      "text": "Proyek rumah tinggal pribadi atau perorangan di Tangerang umumnya memiliki harga lebih terjangkau dibandingkan proyek skala besar seperti kontraktor, developer, atau proyek pemerintah di wilayah Tangerang."
+    }
+  ],
+  "sondirNote": "Tips proyek bore pile di Tangerang: Untuk area panti seperti Teluknaga atau Kosambi, kedalaman tanah keras bisa mencapai 20-25 meter. Untuk area berbukit seperti Curug atau Cikupa, umumnya lebih dangkal di 8-15 meter. Lakukan pengecekan data sondir tanah Tangerang terlebih dahulu agar kedalaman pengeboran bisa ditentukan secara tepat. Konsultasikan proyek bore pile Tangerang Anda dengan tim teknis kami untuk penawaran harga yang sesuai.",
+  "projects": [
+    {
+      "title": "Rumah di Gading Serpong",
+      "image": "/imgs/bore-pile-gading-serpong-medang-ciputat.webp",
+      "imageAlt": "Proses pengerjaan bore pile mini crane metode bor kering di Gading Serpong, Ciputat",
+      "imageCaption": "Bore Pile mini crane metode bor kering di Gading Serpong, Ciputat",
+      "specs": "Bore pile mesin mini crane Ø30cm, kedalaman 13m, 24 titik<br>Metode: Dry Boring (Bor kering)",
+      "costCalc": "10m × Rp125.000 × 24 = Rp39.000.000",
+      "mobilization": "+ mobilisasi: Rp3.000.000",
+      "total": "Rp42.000.000",
+      "time": "6-8 hari kerja",
+      "hasImage": true
+    },
+    {
+      "title": "Proyek di Cikupa",
+      "image": "",
+      "imageAlt": "Proses pengerjaan bore pile mini crane di Cikupa, Kabupaten Ciputat",
+      "imageCaption": "Bore Pile mesin mini crane di Cikupa, Kabupaten Ciputat",
+      "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 20 titik<br>Metode: Wash Boring (Bor basah)",
+      "costCalc": "14m × Rp135.000 × 20 = Rp37.800.000",
+      "mobilization": "+ mobilisasi: Rp3.500.000",
+      "total": "Rp41.300.000",
+      "time": "5-7 hari kerja",
+      "hasImage": false
+    },
+    {
+      "title": "Rumah di Cipondoh",
+      "image": "",
+      "imageAlt": "Proses pengerjaan bore pile manual (strauss pile) di Cipondoh, Ciputat",
+      "imageCaption": "Strauss Pile (bore pile manual) di Cipondoh, Ciputat",
+      "specs": "Strauss pile (bore pile manual) Ø30cm, kedalaman 6m, 26 titik",
+      "costCalc": "6m × Rp95.000 × 26 = Rp14.820.000",
+      "mobilization": "+ mobilisasi: Rp1.500.000",
+      "total": "Rp16.320.000",
+      "time": "8-10 hari kerja",
+      "hasImage": false
+    }
+  ],
+  "whyUs": [
+    {
+      "title": "Memakai alat yang baik",
+      "desc": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, dan strauss pile."
+    },
+    {
+      "title": "Efisiensi waktu & Komitmen kualitas",
+      "desc": "Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam, khususnya bore pile di Ciputat. Kecuali ada kendala teknis di luar kendali."
+    },
+    {
+      "title": "Tim Ahli",
+      "desc": "Memiliki tim ahli dalam pengerjaan bore pile di Ciputat, khususnya membuat pondasi dalam."
+    },
+    {
+      "title": "Tim berpengalaman di area Ciputat",
+      "desc": "Lebih dari sepuluh tahun mengerjakan proyek di Ciputat. Mulai dari proyek rumah tinggal pribadi hingga proyek komersial. Mulai dari proyek Pribadi, Mandor, dan Developer."
+    }
+  ],
+  "equipment": {
+    "description": "Kami memiliki beberapa alat untuk pekerjaan bore pile, antara lain:",
+    "items": [
+      {
+        "name": "Mini Crane",
+        "desc": "Kapasitas sedang, untuk diameter 30-80 cm, kedalaman sampai 30m meter. Mini Crane cocok untuk lokasi yang cukup luas dan membutuhkan akses yang baik untuk mobilisasi alat dan pengerjaan. Cocok untuk membuat rumah, ruko, gudang, dan bangunan bertingkat.",
+        "image": "/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg",
+        "imageAlt": "Mesin bore pile mini crane Agung Perkasa untuk bore pile pondasi rumah, ruko, dan bangunan bertingkat di Ciputat"
+      },
+      {
+        "name": "Gawangan",
+        "desc": "Gawangan cocok untuk area yang tidak bisa diakses oleh mini crane. Karena ukuran dan bentuknya yang tidak sebesar mini crane, gawangan cocok untuk area yang memiliki akses terbatas (tidak muat jika mini crane lewat). Diameter 30-80 cm, paling sering digunakan untuk membuat rumah, ruko, dan bangunan 1-2 lantai lainnya di gang sempit.",
+        "image": "/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg",
+        "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk bore pile ketika area tidak bisa dijangkau oleh mini crane di Ciputat"
+      },
+      {
+        "name": "Strauss Pile (bore pile manual)",
+        "desc": "Alat bor manual full menggunakan tenaga manusia dalam proses pengeboran (diputar oleh tukang bore pile), memakai metode dry boring (bor kering). Diameter 20-40cm, cocok untuk lokasi seperti di gang sempit dan area terbatas lainnya yang tidak bisa dijangkau mini crane dan gawangan, karena mobilisasi yang lebih fleksibel (bisa menggunakan motor).",
+        "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
+        "imageAlt": "Strauss pile (bore pile manual) untuk pondasi di gang sempit dan area terbatas Ciputat lainnya"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Portofolio Proyek Bore Pile di Tangerang",
+    "subtitle": "Berikut beberapa proyek bore pile yang sudah kami kerjakan di berbagai wilayah Tangerang Kota dan Kabupaten.",
+    "items": [
+      {
+        "image": "/imgs/bore-pile-gading-serpong-medang-tangerang-juni-2026.jpg",
+        "imageAlt": "Proses bore pile mini crane di Gading Serpong, Tangerang",
+        "label": "Proyek di Gading Serpong",
+        "detail": "Bore pile mini crane Ø30cm, untuk rumah di Gading Serpong, Tangerang"
+      },
+      {
+        "image": "/imgs/bore-pile-mini-crane-dry-boring-alam-sutera-tangerang-agung-perkasa-20-juni-2026.webp",
+        "imageAlt": "Proses bore pile mini crane metode dry boring di Alam Sutera, Tangerang",
+        "label": "Proyek di Alam Sutera",
+        "detail": "Bore pile mini crane Ø30cm, untuk rumah di Alam Sutera, Tangerang"
+      }
+    ]
+  },
+  "kecamatan": {
+    "Tangerang Kota": [
+      "Cipondoh",
+      "Karawaci",
+      "Periuk",
+      "Neglasari",
+      "Batuceper",
+      "Tangerang",
+      "Benda",
+      "Larangan",
+      "Pinang"
+    ],
+    "Kabupaten Tangerang": [
+      "Curug",
+      "Cikupa",
+      "Cisoka",
+      "Balaraja",
+      "Sepatan",
+      "Teluknaga",
+      "Kosambi",
+      "Pasar Kemis",
+      "Kresek",
+      "Rajeg",
+      "Sukadiri"
+    ]
+  },
+  "faq": [
+    {
+      "q": "Apakah bore pile cocok untuk kondisi tanah di Ciputat?",
+      "a": "Sangat cocok. Ciputat memiliki area dengan tanah yang bervariasi, dari tanah eksisting di pusat kota hingga tanah yang lebih lunak di beberapa wilayah perbatasan. Bore pile bisa mencapai tanah keras di kedalaman 6-15 meter tergantung lokasi, memberikan pondasi yang stabil untuk bangunan Anda."
+    },
+    {
+      "q": "Berapa biaya mobilisasi alat ke Ciputat?",
+      "a": "Untuk wilayah Ciputat: mesin mini crane sekitar Rp2-3 juta, manual sekitar Rp1-2 juta. Biaya tergantung jarak dari gudang kami di Jakarta Utara ke lokasi proyek Anda. Untuk daerah Bintaro biasanya Rp2-2.5 juta karena lebih dekat."
+    },
+    {
+      "q": "Apakah melayani proyek di Bintaro dan sekitarnya?",
+      "a": "Ya. Kami melayani seluruh wilayah Ciputat dan sekitarnya termasuk Bintaro, Pondok Ranji, Rempoa, Cirendeu, dan Jurang Mangu. Mobilisasi ke area ini sudah kami lakukan rutin."
+    },
+    {
+      "q": "Berapa lama waktu pengerjaan bore pile untuk rumah di Ciputat?",
+      "a": "Untuk 16 titik diameter 30cm kedalaman 12m, estimasi 5-7 hari kerja. Kalkulator di atas bisa memberi estimasi lebih akurat."
+    },
+    {
+      "q": "Apakah wajib ada data sondir untuk proyek di Ciputat?",
+      "a": "Sangat wajib. Data sondir menentukan kedalaman bore pile yang tepat sesuai kondisi tanah Ciputat yang bervariasi."
+    },
+    {
+      "q": "Bisa pakai material sendiri untuk proyek di Ciputat?",
+      "a": "Bisa. Harga di atas untuk jasa pengeboran saja (sudah termasuk perakitan besi & pengecoran beton). Kami terima material dari klien."
+    }
+  ],
+  "articles": [
+    {
+      "href": "/artikel/bore-pile-vs-strauss-pile.html",
+      "image": "/imgs/borepile-dekat-dinding.webp",
+      "imageAlt": "Bore pile mini crane di sebelah dinding (hampir menyentuh dinding)",
+      "category": "Perbandingan",
+      "title": "Borepile vs Strauss Pile",
+      "excerpt": "Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik.",
+      "date": "Juni 2026"
+    },
+    {
+      "href": "/harga/bore-pile-30cm.html",
+      "image": "/imgs/hasil-lubang-borepile.webp",
+      "imageAlt": "Hasil lubang bore pile diameter 30cm yang sudah dimasukan tulangan besi struktur pondasi",
+      "category": "Harga",
+      "title": "Harga Bore Pile Diameter 30cm",
+      "excerpt": "Lihat harga terbaru 2026 untuk bore pile diameter 30cm.",
+      "date": "Juni 2026"
+    },
+    {
+      "href": "/jasa/bore-pile-jakarta.html",
+      "image": "/imgs/borepile-dan-truk-molen.webp",
+      "imageAlt": "Harga bore pile Jakarta 2026 terbaru",
+      "category": "Harga",
+      "title": "Harga Bore Pile Jakarta 2026",
+      "excerpt": "Informasi terkini tentang harga bore pile di wilayah Jakarta untuk tahun 2026.",
+      "date": "Juni 2026"
+    }
+  ],
+  "internalLinks": [
+    {
+      "href": "/jasa/bore-pile/jakarta.html",
+      "label": "Jakarta"
+    },
+    {
+      "href": "/jasa/bore-pile/bekasi.html",
+      "label": "Bekasi"
+    },
+    {
+      "href": "/jasa/bore-pile/depok.html",
+      "label": "Depok"
+    },
+    {
+      "href": "/jasa/bore-pile/bogor.html",
+      "label": "Bogor"
+    },
+    {
+      "href": "/harga/bore-pile-2026.html",
+      "label": "Harga Bore Pile 2026"
+    }
+  ],
+  "hasGoogleAds": true,
+  "googleAdsId": "AW-16649506462",
+  "additionalCosts": [
+    {
+      "title": "Mobilisasi Alat Bore Pile",
+      "text": "Mesin mini crane: Rp2-3 juta | Strauss pile (bore pile manual): Rp1-1,5 juta."
+    },
+    {
+      "title": "Minimal Order",
+      "text": "Mesin mini crane & gawangan: 200 meter | Strauss Pile (Manual): 100 meter (di bawah itu silakan hubungi kami)."
+    },
+    {
+      "title": "Sedot Lumpur",
+      "text": "Jika memakai bore pile mesin gawangan dan mini crane menggunakan metode <strong>wash boring (bor basah)</strong>, perkiraan biaya tambahannya sekitar: Rp800.000 - Rp1.200.000/rit (tergantung volume)"
+    },
+    {
+      "title": "Data Sondir",
+      "text": "Sangat wajib untuk menentukan kedalaman pengeboran yang tepat hingga mencapai lapisan tanah keras."
+    }
+  ],
+  "soilReasons": {
+    "title": "Mengapa Bore Pile Pilihan Tepat untuk Wilayah Ciputat?",
+    "description": "Ciputat dikenal dengan kondisi tanahnya yang <strong>lunak dan rawan penurunan (land subsidence)</strong>, terutama di wilayah <a href=\"https://lib.ui.ac.id/detail?id=20238696&lokasi=lokal\" target=\"_blank\" rel=\"noopener noreferrer\">Ciputat Utara</a>, <a href=\"https://www.academia.edu/99027747/\" target=\"_blank\" rel=\"noopener noreferrer\">Cengkareng</a>, dan <a href=\"https://iopscience.iop.org/article/10.1088/1755-1315/1374/1/012033\" target=\"_blank\" rel=\"noopener noreferrer\">Pondok Gede</a>. Metode bore pile menjadi solusi pondasi paling tepat karena:",
+    "points": [
+      {
+        "title": "Kedalaman hingga 30 meter",
+        "desc": "Mampu menembus lapisan tanah lunak hingga <a href=\"https://journal.jgu.ac.id/index.php/jgers/article/view/40\" target=\"_blank\" rel=\"noopener noreferrer\">mencapai tanah keras</a>."
+      },
+      {
+        "title": "Diameter fleksibel (30-120cm)",
+        "desc": "Bisa disesuaikan dengan <a href=\"https://library.gunadarma.ac.id/repository/perencanaan-fondasi-bored-pile-pada-gedung-perkantoran-10-lantai-di-ciputat-pusat-skripsi\" target=\"_blank\" rel=\"noopener noreferrer\">beban bangunan</a>."
+      },
+      {
+        "title": "Minim getaran",
+        "desc": "Aman untuk bangunan di sekitar proyek, jadi tidak merusak tanah dan dinding tetangga Anda."
+      },
+      {
+        "title": "Minim polusi suara",
+        "desc": "Suaranya tidak terlalu mengganggu tetangga sekitar proyek, apalagi jika proyek dilakukan di area padat, tapi terkadang ada tetangga yang merasa terganggu oleh suara yang dihasilkan, jadi kami juga menyediakan solusi untuk mengurangi suaranya (misal diberikan peredam suara)."
+      },
+      {
+        "title": "Metode wash boring",
+        "desc": "Bor basah sangat efektif untuk tanah berair atau rawa seperti di Ciputat Utara."
+      }
+    ],
+    "conclusion": "<p>Setiap lokasi memiliki karakteristik tanah yang berbeda. Contohnya seperti <a href=\"https://lib.ui.ac.id/detail?id=20490200&lokasi=lokal\" target=\"_blank\" rel=\"noopener noreferrer\">tanah di Ciputat Utara yang sebagian berpasir</a>, kami dapat menyesuaikan teknik bore pile untuk memastikan keberhasilan proyek di setiap wilayah di Ciputat.</p><p><strong>Portofolio kami di Ciputat:</strong> Kami pernah mengerjakan bore pile di gudang Dunex Sunter, selain itu kami juga sering mengerjakan proyek rumah, ruko, gedung dan bangunan lain di Seluruh Wilayah Ciputat, seperti PIK, PIK 2, Puri Kembangan, Pondok Indah, Mangga Besar, Cempaka Putih, Kuningan, Sumur Batu, Sunter, dll.</p>"
+  },
+  "priceUpdatedAt": "2026-08-19",
+  "projectNote": "<strong>Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan. Kecepatan pengerjaan dipengaruhi oleh kondisi lapangan, akses lokasi, karakteristik tanah, dan yang paling penting adalah pasokan air yang cukup untuk metode wash boring.<br><br>Butuh harga khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm.html\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
+  "tips": [
+    {
+      "diameter": "30 cm",
+      "usage": "rumah 1-2 lantai (paling banyak dipilih)"
+    },
+    {
+      "diameter": "40-50 cm",
+      "usage": "ruko, kantor, gudang, rumah sakit"
+    },
+    {
+      "diameter": "60-110 cm",
+      "usage": "hotel, gedung bertingkat"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 ﻿---
 import KotaLayout from '../../../../layouts/KotaLayout.astro';
 import pricing from '../../../../data/harga.json';
-import jakartaData from '../../../../data/kota/jakarta.json';
+import cityData from '../../../../data/kota/jakarta.json';
 
 // Components
 import Breadcrumb from '../../../../components/shared/Breadcrumb.astro';
@@ -14,6 +14,8 @@ import CityAdditionalCosts from '../../../../components/city/CityAdditionalCosts
 import CityTips from '../../../../components/city/CityTips.astro';
 import CityProjects from '../../../../components/city/CityProjects.astro';
 import CitySoil from '../../../../components/city/CitySoil.astro';
+import MaterialPackages from '../../../../components/shared/MaterialPackages.astro';
+import CityGuarantee from '../../../../components/city/CityGuarantee.astro';
 import CityWhyUs from '../../../../components/city/CityWhyUs.astro';
 import CityEquipment from '../../../../components/city/CityEquipment.astro';
 import CityPortfolio from '../../../../components/city/CityPortfolio.astro';
@@ -27,42 +29,42 @@ const mesinMulai = pricing.mesin.find((item) => item.price > 0)?.price.toLocaleS
 const manualMulai = pricing.manual.find((item) => item.price > 0)?.price.toLocaleString('id-ID') || "70.000";
 
 // Format tanggal update
-const updateDate = new Date(jakartaData.priceUpdatedAt || pricing.priceUpdatedAt).toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
+const updateDate = new Date(cityData.priceUpdatedAt || pricing.priceUpdatedAt).toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
 
 // SEO
-const seoTitle = `Jasa & Harga Bore Pile ${jakartaData.name} Terpercaya | Agung Perkasa`;
-const seoDesc = `Jasa Bore Pile & Strauss Pile ${jakartaData.name} terpercaya. Harga mesin mulai Rp${mesinMulai}/m, manual Rp${manualMulai}/m. Melayani seluruh ${jakartaData.name}.`;
-const canonical = `https://agungperkasaborepile.com/jasa/bore-pile/${jakartaData.slug}.html`;
+const seoTitle = `Jasa & Harga Bore Pile ${cityData.name} Terpercaya | Agung Perkasa`;
+const seoDesc = `Jasa Bore Pile & Strauss Pile ${cityData.name} terpercaya. Harga mesin mulai Rp${mesinMulai}/m, manual Rp${manualMulai}/m. Melayani seluruh ${cityData.name}.`;
+const canonical = `https://agungperkasaborepile.com/jasa/bore-pile/${cityData.slug}.html`;
 
 // Schema - Service
 const serviceSchema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": `Jasa Bore Pile ${jakartaData.name}`,
+    "serviceType": `Jasa Bore Pile ${cityData.name}`,
     "provider": {
         "@type": "LocalBusiness",
         "@id": "https://agungperkasaborepile.com/#localbusiness",
         "name": "Agung Perkasa Borepile"
     },
-    "areaServed": { "@type": "City", "name": jakartaData.name },
+    "areaServed": { "@type": "City", "name": cityData.name },
     "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": `Layanan Bore Pile ${jakartaData.name}`,
+        "name": `Layanan Bore Pile ${cityData.name}`,
         "itemListElement": [
             {
                 "@type": "Offer",
-                "itemOffered": { "@type": "Service", "name": `Bore Pile Mesin Mini Crane ${jakartaData.name}` },
+                "itemOffered": { "@type": "Service", "name": `Bore Pile Mesin Mini Crane ${cityData.name}` },
                 "price": "120000", "priceCurrency": "IDR",
                 "priceSpecification": { "@type": "UnitPriceSpecification", "price": "120000", "priceCurrency": "IDR", "unitText": "meter" },
-                "eligibleRegion": { "@type": "City", "name": jakartaData.name },
+                "eligibleRegion": { "@type": "City", "name": cityData.name },
                 "availability": "https://schema.org/InStock"
             },
             {
                 "@type": "Offer",
-                "itemOffered": { "@type": "Service", "name": `Bore Pile Manual Strauss Pile ${jakartaData.name}` },
+                "itemOffered": { "@type": "Service", "name": `Bore Pile Manual Strauss Pile ${cityData.name}` },
                 "price": "70000", "priceCurrency": "IDR",
                 "priceSpecification": { "@type": "UnitPriceSpecification", "price": "70000", "priceCurrency": "IDR", "unitText": "meter" },
-                "eligibleRegion": { "@type": "City", "name": jakartaData.name },
+                "eligibleRegion": { "@type": "City", "name": cityData.name },
                 "availability": "https://schema.org/InStock"
             }
         ]
@@ -73,8 +75,8 @@ const serviceSchema = JSON.stringify({
 const productSchema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": `Jasa Bore Pile ${jakartaData.name} ${jakartaData.year}`,
-    "description": `Jasa bore pile ${jakartaData.name} dengan harga mulai Rp120.000/m untuk mesin dan manual mulai Rp70.000/m (strauss pile). Melayani seluruh ${jakartaData.name}.`,
+    "name": `Jasa Bore Pile ${cityData.name} ${cityData.year}`,
+    "description": `Jasa bore pile ${cityData.name} dengan harga mulai Rp120.000/m untuk mesin dan manual mulai Rp70.000/m (strauss pile). Melayani seluruh ${cityData.name}.`,
     "brand": { "@type": "Brand", "name": "Agung Perkasa Borepile" },
     "offers": {
         "@type": "AggregateOffer",
@@ -83,90 +85,96 @@ const productSchema = JSON.stringify({
         "itemCondition": "https://schema.org/NewCondition",
         "url": canonical
     },
-    "areaServed": { "@type": "City", "name": jakartaData.name }
+    "areaServed": { "@type": "City", "name": cityData.name }
 });
 ---
 <KotaLayout
     title={seoTitle}
     description={seoDesc}
     canonical={canonical}
-    ogTitle={`Jasa & Harga Bore Pile ${jakartaData.name} ${jakartaData.year} | Agung Perkasa`}
-    ogDescription={`Jasa Bore Pile ${jakartaData.name} terpercaya. Harga Mesin mulai dari Rp120.000/m, manual Rp70.000/m. Konsultasi gratis. Melayani seluruh ${jakartaData.name}.`}
-    cityName={jakartaData.name}
-    citySlug={jakartaData.slug}
-    geoRegion={jakartaData.geoRegion}
-    geoPlacename={jakartaData.geoPlacename}
-    localBusinessDesc={jakartaData.localBusinessDesc}
+    ogTitle={`Jasa & Harga Bore Pile ${cityData.name} ${cityData.year} | Agung Perkasa`}
+    ogDescription={`Jasa Bore Pile ${cityData.name} terpercaya. Harga Mesin mulai dari Rp120.000/m, manual Rp70.000/m. Konsultasi gratis. Melayani seluruh ${cityData.name}.`}
+    cityName={cityData.name}
+    citySlug={cityData.slug}
+    geoRegion={cityData.geoRegion}
+    geoPlacename={cityData.geoPlacename}
+    localBusinessDesc={cityData.localBusinessDesc}
     breadcrumbItems={[
         { name: "Beranda", url: "https://agungperkasaborepile.com/" },
         { name: "Jasa", url: "https://agungperkasaborepile.com/jasa/" },
-        { name: `Bore Pile ${jakartaData.name}`, url: canonical }
+        { name: `Bore Pile ${cityData.name}`, url: canonical }
     ]}
-    faqSchema={jakartaData.faq}
+    faqSchema={cityData.faq}
     serviceSchema={serviceSchema}
     productSchema={productSchema}
     hasGoogleAds={true}
     googleAdsId="AW-16649506462"
-    publisherDesc={`Spesialis pondasi borepile dengan pengalaman lebih dari 10 tahun di ${jakartaData.name}.`}
-    mapsNote={`*Kantor Pusat: ${jakartaData.name}`}
+    publisherDesc={`Spesialis pondasi borepile dengan pengalaman lebih dari 10 tahun di ${cityData.name}.`}
+    mapsNote={`*Kantor Pusat: ${cityData.name}`}
 >
     <!-- Section 1: Breadcrumb -->
     <Breadcrumb items={[
         { label: "Beranda", href: "/" },
         { label: "Jasa", href: "/jasa/" },
-        { label: `Bore Pile ${jakartaData.name}` }
+        { label: `Bore Pile ${cityData.name}` }
     ]} />
 
     <!-- Section 2: H1 + Page Meta -->
     <PageMeta
-        title={`Jasa & Harga Bore Pile ${jakartaData.name} ${jakartaData.year} Per Meter`}
+        title={`Jasa & Harga Bore Pile ${cityData.name} ${cityData.year} Per Meter`}
         updateDate={updateDate}
-        location={jakartaData.name}
+        location={cityData.name}
     />
 
     <!-- Section 3: Hero -->
-    <CityHero data={jakartaData} />
+    <CityHero data={cityData} />
 
     <!-- Section 4: Calculator -->
-    <CityCalculator cityName={jakartaData.name} />
+    <CityCalculator cityName={cityData.name} />
 
     <!-- Section 5: Price Table -->
-    <PriceTable localPrices={jakartaData.localPrices} cityName={jakartaData.name} />
+    <PriceTable localPrices={cityData.localPrices} cityName={cityData.name} />
 
     <!-- Section 6: Factors -->
-    <CityFactors factors={jakartaData.factors} sondirNote={jakartaData.sondirNote} cityName={jakartaData.name} />
+    <CityFactors factors={cityData.factors} sondirNote={cityData.sondirNote} cityName={cityData.name} />
 
     <!-- Section 7: Additional Costs -->
-    <CityAdditionalCosts items={jakartaData.additionalCosts} cityName={jakartaData.name} />
+    <CityAdditionalCosts items={cityData.additionalCosts} cityName={cityData.name} />
 
     <!-- Section 8: Tips -->
-    <CityTips items={jakartaData.tips} />
+    <CityTips items={cityData.tips} />
+
+    <!-- Section 8.5: Material Packages -->
+    <MaterialPackages packages={pricing.materialPackages} />
 
     <!-- Section 9: Projects -->
-    <CityProjects projects={jakartaData.projects} cityName={jakartaData.name} note={jakartaData.projectNote} />
+    <CityProjects projects={cityData.projects} cityName={cityData.name} note={cityData.projectNote} />
 
     <!-- Section 9.5: Soil Reasoning -->
-    <CitySoil soilReasons={jakartaData.soilReasons} />
+    <CitySoil soilReasons={cityData.soilReasons} />
+
+    <!-- Section 9.8: Garansi -->
+    <CityGuarantee />
 
     <!-- Section 10: Why Us -->
-    <CityWhyUs whyUs={jakartaData.whyUs} cityName={jakartaData.name} />
+    <CityWhyUs whyUs={cityData.whyUs} cityName={cityData.name} />
 
     <!-- Section 11: Equipment -->
-    <CityEquipment equipment={jakartaData.equipment} cityName={jakartaData.name} />
+    <CityEquipment equipment={cityData.equipment} cityName={cityData.name} />
 
     <!-- Section 12: Portfolio -->
-    <CityPortfolio portfolio={jakartaData.portfolio} cityName={jakartaData.name} />
+    <CityPortfolio portfolio={cityData.portfolio} cityName={cityData.name} />
 
     <!-- Section 13: Kecamatan Coverage -->
-    <CityKecamatan kecamatan={jakartaData.kecamatan} cityName={jakartaData.name} />
+    <CityKecamatan kecamatan={cityData.kecamatan} cityName={cityData.name} />
 
     <!-- Section 14: FAQ -->
-    <FaqSection faq={jakartaData.faq} cityName={jakartaData.name} />
+    <FaqSection faq={cityData.faq} cityName={cityData.name} />
 
     <!-- Section 15: Articles -->
-    <CityArticles articles={jakartaData.articles} />
+    <CityArticles articles={cityData.articles} />
 
     <!-- Section 16: Internal Links -->
-    <CityInternalLinks internalLinks={jakartaData.internalLinks} />
+    <CityInternalLinks internalLinks={cityData.internalLinks} />
 </KotaLayout>
 

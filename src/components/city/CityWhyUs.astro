@@ -1,26 +1,25 @@
 ---
 interface Props {
     whyUs: Array<{ title: string; description?: string; desc?: string }>;
-    cityName: string;
+    cityName?: string;
 }
 
 const { whyUs, cityName } = Astro.props;
+const isGeneral = !cityName || cityName.toLowerCase() === "bore pile";
 ---
 
-<section class="why-section">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Kenapa pilih Agung Perkasa untuk Bore Pile di {cityName}?</h2>
-            <p class="section-subtitle">Ini alasan kenapa banyak orang {cityName} percaya sama Agung Perkasa.</p>
-        </div>
+<section class="why-section" style="margin-bottom: 2.5rem;">
+    <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+        <h2 class="section-title">Kenapa pilih Agung Perkasa untuk Bore Pile{isGeneral ? '?' : ` di ${cityName}?`}</h2>
+        <p class="section-subtitle">Ini alasan kenapa banyak orang {isGeneral ? 'mempercayakan proyeknya' : `di ${cityName} percaya`} sama Agung Perkasa.</p>
+    </div>
 
-        <div class="reasons-grid">
-            {whyUs.map((item) => (
-                <div class="reason-card">
-                    <h3>{item.title}</h3>
-                    <p>{item.description || item.desc || ''}</p>
-                </div>
-            ))}
-        </div>
+    <div class="reasons-grid">
+        {whyUs.map((item) => (
+            <div class="reason-card">
+                <h3 style="margin-top: 0;">{item.title}</h3>
+                <p style="margin-bottom: 0;">{item.description || item.desc || ''}</p>
+            </div>
+        ))}
     </div>
 </section>

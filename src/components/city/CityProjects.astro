@@ -1,4 +1,4 @@
-﻿---
+---
 interface Props {
     projects: Array<{
         hasImage?: boolean;
@@ -22,8 +22,7 @@ const { projects, cityName, note } = Astro.props;
 ---
 
 <section class="project-examples-section">
-    <h2 class="project-heading">Contoh Hitungan Proyek Nyata di {cityName}</h2>
-
+    <h2 class="project-heading">Contoh Hitungan Proyek Nyata{cityName ? ` di ${cityName}` : ''}</h2>
     {projects.map((project) => (
         <div class="project-card">
             <div class="project-row">

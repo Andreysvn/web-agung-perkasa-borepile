@@ -1,13 +1,26 @@
 ---
 import config from '../../../../data/config.json';
+import KotaLayout from '../../../../layouts/KotaLayout.astro';
 import pricing from '../../../../data/harga.json';
 import { organizationSchema, localBusinessSchema } from '../../../../lib/schema.js';
 import FaIcon from '../../../../components/icons/FaIcon.astro';
 
+// Components
+import CityCalculator from '../../../../components/city/CityCalculator.astro';
+
+
+const m30 = pricing.mesin.find(p => p.diameter === 30).price.toLocaleString('id-ID');
+const m40 = pricing.mesin.find(p => p.diameter === 40).price.toLocaleString('id-ID');
+const m50 = pricing.mesin.find(p => p.diameter === 50).price.toLocaleString('id-ID');
+const mn20 = pricing.manual.find(p => p.diameter === 20).price.toLocaleString('id-ID');
+const mn25 = pricing.manual.find(p => p.diameter === 25).price.toLocaleString('id-ID');
+const mn30 = pricing.manual.find(p => p.diameter === 30).price.toLocaleString('id-ID');
+const mn40 = pricing.manual.find(p => p.diameter === 40).price.toLocaleString('id-ID');
+
 const orgLd = JSON.stringify(organizationSchema());
 
 const localBusinessLd = JSON.stringify(localBusinessSchema({
-    "description": "Jasa bore pile diameter 30cm terpercaya dengan pengalaman lebih dari 10 tahun. Harga bore pile mesin mulai Rp120.000/m, manual mulai Rp70.000/m.",
+    "description": `Jasa bore pile diameter 30cm terpercaya dengan pengalaman lebih dari 10 tahun. Harga bore pile mesin mulai Rp${m30}/m, manual mulai Rp${mn20}/m.`, 
     "areaServed": [
         { "@type": "City", "name": "Jakarta" },
         { "@type": "City", "name": "Bekasi" },
@@ -27,106 +40,15 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     month: 'long',
     year: 'numeric'
 }).format(new Date(`${pricing.priceUpdatedAt}T00:00:00`));
----<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="theme-color" content="#1a3a6e">
-    
-    <title>Harga Bore Pile 30cm Terbaru 2026 Per Meter | Agung Perkasa</title>
-    <meta name="description" content="Harga bore pile diameter 30cm terbaru 2026 seluruh Pulau Jawa. Mesin mulai Rp120.000/m, manual Rp70.000/m. Kalkulator estimasi biaya. Konsultasi gratis.">
+---
 
-    <meta name="author" content="Agung Perkasa Borepile">
-    <meta name="robots" content="index, follow">
-    <meta name="google-site-verification" content="QjaIirR3-qW7bARIyez5S0_WPeMjPJSqn6tnK44ZYMo">
-    
-    <link rel="canonical" href="https://agungperkasaborepile.com/harga/bore-pile/30cm.html" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Harga Bore Pile Diameter 30cm Terbaru 2026 | Agung Perkasa">
-    <meta property="og:description" content="Kalkulator estimasi biaya bore pile diameter 30cm untuk mesin & manual. Harga terjangkau untuk rumah 1-2 lantai.">
-    <meta property="og:type" content="article">
-    <meta property="og:locale" content="id_ID">
-    <meta property="og:url" content="https://agungperkasaborepile.com/harga-bore-pile-30cm.html">
-    <meta property="og:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Agung Perkasa Borepile">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Harga Bore Pile Diameter 30cm Jakarta Terbaru 2026">
-    <meta name="twitter:description" content="Kalkulator estimasi biaya bore pile diameter 30cm Jakarta 2026.">
-    <meta name="twitter:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
-    
-    <!-- Geo Tags -->
-    <meta name="geo.region" content="ID-JK">
-    <meta name="geo.placename" content="Jakarta">
-    
-    <!-- Preconnect & DNS Prefetch -->
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    
-    <!-- Ahrefs Analytics -->
-    <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
-    
-    <!-- CSS & JS EKSTERNAL -->
-    <link rel="stylesheet" href="/css/harga.css">
-    <link rel="stylesheet" href="/css/lightbox.css">
-    <script is:inline src="/js/harga.js" defer></script>
-</head>
-
-<body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6GBTKJB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- Google Tag Manager -->
-    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P6GBTKJB');</script>
-    <!-- End Google Tag Manager -->
-    <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
-    
-    <nav class="navbar" aria-label="Navigasi utama">
-        <div class="container">
-            <a href="/" class="logo" aria-label="Agung Perkasa Borepile - Beranda">
-                <img src="/imgs/logo-agung-perkasa-transparan.webp" alt="Logo Agung Perkasa Borepile" loading="lazy" width="45" height="45">
-                <span>Agung Perkasa <br>Borepile</span>
-            </a>
-            <button class="menu-toggle" id="mobile-menu" aria-label="Menu navigasi" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul class="nav-menu" role="list">
-                <li role="listitem"><a href="/">Beranda</a></li>
-                <li class="dropdown" role="listitem">
-                    <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
-                    <ul class="dropdown-content">
-                        <li><a href="/jasa/">Jasa </a></li>
-                        <li><a href="/jasa/bore-pile/">Bore Pile Mesin</a></li>
-                        <li><a href="/jasa/strauss-pile/jakarta.html">Strauss Pile</a></li>
-                    </ul>
-                </li>
-                <li role="listitem"><a href="/artikel/">Artikel</a></li>
-                <li role="listitem"><a href="/#faq">FAQ</a></li>
-                <li role="listitem"><a href="/galeri/gallery.html">Galeri</a></li>
-                <li role="listitem"><a href="/#about">Tentang Kami</a></li>
-                <li role="listitem"><a href="https://wa.me/6285710277854?text=Halo%20Pak%2C%20saya%20tertarik%20dengan%20jasa%20bore%20pile." class="btn-nav" target="_blank" rel="noopener noreferrer">Hubungi Kami</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main id="main-content">
-        <div class="blog-container">
-            <nav class="breadcrumb" aria-label="Breadcrumb navigasi">
+<KotaLayout 
+    title="Harga Bore Pile 30cm Terbaru 2026 Per Meter | Agung Perkasa"
+    description={`Harga bore pile diameter 30cm terbaru 2026 seluruh Pulau Jawa. Mesin mulai Rp${m30}/m, manual Rp${mn20}/m. Kalkulator estimasi biaya. Konsultasi gratis.`}
+    canonical="https://agungperkasaborepile.com/harga/bore-pile/30cm.html"
+    schema={[orgLd, localBusinessLd]}
+>
+    <nav class="breadcrumb" aria-label="Breadcrumb navigasi">
                 <a href="/">Beranda</a>
                 <span class="separator">/</span>
                 <a href="/harga/bore-pile-2026.html">Harga</a>
@@ -162,73 +84,9 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                 </div>
             </div>
 
-            <section aria-labelledby="calculator-heading">
-                <div class="calculator-box">
-                    <h2 id="calculator-heading">Kalkulator Estimasi Biaya Bore Pile</h2>
-                    
-                    <div class="method-selector" role="group" aria-label="Pilih metode bore pile">
-                        <button class="method-btn active" data-method="mesin" aria-pressed="true">Bore Pile Mesin</button>
-                        <button class="method-btn" data-method="manual" aria-pressed="false">Bore Pile Manual</button>
-                    </div>
-                    
-                    <div class="form-row" id="machineSelectRow">
-                        <div class="calculator-form-group">
-                            <label for="machineSelect">Pilih Jenis Mesin</label>
-                            <select id="machineSelect">
-                                <option value="minicrane">Mini Crane</option>
-                                <option value="gawangan">Gawangan</option>
-                            </select>
-                            <div class="price-hint">*Harga dan minimal order berbeda tiap alat</div>
-                        </div>
-                    </div>
-                    
-                  <div class="form-row">
-                        <div class="calculator-form-group">
-                            <label for="diameterSelect">Diameter (cm)</label>
-                            <select id="diameterSelect">
-                                <option value="30" selected>30 cm</option>
-                                <option value="40">40 cm</option>
-                                <option value="50">50 cm</option>
-                                <option value="60">60 cm</option>
-                                <option value="80">80 cm</option>
-                                <option value="90">90 cm</option>
-                                <option value="100">100 cm</option>
-                                <option value="110">110 cm</option>
-                            </select>
-                            <div class="price-hint">Halaman ini fokus khusus pada harga diameter 30cm</div>
-                        </div>
-                        
-                        <div class="calculator-form-group">
-                            <label for="priceInput">Harga Jasa per Meter (Rp)</label>
-                            <input type="text" id="priceInput" inputmode="numeric" placeholder="Kosongkan untuk harga standar" value="">
-                            <div class="price-hint">*Kosongkan untuk harga standar tabel</div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="calculator-form-group">
-                            <label for="depthInput">Kedalaman (meter)</label>
-                            <input type="text" id="depthInput" inputmode="numeric" placeholder="Contoh: 12" value="12">
-                        </div>
-                        <div class="calculator-form-group">
-                            <label for="pointsInput">Jumlah Titik</label>
-                            <input type="number" id="pointsInput" value="16" min="1" max="500" step="1">
-                        </div>
-                    </div>
-                    
-                    <div class="calculator-result" aria-live="polite">
-                        <p class="result-label">Estimasi Total Biaya JASA BOR</p>
-                        <div class="total-price" id="totalPrice">Rp 0</div>
-                        <div class="detail-price" id="detailPrice"></div>
-                        <div class="estimation-time" id="estimationTime">Estimasi waktu: -</div>
-                        <div class="order-info" id="orderInfo"></div>
-                    </div>
-                    
-                    <button onclick="sendToWA()" class="btn-wa" aria-label="Konsultasikan ke WhatsApp">Konsultasikan ke WhatsApp</button>
-                    <div class="calculator-note">*Estimasi untuk jasa bor, pemasangan besi, dan pengecoran (belum termasuk material beton & besi). Minimal order: Mini Crane 200m, Gawangan 150m, Manual 100m. Di bawah itu bisa hubungi admin kami untuk penawaran lebih lanjut.</div>
-                </div>
-            </section>
+            <CityCalculator cityName="30cm" defaultDiameter={30} />
 
-           <!-- ===== SECTION TABEL HARGA ===== -->
+            <!-- ===== SECTION TABEL HARGA ===== -->
 <section aria-labelledby="table-heading">
     <h2 id="table-heading" class="section-heading">Tabel Harga Bore Pile 30cm Terbaru 2026 (Jasa Bor Saja)</h2>
     <p>Berikut <strong>harga JASA PENGEBORAN SAJA</strong> (belum termasuk material beton & besi) untuk wilayah Jakarta dan sekitarnya. Kedalaman pengeboran bergantung pada diameter dan kondisi lapisan tanah, di lapangan kami pernah tembus hingga kedalaman 25-30 meter, pastikan cek sondir tanah dahulu agar mengetahui kedalaman yang tepat untuk pengeboran hingga mencapai tanah keras.</p>
@@ -243,12 +101,12 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
             <tbody>
                 <tr class="row-highlight">
                     <td><strong>30 cm</strong></td>
-                    <td><strong>120.000</strong></td>
+                    <td><strong>{m30}</strong></td>
                     <td><strong>30 meter</strong></td>
                     <td><strong>Rumah 1-2 Lantai, ruko, jembatan kecil</strong></td>
                 </tr>
-                <tr><td>40 cm</td><td>135.000</td><td>30 meter</td><td>Ruko, kantor 2 lantai, jembatan kecil-sedang</td></tr>
-                <tr class="row-alt"><td>50 cm</td><td>190.000</td><td>30 meter</td><td>Gudang, pabrik kecil</td></tr>
+                <tr><td>40 cm</td><td>{m40}</td><td>30 meter</td><td>Ruko, kantor 2 lantai, jembatan kecil-sedang</td></tr>
+                <tr class="row-alt"><td>50 cm</td><td>{m50}</td><td>30 meter</td><td>Gudang, pabrik kecil</td></tr>
                 <tr><td>60 cm</td><td><span class="text-konsultasi">Hubungi Kami</span></td><td>30 meter</td><td>Hotel 3-4 lantai</td></tr>
                 <tr class="row-alt"><td>80 cm</td><td><span class="text-konsultasi">Hubungi Kami</span></td><td>30 meter</td><td>Gedung 5-8 lantai</td></tr>
             </tbody>
@@ -264,14 +122,14 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
             </thead>
             <tbody>
                 <tr><td>20 cm</td><td>75.000</td><td>10 meter</td><td>Area sangat sempit</td></tr>
-                <tr><td>25 cm</td><td>85.000</td><td>10 meter</td><td>Gang kecil</td></tr>
+                <tr><td>25 cm</td><td>{mn25}</td><td>10 meter</td><td>Gang kecil</td></tr>
                 <tr class="row-highlight">
                     <td><strong>30 cm</strong></td>
                     <td><strong>100.000</strong></td>
                     <td><strong>10 meter</strong></td>
                     <td><strong>Rumah 1-2 Lantai, ruko, jembatan kecil</strong></td>
                 </tr>
-                <tr><td>40 cm</td><td>120.000</td><td>10 meter</td><td>Bangunan lebih dari 1 lantai (tanah padat)</td></tr>
+                <tr><td>40 cm</td><td>{mn40}</td><td>10 meter</td><td>Bangunan lebih dari 1 lantai (tanah padat)</td></tr>
             </tbody>
         </table>
     </div>
@@ -424,19 +282,19 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                         <tbody>
                             <tr style="background:#fff3e0;">
                                 <td><strong>30 cm</strong></td>
-                                <td><strong>120.000</strong></td>
+                                <td><strong>{m30}</strong></td>
                                 <td><strong>15-25 ton</strong></td>
                                 <td><strong>Rumah 1-2 lantai</strong></td>
                             </tr>
                             <tr>
                                 <td>40 cm</td>
-                                <td>135.000</td>
+                                <td>{m40}</td>
                                 <td>25-40 ton</td>
                                 <td>Ruko, kantor 2-3 lantai</td>
                             </tr>
                             <tr style="background:#f9f9f9;">
                                 <td>50 cm</td>
-                                <td>190.000</td>
+                                <td>{m50}</td>
                                 <td>40-60 ton</td>
                                 <td>Gudang, pabrik kecil</td>
                             </tr>
@@ -731,316 +589,5 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                 </p>
             </div>
 
-        </div>
-    </main>
-
-    <!-- ===== ARTIKEL SECTION ===== -->
-    <section class="articles-section" id="blog">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Artikel Blog</h2>
-                <p class="section-subtitle">Insight pondasi dan konstruksi untuk membantu keputusan proyek Anda.</p>
-            </div>
-            <div class="articles-grid">
-                <article class="article-card">
-                    <a href="/harga/bore-pile-2026.html" class="article-link">
-                        <div class="article-image">
-                            <img src="/imgs/borepile-dekat-dinding.webp" alt="Harga Bore Pile 2026" loading="lazy">
-                            <span class="article-category">Harga</span>
-                        </div>
-                        <div class="article-content">
-                            <h3>Harga Bore Pile 2026</h3>
-                            <p class="article-excerpt">Lihat harga terbaru untuk semua diameter bore pile terbaru 2026, lengkap dengan kalkulator estimasi biaya.</p>
-                            <div class="article-meta">
-                                <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
-                                <span class="article-read-more">Baca selengkapnya →</span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-                 <!-- Artikel 2 -->
-            <article class="article-card">
-                <a href="/artikel/borepile-vs-tiang-pancang.html" class="article-link">
-                    <div class="article-image">
-                        <img src="/imgs/hasil-lubang-borepile.webp" alt="Bore Pile vs Tiang Pancang" loading="lazy">
-                        <span class="article-category">Tips</span>
-                    </div>
-                    <div class="article-content">
-                        <h3>Bore Pile VS Tiang Pancang</h3>
-                        <p class="article-excerpt">Perbedaan mendasar antara bore pile dan tiang pancang, kelebihan, kekurangan, serta biaya yang perlu Anda persiapkan.</p>
-                        <div class="article-meta">
-                            <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
-                            <span class="article-read-more">Baca selengkapnya →</span>
-                        </div>
-                    </div>
-                </a>
-            </article>
-            </div>
-                <article class="article-card">
-                    <a href="/artikel/bore-pile-vs-strauss-pile.html" class="article-link">
-                        <div class="article-image">
-                            <img src="/imgs/bore-pile-rumah-di-pik.webp" alt="Perbedaan Bore Pile dan Strauss Pile" loading="lazy">
-                            <span class="article-category">Perbandingan</span>
-                        </div>
-                        <div class="article-content">
-                            <h3>Perbedaan Bore Pile dan Strauss Pile</h3>
-                            <p class="article-excerpt">Perbandingan lengkap agar Anda dapat memilih jenis pondasi yang tepat antara bore pile mesin dan manual.</p>
-                            <div class="article-meta">
-                                <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
-                                <span class="article-read-more">Baca selengkapnya →</span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-            </div>
-            <div class="articles-cta">
-                <a href="/artikel.html" class="btn-articles-all">
-                    <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
-                </a>
-            </div>
-    </section>
-
-    <!-- ===== AREA LAYANAN ===== -->
-    <div class="area-layanan-wrapper">
-        <h2>Cakupan Area Layanan Kami - Seluruh Pulau Jawa</h2>
-        <p>Agung Perkasa Borepile melayani proyek konstruksi di seluruh wilayah Pulau Jawa berikut ini.</p>
-        <div class="area-grid-detail">
-            <div class="area-box"><h3>JABODETABEK & Sekitarnya</h3><div class="area-tags"><span>Jakarta</span><span>Bogor</span><span>Depok</span><span>Tangerang</span><span>Tangerang Selatan</span><span>Bekasi</span><span>Cibubur</span><span>Cikarang</span></div></div>
-            <div class="area-box"><h3>Banten</h3><div class="area-tags"><span>Serang</span><span>Cilegon</span><span>Tangerang</span><span>Tangerang Selatan</span><span>Pandeglang</span><span>Lebak</span></div></div>
-            <div class="area-box"><h3>Jawa Barat</h3><div class="area-tags"><span>Bandung</span><span>Cimahi</span><span>Cirebon</span><span>Karawang</span><span>Sukabumi</span><span>Tasikmalaya</span><span>Majalengka</span><span>Purwakarta</span><span>Sumedang</span><span>Garut</span></div></div>
-            <div class="area-box"><h3>Jawa Tengah</h3><div class="area-tags"><span>Semarang</span><span>Solo</span><span>Pekalongan</span><span>Tegal</span><span>Salatiga</span><span>Magelang</span><span>Kudus</span><span>Jepara</span><span>Demak</span><span>Boyolali</span><span>Klaten</span><span>Purwokerto</span><span>Cilacap</span></div></div>
-            <div class="area-box"><h3>Jawa Timur</h3><div class="area-tags"><span>Surabaya</span><span>Malang</span><span>Sidoarjo</span><span>Mojokerto</span><span>Jember</span><span>Banyuwangi</span><span>Madiun</span><span>Kediri</span><span>Blitar</span><span>Pasuruan</span><span>Probolinggo</span><span>Lamongan</span><span>Gresik</span><span>Tuban</span></div></div>
-        </div>
-    </div>
-
-    <!-- ===== MAPS ===== -->
-    <div class="maps-container">
-        <div class="maps-card">
-            <h3 class="maps-title">📍 Lokasi Kami di Jakarta</h3>
-            <p class="maps-address">
-                <strong>Agung Perkasa Borepile</strong><br>
-                Jl. Sunter Muara II, RT.17/RW.05, Sunter Agung, Kec. Tj. Priok,<br>
-                Jakarta Utara, DKI Jakarta 14350
-            </p>
-            <div class="maps-embed-wrapper">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1493743!2d106.8534975!3d-6.1493743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f53da64d7ca7%3A0x3586221410f9d181!2sAgung%20Perkasa%20Bore%20Pile!5e0!3m2!1sid!2sid!4v1622811397456!5m2!1sid!2sid&show_rating=true" 
-                    width="100%" 
-                    height="280" 
-                    style="border:0; display: block;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Google Maps Lokasi Agung Perkasa Borepile">
-                </iframe>
-            </div>
-            <a href="https://maps.google.com/?q=Agung+Perkasa+Bore+Pile" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="maps-btn">
-               Buka di Google Maps
-            </a>
-        </div>
-    </div>
-
-    <!-- ===== PUBLISHER BOX ===== -->
-    <div class="publisher-box">
-        <div class="publisher-inner">
-            <img src="/imgs/logo-agung-perkasa-transparan.webp" alt="Logo Agung Perkasa Borepile" loading="lazy" width="60" height="60">
-            <div>
-                <h4>Dipublikasikan oleh Agung Perkasa Borepile</h4>
-                <p>Spesialis pondasi borepile dengan pengalaman lebih dari 10 tahun di Jakarta. Data harga dan estimasi waktu di atas merupakan akumulasi dari semua proyek nyata yang telah kami kerjakan untuk client perorangan maupun kontraktor.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Agung Perkasa Borepile</h3>
-                    <p>Spesialis pondasi borepile diameter 30cm untuk rumah tinggal di Jakarta dan sekitarnya. Kontraktor borepile terpercaya dengan pengalaman lebih dari 10 tahun.</p>
-                    <div class="social-links">
-                        <a href={config.company.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaIcon class="fab fa-facebook-f" /></a>
-                        <a href={config.company.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaIcon class="fab fa-instagram" /></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Layanan</h3>
-                    <ul>
-                        <li><a href="/jasa/">Jasa Bore Pile</a></li>
-                        <li><a href="/jasa/">Jasa Strauss Pile</a></li>
-                        <li><a href="/harga/bore-pile-2026.html">Jasa Bore Pile Mesin</a></li>
-                        <li><a href="/harga/bore-pile/30cm.html">Jasa Bore Pile Manual</a></li>
-                        <li><a href="/harga/bore-pile-2026.html">Kalkulator Biaya Bore Pile</a></li>
-                        <li><a href="/#contact">Konsultasi Pondasi Dalam</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Tentang Kami</h3>
-                    <ul><li><a href="/#about">Tentang Kami</a></li><li><a href="/galeri/gallery.html">Galeri</a></li><li><a href="/artikel/">Blog Artikel</a></li></ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Kontak</h3>
-                    <ul>
-                        <li>Alamat: Jl. Sunter Muara II, RT.17/RW.05, Sunter Agung, Jakarta Utara</li>
-                        <li>Telp: {config.company.phone}</li>
-                        <li>Email: {config.company.email}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; {new Date().getFullYear()} {config.siteName}. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ===== WHATSAPP FLOAT & SCROLL TOP ===== -->
-    <a href={`https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Saya%20dari%20website%20ingin%20menanyakan%20terkait%20penawaran%20harga%20bore%20pile%20diameter%2030cm.`} 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       aria-label="Chat konsultasi melalui WhatsApp">
-       <FaIcon class="fab fa-whatsapp" />
-    </a>
-    
-    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><FaIcon class="fas fa-arrow-up" /></button>
-
-    <!-- ===== SCHEMA MARKUP ===== -->
-    <script type="application/ld+json" set:html={orgLd} />
-
-    <script type="application/ld+json" set:html={localBusinessLd} />
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Beranda",
-                "item": "https://agungperkasaborepile.com/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Harga",
-                "item": "https://agungperkasaborepile.com/harga/bore-pile-2026.html"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Harga Bore Pile Diameter 30cm",
-                "item": "https://agungperkasaborepile.com/harga/bore-pile/30cm.html"
-            }
-        ]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Jasa Bore Pile Diameter 30cm 2026",
-        "description": "Jasa bore pile diameter 30cm dengan harga mulai Rp120.000/m¹ untuk mesin dan Rp75.000/m¹ untuk manual. Melayani seluruh Pulau Jawa.",
-        "image": "https://agungperkasaborepile.com/imgs/logo-agung-perkasa.png",
-        "brand": {
-            "@type": "Brand",
-            "name": "Agung Perkasa Borepile"
-        },
-        "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "IDR",
-            "lowPrice": "70000",
-            "highPrice": "190000",
-            "offerCount": "8",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "url": "https://agungperkasaborepile.com/harga-bore-pile-30cm.html"
-        },
-        "areaServed": {
-            "@type": "Country",
-            "name": "Indonesia"
-        }
-    }
-    </script>
-
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "Apakah bore pile diameter 30cm cukup kuat untuk rumah 2 lantai?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Cukup. Dengan kedalaman 8-12 meter, diameter 30cm mampu menahan beban rumah 2 lantai dengan aman. Pastikan data sondir tanah sudah dicek."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Berapa standar harga jasa bor diameter 30cm?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Standar harga jasa bor diameter 30cm: mesin Rp120.000/m¹, manual Rp85.000/m¹ untuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton (belum termasuk material)."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Bisa pakai bore pile manual untuk diameter 30cm?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Bisa. Bore pile manual bisa melayani diameter 30cm dengan kedalaman maksimal 10 meter. Harga lebih ekonomis, cocok untuk rumah 1 lantai atau proyek kecil dan area terbatas."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Berapa jumlah titik ideal untuk bore pile diameter 30cm?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Untuk rumah 1-2 lantai standar dengan luas bangunan 100-200m², jumlah titik ideal antara 12-20 titik. Konsultasikan dengan tim teknis kami untuk perhitungan yang lebih akurat sesuai gambar bangunan Anda."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Berapa kedalaman maksimal bore pile diameter 30cm?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Untuk bore pile mesin (mini crane) diameter 30cm, kedalaman maksimal mencapai 30 meter. Sedangkan untuk bore pile manual (strauss pile) diameter 30cm, kedalaman maksimal 10 meter. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Berapa biaya total bore pile 30cm untuk rumah 2 lantai?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Untuk rumah 2 lantai dengan luas 100-200m², biasanya membutuhkan 12-20 titik bore pile diameter 30cm dengan kedalaman 8-12 meter. Estimasi biaya jasa bor mesin sekitar Rp23.040.000 + mobilisasi, sedangkan manual sekitar Rp10.240.000 + mobilisasi. Gunakan kalkulator di halaman untuk perhitungan lebih akurat."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Apakah melayani area Bekasi, Tangerang, Bogor?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ya. Kami melayani seluruh Jabodetabek (Jakarta, Bekasi, Bogor, Depok, Tangerang) dan sekitarnya."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Apakah melayani area luar Jabodetabek?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ya. Kami melayani seluruh area pulau Jawa sesuai permintaan proyek, tetapi ada perbedaan harga mobilisasi alat bore pile."
-            }
-        }
-    ]
-}
-</script>
-    <script is:inline src="/js/lightbox.js"></script>
-</body>
-</html>
+        
+</KotaLayout>

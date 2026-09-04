@@ -18,17 +18,62 @@
     "manualMin": 75000,
     "manualMax": 120000,
     "mesin": [
-      { "diameter": "30 cm", "price": 120000, "depth": "30 meter", "suitable": "Rumah 1-2 lantai" },
-      { "diameter": "40 cm", "price": 135000, "depth": "30 meter", "suitable": "Ruko, kantor" },
-      { "diameter": "50 cm", "price": 190000, "depth": "30 meter", "suitable": "Gudang, pabrik kecil" },
-      { "diameter": "60 cm", "price": null, "depth": "30 meter", "suitable": "Hotel 3-4 lantai" },
-      { "diameter": "80 cm", "price": null, "depth": "30 meter", "suitable": "Gedung 5-8 lantai" }
+      {
+        "diameter": "30 cm",
+        "price": 120000,
+        "depth": "30 meter",
+        "suitable": "Rumah 1-2 lantai"
+      },
+      {
+        "diameter": "40 cm",
+        "price": 135000,
+        "depth": "30 meter",
+        "suitable": "Ruko, kantor"
+      },
+      {
+        "diameter": "50 cm",
+        "price": 190000,
+        "depth": "30 meter",
+        "suitable": "Gudang, pabrik kecil"
+      },
+      {
+        "diameter": "60 cm",
+        "price": null,
+        "depth": "30 meter",
+        "suitable": "Hotel 3-4 lantai"
+      },
+      {
+        "diameter": "80 cm",
+        "price": null,
+        "depth": "30 meter",
+        "suitable": "Gedung 5-8 lantai"
+      }
     ],
     "manual": [
-      { "diameter": "20 cm", "price": 75000, "depth": "10 meter", "suitable": "Area sangat sempit" },
-      { "diameter": "25 cm", "price": 85000, "depth": "10 meter", "suitable": "Gang kecil" },
-      { "diameter": "30 cm", "price": 100000, "depth": "10 meter", "suitable": "Rumah, ruko 1-2 lantai (tanah padat)" },
-      { "diameter": "40 cm", "price": 120000, "depth": "10 meter", "suitable": "Rumah, ruko 2 lantai (tanah padat)" }
+      {
+        "diameter": "20 cm",
+        "price": 75000,
+        "depth": "10 meter",
+        "suitable": "Area sangat sempit"
+      },
+      {
+        "diameter": "25 cm",
+        "price": 85000,
+        "depth": "10 meter",
+        "suitable": "Gang kecil"
+      },
+      {
+        "diameter": "30 cm",
+        "price": 100000,
+        "depth": "10 meter",
+        "suitable": "Rumah, ruko 1-2 lantai (tanah padat)"
+      },
+      {
+        "diameter": "40 cm",
+        "price": 120000,
+        "depth": "10 meter",
+        "suitable": "Rumah, ruko 2 lantai (tanah padat)"
+      }
     ],
     "hasHidrolik": false
   },
@@ -98,17 +143,44 @@
     }
   ],
   "whyUs": [
-    { "title": "Memakai alat yang baik", "desc": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, dan strauss pile." },
-    { "title": "Efisiensi waktu & Komitmen kualitas", "desc": "Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam, khususnya bore pile di Depok." },
-    { "title": "Tim Ahli", "desc": "Memiliki tim ahli dalam pengerjaan bore pile di Depok, khususnya untuk proyek di perumahan dan ruko." },
-    { "title": "Tim berpengalaman di area Depok", "desc": "Lebih dari sepuluh tahun mengerjakan proyek di Depok. Mulai dari proyek rumah tinggal pribadi hingga proyek perumahan skala besar." }
+    {
+      "title": "Memakai alat yang baik",
+      "desc": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, dan strauss pile."
+    },
+    {
+      "title": "Efisiensi waktu & Komitmen kualitas",
+      "desc": "Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam, khususnya bore pile di Depok."
+    },
+    {
+      "title": "Tim Ahli",
+      "desc": "Memiliki tim ahli dalam pengerjaan bore pile di Depok, khususnya untuk proyek di perumahan dan ruko."
+    },
+    {
+      "title": "Tim berpengalaman di area Depok",
+      "desc": "Lebih dari sepuluh tahun mengerjakan proyek di Depok. Mulai dari proyek rumah tinggal pribadi hingga proyek perumahan skala besar."
+    }
   ],
   "equipment": {
     "description": "Kami memiliki beberapa alat untuk pekerjaan bore pile, antara lain:",
     "items": [
-      { "name": "Mini Crane", "desc": "Kapasitas sedang, diameter 30-80 cm, kedalaman sampai 30m. Cocok untuk rumah, ruko, gudang di Depok." },
-      { "name": "Gawangan", "desc": "Untuk area yang tidak bisa diakses mini crane. Diameter 30-80 cm, cocok untuk gang sempit di Depok." },
-      { "name": "Strauss Pile (Manual)", "desc": "Alat bor manual full tenaga manusia, metode dry boring. Diameter 20-40cm, cocok untuk gang sempit di Depok yang tidak bisa dijangkau crane." }
+      {
+        "name": "Mini Crane",
+        "desc": "Kapasitas sedang, diameter 30-80 cm, kedalaman sampai 30m. Cocok untuk rumah, ruko, gudang di Depok.",
+        "image": "/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg",
+        "imageAlt": "Mesin bore pile mini crane Agung Perkasa untuk bore pile pondasi rumah, ruko, dan bangunan bertingkat di Depok"
+      },
+      {
+        "name": "Gawangan",
+        "desc": "Untuk area yang tidak bisa diakses mini crane. Diameter 30-80 cm, cocok untuk gang sempit di Depok.",
+        "image": "/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg",
+        "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk bore pile ketika area tidak bisa dijangkau oleh mini crane di Depok"
+      },
+      {
+        "name": "Strauss Pile (Manual)",
+        "desc": "Alat bor manual full tenaga manusia, metode dry boring. Diameter 20-40cm, cocok untuk gang sempit di Depok yang tidak bisa dijangkau crane.",
+        "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
+        "imageAlt": "Strauss pile (bore pile manual) untuk pondasi di gang sempit dan area terbatas Depok lainnya"
+      }
     ]
   },
   "portfolio": {
@@ -124,8 +196,21 @@
     ]
   },
   "kecamatan": {
-    "Depok Utara": ["Beji", "Limo", "Pancoran Mas", "Sukmajaya", "Kemirimuka"],
-    "Depok Selatan": ["Cinere", "Sawangan", "Cimanggis", "Bojongsari", "Cilodong", "Tapos"]
+    "Depok Utara": [
+      "Beji",
+      "Limo",
+      "Pancoran Mas",
+      "Sukmajaya",
+      "Kemirimuka"
+    ],
+    "Depok Selatan": [
+      "Cinere",
+      "Sawangan",
+      "Cimanggis",
+      "Bojongsari",
+      "Cilodong",
+      "Tapos"
+    ]
   },
   "faq": [
     {
@@ -183,12 +268,88 @@
     }
   ],
   "internalLinks": [
-    { "href": "/jasa/bore-pile/jakarta.html", "label": "Jakarta" },
-    { "href": "/jasa/bore-pile/bekasi.html", "label": "Bekasi" },
-    { "href": "/jasa/bore-pile/tangerang.html", "label": "Tangerang" },
-    { "href": "/jasa/bore-pile/bogor.html", "label": "Bogor" },
-    { "href": "/harga/bore-pile-2026.html", "label": "Harga Bore Pile 2026" }
+    {
+      "href": "/jasa/bore-pile/jakarta.html",
+      "label": "Jakarta"
+    },
+    {
+      "href": "/jasa/bore-pile/bekasi.html",
+      "label": "Bekasi"
+    },
+    {
+      "href": "/jasa/bore-pile/tangerang.html",
+      "label": "Tangerang"
+    },
+    {
+      "href": "/jasa/bore-pile/bogor.html",
+      "label": "Bogor"
+    },
+    {
+      "href": "/harga/bore-pile-2026.html",
+      "label": "Harga Bore Pile 2026"
+    }
   ],
   "hasGoogleAds": true,
-  "googleAdsId": "AW-16649506462"
+  "googleAdsId": "AW-16649506462",
+  "additionalCosts": [
+    {
+      "title": "Mobilisasi Alat Bore Pile",
+      "text": "Mesin mini crane: Rp2-3 juta | Strauss pile (bore pile manual): Rp1-1,5 juta."
+    },
+    {
+      "title": "Minimal Order",
+      "text": "Mesin mini crane & gawangan: 200 meter | Strauss Pile (Manual): 100 meter (di bawah itu silakan hubungi kami)."
+    },
+    {
+      "title": "Sedot Lumpur",
+      "text": "Jika memakai bore pile mesin gawangan dan mini crane menggunakan metode <strong>wash boring (bor basah)</strong>, perkiraan biaya tambahannya sekitar: Rp800.000 - Rp1.200.000/rit (tergantung volume)"
+    },
+    {
+      "title": "Data Sondir",
+      "text": "Sangat wajib untuk menentukan kedalaman pengeboran yang tepat hingga mencapai lapisan tanah keras."
+    }
+  ],
+  "soilReasons": {
+    "title": "Mengapa Bore Pile Pilihan Tepat untuk Wilayah Depok?",
+    "description": "Depok dikenal dengan kondisi tanahnya yang <strong>lunak dan rawan penurunan (land subsidence)</strong>, terutama di wilayah <a href=\"https://lib.ui.ac.id/detail?id=20238696&lokasi=lokal\" target=\"_blank\" rel=\"noopener noreferrer\">Depok Utara</a>, <a href=\"https://www.academia.edu/99027747/\" target=\"_blank\" rel=\"noopener noreferrer\">Cengkareng</a>, dan <a href=\"https://iopscience.iop.org/article/10.1088/1755-1315/1374/1/012033\" target=\"_blank\" rel=\"noopener noreferrer\">Pondok Gede</a>. Metode bore pile menjadi solusi pondasi paling tepat karena:",
+    "points": [
+      {
+        "title": "Kedalaman hingga 30 meter",
+        "desc": "Mampu menembus lapisan tanah lunak hingga <a href=\"https://journal.jgu.ac.id/index.php/jgers/article/view/40\" target=\"_blank\" rel=\"noopener noreferrer\">mencapai tanah keras</a>."
+      },
+      {
+        "title": "Diameter fleksibel (30-120cm)",
+        "desc": "Bisa disesuaikan dengan <a href=\"https://library.gunadarma.ac.id/repository/perencanaan-fondasi-bored-pile-pada-gedung-perkantoran-10-lantai-di-depok-pusat-skripsi\" target=\"_blank\" rel=\"noopener noreferrer\">beban bangunan</a>."
+      },
+      {
+        "title": "Minim getaran",
+        "desc": "Aman untuk bangunan di sekitar proyek, jadi tidak merusak tanah dan dinding tetangga Anda."
+      },
+      {
+        "title": "Minim polusi suara",
+        "desc": "Suaranya tidak terlalu mengganggu tetangga sekitar proyek, apalagi jika proyek dilakukan di area padat, tapi terkadang ada tetangga yang merasa terganggu oleh suara yang dihasilkan, jadi kami juga menyediakan solusi untuk mengurangi suaranya (misal diberikan peredam suara)."
+      },
+      {
+        "title": "Metode wash boring",
+        "desc": "Bor basah sangat efektif untuk tanah berair atau rawa seperti di Depok Utara."
+      }
+    ],
+    "conclusion": "<p>Setiap lokasi memiliki karakteristik tanah yang berbeda. Contohnya seperti <a href=\"https://lib.ui.ac.id/detail?id=20490200&lokasi=lokal\" target=\"_blank\" rel=\"noopener noreferrer\">tanah di Depok Utara yang sebagian berpasir</a>, kami dapat menyesuaikan teknik bore pile untuk memastikan keberhasilan proyek di setiap wilayah di Depok.</p><p><strong>Portofolio kami di Depok:</strong> Kami pernah mengerjakan bore pile di gudang Dunex Sunter, selain itu kami juga sering mengerjakan proyek rumah, ruko, gedung dan bangunan lain di Seluruh Wilayah Depok, seperti PIK, PIK 2, Puri Kembangan, Pondok Indah, Mangga Besar, Cempaka Putih, Kuningan, Sumur Batu, Sunter, dll.</p>"
+  },
+  "priceUpdatedAt": "2026-08-19",
+  "projectNote": "<strong>Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan. Kecepatan pengerjaan dipengaruhi oleh kondisi lapangan, akses lokasi, karakteristik tanah, dan yang paling penting adalah pasokan air yang cukup untuk metode wash boring.<br><br>Butuh harga khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm.html\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
+  "tips": [
+    {
+      "diameter": "30 cm",
+      "usage": "rumah 1-2 lantai (paling banyak dipilih)"
+    },
+    {
+      "diameter": "40-50 cm",
+      "usage": "ruko, kantor, gudang, rumah sakit"
+    },
+    {
+      "diameter": "60-110 cm",
+      "usage": "hotel, gedung bertingkat"
+    }
+  ]
 }

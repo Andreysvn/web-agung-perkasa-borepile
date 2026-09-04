@@ -1,5 +1,5 @@
 ﻿---
-import DraftLayout from '../layouts/DraftLayout.astro';
+import KotaLayout from '../layouts/KotaLayout.astro';
 import pricing from '../data/harga.json';
 import jakartaData from '../data/kota/jakarta.json';
 
@@ -86,7 +86,7 @@ const productSchema = JSON.stringify({
     "areaServed": { "@type": "City", "name": jakartaData.name }
 });
 ---
-<DraftLayout
+<KotaLayout
     title={seoTitle}
     description={seoDesc}
     canonical={canonical}
@@ -169,7 +169,7 @@ const productSchema = JSON.stringify({
 
     <!-- Section 16: Internal Links -->
     <CityInternalLinks internalLinks={jakartaData.internalLinks} />
-</DraftLayout>
+</KotaLayout>
 
 
 

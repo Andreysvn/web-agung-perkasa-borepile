@@ -31,10 +31,10 @@ const isHighlighted = (d: string) => d === highlightDiameter;
             <tbody>
                 {localPrices.mesin.map((item) => (
                     <tr class={isHighlighted(item.diameter) ? 'row-highlight' : ''}>
-                        <td><strong>{item.diameter} cm</strong></td>
+                        <td>{item.diameter} cm</td>
                         <td><strong>{formatPrice(item.price)}</strong></td>
-                        <td><strong>{item.depth}</strong></td>
-                        <td><strong>{item.suitable}</strong></td>
+                        <td>{item.depth}</td>
+                        <td>{item.suitable}</td>
                     </tr>
                 ))}
             </tbody>
@@ -51,10 +51,10 @@ const isHighlighted = (d: string) => d === highlightDiameter;
             <tbody>
                 {localPrices.manual.map((item) => (
                     <tr class={isHighlighted(item.diameter) ? 'row-highlight' : ''}>
-                        <td><strong>{item.diameter} cm</strong></td>
+                        <td>{item.diameter} cm</td>
                         <td><strong>{formatPrice(item.price)}</strong></td>
-                        <td><strong>{item.depth}</strong></td>
-                        <td><strong>{item.suitable}</strong></td>
+                        <td>{item.depth}</td>
+                        <td>{item.suitable}</td>
                     </tr>
                 ))}
             </tbody>

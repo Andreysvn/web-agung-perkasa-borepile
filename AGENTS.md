@@ -1,384 +1,1600 @@
-# AGENTS.md
+﻿# AGENTS.md
 
-Catatan: `CLAUDE.md` adalah salinan file ini. Jika isinya berbeda, ikuti file ini. `README.md` hanyalah boilerplate starter Astro — abaikan.
+File ini adalah panduan utama untuk seluruh AI Agent yang bekerja pada project ini
+(Claude, OpenCode, Cursor, dan agent lainnya).
 
-## PERINGATAN PENTING UNTUK AI
-
-**JANGAN ubah halaman tanpa konteks yang jelas.** Sebelumnya ada AI yang salah ubah halaman dan membuatnya acak-acakan. **Ikuti instruksi di bawah dengan tepat.**
-
----
-
-## Project
-
-Website **Agung Perkasa Borepile** (jasa bore pile & strauss pile, seluruh konten Bahasa Indonesia) di Astro. **Migrasi dari HTML legacy SELESAI** (2026-08-23, 33 halaman, terverifikasi identik dengan situs lama).
-
-**Fase sekarang: Refactor untuk konsistensi, performa, dan kemudahan perawatan.**
-
-### Target Pemilik
-
-1. **Konsisten** - Semua halaman pakai layout yang sama
-2. **Ringan** - Shared modules, tidak ada duplikasi
-3. **Cepat** - Cache efektif, HTTP requests minimal
-4. **Mudah dirawat** - Update 1 file → semua halaman ikut
-5. **Design sama** - HTML output identik, CSS tetap sama
-
-### Kontak
-
-- **WhatsApp**: `6285710277854` (HANYA ini yang benar, jangan pakai nomor lain)
-- **Domain**: `https://agungperkasaborepile.com`
-- **Remote**: `github.com/Andreysvn/web-agung-perkasa-borepile`
+File ini merupakan **SOURCE OF TRUTH** untuk aturan development, migrasi,
+preservasi konten, routing, SEO, data, asset, dan standar pengerjaan project.
 
 ---
 
-## ATURAN PALING PENTING
+# 1. PROJECT
 
-### ❌ JANGAN LAKUKAN INI
+Project ini adalah migrasi website:
 
-1. **JANGAN ubah desain/konten** - Refactor hanya menyentuh kode, bukan tampilan
-2. **JANGAN pakai nomor WA lain** - Hanya `6285710277854`
-3. **JANGAN edit file CSS/JS legacy** di `public/css/` dan `public/js/` selama masih dipakai
-4. **JANGAN tambah dependency baru** - Hanya pakai Astro dan vanilla JS
-5. **JANGAN revert/stash/overwrite** working tree tanpa izin
-6. **JANGAN commit/push** tanpa diminta
-7. **JANGAN edit file .astro via PowerShell Get-Content/Set-Content** - Rusak encoding UTF-8
+**Agung Perkasa Borepile**
 
-### ✅ WAJIB LAKUKAN INI
+Bidang usaha:
 
-1. **Selalu test dengan `npm run build`** setelah ubah file
-2. **Pastikan HTML output identik** dengan sebelum refactor
-3. **Mulai dari Jakarta sebagai pilot** sebelum replikasi
-4. **Backup dulu** sebelum ubah file besar
-5. **Ikuti pola Jakarta** untuk semua halaman baru
+* Bore Pile
+* Strauss Pile
+* Jasa Pondasi
+* Deep Foundation
+* Construction Services
 
----
+Bahasa website:
 
-## REFACTOR PLAN (Keputusan Pemilik 2026-09-02)
+**Bahasa Indonesia**
 
-### Scope Awal
+Framework target:
 
-**41 halaman akan direfactor (kecuali beranda):**
+**Astro**
 
-| # | Kategori | Halaman | Jumlah |
-|---|----------|---------|--------|
-| 1 | **Kota** | Jakarta, Bandung, Bekasi, Bogor, Depok, Karawang, Semarang, Surabaya, Tangerang | 9 |
-| 2 | **Harga** | 30cm, 40cm, 50cm, 60cm, 80cm | 5 |
-| 3 | **Area** | Cikarang, Bintaro, BSD, Cibubur, Ciputat, Karawaci, Pamulang, Tangerang Selatan | 8 |
-| 4 | **Artikel** | Index + 10 artikel | 11 |
-| 5 | **Galeri** | Gallery + Gallery-2 | 2 |
-| 6 | **Alat** | Index + 3 alat sub-pages | 4 |
-| 7 | **Strauss Pile** | Jakarta | 1 |
-| 8 | **Jasa** | Index (hub kota) | 1 |
-| | **TOTAL** | | **41** |
+Website lama:
 
-**Beranda:** TIDAK DIREFACTOR (tetap pakai BaseLayout yang ada).
+**HTML + CSS + JavaScript statis**
 
-**Target akhir:** Ekspansi ke **100+ halaman local SEO** setelah fondasi solid.
+Website legacy yang berada di dalam project merupakan **SOURCE OF TRUTH**
+untuk:
 
-### 4 Fase Pengerjaan
+* desain
+* layout
+* struktur HTML
+* konten
+* gambar
+* asset
+* navigasi
+* CTA
+* tabel
+* FAQ
+* kalkulator
+* fitur JavaScript
+* metadata
+* schema
+* internal linking
 
-**⚠️ JANGAN skip urutan fase! Setiap fase WAJIB selesai dan diverifikasi sebelum lanjut.**
+## Prinsip Utama
 
-#### FASE 1 — Fondasi (Jakarta Pilot) - **SELESAI (100% APPROVED)**
+**PROJECT INI ADALAH MIGRASI, BUKAN REDESIGN.**
 
-- [x] Standarisasi format JSON & Props Komponen (7 prop mismatch diperbaiki).
-- [x] Buat `KotaLayout.astro` (Membungkus Head, Meta, Navbar, Footer, Schema, Maps, CTA, WA, dll).
-- [x] Buat komponen baru yang kurang (Breadcrumb, PageMeta, Maps, Publisher, dll).
-- [x] Refactor `jakarta/index.astro` menjadi ringkas dengan `KotaLayout`.
-- [x] Test build lolos (44 halaman, 0 error) dan HTML output terverifikasi.
-- [x] **Fix Visual & Tipografi Selesai**: 
-      - Mojibake (Ø, ×) dibersihkan dari seluruh JSON.
-      - Scroll-top fix (Cyan #06b6d4, polos).
-      - Kalkulator kontras (Bg biru pastel, form putih, garis putus-putus).
-      - SVG Inline Icon (0 HTTP request untuk kaca pembesar dan ikon lain, tanpa FontAwesome).
-      - Layout fix (CTA artikel masuk ke dalam container).
-      - Copywriting EYD (spasi, tanda baca, huruf kapital dirapikan tanpa mengubah gaya bahasa asli pengguna).
+Tujuan utama adalah memindahkan website lama ke Astro dengan hasil
+yang semirip mungkin terhadap versi legacy secara:
 
-#### FASE 2 — Konsistensi (Replikasi + Bug Fix) - **(BERIKUTNYA)**
+* visual
+* struktur
+* konten
+* fungsi
+* URL
+* SEO
 
-**Tugas Utama yang Harus Dikerjakan:**
-- [ ] Replikasi `KotaLayout` ke 8 kota lain (Bandung, Bekasi, Bogor, Depok, Karawang, Semarang, Surabaya, Tangerang).
-- [ ] Replikasi `KotaLayout` ke 8 area flat (Bintaro, BSD, Cibubur, Ciputat, Karawaci, Pamulang, Tangsel).
-- [ ] Konsolidasi Navbar dan Footer (Hapus `NavbarKota` & `FooterKota`, pakai `Navbar` & `Footer` global untuk semua).
-- [ ] Refactor halaman harga, artikel, galeri, alat, jasa, strauss pile memakai layout masing-masing.
-- [ ] Fix bug performa yang sudah diketahui:
-   - Font Awesome CDN → ganti SVG inline di SEMUA halaman.
-   - Minify 3 CSS (artikel, gallery, proses).
-   - Minify 6 JS files.
-   - Fix nomor WA yang salah di `script.js` (baris 225, 256) menjadi `6285710277854`.
-- [ ] Verifikasi semua 41 halaman: build lolos, tampilan konsisten.
+Jika implementasi Astro berbeda dari versi legacy, jangan langsung menganggap
+versi Astro lebih baik.
 
-#### FASE 3 — Performa (PageSpeed Hijau)
-
-```
-1. Audit PageSpeed Insights (mobile & desktop) untuk halaman Jakarta
-2. Optimasi berdasarkan hasil audit:
-   - Critical CSS inline di <head> (above-the-fold)
-   - Defer/async semua JS non-kritis
-   - Lazy load semua gambar di bawah fold
-   - Semua gambar format WebP dengan dimensi eksplisit (width/height)
-   - Preload font/resource kritis
-   - Eliminasi render-blocking resources
-3. Optimasi Core Web Vitals:
-   - LCP (Largest Contentful Paint) < 2.5s
-   - INP (Interaction to Next Paint) < 200ms
-   - CLS (Cumulative Layout Shift) < 0.1
-4. Security headers (CSP, X-Frame-Options, X-Content-Type-Options)
-5. Pastikan kompatibel Hostinger DAN Cloudflare Pages
-6. Re-audit PageSpeed — target skor 90+ mobile, 95+ desktop
-```
-
-#### FASE 4 — Ekspansi 100+ Halaman Local SEO
-
-```
-1. Konversi halaman kota ke dynamic route [slug].astro
-   → 1 file template + N file JSON = N halaman otomatis
-   → Tambah kota baru = tambah 1 file JSON saja
-2. Buat 100+ file JSON data kota/kecamatan/area baru
-3. Setiap halaman otomatis dapat:
-   - Kalkulator harga, tabel harga, FAQ
-   - Maps embed, publisher box, schema markup
-   - Navbar, footer, WhatsApp float konsisten
-4. Pastikan konten unik per kota (BUKAN copy-paste thin content)
-5. Auto-generate sitemap.xml untuk semua halaman
-6. Verifikasi: build lolos, tidak ada thin content, schema valid
-```
+Gunakan versi legacy sebagai referensi utama.
 
 ---
 
-## TEKNIS REFACTOR
+# 2. PRIORITAS KERJA
 
-### 1. Shared Scripts (6 files)
+Urutan prioritas:
 
+1. Preserve konten website lama.
+2. Preserve desain website lama.
+3. Preserve struktur dan fitur website lama.
+4. Perbaiki error migrasi Astro.
+5. Perbaiki fungsi yang rusak.
+6. Pertahankan URL lama.
+7. Pertahankan dan perbaiki SEO teknis.
+8. Pastikan data konsisten.
+9. Pastikan responsive.
+10. Cleanup kecil hanya jika aman dan tidak mengubah hasil akhir.
+
+## Jangan melakukan:
+
+* redesign
+* mengganti warna
+* mengganti font
+* mengganti layout
+* mengganti spacing tanpa alasan
+* mengganti copywriting tanpa instruksi
+* menghapus section
+* menghapus konten
+* menghapus gambar
+* menghapus CTA
+* menghapus tabel
+* menghapus FAQ
+* menghapus kalkulator
+* menghapus internal link
+* menghapus metadata
+* menghapus schema
+* mengganti harga tanpa sumber
+* mengganti alamat tanpa sumber
+* mengganti nomor WhatsApp tanpa sumber
+* mengganti identitas bisnis
+* mengganti URL tanpa alasan
+* membuat data palsu
+* membuat portofolio palsu
+* membuat schema palsu
+* menambahkan framework JavaScript baru
+* melakukan refactor besar di luar scope task
+* mengubah konfigurasi Astro tanpa alasan kuat
+
+Jika menemukan masalah di luar scope task:
+
+**jangan langsung mengubahnya.**
+
+Catat di laporan akhir.
+
+---
+
+# 3. PERINTAH DASAR
+
+## Development
+
+```bash
+npm run dev
 ```
-src/scripts/shared/
-├── navbar.js       → Navbar shrink, mobile menu, dropdown (~2KB)
-├── faq.js          → FAQ accordion (~0.5KB)
-├── scrolltop.js    → Scroll top button (~0.5KB)
-├── calculator.js   → Kalkulator bore pile (~5KB)
-├── lightbox.js     → Lightbox gallery (~1KB)
-└── breadcrumb.js   → Breadcrumb active state (~0.5KB)
+
+Dev server:
+
+```text
+localhost:4321
 ```
 
-### 2. Layouts (6 files)
+Sebelum menjalankan dev server:
 
-```
-src/layouts/
-├── KotaLayout.astro      ← 9 kota + 8 area = 17 halaman
-├── HargaLayout.astro     ← 5 harga + 1 strauss pile = 6 halaman
-├── ArtikelLayout.astro   ← 11 artikel
-├── GaleriLayout.astro    ← 2 galeri
-├── AlatLayout.astro      ← 4 alat
-└── JasaLayout.astro      ← 1 jasa (hub kota)
+* cek apakah server sudah berjalan
+* jangan menjalankan dua dev server sekaligus
+
+## Build
+
+```bash
+npm run build
 ```
 
-### 3. Components (12 files)
+`npm run build` adalah verifikasi otomatis utama project.
 
+Task tidak boleh dinyatakan selesai apabila build gagal.
+
+## Preview
+
+```bash
+npm run preview
 ```
-src/components/
-├── shared/
-│   ├── Navbar.astro         → Navbar (props: activeItem)
-│   ├── Footer.astro         → Footer (props: description)
-│   ├── WhatsAppFloat.astro  → WhatsApp float button
-│   ├── ScrollTop.astro      → Scroll top button
-│   ├── CtaBox.astro         → CTA box section
-│   ├── ArtikelSection.astro → Artikel section di atas footer
-│   ├── Breadcrumb.astro     → Breadcrumb navigation
-│   └── Hero.astro           → Hero section
-├── city/
-│   ├── Calculator.astro     → Kalkulator bore pile
-│   ├── PriceTable.astro     → Tabel harga
-│   ├── FAQ.astro            → FAQ accordion
-│   └── Projects.astro       → Contoh proyek
+
+## Node
+
+Gunakan versi Node yang ditentukan oleh `package.json`.
+
+Minimum saat ini:
+
+```text
+Node >= 22.12.0
 ```
 
 ---
 
-## JAKARTA SEBAGAI PATOKAN
+# 4. TEKNOLOGI
 
-### File
+Framework utama:
 
+**Astro**
+
+Arsitektur target:
+
+**Mostly Zero-JS**
+
+Gunakan:
+
+* Astro
+* HTML
+* CSS
+* Vanilla JavaScript
+
+JavaScript hanya digunakan jika memang diperlukan untuk:
+
+* mobile navigation
+* calculator
+* FAQ accordion
+* filter
+* slider
+* modal
+* interactive UI
+* tracking
+* fitur legacy yang memang membutuhkan JavaScript
+
+## Jangan menggunakan
+
+* React
+* Vue
+* Svelte
+* jQuery
+* framework frontend tambahan
+
+untuk sesuatu yang dapat dilakukan dengan Astro atau browser API standar.
+
+Jangan menambahkan dependency baru tanpa alasan yang jelas.
+
+---
+
+# 5. LEGACY WEBSITE = SOURCE OF TRUTH
+
+Sebelum memigrasikan atau memperbaiki halaman:
+
+**WAJIB membaca halaman legacy yang sesuai.**
+
+Referensi legacy utama:
+
+```text
+public/
 ```
-src/pages/jasa/bore-pile/jakarta/index.astro (949 baris → ~80 baris setelah refactor)
+
+Jika tersedia:
+
+```text
+public/save web design juni 2026/
+public/legacy-index.html
 ```
 
-### Struktur Section (Urutan Wajib)
+Jangan mengandalkan:
 
-1. Breadcrumb (Beranda > Jasa > Bore Pile Jakarta)
-2. H1 + page-meta (update date, author, lokasi) + update-badge
-3. CityHero (ilustrasi + deskripsi harga)
-4. CityCalculator (kalkulator estimasi biaya)
-5. PriceTable (tabel harga mesin + manual)
-6. CityFactors (faktor yang mempengaruhi harga, 5 faktor)
-7. CityAdditionalCosts (biaya tambahan)
-8. CityTips (tips memilih diameter)
-9. CityProjects (contoh hitungan proyek nyata + foto)
-10. CityWhy (kenapa pilih Agung Perkasa)
-11. CityEquipment (alat yang digunakan)
-12. CityPortfolio (dokumentasi proyek)
-13. CityKecamatan (wilayah layanan per kecamatan)
-14. FaqSection (FAQ 6 pertanyaan)
-15. CityArticles (artikel blog 3 artikel)
-16. CityInternalLinks (link ke kota lain)
-17. CtaBox ("Butuh jasa bore pile di Jakarta?" + tombol WA)
-18. Maps (Google Maps embed)
-19. Publisher box
-20. Footer
-21. WhatsApp float
-22. Scroll-top button
-23. Schema markup
+* ingatan
+* asumsi
+* halaman kota lain
+* template lain
+* hasil implementasi sebelumnya
 
-### Data Jakarta
+## Workflow wajib
 
-- **File**: `src/data/kota/jakarta.json` (380 baris)
-- **Harga manual**: mulai Rp70.000/m (20cm)
-- **Harga mesin**: mulai Rp120.000/m (30cm)
-- **Kedalaman mesin**: 12-26 meter
-- **Kedalaman manual**: 4-8 meter
+Sebelum membuat atau memperbaiki halaman:
 
-### CSS & JS untuk Halaman Kota
+1. Temukan file HTML legacy yang sesuai.
+2. Baca seluruh HTML.
+3. Identifikasi CSS yang digunakan.
+4. Identifikasi JavaScript yang digunakan.
+5. Identifikasi gambar/asset yang digunakan.
+6. Identifikasi metadata SEO.
+7. Identifikasi schema.
+8. Identifikasi internal link.
+9. Identifikasi konten dan struktur.
+10. Baru implementasikan atau perbaiki versi Astro.
 
-- **CSS**: `/css/borepile-kota.css` (26.3KB, minified)
-- **JS**: Shared scripts saja (navbar.js, faq.js, scrolltop.js, calculator.js)
+## Dilarang
+
+Jangan melakukan:
+
+```text
+copy halaman Jakarta
+â†’ ganti "Jakarta" menjadi "Bekasi"
+â†’ selesai
+```
+
+Setiap halaman harus dibandingkan dengan halaman legacy-nya sendiri.
 
 ---
 
-## DATA SOURCES (Satu Sumber Data)
+# 6. MODEL MIGRASI
 
-### File yang Sudah Ada
+Website legacy dan Astro boleh hidup berdampingan selama proses migrasi.
 
-- `src/data/config.json` — identitas, kontak, sosial media
-- `src/data/harga.json` — semua harga + `priceUpdatedAt`
-- `src/data/borepile-kota.json` — data kota
-- `src/data/galeri.json` — data galeri
+### Halaman belum dimigrasikan
 
-### Prinsip
+Tetap gunakan halaman legacy.
 
-**Satu data, banyak halaman.** Kalau harga berubah, edit 1 file → semua halaman ikut.
+### Halaman sudah dimigrasikan
 
----
+Gunakan versi Astro.
 
-## ARSITEKTUR ASTRO
+Jangan menghapus halaman legacy secara sembarangan.
 
-- `astro.config.mjs` memakai `build.format: 'file'` → setiap route menghasilkan `/path.html`
-- `site` diset ke domain produksi — jangan dihapus
-- 44 halaman Astro total
-- Satu sumber data wajib (jangan hardcode nilainya di halaman)
+Migrasi dilakukan secara bertahap dan per route.
 
----
+Untuk setiap halaman yang dimigrasikan:
 
-## PERFORMANCE
-
-### Target
-
-- **PageSpeed Insights**: 90+ mobile, 95+ desktop
-- **Core Web Vitals**: LCP < 2.5s, INP < 200ms, CLS < 0.1
-- **Total page weight**: < 500KB per halaman (termasuk gambar)
-
-### Yang Sudah Dioptimasi
-
-- Font Awesome CDN → SVG inline (7 ikon, hanya di Jakarta)
-- GTM ditunda sampai `window load`
-- Preconnect cdnjs/unpkg dibuang
-- CSS/JS lokal sudah dikompres Brotli
-
-### Yang Perlu Dioptimasi (Fase 2 & 3)
-
-- [ ] 31 halaman lain masih pakai Font Awesome CDN → ubah ke SVG inline
-- [ ] 3 CSS files belum minified (artikel.css, gallery.css, proses.css)
-- [ ] 6 JS files belum minified
-- [ ] WhatsApp number salah di `script.js` (lines 225, 256) → `6285710277854`
-- [ ] Critical CSS inline di `<head>` untuk above-the-fold content
-- [ ] Defer/async semua JS non-kritis
-- [ ] Lazy load gambar di bawah fold (`loading="lazy"`)
-- [ ] Semua gambar pakai format WebP + dimensi eksplisit (`width`/`height`) untuk CLS
-- [ ] Preload resource kritis (CSS utama, font jika ada)
-- [ ] Eliminasi render-blocking resources
-- [ ] Hapus CSS/JS yang tidak terpakai (unused code)
+* pertahankan URL
+* pertahankan konten
+* pertahankan desain
+* pertahankan asset
+* pertahankan fungsi
+* pertahankan metadata
+* pertahankan struktur SEO
 
 ---
 
-## SEO TEKNIKAL
+# 7. ROUTING & URL
 
-### Yang Sudah Ada
+URL merupakan bagian penting dari migrasi SEO.
 
-- Canonical di-hardcode ke domain produksi
-- og:url = canonical di semua halaman
-- Schema identitas (Organization/WebSite/LocalBusiness) di `src/lib/schema.js`
-- Schema unik per halaman (Breadcrumb, FAQ, Service) ditulis inline
-- Konten full Bahasa Indonesia, keyword lokal di setiap halaman kota
+Sebelum membuat route Astro:
 
-### Checklist Teknikal (Fase 2 & 3)
+1. Periksa URL legacy.
+2. Periksa struktur folder legacy.
+3. Periksa `astro.config.mjs`.
+4. Periksa `build.format`.
+5. Periksa route Astro yang sudah ada.
+6. Tentukan URL final.
+7. Pastikan canonical menggunakan URL final tersebut.
 
-**Meta & Head:**
-- [ ] Title tag unik per halaman (< 60 karakter)
-- [ ] Meta description unik per halaman (< 160 karakter)
-- [ ] Canonical URL benar di setiap halaman
-- [ ] og:title, og:description, og:image di setiap halaman
-- [ ] Favicon lengkap (sudah ada)
+## Build format
 
-**Schema Markup:**
-- [ ] Organization schema valid (sudah ada)
-- [ ] LocalBusiness schema valid di setiap halaman kota
-- [ ] BreadcrumbList schema di setiap halaman
-- [ ] FAQPage schema di halaman yang punya FAQ
-- [ ] Service schema di halaman jasa
-- [ ] Validasi semua schema via Google Rich Results Test
+Project menggunakan:
 
-**Crawlability & Indexing:**
-- [ ] robots.txt benar (tidak memblokir halaman penting)
-- [ ] sitemap.xml lengkap dan up-to-date (auto-generate untuk 100+ halaman)
-- [ ] Tidak ada orphan pages (semua halaman punya internal link)
-- [ ] Tidak ada broken links (internal maupun eksternal)
-- [ ] Redirect 301 dari URL lama ke URL baru (`.htaccess` + `_redirects`)
+```js
+build: {
+  format: 'file'
+}
+```
 
-**Gambar:**
-- [ ] Semua gambar punya `alt` text deskriptif (Bahasa Indonesia)
-- [ ] Format WebP untuk semua gambar konten
-- [ ] Dimensi eksplisit (`width`/`height`) di setiap `<img>`
-- [ ] Lazy loading untuk gambar di bawah fold
+apabila konfigurasi tersebut masih aktif.
 
-**Aksesibilitas (Mempengaruhi Skor Audit):**
-- [ ] Heading hierarchy benar (H1 → H2 → H3, tidak loncat)
-- [ ] Semua link punya teks deskriptif (bukan "klik di sini")
-- [ ] Semua tombol/link interaktif punya `aria-label` jika perlu
-- [ ] Kontras warna memenuhi WCAG AA (jangan ubah warna, cek saja)
-- [ ] Semantic HTML (`<nav>`, `<main>`, `<article>`, `<section>`, `<footer>`)
+Dengan format ini, route dapat menghasilkan:
 
-**Security (Mempengaruhi Skor Audit):**
-- [ ] HTTPS aktif (sudah ada via hosting)
-- [ ] Security headers: `X-Content-Type-Options: nosniff`
-- [ ] Security headers: `X-Frame-Options: DENY`
-- [ ] Security headers: `Referrer-Policy: strict-origin-when-cross-origin`
-- [ ] Tidak ada mixed content (HTTP di halaman HTTPS)
+```text
+/path.html
+```
+
+bukan:
+
+```text
+/path/index.html
+```
+
+## Prinsip
+
+Jika URL legacy adalah:
+
+```text
+/jasa/bore-pile-jakarta.html
+```
+
+usahakan URL tersebut tetap digunakan.
+
+Jika URL legacy menggunakan:
+
+```text
+/x/index.html
+```
+
+dan route Astro final menjadi:
+
+```text
+/x.html
+```
+
+maka URL lama dapat diarahkan satu arah ke URL baru.
+
+## Redirect rules
+
+Redirect harus:
+
+* satu arah
+* tidak loop
+* tidak chain berlebihan
+* tidak bertentangan dengan canonical
+
+Jangan membuat:
+
+```text
+A â†’ B â†’ C
+```
+
+jika:
+
+```text
+A â†’ C
+```
+
+sudah cukup.
 
 ---
 
-## PERINTAH
+# 8. CANONICAL
 
-- `npm run dev` — dev server di `localhost:4321`
-- `npm run build` — verifikasi otomatis (wajib lolos)
-- `npm run preview` — serve hasil build dari `dist/`
-- Node >= 22.12.0
+Setiap halaman production harus mempunyai satu canonical yang benar.
+
+Domain production:
+
+```text
+https://agungperkasaborepile.com
+```
+
+Canonical harus konsisten dengan:
+
+* URL final
+* `og:url`
+* BreadcrumbList
+* schema
+* internal linking
+
+Jangan menghasilkan:
+
+```text
+http://localhost:4321/...
+```
+
+atau URL development lainnya sebagai canonical production.
 
 ---
 
-## ATURAN KERJA
+# 9. SINGLE SOURCE OF TRUTH DATA
 
-1. 33 halaman hasil migrasi adalah baseline legacy: **jangan ubah desain/konten/URL/fungsinya** tanpa instruksi eksplisit
-2. Perubahan seminimal mungkin; **jangan refactor di luar scope task**
-3. Bug lama yang tidak menghalangi task: **biarkan dan laporkan**, jangan perbaiki sendiri
-4. Semua konten dan copywriting dalam **Bahasa Indonesia**
-5. Kalau membuat halaman baru, **gunakan pola Jakarta sebagai patokan**
+Gunakan data terstruktur dari file berikut jika relevan:
+
+### Harga
+
+```text
+src/data/harga.json
+```
+
+### Konfigurasi perusahaan
+
+```text
+src/data/config.json
+```
+
+### Data kota
+
+```text
+src/data/borepile-kota.json
+```
+
+### Arsip hydraulic
+
+```text
+src/data/harga-arsip-hidrolik.json
+```
+
+Data hydraulic adalah arsip.
+
+**Tidak boleh dirender di halaman aktif.**
+
+Namun:
+
+```text
+src/data/harga-arsip-hidrolik.json
+```
+
+**jangan dihapus.**
 
 ---
 
-## GIT
+# 10. BISNIS & HARGA
 
-Working tree hampir selalu berisi perubahan WIP milik pengguna yang belum di-commit — **jangan revert, stash, atau overwrite**. Jangan commit/push tanpa diminta.
+## Hydraulic / SANY
+
+Metode Hydraulic/SANY:
+
+**Sudah tidak digunakan pada layanan aktif.**
+
+Karena itu:
+
+* hapus referensi Hydraulic/SANY dari halaman aktif
+* jangan menampilkan harga hydraulic aktif
+* jangan menampilkan alat hydraulic sebagai layanan aktif
+* jangan memasukkan hydraulic ke kalkulator aktif
+
+Tetapi:
+
+```text
+src/data/harga-arsip-hidrolik.json
+```
+
+harus tetap dipertahankan sebagai arsip.
+
+## Harga Manual
+
+Harga Manual resmi saat ini:
+
+```text
+Rp75.000/m
+```
+
+## Gawangan
+
+Minimum order Gawangan:
+
+```text
+200 meter
+```
+
+Gunakan data pusat jika informasi tersebut sudah tersedia di:
+
+```text
+src/data/harga.json
+```
+
+## Konflik Harga
+
+Jika ditemukan:
+
+* harga paragraf berbeda
+* harga tabel berbeda
+* harga calculator berbeda
+* harga schema berbeda
+* harga JSON berbeda
+
+jangan memilih secara asal.
+
+Cari sumber kebenaran.
+
+Prioritas:
+
+1. Data pusat resmi.
+2. Legacy jika merupakan data historis.
+3. Konteks halaman.
+4. Jika masih ambigu â†’ laporkan.
 
 ---
 
-## REFERENSI
+# 11. CONTENT PRESERVATION
 
-- Dokumentasi Astro: https://docs.astro.build
-- Baca dulu sebelum menebak API Astro
+Semua konten legacy harus dipertahankan kecuali ada instruksi eksplisit
+untuk mengubahnya.
+
+Pertahankan:
+
+* H1
+* H2
+* H3
+* H4
+* paragraf
+* list
+* tabel
+* FAQ
+* portfolio
+* contoh proyek
+* CTA
+* WhatsApp
+* Google Maps
+* artikel
+* internal link
+* external link
+* gambar
+* alt text
+* navbar
+* footer
+* area layanan
+* kalkulator
+* metadata
+* schema
+
+## Copywriting
+
+Jangan rewriting copywriting hanya karena:
+
+* lebih SEO-friendly
+* terdengar lebih profesional
+* terlihat lebih natural
+* ingin menambah keyword
+
+Selama task adalah migrasi/bug fixing:
+
+**pertahankan teks legacy.**
+
+Jika menemukan typo yang tidak menyebabkan error:
+
+laporkan terlebih dahulu daripada mengubah isi.
+
+---
+
+# 12. HALAMAN KOTA / AREA LAYANAN
+
+Aturan ini berlaku untuk seluruh city/area pages.
+
+Contoh:
+
+* Jakarta
+* Bekasi
+* Depok
+* Tangerang
+* Bogor
+* Tangerang Selatan
+* Bandung
+* Karawang
+* Cikarang
+* Surabaya
+* dan wilayah lain yang tersedia di project
+
+Gunakan:
+
+```text
+src/data/borepile-kota.json
+```
+
+untuk data terstruktur kota.
+
+Setiap halaman kota harus memiliki:
+
+* Title
+* Meta Description
+* H1
+* Canonical
+* Area layanan
+* Gambar
+* Konten lokal
+* CTA
+* Internal links
+* Informasi yang sesuai wilayah
+
+## Unique Local Content
+
+Template teknis boleh digunakan.
+
+Namun jangan membuat halaman:
+
+```text
+copy Jakarta
+â†’ replace Jakarta dengan Bekasi
+```
+
+Konten lokal harus berasal dari:
+
+* halaman legacy kota tersebut
+* data kota
+* informasi proyek yang benar
+* data bisnis yang nyata
+
+Jangan membuat klaim lokasi yang tidak memiliki sumber.
+
+---
+
+# 13. CITY DATA VALIDATION
+
+Jika menggunakan:
+
+```js
+const city = cities.find((item) => item.slug === 'jakarta');
+```
+
+WAJIB validasi.
+
+Contoh:
+
+```js
+const city = cities.find((item) => item.slug === 'jakarta');
+
+if (!city) {
+  throw new Error(
+    'City "jakarta" tidak ditemukan di borepile-kota.json'
+  );
+}
+```
+
+Jangan membuat fallback data palsu.
+
+Jangan menggunakan:
+
+```js
+city || {}
+```
+
+untuk menutupi data yang hilang.
+
+Jika city tidak ditemukan:
+
+**build harus gagal dengan error yang jelas.**
+
+---
+
+# 14. HTML STRUCTURE
+## Migrasi ke BaseLayout
+Saat memigrasikan halaman lama (raw HTML) menjadi komponen Astro yang menggunakan <BaseLayout>:
+1. **Jangan memaksakan semua konten masuk ke dalam kontainer sempit** (contoh: memaksakan semuanya masuk .blog-container). Jika halaman asli memiliki section *full-width* di luar kontainer teks, pastikan struktur komponen Astro meniru kerangka tersebut dengan akurat.
+2. Halaman ore-pile-2026.astro adalah **template patokan** untuk seluruh halaman harga (30cm, 40cm, dst).
+
+
+Audit semua halaman hasil migrasi.
+
+Pastikan:
+
+* tag balance
+* `<div>` balance
+* `<section>` balance
+* `<article>` balance
+* `<nav>` balance
+* `<header>` valid
+* `<footer>` valid
+* `<ul>/<li>` valid
+* `<form>` valid
+* `<button>` valid
+* `<label>` valid
+* heading hierarchy masuk akal
+* nested element valid
+* tidak ada closing tag yang hilang
+
+Jika CSS legacy bergantung pada struktur DOM tertentu:
+
+**pertahankan struktur tersebut.**
+
+Jangan mengubah class name tanpa alasan.
+
+---
+
+# 15. CSS
+## Dynamic JS Classes (WARNING)
+Jangan pernah menghapus class CSS hanya karena class tersebut tidak ditemukan di file statis .astro atau .html.
+Banyak class (seperti .choice-button pada kalkulator) di-generate secara dinamis oleh JavaScript.
+Menghapus class ini saat "merapikan" CSS akan membuat fitur tersebut kehilangan styling (tampil telanjang).
+
+
+CSS legacy merupakan referensi visual utama.
+
+Pertahankan CSS legacy apabila masih relevan.
+
+Contoh:
+
+```text
+public/css/borepile-kota.css
+```
+
+## Jangan mengubah:
+
+* warna
+* font
+* ukuran
+* spacing
+* layout
+* breakpoint
+* border
+* shadow
+* animation
+
+kecuali perubahan tersebut diperlukan untuk memperbaiki bug akibat migrasi.
+
+Jika CSS rusak setelah migrasi:
+
+perbaiki **sesedikit mungkin**.
+
+Tujuan:
+
+```text
+Astro â‰ˆ Legacy
+```
+
+bukan:
+
+```text
+Astro redesign
+```
+
+---
+
+# 16. JAVASCRIPT
+## Konflik Global JS pada BaseLayout
+<BaseLayout> secara default memuat /js/script.js. Jika halaman yang dimigrasikan memiliki file JS mandiri sendiri (contoh: harga.js yang mengatur kalkulator & navigasinya sendiri), ini dapat menyebabkan *double-initialization* (seperti *scroll-to-top* atau *navbar toggle* berjalan dua kali).
+Gunakan *prop* disableGlobalJs={true} pada <BaseLayout> jika halaman tersebut tidak membutuhkan script.js standar.
+
+
+Audit seluruh JavaScript yang digunakan setiap halaman.
+
+Contoh:
+
+```text
+public/js/jasa.js
+public/js/harga-calculator.js
+public/js/borepile-kota.js
+```
+
+Pastikan:
+
+* script ditemukan
+* path benar
+* script dijalankan
+* selector benar
+* fungsi tidak undefined
+* event listener bekerja
+* calculator bekerja
+* navbar bekerja
+* FAQ bekerja
+* WhatsApp bekerja
+* scroll-top bekerja jika ada
+* fitur legacy tetap bekerja
+
+## Inline handler
+
+Jika terdapat:
+
+```html
+onclick="sendToWA()"
+```
+
+jangan langsung menghapus.
+
+Cari dahulu definisi fungsi tersebut.
+
+Jika dipindahkan ke event listener:
+
+**perilaku harus tetap sama.**
+
+Jangan mengganti vanilla JavaScript menjadi framework.
+
+---
+
+# 17. CALCULATOR
+
+Jika halaman memiliki kalkulator:
+
+wajib memeriksa:
+
+* method selector
+* machine selector
+* diameter
+* harga
+* kedalaman
+* jumlah titik
+* total biaya
+* estimasi waktu
+* minimum order
+* order information
+* WhatsApp CTA
+
+Harga calculator harus konsisten dengan pricing source.
+
+Jangan membuat calculator menggunakan harga yang berbeda dari harga aktif
+kecuali memang merupakan data historis yang sengaja ditampilkan.
+
+---
+
+# 18. IMAGE & ASSET AUDIT
+
+Audit semua asset:
+
+* WebP
+* JPG/JPEG
+* PNG
+* SVG
+* favicon
+* manifest
+* CSS
+* JS
+* font
+
+Pastikan:
+
+* path benar
+* file ada
+* extension benar
+* case sesuai
+* alt text ada
+* width/height dipertahankan
+* lazy loading sesuai
+* `fetchpriority="high"` dipertahankan untuk hero/LCP apabila memang digunakan
+
+Jangan:
+
+* mengganti gambar
+* mengganti nama file
+* menghapus asset
+* mengkonversi gambar
+* mengompres gambar
+
+kecuali diminta secara eksplisit.
+
+---
+
+# 19. SEO META
+
+Audit setiap halaman:
+
+```text
+<title>
+<meta name="description">
+<meta name="robots">
+<link rel="canonical">
+og:title
+og:description
+og:type
+og:url
+og:image
+og:site_name
+twitter:title
+twitter:description
+twitter:image
+```
+
+Geo metadata boleh dipertahankan jika memang sudah digunakan.
+
+## Rules
+
+* setiap halaman harus punya title yang sesuai
+* setiap halaman harus memiliki meta description
+* canonical harus benar
+* tidak boleh canonical localhost
+* `og:url` harus sesuai canonical
+* jangan keyword stuffing
+* jangan membuat metadata palsu
+* jangan mengubah metadata legacy tanpa alasan
+
+---
+
+# 20. SCHEMA / JSON-LD
+
+Audit seluruh JSON-LD.
+
+Jenis yang mungkin digunakan:
+
+* Organization
+* LocalBusiness
+* BreadcrumbList
+* WebSite
+* Service
+* Offer
+* OfferCatalog
+* FAQPage
+* Article
+* BlogPosting
+* ImageObject
+* Person jika memang relevan
+
+## Rules
+
+Schema harus:
+
+* valid JSON
+* sesuai dengan konten halaman
+* tidak palsu
+* tidak kontradiktif
+* URL konsisten
+* nama bisnis konsisten
+* harga konsisten
+* area layanan konsisten
+
+## Service vs Product
+
+Karena bisnis ini menjual jasa:
+
+**gunakan `Service` untuk layanan.**
+
+Jangan menggunakan `Product` hanya untuk mengejar SEO.
+
+Gunakan Product hanya jika memang konten tersebut secara semantik benar-benar
+merupakan product dan memenuhi kebutuhan struktur datanya.
+
+## Helper Schema
+
+Jika tersedia:
+
+```text
+src/lib/schema.js
+```
+
+dan helper seperti:
+
+```js
+organizationSchema()
+localBusinessSchema()
+```
+
+gunakan helper tersebut.
+
+Jangan membuat LocalBusiness duplikat yang bertentangan.
+
+## FAQ Schema
+
+FAQPage hanya boleh memuat pertanyaan dan jawaban yang benar-benar muncul
+di halaman.
+
+Jangan membuat FAQ schema tersembunyi.
+
+---
+
+# 21. SEARCHACTION
+
+Jika terdapat:
+
+```json
+"@type": "SearchAction"
+```
+
+pastikan route pencarian memang benar-benar ada dan bekerja.
+
+Jika website tidak mempunyai search page yang berfungsi:
+
+**hapus SearchAction.**
+
+Jangan membuat route dummy hanya untuk schema.
+
+---
+
+# 22. ANALYTICS & TRACKING
+
+Pertahankan tracking yang memang digunakan project:
+
+* Google Tag Manager
+* Google Ads
+* Ahrefs Analytics
+* tracking lainnya yang memang sudah ada
+
+Jangan:
+
+* mengubah ID
+* menghapus tracking
+* membuat duplicate initialization
+
+Pastikan script tidak dimuat dua kali.
+
+Jika `preconnect` atau `dns-prefetch` tidak digunakan:
+
+boleh dihapus jika aman.
+
+Jangan menambahkan tracker baru tanpa instruksi.
+
+---
+
+# 23. ACCESSIBILITY
+
+Pertahankan:
+
+* skip link
+* `aria-label`
+* `aria-expanded`
+* `aria-current`
+* `aria-live`
+* image alt
+
+Untuk button:
+
+gunakan:
+
+```html
+type="button"
+```
+
+jika button bukan submit.
+
+FAQ accordion harus tetap dapat digunakan dengan keyboard dan tetap memiliki
+accessible name.
+
+Jangan mengubah desain untuk accessibility apabila tidak diperlukan.
+
+---
+
+# 24. EXTERNAL LINKS
+
+Audit semua external link.
+
+Untuk link yang menggunakan:
+
+```html
+target="_blank"
+```
+
+pastikan:
+
+```html
+rel="noopener noreferrer"
+```
+
+Gunakan untuk:
+
+* Google Maps
+* WhatsApp
+* Facebook
+* Instagram
+* sumber akademik
+* external reference
+
+Jangan mengganti sumber legacy tanpa alasan.
+
+Jika sebuah sumber terlihat meragukan atau tidak bisa diverifikasi:
+
+laporkan, jangan mengarang sumber pengganti.
+
+---
+
+# 25. GOOGLE MAPS
+
+Pertahankan Google Maps apabila memang terdapat pada halaman legacy.
+
+Pastikan:
+
+* iframe valid
+* lokasi benar
+* `title` ada
+* `loading="lazy"`
+* `allowfullscreen`
+* `referrerpolicy`
+
+Jangan mengganti lokasi bisnis.
+
+---
+
+# 26. INTERNAL LINKING
+
+Audit seluruh internal link.
+
+Cari:
+
+* 404
+* path lama
+* path salah
+* route yang tidak ada
+* extension yang salah
+* case mismatch
+* link menuju URL legacy yang seharusnya sudah diarahkan
+
+Pertahankan struktur silo website.
+
+Contoh:
+
+```text
+Beranda
+  â†“
+Jasa
+  â†“
+Layanan
+  â†“
+Area Layanan
+  â†“
+Harga
+  â†“
+Artikel
+  â†“
+Proyek / Galeri
+```
+
+Jangan mengubah internal linking secara agresif saat migrasi.
+
+---
+
+# 27. RESPONSIVE
+
+Website harus tetap nyaman digunakan pada:
+
+```text
+360px
+390px
+768px
+1024px
+1366px
+1920px
+```
+
+Minimal pastikan:
+
+* tidak ada horizontal overflow
+* navbar mobile bekerja
+* gambar tidak keluar container
+* tabel dapat digunakan pada mobile
+* button tidak terpotong
+* text tidak keluar viewport
+* calculator usable
+* cards tidak memaksa fixed width
+* iframe Maps tidak overflow
+
+## Important
+
+Responsive fix boleh dilakukan jika migrasi menyebabkan layout legacy rusak.
+
+Tetapi:
+
+**jangan redesign responsive.**
+
+---
+
+# 28. CONTENT CONSISTENCY
+
+Cari informasi bisnis yang diulang di banyak halaman:
+
+* nama perusahaan
+* alamat
+* nomor telepon
+* WhatsApp
+* email
+* harga
+* minimum order
+* diameter
+* kedalaman
+* area layanan
+* pengalaman
+* jenis alat
+* layanan
+
+Bandingkan semuanya.
+
+Jika terdapat konflik:
+
+jangan memilih secara asal.
+
+Cari:
+
+1. data pusat
+2. legacy
+3. konfigurasi
+4. data resmi bisnis
+
+Jika tetap ambigu:
+
+masukkan ke laporan sebagai:
+
+**CONTENT CONFLICT**
+
+---
+
+# 29. DUPLICATE CONTENT / SEO CANNIBALIZATION
+
+Saat membuat halaman baru:
+
+jangan hanya menggandakan halaman lama dan mengganti nama kota.
+
+Setiap halaman harus memiliki tujuan pencarian yang jelas.
+
+Contoh:
+
+```text
+/jasa/bore-pile-jakarta.html
+```
+
+fokus pada:
+
+```text
+Jasa Bore Pile Jakarta
+```
+
+sedangkan:
+
+```text
+/jasa/strauss-pile-jakarta.html
+```
+
+fokus pada:
+
+```text
+Jasa Strauss Pile Jakarta
+```
+
+Halaman boleh memiliki topik yang berhubungan.
+
+Namun:
+
+* konten utama harus berbeda
+* intent harus berbeda
+* H1 harus berbeda
+* metadata harus berbeda
+* section utama harus sesuai layanan
+* internal linking harus membantu hubungan antar halaman
+
+Jangan membuat halaman yang hampir 100% identik.
+
+---
+
+# 30. BUILD VALIDATION
+
+Setelah perubahan:
+
+```bash
+npm run build
+```
+
+Jika build gagal:
+
+1. Baca error.
+2. Cari root cause.
+3. Perbaiki root cause.
+4. Jalankan build kembali.
+
+Jangan:
+
+* menghapus fitur
+* menghapus import
+* menghapus halaman
+* menghapus script
+* menonaktifkan functionality
+
+hanya agar build berhasil.
+
+---
+
+# 31. RUNTIME VALIDATION
+
+Jika memungkinkan:
+
+```bash
+npm run dev
+```
+
+Kemudian periksa halaman melalui browser.
+
+Audit:
+
+* console
+* network
+* DOM
+* responsive
+* image
+* CSS
+* JS
+* calculator
+* FAQ
+* menu
+* CTA
+* link
+
+Cari:
+
+* JavaScript error
+* 404 asset
+* broken image
+* broken CSS
+* broken route
+* hydration error
+* null selector
+* calculator error
+
+---
+
+# 32. WHOLE PROJECT AUDIT
+
+Saat diminta melakukan audit project secara keseluruhan:
+
+**jangan hanya memeriksa satu file.**
+
+Scan seluruh:
+
+```text
+src/pages/**
+src/components/**
+src/layouts/**
+src/data/**
+src/lib/**
+public/**
+```
+
+Jika masih ada halaman legacy:
+
+bandingkan dengan halaman Astro.
+
+Buat inventory:
+
+* semua route
+* semua halaman
+* semua asset
+* semua JS
+* semua CSS
+* semua data
+* semua schema
+* semua link
+
+Cari:
+
+* halaman hilang
+* route hilang
+* asset hilang
+* link rusak
+* schema rusak
+* SEO regression
+* content regression
+* visual regression
+
+---
+
+# 33. GIT SAFETY
+
+Jangan melakukan:
+
+* `git reset`
+* `git reset --hard`
+* `git revert`
+* `git stash`
+* overwrite file WIP
+* commit
+* push
+
+kecuali secara eksplisit diminta.
+
+Jangan menghapus perubahan manual yang belum di-commit.
+
+Sebelum mengubah file:
+
+perhatikan perubahan yang sudah ada.
+
+Jika terdapat WIP:
+
+**jangan menimpa tanpa alasan.**
+
+Repository:
+
+```text
+github.com/Andreysvn/web-agung-perkasa-borepile
+```
+
+---
+
+# 34. PLUGIN / SKILL
+
+Jika project atau task membutuhkan kemampuan dari skill/plugin yang tersedia:
+
+**gunakan skill/plugin yang relevan.**
+
+Jangan mengabaikan skill yang sudah terinstall jika skill tersebut memang relevan
+dengan pekerjaan.
+
+Namun jangan menambahkan plugin baru hanya untuk hal yang dapat dilakukan
+dengan tool bawaan atau project yang sudah tersedia.
+
+---
+
+# 35. TASK SCOPE
+
+AGENTS.md ini berisi **aturan permanen project**.
+
+Task spesifik tidak boleh ditanam permanen di file ini.
+
+Contoh task:
+
+```text
+Migrasikan halaman Bekasi.
+```
+
+atau:
+
+```text
+Audit halaman Jakarta.
+```
+
+atau:
+
+```text
+Perbaiki semua canonical.
+```
+
+Task tersebut diberikan melalui prompt terpisah.
+
+Agent harus mengikuti AGENTS.md sebagai aturan project,
+kemudian mengikuti task prompt sebagai pekerjaan yang sedang dikerjakan.
+
+Jika task bertentangan dengan aturan permanen:
+
+jangan langsung mengambil keputusan.
+
+Prioritaskan aturan AGENTS.md kecuali user secara eksplisit meminta perubahan
+terhadap aturan tersebut.
+
+---
+
+# 36. FINAL VERIFICATION
+
+Sebelum menyatakan task selesai, minimal pastikan:
+
+* build berhasil
+* route benar
+* canonical benar
+* metadata tidak rusak
+* schema valid
+* asset tidak missing
+* CSS bekerja
+* JS bekerja
+* calculator bekerja jika ada
+* navbar bekerja
+* FAQ bekerja jika ada
+* CTA bekerja
+* WhatsApp bekerja
+* responsive tidak overflow
+* konten tidak hilang
+* desain tidak berubah secara tidak sengaja
+* tidak ada perubahan data bisnis tanpa sumber
+
+---
+
+# 37. FINAL REPORT
+
+Setelah selesai, berikan laporan:
+
+## BUILD
+
+* PASS / FAIL
+* error yang ditemukan
+* error yang diperbaiki
+
+## ROUTING
+
+* route yang diperiksa
+* route yang diperbaiki
+* route yang bermasalah
+
+## ASTRO
+
+* import
+* variable
+* component
+* layout
+* HTML structure
+
+## SEO
+
+* title
+* meta description
+* canonical
+* Open Graph
+* Twitter Card
+* robots
+* schema
+
+## DATA
+
+* config.json
+* harga.json
+* borepile-kota.json
+* data arsip
+* konflik data
+
+## JAVASCRIPT
+
+* navbar
+* calculator
+* FAQ
+* WhatsApp
+* gallery
+* interactive features
+
+## ASSETS
+
+* image
+* CSS
+* JS
+* favicon
+* manifest
+
+## CONTENT PARITY
+
+Daftar konten yang hilang atau berubah jika ada.
+
+## VISUAL PARITY
+
+Daftar bagian yang berbeda dari legacy jika ditemukan.
+
+## BROKEN LINKS
+
+Daftar link rusak.
+
+## CONTENT CONFLICT
+
+Daftar informasi bisnis yang masih bertentangan.
+
+## FILES CHANGED
+
+Tampilkan hanya file yang benar-benar diubah.
+
+## OUT OF SCOPE
+
+Tampilkan masalah yang ditemukan tetapi sengaja tidak diubah
+karena berada di luar scope task.
+
+## FINAL STATUS
+
+Gunakan:
+
+```text
+READY
+```
+
+hanya jika seluruh kriteria penting terpenuhi.
+
+Jika belum:
+
+```text
+NOT READY
+```
+
+dan jelaskan apa yang masih kurang.
+
+---
+
+# 38. GOLDEN RULE
+
+Selalu ingat:
+
+```text
+MIGRATION FIRST.
+PRESERVE LEGACY.
+FIX WHAT IS BROKEN.
+DO NOT REDESIGN.
+DO NOT INVENT DATA.
+DO NOT BREAK SEO.
+DO NOT OVERWRITE WIP.
+```
+
+Website Astro harus menjadi evolusi teknis dari website legacy,
+bukan website baru yang hanya memiliki konten yang sama.
+
+

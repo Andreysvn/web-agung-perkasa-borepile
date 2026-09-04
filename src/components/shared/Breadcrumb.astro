@@ -1,4 +1,4 @@
----
+﻿---
 interface Props {
     items: Array<{ label: string; href?: string }>;
 }
@@ -16,8 +16,9 @@ const { items } = Astro.props;
                 ) : (
                     <a href={item.href}>{item.label}</a>
                 )}
-                {!isLast && <span class="separator">/</span>}
+                {!isLast && <span class="separator">&nbsp;/&nbsp;</span>}
             </>
         );
     })}
 </nav>
+
