@@ -1,0 +1,17 @@
+[
+  {
+    "id": "survey-lokasi",
+    "q": "Apakah bisa survey lokasi dulu sebelum eksekusi bore pile?",
+    "a": "Bisa. Kami siap melakukan survey lokasi gratis ke seluruh wilayah layanan kami. Tim teknis kami akan cek akses jalan, kondisi tanah, pasokan listrik dan air (jika wash boring), dan memberikan rekomendasi diameter serta kedalaman terbaik untuk proyek Anda. Konsultasi tanpa biaya hubungi kami."
+  },
+  {
+    "id": "material-sendiri",
+    "q": "Apakah bisa menggunakan material beton & besi sendiri untuk proyek bore pile?",
+    "a": "Bisa. Harga di atas untuk <strong>jasa pengeboran saja</strong> (sudah termasuk perakitan besi tulangan & pengecoran). Jika Anda punya material sendiri, kami siap kerjakan. Pastikan material sesuai standar SNI untuk hasil pondasi yang kokoh."
+  },
+  {
+    "id": "keunggulan-vs-pancang",
+    "q": "Apa keunggulan bore pile dibandingkan tiang pancang?",
+    "a": "Bore pile lebih unggul karena minim getaran dan suara, cocok untuk area perumahan padat. Tidak seperti tiang pancang yang menimbulkan getaran keras dan bisa merusak dinding tetangga. Selain itu, bore pile bisa mencapai kedalaman lebih dalam (30m) untuk menembus tanah lunak. Metode dry boring sangat efektif untuk tanah berbukit."
+  }
+]

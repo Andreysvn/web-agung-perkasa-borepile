@@ -1,0 +1,38 @@
+---
+interface Props {
+    cityName: string;
+    mapsNote?: string;
+}
+
+const { cityName, mapsNote } = Astro.props;
+---
+
+<div class="maps-container">
+    <div class="maps-card">
+        <h3 class="maps-title">📍 Lokasi Kami di {cityName}</h3>
+        <p class="maps-address">
+            <strong>Agung Perkasa Borepile</strong><br>
+            Jl. Sunter Muara II, RT.17/RW.05, Sunter Agung, Kec. Tj. Priok,<br>
+            Jakarta Utara, DKI Jakarta 14350
+        </p>
+        {mapsNote && <p>{mapsNote}</p>}
+        <div class="maps-embed-wrapper">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1493743!2d106.8534975!3d-6.1493743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f53da64d7ca7%3A0x3586221410f9d181!2sAgung%20Perkasa%20Bore%20Pile!5e0!3m2!1sid!2sid!4v1622811397456!5m2!1sid!2sid&show_rating=true" 
+                width="100%" 
+                height="280" 
+                style="border:0; display: block;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Google Maps Lokasi Agung Perkasa Borepile">
+            </iframe>
+        </div>
+        <a href="https://maps.google.com/?q=Agung+Perkasa+Bore+Pile" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="maps-btn">
+           Buka di Google Maps
+        </a>
+    </div>
+</div>

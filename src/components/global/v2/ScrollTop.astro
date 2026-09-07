@@ -1,0 +1,27 @@
+---
+// src/components/global/v2/ScrollTop.astro
+import Icon from '../../ui/Icon.astro';
+---
+<button class="apx-scrolltop" id="scrollTop" aria-label="Kembali ke atas">
+  <Icon name="arrow-up" size={20} />
+</button>
+
+<style>
+  .apx-scrolltop {
+    position: fixed; bottom: 88px; right: 21px; z-index: 99;
+    display: grid; place-items: center; width: 45px; height: 45px;
+    border: 0; border-radius: 50%; background: var(--apx-navy); color: #fff;
+    cursor: pointer; opacity: 0; visibility: hidden; transition: all .25s ease;
+  }
+  .apx-scrolltop.active { opacity: 1; visibility: visible; }
+  .apx-scrolltop:hover { background: var(--apx-navy-2); }
+  @media (max-width: 768px) { .apx-scrolltop { width: 40px; height: 40px; right: 17px; bottom: 78px; } }
+</style>
+
+<script>
+  const btn = document.getElementById('scrollTop');
+  btn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  window.addEventListener('scroll', () => {
+    btn?.classList.toggle('active', window.scrollY > 300);
+  }, { passive: true });
+</script>

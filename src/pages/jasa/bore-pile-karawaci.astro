@@ -1,0 +1,172 @@
+﻿---
+import KotaLayout from '../../layouts/KotaLayout.astro';
+import pricing from '../../data/harga.json';
+import cityData from '../../data/kota/karawaci.json';
+
+// Components
+import Breadcrumb from '../../components/shared/Breadcrumb.astro';
+import PageMeta from '../../components/shared/PageMeta.astro';
+import CityHero from '../../components/city/CityHero.astro';
+import CityCalculator from '../../components/city/CityCalculator.astro';
+import PriceTable from '../../components/shared/PriceTable.astro';
+import CityFactors from '../../components/city/CityFactors.astro';
+import CityAdditionalCosts from '../../components/city/CityAdditionalCosts.astro';
+import CityTips from '../../components/city/CityTips.astro';
+import CityProjects from '../../components/city/CityProjects.astro';
+import CitySoil from '../../components/city/CitySoil.astro';
+import CityWhyUs from '../../components/city/CityWhyUs.astro';
+import CityEquipment from '../../components/city/CityEquipment.astro';
+import CityPortfolio from '../../components/city/CityPortfolio.astro';
+import CityKecamatan from '../../components/city/CityKecamatan.astro';
+import FaqSection from '../../components/shared/FaqSection.astro';
+import CityArticles from '../../components/city/CityArticles.astro';
+import CityInternalLinks from '../../components/city/CityInternalLinks.astro';
+
+// Format harga untuk meta deskripsi
+const mesinMulai = pricing.mesin.find((item) => item.price > 0)?.price.toLocaleString('id-ID') || "120.000";
+const manualMulai = pricing.manual.find((item) => item.price > 0)?.price.toLocaleString('id-ID') || "70.000";
+
+// Format tanggal update
+const updateDate = new Date(cityData.priceUpdatedAt || pricing.priceUpdatedAt).toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
+
+// SEO
+const seoTitle = `Jasa & Harga Bore Pile ${cityData.name} Terpercaya | Agung Perkasa`;
+const seoDesc = `Jasa Bore Pile & Strauss Pile ${cityData.name} terpercaya. Harga mesin mulai Rp${mesinMulai}/m, manual Rp${manualMulai}/m. Melayani seluruh ${cityData.name}.`;
+const canonical = `https://agungperkasaborepile.com/jasa/bore-pile/${cityData.slug}.html`;
+
+// Schema - Service
+const serviceSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": `Jasa Bore Pile ${cityData.name}`,
+    "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://agungperkasaborepile.com/#localbusiness",
+        "name": "Agung Perkasa Borepile"
+    },
+    "areaServed": { "@type": "City", "name": cityData.name },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": `Layanan Bore Pile ${cityData.name}`,
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": `Bore Pile Mesin Mini Crane ${cityData.name}` },
+                "price": "120000", "priceCurrency": "IDR",
+                "priceSpecification": { "@type": "UnitPriceSpecification", "price": "120000", "priceCurrency": "IDR", "unitText": "meter" },
+                "eligibleRegion": { "@type": "City", "name": cityData.name },
+                "availability": "https://schema.org/InStock"
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": `Bore Pile Manual Strauss Pile ${cityData.name}` },
+                "price": "70000", "priceCurrency": "IDR",
+                "priceSpecification": { "@type": "UnitPriceSpecification", "price": "70000", "priceCurrency": "IDR", "unitText": "meter" },
+                "eligibleRegion": { "@type": "City", "name": cityData.name },
+                "availability": "https://schema.org/InStock"
+            }
+        ]
+    }
+});
+
+// Schema - Product
+const productSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": `Jasa Bore Pile ${cityData.name} ${cityData.year}`,
+    "description": `Jasa bore pile ${cityData.name} dengan harga mulai Rp120.000/m untuk mesin dan manual mulai Rp70.000/m (strauss pile). Melayani seluruh ${cityData.name}.`,
+    "brand": { "@type": "Brand", "name": "Agung Perkasa Borepile" },
+    "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "IDR", "lowPrice": "70000", "highPrice": "350000", "offerCount": "8",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "url": canonical
+    },
+    "areaServed": { "@type": "City", "name": cityData.name }
+});
+---
+<KotaLayout
+    title={seoTitle}
+    description={seoDesc}
+    canonical={canonical}
+    ogTitle={`Jasa & Harga Bore Pile ${cityData.name} ${cityData.year} | Agung Perkasa`}
+    ogDescription={`Jasa Bore Pile ${cityData.name} terpercaya. Harga Mesin mulai dari Rp120.000/m, manual Rp70.000/m. Konsultasi gratis. Melayani seluruh ${cityData.name}.`}
+    cityName={cityData.name}
+    citySlug={cityData.slug}
+    geoRegion={cityData.geoRegion}
+    geoPlacename={cityData.geoPlacename}
+    localBusinessDesc={cityData.localBusinessDesc}
+    breadcrumbItems={[
+        { name: "Beranda", url: "https://agungperkasaborepile.com/" },
+        { name: "Jasa", url: "https://agungperkasaborepile.com/jasa/" },
+        { name: `Bore Pile ${cityData.name}`, url: canonical }
+    ]}
+    faqSchema={cityData.faq}
+    serviceSchema={serviceSchema}
+    productSchema={productSchema}
+    hasGoogleAds={true}
+    googleAdsId="AW-16649506462"
+    publisherDesc={`Spesialis pondasi borepile dengan pengalaman lebih dari 10 tahun di ${cityData.name}.`}
+    mapsNote={`*Kantor Pusat: ${cityData.name}`}
+>
+    <!-- Section 1: Breadcrumb -->
+    <Breadcrumb items={[
+        { label: "Beranda", href: "/" },
+        { label: "Jasa", href: "/jasa/" },
+        { label: `Bore Pile ${cityData.name}` }
+    ]} />
+
+    <!-- Section 2: H1 + Page Meta -->
+    <PageMeta
+        title={`Jasa & Harga Bore Pile ${cityData.name} ${cityData.year} Per Meter`}
+        updateDate={updateDate}
+        location={cityData.name}
+    />
+
+    <!-- Section 3: Hero -->
+    <CityHero data={cityData} />
+
+    <!-- Section 4: Calculator -->
+    <CityCalculator cityName={cityData.name} />
+
+    <!-- Section 5: Price Table -->
+    <PriceTable localPrices={cityData.localPrices} cityName={cityData.name} />
+
+    <!-- Section 6: Factors -->
+    <CityFactors factors={cityData.factors} sondirNote={cityData.sondirNote} cityName={cityData.name} />
+
+    <!-- Section 7: Additional Costs -->
+    <CityAdditionalCosts items={cityData.additionalCosts} cityName={cityData.name} />
+
+    <!-- Section 8: Tips -->
+    <CityTips items={cityData.tips} />
+
+    <!-- Section 9: Projects -->
+    <CityProjects projects={cityData.projects} cityName={cityData.name} note={cityData.projectNote} />
+
+    <!-- Section 9.5: Soil Reasoning -->
+    <CitySoil soilReasons={cityData.soilReasons} />
+
+    <!-- Section 10: Why Us -->
+    <CityWhyUs whyUs={cityData.whyUs} cityName={cityData.name} />
+
+    <!-- Section 11: Equipment -->
+    <CityEquipment equipment={cityData.equipment} cityName={cityData.name} />
+
+    <!-- Section 12: Portfolio -->
+    <CityPortfolio portfolio={cityData.portfolio} cityName={cityData.name} />
+
+    <!-- Section 13: Kecamatan Coverage -->
+    <CityKecamatan kecamatan={cityData.kecamatan} cityName={cityData.name} />
+
+    <!-- Section 14: FAQ -->
+    <FaqSection faq={cityData.faq} cityName={cityData.name} />
+
+    <!-- Section 15: Articles -->
+    <CityArticles articles={cityData.articles} />
+
+    <!-- Section 16: Internal Links -->
+    <CityInternalLinks internalLinks={cityData.internalLinks} />
+</KotaLayout>
+

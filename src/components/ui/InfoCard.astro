@@ -1,0 +1,15 @@
+---
+// src/components/ui/InfoCard.astro
+interface Props { title: string; highlight?: boolean }
+const { title, highlight = false } = Astro.props;
+---
+<article class:list={["apx-card", { "apx-card-hi": highlight }]}>
+  <h3>{title}</h3>
+  <slot />
+</article>
+<style>
+  .apx-card { background: #fff; border: 1px solid var(--apx-border); border-radius: var(--apx-radius); padding: 20px; box-shadow: var(--apx-shadow-1); }
+  .apx-card-hi { border-left: 3px solid var(--apx-orange); }
+  .apx-card h3 { margin: 0 0 8px; font-size: 1rem; font-weight: 800; color: var(--apx-navy); }
+  .apx-card :global(p) { margin: 0; color: var(--apx-text); font-size: .95rem; }
+</style>

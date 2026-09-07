@@ -1,0 +1,37 @@
+---
+// src/components/ui/Breadcrumb.astro — item terakhir tanpa href + aria-current="page"; JSON-LD hanya saat items diisi
+import Icon from './Icon.astro';
+import config from '../../data/config.json';
+
+interface Props { items: { name: string; href?: string }[]; noSchema?: boolean }
+const { items, noSchema = false } = Astro.props;
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': (items ?? []).map((item, i) => ({
+    '@type': 'ListItem',
+    'position': i + 1,
+    'name': item.name,
+    ...(item.href ? { item: new URL(item.href, config.siteUrl).href } : {})
+  }))
+};
+---
+{items && items.length > 0 && (
+  <nav class="apx-breadcrumb" aria-label="Breadcrumb">
+    {items.map((item, i) => (
+      <>
+        {i > 0 && <Icon name="chevron-down" size={12} />}
+        {item.href ? <a href={item.href}>{item.name}</a> : <span aria-current="page">{item.name}</span>}
+      </>
+    ))}
+    {!noSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+  </nav>
+)}
+<style>
+  .apx-breadcrumb { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; font-size: .82rem; color: var(--apx-muted); margin-bottom: 16px; }
+  .apx-breadcrumb a { color: var(--apx-muted); text-decoration: none; }
+  .apx-breadcrumb a:hover { color: var(--apx-blue); text-decoration: underline; }
+  .apx-breadcrumb [aria-current] { color: var(--apx-navy); font-weight: 700; }
+  .apx-breadcrumb :global(svg) { transform: rotate(-90deg); color: var(--apx-border); }
+</style>

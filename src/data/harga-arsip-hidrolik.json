@@ -1,0 +1,16 @@
+{
+  "archivedAt": "2026-08-23",
+  "reason": "Mesin hydraulic/SANY tidak lagi digunakan pada layanan aktif.",
+  "sany": [
+    { "diameter": 40, "price": 0, "maxDepth": 27, "suitable": "Proyek skala menengah" },
+    { "diameter": 50, "price": 0, "maxDepth": 27, "suitable": "Proyek skala menengah" },
+    { "diameter": 60, "price": 0, "maxDepth": 27, "suitable": "Proyek skala menengah" },
+    { "diameter": 80, "price": 0, "maxDepth": 27, "suitable": "Proyek skala menengah" },
+    { "diameter": 90, "price": 0, "maxDepth": 27, "suitable": "Proyek skala menengah" },
+    { "diameter": 100, "price": 0, "maxDepth": 27, "suitable": "Proyek skala menengah" },
+    { "diameter": 110, "price": 0, "maxDepth": 27, "suitable": "Proyek skala menengah" }
+  ],
+  "equipment": {
+    "sany": { "name": "Hidrolik SANY", "minOrder": 1200, "speed": { "min": 15, "max": 25 } }
+  }
+}

@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/fonts/plus-jakarta-sans-latin-var.woff2") format("woff2");
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--apx-font);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--apx-text);
+  background: var(--apx-bg);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; }
+a { color: var(--apx-blue); }
+
+.apx-container { max-width: var(--apx-container); margin-inline: auto; padding-inline: 20px; }
+
+.apx-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px; border-radius: var(--apx-radius-sm);
+  background: var(--apx-orange); color: #fff; font-weight: 600;
+  text-decoration: none; border: none; cursor: pointer; font-size: 16px;
+  transition: background .2s ease;
+}
+.apx-btn:hover { background: var(--apx-orange-2); color: #fff; }
+.apx-btn-wa { background: var(--apx-wa); }
+.apx-btn-wa:hover { background: var(--apx-wa-2); }
+.apx-btn-outline {
+  background: transparent; color: #fff;
+  box-shadow: inset 0 0 0 2px rgb(255 255 255 / .55);
+}
+.apx-btn-outline:hover { background: rgb(255 255 255 / .12); color: #fff; }
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--apx-navy); color: #fff; padding: 10px 18px; z-index: 2000;
+}
+.skip-link:focus { left: 0; }
+
+@media (max-width: 768px) {
+  .apx-container { padding-inline: 16px; }
+}

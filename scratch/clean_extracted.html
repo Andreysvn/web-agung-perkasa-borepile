@@ -1,0 +1,591 @@
+<!-- ===== SECTION TABEL HARGA ===== -->
+            <section aria-labelledby="table-heading">
+                <h2 id="table-heading" class="section-heading">Tabel Harga Bore Pile 2026 Terbaru (Jasa Bor Saja)</h2>
+                <p>Berikut <strong>harga JASA PENGEBORAN SAJA</strong> (belum termasuk material beton & besi) untuk seluruh wilayah Pulau Jawa. Kedalaman pengeboran bergantung pada diameter dan kondisi lapisan tanah, di lapangan kami pernah tembus hingga kedalaman 25-30 meter, pastikan cek sondir tanah dahulu agar mengetahui kedalaman yang tepat untuk pengeboran hingga mencapai tanah keras.</p>
+
+                <h3>Bore Pile Mesin (Mini Crane)</h3>
+                <div class="table-responsive">
+                    <table class="price-table">
+                        <caption>Tabel harga bore pile mesin (mini crane) per meter</caption>
+                        <thead>
+                            <tr>
+                                <th>Diameter</th>
+                                <th>Harga (Rp/m)</th>
+                                <th>Kedalaman Maks</th>
+                                <th>Cocok Untuk</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {pricing.mesin.map((item) => (
+                                <tr>
+                                    <td>{item.diameter} cm</td>
+                                    <td><strong>{item.price ? item.price.toLocaleString('id-ID') : 'Hubungi Kami'}</strong></td>
+                                    <td>{item.maxDepth} meter</td>
+                                    <td>{item.suitable}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Bore Pile Manual (Strauss Pile)</h3>
+                <div class="table-responsive">
+                    <table class="price-table">
+                        <caption>Tabel harga bore pile manual (strauss pile) per meter</caption>
+                        <thead>
+                            <tr>
+                                <th>Diameter</th>
+                                <th>Harga (Rp/m)</th>
+                                <th>Kedalaman Maks</th>
+                                <th>Cocok Untuk</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {pricing.manual.map((item) => (
+                                <tr>
+                                    <td>{item.diameter} cm</td>
+                                    <td><strong>{item.price ? item.price.toLocaleString('id-ID') : 'Hubungi Kami'}</strong></td>
+                                    <td>{item.maxDepth} meter</td>
+                                    <td>{item.suitable}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+                <a href="/jasa/">Lihat Jasa Bore Pile & Strauss Pile untuk wilayah Anda -&gt;</a>
+            </section>
+
+            <!-- ===== FAKTOR YANG MEMPENGARUHI HARGA ===== -->
+            <section aria-labelledby="factors-heading">
+                <h2 id="factors-heading" class="section-heading">Faktor yang Mempengaruhi Harga Bore Pile 2026</h2>
+                <p><strong>Harga bore pile tidak sama untuk setiap proyek.</strong> Berikut faktor utama yang menyebabkan perbedaan biaya:</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>1. Diameter & Kedalaman</h3>
+                        <p>Semakin besar diameter dan semakin dalam pengeboran yang diperlukan hingga tanah keras, maka biaya per meter semakin tinggi.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>2. Kondisi Tanah</h3>
+                        <p>Tanah lunak (bekas rawa/sawah) membutuhkan pengeboran lebih dalam hingga tanah keras, sehingga biaya bore pile bisa lebih besar.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>3. Jarak Proyek Dari Gudang Kami</h3>
+                        <p>Biaya mobilisasi alat sudah kami sesuaikan sesuai jarak dari gudang kami di Jakarta.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>4. Volume Pekerjaan</h3>
+                        <p>Minimal order jasa bore pile untuk mesin (mini crane & gawangan) adalah 200 meter, sedangkan strauss pile manual 100 meter.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>5. Jenis & Skala Proyek</h3>
+                        <p>Proyek rumah tinggal pribadi umumnya memiliki harga lebih terjangkau dibandingkan proyek skala besar seperti kontraktor atau developer.</p>
+                    </div>
+                </div>
+                <div class="sondir-note">
+                    <strong>Untuk proyek bore pile:</strong> Untuk mendapatkan penawaran harga terbaik, lakukan pengecekan data sondir tanah terlebih dahulu agar kedalaman pengeboran bisa ditentukan secara tepat. Konsultasikan proyek bore pile Anda dengan tim teknis kami untuk penawaran harga yang sesuai.
+                </div>
+            </section>
+
+            <!-- ===== ESTIMASI BIAYA TAMBAHAN ===== -->
+            <section>
+                <h2 class="section-heading-sm">Estimasi Biaya Tambahan</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Mobilisasi Alat Bore Pile</h3>
+                        <p>Mesin mini crane: Rp2-3jt | Strauss pile (bore pile manual): Rp1jt</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Minimal Order</h3>
+                        <p>Mesin mini crane dan gawangan: 200 meter | Strauss Pile (Manual): 100 meter</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Sedot Lumpur</h3>
+                        <p>Jika memakai bore pile mesin gawangan dan mini crane menggunakan metode <strong>wash boring (bor basah)</strong>, perkiraan biaya tambahannya sekitar: Rp800.000 - Rp1.200.000/rit (tergantung volume)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Data Sondir</h3>
+                        <p>Sangat wajib untuk menentukan kedalaman pengeboran yang tepat hingga mencapai tanah keras</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="tips-section">
+                <h3 class="tips-heading">Tips memilih diameter:</h3>
+                <ul>
+                    <li><strong>30 cm</strong> -&gt; rumah 1-2 lantai (paling banyak dipilih)</li>
+                    <li><strong>40-50 cm</strong> -&gt; ruko, kantor, gudang, rumah sakit</li>
+                    <li><strong>60-110 cm</strong> -&gt; hotel, gedung bertingkat</li>
+                </ul>
+            </div>
+
+            <!-- ===== CONTOH PROYEK NYATA ===== -->
+            <section class="project-examples-section">
+                <h2 class="project-heading">Contoh Hitungan Proyek Nyata</h2>
+
+                <div class="project-card">
+                    <div class="project-row">
+                        <div class="project-img">
+                            <img src="/imgs/borepile-pulo-gadung-jakarta.webp" alt="Pengeboran bore pile mini crane diameter 30cm untuk rumah di Pulo Gadung, Jakarta Timur" loading="lazy">
+                            <div class="project-caption">Bore Pile mini crane di Pulo Gadung, Jakarta Timur</div>
+                        </div>
+                        <div class="project-text">
+                            <div class="info-card">
+                                <h3>Rumah 2 Lantai di Jakarta Timur</h3>
+                                <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane diameter 30cm, kedalaman 12m, 27 titik<br>
+                                <strong>Biaya jasa:</strong> 12m x Rp120.000 x 27 = <strong class="price-total">Rp38.880.000</strong><br>
+                                <strong>+ mobilisasi:</strong> Rp3.000.000<br>
+                                <strong>Total:</strong> <strong class="price-total">Rp41.880.000</strong><br>
+                                <strong>Waktu:</strong> 6-7 hari kerja</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-row">
+                        <div class="project-img">
+                            <img src="/imgs/borepile-meruya-jakarta.webp" alt="Pengeboran bore pile mini crane diameter 40cm untuk ruko di Meruya, Jakarta Barat" loading="lazy">
+                            <div class="project-caption">Bore Pile mini crane di Meruya, Jakarta Barat</div>
+                        </div>
+                        <div class="project-text">
+                            <div class="info-card">
+                                <h3>Ruko di Meruya, Jakarta Barat</h3>
+                                <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane diameter 40cm, kedalaman 12m, 20 titik<br>
+                                <strong>Biaya jasa:</strong> 12m x Rp135.000 x 20 = <strong class="price-total">Rp32.400.000</strong><br>
+                                <strong>+ mobilisasi:</strong> Rp3.000.000<br>
+                                <strong>Total:</strong> <strong class="price-total">Rp35.400.000</strong><br>
+                                <strong>Waktu:</strong> 5-7 hari kerja</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-row">
+                        <div class="project-img">
+                            <img src="/imgs/strauss-pile-pondok-pinang.webp" onerror="this.src='/imgs/logo-agung-perkasa.webp'" alt="Proses bore pile manual pakai tenaga manusia (strauss pile)" loading="lazy">
+                            <div class="project-caption">Bore Pile manual di area terbatas</div>
+                        </div>
+                        <div class="project-text">
+                            <div class="info-card">
+                                <h3>Rumah 1 Lantai (Manual) di Jakarta Selatan</h3>
+                                <p><strong>Spesifikasi:</strong> Strauss pile (bore pile manual) diameter 30cm, kedalaman 6m, 19 titik<br>
+                                <strong>Biaya jasa:</strong> 6m x Rp80.000 x 19 = <strong class="price-total">Rp9.120.000</strong><br>
+                                <strong>+ mobilisasi:</strong> Rp1.000.000<br>
+                                <strong>Total:</strong> <strong class="price-total">Rp10.120.000</strong><br>
+                                <strong>Waktu:</strong> 7-9 hari kerja</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-note">
+                    <p><strong>Catatan:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan.</p>
+                </div>
+            </section>
+
+            <!-- ===== PERBANDINGAN DIAMETER ===== -->
+            <section aria-labelledby="comparison-heading">
+                <h2 id="comparison-heading" class="section-heading">Perbandingan Diameter 30cm vs 40cm vs 50cm</h2>
+                <p>Berikut perbandingan harga dan daya dukung antar diameter bore pile:</p>
+                <div class="table-responsive">
+                    <table class="price-table">
+                        <caption>Perbandingan daya dukung dan harga antar diameter bore pile</caption>
+                        <thead>
+                            <tr>
+                                <th>Diameter</th>
+                                <th>Harga (Rp/m)</th>
+                                <th>Daya Dukung</th>
+                                <th>Cocok Untuk</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>30 cm</td>
+                                <td>120.000</td>
+                                <td>15-25 ton</td>
+                                <td>Rumah 1-2 lantai</td>
+                            </tr>
+                            <tr>
+                                <td>40 cm</td>
+                                <td>135.000</td>
+                                <td>25-40 ton</td>
+                                <td>Ruko, kantor 2-3 lantai</td>
+                            </tr>
+                            <tr style="background:#f9f9f9;">
+                                <td>50 cm</td>
+                                <td>190.000</td>
+                                <td>40-60 ton</td>
+                                <td>Gudang, pabrik kecil</td>
+                            </tr>
+                            <tr>
+                                <td>60 cm</td>
+                                <td>Hubungi Kami</td>
+                                <td>60-85 ton</td>
+                                <td>Hotel, gedung 4-5 lantai</td>
+                            </tr>
+                            <tr style="background:#f9f9f9;">
+                                <td>80 cm</td>
+                                <td>Hubungi Kami</td>
+                                <td>85-120 ton</td>
+                                <td>Gedung 5-8 lantai</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="price-hint" style="text-align: left;">Daya dukung di atas adalah estimasi untuk kedalaman 10-12 meter di tanah keras. Butuh info <a href="/harga/bore-pile/30cm.html">Harga Bore Pile 30cm?</a> | <a href="/harga/bore-pile/40cm.html">Harga Bore Pile 40cm?</a> | <a href="/harga/bore-pile/50cm.html">Harga Bore Pile 50cm?</a></p>
+            </section>
+
+            <!-- ===== KEUNTUNGAN ===== -->
+            <section aria-labelledby="advantages-heading">
+                <h2 id="advantages-heading" class="section-heading">Keuntungan Memilih Bore Pile</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Kedalaman Maksimal 30 Meter</h3>
+                        <p>Mampu menembus tanah lunak hingga mencapai tanah keras, cocok untuk berbagai kondisi tanah di Pulau Jawa.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Daya Dukung Tinggi</h3>
+                        <p>Mulai dari 15 ton hingga 120 ton tergantung diameter, bisa disesuaikan dengan beban bangunan.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Metode Fleksibel</h3>
+                        <p>Bisa dikerjakan dengan bore pile mesin (mini crane) maupun manual menggunakan tenaga manusia.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Minim Getaran</h3>
+                        <p>Aman untuk bangunan di sekitar proyek, tidak merusak tanah dan dinding tetangga.</p>
+                    </div>
+                </div>
+            </section>
+
+            <p>Butuh harga khusus untuk jasa bore pile di Jakarta?
+            <a href="/jasa/bore-pile/jakarta.html">Lihat jasa & harga bore pile Jakarta -&gt;</a>
+            </p>
+
+            <!-- ===== MATERIAL DARI KAMI ===== -->
+            <section>
+                <h2 class="section-heading">Bisa Pakai Material Dari Kami</h2>
+                <p>Tidak ingin repot cari material sendiri? Agung Perkasa juga menyediakan paket lengkap jasa bor + material besi & beton:</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Diameter 30cm</h3>
+                        <p><strong>Harga :</strong> Rp300.000/m<br>
+                        <strong>Sudah termasuk:</strong> Jasa bor, perakitan besi, dan pengecoran beton. Besi tulangan 5D13 SNI, sengkang D8, beton mix K250<br>
+                        <strong>Minimal order:</strong> 200m untuk mesin, dan 100m untuk manual</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Diameter 40cm</h3>
+                        <p><strong>Harga :</strong> Rp350.000/m<br>
+                        <strong>Sudah termasuk:</strong> Jasa bor, perakitan besi, dan pengecoran beton. Besi tulangan 6D13 SNI, sengkang D8, beton mix K250<br>
+                        <strong>Minimal order:</strong> 200m untuk mesin, dan 100m untuk manual</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Diameter 50cm</h3>
+                        <p><strong>Harga :</strong> Rp450.000/m<br>
+                        <strong>Sudah termasuk:</strong> Jasa bor, perakitan besi, dan pengecoran beton. Besi tulangan 8D13 SNI, sengkang D8, beton mix K250<br>
+                        <strong>Minimal order:</strong> 200m untuk mesin</p>
+                    </div>
+                </div>
+                <p class="price-hint">*Harga paket dapat disesuaikan dengan spesifikasi material yang Anda inginkan (K225, K250, K300, dll).</p>
+            </section>
+
+            <!-- ===== KOMITMEN & GARANSI ===== -->
+            <div style="background: #e8f5e9; padding: 1rem; border-radius: 12px; text-align: center; margin: 1rem 0;">
+                <div style="font-size: 2rem; color: var(--primary-color);" aria-hidden="true">Garansi</div>
+                <p style="margin: 0.5rem 0 0; color: #1a3a6e;">
+                    <strong>Komitmen & Garansi Mutu</strong>
+                    <br>Kami memberikan garansi penuh atas kualitas dalam pengerjaan proyek. Kami menjamin kualitas terbaik karena didukung oleh tim ahli kami yang sangat berpengalaman membuat pondasi dalam (khususnya bore pile)</p>
+            </div>
+
+            <!-- ============================================================
+                 WHY CHOOSE US & EQUIPMENT
+                 ============================================================ -->
+            <div class="why-section">
+                <h2 class="why-title">Kenapa pilih Agung Perkasa untuk Bore Pile?</h2>
+                <p class="why-sub">Ini alasan kenapa banyak orang percaya sama Agung Perkasa untuk proyek bore pile.</p>
+                <div class="reasons-grid">
+                    <div class="reason-card">
+                        <h3>Memakai alat yang baik</h3>
+                        <p>Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, dan strauss pile.</p>
+                    </div>
+                    <div class="reason-card">
+                        <h3>Efisiensi waktu & Komitmen kualitas</h3>
+                        <p>Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam.</p>
+                    </div>
+                    <div class="reason-card">
+                        <h3>Tim Ahli</h3>
+                        <p>Memiliki tim ahli dalam pengerjaan bore pile, khususnya membuat pondasi dalam untuk berbagai jenis bangunan.</p>
+                    </div>
+                    <div class="reason-card">
+                        <h3>Tim berpengalaman</h3>
+                        <p>Lebih dari sepuluh tahun mengerjakan proyek bore pile. Mulai dari proyek rumah tinggal pribadi hingga proyek komersial dan industri.</p>
+                    </div>
+                </div>
+
+                <!-- ============================================================
+                     PORTOFOLIO PROYEK BORE PILE
+                     ============================================================ -->
+                <section class="portfolio-jakarta-section">
+                    <h2 class="portfolio-jakarta-title">Portofolio Proyek Bore Pile</h2>
+                    <p class="portfolio-jakarta-sub">Berikut beberapa proyek bore pile berbagai diameter yang sudah kami kerjakan.</p>
+                    <div class="proyek-jakarta-box">
+                        <p class="proyek-jakarta-heading">Dokumentasi proyek bore pile:</p>
+                        <div class="proyek-jakarta-grid">
+                            <!-- Foto 1: 30cm -->
+                            <div class="proyek-jakarta-item">
+                                <img src="/imgs/borepile-pulo-gadung-jakarta.webp" alt="Proyek bore pile diameter 30cm untuk rumah di Pulo Gadung, Jakarta Timur 14 Mei 2026 (difoto menggunakan aplikasi timemark)" loading="lazy" width="400" height="300">
+                                <div class="proyek-jakarta-caption">
+                                    <span class="proyek-jakarta-label">Pulo Gadung, Jakarta Timur</span>
+                                    <span class="proyek-jakarta-detail">Bore pile mini crane diameter 30cm untuk rumah 2 lantai</span>
+                                </div>
+                            </div>
+                            <!-- Foto 2: 40cm -->
+                            <div class="proyek-jakarta-item">
+                                <img src="/imgs/borepile-gedung-universitas-paramadina-jaktim.webp" alt="Proyek bore pile diameter 40cm untuk gedung Universitas Paramadina, Jakarta Timur" loading="lazy" width="400" height="300">
+                                <div class="proyek-jakarta-caption">
+                                    <span class="proyek-jakarta-label">Universitas Paramadina, Jakarta Timur</span>
+                                    <span class="proyek-jakarta-detail">Bore pile mini crane diameter 40cm untuk gedung universitas</span>
+                                </div>
+                            </div>
+                            <!-- 3. TAMBUN UTARA BEKASI 50cm -->
+                            <div class="proyek-jakarta-item">
+                                <img src="/imgs/borepile-tambun-utara-bekasi.webp" alt="Proyek bore pile mini crane di kawasan industri Tambun Bekasi" loading="lazy" width="400" height="300">
+                                <div class="proyek-jakarta-caption">
+                                    <span class="proyek-jakarta-label">Tambun Utara, Bekasi</span>
+                                    <span class="proyek-jakarta-detail">Bore pile mini crane diameter 50cm di Tambun Utara, Bekasi</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="proyek-jakarta-link">Ingin lihat lebih banyak?
+                            <a href="/galeri/gallery.html">Kunjungi galeri proyek kami -&gt;</a>
+                        </p>
+                    </div>
+                </section>
+
+                <h3 class="equip-title">Alat yang Kami gunakan di lapangan</h3>
+                <p class="equip-sub">Kami memiliki beberapa alat untuk pekerjaan bore pile, antara lain:</p>
+
+                <div class="equip-grid">
+                    <!-- 1. Mini Crane -->
+                    <div class="equip-item">
+                        <img class="equip-img" src="/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg" alt="Mesin bore pile mini crane Agung Perkasa untuk bore pile pondasi rumah, ruko, dan bangunan bertingkat" loading="lazy">
+                        <div class="equip-info">
+                            <div class="equip-icon-inline">
+                                <img src="/imgs/logo-agung-perkasa.webp" alt="Ikon Mini Crane" width="24" height="24" onerror="this.src='/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg'">
+                                <h4>Mini Crane</h4>
+                            </div>
+                            <p>Kapasitas sedang, untuk diameter 30-80 cm, kedalaman sampai 30 meter. Mini Crane cocok untuk lokasi yang cukup luas dan membutuhkan akses yang baik untuk mobilisasi alat dan pengerjaan. Cocok untuk membuat rumah, ruko, gudang, dan bangunan bertingkat.</p>
+                            <span class="equip-tag">Agung Perkasa</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Gawangan -->
+                    <div class="equip-item">
+                        <img class="equip-img" src="/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg" alt="Mesin bore pile gawangan Agung Perkasa untuk bore pile ketika area tidak bisa dijangkau oleh mini crane" loading="lazy">
+                        <div class="equip-info">
+                            <div class="equip-icon-inline">
+                                <img src="/imgs/logo-agung-perkasa.webp" alt="Ikon Gawangan" width="24" height="24" onerror="this.src='/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg'">
+                                <h4>Gawangan</h4>
+                            </div>
+                            <p>Gawangan cocok untuk area yang tidak bisa diakses oleh mini crane. Karena ukuran dan bentuknya yang tidak sebesar mini crane, gawangan cocok untuk area yang memiliki akses terbatas. Diameter 30-80 cm, paling sering digunakan untuk membuat rumah, ruko, dan bangunan 1-2 lantai lainnya di gang sempit.</p>
+                            <span class="equip-tag">Agung Perkasa</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Strauss Pile (Manual) -->
+                    <div class="equip-item">
+                        <img class="equip-img" src="/imgs/icons/strauss-pile-icon-agung-perkasa.svg" alt="Strauss pile (bore pile manual) untuk pondasi di gang sempit dan area terbatas" loading="lazy">
+                        <div class="equip-info">
+                            <div class="equip-icon-inline">
+                                <img src="/imgs/logo-agung-perkasa.webp" alt="Ikon Strauss Pile" width="24" height="24" onerror="this.src='/imgs/icons/strauss-pile-icon-agung-perkasa.svg'">
+                                <h4>Strauss Pile (bore pile manual)</h4>
+                            </div>
+                            <p>Alat bor manual full menggunakan tenaga manusia dalam proses pengeboran (diputar oleh tukang bore pile), memakai metode dry boring (bor kering). Diameter 20-40 cm, cocok untuk lokasi seperti di gang sempit dan area terbatas lainnya yang tidak bisa dijangkau mini crane dan gawangan.</p>
+                            <span class="equip-tag">Agung Perkasa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== FAQ ===== -->
+            <section>
+                <h2 class="section-heading">Pertanyaan Umum Seputar Harga Bore Pile 2026</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">Apa perbedaan bore pile mesin dan manual?<FaIcon class="fas fa-chevron-down" /></button>
+                        <div class="faq-answer">
+                            <p>Bore pile mesin pakai mini crane, kedalaman hingga 30 meter, biaya lebih tinggi. Bore pile manual pakai tenaga manusia, kedalaman 10 meter, lebih ekonomis untuk proyek kecil dan area sempit.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Metode mana yang cocok untuk proyek rumah saya?<FaIcon class="fas fa-chevron-down" /></button>
+                        <div class="faq-answer">
+                            <p>Jika ingin membuat rumah 2 lantai ke atas atau tanah bekas rawa kami sarankan menggunakan bore pile mesin. Jika hanya rumah 1 lantai, area sempit, budget terbatas bisa menggunakan bore pile manual.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Berapa minimal order untuk jasa bore pile?<FaIcon class="fas fa-chevron-down" /></button>
+                        <div class="faq-answer">
+                            <p>Bore pile mesin (mini crane & gawangan) minimal 200 meter. Bore pile manual minimal 100 meter. Di bawah itu bisa hubungi admin untuk penawaran khusus.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Bisa pakai material sendiri untuk bore pile?<FaIcon class="fas fa-chevron-down" /></button>
+                        <div class="faq-answer">
+                            <p>Sangat bisa. Harga di atas untuk jasa bor saja, material bisa Anda sediakan sendiri. Kami juga menyediakan paket lengkap dengan material jika Anda tidak ingin repot.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Apa yang mempengaruhi harga bore pile?<FaIcon class="fas fa-chevron-down" /></button>
+                        <div class="faq-answer">
+                            <p>Diameter, kedalaman pengeboran, kondisi tanah, jarak lokasi proyek dari gudang kami, volume pekerjaan, dan tingkat kesulitan proyek.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Berapa kedalaman maksimal bore pile?<FaIcon class="fas fa-chevron-down" /></button>
+                        <div class="faq-answer">
+                            <p>Untuk bore pile mesin (mini crane) kedalaman maksimal mencapai <strong>30 meter</strong>. Untuk bore pile manual (strauss pile) kedalaman maksimal <strong>10 meter</strong>. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Apakah melayani area Bekasi, Tangerang, Bogor?<FaIcon class="fas fa-chevron-down" /></button>
+                        <div class="faq-answer">
+                            <p>Betul. Kami melayani area <strong>Jabodetabek</strong> (Jakarta, Bekasi, Bogor, Depok, Tangerang) dan seluruh Pulau Jawa.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Apakah melayani area luar Jabodetabek?<FaIcon class="fas fa-chevron-down" /></button>
+                        <div class="faq-answer">
+                            <p>Ya. Kami melayani seluruh area pulau Jawa sesuai permintaan proyek, tetapi ada perbedaan harga mobilisasi alat bore pile.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== CTA ===== -->
+            <div class="cta-box">
+                <h3>Butuh bore pile untuk proyek Anda?</h3>
+                <p>Dapatkan penawaran harga bore pile 2026 terbaru</p>
+                <a href="https://wa.me/6285710277854?text=Halo%20Pak%2C%20Saya%20dari%20website%20ingin%20menanyakan%20terkait%20penawaran%20harga%20bore%20pile%202026." class="btn-wa-konsultasi" aria-label="Konsultasi gratis via WhatsApp">Konsultasi Gratis via WA</a>
+            </div>
+
+            <!-- ===== INTERNAL LINK ===== -->
+            <div class="internal-link-box">
+                <p>
+                    <strong>Baca Juga Harga Bore Pile:</strong><br>
+                    <a href="/jasa/bore-pile/jakarta.html">Jakarta</a> |
+                    <a href="/jasa/bore-pile/bekasi.html">Bekasi</a> |
+                    <a href="/jasa/bore-pile/tangerang.html">Tangerang</a> |
+                    <a href="/jasa/bore-pile/depok.html">Depok</a> |
+                    <a href="/jasa/bore-pile/bogor.html">Bogor</a> |
+                    <a href="/harga/bore-pile/30cm.html">Harga 30cm</a> |
+                    <a href="/harga/bore-pile/40cm.html">Harga 40cm</a> |
+                    <a href="/harga/bore-pile/50cm.html">Harga 50cm</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== ARTIKEL SECTION ===== -->
+    <section class="articles-section" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Artikel Blog</h2>
+                <p class="section-subtitle">Insight pondasi dan konstruksi untuk membantu keputusan proyek Anda.</p>
+            </div>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <a href="/harga/bore-pile-2026.html" class="article-link">
+                        <div class="article-image">
+                            <img src="/imgs/borepile-dekat-dinding.webp" alt="Harga Bore Pile 2026" loading="lazy">
+                            <span class="article-category">Harga</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Harga Bore Pile 2026</h3>
+                            <p class="article-excerpt">Lihat harga terbaru untuk semua diameter bore pile terbaru 2026, lengkap dengan kalkulator estimasi biaya.</p>
+                            <div class="article-meta">
+                                <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
+                                <span class="article-read-more">Baca selengkapnya -&gt;</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article class="article-card">
+                    <a href="/artikel/bore-pile-vs-strauss-pile.html" class="article-link">
+                        <div class="article-image">
+                            <img src="/imgs/bore-pile-rumah-di-pik.webp" alt="Perbedaan Bore Pile dan Strauss Pile" loading="lazy">
+                            <span class="article-category">Perbandingan</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Perbedaan Bore Pile dan Strauss Pile</h3>
+                            <p class="article-excerpt">Perbandingan lengkap agar Anda dapat memilih jenis pondasi yang tepat antara bore pile mesin dan manual.</p>
+                            <div class="article-meta">
+                                <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Mei 2026</span>
+                                <span class="article-read-more">Baca selengkapnya -&gt;</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article class="article-card">
+                    <a href="/harga/bore-pile/30cm.html" class="article-link">
+                        <div class="article-image">
+                            <img src="/imgs/borepile-pulo-gadung-jakarta.webp" alt="Harga Bore Pile Diameter 30cm" loading="lazy">
+                            <span class="article-category">Harga</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Harga Bore Pile Diameter 30cm</h3>
+                            <p class="article-excerpt">Harga Bore Pile Diameter 30cm terbaru 2026, cocok untuk rumah tinggal 1-2 lantai.</p>
+                            <div class="article-meta">
+                                <span class="article-date"><FaIcon class="far fa-calendar-alt" /> Juni 2026</span>
+                                <span class="article-read-more">Baca selengkapnya -&gt;</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="articles-cta">
+                <a href="/artikel.html" class="btn-articles-all"><FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AREA LAYANAN ===== -->
+    <div style="max-width: 980px; margin: 0 auto; padding: 0 20px;">
+        <h2 style="color: var(--primary-color); margin: 25px 0 10px;">Cakupan Area Layanan Kami - Seluruh Pulau Jawa</h2>
+        <p>Agung Perkasa Borepile melayani proyek konstruksi di seluruh wilayah Pulau Jawa berikut ini.</p>
+        <div class="area-grid-detail">
+            <div class="area-box">
+                <h3>JABODETABEK & Sekitarnya</h3>
+                <div class="area-tags">
+                    <span>Jakarta</span><span>Bogor</span><span>Depok</span><span>Tangerang</span><span>Tangerang Selatan</span><span>Bekasi</span><span>Cibubur</span><span>Cikarang</span>
+                </div>
+            </div>
+            <div class="area-box">
+                <h3>Banten</h3>
+                <div class="area-tags">
+                    <span>Serang</span><span>Cilegon</span><span>Tangerang</span><span>Tangerang Selatan</span><span>Pandeglang</span><span>Lebak</span>
+                </div>
+            </div>
+            <div class="area-box">
+                <h3>Jawa Barat</h3>
+                <div class="area-tags">
+                    <span>Bandung</span><span>Cimahi</span><span>Cirebon</span><span>Karawang</span><span>Sukabumi</span><span>Tasikmalaya</span><span>Majalengka</span><span>Purwakarta</span><span>Sumedang</span><span>Garut</span>
+                </div>
+            </div>
+            <div class="area-box">
+                <h3>Jawa Tengah</h3>
+                <div class="area-tags">
+                    <span>Semarang</span><span>Solo</span><span>Pekalongan</span><span>Tegal</span><span>Salatiga</span><span>Magelang</span><span>Kudus</span><span>Jepara</span><span>Demak</span><span>Boyolali</span><span>Klaten</span><span>Purwokerto</span><span>Cilacap</span>
+                </div>
+            </div>
+            <div class="area-box">
+                <h3>Jawa Timur</h3>
+                <div class="area-tags">
+                    <span>Surabaya</span><span>Malang</span><span>Sidoarjo</span><span>Mojokerto</span><span>Jember</span><span>Banyuwangi</span><span>Madiun</span><span>Kediri</span><span>Blitar</span><span>Pasuruan</span><span>Probolinggo</span><span>Lamongan</span><span>Gresik</span><span>Tuban</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    

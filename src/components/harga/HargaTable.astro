@@ -1,0 +1,29 @@
+---
+import pricing from '../../data/harga.json';
+---
+﻿---\n// src/components/harga/HargaTable.astro
+import pricing from '../../data/harga.json';
+---
+<div class="table-responsive">
+                    <table class="price-table">
+                        <caption>Tabel harga bore pile mesin (mini crane) per meter</caption>
+                        <thead>
+                            <tr>
+                                <th>Diameter</th>
+                                <th>Harga (Rp/m)</th>
+                                <th>Kedalaman Maks</th>
+                                <th>Cocok Untuk</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {pricing.mesin.map((item) => (
+                                <tr>
+                                    <td>{item.diameter} cm</td>
+                                    <td><strong>{item.price ? item.price.toLocaleString('id-ID') : 'Hubungi Kami'}</strong></td>
+                                    <td>{item.maxDepth} meter</td>
+                                    <td>{item.suitable}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>

@@ -1,0 +1,417 @@
+---
+// src/components/global/Navbar.astro
+import config from '../../data/config.json';
+import FaIcon from '../icons/FaIcon.astro';
+---
+
+<nav class="navbar" aria-label="Navigasi utama">
+  <div class="container">
+    <a href="/" class="logo" aria-label="Agung Perkasa Borepile - Beranda">
+      <img 
+        src="/imgs/logo-agung-perkasa-transparan.webp" 
+        alt="Logo Agung Perkasa Borepile" 
+        width="45" 
+        height="45"
+        loading="lazy"
+      />
+      <span>Agung Perkasa <br />Borepile</span>
+    </a>
+    <button 
+      class="menu-toggle" 
+      id="mobile-menu" 
+      aria-label="Menu navigasi" 
+      aria-expanded="false"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="nav-menu" role="list">
+      <li role="listitem"><a href="/">Beranda</a></li>
+      <li class="dropdown" role="listitem">
+        <span class="dropbtn">Layanan <FaIcon class="fas fa-chevron-down" /></span>
+        <ul class="dropdown-content">
+          <li><a href="/jasa.html">Pusat Layanan</a></li>
+          <li><a href="/jasa/bore-pile.html">Bore Pile Mesin</a></li>
+          <li><a href="/jasa/strauss-pile/jakarta.html">Strauss Pile</a></li>
+        </ul>
+      </li>
+      <li class="dropdown" role="listitem">
+        <span class="dropbtn">Alat <FaIcon class="fas fa-chevron-down" /></span>
+        <ul class="dropdown-content">
+          <li><a href="/alat.html#bore-pile">Bore Pile</a></li>
+          <li><a href="/alat.html#strauss-pile">Strauss Pile</a></li>
+        </ul>
+      </li>
+      <li role="listitem"><a href="/artikel.html">Artikel</a></li>
+      <li role="listitem"><a href="/#faq">FAQ</a></li>
+      <li role="listitem"><a href="/galeri/gallery.html">Galeri</a></li>
+      <li role="listitem"><a href="/#about">Tentang Kami</a></li>
+      <li role="listitem"><a href="https://wa.me/6285710277854?text=Halo%20Pak%2C%20saya%20tertarik%20dengan%20jasa%20bore%20pile." class="btn-nav" target="_blank" rel="noopener noreferrer">Hubungi Kami</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  /* ===== NAVBAR ===== */
+  .navbar {
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: visible;
+  }
+
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  .logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .logo span {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    color: #fff;
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: clamp(8px, 1.2vw, 20px);
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+  }
+
+  .nav-menu li {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .nav-menu a {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .nav-menu a:hover {
+    color: #e67e22;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .btn-nav {
+    background: #d35400;
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: #fff !important;
+  }
+
+  .btn-nav:hover {
+    background: #a04000;
+    color: #fff !important;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+  }
+
+  /* SHRINK */
+  .navbar.shrink {
+    padding: 8px 0 !important;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  .navbar.shrink .logo img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .navbar.shrink .logo span {
+    font-size: 0.8rem !important;
+  }
+
+  .navbar.shrink .nav-menu a {
+    font-size: 0.85rem !important;
+    padding: 6px 14px !important;
+  }
+
+  /* DROPDOWN DESKTOP */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    width: auto !important;
+  }
+
+  .dropdown .dropbtn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+  }
+
+  .dropdown .dropbtn i {
+    font-size: 0.6rem;
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown:hover .dropbtn i {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-content {
+    display: none !important;
+    position: absolute !important;
+    min-width: 220px !important;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    border-radius: 8px;
+    top: 100% !important;
+    left: 0 !important;
+    width: max-content !important;
+    list-style: none;
+    padding: 10px 0;
+  }
+
+  .dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+  }
+
+  .dropdown-content li a {
+    color: #fff;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 0.85rem;
+  }
+
+  .dropdown-content li a:hover {
+    background-color: #d35400;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block !important;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 960px) {
+    .navbar .container {
+      padding: 0 12px !important;
+      flex-wrap: nowrap !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+    }
+
+    .logo {
+      flex-shrink: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      z-index: 1002 !important;
+      position: relative !important;
+    }
+
+    .logo img {
+      width: 35px !important;
+      height: 35px !important;
+      display: block !important;
+    }
+
+    .logo span {
+      font-size: 0.75rem !important;
+      white-space: nowrap !important;
+      display: block !important;
+    }
+
+    .menu-toggle {
+      display: flex !important;
+      flex-shrink: 0 !important;
+      margin-left: auto !important;
+      z-index: 1002 !important;
+      position: relative !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 10px !important;
+      cursor: pointer !important;
+    }
+
+    .menu-toggle .bar {
+      display: block !important;
+      width: 26px !important;
+      height: 3px !important;
+      background: #fff !important;
+      margin: 3px 0 !important;
+      transition: 0.3s !important;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+      transform: translateY(6px) rotate(45deg) !important;
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+      opacity: 0 !important;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg) !important;
+    }
+
+    .nav-menu {
+      position: fixed !important;
+      top: -100vh !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      max-height: calc(100vh - 60px) !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      padding: 8px 16px 20px !important;
+      gap: 2px !important;
+      transition: top 0.35s ease !important;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+      overflow-y: auto !important;
+      z-index: 999 !important;
+      border-radius: 0 0 16px 16px !important;
+      display: flex !important;
+      list-style: none !important;
+      margin: 0 !important;
+    }
+
+    .nav-menu.active {
+      top: 56px !important;
+    }
+
+    .nav-menu a {
+      display: flex !important;
+      font-size: 1rem !important;
+      padding: 12px 16px !important;
+      width: 100% !important;
+      border-radius: 10px !important;
+      justify-content: flex-start !important;
+      text-align: left !important;
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    .btn-nav {
+      background: #d35400 !important;
+      padding: 12px 20px !important;
+      border-radius: 30px !important;
+      text-align: center !important;
+      margin-top: 4px !important;
+      color: #fff !important;
+    }
+
+    .navbar.shrink {
+      padding: 5px 0 !important;
+    }
+
+    .navbar.shrink .logo img {
+      width: 30px !important;
+      height: 30px !important;
+    }
+
+    .navbar.shrink .logo span {
+      font-size: 0.65rem !important;
+    }
+
+    .navbar.shrink .nav-menu a {
+      font-size: 0.9rem !important;
+      padding: 10px 14px !important;
+    }
+
+    /* DROPDOWN MOBILE */
+    .dropdown {
+      width: 100% !important;
+    }
+
+    .nav-menu li {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+
+    .dropdown .dropbtn {
+      color: #fff !important;
+      width: 100% !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      gap: 8px !important;
+      padding: 12px 16px !important;
+    }
+
+    .dropdown-content {
+      position: static !important;
+      background: rgba(0, 0, 0, 0.2) !important;
+      box-shadow: none !important;
+      border: none !important;
+      border-radius: 8px !important;
+      padding: 4px 0 4px 16px !important;
+      display: none !important;
+      width: 100% !important;
+    }
+
+    .dropdown.active .dropdown-content {
+      display: block !important;
+    }
+
+    .dropdown.active .dropbtn i {
+      transform: rotate(180deg) !important;
+    }
+  }
+</style>

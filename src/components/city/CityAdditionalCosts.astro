@@ -1,0 +1,27 @@
+---
+interface Props {
+    title?: string;
+    items: Array<{ title: string; text: string }>;
+    cityName?: string;
+}
+
+const { 
+    cityName = "", 
+    title = `Estimasi Biaya Tambahan di ${cityName}`, 
+    items 
+} = Astro.props;
+---
+
+{items && items.length > 0 && (
+<section>
+    <h2 class="section-heading-sm">{title}</h2>
+    <div class="info-grid">
+        {items.map((item) => (
+            <div class="info-card">
+                <h3>{item.title}</h3>
+                <p set:html={item.text}></p>
+            </div>
+        ))}
+    </div>
+</section>
+)}

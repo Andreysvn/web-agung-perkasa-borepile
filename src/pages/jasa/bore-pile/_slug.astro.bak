@@ -1,0 +1,619 @@
+---
+import config from '../../../data/config.json';
+import pricing from '../../../data/harga.json';
+import { organizationSchema, localBusinessSchema } from '../../../lib/schema.js';
+import FaIcon from '../../../components/icons/FaIcon.astro';
+import BaseLayoutKota from '../../../layouts/BaseLayoutKota.astro';
+import PriceTable from '../../../components/shared/PriceTable.astro';
+import FaqSection from '../../../components/shared/FaqSection.astro';
+import CtaWhatsApp from '../../../components/shared/CtaWhatsApp.astro';
+
+import jakartaData from '../../../data/kota/jakarta.json';
+import bandungData from '../../../data/kota/bandung.json';
+import bekasiData from '../../../data/kota/bekasi.json';
+import bogorData from '../../../data/kota/bogor.json';
+import depokData from '../../../data/kota/depok.json';
+import karawangData from '../../../data/kota/karawang.json';
+import semarangData from '../../../data/kota/semarang.json';
+import surabayaData from '../../../data/kota/surabaya.json';
+import tangerangData from '../../../data/kota/tangerang.json';
+
+const cityMap: Record<string, any> = {
+    jakarta: jakartaData,
+    bandung: bandungData,
+    bekasi: bekasiData,
+    bogor: bogorData,
+    depok: depokData,
+    karawang: karawangData,
+    semarang: semarangData,
+    surabaya: surabayaData,
+    tangerang: tangerangData,
+};
+
+export function getStaticPaths() {
+    const cities = [
+        { slug: 'jakarta', name: 'Jakarta' },
+        { slug: 'bandung', name: 'Bandung' },
+        { slug: 'bekasi', name: 'Bekasi' },
+        { slug: 'bogor', name: 'Bogor' },
+        { slug: 'depok', name: 'Depok' },
+        { slug: 'karawang', name: 'Karawang' },
+        { slug: 'semarang', name: 'Semarang' },
+        { slug: 'surabaya', name: 'Surabaya' },
+        { slug: 'tangerang', name: 'Tangerang' },
+    ];
+    return cities.map(({ slug, name }) => ({
+        params: { slug },
+        props: { slug, name },
+    }));
+}
+
+const { slug, name } = Astro.props;
+const city = cityMap[slug];
+
+if (!city) {
+    throw new Error(`City data not found for slug: ${slug}`);
+}
+
+const orgLd = JSON.stringify(organizationSchema());
+
+const localBusinessLd = JSON.stringify(localBusinessSchema({
+    "description": city.localBusinessDesc,
+    "areaServed": [
+        { "@type": "City", "name": city.name }
+    ]
+}));
+
+const mesinMulai = pricing.mesin.find((item: any) => item.price > 0).price.toLocaleString('id-ID');
+const manualMulai = pricing.manual.find((item: any) => item.price > 0).price.toLocaleString('id-ID');
+const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+}).format(new Date(`${pricing.priceUpdatedAt}T00:00:00`));
+
+const canonical = `https://agungperkasaborepile.com/jasa/bore-pile/${slug}.html`;
+const ogUrl = canonical;
+const title = `Jasa & Harga Bore Pile ${city.name} ${city.year} Per Meter | Agung Perkasa`;
+const ogTitle = `Jasa & Harga Bore Pile ${city.name} ${city.year} | Agung Perkasa`;
+const description = `Jasa Bore Pile & Strauss Pile ${city.name} terpercaya. Harga mesin mulai Rp${mesinMulai}/m, manual Rp${manualMulai}/m. ${city.localBusinessDesc}`;
+const ogDescription = `Jasa Bore Pile ${city.name} terpercaya. Harga Mesin mulai dari Rp${mesinMulai}/m, manual Rp${manualMulai}/m. Konsultasi gratis.`;
+const twitterTitle = `Jasa & Harga Bore Pile ${city.name} ${city.year}`;
+const twitterDescription = `Harga bore pile ${city.name} mulai Rp${manualMulai}/m (manual) & Rp${mesinMulai}/m (mesin). Kalkulator bore pile. Konsultasi gratis.`;
+
+const waText = encodeURIComponent(`Halo%20saya%20mau%20tanya%20soal%20bore%20pile%20di%20${city.name}`);
+const waConsultText = encodeURIComponent(`Halo Pak, Saya dari website ingin menanyakan terkait penawaran harga bore pile untuk proyek ${city.name}.`);
+
+const hasGoogleAds = city.hasGoogleAds || false;
+const googleAdsId = city.googleAdsId || 'AW-16649506462';
+
+const breadcrumbLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Beranda",
+            "item": "https://agungperkasaborepile.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Jasa",
+            "item": "https://agungperkasaborepile.com/jasa/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": `Bore Pile ${city.name}`,
+            "item": `https://agungperkasaborepile.com/jasa/bore-pile-${slug}.html`
+        }
+    ]
+});
+
+const serviceLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": `Jasa Bore Pile ${city.name}`,
+    "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://agungperkasaborepile.com/#localbusiness",
+        "name": "Agung Perkasa Borepile"
+    },
+    "areaServed": {
+        "@type": "City",
+        "name": city.name
+    },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": `Layanan Bore Pile ${city.name}`,
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": `Bore Pile Mesin Mini Crane ${city.name}`
+                },
+                "price": String(city.localPrices.mesin[0].price),
+                "priceCurrency": "IDR",
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": String(city.localPrices.mesin[0].price),
+                    "priceCurrency": "IDR",
+                    "unitText": "meter"
+                },
+                "eligibleRegion": {
+                    "@type": "City",
+                    "name": city.name
+                },
+                "availability": "https://schema.org/InStock"
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": `Bore Pile Manual Strauss Pile ${city.name}`
+                },
+                "price": String(city.localPrices.manual[0].price),
+                "priceCurrency": "IDR",
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": String(city.localPrices.manual[0].price),
+                    "priceCurrency": "IDR",
+                    "unitText": "meter"
+                },
+                "eligibleRegion": {
+                    "@type": "City",
+                    "name": city.name
+                },
+                "availability": "https://schema.org/InStock"
+            }
+        ]
+    }
+});
+
+const productLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": `Jasa Bore Pile ${city.name} ${city.year}`,
+    "description": `Jasa bore pile ${city.name} dengan harga mulai Rp${mesinMulai}/m untuk mesin dan manual mulai Rp${manualMulai}/m (strauss pile).`,
+    "brand": {
+        "@type": "Brand",
+        "name": "Agung Perkasa Borepile"
+    },
+    "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "IDR",
+        "lowPrice": String(city.localPrices.manualMin),
+        "highPrice": "350000",
+        "offerCount": "8",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "url": `https://agungperkasaborepile.com/jasa/bore-pile-${slug}.html`
+    },
+    "areaServed": {
+        "@type": "City",
+        "name": city.name
+    }
+});
+
+const faqLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": city.faq.map((f: any) => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.a.replace(/<[^>]*>/g, '')
+        }
+    }))
+});
+
+const equipmentIcons: Record<string, string> = {
+    'Mini Crane': '/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg',
+    'Gawangan': '/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg',
+    'Strauss Pile (bore pile manual)': '/imgs/icons/strauss-pile-icon-agung-perkasa.svg',
+    'Strauss Pile (Manual)': '/imgs/icons/strauss-pile-icon-agung-perkasa.svg',
+    'Mesin Hidrolik Sany': '/imgs/icons/bore-pile-mesin-hidrolik-icon-agung-perkasa.svg',
+    'Mesin Hidrolik SANY': '/imgs/icons/bore-pile-mesin-hidrolik-icon-agung-perkasa.svg',
+};
+
+const equipmentAlts: Record<string, string> = {
+    'Mini Crane': `Mesin bore pile mini crane Agung Perkasa untuk bore pile pondasi rumah, ruko, dan bangunan bertingkat di ${city.name}`,
+    'Gawangan': `Mesin bore pile gawangan Agung Perkasa untuk bore pile ketika area tidak bisa dijangkau oleh mini crane di ${city.name}`,
+    'Strauss Pile (bore pile manual)': `Strauss pile (bore pile manual) untuk pondasi di gang sempit dan area terbatas ${city.name} lainnya`,
+    'Strauss Pile (Manual)': `Strauss pile (bore pile manual) untuk pondasi di gang sempit dan area terbatas ${city.name} lainnya`,
+    'Mesin Hidrolik Sany': `Mesin bor hidrolik SANY untuk proyek skala besar di ${city.name}`,
+    'Mesin Hidrolik SANY': `Mesin bor hidrolik SANY untuk proyek skala besar di ${city.name}`,
+};
+
+const sondirParts = city.sondirNote.split(':');
+const sondirBold = sondirParts[0] + ':';
+const sondirRest = sondirParts.slice(1).join(':');
+---
+<BaseLayoutKota
+    title={title}
+    description={description}
+    canonical={canonical}
+    ogTitle={ogTitle}
+    ogDescription={ogDescription}
+    ogUrl={ogUrl}
+    twitterTitle={twitterTitle}
+    twitterDescription={twitterDescription}
+    geoRegion={city.geoRegion}
+    geoPlacename={city.geoPlacename}
+    hasGoogleAds={hasGoogleAds}
+    googleAdsId={googleAdsId}
+    localBusinessLd={localBusinessLd}
+    orgLd={orgLd}
+>
+    <div class="blog-container">
+        <nav class="breadcrumb" aria-label="Breadcrumb navigasi">
+            <a href="/">Beranda</a>
+            <span class="separator">/</span>
+            <a href="/jasa/">Jasa</a>
+            <span class="separator">/</span>
+            <span class="current" aria-current="page">Bore Pile {city.name}</span>
+        </nav>
+
+        <h1 class="page-title">Jasa & Harga Bore Pile {city.name} {city.year} Per Meter</h1>
+
+        <div class="page-meta">
+            <span>Update: {formattedUpdate}</span> |
+            <span>Agung Perkasa</span> |
+            <span>📍 {city.geoPlacename} & Sekitarnya</span>
+        </div>
+
+        <div class="update-badge">
+            Harga terbaru {formattedUpdate} | Konsultasi gratis
+        </div>
+
+        <div class="illustration">
+            <div class="illustration-img">
+                <img src={city.heroImage} alt={city.heroAlt} title={`Bore Pile Mini Crane ${city.name}`} width={city.heroWidth} height={city.heroHeight} fetchpriority="high">
+                <div class="caption">{city.heroCaption}</div>
+            </div>
+            <div class="illustration-text">
+                <p set:html={city.heroText}></p>
+            </div>
+        </div>
+
+        <section aria-labelledby="calculator-heading">
+            <div class="calculator-box">
+                <h2 id="calculator-heading">Kalkulator Estimasi Biaya Bore Pile & Strauss Pile {city.name}</h2>
+
+                <div class="method-selector" role="group" aria-label="Pilih metode bore pile">
+                    <button class="method-btn active" data-method="mesin" aria-pressed="true">Bore Pile Mesin</button>
+                    <button class="method-btn" data-method="manual" aria-pressed="false">Bore Pile Manual</button>
+                </div>
+
+                <div class="form-row" id="machineSelectRow">
+                    <div class="calculator-form-group">
+                        <label for="machineSelect">Pilih Jenis Mesin</label>
+                        <select id="machineSelect">
+                            <option value="minicrane">Mini Crane</option>
+                            <option value="gawangan">Gawangan</option>
+                        </select>
+                        <div class="price-hint">*Harga dan minimal order berbeda tiap alat</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="calculator-form-group">
+                        <label for="diameterSelect">Diameter (cm)</label>
+                        <select id="diameterSelect">
+                            <option value="30" selected>30 cm</option>
+                            <option value="40">40 cm</option>
+                            <option value="50">50 cm</option>
+                            <option value="60">60 cm</option>
+                            <option value="80">80 cm</option>
+                            <option value="90">90 cm</option>
+                            <option value="100">100 cm</option>
+                            <option value="110">110 cm</option>
+                        </select>
+                    </div>
+                    <div class="calculator-form-group">
+                        <label for="priceInput">Harga Jasa per Meter (Rp)</label>
+                        <input type="text" id="priceInput" inputmode="numeric" placeholder="Kosongkan untuk harga standar" value="">
+                        <div class="price-hint">*Kosongkan untuk harga standar tabel</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="calculator-form-group">
+                        <label for="depthInput">Kedalaman (meter)</label>
+                        <input type="text" id="depthInput" inputmode="numeric" placeholder="Contoh: 12" value="12">
+                    </div>
+                    <div class="calculator-form-group">
+                        <label for="pointsInput">Jumlah Titik</label>
+                        <input type="number" id="pointsInput" value="16" min="1" max="500" step="1">
+                    </div>
+                </div>
+
+                <div class="calculator-result" aria-live="polite">
+                    <p class="result-label">Estimasi Total Biaya JASA BOR</p>
+                    <div class="total-price" id="totalPrice">Rp 0</div>
+                    <div class="detail-price" id="detailPrice"></div>
+                    <div class="estimation-time" id="estimationTime">Estimasi waktu: -</div>
+                    <div class="order-info" id="orderInfo"></div>
+                </div>
+
+                <button onclick="sendToWA()" class="btn-wa" aria-label="Konsultasikan ke WhatsApp">Konsultasikan ke WhatsApp</button>
+                <div class="calculator-note">*Estimasi untuk jasa pengeboran saja (belum termasuk material beton & besi). Minimal order: Mini Crane 200m, Gawangan 200m, Manual 100m. Di bawah itu bisa hubungi admin kami untuk penawaran lebih lanjut.</div>
+            </div>
+        </section>
+
+        <script is:inline src="/js/borepile-kota.js" defer></script>
+
+        <PriceTable localPrices={city.localPrices} cityName={city.name} />
+
+        <a href="/jasa/">Lihat Jasa Bore Pile & Strauss Pile untuk wilayah Anda →</a>
+
+        <section aria-labelledby="factors-heading">
+            <h2 id="factors-heading" class="section-heading">Faktor yang Mempengaruhi Harga Bore Pile {city.name} {city.year}</h2>
+
+            <p><strong>Harga bore pile {city.name} tidak sama untuk setiap proyek.</strong> Berikut faktor utama yang menyebabkan perbedaan biaya jasa bore pile di {city.name}:</p>
+
+            <div class="info-grid">
+                {city.factors.map((factor: any, i: number) => (
+                    <div class="info-card">
+                        <h3>{i + 1}. {factor.title}</h3>
+                        <p>{factor.text}</p>
+                    </div>
+                ))}
+            </div>
+
+            <div class="sondir-note">
+                <strong>{sondirBold}</strong>{sondirRest}
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-heading-sm">Estimasi Biaya Tambahan di {city.name}</h2>
+            <div class="info-grid">
+                <div class="info-card"><h3>🚛 Mobilisasi Alat Bore Pile</h3><p>{city.mobilizationCost}</p></div>
+                <div class="info-card"><h3>Minimal Order</h3><p>Mesin mini crane dan gawangan: 200 meter | Strauss Pile (Manual): 100 meter, di bawah itu bisa hubungi kami</p></div>
+                <div class="info-card"><h3>Sedot Lumpur</h3><p>Jika memakai bore pile mesin gawangan dan mini crane menggunakan metode <strong>wash boring (bor basah)</strong>, perkiraan biaya tambahannya sekitar: Rp800.000 - Rp1.200.000/rit (tergantung volume)</p></div>
+                <div class="info-card"><h3>Data Sondir</h3><p>Sangat wajib untuk menentukan kedalaman pengeboran yang tepat hingga mencapai tanah keras</p></div>
+            </div>
+        </section>
+
+        <div class="tips-section">
+            <h3 class="tips-heading">Tips memilih diameter:</h3>
+            <ul>
+                <li><strong>30 cm</strong> → rumah 1-2 lantai (paling banyak dipilih)</li>
+                <li><strong>40-50 cm</strong> → ruko, kantor, gudang, rumah sakit</li>
+                <li><strong>60-110 cm</strong> → hotel, gedung bertingkat</li>
+            </ul>
+        </div>
+
+        <section class="project-examples-section">
+            <h2 class="project-heading">Contoh Hitungan Proyek Nyata di {city.name}</h2>
+
+            {city.projects.map((project: any) => (
+                <div class="project-card">
+                    <div class="project-row">
+                        {project.hasImage && project.image && (
+                            <div class="project-img">
+                                <img src={project.image} alt={project.imageAlt} loading="lazy">
+                                <div class="project-caption">{project.imageCaption}</div>
+                            </div>
+                        )}
+                        <div class="project-text" style={!project.hasImage ? 'flex: 1; min-width: 100%;' : ''}>
+                            <div class="info-card">
+                                <h3>{project.title}</h3>
+                                <p><strong>Spesifikasi:</strong> <Fragment set:html={project.specs} /></p>
+                                <p><strong>Biaya jasa:</strong> {project.costCalc}<br>
+                                <strong>+ mobilisasi:</strong> {project.mobilization}<br>
+                                <strong>Total:</strong> <strong class="price-total">{project.total}</strong><br>
+                                <strong>Waktu:</strong> {project.time}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ))}
+
+            <div class="project-note">
+                <p>
+                    <strong>📌 Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton,
+                    <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan.
+                </p>
+            </div>
+        </section>
+
+        <p>Butuh harga khusus untuk diameter 30cm?
+            <a href="/harga/bore-pile-30cm.html">Lihat detail harga bore pile diameter 30cm →</a>
+        </p>
+
+        <section>
+            <h2 class="section-heading-center">Mengapa Bore Pile Pilihan Tepat untuk Tanah {city.name}?</h2>
+            <p>Metode bore pile menjadi solusi pondasi paling tepat untuk kondisi tanah di {city.name} karena efektif menembus berbagai jenis tanah hingga mencapai tanah keras.</p>
+            <ul>
+                <li><strong>Kedalaman hingga 30 meter</strong> - mampu menembus lapisan tanah lunak hingga mencapai tanah keras</li>
+                <li><strong>Diameter fleksibel (30-120cm)</strong> - bisa disesuaikan dengan beban bangunan</li>
+                <li><strong>Minim getaran</strong> - aman untuk bangunan di sekitar proyek</li>
+                <li><strong>Minim polusi suara</strong> - tidak mengganggu lingkungan sekitar</li>
+                <li><strong>Metode wash boring</strong> - bor basah sangat efektif untuk tanah berair</li>
+            </ul>
+            <p><strong>Portofolio kami di {city.name}:</strong> Kami telah mengerjakan berbagai proyek bore pile di {city.name} dan sekitarnya.</p>
+
+            <section class="portfolio-jakarta-section">
+                <h2 class="portfolio-jakarta-title">{city.portfolio.title}</h2>
+                <p class="portfolio-jakarta-sub">{city.portfolio.subtitle}</p>
+
+                <div class="proyek-jakarta-box">
+                    <p class="proyek-jakarta-heading">Dokumentasi proyek bore pile {city.name}:</p>
+                    <div class="proyek-jakarta-grid">
+                        {city.portfolio.items.map((item: any) => (
+                            <div class="proyek-jakarta-item">
+                                <img src={item.image} alt={item.imageAlt} loading="lazy" width="400" height="300">
+                                <div class="proyek-jakarta-caption">
+                                    <span class="proyek-jakarta-label">{item.label}</span>
+                                    <span class="proyek-jakarta-detail">{item.detail}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <p class="proyek-jakarta-link">
+                        Ingin lihat lebih banyak?
+                        <a href="/galeri/gallery.html">Kunjungi galeri proyek kami →</a>
+                    </p>
+                </div>
+            </section>
+
+            <div class="why-section">
+                <h2 class="why-title">Kenapa pilih Agung Perkasa untuk Bore Pile di {city.name}?</h2>
+                <p class="why-sub">Ini alasan kenapa banyak orang {city.name} percaya sama Agung Perkasa.</p>
+
+                <div class="reasons-grid">
+                    {city.whyUs.map((item: any) => (
+                        <div class="reason-card">
+                            <h3>{item.title}</h3>
+                            <p>{item.desc}</p>
+                        </div>
+                    ))}
+                </div>
+
+                <h3 class="equip-title">Alat yang Kami gunakan di lapangan</h3>
+                <p class="equip-sub">{city.equipment.description}</p>
+
+                <div class="equip-grid">
+                    {city.equipment.items.map((item: any) => (
+                        <div class="equip-item">
+                            <img class="equip-img" src={equipmentIcons[item.name] || '/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg'} alt={equipmentAlts[item.name] || `Alat bore pile ${item.name}`} loading="lazy">
+                            <div class="equip-info">
+                                <div class="equip-icon-inline">
+                                    <img src="/imgs/logo-agung-perkasa.webp" alt={`Ikon ${item.name}`} width="24" height="24">
+                                    <h4>{item.name}</h4>
+                                </div>
+                                <p>{item.desc}</p>
+                                <span class="equip-tag">Agung Perkasa</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <div class="why-cta">
+                <h3>Ada yang ingin ditanyakan?</h3>
+                <p>Chat kami untuk konsultasi gratis.</p>
+                <a href={`https://wa.me/${config.company.whatsapp}?text=${waText}`} class="cta-wa-btn">Whatsapp Kami</a>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-heading-center">Wilayah Layanan Bore Pile di {city.name}</h2>
+            <p>Kami melayani seluruh kecamatan di bawah ini. Proyek siap kami kerjakan.</p>
+            <div class="area-grid">
+                {Object.entries(city.kecamatan).map(([area, districts]: [string, any]) => (
+                    <div class="area-card">
+                        <h3>{area}</h3>
+                        <div class="area-tags">
+                            {districts.map((d: string) => (
+                                <span>{d}</span>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        <FaqSection faq={city.faq.map((f: any) => ({ question: f.q, answer: f.a }))} cityName={city.name} />
+
+        <section class="articles-section" id="blog">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Artikel Blog</h2>
+                    <p class="section-subtitle">Insight pondasi dan konstruksi untuk membantu keputusan proyek Anda.</p>
+                </div>
+                <div class="articles-grid">
+                    {city.articles.map((article: any) => (
+                        <article class="article-card">
+                            <a href={article.href} class="article-link">
+                                <div class="article-image">
+                                    <img src={article.image} alt={article.imageAlt} loading="lazy">
+                                    <span class="article-category">{article.category}</span>
+                                </div>
+                                <div class="article-content">
+                                    <h3>{article.title}</h3>
+                                    <p class="article-excerpt">{article.excerpt}</p>
+                                    <div class="article-meta">
+                                        <span class="article-date"><FaIcon class="far fa-calendar-alt" /> {article.date}</span>
+                                        <span class="article-read-more">Baca selengkapnya →</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    ))}
+                </div>
+            </div>
+            <div class="articles-cta">
+                <a href="/artikel.html" class="btn-articles-all">
+                    <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
+                </a>
+            </div>
+        </section>
+
+        <div class="cta-box">
+            <h3>Butuh jasa bore pile di {city.name}?</h3>
+            <p>Dapatkan penawaran harga dari kami.</p>
+            <a href={`https://wa.me/${config.company.whatsapp}?text=${waConsultText}`} class="btn-wa-konsultasi" aria-label="Konsultasi gratis via WhatsApp">Konsultasi Gratis via WA</a>
+        </div>
+
+        <div class="internal-link-box">
+            <p><strong>Baca Juga Harga Bore Pile:</strong><br>
+            {city.internalLinks.map((link: any, i: number) => (
+                <span>
+                    {i > 0 && ' | '}
+                    <a href={link.href}>{link.label}</a>
+                </span>
+            ))}</p>
+        </div>
+    </div>
+
+    <div class="maps-container">
+        <div class="maps-card">
+            <h3 class="maps-title">📍 Lokasi Kami di {city.name}</h3>
+            <p class="maps-address">
+                <strong>Agung Perkasa Borepile</strong><br>
+                Jl. Sunter Muara II, RT.17/RW.05, Sunter Agung, Kec. Tj. Priok,<br>
+                Jakarta Utara, DKI Jakarta 14350
+            </p>
+            <div class="maps-embed-wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1493743!2d106.8534975!3d-6.1493743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f53da64d7ca7%3A0x3586221410f9d181!2sAgung%20Perkasa%20Bore%20Pile!5e0!3m2!1sid!2sid!4v1622811397456!5m2!1sid!2sid&show_rating=true"
+                    width="100%"
+                    height="280"
+                    style="border:0; display: block;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Google Maps Lokasi Agung Perkasa Borepile">
+                </iframe>
+            </div>
+            <a href="https://maps.google.com/?q=Agung+Perkasa+Bore+Pile"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="maps-btn">
+               Buka di Google Maps
+            </a>
+        </div>
+    </div>
+
+    <div class="publisher-box">
+        <div class="publisher-inner">
+            <img src="/imgs/logo-agung-perkasa-transparan.webp" alt="Logo Agung Perkasa Borepile" width="60" height="60" loading="lazy">
+            <div>
+                <h4>Dipublikasikan oleh Agung Perkasa Borepile</h4>
+                <p>Spesialis pondasi borepile dengan pengalaman lebih dari 10 tahun di {city.name} dan sekitarnya.</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="application/ld+json" set:html={breadcrumbLd} />
+    <script type="application/ld+json" set:html={serviceLd} />
+    <script type="application/ld+json" set:html={productLd} />
+    <script type="application/ld+json" set:html={faqLd} />
+</BaseLayoutKota>

@@ -1,0 +1,88 @@
+---
+// src/components/global/v2/Navbar.astro
+import Icon from '../../ui/Icon.astro';
+import config from '../../../data/config.json';
+---
+<nav class="apx-nav" aria-label="Navigasi utama">
+  <div class="apx-container apx-nav-inner">
+    <a href="/" class="apx-nav-logo" aria-label="Agung Perkasa Borepile - Beranda">
+      <img src="/imgs/logo-agung-perkasa-transparan.webp" alt="Logo Agung Perkasa Borepile" width="42" height="42" />
+      <span>Agung Perkasa <br />Borepile</span>
+    </a>
+    <button class="apx-nav-toggle" id="mobile-menu" aria-label="Menu navigasi" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="apx-nav-menu" role="list">
+      <li role="listitem"><a href="/">Beranda</a></li>
+      <li class="dropdown" role="listitem">
+        <span class="dropbtn">Layanan <Icon name="chevron-down" size={14} /></span>
+        <ul class="dropdown-content">
+          <li><a href="/jasa/bore-pile/">Jasa Bore Pile Mesin (Mini Crane)</a></li>
+          <li><a href="/jasa/strauss-pile/jakarta.html">Jasa Strauss Pile (Manual)</a></li>
+        </ul>
+      </li>
+      <li class="dropdown" role="listitem">
+        <span class="dropbtn">Alat <Icon name="chevron-down" size={14} /></span>
+        <ul class="dropdown-content">
+          <li><a href="/alat/index.html#bore-pile">Bore Pile</a></li>
+          <li><a href="/alat/index.html#strauss-pile">Strauss Pile</a></li>
+        </ul>
+      </li>
+      <li role="listitem"><a href="/artikel/">Artikel</a></li>
+      <li role="listitem"><a href="/#about">Tentang Kami</a></li>
+      <li role="listitem"><a href="/#faq">FAQ</a></li>
+      <li role="listitem"><a href="/galeri/gallery.html" class="btn-nav">Galeri</a></li>
+      <li role="listitem">
+        <a href={`https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Saya%20dari%20website%20ingin%20menanyakan%20terkait%20penawaran%20harga.`}
+           class="apx-nav-wa" target="_blank" rel="noopener noreferrer">
+          <Icon name="whatsapp" size={16} /> Chat WA
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .apx-nav { position: sticky; top: 0; z-index: 1000; background: #fff; border-bottom: 1px solid var(--apx-border); }
+  .apx-nav-inner { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 16px; }
+  .apx-nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--apx-navy); font-weight: 800; font-size: .85rem; line-height: 1.15; }
+  .apx-nav-logo img { object-fit: contain; }
+  .apx-nav-menu { display: flex; align-items: center; gap: 2px; list-style: none; margin: 0; padding: 0; }
+  .apx-nav-menu > li { position: relative; }
+  .apx-nav-menu a, .apx-nav-menu .dropbtn { display: inline-flex; align-items: center; gap: 5px; padding: 8px 12px; color: var(--apx-text); text-decoration: none; font-weight: 600; font-size: .95rem; border-radius: var(--apx-radius-sm); cursor: pointer; }
+  .apx-nav-menu a:hover, .apx-nav-menu .dropbtn:hover { color: var(--apx-navy); background: var(--apx-tint); }
+  .btn-nav { color: var(--apx-orange); }
+  .apx-nav-wa { background: var(--apx-wa); color: #fff !important; }
+  .apx-nav-wa:hover { background: var(--apx-wa-2); color: #fff !important; }
+  .dropdown-content { position: absolute; top: 100%; left: 0; min-width: 240px; background: #fff; border: 1px solid var(--apx-border); border-radius: var(--apx-radius-sm); box-shadow: var(--apx-shadow-2); list-style: none; margin: 0; padding: 6px; opacity: 0; visibility: hidden; transform: translateY(6px); transition: all .2s ease; }
+  .dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+  .dropdown-content a { display: block; font-weight: 500; }
+  .apx-nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; padding: 8px; cursor: pointer; }
+  .apx-nav-toggle span { width: 22px; height: 2px; background: var(--apx-navy); border-radius: 2px; transition: transform .2s ease, opacity .2s ease; }
+  .apx-nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .apx-nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .apx-nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  @media (max-width: 900px) {
+    .apx-nav-toggle { display: flex; }
+    .apx-nav-menu { display: none; position: fixed; inset: 64px 0 0; background: var(--apx-navy); flex-direction: column; align-items: stretch; padding: 16px; overflow-y: auto; }
+    .apx-nav:has(.apx-nav-toggle[aria-expanded="true"]) .apx-nav-menu { display: flex; }
+    .apx-nav-menu a, .apx-nav-menu .dropbtn { color: #fff; padding: 13px 14px; border-radius: var(--apx-radius-sm); font-size: 1rem; }
+    .apx-nav-menu a:hover { background: var(--apx-navy-2); color: #fff; }
+    .dropdown-content { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: 0; background: var(--apx-navy-2); }
+    .dropdown-content a { color: rgb(255 255 255 / .85); }
+  }
+</style>
+
+<script>
+  const btn = document.getElementById('mobile-menu');
+  const setMenu = (open) => {
+    btn?.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  btn?.addEventListener('click', () => {
+    setMenu(btn.getAttribute('aria-expanded') !== 'true');
+  });
+  document.querySelector('.apx-nav-menu')?.addEventListener('click', (e) => {
+    if (e.target.closest('a')) setMenu(false);
+  });
+</script>

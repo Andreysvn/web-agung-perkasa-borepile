@@ -1,0 +1,9 @@
+# robots.txt for Agung Perkasa Borepile
+# Allow all bots to crawl the entire site
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://agungperkasaborepile.com/sitemap.xml

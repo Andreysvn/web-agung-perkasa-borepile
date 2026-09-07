@@ -1,0 +1,36 @@
+---
+interface Props {
+    kecamatan: any; // Accept both groups array and dictionary object
+    cityName: string;
+}
+
+const { kecamatan, cityName } = Astro.props;
+
+let groups: Array<{ area: string; tags: string[] }> = [];
+
+if (kecamatan && Array.isArray(kecamatan.groups)) {
+    groups = kecamatan.groups;
+} else if (kecamatan && typeof kecamatan === 'object') {
+    groups = Object.keys(kecamatan).map(key => ({
+        area: key,
+        tags: kecamatan[key]
+    }));
+}
+---
+
+<section>
+    <h2 class="section-heading-center">Wilayah Layanan Bore Pile di {cityName}</h2>
+    <p class="section-desc-center">Kami melayani seluruh wilayah kecamatan di bawah ini. Peralatan dan tim kami siap dikerahkan ke lokasi Anda.</p>
+    <div class="area-grid">
+        {groups.map((group) => (
+            <div class="area-card">
+                <h3>{group.area}</h3>
+                <div class="area-tags">
+                    {group.tags.map((tag: string) => (
+                        <span>{tag}</span>
+                    ))}
+                </div>
+            </div>
+        ))}
+    </div>
+</section>

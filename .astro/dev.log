@@ -1,0 +1,16 @@
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Generated 3ms","label":"types","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":" astro  v7.2.3 ready in 12546 ms\n┃ Local    http://localhost:4321/\n┃ Network  use --host to expose","label":"SKIP_FORMAT","level":"info"}
+{"message":"watching for file changes...","label":null,"level":"info"}
+{"message":"[optimizer] bundling dependencies...","label":"vite","level":"info"}
+{"message":"\n update  ▶ New version of Astro available: 7.3.1\n  Run npx @astrojs/upgrade to update\n","label":"SKIP_FORMAT","level":"warn"}
+{"message":"[200] / 2159ms","label":null,"level":"info"}
+{"message":"[200] /harga/bore-pile-2026 1807ms","label":null,"level":"info"}
+{"message":"[200] / 25ms","label":null,"level":"info"}
+{"message":"[console.warn] Ignoring Event: localhost","label":"vite","level":"warn"}
+{"message":"[200] /jasa 30ms","label":null,"level":"info"}
+{"message":"[console.warn] Ignoring Event: localhost","label":"vite","level":"warn"}
+{"message":"[200] /jasa/bore-pile 28ms","label":null,"level":"info"}
+{"message":"[console.warn] Ignoring Event: localhost","label":"vite","level":"warn"}
+{"message":"[200] /jasa/bore-pile/jakarta 37ms","label":null,"level":"info"}

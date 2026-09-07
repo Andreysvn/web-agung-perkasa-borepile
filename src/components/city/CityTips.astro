@@ -1,0 +1,22 @@
+---
+interface Props {
+    title?: string;
+    items: Array<{ diameter: string; usage: string }>;
+}
+
+const { 
+    title = "Tips memilih diameter:", 
+    items 
+} = Astro.props;
+---
+
+{items && items.length > 0 && (
+<div class="tips-section">
+    <h3 class="tips-heading">{title}</h3>
+    <ul>
+        {items.map((item) => (
+            <li><strong>{item.diameter}</strong> → {item.usage}</li>
+        ))}
+    </ul>
+</div>
+)}
