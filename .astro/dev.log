@@ -731,3 +731,5 @@
 {"message":"[404] /imgs/strauss-pile-pondok-pinang.webp 1ms","label":null,"level":"info"}
 {"message":"[200] /artikel/bore-pile-machine 30ms","label":null,"level":"info"}
 {"message":"[200] /artikel/bore-pile-machine 33ms","label":null,"level":"info"}
+{"message":"[200] /artikel/perencanaan-borepile 34ms","label":null,"level":"info"}
+{"message":"[200] /artikel/ukuran-pondasi-bore-pile 26ms","label":null,"level":"info"}
