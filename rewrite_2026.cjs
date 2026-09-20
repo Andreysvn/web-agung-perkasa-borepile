@@ -1,4 +1,6 @@
----
+const fs = require('fs');
+
+const content = `---
 import pricing from '../../data/harga.json';
 import pageData from '../../data/harga-2026.json';
 import { localBusinessSchema } from '../../lib/schema.js';
@@ -18,7 +20,7 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
-}).format(new Date(`${pricing.priceUpdatedAt}T00:00:00`));
+}).format(new Date(\`\${pricing.priceUpdatedAt}T00:00:00\`));
 
 const seoTitle = "Harga Bore Pile 2026 Terbaru Per Meter | Kalkulator & Biaya Bore Pile";
 
@@ -28,7 +30,7 @@ const m30 = pricing.mesin.find(p => p.diameter === 30).price.toLocaleString('id-
 const m40 = pricing.mesin.find(p => p.diameter === 40).price.toLocaleString('id-ID');
 const m50 = pricing.mesin.find(p => p.diameter === 50).price.toLocaleString('id-ID');
 
-const seoDesc = `Harga bore pile 2026 terbaru seluruh Pulau Jawa. Mesin mulai Rp${mesinMulai}/m, manual Rp${manualMulai}/m. Kalkulator estimasi biaya otomatis. Konsultasi gratis.`;
+const seoDesc = \`Harga bore pile 2026 terbaru seluruh Pulau Jawa. Mesin mulai Rp\${mesinMulai}/m, manual Rp\${manualMulai}/m. Kalkulator estimasi biaya otomatis. Konsultasi gratis.\`;
 const canonical = "https://agungperkasaborepile.com/harga/bore-pile-2026.html";
 
 const localBusinessLd = JSON.stringify(localBusinessSchema({
@@ -217,7 +219,7 @@ const faqLd = JSON.stringify({
                 <div class="project-card">
                     <div class="project-row">
                         <div class="project-img">
-                            <img src={project.img} onerror={project.fallback ? `this.src='${project.fallback}'; this.onerror=null;` : null} alt={project.alt} loading="lazy">
+                            <img src={project.img} onerror={project.fallback ? \`this.src='\${project.fallback}'; this.onerror=null;\` : null} alt={project.alt} loading="lazy">
                             <div class="project-caption">{project.caption}</div>
                         </div>
                         <div class="project-text">
@@ -358,3 +360,8 @@ const faqLd = JSON.stringify({
     <CityArticles articles={[]} />
 
 </KotaLayout>
+`;
+
+fs.writeFileSync('src/pages/harga/bore-pile-2026.astro', content);
+console.log("Updated bore-pile-2026.astro");
+

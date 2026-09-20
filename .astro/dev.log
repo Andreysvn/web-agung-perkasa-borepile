@@ -628,3 +628,17 @@
 {"message":"[200] /harga/bore-pile/30cm 99ms","label":null,"level":"info"}
 {"message":"[404] /imgs/strauss-pile-pondok-pinang.webp 2ms","label":null,"level":"info"}
 {"message":"[200] /jasa/bore-pile/jakarta 40ms","label":null,"level":"info"}
+{"message":"[200] /jasa/bore-pile/jakarta 29ms","label":null,"level":"info"}
+{"message":"[200] /jasa/bore-pile/jakarta 50ms","label":null,"level":"info"}
+{"message":"[200] /jasa/bore-pile/jakarta 32ms","label":null,"level":"info"}
+{"message":"[200] /jasa/bore-pile/jakarta 25ms","label":null,"level":"info"}
+{"message":"[200] /jasa/bore-pile/jakarta 50ms","label":null,"level":"info"}
+{"message":"Failed to update routes via HMR:\n TypeError: undefined is not a function","label":"router","level":"error"}
+{"message":"Failed to update routes via HMR:\n TypeError: undefined is not a function","label":"router","level":"error"}
+{"message":"[200] /jasa/bore-pile/jakarta 37ms","label":null,"level":"info"}
+{"message":"[200] /jasa/bore-pile/jakarta 9ms","label":null,"level":"info"}
+{"message":"[200] /jasa/bore-pile/jakarta 14ms","label":null,"level":"info"}
+{"message":"[200] /jasa/bore-pile/jakarta 23ms","label":null,"level":"info"}
+{"message":"[200] /jasa/bore-pile/jakarta 53ms","label":null,"level":"info"}
+{"message":"[200] /jasa/bore-pile/jakarta 36ms","label":null,"level":"info"}
+{"message":"[200] /jasa/bore-pile/jakarta 15ms","label":null,"level":"info"}
