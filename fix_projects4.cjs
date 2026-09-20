@@ -72,3 +72,4 @@ for (const file of files) {
 
     fs.writeFileSync(file, c);
 }
+

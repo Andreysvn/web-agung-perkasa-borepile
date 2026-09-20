@@ -198,12 +198,12 @@ template = template.replace(/const manualPrice = priceMap\[.*\] \|\| mn20;/g, "c
 const diameters = ['40cm', '50cm', '60cm', '80cm'];
 
 for (const d of diameters) {
-    let output = template.replace(/\{\{DIAMETER\}\}/g, d);
+    let output = template.replace(/\{\{DIAMETER\}\}/g, d.replace('cm', ''));
     fs.writeFileSync(`src/pages/harga/bore-pile/${d}/index.astro`, output);
     console.log(`Generated ${d}`);
 }
 // Also update 30cm to have these robustness fixes!
-let output30 = template.replace(/\{\{DIAMETER\}\}/g, '30cm');
+let output30 = template.replace(/\{\{DIAMETER\}\}/g, '30');
 fs.writeFileSync(`src/pages/harga/bore-pile/30cm/index.astro`, output30);
 console.log(`Generated 30cm`);
 

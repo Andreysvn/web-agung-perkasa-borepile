@@ -154,3 +154,4 @@ for (const d of diameters) {
     fs.writeFileSync(`src/pages/harga/bore-pile/${d}/index.astro`, out);
     console.log(`Generated ${d}`);
 }
+
