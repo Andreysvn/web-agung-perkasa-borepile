@@ -1,4 +1,4 @@
-﻿/* 
+/* 
   MODERN DRAFT - Premium Navy Edition (Core Web Vitals Optimized)
   Redesign for Agung Perkasa Borepile
 */
@@ -17,7 +17,7 @@
   
   --text-heading: #1a365d;  /* Navy for strong headings */
   --text-body: #475569;     /* Slate 600 - comfortable reading */
-  --text-muted: #94a3b8;
+  --text-muted: #64748b;
   
   --border-color: #cbd5e1;  /* Sharper borders for better structure */
   
@@ -68,7 +68,7 @@ h2 { font-size: 1.5rem; border-bottom: 2px solid var(--border-color); padding-bo
   h2 { font-size: 1.75rem; }
 }
 
-a { color: var(--brand-primary); text-decoration: none; transition: 0.2s;
+a { color: var(--brand-primary); text-decoration: underline; text-underline-offset: 2px; transition: 0.2s;
 }
 
 a:hover { color: #c2410c; }
@@ -162,7 +162,7 @@ main {
 .calculator-result { margin-top: var(--space-sm); padding: var(--space-sm); background: #ffffff; border: 2px dashed #93c5fd; box-shadow: none; border-radius: var(--radius-md); text-align: center; }
 .total-price { font-size: 1.75rem; font-weight: 800; color: var(--brand-primary); letter-spacing: -1px; margin: 0.25rem 0; }
 @media(min-width:640px) { .total-price { font-size: 2.25rem; } }
-.btn-wa { display: block; width: 100%; padding: 0.85rem; margin-top: 0.75rem; background: #25D366; color: #fff; font-weight: 700; border: none; border-radius: var(--radius-md); cursor: pointer; font-size: 1rem; transition: 0.2s; box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2); }
+.btn-wa { display: block; width: 100%; padding: 0.85rem; margin-top: 0.75rem; background: #15803d; color: #fff; font-weight: 700; border: none; border-radius: var(--radius-md); cursor: pointer; font-size: 1rem; transition: 0.2s; box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2); }
 .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(37, 211, 102, 0.3); }
 
 /* 5. PRICE TABLE */
@@ -369,7 +369,7 @@ main {
 
 /* UTILITIES & WIDGETS */
 .whatsapp-float {
-  position: fixed; bottom: 1.5rem; right: 1.5rem; background: #25d366; color: #fff;
+  position: fixed; bottom: 1.5rem; right: 1.5rem; background: #15803d; color: #fff;
   width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
   box-shadow: 0 4px 12px rgba(0,0,0, 0.15); z-index: 50; font-size: 1.75rem; transition: 0.3s;
 }
