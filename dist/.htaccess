@@ -1,78 +1,73 @@
-# Agung Perkasa Borepile - redirect URL lama ke halaman Astro (.html)
-# Menggantikan stub meta-refresh; hosting: Hostinger (Apache/LiteSpeed)
-
-# No cache - force fresh load
-<IfModule mod_headers.c>
-  Header set Cache-Control "no-cache, no-store, must-revalidate"
-  Header set Pragma "no-cache"
-  Header set Expires "0"
-</IfModule>
+# Agung Perkasa Borepile - .htaccess untuk Hostinger (Apache/LiteSpeed)
+# Redirect URL lama (folder-style) ke URL baru (.html)
 
 RewriteEngine On
 
-# Beranda: /index.html -> /
+# ============================================================
+# GENERIC RULE: Kalau ada request ke folder (berakhiran /)
+# dan file .html-nya ada, redirect ke .html
+# Ini menangkap SEMUA kasus tanpa perlu tulis satu-satu
+# ============================================================
+
+# 1. Halaman root: /jasa/ -> /jasa.html, /alat/ -> /alat.html, dll
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^/]+)/?$ /$1.html [R=301,L]
+
+# 2. Subfolder level 1: /jasa/bore-pile/ -> /jasa/bore-pile.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1/$2.html -f
+RewriteRule ^([^/]+)/([^/]+)/?$ /$1/$2.html [R=301,L]
+
+# 3. Subfolder level 2: /jasa/bore-pile/jakarta/ -> /jasa/bore-pile/jakarta.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1/$2/$3.html -f
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/?$ /$1/$2/$3.html [R=301,L]
+
+# 4. Subfolder level 3: /harga/bore-pile/30cm/ -> /harga/bore-pile/30cm.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1/$2/$3/$4.html -f
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/?$ /$1/$2/$3/$4.html [R=301,L]
+
+# 5. index.html di subfolder: /jasa/bore-pile/jakarta/index.html -> /jasa/bore-pile/jakarta.html
+RewriteRule ^(.+)/index\.html$ /$1.html [R=301,L]
+
+# 6. /index.html -> / (beranda)
 RewriteRule ^index\.html$ / [R=301,L]
 
-# Halaman kota bore pile (URL lama: /jasa/bore-pile/<kota>/ atau .../index.html)
-RewriteRule ^jasa/bore-pile/jakarta(/index\.html)?/?$ /jasa/bore-pile/jakarta.html [R=301,L]
-RewriteRule ^jasa/bore-pile/bandung(/index\.html)?/?$ /jasa/bore-pile/bandung.html [R=301,L]
-RewriteRule ^jasa/bore-pile/bekasi(/index\.html)?/?$ /jasa/bore-pile/bekasi.html [R=301,L]
-RewriteRule ^jasa/bore-pile/tangerang(/index\.html)?/?$ /jasa/bore-pile/tangerang.html [R=301,L]
-RewriteRule ^jasa/bore-pile/depok(/index\.html)?/?$ /jasa/bore-pile/depok.html [R=301,L]
-RewriteRule ^jasa/bore-pile/bogor(/index\.html)?/?$ /jasa/bore-pile/bogor.html [R=301,L]
-RewriteRule ^jasa/bore-pile/karawang(/index\.html)?/?$ /jasa/bore-pile/karawang.html [R=301,L]
-RewriteRule ^jasa/bore-pile/semarang(/index\.html)?/?$ /jasa/bore-pile/semarang.html [R=301,L]
-RewriteRule ^jasa/bore-pile/surabaya(/index\.html)?/?$ /jasa/bore-pile/surabaya.html [R=301,L]
+# ============================================================
+# KHUSUS: Galeri redirect (URL lama /galeri/ -> /galeri/gallery.html)
+# ============================================================
+RewriteRule ^galeri/?$ /galeri/gallery.html [R=301,L]
 
-# Hub kota
-RewriteRule ^jasa/bore-pile(/index\.html)?/?$ /jasa/bore-pile.html [R=301,L]
+# ============================================================
+# EXTENSIONLESS URLs: Bisa akses tanpa .html
+# Contoh: /jasa/bore-pile/jakarta tetap bisa dibuka
+# ============================================================
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
 
-# Strauss pile Jakarta
-RewriteRule ^jasa/strauss-pile/jakarta(/index\.html)?/?$ /jasa/strauss-pile/jakarta.html [R=301,L]
+# ============================================================
+# PERFORMA & CACHING
+# ============================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
 
-# Halaman induk jasa
-RewriteRule ^jasa(/index\.html)?/?$ /jasa.html [R=301,L]
-
-# Alat & artikel
-RewriteRule ^alat(/index\.html)?/?$ /alat.html [R=301,L]
-RewriteRule ^artikel(/index\.html)?/?$ /artikel.html [R=301,L]
-
-# Alat sub-routes
-RewriteRule ^alat/gawangan(/index\.html)?/?$ /alat/gawangan.html [R=301,L]
-RewriteRule ^alat/mini-crane(/index\.html)?/?$ /alat/mini-crane.html [R=301,L]
-RewriteRule ^alat/strauss-pile(/index\.html)?/?$ /alat/strauss-pile.html [R=301,L]
-
-# Artikel sub-routes
-RewriteRule ^artikel/bore-pile-machine(/index\.html)?/?$ /artikel/bore-pile-machine.html [R=301,L]
-RewriteRule ^artikel/bore-pile-manual(/index\.html)?/?$ /artikel/bore-pile-manual.html [R=301,L]
-RewriteRule ^artikel/bore-pile-vs-strauss-pile(/index\.html)?/?$ /artikel/bore-pile-vs-strauss-pile.html [R=301,L]
-RewriteRule ^artikel/borepile-vs-tiang-pancang(/index\.html)?/?$ /artikel/borepile-vs-tiang-pancang.html [R=301,L]
-RewriteRule ^artikel/perencanaan-borepile(/index\.html)?/?$ /artikel/perencanaan-borepile.html [R=301,L]
-RewriteRule ^artikel/perkuat-pondasi-tanah-lunak(/index\.html)?/?$ /artikel/perkuat-pondasi-tanah-lunak.html [R=301,L]
-RewriteRule ^artikel/pondasi-area-terbatas(/index\.html)?/?$ /artikel/pondasi-area-terbatas.html [R=301,L]
-RewriteRule ^artikel/proses-bore-pile(/index\.html)?/?$ /artikel/proses-bore-pile.html [R=301,L]
-RewriteRule ^artikel/strauss-lokasi-sempit(/index\.html)?/?$ /artikel/strauss-lokasi-sempit.html [R=301,L]
-RewriteRule ^artikel/ukuran-pondasi-bore-pile(/index\.html)?/?$ /artikel/ukuran-pondasi-bore-pile.html [R=301,L]
-
-# Harga
-RewriteRule ^harga/bore-pile-2026(/index\.html)?/?$ /harga/bore-pile-2026.html [R=301,L]
-RewriteRule ^harga/bore-pile/30cm(/index\.html)?/?$ /harga/bore-pile/30cm.html [R=301,L]
-RewriteRule ^harga/bore-pile/40cm(/index\.html)?/?$ /harga/bore-pile/40cm.html [R=301,L]
-RewriteRule ^harga/bore-pile/50cm(/index\.html)?/?$ /harga/bore-pile/50cm.html [R=301,L]
-RewriteRule ^harga/bore-pile/60cm(/index\.html)?/?$ /harga/bore-pile/60cm.html [R=301,L]
-RewriteRule ^harga/bore-pile/80cm(/index\.html)?/?$ /harga/bore-pile/80cm.html [R=301,L]
-
-# Galeri
-RewriteRule ^galeri(/index\.html)?/?$ /galeri/gallery.html [R=301,L]
-RewriteRule ^galeri/gallery(/index\.html)?/?$ /galeri/gallery.html [R=301,L]
-RewriteRule ^galeri/gallery-2(/index\.html)?/?$ /galeri/gallery-2.html [R=301,L]
-
-# Flat-area city pages
-RewriteRule ^jasa/bore-pile-bintaro(/index\.html)?/?$ /jasa/bore-pile-bintaro.html [R=301,L]
-RewriteRule ^jasa/bore-pile-bsd(/index\.html)?/?$ /jasa/bore-pile-bsd.html [R=301,L]
-RewriteRule ^jasa/bore-pile-cibubur(/index\.html)?/?$ /jasa/bore-pile-cibubur.html [R=301,L]
-RewriteRule ^jasa/bore-pile-cikarang(/index\.html)?/?$ /jasa/bore-pile-cikarang.html [R=301,L]
-RewriteRule ^jasa/bore-pile-ciputat(/index\.html)?/?$ /jasa/bore-pile-ciputat.html [R=301,L]
-RewriteRule ^jasa/bore-pile-karawaci(/index\.html)?/?$ /jasa/bore-pile-karawaci.html [R=301,L]
-RewriteRule ^jasa/bore-pile-pamulang(/index\.html)?/?$ /jasa/bore-pile-pamulang.html [R=301,L]
-RewriteRule ^jasa/bore-pile-tangerang-selatan(/index\.html)?/?$ /jasa/bore-pile-tangerang-selatan.html [R=301,L]
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 1 hour"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
