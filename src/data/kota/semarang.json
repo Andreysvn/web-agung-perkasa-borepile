@@ -257,7 +257,7 @@
       "date": "Juni 2026"
     },
     {
-      "href": "/harga/bore-pile-30cm.html",
+      "href": "/harga/bore-pile/30cm.html",
       "image": "/imgs/hasil-lubang-borepile.webp",
       "imageAlt": "Harga bore pile diameter 30cm untuk pondasi rumah",
       "category": "Harga",
@@ -266,7 +266,7 @@
       "date": "Juni 2026"
     },
     {
-      "href": "/jasa/bore-pile-jakarta.html",
+      "href": "/jasa/bore-pile/jakarta.html",
       "image": "/imgs/borepile-dan-truk-molen.webp",
       "imageAlt": "Harga bore pile Jakarta 2026 terbaru",
       "category": "Harga",
@@ -277,24 +277,8 @@
   ],
   "internalLinks": [
     {
-      "href": "/jasa/bore-pile/jakarta.html",
-      "label": "Jakarta"
-    },
-    {
-      "href": "/jasa/bore-pile/bekasi.html",
-      "label": "Bekasi"
-    },
-    {
-      "href": "/jasa/bore-pile/tangerang.html",
-      "label": "Tangerang"
-    },
-    {
-      "href": "/jasa/bore-pile/depok.html",
-      "label": "Depok"
-    },
-    {
-      "href": "/jasa/bore-pile/bogor.html",
-      "label": "Bogor"
+      "href": "/jasa/bore-pile/surabaya.html",
+      "label": "Surabaya"
     },
     {
       "href": "/harga/bore-pile-2026.html",
@@ -306,7 +290,7 @@
   "additionalCosts": [
     {
       "title": "Mobilisasi Alat Bore Pile",
-      "text": "Mesin mini crane: Rp2-3 juta | Strauss pile (bore pile manual): Rp1-1,5 juta."
+      "text": "Mini crane: Rp5-7jt | Strauss pile (bore pile manual): Rp2-3jt. Biaya disesuaikan dengan jarak lokasi proyek."
     },
     {
       "title": "Minimal Order",
@@ -323,7 +307,7 @@
   ],
   "soilReasons": {
     "title": "Mengapa Bore Pile Pilihan Tepat untuk Wilayah Semarang?",
-    "description": "Semarang dikenal dengan kondisi tanahnya yang <strong>lunak dan rawan penurunan (land subsidence)</strong>, terutama di wilayah <a href=\"https://lib.ui.ac.id/detail?id=20238696&lokasi=lokal\" target=\"_blank\" rel=\"noopener noreferrer\">Semarang Utara</a>, <a href=\"https://www.academia.edu/99027747/\" target=\"_blank\" rel=\"noopener noreferrer\">Cengkareng</a>, dan <a href=\"https://iopscience.iop.org/article/10.1088/1755-1315/1374/1/012033\" target=\"_blank\" rel=\"noopener noreferrer\">Pondok Gede</a>. Metode bore pile menjadi solusi pondasi paling tepat karena:",
+    "description": "Wilayah Semarang memiliki kondisi tanah yang <strong>bervariasi dan di beberapa tempat cukup lunak</strong>. Metode bore pile menjadi solusi pondasi paling tepat karena:",
     "points": [
       {
         "title": "Kedalaman hingga 30 meter",
@@ -346,7 +330,7 @@
         "desc": "Bor basah sangat efektif untuk tanah berair atau rawa seperti di Semarang Utara."
       }
     ],
-    "conclusion": "<p>Setiap lokasi memiliki karakteristik tanah yang berbeda. Contohnya seperti <a href=\"https://lib.ui.ac.id/detail?id=20490200&lokasi=lokal\" target=\"_blank\" rel=\"noopener noreferrer\">tanah di Semarang Utara yang sebagian berpasir</a>, kami dapat menyesuaikan teknik bore pile untuk memastikan keberhasilan proyek di setiap wilayah di Semarang.</p><p><strong>Portofolio kami di Semarang:</strong> Kami pernah mengerjakan bore pile di gudang Dunex Sunter, selain itu kami juga sering mengerjakan proyek rumah, ruko, gedung dan bangunan lain di Seluruh Wilayah Semarang, seperti PIK, PIK 2, Puri Kembangan, Pondok Indah, Mangga Besar, Cempaka Putih, Kuningan, Sumur Batu, Sunter, dll.</p>"
+    "conclusion": "<p>Setiap lokasi memiliki karakteristik tanah yang berbeda. Kami dapat menyesuaikan teknik bore pile untuk memastikan keberhasilan proyek di setiap wilayah di Semarang.</p><p><strong>Portofolio kami di Semarang:</strong> Kami telah berpengalaman mengerjakan berbagai proyek rumah, ruko, gudang dan bangunan lain di seluruh wilayah Semarang dan sekitarnya.</p>"
   },
   "priceUpdatedAt": "2026-08-19",
   "projectNote": "<strong>Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan. Kecepatan pengerjaan dipengaruhi oleh kondisi lapangan, akses lokasi, karakteristik tanah, dan yang paling penting adalah pasokan air yang cukup untuk metode wash boring.<br><br>Butuh harga khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm.html\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",

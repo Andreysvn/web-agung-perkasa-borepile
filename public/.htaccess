@@ -29,3 +29,43 @@ RewriteRule ^jasa(/index\.html)?/?$ /jasa.html [R=301,L]
 # Alat & artikel
 RewriteRule ^alat(/index\.html)?/?$ /alat.html [R=301,L]
 RewriteRule ^artikel(/index\.html)?/?$ /artikel.html [R=301,L]
+
+# Alat sub-routes
+RewriteRule ^alat/gawangan(/index\.html)?/?$ /alat/gawangan.html [R=301,L]
+RewriteRule ^alat/mini-crane(/index\.html)?/?$ /alat/mini-crane.html [R=301,L]
+RewriteRule ^alat/strauss-pile(/index\.html)?/?$ /alat/strauss-pile.html [R=301,L]
+
+# Artikel sub-routes
+RewriteRule ^artikel/bore-pile-machine(/index\.html)?/?$ /artikel/bore-pile-machine.html [R=301,L]
+RewriteRule ^artikel/bore-pile-manual(/index\.html)?/?$ /artikel/bore-pile-manual.html [R=301,L]
+RewriteRule ^artikel/bore-pile-vs-strauss-pile(/index\.html)?/?$ /artikel/bore-pile-vs-strauss-pile.html [R=301,L]
+RewriteRule ^artikel/borepile-vs-tiang-pancang(/index\.html)?/?$ /artikel/borepile-vs-tiang-pancang.html [R=301,L]
+RewriteRule ^artikel/perencanaan-borepile(/index\.html)?/?$ /artikel/perencanaan-borepile.html [R=301,L]
+RewriteRule ^artikel/perkuat-pondasi-tanah-lunak(/index\.html)?/?$ /artikel/perkuat-pondasi-tanah-lunak.html [R=301,L]
+RewriteRule ^artikel/pondasi-area-terbatas(/index\.html)?/?$ /artikel/pondasi-area-terbatas.html [R=301,L]
+RewriteRule ^artikel/proses-bore-pile(/index\.html)?/?$ /artikel/proses-bore-pile.html [R=301,L]
+RewriteRule ^artikel/strauss-lokasi-sempit(/index\.html)?/?$ /artikel/strauss-lokasi-sempit.html [R=301,L]
+RewriteRule ^artikel/ukuran-pondasi-bore-pile(/index\.html)?/?$ /artikel/ukuran-pondasi-bore-pile.html [R=301,L]
+
+# Harga
+RewriteRule ^harga/bore-pile-2026(/index\.html)?/?$ /harga/bore-pile-2026.html [R=301,L]
+RewriteRule ^harga/bore-pile/30cm(/index\.html)?/?$ /harga/bore-pile/30cm.html [R=301,L]
+RewriteRule ^harga/bore-pile/40cm(/index\.html)?/?$ /harga/bore-pile/40cm.html [R=301,L]
+RewriteRule ^harga/bore-pile/50cm(/index\.html)?/?$ /harga/bore-pile/50cm.html [R=301,L]
+RewriteRule ^harga/bore-pile/60cm(/index\.html)?/?$ /harga/bore-pile/60cm.html [R=301,L]
+RewriteRule ^harga/bore-pile/80cm(/index\.html)?/?$ /harga/bore-pile/80cm.html [R=301,L]
+
+# Galeri
+RewriteRule ^galeri(/index\.html)?/?$ /galeri/gallery.html [R=301,L]
+RewriteRule ^galeri/gallery(/index\.html)?/?$ /galeri/gallery.html [R=301,L]
+RewriteRule ^galeri/gallery-2(/index\.html)?/?$ /galeri/gallery-2.html [R=301,L]
+
+# Flat-area city pages
+RewriteRule ^jasa/bore-pile-bintaro(/index\.html)?/?$ /jasa/bore-pile-bintaro.html [R=301,L]
+RewriteRule ^jasa/bore-pile-bsd(/index\.html)?/?$ /jasa/bore-pile-bsd.html [R=301,L]
+RewriteRule ^jasa/bore-pile-cibubur(/index\.html)?/?$ /jasa/bore-pile-cibubur.html [R=301,L]
+RewriteRule ^jasa/bore-pile-cikarang(/index\.html)?/?$ /jasa/bore-pile-cikarang.html [R=301,L]
+RewriteRule ^jasa/bore-pile-ciputat(/index\.html)?/?$ /jasa/bore-pile-ciputat.html [R=301,L]
+RewriteRule ^jasa/bore-pile-karawaci(/index\.html)?/?$ /jasa/bore-pile-karawaci.html [R=301,L]
+RewriteRule ^jasa/bore-pile-pamulang(/index\.html)?/?$ /jasa/bore-pile-pamulang.html [R=301,L]
+RewriteRule ^jasa/bore-pile-tangerang-selatan(/index\.html)?/?$ /jasa/bore-pile-tangerang-selatan.html [R=301,L]

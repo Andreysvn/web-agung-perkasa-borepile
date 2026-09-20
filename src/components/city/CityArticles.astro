@@ -27,7 +27,7 @@ const { articles } = Astro.props;
                 <article class="article-card">
                     <a href={article.href} class="article-link">
                         <div class="article-image">
-                            <img src={article.image} alt={article.imageAlt} loading="lazy">
+                            <img src={article.image} alt={article.imageAlt} width="400" height="250" loading="lazy">
                         </div>
                         <div class="article-content">
                             <h3>{article.title}</h3>

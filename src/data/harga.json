@@ -38,7 +38,7 @@
   "manual": [
     {
       "diameter": 20,
-      "price": 70000,
+      "price": 75000,
       "maxDepth": 10,
       "suitable": "Area sangat sempit"
     },
@@ -90,19 +90,19 @@
   "materialPackages": [
     {
       "diameter": 30,
-      "price": 300000,
+      "price": 0,
       "includes": "Jasa bor, perakitan besi, dan pengecoran beton. Besi tulangan 5D13 SNI, sengkang D8, beton mix K250",
       "minOrder": "200m untuk mesin, dan 100m untuk manual"
     },
     {
       "diameter": 40,
-      "price": 350000,
+      "price": 0,
       "includes": "Jasa bor, perakitan besi, dan pengecoran beton. Besi tulangan 6D13 SNI, sengkang D8, beton mix K250",
       "minOrder": "200m untuk mesin, dan 100m untuk manual"
     },
     {
       "diameter": 50,
-      "price": 450000,
+      "price": 0,
       "includes": "Jasa bor, perakitan besi, dan pengecoran beton. Besi tulangan 8D13 SNI, sengkang D8, beton mix K250",
       "minOrder": "200m untuk mesin"
     }

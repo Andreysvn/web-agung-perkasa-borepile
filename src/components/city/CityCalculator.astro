@@ -33,8 +33,8 @@ const { cityName = '', defaultDiameter = 30 } = Astro.props;
             <div class="calculator-form-group">
                 <label for="diameterSelect">Diameter (cm)</label>
                 <select id="diameterSelect">
-                    {[30, 40, 50, 60, 80, 90, 100, 110].map(dia => (
-                        <option value={dia} selected={dia === defaultDiameter}>{dia} cm</option>
+                    {pricing.mesin.map(item => (
+                        <option value={item.diameter} selected={item.diameter === defaultDiameter}>{item.diameter} cm</option>
                     ))}
                 </select>
             </div>
@@ -72,5 +72,3 @@ const { cityName = '', defaultDiameter = 30 } = Astro.props;
 <script define:vars={{ pricing }}>
     window.__PRICING__ = pricing;
 </script>
-<script src="/js/jasa.js" defer></script>
-<script src="/js/harga-calculator.js" defer></script>

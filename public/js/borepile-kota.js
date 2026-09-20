@@ -206,26 +206,18 @@
     const methodBtns = document.querySelectorAll('.method-btn');
     const machineSelect = document.getElementById('machineSelect');
 
-    // ===== HARGA PER METER =====
-    const hargaMesin = {
-        30: 120000,
-        40: 135000,
-        50: 190000,
-        60: 0,
-        80: 0,
-    };
-
-    const hargaManual = {
-        20: 75000,
-        25: 85000,
-        30: 100000,
-        40: 120000,
-    };
-
+    // ===== HARGA PER METER (baca dari harga.json via window.__PRICING__) =====
+    const pricing = window.__PRICING__;
+    const hargaMesin = pricing
+        ? Object.fromEntries(pricing.mesin.map(item => [item.diameter, item.price]))
+        : { 30: 120000, 40: 135000, 50: 190000, 60: 0, 80: 0 };
+    const hargaManual = pricing
+        ? Object.fromEntries(pricing.manual.map(item => [item.diameter, item.price]))
+        : { 20: 75000, 25: 85000, 30: 100000, 40: 120000 };
 
     // ===== DIAMETER OPTIONS =====
-    const diameterMesin = [30, 40, 50, 60, 80];
-    const diameterManual = [20, 25, 30, 40];
+    const diameterMesin = pricing ? pricing.mesin.map(item => item.diameter) : [30, 40, 50, 60, 80];
+    const diameterManual = pricing ? pricing.manual.map(item => item.diameter) : [20, 25, 30, 40];
 
     // ===== STATE =====
     let currentMethod = 'mesin';
@@ -328,6 +320,7 @@
 
     function getMinimalOrder() {
         if (currentMethod === 'manual' || currentMachine === 'strauss') return 100;
+        if (pricing && pricing.equipment && pricing.equipment[currentMachine]) return pricing.equipment[currentMachine].minOrder;
         return 200;
     }
 
@@ -335,9 +328,8 @@
     // ===== KECEPATAN PER TITIK =====
     // ============================================================
     function getKecepatanPerHari() {
-        if (currentMethod === 'manual' || currentMachine === 'strauss') {
-            return { min: 2, max: 3 };
-        }
+        if (pricing && pricing.equipment && pricing.equipment[currentMachine]) return pricing.equipment[currentMachine].speed;
+        if (currentMethod === 'manual' || currentMachine === 'strauss') return { min: 2, max: 3 };
         return { min: 3, max: 4 };
     }
 
@@ -578,21 +570,28 @@
     };
 
     // ===== 9. INIT =====
-    currentMethod = 'mesin';
-    currentMachine = 'minicrane';
+    const activeBtn = document.querySelector('.method-btn.active');
+    if (activeBtn && activeBtn.dataset.method) {
+        currentMethod = activeBtn.dataset.method;
+    } else {
+        currentMethod = 'mesin';
+    }
+    currentMachine = currentMethod === 'manual' ? 'strauss' : 'minicrane';
     
     if (machineSelect) {
-        machineSelect.value = 'minicrane';
+        machineSelect.value = currentMachine;
     }
     
-    methodBtns.forEach(function(b) {
-        b.classList.remove('active');
-        b.setAttribute('aria-pressed', 'false');
-        if (b.dataset.method === 'mesin') {
-            b.classList.add('active');
-            b.setAttribute('aria-pressed', 'true');
-        }
-    });
+    if (!activeBtn || activeBtn.dataset.method !== currentMethod) {
+        methodBtns.forEach(function(b) {
+            b.classList.remove('active');
+            b.setAttribute('aria-pressed', 'false');
+            if (b.dataset.method === currentMethod) {
+                b.classList.add('active');
+                b.setAttribute('aria-pressed', 'true');
+            }
+        });
+    }
 
     updateUI();
 

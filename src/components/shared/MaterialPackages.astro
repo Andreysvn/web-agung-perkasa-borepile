@@ -1,0 +1,42 @@
+---
+interface Props {
+    packages: Array<{
+        diameter: number;
+        price: number;
+        includes: string;
+        minOrder: string;
+    }>;
+}
+
+const { packages } = Astro.props;
+
+const formatPrice = (price: number) => {
+    return price > 0 ? price.toLocaleString('id-ID') : 'Hubungi<br>Kami';
+};
+---
+
+{packages && packages.length > 0 && (
+<section aria-labelledby="material-heading">
+    <h2 id="material-heading" class="section-heading">Paket Material Bore Pile (Jasa + Material)</h2>
+    <p>Berikut <strong>paket harga termasuk material</strong> (besi tulangan & beton) serta jasa pengeboran, perakitan besi, dan pengecoran.</p>
+
+    <div class="table-responsive">
+        <table class="material-table">
+            <caption>Paket harga bore pile termasuk material per meter</caption>
+            <thead>
+                <tr><th>Diameter</th><th>Harga Paket (Rp/m)</th><th>Termasuk</th><th>Minimal Order</th></tr>
+            </thead>
+            <tbody>
+                {packages.map((pkg) => (
+                    <tr>
+                        <td>{pkg.diameter} cm</td>
+                        <td set:html={`<strong>${formatPrice(pkg.price)}</strong>`}></td>
+                        <td>{pkg.includes}</td>
+                        <td>{pkg.minOrder}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    </div>
+</section>
+)}

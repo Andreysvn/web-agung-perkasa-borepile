@@ -1,24 +1,24 @@
 ---
+import pricing from '../../data/harga.json';
+
 interface Props {
-    localPrices: {
-        mesin: Array<{ diameter: string; price: number; depth: string; suitable: string }>;
-        manual: Array<{ diameter: string; price: number; depth: string; suitable: string }>;
-    };
     cityName: string;
-    highlightDiameter?: string;
+    highlightDiameter?: number;
 }
 
-const { localPrices, cityName, highlightDiameter = '' } = Astro.props;
+const { cityName, highlightDiameter } = Astro.props;
+
+const currentYear = new Date().getFullYear();
 
 const formatPrice = (price: number) => {
     return price > 0 ? price.toLocaleString('id-ID') : 'Hubungi Kami';
 };
 
-const isHighlighted = (d: string) => d === highlightDiameter;
+const isHighlighted = (d: number) => d === highlightDiameter;
 ---
 
 <section aria-labelledby="table-heading">
-    <h2 id="table-heading" class="section-heading">Tabel Harga Bore Pile {cityName} 2026 (Jasa Bor Saja)</h2>
+    <h2 id="table-heading" class="section-heading">Tabel Harga Bore Pile {cityName} {currentYear} (Jasa Bor Saja)</h2>
     <p>Berikut <strong>harga JASA PENGEBORAN SAJA</strong> (belum termasuk material beton & besi) untuk wilayah {cityName} dan sekitarnya. Kedalaman pengeboran bergantung pada diameter dan kondisi lapisan tanah, pastikan cek sondir tanah dahulu agar mengetahui kedalaman yang tepat untuk pengeboran hingga mencapai tanah keras.</p>
 
     <h3>Bore Pile Mesin (Mini Crane & Gawangan)</h3>
@@ -29,11 +29,11 @@ const isHighlighted = (d: string) => d === highlightDiameter;
                 <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
             </thead>
             <tbody>
-                {localPrices.mesin.map((item) => (
+                {pricing.mesin.map((item) => (
                     <tr class={isHighlighted(item.diameter) ? 'row-highlight' : ''}>
                         <td>{item.diameter} cm</td>
                         <td><strong>{formatPrice(item.price)}</strong></td>
-                        <td>{item.depth}</td>
+                        <td>{item.maxDepth} meter</td>
                         <td>{item.suitable}</td>
                     </tr>
                 ))}
@@ -49,11 +49,11 @@ const isHighlighted = (d: string) => d === highlightDiameter;
                 <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
             </thead>
             <tbody>
-                {localPrices.manual.map((item) => (
+                {pricing.manual.map((item) => (
                     <tr class={isHighlighted(item.diameter) ? 'row-highlight' : ''}>
                         <td>{item.diameter} cm</td>
                         <td><strong>{formatPrice(item.price)}</strong></td>
-                        <td>{item.depth}</td>
+                        <td>{item.maxDepth} meter</td>
                         <td>{item.suitable}</td>
                     </tr>
                 ))}

@@ -28,7 +28,7 @@ const { projects, cityName, note } = Astro.props;
             <div class="project-row">
                 {project.hasImage && project.image && (
                     <div class="project-img">
-                        <div class="project-img-wrapper"><img src={project.image} alt={project.imageAlt || ''} loading="lazy" data-lightbox="true" style="cursor: pointer;" title="Klik untuk memperbesar"></div>
+                        <div class="project-img-wrapper"><img src={project.image} alt={project.imageAlt || ''} loading="lazy" width="400" height="300" data-lightbox="true" style="cursor: pointer;" title="Klik untuk memperbesar"></div>
                         {project.imageCaption && (
                             <div class="project-caption">{project.imageCaption}</div>
                         )}

@@ -1,19 +1,21 @@
 ---
+import config from '../../data/config.json';
+
 interface Props {
     cityName: string;
     mapsNote?: string;
 }
 
 const { cityName, mapsNote } = Astro.props;
+const { address, maps } = config.company;
 ---
 
 <div class="maps-container">
     <div class="maps-card">
         <h3 class="maps-title">📍 Lokasi Kami di {cityName}</h3>
         <p class="maps-address">
-            <strong>Agung Perkasa Borepile</strong><br>
-            Jl. Sunter Muara II, RT.17/RW.05, Sunter Agung, Kec. Tj. Priok,<br>
-            Jakarta Utara, DKI Jakarta 14350
+            <strong>{config.company.name}</strong><br>
+            {address}
         </p>
         {mapsNote && <p>{mapsNote}</p>}
         <div class="maps-embed-wrapper">
@@ -25,10 +27,10 @@ const { cityName, mapsNote } = Astro.props;
                 allowfullscreen="" 
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade"
-                title="Google Maps Lokasi Agung Perkasa Borepile">
+                title={`Google Maps Lokasi ${config.company.name}`}>
             </iframe>
         </div>
-        <a href="https://maps.google.com/?q=Agung+Perkasa+Bore+Pile" 
+        <a href={maps} 
            target="_blank" 
            rel="noopener noreferrer" 
            class="maps-btn">

@@ -1,5 +1,15 @@
 ---
+interface Props {
+    title?: string;
+    description?: string;
+}
+
+const { 
+    title = "Komitmen & Garansi Mutu",
+    description = "Kami memberikan garansi penuh atas kualitas dalam pengerjaan proyek. Kami menjamin kualitas terbaik karena didukung oleh tim ahli kami yang sangat berpengalaman membuat pondasi dalam (khususnya bore pile)."
+} = Astro.props;
 ---
+
 <style>
     .guarantee-box {
         display: flex;
@@ -50,7 +60,7 @@
         </svg>
     </div>
     <div class="guarantee-content">
-        <h3>Komitmen & Garansi Mutu</h3>
-        <p>Kami memberikan garansi penuh atas kualitas dalam pengerjaan proyek. Kami menjamin kualitas terbaik karena didukung oleh tim ahli kami yang sangat berpengalaman membuat pondasi dalam (khususnya bore pile).</p>
+        <h3>{title}</h3>
+        <p>{description}</p>
     </div>
 </div>

@@ -107,7 +107,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <h1 class="page-title">Jasa & Harga Strauss Pile Jakarta 2026 Per Meter (Bore Pile Manual)</h1>
             
             <div class="page-meta">
-                <span>Update: 07 Juli 2026</span> |
+                <span>Update: 20 Sep 2026</span> |
                 <span>Agung Perkasa</span> |
                 <span>📍 Jakarta & Sekitarnya</span>
             </div>
@@ -142,8 +142,8 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     
                     <div class="form-row">
                         <div class="calculator-form-group">
-                            <label for="diameterSelectManual">Diameter (cm)</label>
-                            <select id="diameterSelectManual">
+                            <label for="diameterSelect">Diameter (cm)</label>
+                            <select id="diameterSelect">
                                 <option value="20">20 cm</option>
                                 <option value="25">25 cm</option>
                                 <option value="30" selected>30 cm</option>
@@ -151,32 +151,32 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                             </select>
                         </div>
                         <div class="calculator-form-group">
-                            <label for="priceInputManual">Harga Jasa per Meter (Rp)</label>
-                            <input type="text" id="priceInputManual" inputmode="numeric" placeholder="Kosongkan untuk harga standar" value="">
+                            <label for="priceInput">Harga Jasa per Meter (Rp)</label>
+                            <input type="text" id="priceInput" inputmode="numeric" placeholder="Kosongkan untuk harga standar" value="">
                             <div class="price-hint">*Kosongkan untuk harga standar tabel</div>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="calculator-form-group">
-                            <label for="depthInputManual">Kedalaman (meter)</label>
-                            <input type="text" id="depthInputManual" inputmode="numeric" placeholder="Contoh: 9" value="9">
+                            <label for="depthInput">Kedalaman (meter)</label>
+                            <input type="text" id="depthInput" inputmode="numeric" placeholder="Contoh: 9" value="9">
                         </div>
                         <div class="calculator-form-group">
-                            <label for="pointsInputManual">Jumlah Titik</label>
-                            <input type="number" id="pointsInputManual" value="12" min="1" max="500" step="1">
+                            <label for="pointsInput">Jumlah Titik</label>
+                            <input type="number" id="pointsInput" value="12" min="1" max="500" step="1">
                         </div>
                     </div>
                     
                     <div class="calculator-result" aria-live="polite">
                         <p class="result-label">Estimasi Total Biaya JASA BOR</p>
-                        <div class="total-price" id="totalPriceManual">Rp 0</div>
-                        <div class="detail-price" id="detailPriceManual"></div>
-                        <div class="estimation-time" id="estimationTimeManual">Estimasi waktu: -</div>
-                        <div class="order-info" id="orderInfoManual"></div>
+                        <div class="total-price" id="totalPrice">Rp 0</div>
+                        <div class="detail-price" id="detailPrice"></div>
+                        <div class="estimation-time" id="estimationTime">Estimasi waktu: -</div>
+                        <div class="order-info" id="orderInfo"></div>
                     </div>
                     
-                    <button onclick="sendToWAManual()" class="btn-wa" aria-label="Konsultasikan ke WhatsApp">Konsultasikan ke WhatsApp</button>
+                    <button onclick="sendToWA()" class="btn-wa" aria-label="Konsultasikan ke WhatsApp">Konsultasikan ke WhatsApp</button>
                     <div class="calculator-note">*Estimasi untuk jasa pengeboran saja (belum termasuk material beton & besi). Minimal order: 100m. Di bawah itu bisa hubungi admin kami untuk penawaran lebih lanjut.</div>
                 </div>
             </section>
@@ -207,9 +207,9 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
 
             <!-- ===== FAKTOR HARGA ===== -->
             <section aria-labelledby="factors-heading">
-                <h2 id="factors-heading" class="section-heading">Faktor yang Mempengaruhi Harga Strauss Pile Jakarta 2026</h2>
+                <h2 id="factors-heading" class="section-heading">Faktor yang perlu diperhatikan untuk Jasa Strauss Pile Jakarta</h2>
 
-                <p><strong>Harga Strauss Pile Jakarta tidak sama untuk setiap proyek.</strong> Berikut 6 faktor utama yang menyebabkan perbedaan biaya:</p>
+                <p><strong>Harga Strauss Pile Jakarta tidak sama untuk setiap proyek.</strong> Berikut 6 faktor utama yang perlu diperhatikan:</p>
 
                 <div class="info-grid">
                     <div class="info-card">
@@ -218,11 +218,11 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </div>
                     <div class="info-card">
                         <h3>2. Kondisi Tanah Jakarta</h3>
-                        <p>Tanah lunak khas Jakarta seperti bekas rawa atau sawah (banyak ditemukan di Jakarta Utara, Cengkareng, Pondok Gede) membutuhkan pengeboran lebih dalam hingga tanah keras.</p>
+                        <p>Tanah lunak khas Jakarta seperti bekas rawa atau sawah (banyak ditemukan di Jakarta Utara, Cengkareng, Pondok Gede) membutuhkan pengeboran lebih dalam hingga tanah keras, disarankan menggunakan bore pile mesin yg menjangkau pengeboran hingga 25 meter.</p>
                     </div>
                     <div class="info-card">
                         <h3>3. Jarak Proyek Dari Gudang</h3>
-                        <p>Biaya mobilisasi alat disesuaikan sesuai jarak dari gudang kami di Jakarta.</p>
+                        <p>Biaya mobilisasi alat disesuaikan sesuai jarak dari lokasi kami di Jakarta.</p>
                     </div>
                     <div class="info-card">
                         <h3>4. Volume Pekerjaan</h3>
@@ -230,7 +230,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </div>
                     <div class="info-card">
                         <h3>5. Akses Lokasi</h3>
-                        <p>Strauss Pile cocok untuk lahan sempit dan gang yang tidak bisa dijangkau mesin. Semakin sulit aksesnya, biaya bisa berbeda.</p>
+                        <p>Strauss Pile cocok untuk lahan sempit dan gang yang tidak bisa dijangkau mesin mini crane yang memerlukan mobilisasi menggunakan truk, strauss pile bisa mobilisasi menggunkan motor.</p>
                     </div>
                     <div class="info-card">
                         <h3>6. Metode Pengeboran</h3>
@@ -239,7 +239,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                 </div>
 
                 <div class="sondir-note">
-                    <strong>Untuk proyek Strauss Pile di Jakarta:</strong> Untuk mendapatkan penawaran harga terbaik, lakukan pengecekan data sondir tanah Jakarta terlebih dahulu agar kedalaman pengeboran bisa ditentukan secara tepat. Konsultasikan proyek Strauss Pile Jakarta Anda dengan tim teknis kami untuk penawaran harga yang sesuai.
+                    <strong>Untuk proyek Strauss Pile di Jakarta:</strong> Untuk mendapatkan penawaran harga terbaik, lakukan pengecekan data sondir tanah Jakarta terlebih dahulu agar kedalaman pengeboran bisa ditentukan secara tepat. Konsultasikan proyek Strauss Pile Jakarta Anda dengan tim kami untuk penawaran harga yang sesuai.
                 </div>
             </section>
 
@@ -247,7 +247,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
             <section>
                 <h2 class="section-heading-sm">Estimasi Biaya Tambahan di Jakarta</h2>
                 <div class="info-grid">
-                    <div class="info-card"><h3>🚛 Mobilisasi Alat</h3><p>Strauss Pile (bore pile manual): Rp1jt - Rp1.5jt</p></div>
+                    <div class="info-card"><h3>Mobilisasi Alat</h3><p>Strauss Pile (bore pile manual): Rp1jt - Rp1.5jt</p></div>
                     <div class="info-card"><h3>Minimal Order</h3><p>Strauss Pile: 100 meter</p></div>
                     <div class="info-card"><h3>Data Sondir</h3><p>Sangat wajib untuk menentukan kedalaman pengeboran yang tepat hingga mencapai tanah keras</p></div>
                     <div class="info-card"><h3>Keunggulan</h3><p>Dry boring (bor kering) - tidak butuh air & biaya sedot lumpur</p></div>
@@ -289,17 +289,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                              width="400" height="300">
                         <div class="proyek-jakarta-caption">
                             <span class="proyek-jakarta-label">Kelapa Gading, Jakarta Utara</span>
-                            <span class="proyek-jakarta-detail">Strauss Pile Ø30cm, kedalaman 9m, 12 titik</span>
-                        </div>
-                    </div>
-                    <div class="proyek-jakarta-item">
-                        <img src="/imgs/borepile-dekat-dinding.webp" 
-                             alt="Proses Strauss Pile di lahan sempit dekat dinding Jakarta" 
-                             loading="lazy"
-                             width="400" height="300">
-                        <div class="proyek-jakarta-caption">
-                            <span class="proyek-jakarta-label">Lahan Sempit Jakarta</span>
-                            <span class="proyek-jakarta-detail">Strauss Pile solusi untuk area yang tidak bisa dijangkau mesin</span>
+                            <span class="proyek-jakarta-detail">Strauss Pile Ø30cm, kedalaman 4m, 29 titik</span>
                         </div>
                     </div>
                 </div>
@@ -314,8 +304,8 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                 <h2 class="section-heading-center">Mengapa Strauss Pile Pilihan Tepat untuk Lahan Sempit di Jakarta?</h2>
                 <p>Jakarta memiliki banyak area dengan <strong>lahan sempit dan akses terbatas</strong>, terutama di daerah padat penduduk. Strauss Pile (bore pile manual) menjadi solusi pondasi paling tepat karena:</p>
                 <ul>
-                    <li><strong>Mobilisasi fleksibel</strong> - bisa menggunakan motor, masuk gang sempit</li>
-                    <li><strong>Dry boring (bor kering)</strong> - tidak butuh air, tidak ada biaya sedot lumpur</li>
+                    <li><strong>Mobilisasi fleksibel</strong> - bisa menggunakan motor untuk masuk ke gang sempit</li>
+                    <li><strong>Dry boring (bor kering)</strong> - tidak butuh air dalam proses pengeboran, tidak memerlukan mobil sedot lumpur (tanah hasil pengeboran diurus sendiri)</li>
                     <li><strong>Minim getaran</strong> - aman untuk bangunan di sekitar</li>
                     <li><strong>Biaya lebih terjangkau</strong> - mulai Rp75.000/m</li>
                     <li><strong>Cocok untuk rumah 1-2 lantai</strong> - diameter 20-40cm</li>

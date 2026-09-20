@@ -84,8 +84,6 @@
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
-
-    <!-- ===== AREA JABODETABEK ===== -->
     <url>
         <loc>https://agungperkasaborepile.com/jasa/bore-pile-cibubur.html</loc>
         <lastmod>2026-08-30</lastmod>
@@ -175,7 +173,7 @@
         <priority>0.85</priority>
     </url>
 
-    <!-- ===== GALERI & ALAT ===== -->
+    <!-- ===== GALERI ===== -->
     <url>
         <loc>https://agungperkasaborepile.com/galeri/gallery.html</loc>
         <lastmod>2026-08-30</lastmod>
@@ -188,14 +186,99 @@
         <changefreq>yearly</changefreq>
         <priority>0.60</priority>
     </url>
+
+    <!-- ===== ALAT ===== -->
     <url>
         <loc>https://agungperkasaborepile.com/alat.html</loc>
         <lastmod>2026-08-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.70</priority>
     </url>
-    
-    
-    
+    <url>
+        <loc>https://agungperkasaborepile.com/alat/gawangan.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
+    <url>
+        <loc>https://agungperkasaborepile.com/alat/mini-crane.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
+    <url>
+        <loc>https://agungperkasaborepile.com/alat/strauss-pile.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
+
+    <!-- ===== ARTIKEL ===== -->
+    <url>
+        <loc>https://agungperkasaborepile.com/artikel.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://agungperkasaborepile.com/artikel/bore-pile-vs-strauss-pile.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://agungperkasaborepile.com/artikel/borepile-vs-tiang-pancang.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://agungperkasaborepile.com/artikel/bore-pile-manual.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://agungperkasaborepile.com/artikel/bore-pile-machine.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://agungperkasaborepile.com/artikel/proses-bore-pile.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://agungperkasaborepile.com/artikel/perencanaan-borepile.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://agungperkasaborepile.com/artikel/ukuran-pondasi-bore-pile.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://agungperkasaborepile.com/artikel/strauss-lokasi-sempit.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://agungperkasaborepile.com/artikel/pondasi-area-terbatas.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://agungperkasaborepile.com/artikel/perkuat-pondasi-tanah-lunak.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
 
 </urlset>

@@ -1,4 +1,6 @@
 ---
+import config from '../../data/config.json';
+
 interface Props {
     equipment: {
         description?: string;
@@ -8,7 +10,6 @@ interface Props {
             description?: string;
             image?: string;
             imageAlt?: string;
-            iconFallback?: string;
         }>;
     };
     cityName: string;
@@ -18,13 +19,13 @@ const { equipment, cityName } = Astro.props;
 ---
 
 <h3 class="equip-title">Alat yang Kami gunakan di lapangan</h3>
-<p class="equip-sub">Kami memiliki beberapa alat untuk pekerjaan bore pile, antara lain:</p>
+<p class="equip-sub">{equipment.description || `Kami memiliki beberapa alat untuk pekerjaan bore pile, antara lain:`}</p>
 
 <div class="equip-grid">
     {equipment.items.map((item) => (
         <div class="equip-item">
             {item.image ? (
-                <img class="equip-img" src={item.image} alt={item.imageAlt || item.name} loading="lazy" />
+                <img class="equip-img" src={item.image} alt={item.imageAlt || item.name} width="120" height="120" loading="lazy" />
             ) : (
                 <img class="equip-img" src="/imgs/logo-agung-perkasa.webp" alt={`Ikon ${item.name}`} width="80" height="80" loading="lazy" />
             )}
@@ -34,7 +35,7 @@ const { equipment, cityName } = Astro.props;
                     <h4>{item.name}</h4>
                 </div>
                 <p>{item.desc || item.description || ''}</p>
-                <span class="equip-tag">Agung Perkasa</span>
+                <span class="equip-tag">{config.siteName.split(' ')[0]}</span>
             </div>
         </div>
     ))}

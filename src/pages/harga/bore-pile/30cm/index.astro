@@ -47,6 +47,22 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     description={`Harga bore pile diameter 30cm terbaru 2026 seluruh Pulau Jawa. Mesin mulai Rp${m30}/m, manual Rp${mn20}/m. Kalkulator estimasi biaya. Konsultasi gratis.`}
     canonical="https://agungperkasaborepile.com/harga/bore-pile/30cm.html"
     schema={[orgLd, localBusinessLd]}
+    extraCss={["/css/harga-komponen.css"]}
+    faqSchema={[
+        { q: "Apakah bore pile diameter 30cm cukup kuat untuk rumah 2 lantai?", a: "Cukup. Dengan kedalaman 8-12 meter, diameter 30cm mampu menahan beban rumah 2 lantai dengan aman. Pastikan data sondir tanah sudah dicek dan ditentukan kedalaman yang tepat." },
+        { q: "Berapa standar harga jasa bor diameter 30cm?", a: "Standar harga jasa bor diameter 30cm: mesin Rp120.000/m¹, manual Rp85.000/m¹ untuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton (harga belum termasuk material)." },
+        { q: "Bisa pakai bore pile manual untuk diameter 30cm?", a: "Bisa. Bore pile manual bisa melayani diameter 30cm dengan kedalaman maksimal 10 meter. Harga lebih ekonomis, cocok untuk rumah 1 lantai atau proyek kecil dan area terbatas." },
+        { q: "Berapa jumlah titik ideal untuk bore pile diameter 30cm?", a: "Untuk rumah 1-2 lantai standar dengan luas bangunan 100-200m², jumlah titik ideal antara 12-20 titik. Konsultasikan dengan tim teknis kami untuk perhitungan yang lebih akurat sesuai gambar bangunan Anda." },
+        { q: "Apakah melayani area Bekasi, Tangerang, Bogor?", a: "Betul. Kami melayani area Jabodetabek (Jakarta, Bekasi, Bogor, Depok, Tangerang)." },
+        { q: "Apakah melayani area luar Jabodetabek?", a: "Ya. Kami melayani seluruh area pulau Jawa sesuai permintaan proyek, tetapi ada perbedaan harga mobilisasi alat bore pile." },
+        { q: "Berapa kedalaman maksimal bore pile diameter 30cm?", a: "Untuk bore pile mesin (mini crane) diameter 30cm, kedalaman maksimal mencapai 30 meter. Sedangkan untuk bore pile manual (strauss pile) diameter 30cm, kedalaman maksimal 10 meter. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir di lokasi proyek Anda. Semakin lunak tanah, semakin dalam pengeboran yang dibutuhkan hingga mencapai tanah keras." },
+        { q: "Berapa biaya total bore pile 30cm untuk rumah 2 lantai?", a: "Untuk rumah 2 lantai dengan luas 100-200m², biasanya membutuhkan 12-20 titik bore pile diameter 30cm dengan kedalaman 8-12 meter. Estimasi biaya jasa bor (belum termasuk material): Mesin (Mini Crane): Rp120.000/m¹ × 12m × 16 titik = Rp23.040.000 + mobilisasi Rp2-3jt, Manual (Strauss Pile): Rp85.000/m¹ × 8m × 16 titik = Rp10.880.000 + mobilisasi Rp1-1,5jt. Gunakan kalkulator di atas untuk menghitung estimasi biaya proyek Anda secara lebih akurat." }
+    ]}
+    breadcrumbItems={[
+        { name: "Beranda", url: "/" },
+        { name: "Harga", url: "/harga/bore-pile-2026.html" },
+        { name: "Harga Bore Pile Diameter 30cm", url: "/harga/bore-pile/30cm.html" }
+    ]}
 >
     <nav class="breadcrumb" aria-label="Breadcrumb navigasi">
                 <a href="/">Beranda</a>
@@ -242,7 +258,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                 <div class="project-card">
                     <div class="project-row">
                         <div class="project-img">
-                            <img src="/imgs/strauss-pile-pondok-pinang.webp" onerror="this.src='/imgs/logo-agung-perkasa.webp'"
+                            <img src="/imgs/strauss-pile-pondok-pinang.webp" onerror="this.src='/imgs/borepile-depok.webp'; this.onerror=null;"
                                  alt="Proses bore pile manual pakai tenaga manusia (strauss pile) di Pondok Pinang, Jakarta Selatan" 
                                  loading="lazy"
                                  data-lightbox>
@@ -396,7 +412,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
 
                 <div class="proyek-jakarta-box">
                     <p class="proyek-jakarta-heading">Dokumentasi proyek bore pile diameter 30cm:</p>
-                    <div class="proyek-jakarta-grid" style="grid-template-columns: 1fr; max-width: 500px; margin: 0 auto;">
+                    <div class="proyek-jakarta-grid">
 
                         <div class="proyek-jakarta-item">
                             <img src="/imgs/borepile-mangga-besar-jakarta.webp" 
@@ -569,13 +585,6 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
                             </div>
                 </div>
             </section>
-
-            <!-- ===== CTA ===== -->
-           <div class="cta-box">
-                <h3>Butuh bore pile untuk proyek anda?</h3>
-                <p>Dapatkan penawaran harga untuk bore pile diameter 30cm</p>
-                <a href={`https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Saya%20dari%20website%20ingin%20menanyakan%20terkait%20penawaran%20harga%20bore%20pile%20diameter%2030cm.`} class="btn-wa-konsultasi" aria-label="Konsultasi gratis via WhatsApp">Konsultasi Gratis via WA</a>
-          </div>
 
             <!-- ===== INTERNAL LINK ===== -->
             <div class="internal-link-box">

@@ -76,12 +76,12 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Proper wrapper so text doesn't touch edges */
 .container, .blog-container, main { 
-  max-width: 1100px; 
+  max-width: 1200px; 
   margin: 0 auto; 
-  padding: 0 1.25rem; 
+  padding: 0 0.75rem; 
 }
 @media (min-width: 768px) {
-  .container, .blog-container, main { padding: 0 2.5rem; }
+  .container, .blog-container, main { padding: 0 1.5rem; }
 }
 
 /* Offset for fixed navbar */
@@ -175,8 +175,30 @@ main {
   .price-table th, .price-table td { padding: 1rem 0.75rem; }
   .price-table th { font-size: 0.9rem; }
 }
+@media(max-width:639px) {
+  .table-responsive { overflow-x: hidden; }
+  .price-table { font-size: 0.75rem; }
+  .price-table th, .price-table td { padding: 0.5rem 0.35rem; font-size: 0.72rem; }
+  .price-table th { font-size: 0.65rem; }
+}
 .row-highlight { background: #fffbeb; } 
 .price-table tbody tr:hover { background: var(--bg-page); }
+
+/* 5b. MATERIAL TABLE (separate from price-table) */
+.material-table { width: 100%; border-collapse: collapse; text-align: left; background: var(--bg-surface); font-size: 0.85rem; }
+.material-table th, .material-table td { padding: 0.75rem 0.5rem; border-bottom: 1px solid var(--border-color); }
+.material-table th { background: var(--brand-primary); font-weight: 600; color: #ffffff; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.8rem; }
+.material-table tbody tr:hover { background: var(--bg-page); }
+@media (min-width: 768px) {
+  .material-table { font-size: 0.95rem; }
+  .material-table th, .material-table td { padding: 1rem 0.75rem; }
+  .material-table th { font-size: 0.9rem; }
+}
+@media(max-width:639px) {
+  .material-table { font-size: 0.75rem; }
+  .material-table th, .material-table td { padding: 0.5rem 0.35rem; font-size: 0.72rem; }
+  .material-table th { font-size: 0.65rem; }
+}
 
 /* 6. GENERAL GRIDS (Structured Cards) */
 .info-grid, .equip-grid, .portfolio-city-grid, .area-grid, .tips-section ul, .reasons-grid {
@@ -417,25 +439,7 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
-.btn-wa-konsultasi {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.9rem 2.25rem;
-    background: #25D366;
-    color: #fff !important;
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: 1.05rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
-    text-decoration: none;
-}
-.btn-wa-konsultasi:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(37, 211, 102, 0.35);
-    background: #20BA59;
-}
+/* btn-wa-konsultasi defined at end of file */
 
 
 
@@ -479,6 +483,24 @@ main {
 .portfolio-city-link { text-align: center; margin-top: 1rem; font-weight: 500; }
 .portfolio-city-link a { color: var(--brand-primary); text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 0.25rem; }
 .portfolio-city-link a:hover { color: var(--brand-primary); }
+
+/* PORTFOLIO PROYEK JAKARTA (Strauss Pile) */
+.proyek-jakarta-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+@media (min-width: 640px) { .proyek-jakarta-grid { grid-template-columns: repeat(2, 1fr); } }
+.proyek-jakarta-item {
+    border: none; border-radius: var(--radius-lg); background: var(--bg-surface); padding: var(--space-md);
+    transition: 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,.08); display: flex; flex-direction: column;
+}
+.proyek-jakarta-item:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,.12); transform: translateY(-3px); border-color: var(--brand-primary);
+}
+.proyek-jakarta-item img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.proyek-jakarta-caption { padding: 0.75rem; display: flex; flex-direction: column; gap: 0.25rem; }
+.proyek-jakarta-label { font-size: 0.85rem; color: var(--brand-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+.proyek-jakarta-detail { font-size: 0.9rem; color: var(--text-body, #475569); line-height: 1.5; }
+.proyek-jakarta-link { text-align: center; margin-top: 1rem; font-weight: 500; }
+.proyek-jakarta-link a { color: var(--brand-primary, #1a365d); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; }
+.proyek-jakarta-link a:hover { color: var(--brand-primary, #1a365d); }
 
 /* LIGHTBOX OVERLAY */
 .lightbox-overlay {

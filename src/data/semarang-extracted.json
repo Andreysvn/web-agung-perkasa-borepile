@@ -312,7 +312,7 @@
       "date": "Juni 2026"
     },
     {
-      "href": "/harga/bore-pile-30cm.html",
+      "href": "/harga/bore-pile/30cm.html",
       "image": "/imgs/hasil-lubang-borepile.webp",
       "imageAlt": "Harga bore pile diameter 30cm untuk pondasi rumah",
       "category": "Harga",
@@ -321,7 +321,7 @@
       "date": "Juni 2026"
     },
     {
-      "href": "/jasa/bore-pile-jakarta.html",
+      "href": "/jasa/bore-pile/jakarta.html",
       "image": "/imgs/borepile-dan-truk-molen.webp",
       "imageAlt": "Harga bore pile Jakarta 2026 terbaru",
       "category": "Harga",
@@ -332,7 +332,7 @@
   ],
   "articlesViewAllHref": "/artikel/artikel.html",
   "internalLinks": [
-    { "href": "/jasa/bore-pile-jakarta.html", "label": "Jakarta" },
+    { "href": "/jasa/bore-pile/jakarta.html", "label": "Jakarta" },
     { "href": "/jasa/bore-pile-bekasi.html", "label": "Bekasi" },
     { "href": "/jasa/bore-pile-tangerang.html", "label": "Tangerang" },
     { "href": "/jasa/bore-pile-depok.html", "label": "Depok" },

@@ -8,8 +8,8 @@ interface Props {
 
 const { cityName } = Astro.props;
 
-const waMessage = encodeURIComponent(Halo Pak, Saya dari website ingin menanyakan terkait penawaran harga bore pile untuk proyek .);
-const waUrl = https://wa.me/?text=;
+const waMessage = encodeURIComponent(`Halo Pak, Saya dari website ingin menanyakan terkait penawaran harga bore pile untuk proyek ${cityName}.`);
+const waUrl = `https://wa.me/${config.company.whatsapp}?text=${waMessage}`;
 ---
 
 <div class="cta-box">
