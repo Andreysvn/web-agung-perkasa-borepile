@@ -184,16 +184,27 @@ const waLink = `https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Sa
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6GBTKJB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Google Tag Manager (Deferred load) -->
-    <script is:inline>window.addEventListener('load',function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P6GBTKJB');});</script>
+    <script is:inline>window.addEventListener('load',function(){
+let gtmLoaded = false;
+function loadGTM() {
+  if (gtmLoaded) return;
+  gtmLoaded = true;
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+  new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+  "https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,"script","dataLayer","GTM-P6GBTKJB");
+}
+window.addEventListener("scroll", loadGTM, {once: true});
+window.addEventListener("mousemove", loadGTM, {once: true});
+window.addEventListener("touchstart", loadGTM, {once: true});
+setTimeout(loadGTM, 3500);
+});</script>
     <!-- End Google Tag Manager -->
 
     {hasGoogleAds && (
         <Fragment>
-            <script defer src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`}></script>
+            <script is:inline type="text/javascript" define:vars={{googleAdsId}}>let gtagLoaded = false; function loadGtag() { if (gtagLoaded) return; gtagLoaded = true; let script = document.createElement("script"); script.src = "https://www.googletagmanager.com/gtag/js?id=" + googleAdsId; script.async = true; document.head.appendChild(script); } window.addEventListener("scroll", loadGtag, {once: true}); window.addEventListener("mousemove", loadGtag, {once: true}); window.addEventListener("touchstart", loadGtag, {once: true}); setTimeout(loadGtag, 3500); </script>
             <script is:inline define:vars={{ googleAdsId }}>
                 window.addEventListener('load', function() {
                     window.dataLayer = window.dataLayer || [];

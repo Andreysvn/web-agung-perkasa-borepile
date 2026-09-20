@@ -6,3 +6,6 @@ body, .price-hint, .calculator-note, .calculator-box, .section-desc-center, .art
 .btn-wa, .btn-wa-konsultasi, .whatsapp-float { background-color: #15803d !important; color: #ffffff !important; }
 .btn-wa:hover, .btn-wa-konsultasi:hover, .whatsapp-float:hover { background-color: #166534 !important; }
 a:not(.btn-nav):not(.btn-wa):not(.btn-wa-konsultasi):not(.btn-articles-all):not(.whatsapp-float):not(.nav-menu a):not(.dropdown-content a) { text-decoration: underline !important; text-underline-offset: 2px !important; }
+/* FIX BTN-NAV CONTRAST */
+.btn-nav, .btn-cta, .apx-btn { background-color: #c2410c !important; color: #ffffff !important; }
+.btn-nav:hover, .btn-cta:hover, .apx-btn:hover { background-color: #9a3412 !important; }
