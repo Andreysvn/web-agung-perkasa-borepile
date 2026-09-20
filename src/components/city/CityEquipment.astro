@@ -27,11 +27,11 @@ const { equipment, cityName } = Astro.props;
             {item.image ? (
                 <img class="equip-img" src={item.image} alt={item.imageAlt || item.name} width="120" height="120" loading="lazy" />
             ) : (
-                <img class="equip-img" src="/imgs/logo-agung-perkasa.webp" alt={`Ikon ${item.name}`} width="80" height="80" loading="lazy" />
+                <img class="equip-img" src="/imgs/logo-agung-perkasa-thumb.webp" alt={`Ikon ${item.name}`} width="80" height="80" loading="lazy" />
             )}
             <div class="equip-info">
                 <div class="equip-icon-inline">
-                    <img src="/imgs/logo-agung-perkasa.webp" alt={`Ikon ${item.name}`} width="24" height="24" />
+                    
                     <h4>{item.name}</h4>
                 </div>
                 <p>{item.desc || item.description || ''}</p>
