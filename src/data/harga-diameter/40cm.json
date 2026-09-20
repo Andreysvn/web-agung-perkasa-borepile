@@ -1,0 +1,200 @@
+{
+  "diameter": "40cm",
+  "diameterNum": 40,
+  "highlightDiameter": "40 cm",
+  "title": "Harga Bore Pile 40cm Terbaru 2026 Per Meter | Agung Perkasa",
+  "h1": "Harga Bore Pile Diameter 40cm Terbaru 2026",
+  "canonical": "https://agungperkasaborepile.com/harga/bore-pile/40cm.html",
+  "badge": "Spesialisasi Diameter 40cm",
+  "heroImage": "/imgs/borepile-dan-truk-molen.webp",
+  "heroAlt": "Proses pengeboran bore pile diameter 40cm dengan mini crane di samping truk molen",
+  "heroCaption": "Bore pile mini crane diameter 40cm untuk proyek ruko dan kantor",
+  "heroText": "<strong>Bore pile diameter 40cm</strong> adalah ukuran yang sering digunakan untuk bangunan komersial seperti <strong>ruko, kantor, rumah sakit, dan bangunan 2-3 lantai</strong>. \n                    Kalkulator ini dibuat untuk menghitung estimasi <strong>total biaya</strong> jasa borepile dari harga diameter 40cm (mesin & manual), bisa mengatur harga sendiri sesuai keinginan. Dibuat oleh tim Agung Perkasa Borepile dari data proyek nyata yang kami kerjakan di lapangan.",
+  "descriptionTemplate": "Harga bore pile diameter 40cm terbaru 2026 seluruh Pulau Jawa. Mesin mulai Rp{mesin}/m, manual Rp{manual}/m. Kalkulator estimasi biaya. Konsultasi gratis.",
+  "localBusinessDescTemplate": "Jasa bore pile diameter 40cm terpercaya dengan pengalaman lebih dari 10 tahun. Harga bore pile mesin mulai Rp{mesin}/m, manual mulai Rp{manual}/m.",
+  "defaultDiameter": 40,
+  "priceTableNote": "Berikut <strong>harga JASA PENGEBORAN SAJA</strong> (belum termasuk material beton & besi) untuk wilayah Jakarta dan sekitarnya. Kedalaman pengeboran bergantung pada diameter dan kondisi lapisan tanah, di lapangan kami pernah tembus hingga kedalaman 25-30 meter, pastikan cek sondir tanah dahulu agar mengetahui kedalaman yang tepat untuk pengeboran hingga mencapai tanah keras.",
+  "mesinHighlight": {
+    "diameter": "40 cm",
+    "maxDepth": "30 meter",
+    "suitable": "Ruko, kantor 2-3 lantai, rumah sakit"
+  },
+  "showManualHighlight": true,
+  "manualNote": "",
+  "manualHighlight": {
+    "diameter": "40 cm",
+    "price": "{mn40}",
+    "maxDepth": "10 meter",
+    "suitable": "Ruko, kantor, bangunan 2 lantai (tanah padat)"
+  },
+  "factors": [
+    { "title": "1. Diameter & Kedalaman", "text": "Semakin dalam pengeboran yang diperlukan hingga tanah keras, maka biaya per meter semakin tinggi." },
+    { "title": "2. Kondisi Tanah", "text": "Tanah lunak membutuhkan pengeboran lebih dalam hingga tanah keras, sehingga biaya bore pile bisa lebih besar." },
+    { "title": "3. Jarak Proyek Dari Gudang Kami", "text": "Biaya mobilisasi alat sudah kami sesuaikan sesuai jarak dari gudang kami di Jakarta." },
+    { "title": "4. Volume Pekerjaan", "text": "Minimal order jasa bore pile untuk mesin (mini crane & gawangan) adalah 200 meter, sedangkan strauss pile manual 100 meter." },
+    { "title": "5. Jenis & Skala Proyek", "text": "Proyek ruko dan kantor umumnya memiliki spesifikasi berbeda dibandingkan proyek rumah tinggal." }
+  ],
+  "sondirNote": "<strong>Untuk proyek bore pile:</strong> Untuk mendapatkan penawaran harga terbaik, lakukan pengecekan data sondir tanah terlebih dahulu agar kedalaman pengeboran bisa ditentukan secara tepat. Konsultasikan proyek bore pile Anda dengan tim teknis kami untuk penawaran harga yang sesuai.",
+  "additionalCosts": [
+    { "title": "🚛 Mobilisasi Alat Bore Pile", "text": "Mesin mini crane: Rp2-3jt | Strauss pile (bore pile manual): Rp1jt" },
+    { "title": "Minimal Order", "text": "Mesin mini crane dan gawangan: 200 meter | Strauss Pile (Manual): 100 meter" },
+    { "title": "Sedot Lumpur", "text": "Jika memakai bore pile mesin gawangan dan mini crane menggunakan metode <strong>wash boring (bor basah)</strong>, perkiraan biaya tambahannya sekitar: Rp800.000 - Rp1.200.000/rit (tergantung volume)" },
+    { "title": "Data Sondir", "text": "Sangat wajib untuk menentukan kedalaman pengeboran yang tepat hingga mencapai tanah keras" }
+  ],
+  "tips": [
+    { "diameter": "30 cm", "usage": "rumah 1-2 lantai" },
+    { "diameter": "40 cm", "usage": "ruko, kantor, rumah sakit, bangunan 2-3 lantai" },
+    { "diameter": "50 cm", "usage": "gudang, pabrik kecil" },
+    { "diameter": "60-110 cm", "usage": "hotel, gedung bertingkat" }
+  ],
+  "projects": [
+    {
+      "title": "Gedung Universitas di Jakarta Timur",
+      "image": "/imgs/borepile-gedung-universitas-paramadina-jaktim.webp",
+      "imageAlt": "Proyek bore pile diameter 40cm untuk gedung Universitas Paramadina Jakarta Timur",
+      "caption": "Bore Pile mini crane diameter 40cm untuk gedung universitas",
+      "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 15m, 32 titik",
+      "costCalc": "15m × Rp{m40} × 32 = <strong class=\"price-total\">Rp64.800.000</strong>",
+      "mobilization": "Rp3.000.000",
+      "total": "<strong class=\"price-total\">Rp67.800.000</strong>",
+      "time": "7-10 hari kerja"
+    },
+    {
+      "title": "Ruko di Meruya, Jakarta Barat",
+      "image": "/imgs/borepile-meruya-jakarta.webp",
+      "imageAlt": "Proyek bore pile diameter 40cm untuk ruko di Meruya, Jakarta Barat",
+      "caption": "Bore Pile mini crane diameter 40cm untuk ruko di Meruya",
+      "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 12m, 20 titik",
+      "costCalc": "12m × Rp{m40} × 20 = <strong class=\"price-total\">Rp32.400.000</strong>",
+      "mobilization": "Rp3.000.000",
+      "total": "<strong class=\"price-total\">Rp35.400.000</strong>",
+      "time": "5-7 hari kerja"
+    },
+    {
+      "title": "Ruko 2 Lantai (Manual) di Jakarta Selatan",
+      "image": "/imgs/strauss-pile-pondok-pinang.webp",
+      "imageFallback": "/imgs/borepile-depok.webp",
+      "imageAlt": "Proses bore pile manual diameter 40cm (strauss pile) di area terbatas",
+      "caption": "Bore Pile manual diameter 40cm di area terbatas",
+      "specs": "Strauss pile (bore pile manual) Ø40cm, kedalaman 8m, 16 titik",
+      "costCalc": "8m × Rp100.000 × 16 = <strong class=\"price-total\">Rp12.800.000</strong>",
+      "mobilization": "Rp1.000.000",
+      "total": "<strong class=\"price-total\">Rp13.800.000</strong>",
+      "time": "8-12 hari kerja"
+    }
+  ],
+  "projectNote": "<strong>📌 Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, \n                        <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan.",
+  "comparison": {
+    "title": "Perbandingan Diameter 40cm vs 30cm vs 50cm",
+    "intro": "Diameter 40cm adalah pilihan tepat untuk bangunan komersial seperti ruko dan kantor. Berikut perbandingan dengan diameter lainnya:",
+    "rows": [
+      { "diameter": "30 cm", "capacity": "15-25 ton", "suitable": "Rumah 1-2 lantai", "highlight": false },
+      { "diameter": "40 cm", "capacity": "25-40 ton", "suitable": "Ruko, kantor 2-3 lantai", "highlight": true },
+      { "diameter": "50 cm", "capacity": "40-60 ton", "suitable": "Gudang, pabrik kecil", "highlight": false }
+    ],
+    "note": "Daya dukung di atas adalah estimasi untuk kedalaman 10-12 meter di tanah keras. Butuh info <a href=\"/harga/bore-pile/30cm.html\">Harga Bore Pile 30cm?</a> dan <a href=\"/harga/bore-pile/50cm.html\">Harga Bore Pile 50cm?</a>"
+  },
+  "advantages": [
+    { "title": "Cocok untuk Bangunan Komersial", "text": "Daya dukung 25-40 ton cukup untuk ruko, kantor, rumah sakit, dan bangunan 2-3 lantai." },
+    { "title": "Harga Terjangkau", "text": "Dibandingkan diameter 50cm ke atas, diameter 40cm menawarkan keseimbangan harga dan daya dukung terbaik." },
+    { "title": "Metode Fleksibel", "text": "Bisa dikerjakan dengan bore pile mesin (mini crane) maupun manual menggunakan tenaga manusia." },
+    { "title": "Sering Digunakan", "text": "Banyak kontraktor menggunakan diameter 40cm untuk proyek ruko dan kantor karena daya dukungnya yang optimal." }
+  ],
+  "loadCapacity": {
+    "image": "/imgs/bore-pile-pantai-indah-kapuk-25-mei-2026.webp",
+    "imageAlt": "Proses bore pile diameter 40cm untuk pondasi bangunan komersial",
+    "caption": "Bore pile diameter 40cm untuk bangunan komersial",
+    "intro": "<strong>Daya dukung bore pile diameter 40cm</strong> bervariasi tergantung kedalaman dan kondisi tanah:",
+    "items": [
+      "Kedalaman 6 meter: mampu menahan beban <strong>15-20 ton</strong>",
+      "Kedalaman 10 meter: mampu menahan beban <strong>25-35 ton</strong>",
+      "Kedalaman 15 meter: mampu menahan beban <strong>35-50 ton</strong>",
+      "Kedalaman 20 meter: mampu menahan beban <strong>50-65 ton</strong>"
+    ],
+    "conclusion": "Untuk ruko dan kantor 2-3 lantai, kedalaman 10-15 meter sudah cukup."
+  },
+  "materialPackage": {
+    "diameter": "Diameter 40cm",
+    "price": "Hubungi Kami",
+    "includes": "Jasa bor, perakitan besi, dan pengecoran beton. Besi tulangan 6D13 SNI, sengkang D8, beton mix K250",
+    "minOrder": "200m untuk mesin, dan 100m untuk manual",
+    "note": "*Harga paket dapat disesuaikan dengan spesifikasi material yang Anda inginkan (K225, K250, K300, dll)."
+  },
+  "whyUs": [
+    { "title": "Memakai alat yang baik", "desc": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, dan strauss pile." },
+    { "title": "Efisiensi waktu & Komitmen kualitas", "desc": "Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam, khususnya bore pile diameter 40cm." },
+    { "title": "Tim Ahli", "desc": "Memiliki tim ahli dalam pengerjaan bore pile diameter 40cm, khususnya untuk bangunan komersial." },
+    { "title": "Tim berpengalaman", "desc": "Lebih dari sepuluh tahun mengerjakan proyek bore pile diameter 40cm. Mulai dari proyek ruko hingga gedung universitas." }
+  ],
+  "portfolio": {
+    "title": "Portofolio Proyek Bore Pile Diameter 40cm",
+    "subtitle": "Berikut salah satu proyek bore pile diameter 40cm yang sudah kami kerjakan.",
+    "heading": "Dokumentasi proyek bore pile diameter 40cm:",
+    "items": [
+      {
+        "image": "/imgs/borepile-gedung-universitas-paramadina-jaktim.webp",
+        "imageAlt": "Proyek bore pile diameter 40cm untuk gedung Universitas Paramadina Jakarta Timur",
+        "label": "Universitas Paramadina, Jakarta Timur",
+        "detail": "Bore pile mini crane Ø40cm untuk gedung universitas"
+      },
+      {
+        "image": "/imgs/borepile-asrama-pesantren-az-zikra-bogor-agung-perkasa.jpg",
+        "imageAlt": "Proyek bore pile diameter 40cm, kedalaman 8m, 80 titik untuk gedung Bangunan asrama pesantren AZ Zikra di Gunung Sindur, Bogor",
+        "label": "Asrama Pesantren AZ Zikra Gunung Sindur, Bogor",
+        "detail": "Bore pile mini crane Ø40cm untuk bangunan asrama pesantren di area masjid AZ Zikra"
+      },
+      {
+        "image": "/imgs/borepile-di-depan-mall-puri-indah-agung-perkasa.jpg",
+        "imageAlt": "Proyek bore pile diameter 40cm, kedalaman 9m, 38 titik untuk bangunan di depan mall puri indah, Jakarta Barat",
+        "label": "Depan Mall Puri Indah, Jakarta Barat",
+        "detail": "Bore pile mini crane Ø40cm untuk bangunan di depan Mall Puri Indah"
+      }
+    ]
+  },
+  "equipment": [
+    {
+      "name": "Mini Crane",
+      "image": "/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg",
+      "imageAlt": "Mesin bore pile mini crane Agung Perkasa untuk bore pile diameter 40cm",
+      "logoAlt": "Ikon Mini Crane",
+      "desc": "Kapasitas sedang, untuk diameter 30-80 cm, kedalaman sampai 30 meter. Mini Crane cocok untuk lokasi yang cukup luas dan membutuhkan akses yang baik untuk mobilisasi alat dan pengerjaan. Cocok untuk membuat rumah, ruko, gudang, dan bangunan bertingkat."
+    },
+    {
+      "name": "Gawangan",
+      "image": "/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg",
+      "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk bore pile diameter 40cm di area terbatas",
+      "logoAlt": "Ikon Gawangan",
+      "desc": "Gawangan cocok untuk area yang tidak bisa diakses oleh mini crane. Karena ukuran dan bentuknya yang tidak sebesar mini crane, gawangan cocok untuk area yang memiliki akses terbatas. Diameter 30-80 cm, paling sering digunakan untuk membuat rumah, ruko, dan bangunan 1-2 lantai lainnya di gang sempit."
+    },
+    {
+      "name": "Strauss Pile (bore pile manual)",
+      "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
+      "imageAlt": "Strauss pile (bore pile manual) untuk diameter 40cm di area terbatas",
+      "logoAlt": "Ikon Strauss Pile",
+      "desc": "Alat bor manual full menggunakan tenaga manusia dalam proses pengeboran (diputar oleh tukang bore pile), memakai metode dry boring (bor kering). Diameter 20-40 cm, cocok untuk lokasi seperti di gang sempit dan area terbatas lainnya yang tidak bisa dijangkau mini crane dan gawangan."
+    }
+  ],
+  "faq": [
+    { "q": "Apakah bore pile diameter 40cm cukup kuat untuk ruko 2-3 lantai?", "a": "<strong>Sangat cukup.</strong> Dengan kedalaman 10-15 meter, diameter 40cm mampu menahan beban ruko dan kantor 2-3 lantai dengan aman. Daya dukungnya mencapai 25-40 ton." },
+    { "q": "Berapa standar harga jasa bor diameter 40cm?", "a": "Standar harga jasa bor diameter 40cm: <strong>mesin Rp{m40}/m, manual sekitar Rp{mn40}/m</strong> karena jarang tukang bor manual yang ingin mengambil diameter tersebut (terlalu berat), harga tersebut hanya untuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton (belum termasuk material).\"" },
+    { "q": "Bisa pakai bore pile manual untuk diameter 40cm?", "a": "Bisa. Bore pile manual bisa melayani diameter 40cm dengan kedalaman maksimal 10 meter. Harga lebih ekonomis, cocok untuk proyek kecil dan area terbatas dengan tanah padat." },
+    { "q": "Berapa jumlah titik ideal untuk bore pile diameter 40cm?", "a": "Untuk ruko atau kantor dengan luas 150-300m², jumlah titik ideal antara <strong>16-24 titik</strong>. Konsultasikan dengan tim teknis kami untuk perhitungan yang lebih akurat sesuai gambar bangunan Anda." },
+    { "q": "Apakah melayani area Bekasi, Tangerang, Bogor?", "a": "Betul. Kami melayani area <strong>Jabodetabek</strong> (Jakarta, Bekasi, Bogor, Depok, Tangerang)." },
+    { "q": "Apakah melayani area luar Jabodetabek?", "a": "Ya. Kami melayani seluruh area pulau Jawa sesuai permintaan proyek, tetapi ada perbedaan harga mobilisasi alat bore pile." },
+    { "q": "Berapa kedalaman maksimal bore pile diameter 40cm?", "a": "Untuk bore pile mesin (mini crane) diameter 40cm, kedalaman maksimal mencapai <strong>30 meter</strong>. Sedangkan untuk bore pile manual (strauss pile) diameter 40cm, kedalaman maksimal <strong>10 meter</strong>. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir di lokasi proyek Anda. Semakin lunak tanah, semakin dalam pengeboran yang dibutuhkan hingga mencapai tanah keras." },
+    { "q": "Berapa biaya total bore pile 40cm untuk ruko 2 lantai?", "a": "Untuk ruko 2 lantai dengan luas 150-300m², biasanya membutuhkan <strong>16-24 titik</strong> bore pile diameter 40cm dengan kedalaman 10-15 meter. Estimasi biaya jasa bor (belum termasuk material):</p><ul><li><strong>Mesin (Mini Crane):</strong> Rp{m40}/m × 12m × 20 titik = <strong>Rp32.400.000</strong> + mobilisasi Rp2-3jt</li><li><strong>Manual (Strauss Pile):</strong> Rp{mn40}/m × 8m × 20 titik = <strong>Rp19.200.000</strong> + mobilisasi Rp1-1,5jt</li></ul><p>Gunakan <a href=\"#calculator-heading\">kalkulator di atas</a> untuk menghitung estimasi biaya proyek Anda secara lebih akurat." }
+  ],
+  "internalLinks": [
+    { "href": "/jasa/bore-pile/jakarta.html", "label": "Jakarta" },
+    { "href": "/jasa/bore-pile/bekasi.html", "label": "Bekasi" },
+    { "href": "/jasa/bore-pile/tangerang.html", "label": "Tangerang" },
+    { "href": "/jasa/bore-pile/depok.html", "label": "Depok" },
+    { "href": "/jasa/bore-pile/bogor.html", "label": "Bogor" },
+    { "href": "/harga/bore-pile-2026.html", "label": "Harga Bore Pile 2026" }
+  ],
+  "breadcrumbs": [
+    { "name": "Beranda", "url": "/" },
+    { "name": "Harga", "url": "/harga/bore-pile-2026.html" },
+    { "name": "Harga Bore Pile Diameter 40cm", "url": "/harga/bore-pile/40cm.html" }
+  ]
+}

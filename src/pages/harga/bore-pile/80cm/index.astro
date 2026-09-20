@@ -1,24 +1,32 @@
-﻿---
+---
 import config from '../../../../data/config.json';
 import KotaLayout from '../../../../layouts/KotaLayout.astro';
 import pricing from '../../../../data/harga.json';
+import pageData from '../../../../data/harga-diameter/80cm.json';
 import { organizationSchema, localBusinessSchema } from '../../../../lib/schema.js';
 import FaIcon from '../../../../components/icons/FaIcon.astro';
 
+// Components
 import CityCalculator from '../../../../components/city/CityCalculator.astro';
 
-const m30 = pricing.mesin.find(p => p.diameter === 30)?.price.toLocaleString('id-ID') || '120.000';
-const m40 = pricing.mesin.find(p => p.diameter === 40)?.price.toLocaleString('id-ID') || '135.000';
-const m50 = pricing.mesin.find(p => p.diameter === 50)?.price.toLocaleString('id-ID') || '190.000';
-const mn20 = pricing.manual.find(p => p.diameter === 20)?.price.toLocaleString('id-ID') || '75.000';
-const mn25 = pricing.manual.find(p => p.diameter === 25)?.price.toLocaleString('id-ID') || '85.000';
-const mn30 = pricing.manual.find(p => p.diameter === 30)?.price.toLocaleString('id-ID') || '100.000';
-const mn40 = pricing.manual.find(p => p.diameter === 40)?.price.toLocaleString('id-ID') || '120.000';
+// Format harga dari data pricing
+const m30 = pricing.mesin.find(p => p.diameter === 30).price.toLocaleString('id-ID');
+const m40 = pricing.mesin.find(p => p.diameter === 40).price.toLocaleString('id-ID');
+const m50 = pricing.mesin.find(p => p.diameter === 50).price.toLocaleString('id-ID');
+const mn20 = pricing.manual.find(p => p.diameter === 20).price.toLocaleString('id-ID');
+const mn25 = pricing.manual.find(p => p.diameter === 25).price.toLocaleString('id-ID');
+const mn30 = pricing.manual.find(p => p.diameter === 30).price.toLocaleString('id-ID');
+const mn40 = pricing.manual.find(p => p.diameter === 40).price.toLocaleString('id-ID');
+
+// Map harga ke variable untuk template
+const priceMap = { m30, m40, m50, mn20, mn25, mn30, mn40 };
+const mesinPrice = priceMap[`m${pageData.diameterNum}`] || '<span class="text-konsultasi">Hubungi Kami</span>';
+const manualPrice = priceMap[`mn${pageData.diameterNum}`] || '';
 
 const orgLd = JSON.stringify(organizationSchema());
 
 const localBusinessLd = JSON.stringify(localBusinessSchema({
-    "description": "Jasa bore pile diameter 80cm terpercaya dengan pengalaman lebih dari 10 tahun. Harga bore pile mesin mulai dari Rp70.000/m untuk gedung 5-8 lantai. Konsultasi gratis.",
+    "description": pageData.localBusinessDescTemplate.replace('{mesin}', mesinPrice).replace('{manual}', manualPrice || ''), 
     "areaServed": [
         { "@type": "City", "name": "Jakarta" },
         { "@type": "City", "name": "Bekasi" },
@@ -26,7 +34,7 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         { "@type": "City", "name": "Tangerang" },
         { "@type": "City", "name": "Bogor" }
     ],
-    "priceRange": "Rp70.000 - Rp350.000"
+    ...(pageData.priceRange ? { "priceRange": pageData.priceRange } : {})
 }));
 
 const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
@@ -40,533 +48,421 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     year: 'numeric'
 }).format(new Date(`${pricing.priceUpdatedAt}T00:00:00`));
 
-const faqSchema = [
-    {
-        question: "Apakah bore pile diameter 80cm cukup kuat untuk gedung 8 lantai?",
-        answer: "Sangat cukup. Dengan daya dukung 100-150 ton per titik dan kedalaman 15-25 meter, diameter 80cm mampu menahan beban gedung 5-8 lantai dengan aman. Bahkan untuk gedung 10 lantai pun masih kuat dengan perhitungan struktur yang tepat."
-    },
-    {
-        question: "Berapa standar harga jasa bor diameter 80cm?",
-        answer: "Standar harga jasa bor diameter 80cm: Hubungi Kami untuk mendapatkan penawaran harga terbaik sesuai kondisi proyek Anda. Harga dapat berbeda tergantung kedalaman pengeboran dan kondisi tanah."
-    },
-    {
-        question: "Berapa kedalaman maksimal bore pile diameter 80cm?",
-        answer: "Untuk bore pile mesin (mini crane & gawangan) diameter 80cm, kedalaman maksimal mencapai 30 meter. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir di lokasi proyek Anda."
-    },
-    {
-        question: "Berapa jumlah titik ideal untuk bore pile diameter 80cm?",
-        answer: "Untuk gedung dengan luas 500-1000m\u00B2, jumlah titik ideal antara 25-50 titik. Konsultasikan dengan tim teknis kami untuk perhitungan yang akurat sesuai gambar bangunan."
-    },
-    {
-        question: "Apakah melayani area Bekasi, Tangerang, Bogor?",
-        answer: "Betul. Kami melayani area Jabodetabek (Jakarta, Bekasi, Bogor, Depok, Tangerang) untuk proyek diameter 80cm dengan alat berat yang memadai."
-    },
-    {
-        question: "Apakah melayani area luar Jabodetabek?",
-        answer: "Ya. Kami melayani seluruh area pulau Jawa untuk proyek skala besar dengan diameter 80cm, dengan biaya mobilisasi yang disesuaikan."
-    },
-    {
-        question: "Berapa biaya total bore pile 80cm untuk gedung 6 lantai?",
-        answer: "Untuk gedung 6 lantai dengan luas 500-800m\u00B2, biasanya membutuhkan 25-40 titik bore pile diameter 80cm dengan kedalaman 15-20 meter. Estimasi biaya jasa bor (belum termasuk material): Hubungi Kami untuk penawaran terbaik. Gunakan kalkulator di halaman untuk perhitungan lebih akurat."
-    },
-    {
-        question: "Apakah ada estimasi waktu pengerjaan bore pile 80cm?",
-        answer: "Untuk proyek bore pile 80cm, estimasi waktu pengerjaan tergantung jumlah titik dan kedalaman. Biasanya 10-14 hari kerja untuk 25-40 titik. Hubungi kami untuk jadwal dan estimasi yang lebih akurat."
-    }
-];
+const seoDesc = pageData.descriptionTemplate.replace('{mesin}', mesinPrice).replace('{manual}', manualPrice || '');
 ---
+
 <KotaLayout 
-    title="Harga Bore Pile 80cm Terbaru 2026 Per Meter | Agung Perkasa"
-    description="Harga bore pile diameter 80cm terbaru 2026 seluruh Pulau Jawa. Kalkulator estimasi biaya proyek gedung 5-8 lantai. Konsultasi gratis."
-    canonical="https://agungperkasaborepile.com/harga/bore-pile/80cm.html"
+    title={pageData.title}
+    description={seoDesc}
+    canonical={pageData.canonical}
     schema={[orgLd, localBusinessLd]}
     extraCss={["/css/harga-komponen.css"]}
-    faqSchema={faqSchema.map(f => ({ q: f.question, a: f.answer }))}
-    breadcrumbItems={[
-        { name: "Beranda", url: "/" },
-        { name: "Harga", url: "/harga/bore-pile-2026.html" },
-        { name: "Harga Bore Pile Diameter 80cm", url: "/harga/bore-pile/80cm.html" }
-    ]}
+    faqSchema={pageData.faq}
+    breadcrumbItems={pageData.breadcrumbs}
 >
-            <nav class="breadcrumb" aria-label="Breadcrumb navigasi">
-                <a href="/">Beranda</a>
-                <span class="separator">/</span>
-                <a href="/harga/bore-pile-2026.html">Harga</a>
-                <span class="separator">/</span>
-                <span class="current" aria-current="page">Harga Bore Pile Diameter 80cm</span>
+    <nav class="breadcrumb" aria-label="Breadcrumb navigasi">
+                {pageData.breadcrumbs.map((item, i) => (
+                    i < pageData.breadcrumbs.length - 1 ? (
+                        <><a href={item.url}>{item.name}</a><span class="separator">/</span></>
+                    ) : (
+                        <span class="current" aria-current="page">{item.name}</span>
+                    )
+                ))}
             </nav>
+            
+            <div class="update-badge">
+                Harga terbaru {formattedMonthYear} | Konsultasi gratis
+            </div>
 
-            <div class="update-badge">Harga terbaru {formattedMonthYear} | Konsultasi gratis</div>
-            <div class="diameter-badge">Spesialisasi Diameter 80cm</div>
-            <h1 class="page-title">Harga Bore Pile Diameter 80cm Terbaru 2026</h1>
+            <div class="diameter-badge">
+                {pageData.badge}
+            </div>
+
+            <h1 class="page-title">{pageData.h1}</h1>
+
             <div class="page-meta">
                 <span>Update: {formattedUpdate}</span> |
                 <span>Agung Perkasa</span> |
-                <span>&#x1F4CD; Melayani JABODETABEK &amp; Seluruh Pulau Jawa</span>
+                <span>📍 Melayani JABODETABEK & Seluruh Pulau Jawa</span>
             </div>
 
             <div class="illustration-row">
                 <div class="illustration-img">
-                    <img src="/imgs/bore-pile-gedung-depok-agung-perkasa.webp" alt="Proses pengeboran bore pile diameter 80cm untuk proyek gedung bertingkat di Jakarta" loading="lazy" width="400" height="250">
-                    <div class="caption">Bore pile diameter 80cm untuk proyek gedung bertingkat</div>
+                    <img src={pageData.heroImage} alt={pageData.heroAlt} loading="lazy" width="400" height="250">
+                    <div class="caption">{pageData.heroCaption}</div>
                 </div>
                 <div class="illustration-text">
-                    <p><strong>Bore pile diameter 80cm</strong> adalah ukuran standar untuk bangunan bertingkat dan infrastruktur skala besar seperti <strong>gedung perkantoran, apartemen, hotel, rumah sakit, dan pabrik berat</strong> di Jakarta dan seluruh Pulau Jawa.
-                    Dengan daya dukung mencapai 100-150 ton per titik, diameter 80cm menjadi pilihan utama untuk proyek-proyek konstruksi yang membutuhkan pondasi sangat kokoh. Kalkulator ini dibuat untuk menghitung estimasi <strong>total biaya</strong> jasa borepile diameter 80cm dengan metode mesin.</p>
+                    <p set:html={pageData.heroText}></p>
                     <p><a href="/harga/bore-pile-2026.html">Lihat daftar harga bore pile 2026 lengkap di sini</a>.</p>
                 </div>
             </div>
 
-            <CityCalculator cityName="80cm" defaultDiameter={80} />
+            <CityCalculator cityName={pageData.diameter} defaultDiameter={pageData.defaultDiameter} />
 
             <!-- ===== SECTION TABEL HARGA ===== -->
-            <section aria-labelledby="table-heading">
-                <h2 id="table-heading" class="section-heading">Tabel Harga Bore Pile 80cm Terbaru 2026 (Jasa Bor Saja)</h2>
-                <p>Berikut <strong>harga JASA PENGEBORAN SAJA</strong> (belum termasuk material beton &amp; besi) untuk wilayah Jakarta dan sekitarnya. Untuk diameter 80cm, semua pengerjaan menggunakan mesin karena kemampuan daya dukung dan efisiensi yang maksimal.</p>
+<section aria-labelledby="table-heading">
+    <h2 id="table-heading" class="section-heading">Tabel Harga Bore Pile {pageData.diameter} Terbaru 2026 (Jasa Bor Saja)</h2>
+    <p set:html={pageData.priceTableNote}></p>
 
-                <h3>Bore Pile Mesin (Mini Crane &amp; Gawangan)</h3>
-                <div class="table-responsive">
-                    <table class="price-table">
-                        <caption>Tabel harga bore pile mesin (mini crane &amp; gawangan) per meter</caption>
-                        <thead>
-                            <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>30 cm</td><td>{m30}</td><td>30 meter</td><td>Rumah 1-2 lantai</td></tr>
-                            <tr><td>40 cm</td><td>{m40}</td><td>30 meter</td><td>Ruko, kantor 2-3 lantai</td></tr>
-                            <tr><td>50 cm</td><td>{m50}</td><td>30 meter</td><td>Gudang, pabrik kecil</td></tr>
-                            <tr><td>60 cm</td><td><span class="text-konsultasi">Hubungi Kami</span></td><td>30 meter</td><td>Hotel 3-4 lantai</td></tr>
-                            <tr class="row-highlight">
-                                <td><strong>80 cm</strong></td>
-                                <td><span class="text-konsultasi">Hubungi Kami</span></td>
-                                <td><strong>30 meter</strong></td>
-                                <td><strong>Gedung 5-8 lantai, apartemen, hotel, rumah sakit</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+    <h3>Bore Pile Mesin (Mini Crane &amp; Gawangan)</h3>
+        <div class="table-responsive">
+            <table class="price-table">
+                <caption>Tabel harga bore pile mesin (mini crane &amp; gawangan) per meter</caption>
+                <thead>
+                    <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
+                </thead>
+                <tbody>
+                    {pageData.diameterNum === 30 ? (
+                        <tr class="row-highlight">
+                            <td><strong>{pageData.mesinHighlight?.diameter}</strong></td>
+                            <td><strong>{pageData.mesinHighlight?.price || m30}</strong></td>
+                            <td><strong>{pageData.mesinHighlight?.maxDepth}</strong></td>
+                            <td><strong>{pageData.mesinHighlight?.suitable}</strong></td>
+                        </tr>
+                    ) : (
+                        <tr><td>30 cm</td><td>{m30}</td><td>30 meter</td><td>Rumah 1-2 lantai</td></tr>
+                    )}
+                    {pageData.diameterNum === 40 ? (
+                        <tr class="row-highlight">
+                            <td><strong>{pageData.mesinHighlight?.diameter}</strong></td>
+                            <td><strong>{pageData.mesinHighlight?.price || m40}</strong></td>
+                            <td><strong>{pageData.mesinHighlight?.maxDepth}</strong></td>
+                            <td><strong>{pageData.mesinHighlight?.suitable}</strong></td>
+                        </tr>
+                    ) : (
+                        <tr><td>40 cm</td><td>{m40}</td><td>30 meter</td><td>Ruko, kantor 2-3 lantai</td></tr>
+                    )}
+                    {pageData.diameterNum === 50 ? (
+                        <tr class="row-highlight">
+                            <td><strong>{pageData.mesinHighlight?.diameter}</strong></td>
+                            <td><strong>{pageData.mesinHighlight?.price || m50}</strong></td>
+                            <td><strong>{pageData.mesinHighlight?.maxDepth}</strong></td>
+                            <td><strong>{pageData.mesinHighlight?.suitable}</strong></td>
+                        </tr>
+                    ) : (
+                        <tr><td>50 cm</td><td>{m50}</td><td>30 meter</td><td>Gudang, pabrik kecil</td></tr>
+                    )}
+                    {pageData.diameterNum === 60 ? (
+                        <tr class="row-highlight">
+                            <td><strong>{pageData.mesinHighlight?.diameter}</strong></td>
+                            <td><strong><span set:html={pageData.mesinHighlight?.price || '<span class="text-konsultasi">Hubungi Kami</span>'}></span></strong></td>
+                            <td><strong>{pageData.mesinHighlight?.maxDepth}</strong></td>
+                            <td><strong>{pageData.mesinHighlight?.suitable}</strong></td>
+                        </tr>
+                    ) : (
+                        <tr><td>60 cm</td><td><span class="text-konsultasi">Hubungi Kami</span></td><td>30 meter</td><td>Hotel 3-4 lantai, gedung 4-5 lantai, rumah sakit</td></tr>
+                    )}
+                    {pageData.diameterNum === 80 ? (
+                        <tr class="row-highlight">
+                            <td><strong>{pageData.mesinHighlight?.diameter}</strong></td>
+                            <td><strong><span set:html={pageData.mesinHighlight?.price || '<span class="text-konsultasi">Hubungi Kami</span>'}></span></strong></td>
+                            <td><strong>{pageData.mesinHighlight?.maxDepth}</strong></td>
+                            <td><strong>{pageData.mesinHighlight?.suitable}</strong></td>
+                        </tr>
+                    ) : (
+                        <tr><td>80 cm</td><td><span class="text-konsultasi">Hubungi Kami</span></td><td>30 meter</td><td>Gedung 5-8 lantai, apartemen, hotel</td></tr>
+                    )}
+                </tbody>
+            </table>
+        </div>
 
-                <h3>Bore Pile Manual (Strauss Pile)</h3>
-                <div class="table-responsive">
-                    <table class="price-table">
-                        <caption>Tabel harga bore pile manual (strauss pile) per meter</caption>
-                        <thead>
-                            <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>20 cm</td><td>{mn20}</td><td>10 meter</td><td>Area sangat sempit</td></tr>
-                            <tr><td>25 cm</td><td>{mn25}</td><td>10 meter</td><td>Gang kecil</td></tr>
-                            <tr><td>30 cm</td><td>{mn30}</td><td>10 meter</td><td>Rumah 1-2 lantai</td></tr>
-                            <tr><td>40 cm</td><td>{mn40}</td><td>10 meter</td><td>Ruko, kantor, bangunan 2 lantai</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="price-hint"><strong>Catatan:</strong> Bore pile manual (Strauss Pile) tidak tersedia untuk diameter 80cm karena keterbatasan tenaga manusia, kedalaman 6-10 meter hanya untuk diameter 20-40cm. Semua pengerjaan diameter 80cm menggunakan mesin untuk hasil maksimal.</p>
+    {pageData.showManualHighlight !== false && (
+    <Fragment>
+        <h3>Bore Pile Manual (Strauss Pile)</h3>
+        <div class="table-responsive">
+            <table class="price-table">
+                <caption>Tabel harga bore pile manual (strauss pile) per meter</caption>
+                <thead>
+                    <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>20 cm</td><td>{mn20}</td><td>10 meter</td><td>Area sangat sempit</td></tr>
+                    <tr><td>25 cm</td><td>{mn25}</td><td>10 meter</td><td>Gang kecil</td></tr>
+                    {pageData.diameterNum === 30 ? (
+                        <tr class="row-highlight">
+                            <td><strong>{pageData.manualHighlight?.diameter}</strong></td>
+                            <td><strong>{pageData.manualHighlight?.price || mn30}</strong></td>
+                            <td><strong>{pageData.manualHighlight?.maxDepth}</strong></td>
+                            <td><strong>{pageData.manualHighlight?.suitable}</strong></td>
+                        </tr>
+                    ) : (
+                        <tr><td>30 cm</td><td>{mn30}</td><td>10 meter</td><td>Rumah 1-2 lantai</td></tr>
+                    )}
+                    {pageData.diameterNum === 40 ? (
+                        <tr class="row-highlight">
+                            <td><strong>{pageData.manualHighlight?.diameter}</strong></td>
+                            <td><strong>{pageData.manualHighlight?.price || mn40}</strong></td>
+                            <td><strong>{pageData.manualHighlight?.maxDepth}</strong></td>
+                            <td><strong>{pageData.manualHighlight?.suitable}</strong></td>
+                        </tr>
+                    ) : (
+                        <tr><td>40 cm</td><td>{mn40}</td><td>10 meter</td><td>Ruko, kantor, bangunan 2 lantai</td></tr>
+                    )}
+                </tbody>
+            </table>
+        </div>
+        {pageData.manualNote && <p class="price-hint" set:html={pageData.manualNote}></p>}
+    </Fragment>
+)}
+</section>
 
-                <a href="/jasa/">Lihat Jasa Bore Pile &amp; Strauss Pile untuk wilayah Anda &#x2192;</a>
-            </section>
+                <a href="/jasa/">Lihat Jasa Bore Pile & Strauss Pile untuk wilayah Anda →</a>
 
             <!-- ===== FAKTOR YANG MEMPENGARUHI HARGA ===== -->
             <section aria-labelledby="factors-heading">
-                <h2 id="factors-heading" class="section-heading">Faktor yang Mempengaruhi Harga Bore Pile 80cm</h2>
+                <h2 id="factors-heading" class="section-heading">Faktor yang Mempengaruhi Harga Bore Pile {pageData.diameter}</h2>
 
-                <p><strong>Harga bore pile diameter 80cm tidak sama untuk setiap proyek.</strong> Berikut faktor utama yang menyebabkan perbedaan biaya untuk proyek gedung bertingkat dan infrastruktur:</p>
+                <p><strong>Harga bore pile diameter {pageData.diameter} tidak sama untuk setiap proyek.</strong> Berikut faktor utama yang menyebabkan perbedaan biaya:</p>
 
                 <div class="info-grid">
-                    <div class="info-card">
-                        <h3>1. Diameter &amp; Kedalaman</h3>
-                        <p>Semakin dalam pengeboran yang diperlukan hingga tanah keras, maka biaya per meter semakin tinggi. Untuk gedung 5-8 lantai, kedalaman 15-25 meter umumnya diperlukan.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>2. Kondisi Tanah &amp; Uji Sondir</h3>
-                        <p>Tanah lunak di area rawa atau bekas sungai membutuhkan pengeboran lebih dalam hingga mencapai tanah keras, sehingga biaya bore pile 80cm bisa lebih besar. Data sondir sangat wajib untuk perhitungan akurat.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>3. Jarak Proyek Dari Gudang Kami</h3>
-                        <p>Biaya mobilisasi alat berat (mini crane atau gawangan) sudah kami sesuaikan sesuai jarak dari gudang kami di Jakarta.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>4. Volume Pekerjaan</h3>
-                        <p>Minimal order jasa bore pile untuk mesin (mini crane &amp; gawangan) adalah 200 meter. Proyek gedung bertingkat biasanya memiliki volume titik yang besar.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>5. Jenis Proyek</h3>
-                        <p>Proyek apartemen, hotel, dan rumah sakit memiliki spesifikasi dan standar keselamatan yang berbeda dibandingkan gedung perkantoran biasa.</p>
-                    </div>
+                    {pageData.factors.map(factor => (
+                        <div class="info-card">
+                            <h3>{factor.title}</h3>
+                            <p>{factor.text}</p>
+                        </div>
+                    ))}
                 </div>
 
-                <div class="sondir-note">
-                    <strong>Untuk proyek bore pile 80cm:</strong> Kami sangat merekomendasikan untuk melakukan uji sondir tanah terlebih dahulu. Kedalaman pengeboran yang tepat hingga tanah keras sangat menentukan kekuatan pondasi gedung bertingkat Anda. Konsultasikan proyek bore pile 80cm dengan tim teknis kami untuk penawaran harga yang sesuai dan perhitungan struktur yang akurat.
-                </div>
+                <div class="sondir-note" set:html={pageData.sondirNote}></div>
             </section>
 
             <!-- ===== ESTIMASI BIAYA TAMBAHAN ===== -->
             <section>
-                <h2 class="section-heading-sm">Estimasi Biaya Tambahan untuk diameter 80cm</h2>
+                <h2 class="section-heading-sm">Estimasi Biaya Tambahan</h2>
                 <div class="info-grid">
-                    <div class="info-card"><h3>&#x1F69B; Mobilisasi Alat Bore Pile</h3><p>Mesin mini crane: Rp2-3jt | Menyesuaikan jarak proyek dari Jakarta</p></div>
-                    <div class="info-card"><h3>Minimal Order</h3><p>Mesin mini crane dan gawangan: 200 meter | Proyek gedung biasanya volume besar</p></div>
-                    <div class="info-card"><h3>Sedot Lumpur</h3><p>Metode wash boring (bor basah) untuk diameter 80cm, perkiraan biaya tambahan: Rp800.000 - Rp1.500.000/rit (tergantung volume lumpur)</p></div>
-                    <div class="info-card"><h3>Data Sondir</h3><p>Sangat wajib untuk menentukan kedalaman pengeboran yang tepat hingga mencapai tanah keras. Biaya uji sondir sekitar Rp2-5jt tergantung lokasi</p></div>
+                    {pageData.additionalCosts.map(cost => (
+                        <div class="info-card"><h3>{cost.title}</h3><p set:html={cost.text}></p></div>
+                    ))}
                 </div>
             </section>
 
             <div class="tips-section">
-                <h3 class="tips-heading">Tips memilih diameter untuk gedung:</h3>
+                <h3 class="tips-heading">Tips memilih diameter:</h3>
                 <ul>
-                    <li><strong>30 cm</strong> &#x2192; rumah 1-2 lantai</li>
-                    <li><strong>40 cm</strong> &#x2192; ruko, kantor 2-3 lantai</li>
-                    <li><strong>50 cm</strong> &#x2192; gudang, pabrik kecil</li>
-                    <li><strong>60 cm</strong> &#x2192; hotel 3-4 lantai</li>
-                    <li><strong>80 cm</strong> &#x2192; gedung 5-8 lantai, apartemen, rumah sakit</li>
-                    <li><strong>90-110 cm</strong> &#x2192; gedung tinggi, infrastruktur berat</li>
+                    {pageData.tips.map(tip => (
+                        <li><strong>{tip.diameter}</strong> → {tip.usage}</li>
+                    ))}
                 </ul>
             </div>
 
             <!-- ===== CONTOH PROYEK NYATA ===== -->
             <section class="project-examples-section">
-                <h2 class="project-heading">Contoh Hitungan Proyek Bore Pile 80cm</h2>
+                <h2 class="project-heading">Contoh Hitungan Proyek Nyata Diameter {pageData.diameter}</h2>
 
-                <div class="project-card">
-                    <div class="project-row">
-                        <div class="project-img">
-                            <img src="/imgs/borepile-gedung-jakarta-pusat.webp"
-                                 alt="Proyek bore pile diameter 80cm untuk gedung perkantoran di Jakarta Pusat"
-                                 loading="lazy"
-                                 onerror="this.src='/imgs/borepile-mangga-besar-jakarta.webp'; this.onerror=null;"
-                                 data-lightbox>
-                            <div class="project-caption">Bore Pile diameter 80cm untuk gedung perkantoran</div>
-                        </div>
-                        <div class="project-text">
-                            <div class="info-card">
-                                <h3>Gedung Perkantoran di Jakarta Pusat</h3>
-                                <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane &#x00D8;80cm, kedalaman 20m, 35 titik<br>
-                                <strong>Biaya jasa:</strong> <span class="text-konsultasi">Hubungi Kami</span> untuk penawaran terbaik<br>
-                                <strong>+ mobilisasi:</strong> Rp3.500.000<br>
-                                <strong>Waktu:</strong> 12-14 hari kerja</p>
+                {pageData.projects.map(project => (
+                    <div class="project-card">
+                        <div class="project-row">
+                            <div class="project-img">
+                                {project.imageFallback ? (
+                                    <img src={project.image} onerror={`this.src='${project.imageFallback}'; this.onerror=null;`}
+                                         alt={project.imageAlt} 
+                                         loading="lazy"
+                                         data-lightbox>
+                                ) : (
+                                    <img src={project.image} 
+                                         alt={project.imageAlt} 
+                                         loading="lazy"
+                                         data-lightbox>
+                                )}
+                                <div class="project-caption">{project.caption}</div>
                             </div>
+                            {project.imageOnly ? null : (
+                            <div class="project-text">
+                                <div class="info-card">
+                                    <h3>{project.title}</h3>
+                                    <p>
+                                    {project.specs && <Fragment><strong>Spesifikasi:</strong> {project.specs}<br/></Fragment>}
+                                    {project.costCalc && <Fragment><strong>Biaya jasa:</strong> <span set:html={project.costCalc.replace(new RegExp('{m' + pageData.diameterNum + '}', 'g'), mesinPrice).replace(new RegExp('{mn' + pageData.diameterNum + '}', 'g'), manualPrice || '')}></span><br/></Fragment>}
+                                    {project.mobilization && <Fragment><strong>+ mobilisasi:</strong> {project.mobilization}<br/></Fragment>}
+                                    {project.total && <Fragment><strong>Total:</strong> <span set:html={project.total}></span><br/></Fragment>}
+                                    {project.time && <Fragment><strong>Waktu:</strong> {project.time}</Fragment>}
+                                    </p>
+                                </div>
+                            </div>
+    )}
                         </div>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-row">
-                        <div class="project-img">
-                            <img src="/imgs/borepile-gedung-jakarta-barat.webp"
-                                 alt="Proyek bore pile diameter 80cm untuk apartemen di Jakarta Barat"
-                                 loading="lazy"
-                                 onerror="this.src='/imgs/borepile-gedung-universitas-paramadina.webp'; this.onerror=null;"
-                                 data-lightbox>
-                            <div class="project-caption">Bore Pile diameter 80cm untuk proyek apartemen</div>
-                        </div>
-                        <div class="project-text">
-                            <div class="info-card">
-                                <h3>Apartemen di Jakarta Barat</h3>
-                                <p><strong>Spesifikasi:</strong> Bore pile mesin mini crane &#x00D8;80cm, kedalaman 25m, 45 titik<br>
-                                <strong>Biaya jasa:</strong> Rp440.000<br>
-                                <strong>+ mobilisasi:</strong> Rp25-30.000.000<br>
-                                <strong>Waktu:</strong> estimasi waktu pengerjaan bisa lebih cepat</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                ))}
 
                 <div class="project-note">
-                    <p>
-                        <strong>&#x1F4CC; Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton,
-                        <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan.
-                        Untuk diameter 80cm, biaya material lebih besar karena volume beton dan besi yang lebih banyak.
-                    </p>
+                    <p set:html={pageData.projectNote}></p>
                 </div>
             </section>
 
             <!-- ===== PERBANDINGAN DIAMETER ===== -->
             <section aria-labelledby="comparison-heading">
-                <h2 id="comparison-heading" class="section-heading">Perbandingan Diameter 80cm vs 60cm vs 100cm</h2>
-                <p>Diameter 80cm adalah pilihan ideal untuk gedung bertingkat 5-8 lantai. Berikut perbandingannya dengan diameter lainnya:</p>
+                <h2 id="comparison-heading" class="section-heading">{pageData.comparison.title}</h2>
+                <p>{pageData.comparison.intro}</p>
                 <div class="table-responsive">
                     <table class="price-table">
-                        <caption>Perbandingan daya dukung dan harga antar diameter bore pile untuk proyek besar</caption>
+                        <caption>Perbandingan daya dukung dan harga antar diameter bore pile</caption>
                         <thead>
                             <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Daya Dukung</th><th>Cocok Untuk</th></tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>60 cm</td>
-                                <td><span class="text-konsultasi">Hubungi Kami</span></td>
-                                <td>60-85 ton</td>
-                                <td>Hotel 3-4 lantai</td>
-                            </tr>
-                            <tr class="row-highlight">
-                                <td><strong>80 cm</strong></td>
-                                <td><span class="text-konsultasi">Hubungi Kami</span></td>
-                                <td><strong>100-150 ton</strong></td>
-                                <td><strong>Gedung 5-8 lantai, apartemen, rumah sakit</strong></td>
-                            </tr>
-                            <tr>
-                                <td>100 cm</td>
-                                <td><span class="text-konsultasi">Hubungi Kami</span></td>
-                                <td>150-220 ton</td>
-                                <td>Gedung tinggi, infrastruktur</td>
-                            </tr>
+                            {pageData.comparison.rows.map((row, i) => (
+                                <tr style={row.highlight ? "background:#fff3e0;" : (i % 2 === 0 ? "" : "background:#f9f9f9;")}>
+                                    <td>{row.highlight ? <strong>{row.diameter}</strong> : row.diameter}</td>
+                                    <td>{row.highlight ? <strong>{priceMap[`m${parseInt(row.diameter)}`]}</strong> : priceMap[`m${parseInt(row.diameter)}`]}</td>
+                                    <td>{row.highlight ? <strong>{row.capacity}</strong> : row.capacity}</td>
+                                    <td>{row.highlight ? <strong>{row.suitable}</strong> : row.suitable}</td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
                 </div>
-                <p class="price-hint" style="text-align: left;">Daya dukung di atas adalah estimasi untuk kedalaman 15-20 meter di tanah keras. Butuh info <a href="/harga/bore-pile/40cm.html">Harga Bore Pile 40cm?</a>, <a href="/harga/bore-pile/50cm.html">Harga Bore Pile 50cm?</a>, <a href="/harga/bore-pile/60cm.html">Harga Bore Pile 60cm?</a>, dan <a href="/harga/bore-pile-2026.html">Harga Bore Pile 2026?</a></p>
+                <p class="price-hint" style="text-align: left;" set:html={pageData.comparison.note}></p>
             </section>
 
             <!-- ===== KEUNTUNGAN ===== -->
             <section aria-labelledby="advantages-heading">
-                <h2 id="advantages-heading" class="section-heading">Keuntungan Memilih Bore Pile Diameter 80cm</h2>
+                <h2 id="advantages-heading" class="section-heading">Keuntungan Memilih Bore Pile Diameter {pageData.diameter}</h2>
                 <div class="info-grid">
-                    <div class="info-card"><h3>Daya Dukung Sangat Tinggi</h3><p>100-150 ton per titik, cukup untuk gedung 5-8 lantai, apartemen, hotel, dan rumah sakit.</p></div>
-                    <div class="info-card"><h3>Stabilitas Struktur Maksimal</h3><p>Dengan diameter besar, pondasi lebih stabil dan aman untuk bangunan bertingkat dengan beban berat.</p></div>
-                    <div class="info-card"><h3>Kedalaman Fleksibel</h3><p>Mampu mencapai kedalaman hingga 30 meter, menjangkau tanah keras untuk keamanan maksimal.</p></div>
-                    <div class="info-card"><h3>Proyek Bernilai Tinggi</h3><p>Proyek gedung bertingkat memiliki nilai kontrak besar, menguntungkan untuk semua pihak.</p></div>
+                    {pageData.advantages.map(adv => (
+                        <div class="info-card"><h3>{adv.title}</h3><p>{adv.text}</p></div>
+                    ))}
                 </div>
             </section>
 
             <!-- ===== DAYA DUKUNG ===== -->
             <section aria-labelledby="capacity-heading">
-                <h2 id="capacity-heading" class="section-heading">Daya Dukung Bore Pile Diameter 80cm</h2>
+                <h2 id="capacity-heading" class="section-heading">Daya Dukung Bore Pile Diameter {pageData.diameter}</h2>
                 <div class="illustration-row">
                     <div class="illustration-img">
-                        <img src="/imgs/bore-pile-pantai-indah-kapuk-25-mei-2026.webp" alt="Proses bore pile diameter 80cm untuk pondasi gedung bertingkat" loading="lazy" width="400" height="250">
-                        <div class="caption">Bore pile diameter 80cm untuk pondasi gedung bertingkat</div>
+                        <img src={pageData.loadCapacity.image} alt={pageData.loadCapacity.imageAlt} loading="lazy" width="400" height="250">
+                        <div class="caption">{pageData.loadCapacity.caption}</div>
                     </div>
                     <div class="illustration-text">
-                        <p><strong>Daya dukung bore pile diameter 80cm</strong> bervariasi tergantung kedalaman dan kondisi tanah:</p>
+                        <p set:html={pageData.loadCapacity.intro}></p>
                         <ul>
-                            <li>Kedalaman 8 meter: mampu menahan beban <strong>35-50 ton</strong></li>
-                            <li>Kedalaman 12 meter: mampu menahan beban <strong>55-80 ton</strong></li>
-                            <li>Kedalaman 18 meter: mampu menahan beban <strong>85-120 ton</strong></li>
-                            <li>Kedalaman 25 meter: mampu menahan beban <strong>120-170 ton</strong></li>
+                            {pageData.loadCapacity.items.map(item => (
+                                <li set:html={item}></li>
+                            ))}
                         </ul>
-                        <p>Untuk gedung 5-8 lantai, kedalaman 15-25 meter sudah cukup untuk mendapatkan daya dukung optimal.</p>
-                        <p><strong>&#x26A0;&#xFE0F; Penting:</strong> Lakukan uji sondir tanah untuk menentukan kedalaman yang tepat.</p>
+                        <p>{pageData.loadCapacity.conclusion}</p>
                     </div>
                 </div>
             </section>
 
-            <p>Butuh harga khusus untuk jasa bore pile 80cm di Jakarta?
-            <a href="/jasa/bore-pile/jakarta.html">Lihat jasa &amp; harga bore pile Jakarta &#x2192;</a>
+            <p>Butuh harga khusus untuk jasa bore pile di Jakarta? 
+            <a href="/jasa/bore-pile/jakarta.html">Lihat jasa & harga bore pile Jakarta →</a>
             </p>
 
             <!-- ===== MATERIAL DARI KAMI ===== -->
             <section>
                 <h2 class="section-heading">Bisa Pakai Material Dari Kami</h2>
-                <p>Tidak ingin repot cari material sendiri? Agung Perkasa juga menyediakan paket lengkap jasa bor + material besi &amp; beton untuk diameter 80cm:</p>
+                <p>Tidak ingin repot cari material sendiri? Agung Perkasa juga menyediakan paket lengkap jasa bor + material besi & beton:</p>
                 <div class="info-grid">
                     <div class="info-card">
-                        <h3>Diameter 80cm</h3>
-                        <p><strong>Harga :</strong> Hubungi Kami<br>
-                        <strong>Sudah termasuk:</strong> Jasa bor, perakitan besi, dan pengecoran beton. Besi tulangan 10D16 SNI, sengkang D10, beton mix K300<br>
-                        <strong>Minimal order:</strong> 200m untuk mesin</p>
+                        <h3>{pageData.materialPackage.diameter}</h3>
+                        <p><strong>Harga :</strong> {pageData.materialPackage.price}<br>
+                        <strong>Sudah termasuk:</strong> {pageData.materialPackage.includes}<br>
+                        <strong>Minimal order:</strong> {pageData.materialPackage.minOrder}</p>
                     </div>
                 </div>
-                <p class="price-hint">*Harga paket dapat disesuaikan dengan spesifikasi material yang Anda inginkan (K250, K300, K350, dll) dan kebutuhan struktur bangunan.</p>
+                <p class="price-hint">{pageData.materialPackage.note}</p>
             </section>
 
             <!-- ===== KOMITMEN & GARANSI ===== -->
             <div class="commitment-box">
-                <div class="icon" aria-hidden="true">&#x1F6E1;&#xFE0F;</div>
-                <p><strong>Komitmen &amp; Garansi Mutu</strong><br>Kami memberikan garansi penuh atas kualitas dalam pengerjaan proyek bore pile 80cm. Tim ahli kami sangat berpengalaman dalam pengerjaan pondasi dalam untuk gedung bertingkat dan proyek skala besar.</p>
-            </div>
+    <div class="icon" aria-hidden="true">🛡️</div>
+    <p><strong>Komitmen & Garansi Mutu</strong><br>Kami memberikan garansi penuh atas kualitas dalam pengerjaan proyek. Kami menjamin kualitas terbaik karena didukung oleh tim ahli kami yang sangat berpengalaman membuat pondasi dalam (khususnya bore pile)</p>
+</div>
 
-            <!-- ============================================================
-                 WHY CHOOSE US &amp; EQUIPMENT - KHUSUS DIAMETER 80CM
+                        <!-- ============================================================
+                 WHY CHOOSE US & EQUIPMENT
                  ============================================================ -->
             <div class="why-section">
-                <h2 class="why-title">Kenapa pilih Agung Perkasa untuk Bore Pile Diameter 80cm?</h2>
-                <p class="why-sub">Ini alasan kenapa banyak kontraktor dan pengembang percaya sama Agung Perkasa untuk proyek bore pile diameter 80cm.</p>
+                <h2 class="why-title">Kenapa pilih Agung Perkasa untuk Bore Pile Diameter {pageData.diameter}?</h2>
+                <p class="why-sub">Ini alasan kenapa banyak orang percaya sama Agung Perkasa untuk proyek bore pile diameter {pageData.diameter}.</p>
 
                 <div class="reasons-grid">
-                    <div class="reason-card">
-                        <h3>Memakai alat yang baik</h3>
-                        <p>Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, yang mampu menangani diameter 80cm dengan presisi tinggi.</p>
-                    </div>
-                    <div class="reason-card">
-                        <h3>Efisiensi waktu &amp; Komitmen kualitas</h3>
-                        <p>Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam, khususnya bore pile diameter 80cm.</p>
-                    </div>
-                    <div class="reason-card">
-                        <h3>Tim Ahli</h3>
-                        <p>Memiliki tim ahli dalam pengerjaan bore pile diameter 80cm, khususnya untuk gedung bertingkat, apartemen, dan proyek komersial skala besar.</p>
-                    </div>
-                    <div class="reason-card">
-                        <h3>Tim berpengalaman</h3>
-                        <p>Lebih dari sepuluh tahun mengerjakan proyek bore pile diameter 80cm. Mulai dari proyek gedung perkantoran hingga apartemen dan rumah sakit.</p>
-                    </div>
+                    {pageData.whyUs.map(item => (
+                        <div class="reason-card">
+                            <h3>{item.title}</h3>
+                            <p>{item.desc}</p>
+                        </div>
+                    ))}
                 </div>
 
-                <!-- ============================================================
-                     PORTOFOLIO PROYEK BORE PILE DIAMETER 80CM
-                     ============================================================ -->
-                <section class="portfolio-jakarta-section">
-                    <h2 class="portfolio-jakarta-title">Portofolio Proyek Bore Pile Diameter 80cm</h2>
-                    <p class="portfolio-jakarta-sub">Berikut proyek bore pile diameter 80cm yang sudah kami kerjakan.</p>
+                            <!-- ============================================================
+                 PORTOFOLIO PROYEK
+                 ============================================================ -->
+            <section class="portfolio-jakarta-section">
+                <h2 class="portfolio-jakarta-title">{pageData.portfolio.title}</h2>
+                <p class="portfolio-jakarta-sub">{pageData.portfolio.subtitle}</p>
 
-                    <div class="proyek-jakarta-box">
-                        <p class="proyek-jakarta-heading">Dokumentasi proyek bore pile diameter 80cm:</p>
-                        <div class="proyek-jakarta-grid">
-
+                <div class="proyek-jakarta-box">
+                    <p class="proyek-jakarta-heading">{pageData.portfolio.heading}</p>
+                    <div class="proyek-jakarta-grid">
+                        {pageData.portfolio.items.map(item => (
                             <div class="proyek-jakarta-item">
-                                <img src="/imgs/borepile-gedung-jakarta-pusat.webp"
-                                     alt="Proyek bore pile diameter 80cm untuk gedung perkantoran di Jakarta Pusat"
+                                <img src={item.image} 
+                                     alt={item.imageAlt} 
                                      loading="lazy"
-                                     width="400" height="300"
-                                     onerror="this.src='/imgs/borepile-mangga-besar-jakarta.webp'; this.onerror=null;"
-                                     data-lightbox>
+                                     width="400" height="300" data-lightbox>
                                 <div class="proyek-jakarta-caption">
-                                    <span class="proyek-jakarta-label">Gedung Perkantoran, Jakarta Pusat</span>
-                                    <span class="proyek-jakarta-detail">Bore pile &#x00D8;80cm untuk gedung 6 lantai</span>
+                                    <span class="proyek-jakarta-label">{item.label}</span>
+                                    <span class="proyek-jakarta-detail">{item.detail}</span>
                                 </div>
                             </div>
-
-                        </div>
-                        <p class="proyek-jakarta-link">
-                            Ingin lihat lebih banyak?
-                            <a href="/galeri/gallery.html">Kunjungi galeri proyek kami &#x2192;</a>
-                        </p>
+                        ))}
                     </div>
-                </section>
+                    <p class="proyek-jakarta-link">
+                        Ingin lihat lebih banyak? 
+                        <a href="/galeri/gallery.html">Kunjungi galeri proyek kami →</a>
+                    </p>
+                </div>
+            </section>
 
                 <h3 class="equip-title">Alat yang Kami gunakan di lapangan</h3>
-                <p class="equip-sub">Kami memiliki beberapa alat untuk pekerjaan bore pile diameter 80cm, antara lain:</p>
+                <p class="equip-sub">Kami memiliki beberapa alat untuk pekerjaan bore pile diameter {pageData.diameter}, antara lain:</p>
 
                 <div class="equip-grid">
-                    <!-- 1. Mini Crane -->
-                    <div class="equip-item">
-                        <img class="equip-img" src="/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg"
-                             alt="Mesin bore pile mini crane Agung Perkasa untuk bore pile diameter 80cm"
-                             loading="lazy">
-                        <div class="equip-info">
-                            <div class="equip-icon-inline">
-                                <img src="/imgs/logo-agung-perkasa.webp" alt="Ikon Mini Crane" width="24" height="24" onerror="this.src='/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg'">
-                                <h4>Mini Crane</h4>
+                    {pageData.equipment.map(equip => (
+                        <div class="equip-item">
+                            <img class="equip-img" src={equip.image} 
+                                 alt={equip.imageAlt} 
+                                 loading="lazy">
+                            <div class="equip-info">
+                                <div class="equip-icon-inline">
+                                    <img src="/imgs/logo-agung-perkasa.webp" alt={equip.logoAlt} width="24" height="24" onerror={`this.src='${equip.image}'`}>
+                                    <h4>{equip.name}</h4>
+                                </div>
+                                <p>{equip.desc}</p>
+                                <span class="equip-tag">Agung Perkasa</span>
                             </div>
-                            <p>Kapasitas sedang, untuk diameter 30-80 cm, kedalaman sampai 30 meter. Mini Crane cocok untuk lokasi yang cukup luas dan membutuhkan akses yang baik untuk mobilisasi alat dan pengerjaan. Cocok untuk gedung 5-8 lantai.</p>
-                            <span class="equip-tag">Agung Perkasa</span>
                         </div>
-                    </div>
-
-                    <!-- 2. Gawangan -->
-                    <div class="equip-item">
-                        <img class="equip-img" src="/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg"
-                             alt="Mesin bore pile gawangan Agung Perkasa untuk bore pile diameter 80cm di area terbatas"
-                             loading="lazy">
-                        <div class="equip-info">
-                            <div class="equip-icon-inline">
-                                <img src="/imgs/logo-agung-perkasa.webp" alt="Ikon Gawangan" width="24" height="24" onerror="this.src='/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg'">
-                                <h4>Gawangan</h4>
-                            </div>
-                            <p>Gawangan cocok untuk area yang tidak bisa diakses oleh mini crane. Karena ukuran dan bentuknya yang tidak sebesar mini crane, gawangan cocok untuk area yang memiliki akses terbatas. Diameter 30-80 cm, paling sering digunakan untuk proyek di gang sempit atau area terbatas.</p>
-                            <span class="equip-tag">Agung Perkasa</span>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
 
             <!-- ===== FAQ ===== -->
             <section>
-                <h2 class="section-heading">Pertanyaan Umum Seputar Bore Pile Diameter 80cm</h2>
+                <h2 class="section-heading">Pertanyaan Umum Seputar Bore Pile Diameter {pageData.diameter}</h2>
                 <div class="faq-container">
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Apakah bore pile diameter 80cm cukup kuat untuk gedung 8 lantai?
-                            <FaIcon class="fas fa-chevron-down" />
-                        </button>
-                        <div class="faq-answer">
-                            <p><strong>Sangat cukup.</strong> Dengan daya dukung 100-150 ton per titik dan kedalaman 15-25 meter, diameter 80cm mampu menahan beban gedung 5-8 lantai dengan aman. Bahkan untuk gedung 10 lantai pun masih kuat dengan perhitungan struktur yang tepat.</p>
+                    {pageData.faq.map(item => (
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                {item.q}
+                                <FaIcon class="fas fa-chevron-down" />
+                            </button>
+                            <div class="faq-answer">
+                                <p set:html={item.a.replace(new RegExp('{m' + pageData.diameterNum + '}', 'g'), mesinPrice).replace(new RegExp('{mn' + pageData.diameterNum + '}', 'g'), manualPrice || '')}></p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Berapa standar harga jasa bor diameter 80cm?
-                            <FaIcon class="fas fa-chevron-down" />
-                        </button>
-                        <div class="faq-answer">
-                            <p>Standar harga jasa bor diameter 80cm: <span class="text-konsultasi">Hubungi Kami</span> untuk mendapatkan penawaran harga terbaik sesuai kondisi proyek Anda. Harga dapat berbeda tergantung kedalaman pengeboran dan kondisi tanah.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Berapa kedalaman maksimal bore pile diameter 80cm?
-                            <FaIcon class="fas fa-chevron-down" />
-                        </button>
-                        <div class="faq-answer">
-                            <p>Untuk bore pile mesin (mini crane &amp; gawangan) diameter 80cm, kedalaman maksimal mencapai <strong>30 meter</strong>. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir di lokasi proyek Anda.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Berapa jumlah titik ideal untuk bore pile diameter 80cm?
-                            <FaIcon class="fas fa-chevron-down" />
-                        </button>
-                        <div class="faq-answer">
-                            <p>Untuk gedung dengan luas 500-1000m&#xB2;, jumlah titik ideal antara <strong>25-50 titik</strong>. Konsultasikan dengan tim teknis kami untuk perhitungan yang akurat sesuai gambar bangunan dan hasil sondir tanah.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Apakah melayani area Bekasi, Tangerang, Bogor?
-                            <FaIcon class="fas fa-chevron-down" />
-                        </button>
-                        <div class="faq-answer">
-                            <p>Betul. Kami melayani area <strong>Jabodetabek</strong> (Jakarta, Bekasi, Bogor, Depok, Tangerang) untuk proyek diameter 80cm dengan alat berat yang memadai.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Apakah melayani area luar Jabodetabek?
-                            <FaIcon class="fas fa-chevron-down" />
-                        </button>
-                        <div class="faq-answer">
-                            <p>Ya. Kami melayani seluruh area pulau Jawa untuk proyek skala besar dengan diameter 80cm, dengan biaya mobilisasi yang disesuaikan.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Berapa biaya total bore pile 80cm untuk gedung 6 lantai?
-                            <FaIcon class="fas fa-chevron-down" />
-                        </button>
-                        <div class="faq-answer">
-                            <p>Untuk gedung 6 lantai dengan luas 500-800m&#xB2;, biasanya membutuhkan <strong>25-40 titik</strong> bore pile diameter 80cm dengan kedalaman 15-20 meter. Estimasi biaya jasa bor (belum termasuk material):</p>
-                            <ul>
-                                <li><strong>Mesin (Mini Crane):</strong> <span class="text-konsultasi">Hubungi Kami</span> untuk penawaran terbaik + mobilisasi Rp2-3jt</li>
-                            </ul>
-                            <p>Gunakan <a href="#calculator-heading">kalkulator di atas</a> untuk menghitung estimasi biaya proyek Anda secara lebih akurat.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Apakah ada estimasi waktu pengerjaan bore pile 80cm?
-                            <FaIcon class="fas fa-chevron-down" />
-                        </button>
-                        <div class="faq-answer">
-                            <p>Untuk proyek bore pile 80cm, estimasi waktu pengerjaan tergantung jumlah titik dan kedalaman. Biasanya <strong>10-14 hari kerja</strong> untuk 25-40 titik. Hubungi kami untuk jadwal dan estimasi yang lebih akurat.</p>
-                        </div>
-                    </div>
-
+                    ))}
                 </div>
             </section>
+
+            <!-- ===== INTERNAL LINK ===== -->
             <div class="internal-link-box">
                 <p><strong>Baca Juga Harga Bore Pile:</strong><br>
-                <a href="/jasa/bore-pile/jakarta.html">Jakarta</a> |
-                <a href="/jasa/bore-pile/bekasi.html">Bekasi</a> |
-                <a href="/jasa/bore-pile/tangerang.html">Tangerang</a> |
-                <a href="/jasa/bore-pile/depok.html">Depok</a> |
-                <a href="/jasa/bore-pile/bogor.html">Bogor</a> |
-                <a href="/harga/bore-pile-2026.html">Harga Bore Pile 2026</a>
+                {pageData.internalLinks.map((link, i) => (
+                    <><a href={link.href}>{link.label}</a>{i < pageData.internalLinks.length - 1 ? ' | ' : ''}</>
+                ))}
                 </p>
             </div>
 
+        
 </KotaLayout>

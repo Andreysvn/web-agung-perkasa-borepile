@@ -2,7 +2,7 @@
 import config from '../../../../data/config.json';
 import KotaLayout from '../../../../layouts/KotaLayout.astro';
 import pricing from '../../../../data/harga.json';
-import pageData from '../../../../data/harga-diameter/60cm.json';
+import pageData from '../../../../data/harga-diameter/30cm.json';
 import { organizationSchema, localBusinessSchema } from '../../../../lib/schema.js';
 import FaIcon from '../../../../components/icons/FaIcon.astro';
 
@@ -20,21 +20,20 @@ const mn40 = pricing.manual.find(p => p.diameter === 40).price.toLocaleString('i
 
 // Map harga ke variable untuk template
 const priceMap = { m30, m40, m50, mn20, mn25, mn30, mn40 };
-const mesinPrice = priceMap[`m${pageData.diameterNum}`] || '<span class="text-konsultasi">Hubungi Kami</span>';
-const manualPrice = priceMap[`mn${pageData.diameterNum}`] || '';
+const mesinPrice = priceMap[`m${pageData.diameterNum}`] || m30;
+const manualPrice = priceMap[`mn${pageData.diameterNum}`] || mn20;
 
 const orgLd = JSON.stringify(organizationSchema());
 
 const localBusinessLd = JSON.stringify(localBusinessSchema({
-    "description": pageData.localBusinessDescTemplate.replace('{mesin}', mesinPrice).replace('{manual}', manualPrice || ''), 
+    "description": pageData.localBusinessDescTemplate.replace('{mesin}', mesinPrice).replace('{manual}', manualPrice), 
     "areaServed": [
         { "@type": "City", "name": "Jakarta" },
         { "@type": "City", "name": "Bekasi" },
         { "@type": "City", "name": "Depok" },
         { "@type": "City", "name": "Tangerang" },
         { "@type": "City", "name": "Bogor" }
-    ],
-    ...(pageData.priceRange ? { "priceRange": pageData.priceRange } : {})
+    ]
 }));
 
 const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
@@ -48,7 +47,7 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
     year: 'numeric'
 }).format(new Date(`${pricing.priceUpdatedAt}T00:00:00`));
 
-const seoDesc = pageData.descriptionTemplate.replace('{mesin}', mesinPrice).replace('{manual}', manualPrice || '');
+const seoDesc = pageData.descriptionTemplate.replace('{mesin}', mesinPrice).replace('{manual}', manualPrice);
 ---
 
 <KotaLayout 
@@ -104,106 +103,48 @@ const seoDesc = pageData.descriptionTemplate.replace('{mesin}', mesinPrice).repl
     <h2 id="table-heading" class="section-heading">Tabel Harga Bore Pile {pageData.diameter} Terbaru 2026 (Jasa Bor Saja)</h2>
     <p set:html={pageData.priceTableNote}></p>
 
-    <h3>Bore Pile Mesin (Mini Crane &amp; Gawangan)</h3>
-        <div class="table-responsive">
-            <table class="price-table">
-                <caption>Tabel harga bore pile mesin (mini crane &amp; gawangan) per meter</caption>
-                <thead>
-                    <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
-                </thead>
-                <tbody>
-                    {pageData.diameterNum === 30 ? (
-                        <tr class="row-highlight">
-                            <td><strong>{pageData.mesinHighlight?.diameter}</strong></td>
-                            <td><strong>{pageData.mesinHighlight?.price || m30}</strong></td>
-                            <td><strong>{pageData.mesinHighlight?.maxDepth}</strong></td>
-                            <td><strong>{pageData.mesinHighlight?.suitable}</strong></td>
-                        </tr>
-                    ) : (
-                        <tr><td>30 cm</td><td>{m30}</td><td>30 meter</td><td>Rumah 1-2 lantai</td></tr>
-                    )}
-                    {pageData.diameterNum === 40 ? (
-                        <tr class="row-highlight">
-                            <td><strong>{pageData.mesinHighlight?.diameter}</strong></td>
-                            <td><strong>{pageData.mesinHighlight?.price || m40}</strong></td>
-                            <td><strong>{pageData.mesinHighlight?.maxDepth}</strong></td>
-                            <td><strong>{pageData.mesinHighlight?.suitable}</strong></td>
-                        </tr>
-                    ) : (
-                        <tr><td>40 cm</td><td>{m40}</td><td>30 meter</td><td>Ruko, kantor 2-3 lantai</td></tr>
-                    )}
-                    {pageData.diameterNum === 50 ? (
-                        <tr class="row-highlight">
-                            <td><strong>{pageData.mesinHighlight?.diameter}</strong></td>
-                            <td><strong>{pageData.mesinHighlight?.price || m50}</strong></td>
-                            <td><strong>{pageData.mesinHighlight?.maxDepth}</strong></td>
-                            <td><strong>{pageData.mesinHighlight?.suitable}</strong></td>
-                        </tr>
-                    ) : (
-                        <tr><td>50 cm</td><td>{m50}</td><td>30 meter</td><td>Gudang, pabrik kecil</td></tr>
-                    )}
-                    {pageData.diameterNum === 60 ? (
-                        <tr class="row-highlight">
-                            <td><strong>{pageData.mesinHighlight?.diameter}</strong></td>
-                            <td><strong><span set:html={pageData.mesinHighlight?.price || '<span class="text-konsultasi">Hubungi Kami</span>'}></span></strong></td>
-                            <td><strong>{pageData.mesinHighlight?.maxDepth}</strong></td>
-                            <td><strong>{pageData.mesinHighlight?.suitable}</strong></td>
-                        </tr>
-                    ) : (
-                        <tr><td>60 cm</td><td><span class="text-konsultasi">Hubungi Kami</span></td><td>30 meter</td><td>Hotel 3-4 lantai, gedung 4-5 lantai, rumah sakit</td></tr>
-                    )}
-                    {pageData.diameterNum === 80 ? (
-                        <tr class="row-highlight">
-                            <td><strong>{pageData.mesinHighlight?.diameter}</strong></td>
-                            <td><strong><span set:html={pageData.mesinHighlight?.price || '<span class="text-konsultasi">Hubungi Kami</span>'}></span></strong></td>
-                            <td><strong>{pageData.mesinHighlight?.maxDepth}</strong></td>
-                            <td><strong>{pageData.mesinHighlight?.suitable}</strong></td>
-                        </tr>
-                    ) : (
-                        <tr><td>80 cm</td><td><span class="text-konsultasi">Hubungi Kami</span></td><td>30 meter</td><td>Gedung 5-8 lantai, apartemen, hotel</td></tr>
-                    )}
-                </tbody>
-            </table>
-        </div>
+    <h3>Bore Pile Mesin (Mini Crane)</h3>
+    <div class="table-responsive">
+        <table class="price-table">
+            <caption>Tabel harga bore pile mesin (mini crane) per meter</caption>
+            <thead>
+                <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
+            </thead>
+            <tbody>
+                <tr class="row-highlight">
+                    <td><strong>{pageData.mesinHighlight.diameter}</strong></td>
+                    <td><strong>{m30}</strong></td>
+                    <td><strong>{pageData.mesinHighlight.maxDepth}</strong></td>
+                    <td><strong>{pageData.mesinHighlight.suitable}</strong></td>
+                </tr>
+                <tr><td>40 cm</td><td>{m40}</td><td>30 meter</td><td>Ruko, kantor 2 lantai, jembatan kecil-sedang</td></tr>
+                <tr class="row-alt"><td>50 cm</td><td>{m50}</td><td>30 meter</td><td>Gudang, pabrik kecil</td></tr>
+                <tr><td>60 cm</td><td><span class="text-konsultasi">Hubungi Kami</span></td><td>30 meter</td><td>Hotel 3-4 lantai</td></tr>
+                <tr class="row-alt"><td>80 cm</td><td><span class="text-konsultasi">Hubungi Kami</span></td><td>30 meter</td><td>Gedung 5-8 lantai</td></tr>
+            </tbody>
+        </table>
+    </div>
 
-    {pageData.showManualHighlight !== false && (
-    <Fragment>
-        <h3>Bore Pile Manual (Strauss Pile)</h3>
-        <div class="table-responsive">
-            <table class="price-table">
-                <caption>Tabel harga bore pile manual (strauss pile) per meter</caption>
-                <thead>
-                    <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>20 cm</td><td>{mn20}</td><td>10 meter</td><td>Area sangat sempit</td></tr>
-                    <tr><td>25 cm</td><td>{mn25}</td><td>10 meter</td><td>Gang kecil</td></tr>
-                    {pageData.diameterNum === 30 ? (
-                        <tr class="row-highlight">
-                            <td><strong>{pageData.manualHighlight?.diameter}</strong></td>
-                            <td><strong>{pageData.manualHighlight?.price || mn30}</strong></td>
-                            <td><strong>{pageData.manualHighlight?.maxDepth}</strong></td>
-                            <td><strong>{pageData.manualHighlight?.suitable}</strong></td>
-                        </tr>
-                    ) : (
-                        <tr><td>30 cm</td><td>{mn30}</td><td>10 meter</td><td>Rumah 1-2 lantai</td></tr>
-                    )}
-                    {pageData.diameterNum === 40 ? (
-                        <tr class="row-highlight">
-                            <td><strong>{pageData.manualHighlight?.diameter}</strong></td>
-                            <td><strong>{pageData.manualHighlight?.price || mn40}</strong></td>
-                            <td><strong>{pageData.manualHighlight?.maxDepth}</strong></td>
-                            <td><strong>{pageData.manualHighlight?.suitable}</strong></td>
-                        </tr>
-                    ) : (
-                        <tr><td>40 cm</td><td>{mn40}</td><td>10 meter</td><td>Ruko, kantor, bangunan 2 lantai</td></tr>
-                    )}
-                </tbody>
-            </table>
-        </div>
-        {pageData.manualNote && <p class="price-hint" set:html={pageData.manualNote}></p>}
-    </Fragment>
-)}
+    <h3>Bore Pile Manual (Strauss Pile)</h3>
+    <div class="table-responsive">
+        <table class="price-table">
+            <caption>Tabel harga bore pile manual (strauss pile) per meter</caption>
+            <thead>
+                <tr><th>Diameter</th><th>Harga (Rp/m)</th><th>Kedalaman Maks</th><th>Cocok Untuk</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>20 cm</td><td>75.000</td><td>10 meter</td><td>Area sangat sempit</td></tr>
+                <tr><td>25 cm</td><td>{mn25}</td><td>10 meter</td><td>Gang kecil</td></tr>
+                <tr class="row-highlight">
+                    <td><strong>{pageData.manualHighlight.diameter}</strong></td>
+                    <td><strong>{pageData.manualHighlight.price}</strong></td>
+                    <td><strong>{pageData.manualHighlight.maxDepth}</strong></td>
+                    <td><strong>{pageData.manualHighlight.suitable}</strong></td>
+                </tr>
+                <tr><td>40 cm</td><td>{mn40}</td><td>10 meter</td><td>Bangunan lebih dari 1 lantai (tanah padat)</td></tr>
+            </tbody>
+        </table>
+    </div>
 </section>
 
                 <a href="/jasa/">Lihat Jasa Bore Pile & Strauss Pile untuk wilayah Anda →</a>
@@ -266,20 +207,16 @@ const seoDesc = pageData.descriptionTemplate.replace('{mesin}', mesinPrice).repl
                                 )}
                                 <div class="project-caption">{project.caption}</div>
                             </div>
-                            {project.imageOnly ? null : (
                             <div class="project-text">
                                 <div class="info-card">
                                     <h3>{project.title}</h3>
-                                    <p>
-                                    {project.specs && <Fragment><strong>Spesifikasi:</strong> {project.specs}<br/></Fragment>}
-                                    {project.costCalc && <Fragment><strong>Biaya jasa:</strong> <span set:html={project.costCalc.replace(new RegExp('{m' + pageData.diameterNum + '}', 'g'), mesinPrice).replace(new RegExp('{mn' + pageData.diameterNum + '}', 'g'), manualPrice || '')}></span><br/></Fragment>}
-                                    {project.mobilization && <Fragment><strong>+ mobilisasi:</strong> {project.mobilization}<br/></Fragment>}
-                                    {project.total && <Fragment><strong>Total:</strong> <span set:html={project.total}></span><br/></Fragment>}
-                                    {project.time && <Fragment><strong>Waktu:</strong> {project.time}</Fragment>}
-                                    </p>
+                                    <p><strong>Spesifikasi:</strong> {project.specs}<br>
+                                    <strong>Biaya jasa:</strong> <span set:html={project.costCalc}></span><br>
+                                    <strong>+ mobilisasi:</strong> {project.mobilization}<br>
+                                    <strong>Total:</strong> <span set:html={project.total}></span><br>
+                                    <strong>Waktu:</strong> {project.time}</p>
                                 </div>
                             </div>
-    )}
                         </div>
                     </div>
                 ))}
@@ -448,7 +385,7 @@ const seoDesc = pageData.descriptionTemplate.replace('{mesin}', mesinPrice).repl
                                 <FaIcon class="fas fa-chevron-down" />
                             </button>
                             <div class="faq-answer">
-                                <p set:html={item.a.replace(new RegExp('{m' + pageData.diameterNum + '}', 'g'), mesinPrice).replace(new RegExp('{mn' + pageData.diameterNum + '}', 'g'), manualPrice || '')}></p>
+                                <p set:html={item.a}></p>
                             </div>
                         </div>
                     ))}
