@@ -12,7 +12,7 @@ const { address, maps } = config.company;
 
 <div class="maps-container">
     <div class="maps-card">
-        <h3 class="maps-title">📍 Lokasi Kami di {cityName}</h3>
+        <h3 class="maps-title">📍 Lokasi Kami{cityName ? " di " + cityName : ""}</h3>
         <p class="maps-address">
             <strong>{config.company.name}</strong><br>
             {address}
@@ -38,3 +38,4 @@ const { address, maps } = config.company;
         </a>
     </div>
 </div>
+
