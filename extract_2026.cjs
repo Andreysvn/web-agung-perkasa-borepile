@@ -49,3 +49,4 @@ pd.materialPackages = [
 
 fs.writeFileSync('src/data/harga-2026.json', JSON.stringify(pd, null, 2));
 console.log("Updated harga-2026.json");
+

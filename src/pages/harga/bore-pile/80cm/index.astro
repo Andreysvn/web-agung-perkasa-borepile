@@ -63,7 +63,7 @@ const seoDesc = pageData.descriptionTemplate.replace('{mesin}', mesinPrice).repl
     <nav class="breadcrumb" aria-label="Breadcrumb navigasi">
                 {pageData.breadcrumbs.map((item, i) => (
                     i < pageData.breadcrumbs.length - 1 ? (
-                        <><a href={item.url}>{item.name}</a><span class="separator">/</span></>
+                        <><a href={item.url}>{item.name}</a><span class="separator"> / </span></>
                     ) : (
                         <span class="current" aria-current="page">{item.name}</span>
                     )

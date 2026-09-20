@@ -101,8 +101,7 @@ const faqLd = JSON.stringify({
             <div class="caption">Proses pengecoran bore pile</div>
         </div>
         <div class="illustration-text">
-            <p><strong>Harga bore pile 2026</strong> terbaru untuk jasa pengeboran mulai dari <strong>Rp{mesinMulai}/m untuk mesin (mini crane)</strong>, dan manual atau <strong>strauss pile mulai dari Rp{manualMulai}/m</strong>. Kalkulator ini dibuat untuk menghitung estimasi <strong>total biaya</strong> jasa borepile dari berbagai diameter (mesin & manual), bisa mengatur harga sendiri sesuai keinginan. Dibuat oleh tim Agung Perkasa Borepile dari data proyek nyata yang kami kerjakan di lapangan.</p>
-            <p><a href="/harga/bore-pile-2026.html">Lihat daftar harga bore pile 2026 lengkap di sini</a>.</p>
+            <p set:html={pageData.heroText}></p>
         </div>
     </div>
 
