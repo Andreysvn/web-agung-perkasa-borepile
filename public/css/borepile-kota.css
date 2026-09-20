@@ -674,3 +674,10 @@ main {
 }
 .commitment-box .icon { font-size: 2rem; margin-bottom: 0.5rem; }
 .commitment-box p { font-size: 0.95rem; line-height: 1.6; color: var(--text-body, #475569); }
+/* ACCESSIBILITY OVERRIDES */
+body, .price-hint, .calculator-note, .calculator-box, .section-desc-center, .article-date, .publisher-inner p, span.current { color: #1e293b !important; }
+.btn-articles-all { background-color: #0f172a !important; color: #ffffff !important; }
+.btn-articles-all:hover { background-color: transparent !important; color: #0f172a !important; border-color: #0f172a !important; }
+.btn-wa, .btn-wa-konsultasi, .whatsapp-float { background-color: #15803d !important; color: #ffffff !important; }
+.btn-wa:hover, .btn-wa-konsultasi:hover, .whatsapp-float:hover { background-color: #166534 !important; }
+a:not(.btn-nav):not(.btn-wa):not(.btn-wa-konsultasi):not(.btn-articles-all):not(.whatsapp-float):not(.nav-menu a):not(.dropdown-content a) { text-decoration: underline !important; text-underline-offset: 2px !important; }
