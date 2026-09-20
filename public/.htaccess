@@ -4,6 +4,21 @@
 RewriteEngine On
 
 # ============================================================
+# URL LAMA (flat-style) -> URL BARU (folder-style)
+# Ini untuk Google dan pengunjung yang masih pakai link lama
+# ============================================================
+RewriteRule ^jasa/bore-pile-jakarta\.html$ /jasa/bore-pile/jakarta.html [R=301,L]
+RewriteRule ^jasa/bore-pile-bekasi\.html$ /jasa/bore-pile/bekasi.html [R=301,L]
+RewriteRule ^jasa/bore-pile-bogor\.html$ /jasa/bore-pile/bogor.html [R=301,L]
+RewriteRule ^jasa/bore-pile-depok\.html$ /jasa/bore-pile/depok.html [R=301,L]
+RewriteRule ^jasa/bore-pile-tangerang\.html$ /jasa/bore-pile/tangerang.html [R=301,L]
+RewriteRule ^jasa/bore-pile-bandung\.html$ /jasa/bore-pile/bandung.html [R=301,L]
+RewriteRule ^jasa/bore-pile-semarang\.html$ /jasa/bore-pile/semarang.html [R=301,L]
+RewriteRule ^jasa/bore-pile-surabaya\.html$ /jasa/bore-pile/surabaya.html [R=301,L]
+RewriteRule ^jasa/bore-pile-karawang\.html$ /jasa/bore-pile/karawang.html [R=301,L]
+RewriteRule ^jasa/strauss-pile-jakarta\.html$ /jasa/strauss-pile/jakarta.html [R=301,L]
+
+# ============================================================
 # GENERIC RULE: Kalau ada request ke folder (berakhiran /)
 # dan file .html-nya ada, redirect ke .html
 # Ini menangkap SEMUA kasus tanpa perlu tulis satu-satu
