@@ -23,26 +23,71 @@
   "showManualHighlight": false,
   "manualNote": "<strong>Catatan:</strong> Bore pile manual (Strauss Pile) tidak tersedia untuk diameter 80cm karena keterbatasan tenaga manusia, kedalaman 6-10 meter hanya untuk diameter 20-40cm. Semua pengerjaan diameter 80cm menggunakan mesin untuk hasil maksimal.",
   "factors": [
-    { "title": "1. Diameter & Kedalaman", "text": "Semakin dalam pengeboran yang diperlukan hingga tanah keras, maka biaya per meter semakin tinggi. Untuk gedung 5-8 lantai, kedalaman 15-25 meter umumnya diperlukan." },
-    { "title": "2. Kondisi Tanah & Uji Sondir", "text": "Tanah lunak di area rawa atau bekas sungai membutuhkan pengeboran lebih dalam hingga mencapai tanah keras, sehingga biaya bore pile 80cm bisa lebih besar. Data sondir sangat wajib untuk perhitungan akurat." },
-    { "title": "3. Jarak Proyek Dari Gudang Kami", "text": "Biaya mobilisasi alat berat (mini crane atau gawangan) sudah kami sesuaikan sesuai jarak dari gudang kami di Jakarta." },
-    { "title": "4. Volume Pekerjaan", "text": "Minimal order jasa bore pile untuk mesin (mini crane & gawangan) adalah 200 meter. Proyek gedung bertingkat biasanya memiliki volume titik yang besar." },
-    { "title": "5. Jenis Proyek", "text": "Proyek apartemen, hotel, dan rumah sakit memiliki spesifikasi dan standar keselamatan yang berbeda dibandingkan gedung perkantoran biasa." }
+    {
+      "title": "1. Diameter & Kedalaman",
+      "text": "Semakin dalam pengeboran yang diperlukan hingga tanah keras, maka biaya per meter semakin tinggi. Untuk gedung 5-8 lantai, kedalaman 15-25 meter umumnya diperlukan."
+    },
+    {
+      "title": "2. Kondisi Tanah & Uji Sondir",
+      "text": "Tanah lunak di area rawa atau bekas sungai membutuhkan pengeboran lebih dalam hingga mencapai tanah keras, sehingga biaya bore pile 80cm bisa lebih besar. Data sondir sangat wajib untuk perhitungan akurat."
+    },
+    {
+      "title": "3. Jarak Proyek Dari Gudang Kami",
+      "text": "Biaya mobilisasi alat berat (mini crane atau gawangan) sudah kami sesuaikan sesuai jarak dari gudang kami di Jakarta."
+    },
+    {
+      "title": "4. Volume Pekerjaan",
+      "text": "Minimal order jasa bore pile untuk mesin (mini crane & gawangan) adalah 200 meter. Proyek gedung bertingkat biasanya memiliki volume titik yang besar."
+    },
+    {
+      "title": "5. Jenis Proyek",
+      "text": "Proyek apartemen, hotel, dan rumah sakit memiliki spesifikasi dan standar keselamatan yang berbeda dibandingkan gedung perkantoran biasa."
+    }
   ],
   "sondirNote": "<strong>Untuk proyek bore pile 80cm:</strong> Kami sangat merekomendasikan untuk melakukan uji sondir tanah terlebih dahulu. Kedalaman pengeboran yang tepat hingga tanah keras sangat menentukan kekuatan pondasi gedung bertingkat Anda. Konsultasikan proyek bore pile 80cm dengan tim teknis kami untuk penawaran harga yang sesuai dan perhitungan struktur yang akurat.",
   "additionalCosts": [
-    { "title": "🚛 Mobilisasi Alat Bore Pile", "text": "Mesin mini crane: Rp2-3jt | Menyesuaikan jarak proyek dari Jakarta" },
-    { "title": "Minimal Order", "text": "Mesin mini crane dan gawangan: 200 meter | Proyek gedung biasanya volume besar" },
-    { "title": "Sedot Lumpur", "text": "Metode wash boring (bor basah) untuk diameter 80cm, perkiraan biaya tambahan: Rp800.000 - Rp1.500.000/rit (tergantung volume lumpur)" },
-    { "title": "Data Sondir", "text": "Sangat wajib untuk menentukan kedalaman pengeboran yang tepat hingga mencapai tanah keras. Biaya uji sondir sekitar Rp2-5jt tergantung lokasi" }
+    {
+      "title": "🚛 Mobilisasi Alat Bore Pile",
+      "text": "Mesin mini crane: Rp2-3jt | Menyesuaikan jarak proyek dari Jakarta"
+    },
+    {
+      "title": "Minimal Order",
+      "text": "Mesin mini crane dan gawangan: 200 meter | Proyek gedung biasanya volume besar"
+    },
+    {
+      "title": "Sedot Lumpur",
+      "text": "Metode wash boring (bor basah) untuk diameter 80cm, perkiraan biaya tambahan: Rp800.000 - Rp1.500.000/rit (tergantung volume lumpur)"
+    },
+    {
+      "title": "Data Sondir",
+      "text": "Sangat wajib untuk menentukan kedalaman pengeboran yang tepat hingga mencapai tanah keras. Biaya uji sondir sekitar Rp2-5jt tergantung lokasi"
+    }
   ],
   "tips": [
-    { "diameter": "30 cm", "usage": "rumah 1-2 lantai" },
-    { "diameter": "40 cm", "usage": "ruko, kantor 2-3 lantai" },
-    { "diameter": "50 cm", "usage": "gudang, pabrik kecil" },
-    { "diameter": "60 cm", "usage": "hotel 3-4 lantai" },
-    { "diameter": "80 cm", "usage": "gedung 5-8 lantai, apartemen, rumah sakit" },
-    { "diameter": "90-110 cm", "usage": "gedung tinggi, infrastruktur berat" }
+    {
+      "diameter": "30 cm",
+      "usage": "rumah 1-2 lantai"
+    },
+    {
+      "diameter": "40 cm",
+      "usage": "ruko, kantor 2-3 lantai"
+    },
+    {
+      "diameter": "50 cm",
+      "usage": "gudang, pabrik kecil"
+    },
+    {
+      "diameter": "60 cm",
+      "usage": "hotel 3-4 lantai"
+    },
+    {
+      "diameter": "80 cm",
+      "usage": "gedung 5-8 lantai, apartemen, rumah sakit"
+    },
+    {
+      "diameter": "90-110 cm",
+      "usage": "gedung tinggi, infrastruktur berat"
+    }
   ],
   "projects": [
     {
@@ -73,17 +118,47 @@
     "title": "Perbandingan Diameter 80cm vs 60cm vs 100cm",
     "intro": "Diameter 80cm adalah pilihan ideal untuk gedung bertingkat 5-8 lantai. Berikut perbandingannya dengan diameter lainnya:",
     "rows": [
-      { "diameter": "60 cm", "capacity": "60-85 ton", "suitable": "Hotel 3-4 lantai", "highlight": false, "price": "<span class=\"text-konsultasi\">Hubungi Kami</span>" },
-      { "diameter": "80 cm", "capacity": "100-150 ton", "suitable": "Gedung 5-8 lantai, apartemen, rumah sakit", "highlight": true, "price": "<span class=\"text-konsultasi\">Hubungi Kami</span>" },
-      { "diameter": "100 cm", "capacity": "150-220 ton", "suitable": "Gedung tinggi, infrastruktur", "highlight": false, "price": "<span class=\"text-konsultasi\">Hubungi Kami</span>" }
+      {
+        "diameter": "60 cm",
+        "capacity": "60-85 ton",
+        "suitable": "Hotel 3-4 lantai",
+        "highlight": false,
+        "price": "<span class=\"text-konsultasi\">Hubungi Kami</span>"
+      },
+      {
+        "diameter": "80 cm",
+        "capacity": "100-150 ton",
+        "suitable": "Gedung 5-8 lantai, apartemen, rumah sakit",
+        "highlight": true,
+        "price": "<span class=\"text-konsultasi\">Hubungi Kami</span>"
+      },
+      {
+        "diameter": "100 cm",
+        "capacity": "150-220 ton",
+        "suitable": "Gedung tinggi, infrastruktur",
+        "highlight": false,
+        "price": "<span class=\"text-konsultasi\">Hubungi Kami</span>"
+      }
     ],
     "note": "Daya dukung di atas adalah estimasi untuk kedalaman 15-20 meter di tanah keras. Butuh info <a href=\"/harga/bore-pile/40cm.html\">Harga Bore Pile 40cm?</a>, <a href=\"/harga/bore-pile/50cm.html\">Harga Bore Pile 50cm?</a>, <a href=\"/harga/bore-pile/60cm.html\">Harga Bore Pile 60cm?</a>, dan <a href=\"/harga/bore-pile-2026.html\">Harga Bore Pile 2026?</a>"
   },
   "advantages": [
-    { "title": "Daya Dukung Sangat Tinggi", "text": "100-150 ton per titik, cukup untuk gedung 5-8 lantai, apartemen, hotel, dan rumah sakit." },
-    { "title": "Stabilitas Struktur Maksimal", "text": "Dengan diameter besar, pondasi lebih stabil dan aman untuk bangunan bertingkat dengan beban berat." },
-    { "title": "Kedalaman Fleksibel", "text": "Mampu mencapai kedalaman hingga 30 meter, menjangkau tanah keras untuk keamanan maksimal." },
-    { "title": "Proyek Bernilai Tinggi", "text": "Proyek gedung bertingkat memiliki nilai kontrak besar, menguntungkan untuk semua pihak." }
+    {
+      "title": "Daya Dukung Sangat Tinggi",
+      "text": "100-150 ton per titik, cukup untuk gedung 5-8 lantai, apartemen, hotel, dan rumah sakit."
+    },
+    {
+      "title": "Stabilitas Struktur Maksimal",
+      "text": "Dengan diameter besar, pondasi lebih stabil dan aman untuk bangunan bertingkat dengan beban berat."
+    },
+    {
+      "title": "Kedalaman Fleksibel",
+      "text": "Mampu mencapai kedalaman hingga 30 meter, menjangkau tanah keras untuk keamanan maksimal."
+    },
+    {
+      "title": "Proyek Bernilai Tinggi",
+      "text": "Proyek gedung bertingkat memiliki nilai kontrak besar, menguntungkan untuk semua pihak."
+    }
   ],
   "loadCapacity": {
     "image": "/imgs/bore-pile-pantai-indah-kapuk-25-mei-2026.webp",
@@ -106,10 +181,22 @@
     "note": "*Harga paket dapat disesuaikan dengan spesifikasi material yang Anda inginkan (K250, K300, K350, dll) dan kebutuhan struktur bangunan."
   },
   "whyUs": [
-    { "title": "Memakai alat yang baik", "desc": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, yang mampu menangani diameter 80cm dengan presisi tinggi." },
-    { "title": "Efisiensi waktu & Komitmen kualitas", "desc": "Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam, khususnya bore pile diameter 80cm." },
-    { "title": "Tim Ahli", "desc": "Memiliki tim ahli dalam pengerjaan bore pile diameter 80cm, khususnya untuk gedung bertingkat, apartemen, dan proyek komersial skala besar." },
-    { "title": "Tim berpengalaman", "desc": "Lebih dari sepuluh tahun mengerjakan proyek bore pile diameter 80cm. Mulai dari proyek gedung perkantoran hingga apartemen dan rumah sakit." }
+    {
+      "title": "Memakai alat yang baik",
+      "desc": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, yang mampu menangani diameter 80cm dengan presisi tinggi."
+    },
+    {
+      "title": "Efisiensi waktu & Komitmen kualitas",
+      "desc": "Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam, khususnya bore pile diameter 80cm."
+    },
+    {
+      "title": "Tim Ahli",
+      "desc": "Memiliki tim ahli dalam pengerjaan bore pile diameter 80cm, khususnya untuk gedung bertingkat, apartemen, dan proyek komersial skala besar."
+    },
+    {
+      "title": "Tim berpengalaman",
+      "desc": "Lebih dari sepuluh tahun mengerjakan proyek bore pile diameter 80cm. Mulai dari proyek gedung perkantoran hingga apartemen dan rumah sakit."
+    }
   ],
   "portfolio": {
     "title": "Portofolio Proyek Bore Pile Diameter 80cm",
@@ -142,27 +229,77 @@
     }
   ],
   "faq": [
-    { "q": "Apakah bore pile diameter 80cm cukup kuat untuk gedung 8 lantai?", "a": "<strong>Sangat cukup.</strong> Dengan daya dukung 100-150 ton per titik dan kedalaman 15-25 meter, diameter 80cm mampu menahan beban gedung 5-8 lantai dengan aman. Bahkan untuk gedung 10 lantai pun masih kuat dengan perhitungan struktur yang tepat." },
-    { "q": "Berapa standar harga jasa bor diameter 80cm?", "a": "Standar harga jasa bor diameter 80cm: <span class=\"text-konsultasi\">Hubungi Kami</span> untuk mendapatkan penawaran harga terbaik sesuai kondisi proyek Anda. Harga dapat berbeda tergantung kedalaman pengeboran dan kondisi tanah." },
-    { "q": "Berapa kedalaman maksimal bore pile diameter 80cm?", "a": "Untuk bore pile mesin (mini crane & gawangan) diameter 80cm, kedalaman maksimal mencapai <strong>30 meter</strong>. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir di lokasi proyek Anda." },
-    { "q": "Berapa jumlah titik ideal untuk bore pile diameter 80cm?", "a": "Untuk gedung dengan luas 500-1000m², jumlah titik ideal antara <strong>25-50 titik</strong>. Konsultasikan dengan tim teknis kami untuk perhitungan yang akurat sesuai gambar bangunan dan hasil sondir tanah." },
-    { "q": "Apakah melayani area Bekasi, Tangerang, Bogor?", "a": "Betul. Kami melayani area <strong>Jabodetabek</strong> (Jakarta, Bekasi, Bogor, Depok, Tangerang) untuk proyek diameter 80cm dengan alat berat yang memadai." },
-    { "q": "Apakah melayani area luar Jabodetabek?", "a": "Ya. Kami melayani seluruh area pulau Jawa untuk proyek skala besar dengan diameter 80cm, dengan biaya mobilisasi yang disesuaikan." },
-    { "q": "Berapa biaya total bore pile 80cm untuk gedung 6 lantai?", "a": "Untuk gedung 6 lantai dengan luas 500-800m², biasanya membutuhkan <strong>25-40 titik</strong> bore pile diameter 80cm dengan kedalaman 15-20 meter. Estimasi biaya jasa bor (belum termasuk material):</p><ul><li><strong>Mesin (Mini Crane):</strong> <span class=\"text-konsultasi\">Hubungi Kami</span> untuk penawaran terbaik + mobilisasi Rp2-3jt</li></ul><p>Gunakan <a href=\"#calculator-heading\">kalkulator di atas</a> untuk menghitung estimasi biaya proyek Anda secara lebih akurat." },
-    { "q": "Apakah ada estimasi waktu pengerjaan bore pile 80cm?", "a": "Untuk proyek bore pile 80cm, estimasi waktu pengerjaan tergantung jumlah titik dan kedalaman. Biasanya <strong>10-14 hari kerja</strong> untuk 25-40 titik. Hubungi kami untuk jadwal dan estimasi yang lebih akurat." }
+    {
+      "q": "Apakah bore pile diameter 80cm cukup kuat untuk gedung 8 lantai?",
+      "a": "<strong>Sangat cukup.</strong> Dengan daya dukung 100-150 ton per titik dan kedalaman 15-25 meter, diameter 80cm mampu menahan beban gedung 5-8 lantai dengan aman. Bahkan untuk gedung 10 lantai pun masih kuat dengan perhitungan struktur yang tepat."
+    },
+    {
+      "q": "Berapa standar harga jasa bor diameter 80cm?",
+      "a": "Standar harga jasa bor diameter 80cm: <span class=\"text-konsultasi\">Hubungi Kami</span> untuk mendapatkan penawaran harga terbaik sesuai kondisi proyek Anda. Harga dapat berbeda tergantung kedalaman pengeboran dan kondisi tanah."
+    },
+    {
+      "q": "Berapa kedalaman maksimal bore pile diameter 80cm?",
+      "a": "Untuk bore pile mesin (mini crane & gawangan) diameter 80cm, kedalaman maksimal mencapai <strong>30 meter</strong>. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir di lokasi proyek Anda."
+    },
+    {
+      "q": "Berapa jumlah titik ideal untuk bore pile diameter 80cm?",
+      "a": "Untuk gedung dengan luas 500-1000m², jumlah titik ideal antara <strong>25-50 titik</strong>. Konsultasikan dengan tim teknis kami untuk perhitungan yang akurat sesuai gambar bangunan dan hasil sondir tanah."
+    },
+    {
+      "q": "Apakah melayani area Bekasi, Tangerang, Bogor?",
+      "a": "Betul. Kami melayani area <strong>Jabodetabek</strong> (Jakarta, Bekasi, Bogor, Depok, Tangerang) untuk proyek diameter 80cm dengan alat berat yang memadai."
+    },
+    {
+      "q": "Apakah melayani area luar Jabodetabek?",
+      "a": "Ya. Kami melayani seluruh area pulau Jawa untuk proyek skala besar dengan diameter 80cm, dengan biaya mobilisasi yang disesuaikan."
+    },
+    {
+      "q": "Berapa biaya total bore pile 80cm untuk gedung 6 lantai?",
+      "a": "Untuk gedung 6 lantai dengan luas 500-800m², biasanya membutuhkan <strong>25-40 titik</strong> bore pile diameter 80cm dengan kedalaman 15-20 meter. Estimasi biaya jasa bor (belum termasuk material):</p><ul><li><strong>Mesin (Mini Crane):</strong> <span class=\"text-konsultasi\">Hubungi Kami</span> untuk penawaran terbaik + mobilisasi Rp2-3jt</li></ul><p>Gunakan <a href=\"#calculator-heading\">kalkulator di atas</a> untuk menghitung estimasi biaya proyek Anda secara lebih akurat."
+    },
+    {
+      "q": "Apakah ada estimasi waktu pengerjaan bore pile 80cm?",
+      "a": "Untuk proyek bore pile 80cm, estimasi waktu pengerjaan tergantung jumlah titik dan kedalaman. Biasanya <strong>10-14 hari kerja</strong> untuk 25-40 titik. Hubungi kami untuk jadwal dan estimasi yang lebih akurat."
+    }
   ],
   "internalLinks": [
-    { "href": "/jasa/bore-pile/jakarta.html", "label": "Jakarta" },
-    { "href": "/jasa/bore-pile/bekasi.html", "label": "Bekasi" },
-    { "href": "/jasa/bore-pile/tangerang.html", "label": "Tangerang" },
-    { "href": "/jasa/bore-pile/depok.html", "label": "Depok" },
-    { "href": "/jasa/bore-pile/bogor.html", "label": "Bogor" },
-    { "href": "/harga/bore-pile-2026.html", "label": "Harga Bore Pile 2026" }
+    {
+      "href": "/jasa/bore-pile/jakarta.html",
+      "label": "Jakarta"
+    },
+    {
+      "href": "/jasa/bore-pile/bekasi.html",
+      "label": "Bekasi"
+    },
+    {
+      "href": "/jasa/bore-pile/tangerang.html",
+      "label": "Tangerang"
+    },
+    {
+      "href": "/jasa/bore-pile/depok.html",
+      "label": "Depok"
+    },
+    {
+      "href": "/jasa/bore-pile/bogor.html",
+      "label": "Bogor"
+    },
+    {
+      "href": "/harga/bore-pile-2026.html",
+      "label": "Harga Bore Pile 2026"
+    }
   ],
   "breadcrumbs": [
-    { "name": "Beranda", "url": "/" },
-    { "name": "Harga", "url": "/harga/bore-pile-2026.html" },
-    { "name": "Harga Bore Pile Diameter 80cm", "url": "/harga/bore-pile/80cm.html" }
+    {
+      "name": "Beranda",
+      "url": "/"
+    },
+    {
+      "name": "Harga",
+      "url": "/harga/bore-pile-2026.html"
+    },
+    {
+      "name": "Harga Bore Pile Diameter 80cm",
+      "url": "/harga/bore-pile/80cm.html"
+    }
   ]
 }
-

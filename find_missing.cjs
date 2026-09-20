@@ -23,3 +23,4 @@ while (j < o.length && j < n.length && o[o.length - j] === n[n.length - j]) {
 }
 console.log("Re-converges at", o.length - j, "in old");
 console.log("Missing content from OLD:", o.substring(i, o.length - j));
+

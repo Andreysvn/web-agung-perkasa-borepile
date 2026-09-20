@@ -665,3 +665,12 @@ main {
     box-shadow: 0 12px 25px rgba(37, 211, 102, 0.35);
     background: #20BA59;
 }
+
+/* COMMITMENT BOX */
+.commitment-box {
+    background: var(--bg-page, #f8fafc);
+    padding: 1.5rem; border-radius: var(--radius-lg, 12px); margin: 2rem 0;
+    text-align: center; border: 1px solid var(--border-color, #cbd5e1);
+}
+.commitment-box .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+.commitment-box p { font-size: 0.95rem; line-height: 1.6; color: var(--text-body, #475569); }

@@ -12,3 +12,4 @@ pd.projects.items.splice(1, 0, {
     time: '5-7 hari kerja'
 });
 fs.writeFileSync('src/data/harga-2026.json', JSON.stringify(pd, null, 2));
+

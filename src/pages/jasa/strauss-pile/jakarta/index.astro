@@ -5,6 +5,7 @@ import { organizationSchema, localBusinessSchema, schemaPhone } from '../../../.
 import FaIcon from '../../../../components/icons/FaIcon.astro';
 import Navbar from '../../../../components/global/Navbar.astro';
 import Footer from '../../../../components/global/Footer.astro';
+import CityGuarantee from '../../../../components/city/CityGuarantee.astro';
 const orgLd = JSON.stringify(organizationSchema());
 
 const localBusinessLd = JSON.stringify(localBusinessSchema({
@@ -345,6 +346,9 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
                     </div>
                 </div>
             </section>
+
+            <!-- ===== KOMITMEN & GARANSI ===== -->
+            <CityGuarantee />
 
             <!-- ===== WILAYAH ===== -->
             <section>
