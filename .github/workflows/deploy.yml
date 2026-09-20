@@ -25,6 +25,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Clean dist (remove .git)
+        run: rm -rf ./dist/.git
+
       - name: Deploy dist/ to deploy branch
         uses: peaceiris/actions-gh-pages@v4
         with:
