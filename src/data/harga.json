@@ -39,25 +39,25 @@
     {
       "diameter": 20,
       "price": 75000,
-      "maxDepth": 10,
+      "maxDepth": 6,
       "suitable": "Area sangat sempit"
     },
     {
       "diameter": 25,
       "price": 85000,
-      "maxDepth": 10,
+      "maxDepth": 6,
       "suitable": "Gang kecil"
     },
     {
       "diameter": 30,
       "price": 100000,
-      "maxDepth": 10,
+      "maxDepth": 6,
       "suitable": "Rumah 1-2 lantai (tanah padat)"
     },
     {
       "diameter": 40,
       "price": 120000,
-      "maxDepth": 10,
+      "maxDepth": 6,
       "suitable": "Ruko 2 lantai (tanah padat)"
     }
   ],
