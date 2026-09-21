@@ -1,10 +1,9 @@
 ---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import config from '../../../../data/config.json';
 import { organizationSchema, localBusinessSchema, schemaPhone } from '../../../../lib/schema.js';
 
 import FaIcon from '../../../../components/icons/FaIcon.astro';
-import Navbar from '../../../../components/global/Navbar.astro';
-import Footer from '../../../../components/global/Footer.astro';
 import CityGuarantee from '../../../../components/city/CityGuarantee.astro';
 const orgLd = JSON.stringify(organizationSchema());
 
@@ -16,34 +15,19 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         ]
 }));
 ---
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="theme-color" content="#1a3a6e">
-    
-    <title>Jasa & Harga Strauss Pile Jakarta 2026 | Bore Pile Manual | Agung Perkasa</title>
-    
-    <meta name="description" content="Jasa Strauss Pile (bore pile manual) Jakarta 2026. Harga mulai Rp75.000/m. Solusi pondasi lahan sempit & gang. Kalkulator biaya. Konsultasi gratis. Melayani seluruh Jakarta.">
-    <meta name="robots" content="index, follow">
-    <meta name="google-site-verification" content="QjaIirR3-qW7bARIyez5S0_WPeMjPJSqn6tnK44ZYMo">
-    
-    <link rel="canonical" href="https://agungperkasaborepile.com/jasa/strauss-pile/jakarta.html" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+
+<BaseLayout title="Jasa & Harga Strauss Pile Jakarta 2026 | Bore Pile Manual"
+    description="Jasa Strauss Pile (bore pile manual) Jakarta 2026. Harga mulai Rp75.000/m. Solusi pondasi lahan sempit & gang. Kalkulator biaya. Konsultasi gratis. Melayani seluruh Jakarta."
+    bodyClass="services">
+    <Fragment slot="head">
+        <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    
     <!-- Open Graph -->
     <meta property="og:title" content="Jasa & Harga Strauss Pile Jakarta 2026 | Bore Pile Manual">
     <meta property="og:description" content="Jasa Strauss Pile (bore pile manual) Jakarta. Harga mulai Rp75.000/m. Solusi lahan sempit. Kalkulator biaya. Konsultasi gratis.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
-    <meta property="og:url" content="https://agungperkasaborepile.com/jasa/strauss-pile/jakarta.html">
+    <meta property="og:url" content="https://agungperkasaborepile.com/jasa/strauss-pile/jakarta/">
     <meta property="og:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
     <meta property="og:site_name" content="Agung Perkasa Borepile">
     
@@ -66,10 +50,9 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     
     <!-- CSS EKSTERNAL -->
     <link rel="stylesheet" href="/css/borepile-kota.css">
-</head>
-<body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6GBTKJB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
+    </Fragment>
+
+
     <!-- Google Tag Manager -->
     <script is:inline>
 let gtmLoaded = false;
@@ -118,15 +101,13 @@ setTimeout(loadGTM, 3500);
     
     <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
     
-    <Navbar />
-
     <main id="main-content">
         <div class="blog-container">
             <!-- ===== BREADCRUMB ===== -->
             <nav class="breadcrumb" aria-label="Breadcrumb navigasi">
                 <a href="/">Beranda</a>
                 <span class="separator">/</span>
-                <a href="/jasa.html">Jasa</a>
+                <a href="/jasa/">Jasa</a>
                 <span class="separator">/</span>
                 <span class="current" aria-current="page">Strauss Pile Jakarta</span>
             </nav>
@@ -152,9 +133,9 @@ setTimeout(loadGTM, 3500);
                 </div>
                 <div class="illustration-text">
                     <p><strong>Harga jasa Strauss Pile Jakarta 2026</strong> untuk jasa pengeboran saja mulai dari <strong>Rp75.000/m</strong>.
-                        <a href="/harga/bore-pile-2026.html">Lihat daftar harga bore pile 2026 lengkap di sini</a>. 
+                        <a href="/harga/bore-pile-2026/">Lihat daftar harga bore pile 2026 lengkap di sini</a>. 
                     Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Jakarta Pusat, Barat, Selatan, Timur, dan Utara.</p>
-                    <p><strong>Butuh kapasitas lebih besar?</strong> <a href="/jasa/bore-pile/jakarta.html">Cek layanan Bore Pile Mesin kami →</a></p>
+                    <p><strong>Butuh kapasitas lebih besar?</strong> <a href="/jasa/bore-pile/jakarta/">Cek layanan Bore Pile Mesin kami →</a></p>
                 </div>
             </div>
 
@@ -323,7 +304,7 @@ setTimeout(loadGTM, 3500);
                 </div>
                 <p class="proyek-jakarta-link">
                     Ingin lihat lebih banyak? 
-                    <a href="/galeri/gallery.html">Kunjungi galeri proyek kami →</a>
+                    <a href="/galeri/gallery/">Kunjungi galeri proyek kami →</a>
                 </p>
             </section>
 
@@ -421,7 +402,7 @@ setTimeout(loadGTM, 3500);
                             <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
-                            <p>Aman untuk tanah dengan kondisi padat. Untuk tanah rawa atau bekas sawah, kami rekomendasikan <a href="/jasa/bore-pile/jakarta.html">Bore Pile Mesin</a> yang bisa mencapai kedalaman 30 meter.</p>
+                            <p>Aman untuk tanah dengan kondisi padat. Untuk tanah rawa atau bekas sawah, kami rekomendasikan <a href="/jasa/bore-pile/jakarta/">Bore Pile Mesin</a> yang bisa mencapai kedalaman 30 meter.</p>
                         </div>
                     </div>
 
@@ -487,7 +468,7 @@ setTimeout(loadGTM, 3500);
                     </div>
                     <div class="articles-grid">
                         <article class="article-card">
-                            <a href="/artikel/bore-pile-vs-strauss-pile.html" class="article-link">
+                            <a href="/artikel/bore-pile-vs-strauss-pile/" class="article-link">
                                 <div class="article-image">
                                     <img src="/imgs/borepile-dekat-dinding.webp" alt="Bore pile mini crane di sebelah dinding (hampir menyentuh dinding)" loading="lazy">
                                     <span class="article-category">Perbandingan</span>
@@ -503,7 +484,7 @@ setTimeout(loadGTM, 3500);
                             </a>
                         </article>
                         <article class="article-card">
-                            <a href="/harga/bore-pile/30cm.html" class="article-link">
+                            <a href="/harga/bore-pile/30cm/" class="article-link">
                                 <div class="article-image">
                                     <img src="/imgs/hasil-lubang-borepile.webp" alt="Hasil lubang bore pile diameter 30cm yang sudah dimasukan tulangan besi struktur pondasi" loading="lazy">
                                     <span class="article-category">Harga</span>
@@ -519,7 +500,7 @@ setTimeout(loadGTM, 3500);
                             </a>
                         </article>
                         <article class="article-card">
-                            <a href="/artikel/borepile-vs-tiang-pancang.html" class="article-link">
+                            <a href="/artikel/borepile-vs-tiang-pancang/" class="article-link">
                                 <div class="article-image">
                                     <img src="/imgs/borepile-pik.webp" alt="Alat bore pile mini crane dan tiang pancang bersebelahan di Lokasi Proyek PIK, Jakarta Utara" loading="lazy">
                                     <span class="article-category">Perbandingan & Tips</span>
@@ -537,7 +518,7 @@ setTimeout(loadGTM, 3500);
                     </div>
                 </div>
                 <div class="articles-cta">
-                    <a href="/artikel.html" class="btn-articles-all">
+                    <a href="/artikel/" class="btn-articles-all">
                         <FaIcon class="fas fa-newspaper" /> Lihat Semua Artikel
                     </a>
                 </div>
@@ -552,13 +533,13 @@ setTimeout(loadGTM, 3500);
 
             <!-- ===== INTERNAL LINK ===== -->
             <div class="internal-link-box">
-                <p><strong>Butuh kapasitas lebih besar?</strong> <a href="/jasa/bore-pile/jakarta.html">Cek layanan Bore Pile Mesin kami →</a></p>
+                <p><strong>Butuh kapasitas lebih besar?</strong> <a href="/jasa/bore-pile/jakarta/">Cek layanan Bore Pile Mesin kami →</a></p>
                 <p><strong>Baca Juga Harga Bore Pile:</strong><br>
-                <a href="/jasa/bore-pile/bekasi.html">Bekasi</a> | 
-                <a href="/jasa/bore-pile/tangerang.html">Tangerang</a> | 
-                <a href="/jasa/bore-pile/depok.html">Depok</a> | 
-                <a href="/jasa/bore-pile/bogor.html">Bogor</a></p>
-                <a href="/harga/bore-pile-2026.html">Harga Bore Pile 2026</a> 
+                <a href="/jasa/bore-pile/bekasi/">Bekasi</a> | 
+                <a href="/jasa/bore-pile/tangerang/">Tangerang</a> | 
+                <a href="/jasa/bore-pile/depok/">Depok</a> | 
+                <a href="/jasa/bore-pile/bogor/">Bogor</a></p>
+                <a href="/harga/bore-pile-2026/">Harga Bore Pile 2026</a> 
             </div>
         </div>
     </main>
@@ -604,8 +585,6 @@ setTimeout(loadGTM, 3500);
         </div>
     </div>
 
-    <Footer />
-
     <!-- ===== WHATSAPP FLOAT ===== -->
     <a href={`https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Saya%20dari%20website%20ingin%20menanyakan%20terkait%20penawaran%20harga%20Strauss%20Pile%20untuk%20proyek%20Jakarta.`} 
        class="whatsapp-float" 
@@ -646,7 +625,7 @@ setTimeout(loadGTM, 3500);
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Strauss Pile Jakarta",
-                "item": "https://agungperkasaborepile.com/jasa/strauss-pile/jakarta.html"
+                "item": "https://agungperkasaborepile.com/jasa/strauss-pile/jakarta/"
             }
         ]
     }
@@ -709,5 +688,5 @@ setTimeout(loadGTM, 3500);
         ]
     }
     </script>
-</body>
-</html>
+
+</BaseLayout>

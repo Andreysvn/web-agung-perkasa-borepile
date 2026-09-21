@@ -1,4 +1,4 @@
-﻿---
+---
 // src/layouts/BaseLayout.astro
 import config from '../data/config.json';
 import {
@@ -18,6 +18,7 @@ import WhatsAppFloatV2 from '../components/global/v2/WhatsAppFloat.astro';
 import ScrollTopV2 from '../components/global/v2/ScrollTop.astro';
 
 export interface Props {
+    preloadImage?: string;
   disableGlobalJs?: boolean;
   title: string;
   titleOverride?: string;
@@ -49,7 +50,7 @@ const {
   design = 'legacy',
   localBusinessOverride,
   organizationOverride,
-  includeWebsiteSchema = true,
+  includeWebsiteSchema = true, preloadImage,
     disableGlobalCss = false
 } = Astro.props;
 
@@ -143,7 +144,7 @@ const localBusinessSchema = localBusinessSchemaBase(localBusinessOverride ?? {
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
     
     <!-- ===== GLOBAL CSS ===== -->
-    {!isV2 && !disableGlobalCss && <link rel="stylesheet" href="/css/style.css" />}
+    {!isV2 && !disableGlobalCss && <link rel="stylesheet" href="/css/style.css?v=3" />}
     {isV2 && (
       <>
         <link rel="preload" href="/fonts/plus-jakarta-sans-latin-var.woff2" as="font" type="font/woff2" crossorigin />
@@ -206,6 +207,8 @@ setTimeout(loadGTM, 3500);
     </script>
     
     <slot name="head" />
+
+    {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
 </head>
 <body class={bodyClass}>
     

@@ -150,7 +150,7 @@ body {
 }
 .breadcrumb a { 
     color: #0d3b6e; 
-    text-decoration: underline;
+    text-decoration: none;
 }
 .breadcrumb .separator { margin: 0 0.3rem; color: #555; }
 .breadcrumb .current { color: #333; font-weight: 500; }
@@ -171,7 +171,7 @@ body {
     color: var(--primary-color);
     text-decoration: none;
 }
-.blog-back-link:hover { text-decoration: underline; }
+.blog-back-link:hover { text-decoration: none; }
 
 .calculator-box {
     background: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 100%);
@@ -493,7 +493,7 @@ body {
 }
 .footer-col ul { list-style: none; }
 .footer-col li { margin-bottom: 8px; }
-.footer-col a { color: rgba(255,255,255,0.8); text-decoration: underline; }
+.footer-col a { color: rgba(255,255,255,0.8); text-decoration: none; }
 .footer-col a:hover { color: #f39c12; }
 
 .footer-bottom {
@@ -617,9 +617,7 @@ img, video, iframe, .table-responsive {
     outline-offset: 2px;
 }
 
-a:not(.btn-nav):not(.btn-wa-konsultasi):not(.whatsapp-float):not(.social-links a) {
-    text-decoration: underline;
-}
+
 
 .social-links a {
     text-decoration: none;
@@ -856,3 +854,7 @@ p, li, .blog-container p, .info-card p {
     background-color: #128C7E !important;
     color: #ffffff !important;
 }
+/* FORCE REMOVE UNDERLINE */
+a { text-decoration: none !important; }
+a:hover { text-decoration: underline !important; }
+.btn-primary:hover, .btn-secondary:hover, .btn-nav:hover, .btn-cta:hover, .apx-btn:hover, .promo-btn:hover, .btn-wa:hover, .btn-articles-all:hover { text-decoration: none !important; }

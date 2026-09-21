@@ -1,33 +1,18 @@
 ---
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import config from '../../data/config.json';
 
 import FaIcon from '../../components/icons/FaIcon.astro';
-import Navbar from '../../components/global/Navbar.astro';
-import Footer from '../../components/global/Footer.astro';
+
 ---
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="theme-color" content="#1a3a6e">
-    
-    <title>Daftar Artikel Pondasi Bore Pile | Info Harga & Tips | Agung Perkasa</title>
-    
-    <meta name="description" content="Kumpulan artikel lengkap tentang pondasi bore pile, strauss pile, harga terbaru 2026, tips hemat biaya, dan informasi proyek konstruksi di Jakarta. Update setiap minggu.">
-    <meta name="keywords" content="artikel bore pile, blog pondasi, tips bore pile, info strauss pile, harga bore pile 2026">
-    <meta name="author" content="Agung Perkasa Borepile">
-    <meta name="robots" content="index, follow">
-    <meta name="google-site-verification" content="QjaIirR3-qW7bARIyez5S0_WPeMjPJSqn6tnK44ZYMo">
-    
-    <link rel="canonical" href="https://agungperkasaborepile.com/artikel.html" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+
+<BaseLayout title="Daftar Artikel Pondasi Bore Pile | Info Harga & Tips"
+    description="Kumpulan artikel lengkap tentang pondasi bore pile, strauss pile, harga terbaru 2026, tips hemat biaya, dan informasi proyek konstruksi di Jakarta. Update setiap minggu."
+    keywords="artikel bore pile, blog pondasi, tips bore pile, info strauss pile, harga bore pile 2026"
+    bodyClass="article-page">
+    <Fragment slot="head">
+        <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
     <meta name="apple-mobile-web-app-title" content="Agung Perkasa" />
     
     <!-- Open Graph -->
@@ -35,7 +20,7 @@ import Footer from '../../components/global/Footer.astro';
     <meta property="og:description" content="Kumpulan artikel lengkap tentang pondasi bore pile, strauss pile, harga terbaru, dan tips konstruksi.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
-    <meta property="og:url" content="https://agungperkasaborepile.com/artikel.html">
+    <meta property="og:url" content="https://agungperkasaborepile.com/artikel/">
     <meta property="og:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -53,8 +38,6 @@ import Footer from '../../components/global/Footer.astro';
     
     <!-- Preconnect & DNS Prefetch -->
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="stylesheet" href="/css/style.css">
-    
     <!-- Ahrefs Analytics -->
     <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
     
@@ -375,8 +358,9 @@ import Footer from '../../components/global/Footer.astro';
             margin-left: 8px;
         }
     </style>
-</head>
-<body>
+    </Fragment>
+
+
      <!-- Google Tag Manager -->
     <script is:inline>
 let gtmLoaded = false;
@@ -400,11 +384,8 @@ setTimeout(loadGTM, 3500);
     <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
     
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6GBTKJB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
-    <Navbar />
-
     <!-- MAIN CONTENT -->
     <main id="main-content">
         <section class="blog" id="blog-page">
@@ -433,10 +414,10 @@ setTimeout(loadGTM, 3500);
                     <div class="popular-posts">
                         <h3>Artikel sering dicari</h3>
                         <ul>
-                            <li><a href="/artikel/bore-pile-vs-strauss-pile.html"> Bore Pile vs Strauss Pile</a></li>
-                            <li><a href="/harga/bore-pile-2026.html"> Harga Bore Pile 2026 Terbaru</a></li>
-                            <li><a href="/harga/bore-pile/30cm.html"> Harga Bore Pile 30cm</a></li>
-                            <li><a href="/artikel/borepile-vs-tiang-pancang.html"> Borepile vs Tiang Pancang: Mana yang Tepat?</a></li>
+                            <li><a href="/artikel/bore-pile-vs-strauss-pile/"> Bore Pile vs Strauss Pile</a></li>
+                            <li><a href="/harga/bore-pile-2026/"> Harga Bore Pile 2026 Terbaru</a></li>
+                            <li><a href="/harga/bore-pile/30cm/"> Harga Bore Pile 30cm</a></li>
+                            <li><a href="/artikel/borepile-vs-tiang-pancang/"> Borepile vs Tiang Pancang: Mana yang Tepat?</a></li>
                         </ul>
                     </div>
                 </div>
@@ -451,7 +432,7 @@ setTimeout(loadGTM, 3500);
                             <h3 class="blog-card-title">Apa Itu Borepile? Panduan Lengkap Pondasi Bor</h3>
                             <p class="blog-card-excerpt">Pelajari definisi, kelebihan, kekurangan, dan proses pengerjaan borepile untuk pondasi bangunan Anda.</p>
                             <div class="blog-card-footer">
-                                <a href="/jasa/bore-pile.html" class="blog-card-link">Baca Selengkapnya →</a>
+                                <a href="/jasa/bore-pile/" class="blog-card-link">Baca Selengkapnya →</a>
                                 <span class="blog-card-date">6 Mei 2026</span>
                             </div>
                         </div>
@@ -465,7 +446,7 @@ setTimeout(loadGTM, 3500);
                             <h3 class="blog-card-title">Strauss Pile: Solusi Pondasi untuk Area Sempit</h3>
                             <p class="blog-card-excerpt">Cocok untuk proyek dengan akses terbatas, ini keunggulan strauss pile dibanding metode lain.</p>
                             <div class="blog-card-footer">
-                                <a href="/artikel/bore-pile-manual.html" class="blog-card-link">Baca Selengkapnya →</a>
+                                <a href="/artikel/bore-pile-manual/" class="blog-card-link">Baca Selengkapnya →</a>
                                 <span class="blog-card-date">6 Mei 2026</span>
                             </div>
                         </div>
@@ -479,7 +460,7 @@ setTimeout(loadGTM, 3500);
                             <h3 class="blog-card-title">Update Harga Bore Pile Jakarta 2026</h3>
                             <p class="blog-card-excerpt">Informasi harga terbaru bore pile per meter untuk berbagai diameter, plus kalkulator estimasi biaya.</p>
                             <div class="blog-card-footer">
-                                <a href="/harga/bore-pile-2026.html" class="blog-card-link">Baca Selengkapnya →</a>
+                                <a href="/harga/bore-pile-2026/" class="blog-card-link">Baca Selengkapnya →</a>
                                 <span class="blog-card-date">8 Mei 2026</span>
                             </div>
                         </div>
@@ -493,7 +474,7 @@ setTimeout(loadGTM, 3500);
                             <h3 class="blog-card-title">Tips Memilih Pondasi untuk Lahan Sempit</h3>
                             <p class="blog-card-excerpt">Strategi memilih jenis pondasi yang tepat untuk proyek di lahan terbatas dan akses sulit.</p>
                             <div class="blog-card-footer">
-                                <a href="/artikel/pondasi-area-terbatas.html" class="blog-card-link">Baca Selengkapnya →</a>
+                                <a href="/artikel/pondasi-area-terbatas/" class="blog-card-link">Baca Selengkapnya →</a>
                                 <span class="blog-card-date">7 Mei 2026</span>
                             </div>
                         </div>
@@ -507,7 +488,7 @@ setTimeout(loadGTM, 3500);
                             <h3 class="blog-card-title">Pengerjaan Borepile di Area Dekat Dinding Tetangga</h3>
                             <p class="blog-card-excerpt">Teknik pengeboran minim getaran untuk proyek yang berdekatan dengan bangunan eksisting.</p>
                             <div class="blog-card-footer">
-                                <a href="/artikel/bore-pile-machine.html" class="blog-card-link">Baca Selengkapnya →</a>
+                                <a href="/artikel/bore-pile-machine/" class="blog-card-link">Baca Selengkapnya →</a>
                                 <span class="blog-card-date">6 Mei 2026</span>
                             </div>
                         </div>
@@ -521,7 +502,7 @@ setTimeout(loadGTM, 3500);
                             <h3 class="blog-card-title">Standar Spesifikasi Besi Tulangan Strauss Pile</h3>
                             <p class="blog-card-excerpt">Informasi lengkap tentang ukuran besi, jarak sengkang, dan kualitas beton untuk strauss pile.</p>
                             <div class="blog-card-footer">
-                                <a href="/artikel/strauss-lokasi-sempit.html" class="blog-card-link">Baca Selengkapnya →</a>
+                                <a href="/artikel/strauss-lokasi-sempit/" class="blog-card-link">Baca Selengkapnya →</a>
                                 <span class="blog-card-date">7 Mei 2026</span>
                             </div>
                         </div>
@@ -535,7 +516,7 @@ setTimeout(loadGTM, 3500);
                             <h3 class="blog-card-title">Cara Menghitung Kebutuhan Beton untuk Bore Pile</h3>
                             <p class="blog-card-excerpt">Rumus sederhana menghitung volume beton yang dibutuhkan untuk proyek bore pile Anda.</p>
                             <div class="blog-card-footer">
-                                <a href="/artikel/perencanaan-borepile.html" class="blog-card-link">Baca Selengkapnya →</a>
+                                <a href="/artikel/perencanaan-borepile/" class="blog-card-link">Baca Selengkapnya →</a>
                                 <span class="blog-card-date">6 Mei 2026</span>
                             </div>
                         </div>
@@ -549,7 +530,7 @@ setTimeout(loadGTM, 3500);
                             <h3 class="blog-card-title">Perbandingan Harga Bore Pile Diameter 30cm, 40cm, 50cm</h3>
                             <p class="blog-card-excerpt">Analisis biaya dan daya dukung untuk berbagai ukuran diameter bore pile.</p>
                             <div class="blog-card-footer">
-                                <a href="/artikel/ukuran-pondasi-bore-pile.html" class="blog-card-link">Baca Selengkapnya →</a>
+                                <a href="/artikel/ukuran-pondasi-bore-pile/" class="blog-card-link">Baca Selengkapnya →</a>
                                 <span class="blog-card-date">6 Mei 2026</span>
                             </div>
                         </div>
@@ -563,7 +544,7 @@ setTimeout(loadGTM, 3500);
                             <h3 class="blog-card-title">Memperkuat Pondasi di Tanah Lunak dan Bekas Rawa</h3>
                             <p class="blog-card-excerpt">Panduan memilih metode pondasi yang tepat untuk kondisi tanah labil dan bekas rawa.</p>
                             <div class="blog-card-footer">
-                                <a href="/artikel/perkuat-pondasi-tanah-lunak.html" class="blog-card-link">Baca Selengkapnya →</a>
+                                <a href="/artikel/perkuat-pondasi-tanah-lunak/" class="blog-card-link">Baca Selengkapnya →</a>
                                 <span class="blog-card-date">6 Mei 2026</span>
                             </div>
                         </div>
@@ -580,7 +561,7 @@ setTimeout(loadGTM, 3500);
                 <div class="blog-list" id="blogList">
                     <h3>Daftar Artikel</h3>
                     <ul>
-                        <li><a href="/artikel/bore-pile-vs-strauss-pile.html">Perbandingan Borepile vs Strauss Pile</a> <span class="date">6 Mei 2026</span></li>
+                        <li><a href="/artikel/bore-pile-vs-strauss-pile/">Perbandingan Borepile vs Strauss Pile</a> <span class="date">6 Mei 2026</span></li>
 
                     </ul>
                     <p class="small-note">Halaman artikel ini akan terus diperbarui dengan konten baru. Jika ada topik yang ingin Anda bahas, silakan hubungi tim kami melalui WhatsApp. <strong>Konsultasi gratis 24 jam!</strong></p>
@@ -588,8 +569,6 @@ setTimeout(loadGTM, 3500);
             </div>
         </section>
     </main>
-
-    <Footer />
 
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/6285710277854" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Hubungi via WhatsApp" title="Hubungi via WhatsApp">
@@ -701,7 +680,7 @@ setTimeout(loadGTM, 3500);
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Daftar Artikel",
-                "item": "https://agungperkasaborepile.com/artikel.html"
+                "item": "https://agungperkasaborepile.com/artikel/"
             }
         ]
     }
@@ -746,5 +725,5 @@ setTimeout(loadGTM, 3500);
         ]
     }
     </script>
-</body>
-</html>
+
+</BaseLayout>

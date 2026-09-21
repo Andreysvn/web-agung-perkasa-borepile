@@ -9,7 +9,7 @@
   "heroCaption": "Proses pengeboran bore pile menggunakan alat mini crane di Jakarta",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "Harga jasa bore pile Jakarta 2026 untuk jasa pengeboran saja mulai dari Rp120.000/m untuk mesin (mini crane), dan manual atau strauss pile mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026.html\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Jakarta Pusat, Barat, Selatan, Timur, dan Utara.",
+  "heroText": "Harga jasa bore pile Jakarta 2026 untuk jasa pengeboran saja mulai dari Rp120.000/m untuk mesin (mini crane), dan manual atau strauss pile mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Jakarta Pusat, Barat, Selatan, Timur, dan Utara.",
   "localBusinessDesc": "Jasa bore pile Jakarta terpercaya. Harga mesin Rp120.000/m, manual Rp75.000/m. Melayani seluruh Jakarta dan sekitarnya.",
   "mobilizationCost": "Mesin mini crane: Rp2-3jt | Strauss pile (bore pile manual): Rp1jt",
   "manualPriceMin": 75000,
@@ -292,7 +292,7 @@
   ],
   "articles": [
     {
-      "href": "/artikel/bore-pile-vs-strauss-pile.html",
+      "href": "/artikel/bore-pile-vs-strauss-pile/",
       "image": "/imgs/borepile-dekat-dinding.webp",
       "imageAlt": "Bore pile mini crane di sebelah dinding (hampir menyentuh dinding)",
       "category": "Perbandingan",
@@ -301,7 +301,7 @@
       "date": "Juni 2026"
     },
     {
-      "href": "/harga/bore-pile/30cm.html",
+      "href": "/harga/bore-pile/30cm/",
       "image": "/imgs/hasil-lubang-borepile.webp",
       "imageAlt": "Hasil lubang bore pile diameter 30cm yang sudah dimasukan tulangan besi struktur pondasi",
       "category": "Harga",
@@ -310,7 +310,7 @@
       "date": "Juni 2026"
     },
     {
-      "href": "/artikel/borepile-vs-tiang-pancang.html",
+      "href": "/artikel/borepile-vs-tiang-pancang/",
       "image": "/imgs/borepile-pik.webp",
       "imageAlt": "Alat bore pile mini crane dan tiang pancang bersebelahan di Lokasi Proyek PIK, Jakarta Utara",
       "category": "Perbandingan & Tips",
@@ -321,23 +321,23 @@
   ],
   "internalLinks": [
     {
-      "href": "/jasa/bore-pile/bekasi.html",
+      "href": "/jasa/bore-pile/bekasi/",
       "label": "Bekasi"
     },
     {
-      "href": "/jasa/bore-pile/tangerang.html",
+      "href": "/jasa/bore-pile/tangerang/",
       "label": "Tangerang"
     },
     {
-      "href": "/jasa/bore-pile/depok.html",
+      "href": "/jasa/bore-pile/depok/",
       "label": "Depok"
     },
     {
-      "href": "/jasa/bore-pile/bogor.html",
+      "href": "/jasa/bore-pile/bogor/",
       "label": "Bogor"
     },
     {
-      "href": "/harga/bore-pile-2026.html",
+      "href": "/harga/bore-pile-2026/",
       "label": "Harga Bore Pile 2026"
     }
   ],
@@ -374,7 +374,7 @@
     }
   ],
   "priceUpdatedAt": "2026-08-19",
-  "projectNote": "<strong>Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan. Kecepatan pengerjaan dipengaruhi oleh kondisi lapangan, akses lokasi, karakteristik tanah, dan yang paling penting adalah pasokan air yang cukup untuk metode wash boring.<br><br>Butuh harga khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm.html\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
+  "projectNote": "<strong>Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan. Kecepatan pengerjaan dipengaruhi oleh kondisi lapangan, akses lokasi, karakteristik tanah, dan yang paling penting adalah pasokan air yang cukup untuk metode wash boring.<br><br>Butuh harga khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
   "soilReasons": {
     "title": "Mengapa Bore Pile Pilihan Tepat untuk Wilayah Jakarta?",
     "description": "Jakarta dikenal dengan kondisi tanahnya yang <strong>lunak dan rawan penurunan (land subsidence)</strong>, terutama di wilayah <a href=\"https://lib.ui.ac.id/detail?id=20238696&lokasi=lokal\" target=\"_blank\" rel=\"noopener noreferrer\">Jakarta Utara</a>, <a href=\"https://www.academia.edu/99027747/\" target=\"_blank\" rel=\"noopener noreferrer\">Cengkareng</a>, dan <a href=\"https://iopscience.iop.org/article/10.1088/1755-1315/1374/1/012033\" target=\"_blank\" rel=\"noopener noreferrer\">Pondok Gede</a>. Metode bore pile menjadi solusi pondasi paling tepat karena:",

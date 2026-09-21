@@ -239,7 +239,7 @@
         "detail": "Bore pile mini crane \u00d840cm untuk gedung perkantoran"
       }
     ],
-    "galleryLink": "/galeri/gallery.html"
+    "galleryLink": "/galeri/gallery/"
   },
   "kecamatan": [
     {
@@ -303,7 +303,7 @@
   ],
   "articles": [
     {
-      "href": "/artikel/bore-pile-vs-strauss-pile.html",
+      "href": "/artikel/bore-pile-vs-strauss-pile/",
       "image": "/imgs/borepile-dekat-dinding.webp",
       "imageAlt": "Perbandingan bore pile vs strauss pile untuk pondasi bangunan",
       "category": "Perbandingan",
@@ -312,7 +312,7 @@
       "date": "Juni 2026"
     },
     {
-      "href": "/harga/bore-pile/30cm.html",
+      "href": "/harga/bore-pile/30cm/",
       "image": "/imgs/hasil-lubang-borepile.webp",
       "imageAlt": "Harga bore pile diameter 30cm untuk pondasi rumah",
       "category": "Harga",
@@ -321,7 +321,7 @@
       "date": "Juni 2026"
     },
     {
-      "href": "/jasa/bore-pile/jakarta.html",
+      "href": "/jasa/bore-pile/jakarta/",
       "image": "/imgs/borepile-dan-truk-molen.webp",
       "imageAlt": "Harga bore pile Jakarta 2026 terbaru",
       "category": "Harga",
@@ -330,19 +330,19 @@
       "date": "Juni 2026"
     }
   ],
-  "articlesViewAllHref": "/artikel/artikel.html",
+  "articlesViewAllHref": "/artikel/artikel/",
   "internalLinks": [
-    { "href": "/jasa/bore-pile/jakarta.html", "label": "Jakarta" },
-    { "href": "/jasa/bore-pile-bekasi.html", "label": "Bekasi" },
-    { "href": "/jasa/bore-pile-tangerang.html", "label": "Tangerang" },
-    { "href": "/jasa/bore-pile-depok.html", "label": "Depok" },
-    { "href": "/jasa/bore-pile-bogor.html", "label": "Bogor" },
-    { "href": "/jasa/bore-pile-tangerang-selatan.html", "label": "Tangerang Selatan" },
-    { "href": "/jasa/bore-pile-karawang.html", "label": "Karawang" },
-    { "href": "/jasa/bore-pile-cikarang.html", "label": "Cikarang" },
-    { "href": "/jasa/bore-pile-surabaya.html", "label": "Surabaya" },
-    { "href": "/jasa/bore-pile-bandung.html", "label": "Bandung" },
-    { "href": "/harga/bore-pile-2026.html", "label": "Harga Bore Pile 2026" },
+    { "href": "/jasa/bore-pile/jakarta/", "label": "Jakarta" },
+    { "href": "/jasa/bore-pile-bekasi/", "label": "Bekasi" },
+    { "href": "/jasa/bore-pile-tangerang/", "label": "Tangerang" },
+    { "href": "/jasa/bore-pile-depok/", "label": "Depok" },
+    { "href": "/jasa/bore-pile-bogor/", "label": "Bogor" },
+    { "href": "/jasa/bore-pile-tangerang-selatan/", "label": "Tangerang Selatan" },
+    { "href": "/jasa/bore-pile-karawang/", "label": "Karawang" },
+    { "href": "/jasa/bore-pile-cikarang/", "label": "Cikarang" },
+    { "href": "/jasa/bore-pile-surabaya/", "label": "Surabaya" },
+    { "href": "/jasa/bore-pile-bandung/", "label": "Bandung" },
+    { "href": "/harga/bore-pile-2026/", "label": "Harga Bore Pile 2026" },
     { "href": "/jasa/", "label": "Lihat Jasa Bore Pile & Strauss Pile untuk wilayah Anda" }
   ],
   "localBusiness": {
@@ -368,8 +368,8 @@
   "googleAdsId": null,
   "hasGoogleAds": false,
   "gtmId": "GTM-P6GBTKJB",
-  "sitemapUrl": "https://agungperkasaborepile.com/jasa/bore-pile/semarang.html",
-  "canonical": "https://agungperkasaborepile.com/jasa/bore-pile/semarang.html",
+  "sitemapUrl": "https://agungperkasaborepile.com/jasa/bore-pile/semarang/",
+  "canonical": "https://agungperkasaborepile.com/jasa/bore-pile/semarang/",
   "pageMeta": {
     "updateDate": "02 Agustus 2026",
     "author": "Tim Agung Perkasa",
@@ -379,7 +379,7 @@
   "breadcrumb": [
     { "name": "Beranda", "url": "https://agungperkasaborepile.com/" },
     { "name": "Jasa", "url": "https://agungperkasaborepile.com/jasa/" },
-    { "name": "Bore Pile Semarang", "url": "https://agungperkasaborepile.com/jasa/bore-pile-semarang.html" }
+    { "name": "Bore Pile Semarang", "url": "https://agungperkasaborepile.com/jasa/bore-pile-semarang/" }
   ],
   "whyBorePile": {
     "title": "Mengapa Bore Pile Pilihan Tepat untuk Tanah Semarang?",

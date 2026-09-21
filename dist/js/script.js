@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const whatsappMessage = `Halo, saya dari website ingin meminta informasi penawaran harga. Email saya: ${email}`;
             const encodedMessage = encodeURIComponent(whatsappMessage);
-            const whatsappNumber = '6285814173761';
+            const whatsappNumber = '6285710277854';
             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
             
             alert('Terima kasih! Anda akan diarahkan ke WhatsApp...');
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const whatsappMessage = `*Form Hubungi Kami - Agung Perkasa Borepile*\n\n*Nama:* ${name}\n*Email:* ${email}\n*Nomor Telepon:* ${phone}\n*Jenis Layanan:* ${service}\n*Pesan:* ${message}`.trim();
             
             const encodedMessage = encodeURIComponent(whatsappMessage);
-            const whatsappNumber = '6285814173761';
+            const whatsappNumber = '6285710277854';
             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
             
             alert(`Terima kasih ${name}! Pesan Anda akan dikirim ke WhatsApp kami.`);

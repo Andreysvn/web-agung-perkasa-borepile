@@ -68,7 +68,7 @@ h2 { font-size: 1.5rem; border-bottom: 2px solid var(--border-color); padding-bo
   h2 { font-size: 1.75rem; }
 }
 
-a { color: var(--brand-primary); text-decoration: underline; text-underline-offset: 2px; transition: 0.2s;
+a { color: var(--brand-primary); text-decoration: none; transition: 0.2s;
 }
 
 a:hover { color: #c2410c; }
@@ -680,7 +680,12 @@ body, .price-hint, .calculator-note, .calculator-box, .section-desc-center, .art
 .btn-articles-all:hover { background-color: transparent !important; color: #0f172a !important; border-color: #0f172a !important; }
 .btn-wa, .btn-wa-konsultasi, .whatsapp-float { background-color: #15803d !important; color: #ffffff !important; }
 .btn-wa:hover, .btn-wa-konsultasi:hover, .whatsapp-float:hover { background-color: #166534 !important; }
-a:not(.btn-nav):not(.btn-wa):not(.btn-wa-konsultasi):not(.btn-articles-all):not(.whatsapp-float):not(.nav-menu a):not(.dropdown-content a) { text-decoration: underline !important; text-underline-offset: 2px !important; }
+
 /* FIX BTN-NAV CONTRAST */
 .btn-nav, .btn-cta, .apx-btn { background-color: #c2410c !important; color: #ffffff !important; }
 .btn-nav:hover, .btn-cta:hover, .apx-btn:hover { background-color: #9a3412 !important; }
+
+/* FORCE REMOVE UNDERLINE */
+a { text-decoration: none !important; }
+a:hover { text-decoration: underline !important; }
+.btn-primary:hover, .btn-secondary:hover, .btn-nav:hover, .btn-cta:hover, .apx-btn:hover, .promo-btn:hover, .btn-wa:hover, .btn-articles-all:hover { text-decoration: none !important; }

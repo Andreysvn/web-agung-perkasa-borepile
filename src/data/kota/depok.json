@@ -9,7 +9,7 @@
   "heroCaption": "Proses pengeboran bore pile menggunakan alat mini crane di Depok",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "Harga jasa bore pile Depok 2026 untuk jasa pengeboran saja mulai dari Rp120.000/m untuk mesin (mini crane), dan manual atau strauss pile mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026.html\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Depok, Cinere, Sawangan, Cimanggis, Bojongsari, Beji, Pancoran Mas.",
+  "heroText": "Harga jasa bore pile Depok 2026 untuk jasa pengeboran saja mulai dari Rp120.000/m untuk mesin (mini crane), dan manual atau strauss pile mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Depok, Cinere, Sawangan, Cimanggis, Bojongsari, Beji, Pancoran Mas.",
   "localBusinessDesc": "Jasa bore pile Depok terpercaya. Harga mesin Rp120.000/m, manual Rp75.000/m. Melayani seluruh Depok dan sekitarnya.",
   "mobilizationCost": "Mini crane: Rp2.5-4jt | Strauss pile (bore pile manual): Rp1-1.5jt",
   "manualPriceMin": 75000,
@@ -240,7 +240,7 @@
   ],
   "articles": [
     {
-      "href": "/artikel/bore-pile-vs-strauss-pile.html",
+      "href": "/artikel/bore-pile-vs-strauss-pile/",
       "image": "/imgs/borepile-dekat-dinding.webp",
       "imageAlt": "Perbandingan bore pile vs strauss pile untuk pondasi bangunan",
       "category": "Perbandingan",
@@ -249,7 +249,7 @@
       "date": "Juni 2026"
     },
     {
-      "href": "/harga/bore-pile/30cm.html",
+      "href": "/harga/bore-pile/30cm/",
       "image": "/imgs/hasil-lubang-borepile.webp",
       "imageAlt": "Harga bore pile diameter 30cm untuk pondasi rumah",
       "category": "Harga",
@@ -258,7 +258,7 @@
       "date": "Juni 2026"
     },
     {
-      "href": "/artikel/borepile-vs-tiang-pancang.html",
+      "href": "/artikel/borepile-vs-tiang-pancang/",
       "image": "/imgs/borepile-pik.webp",
       "imageAlt": "Alat bore pile mini crane dan tiang pancang bersebelahan di Lokasi Proyek PIK, Jakarta Utara",
       "category": "Perbandingan & Tips",
@@ -269,23 +269,23 @@
   ],
   "internalLinks": [
     {
-      "href": "/jasa/bore-pile/jakarta.html",
+      "href": "/jasa/bore-pile/jakarta/",
       "label": "Jakarta"
     },
     {
-      "href": "/jasa/bore-pile/bekasi.html",
+      "href": "/jasa/bore-pile/bekasi/",
       "label": "Bekasi"
     },
     {
-      "href": "/jasa/bore-pile/tangerang.html",
+      "href": "/jasa/bore-pile/tangerang/",
       "label": "Tangerang"
     },
     {
-      "href": "/jasa/bore-pile/bogor.html",
+      "href": "/jasa/bore-pile/bogor/",
       "label": "Bogor"
     },
     {
-      "href": "/harga/bore-pile-2026.html",
+      "href": "/harga/bore-pile-2026/",
       "label": "Harga Bore Pile 2026"
     }
   ],
@@ -337,7 +337,7 @@
     "conclusion": "<p>Setiap lokasi memiliki karakteristik tanah yang berbeda. Kami dapat menyesuaikan teknik bore pile untuk memastikan keberhasilan proyek di setiap wilayah di Depok.</p><p><strong>Portofolio kami di Depok:</strong> Kami telah berpengalaman mengerjakan berbagai proyek rumah, ruko, gudang dan bangunan lain di seluruh wilayah Depok dan sekitarnya.</p>"
   },
   "priceUpdatedAt": "2026-08-19",
-  "projectNote": "<strong>Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan. Kecepatan pengerjaan dipengaruhi oleh kondisi lapangan, akses lokasi, karakteristik tanah, dan yang paling penting adalah pasokan air yang cukup untuk metode wash boring.<br><br>Butuh harga khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm.html\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
+  "projectNote": "<strong>Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan. Kecepatan pengerjaan dipengaruhi oleh kondisi lapangan, akses lokasi, karakteristik tanah, dan yang paling penting adalah pasokan air yang cukup untuk metode wash boring.<br><br>Butuh harga khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {
       "diameter": "30 cm",

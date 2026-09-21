@@ -1,10 +1,9 @@
 ---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 import config from '../../../data/config.json';
 import { organizationSchema, schemaPhone } from '../../../lib/schema.js';
 
 import FaIcon from '../../../components/icons/FaIcon.astro';
-import Navbar from '../../../components/global/Navbar.astro';
-import Footer from '../../../components/global/Footer.astro';
 const orgLd = JSON.stringify(organizationSchema({
     "alternateName": "Agung Perkasa Bore Pile",
     "logo": {
@@ -16,34 +15,19 @@ const orgLd = JSON.stringify(organizationSchema({
     "email": config.company.email
 }));
 ---
-<!DOCTYPE html>
-<html lang="id">
-<head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="theme-color" content="#1a3a6e">
-
-    <title>Jasa Bore Pile Mesin | Agung Perkasa</title>
-
-    <meta name="description" content="Cari jasa bore pile di kota Anda. Melayani Jakarta, Bekasi, Tangerang, Depok, Bogor, Bandung, Karawang, Semarang, Surabaya. Harga mulai Rp70.000/m.">
-    <meta name="robots" content="index, follow">
-
-    <link rel="canonical" href="https://agungperkasaborepile.com/jasa/bore-pile.html" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<BaseLayout title="Jasa Bore Pile Mesin"
+    description="Cari jasa bore pile di kota Anda. Melayani Jakarta, Bekasi, Tangerang, Depok, Bogor, Bandung, Karawang, Semarang, Surabaya. Harga mesin mulai Rp120.000/m dan manual mulai Rp75.000/m."
+    bodyClass="services">
+    <Fragment slot="head">
+        <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
     <!-- Open Graph -->
     <meta property="og:title" content="Cari Jasa Bore Pile di Kota Anda | Agung Perkasa">
     <meta property="og:description" content="Cari jasa bore pile di kota Anda. Melayani Jabodetabek, Bandung, Karawang, Semarang, Surabaya.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
-    <meta property="og:url" content="https://agungperkasaborepile.com/jasa/bore-pile.html">
+    <meta property="og:url" content="https://agungperkasaborepile.com/jasa/bore-pile/">
     <meta property="og:image" content="https://agungperkasaborepile.com/imgs/logo-agung-perkasa.webp">
     <meta property="og:site_name" content="Agung Perkasa Borepile">
 
@@ -62,8 +46,9 @@ const orgLd = JSON.stringify(organizationSchema({
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/jasa.css">
-</head>
-<body>
+    </Fragment>
+
+
     <!-- Google Tag Manager -->
     <script is:inline>
 let gtmLoaded = false;
@@ -82,11 +67,7 @@ window.addEventListener("touchstart", loadGTM, {once: true});
 setTimeout(loadGTM, 3500);
 </script>
     <!-- End Google Tag Manager -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6GBTKJB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
     <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
-
-    <Navbar />
 
     <!-- ===== MAIN ===== -->
     <main id="main-content">
@@ -96,7 +77,7 @@ setTimeout(loadGTM, 3500);
             <nav class="breadcrumb" aria-label="Breadcrumb navigasi">
                 <a href="/">Beranda</a>
                 <span class="separator">/</span>
-                <a href="/jasa.html">Pusat Layanan</a>
+                <a href="/jasa/">Pusat Layanan</a>
                 <span class="separator">/</span>
                 <span class="current" aria-current="page">Bore Pile</span>
             </nav>
@@ -142,7 +123,7 @@ setTimeout(loadGTM, 3500);
                 <div class="jasa-grid" id="jasaGrid">
 
                     <!-- JAKARTA -->
-                    <a href="/jasa/bore-pile/jakarta.html" class="jasa-card" data-wilayah="jabodetabek">
+                    <a href="/jasa/bore-pile/jakarta/" class="jasa-card" data-wilayah="jabodetabek">
                         <img src="/imgs/borepile-gedung-universitas-paramadina.jpg" alt="Jasa bore pile Jakarta" class="jasa-card-img" loading="lazy">
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
@@ -154,7 +135,7 @@ setTimeout(loadGTM, 3500);
                     </a>
 
                     <!-- BEKASI -->
-                    <a href="/jasa/bore-pile/bekasi.html" class="jasa-card" data-wilayah="jabodetabek">
+                    <a href="/jasa/bore-pile/bekasi/" class="jasa-card" data-wilayah="jabodetabek">
                         <img src="/imgs/borepile-tambun-utara-bekasi.webp" alt="Jasa bore pile Bekasi" class="jasa-card-img" loading="lazy">
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
@@ -166,7 +147,7 @@ setTimeout(loadGTM, 3500);
                     </a>
 
                     <!-- TANGERANG -->
-                    <a href="/jasa/bore-pile/tangerang.html" class="jasa-card" data-wilayah="jabodetabek">
+                    <a href="/jasa/bore-pile/tangerang/" class="jasa-card" data-wilayah="jabodetabek">
                         <img src="/imgs/pengecoran-beton.jpg" alt="Jasa bore pile Tangerang" class="jasa-card-img" loading="lazy">
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
@@ -178,7 +159,7 @@ setTimeout(loadGTM, 3500);
                     </a>
 
                     <!-- DEPOK -->
-                    <a href="/jasa/bore-pile/depok.html" class="jasa-card" data-wilayah="jabodetabek">
+                    <a href="/jasa/bore-pile/depok/" class="jasa-card" data-wilayah="jabodetabek">
                         <img src="/imgs/borepile-dekat-gedung.jpg" alt="Jasa bore pile Depok" class="jasa-card-img" loading="lazy">
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
@@ -190,7 +171,7 @@ setTimeout(loadGTM, 3500);
                     </a>
 
                     <!-- BOGOR -->
-                    <a href="/jasa/bore-pile/bogor.html" class="jasa-card" data-wilayah="jabodetabek">
+                    <a href="/jasa/bore-pile/bogor/" class="jasa-card" data-wilayah="jabodetabek">
                         <img src="/imgs/borepile-asrama-pesantren-az-zikra-bogor-agung-perkasa.jpg" alt="Jasa bore pile Bogor" class="jasa-card-img" loading="lazy">
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
@@ -202,7 +183,7 @@ setTimeout(loadGTM, 3500);
                     </a>
 
                     <!-- BANDUNG -->
-                    <a href="/jasa/bore-pile/bandung.html" class="jasa-card" data-wilayah="jawa-barat">
+                    <a href="/jasa/bore-pile/bandung/" class="jasa-card" data-wilayah="jawa-barat">
                         <img src="/imgs/borepile-dekat-dinding.webp" alt="Jasa bore pile Bandung" class="jasa-card-img" loading="lazy">
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
@@ -214,7 +195,7 @@ setTimeout(loadGTM, 3500);
                     </a>
 
                     <!-- KARAWANG -->
-                    <a href="/jasa/bore-pile/karawang.html" class="jasa-card" data-wilayah="jawa-barat">
+                    <a href="/jasa/bore-pile/karawang/" class="jasa-card" data-wilayah="jawa-barat">
                         <img src="/imgs/borepile-dan-truk-molen.webp" alt="Jasa bore pile Karawang" class="jasa-card-img" loading="lazy">
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
@@ -226,7 +207,7 @@ setTimeout(loadGTM, 3500);
                     </a>
 
                     <!-- SEMARANG -->
-                    <a href="/jasa/bore-pile/semarang.html" class="jasa-card" data-wilayah="jawa-tengah">
+                    <a href="/jasa/bore-pile/semarang/" class="jasa-card" data-wilayah="jawa-tengah">
                         <img src="/imgs/borepile-mesin-biru.webp" alt="Jasa bore pile Semarang" class="jasa-card-img" loading="lazy">
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
@@ -238,7 +219,7 @@ setTimeout(loadGTM, 3500);
                     </a>
 
                     <!-- SURABAYA -->
-                    <a href="/jasa/bore-pile/surabaya.html" class="jasa-card" data-wilayah="jawa-timur">
+                    <a href="/jasa/bore-pile/surabaya/" class="jasa-card" data-wilayah="jawa-timur">
                         <img src="/imgs/borepile-pondasi-rumah.jpg" alt="Jasa bore pile Surabaya" class="jasa-card-img" loading="lazy">
                         <div class="jasa-card-content">
                             <span class="card-badge badge-bore">Bore Pile</span>
@@ -304,8 +285,6 @@ setTimeout(loadGTM, 3500);
         <FaIcon class="fas fa-arrow-up" />
     </button>
 
-    <Footer />
-
     <!-- ===== JS EXTERNAL (PAKE BOREPILE-KOTA.JS) ===== -->
     <script is:inline src="/js/borepile-kota.js" defer></script>
 
@@ -329,13 +308,13 @@ setTimeout(loadGTM, 3500);
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Pusat Layanan",
-                "item": "https://agungperkasaborepile.com/jasa.html"
+                "item": "https://agungperkasaborepile.com/jasa/"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Bore Pile",
-                "item": "https://agungperkasaborepile.com/jasa/bore-pile.html"
+                "item": "https://agungperkasaborepile.com/jasa/bore-pile/"
             }
         ]
     }
@@ -347,21 +326,21 @@ setTimeout(loadGTM, 3500);
         "@type": "ItemList",
         "name": "Daftar Kota Layanan Bore Pile",
         "description": "Daftar kota yang melayani jasa bore pile Agung Perkasa",
-        "url": "https://agungperkasaborepile.com/jasa/bore-pile.html",
+        "url": "https://agungperkasaborepile.com/jasa/bore-pile/",
         "numberOfItems": 9,
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Jakarta", "url": "https://agungperkasaborepile.com/jasa/bore-pile/jakarta.html" },
-            { "@type": "ListItem", "position": 2, "name": "Bekasi", "url": "https://agungperkasaborepile.com/jasa/bore-pile/bekasi.html" },
-            { "@type": "ListItem", "position": 3, "name": "Tangerang", "url": "https://agungperkasaborepile.com/jasa/bore-pile/tangerang.html" },
-            { "@type": "ListItem", "position": 4, "name": "Depok", "url": "https://agungperkasaborepile.com/jasa/bore-pile/depok.html" },
-            { "@type": "ListItem", "position": 5, "name": "Bogor", "url": "https://agungperkasaborepile.com/jasa/bore-pile/bogor.html" },
-            { "@type": "ListItem", "position": 6, "name": "Bandung", "url": "https://agungperkasaborepile.com/jasa/bore-pile/bandung.html" },
-            { "@type": "ListItem", "position": 7, "name": "Karawang", "url": "https://agungperkasaborepile.com/jasa/bore-pile/karawang.html" },
-            { "@type": "ListItem", "position": 8, "name": "Semarang", "url": "https://agungperkasaborepile.com/jasa/bore-pile/semarang.html" },
-            { "@type": "ListItem", "position": 9, "name": "Surabaya", "url": "https://agungperkasaborepile.com/jasa/bore-pile/surabaya.html" }
+            { "@type": "ListItem", "position": 1, "name": "Jakarta", "url": "https://agungperkasaborepile.com/jasa/bore-pile/jakarta/" },
+            { "@type": "ListItem", "position": 2, "name": "Bekasi", "url": "https://agungperkasaborepile.com/jasa/bore-pile/bekasi/" },
+            { "@type": "ListItem", "position": 3, "name": "Tangerang", "url": "https://agungperkasaborepile.com/jasa/bore-pile/tangerang/" },
+            { "@type": "ListItem", "position": 4, "name": "Depok", "url": "https://agungperkasaborepile.com/jasa/bore-pile/depok/" },
+            { "@type": "ListItem", "position": 5, "name": "Bogor", "url": "https://agungperkasaborepile.com/jasa/bore-pile/bogor/" },
+            { "@type": "ListItem", "position": 6, "name": "Bandung", "url": "https://agungperkasaborepile.com/jasa/bore-pile/bandung/" },
+            { "@type": "ListItem", "position": 7, "name": "Karawang", "url": "https://agungperkasaborepile.com/jasa/bore-pile/karawang/" },
+            { "@type": "ListItem", "position": 8, "name": "Semarang", "url": "https://agungperkasaborepile.com/jasa/bore-pile/semarang/" },
+            { "@type": "ListItem", "position": 9, "name": "Surabaya", "url": "https://agungperkasaborepile.com/jasa/bore-pile/surabaya/" }
         ]
     }
     </script>
 
-</body>
-</html>
+
+</BaseLayout>

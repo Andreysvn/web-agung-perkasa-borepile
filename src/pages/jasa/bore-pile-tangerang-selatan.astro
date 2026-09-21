@@ -34,7 +34,7 @@ const updateDate = new Date(cityData.priceUpdatedAt || pricing.priceUpdatedAt).t
 // SEO
 const seoTitle = `Jasa & Harga Bore Pile ${cityData.name} Terpercaya | Agung Perkasa`;
 const seoDesc = `Jasa Bore Pile & Strauss Pile ${cityData.name} terpercaya. Harga mesin mulai Rp${mesinMulai}/m, manual Rp${manualMulai}/m. Melayani seluruh ${cityData.name}.`;
-const canonical = `https://agungperkasaborepile.com/jasa/${cityData.slug}.html`;
+const canonical = `https://agungperkasaborepile.com/jasa/${cityData.slug}/`;
 
 const firstMesinPrice = pricing.mesin[0]?.price || 120000;
 const firstManualPrice = pricing.manual[0]?.price || 70000;
@@ -88,7 +88,7 @@ const serviceSchema = JSON.stringify({
     localBusinessDesc={cityData.localBusinessDesc}
     breadcrumbItems={[
         { name: "Beranda", url: "https://agungperkasaborepile.com/" },
-        { name: "Jasa", url: "https://agungperkasaborepile.com/jasa.html" },
+        { name: "Jasa", url: "https://agungperkasaborepile.com/jasa/" },
         { name: `Bore Pile ${cityData.name}`, url: canonical }
     ]}
     faqSchema={cityData.faq}
@@ -101,7 +101,7 @@ const serviceSchema = JSON.stringify({
     <!-- Section 1: Breadcrumb -->
     <Breadcrumb items={[
         { label: "Beranda", href: "/" },
-        { label: "Jasa", href: "/jasa.html" },
+        { label: "Jasa", href: "/jasa/" },
         { label: `Bore Pile ${cityData.name}` }
     ]} />
 
