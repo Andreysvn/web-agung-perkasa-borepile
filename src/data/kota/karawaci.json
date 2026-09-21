@@ -5,12 +5,12 @@
   "geoRegion": "ID-BT",
   "geoPlacename": "Karawaci, Indonesia",
   "heroImage": "/imgs/jasa-bore-pile-tangerang-agung-perkasa.webp",
-  "heroAlt": "Proses pengeboran bore pile mini crane di Tangerang untuk pondasi rumah di Tangerang",
-  "heroCaption": "Proses pengeboran bore pile menggunakan alat mini crane di Tangerang",
+  "heroAlt": "Jasa pengeboran pondasi bore pile mini crane untuk perumahan modern dan ruko komersial di Karawaci",
+  "heroCaption": "Pengerjaan pondasi bore pile mesin mini crane untuk hunian modern dan kawasan komersial di Karawaci",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "<strong>Harga bore pile Karawaci 2026</strong> untuk jasa pengeboran saja mulai dari <strong>Rp120.000/m untuk mesin (mini crane)</strong>, dan manual atau strauss pile mulai dari <strong>Rp70.000/m</strong>. \n                    Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Karawaci, Lippo Karawaci, Binong, Cibodas, dan sekitarnya.",
-  "localBusinessDesc": "Harga bore pile Karawaci 2026: mesin Rp120.000/m, manual Rp70.000/m. Jasa bore pile Karawaci terpercaya. Kalkulator gratis. Garansi 6 tahun. Melayani Karawaci, Lippo Karawaci, Binong, dan sekitarnya.",
+  "heroText": "<strong>Layanan bore pile Karawaci 2026</strong> spesialis pondasi kokoh untuk residensial modern, area kampus universitas, hingga kawasan komersial & ruko. Biaya bor mesin mini crane mulai dari <strong>Rp120.000/m</strong> dan bor manual (strauss pile) mulai <strong>Rp70.000/m</strong>. \n                    Gunakan kalkulator estimasi online di bawah ini untuk menghitung simulasi anggaran pengeboran proyek Anda secara instan. Menjangkau Lippo Karawaci, Kelapa Dua, Cibodas, Binong, Curug, hingga seluruh kawasan Tangerang.",
+  "localBusinessDesc": "Jasa bore pile Karawaci profesional 2026: bor mesin mulai Rp120.000/m & strauss pile Rp70.000/m. Solusi pondasi aman bebas retak untuk rumah cluster modern, gedung komersial, ruko, & indekos area universitas. Garansi 6 tahun. Siap survei ke Lippo Karawaci, Binong, Cibodas, dan sekitarnya.",
   "mobilizationCost": "Mini crane: Rp2-4jt | Strauss pile (bore pile manual): Rp1-1.5jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -22,31 +22,31 @@
         "diameter": "30 cm",
         "price": 120000,
         "depth": "30 meter",
-        "suitable": "Rumah 1-2 lantai"
+        "suitable": "Rumah cluster 1-2 lantai, kost mahasiswa"
       },
       {
         "diameter": "40 cm",
         "price": 135000,
         "depth": "30 meter",
-        "suitable": "Ruko, kantor"
+        "suitable": "Ruko komersial, gedung rukan, kafe"
       },
       {
         "diameter": "50 cm",
         "price": 190000,
         "depth": "30 meter",
-        "suitable": "Gudang, pabrik kecil"
+        "suitable": "Klinik, showroom, gedung bisnis"
       },
       {
         "diameter": "60 cm",
         "price": null,
         "depth": "30 meter",
-        "suitable": "Hotel 3-4 lantai"
+        "suitable": "Hotel butik, gedung perkuliahan 3-4 lantai"
       },
       {
         "diameter": "80 cm",
         "price": null,
         "depth": "30 meter",
-        "suitable": "Gedung 5-8 lantai"
+        "suitable": "Apartemen low-rise, gedung komersial 5-8 lantai"
       }
     ],
     "manual": [
@@ -54,75 +54,75 @@
         "diameter": "20 cm",
         "price": 75000,
         "depth": "10 meter",
-        "suitable": "Area sangat sempit"
+        "suitable": "Pagar keliling, kanopi, area terbatas"
       },
       {
         "diameter": "25 cm",
         "price": 85000,
         "depth": "10 meter",
-        "suitable": "Gang kecil"
+        "suitable": "Renovasi hunian gang padat"
       },
       {
         "diameter": "30 cm",
         "price": 100000,
         "depth": "10 meter",
-        "suitable": "Rumah, ruko 1-2 lantai (tanah padat)"
+        "suitable": "Rumah tinggal 1-2 lantai, indekos mahasiswa"
       },
       {
         "diameter": "40 cm",
         "price": 120000,
         "depth": "10 meter",
-        "suitable": "Rumah, ruko 2 lantai (tanah padat)"
+        "suitable": "Ruko 2 lantai, rumah modern (tanah stabil)"
       }
     ],
     "hasHidrolik": false
   },
   "factors": [
     {
-      "title": "Diameter & Kedalaman",
-      "text": "Semakin besar diameter (30cm, 40cm, 50cm, dst) dan semakin dalam pengeboran yang diperlukan hingga tanah keras area Tangerang, maka biaya per meter semakin tinggi."
+      "title": "Diameter & Beban Konstruksi",
+      "text": "Kebutuhan diameter bor (30cm s/d 80cm) ditentukan oleh beban konstruksi bangunan, mulai dari rumah cluster modern 2 lantai hingga gedung komersial dan fasilitas perkuliahan di Karawaci. Kedalaman hingga menyentuh tanah keras akan memengaruhi total biaya per meter."
     },
     {
-      "title": "Kondisi Tanah Tangerang",
-      "text": "Tanah di area pesisir seperti Teluknaga dan Kosambi cenderung lunak ( bekas rawa atau sawah), sehingga butuh pengeboran lebih dalam hingga tanah keras. Sebaliknya, area berbukit seperti Curug dan Cikupa umumnya kondisi tanah lebih stabil, biaya bore pile di Tangerang bisa bervariasi tergantung lokasi."
+      "title": "Karakteristik Tanah Wilayah Karawaci",
+      "text": "Struktur tanah di Karawaci bervariasi antara lempung lunak di bekas kantong rawa/resapan hingga lempung kepasiran padat. Kawasan sekitar Lippo Karawaci dan Cibodas umumnya memerlukan kedalaman 10-18 meter agar pondasi bertumpu mantap pada tanah keras bebas penurunan."
     },
     {
-      "title": "Jarak Proyek Dari Gudang Kami",
-      "text": "Biaya mobilisasi alat sudah kami sesuaikan sesuai jarak dari gudang kami."
+      "title": "Jarak Proyek & Efisiensi Rute",
+      "text": "Biaya mobilisasi armada mesin mini crane maupun perlengkapan strauss pile telah kami hitung secara kompetitif berdasarkan kemudahan akses jalur logistik ke wilayah Karawaci."
     },
     {
-      "title": "Volume Pekerjaan",
-      "text": "Minimal order jasa bore pile Tangerang untuk mesin (mini crane & gawangan) adalah 200 meter, sedangkan strauss pile manual 100 meter. Untuk volume di bawah itu, silakan hubungi admin kami untuk penawaran harga khusus."
+      "title": "Volume & Jumlah Titik Pengeboran",
+      "text": "Minimal order pengeboran mesin (mini crane & gawangan) adalah 200 meter kumulatif, dan bor manual strauss pile 100 meter. Kami menyediakan penyesuaian tarif khusus untuk proyek renovasi rumah atau ruko dengan volume di bawah batas standar."
     },
     {
-      "title": "Akses Lokasi & Zona Industri",
-      "text": "Area industri seperti Cikupa dan Balaraja memiliki akses jalan yang lebih lebar untuk mobilisasi alat besar. Namun, area permukiman padat di Tangerang Kota membutuhkan perencanaan mobilisasi lebih matang."
+      "title": "Akses Kawasan Residensial & Komersial",
+      "text": "Pelaksanaan di cluster hunian modern atau kawasan bisnis di Karawaci membutuhkan penanganan higienis minim lumpur dan getaran rendah. Alat mini crane dan gawangan kami dirancang lincah bermanuver di jalan perumahan berpagar maupun jalanan ruko padat."
     },
     {
-      "title": "Jenis & Skala Proyek di Tangerang",
-      "text": "Proyek rumah tinggal pribadi atau perorangan di Tangerang umumnya memiliki harga lebih terjangkau dibandingkan proyek skala besar seperti kontraktor, developer, atau proyek pemerintah di wilayah Tangerang."
+      "title": "Skala & Tipologi Proyek",
+      "text": "Kami siap mengakomodasi proyek perseorangan seperti hunian mewah dan asrama/kost mahasiswa sekitar universitas, hingga proyek developer perumahan, gedung perkantoran, dan deretan ruko komersial di Karawaci."
     }
   ],
-  "sondirNote": "Tips proyek bore pile di Tangerang: Untuk area panti seperti Teluknaga atau Kosambi, kedalaman tanah keras bisa mencapai 20-25 meter. Untuk area berbukit seperti Curug atau Cikupa, umumnya lebih dangkal di 8-15 meter. Lakukan pengecekan data sondir tanah Tangerang terlebih dahulu agar kedalaman pengeboran bisa ditentukan secara tepat. Konsultasikan proyek bore pile Tangerang Anda dengan tim teknis kami untuk penawaran harga yang sesuai.",
+  "sondirNote": "<strong>Tips pondasi kokoh di Karawaci:</strong> Kedalaman lapisan tanah keras (nilai conus qc > 150-200 kg/cm²) di area Karawaci umumnya berada pada rentang 10 hingga 18 meter. Untuk pembangunan rumah tinggal modern 2-3 lantai, gedung indekos dekat kampus, maupun deretan ruko komersial, uji sondir tanah sangat penting dilakukan terlebih dahulu agar kedalaman tiang bore pile presisi dan efisien terhadap biaya cor beton. Diskusikan rencana pondasi Karawaci Anda bersama tim ahli kami untuk survei lokasi dan penawaran terbaik.",
   "projects": [
     {
-      "title": "Rumah di Gading Serpong",
+      "title": "Rumah Modern 2 Lantai Dekat Lippo Karawaci",
       "image": "/imgs/bore-pile-gading-serpong-medang-tangerang.webp",
-      "imageAlt": "Proses pengerjaan bore pile mini crane metode bor kering di Gading Serpong, Karawaci",
-      "imageCaption": "Bore Pile mini crane metode bor kering di Gading Serpong, Karawaci",
-      "specs": "Bore pile mesin mini crane Ø30cm, kedalaman 13m, 24 titik<br>Metode: Dry Boring (Bor kering)",
-      "costCalc": "10m × Rp125.000 × 24 = Rp39.000.000",
+      "imageAlt": "Proses pengerjaan bore pile mini crane metode bor kering untuk hunian modern di kawasan Karawaci",
+      "imageCaption": "Pondasi bore pile mini crane metode dry boring untuk hunian residensial modern di Karawaci",
+      "specs": "Bore pile mesin mini crane Ø30cm, kedalaman 13m, 24 titik<br>Metode: Dry Boring (Bor kering ramah lingkungan perumahan)",
+      "costCalc": "13m × Rp125.000 × 24 = Rp39.000.000",
       "mobilization": "+ mobilisasi: Rp3.000.000",
       "total": "Rp42.000.000",
       "time": "6-8 hari kerja",
       "hasImage": true
     },
     {
-      "title": "Proyek di Cikupa",
+      "title": "Ruko Komersial 3 Lantai di Sentra Bisnis Karawaci",
       "image": "",
-      "imageAlt": "Proses pengerjaan bore pile mini crane di Cikupa, Kabupaten Karawaci",
-      "imageCaption": "Bore Pile mesin mini crane di Cikupa, Kabupaten Karawaci",
-      "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 20 titik<br>Metode: Wash Boring (Bor basah)",
+      "imageAlt": "Pengerjaan bore pile mesin mini crane wash boring untuk pembangunan ruko komersial di Karawaci",
+      "imageCaption": "Bore pile mesin mini crane wash boring proyek ruko komersial di kawasan Karawaci",
+      "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 20 titik<br>Metode: Wash Boring (Bor basah stabil tanah lempung)",
       "costCalc": "14m × Rp135.000 × 20 = Rp37.800.000",
       "mobilization": "+ mobilisasi: Rp3.500.000",
       "total": "Rp41.300.000",
@@ -130,11 +130,11 @@
       "hasImage": false
     },
     {
-      "title": "Rumah di Cipondoh",
+      "title": "Kos-Kosan Mahasiswa 3 Lantai Dekat Kampus Universitas",
       "image": "",
-      "imageAlt": "Proses pengerjaan bore pile manual (strauss pile) di Cipondoh, Karawaci",
-      "imageCaption": "Strauss Pile (bore pile manual) di Cipondoh, Karawaci",
-      "specs": "Strauss pile (bore pile manual) Ø30cm, kedalaman 6m, 26 titik",
+      "imageAlt": "Pengerjaan strauss pile bore pile manual minim bising untuk bangunan kos mahasiswa dekat kampus Karawaci",
+      "imageCaption": "Strauss pile bor manual bebas getaran untuk gedung indekos di sekitar kawasan universitas Karawaci",
+      "specs": "Strauss pile (bore pile manual) Ø30cm, kedalaman 6m, 26 titik<br>Metode: Strauss Pile Dry Boring (Bebas getaran)",
       "costCalc": "6m × Rp95.000 × 26 = Rp14.820.000",
       "mobilization": "+ mobilisasi: Rp1.500.000",
       "total": "Rp16.320.000",
@@ -144,60 +144,60 @@
   ],
   "whyUs": [
     {
-      "title": "Memakai alat yang baik",
-      "desc": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, dan strauss pile."
+      "title": "Pilihan Alat Lengkap & Terawat",
+      "desc": "Tersedia unit mini crane, gawangan modular, hingga strauss pile manual yang selalu dalam kondisi prima, siap masuk ke perumahan cluster modern maupun gang sempit di Karawaci."
     },
     {
-      "title": "Efisiensi waktu & Komitmen kualitas",
-      "desc": "Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam, khususnya bore pile di Karawaci. Kecuali ada kendala teknis di luar kendali."
+      "title": "Bebas Getaran & Ramah Lingkungan",
+      "desc": "Metode pengeboran kami tidak merusak dinding bangunan sekitar, sangat aman untuk pengerjaan di perumahan padat, cluster bertingkat, serta dekat asrama kampus universitas."
     },
     {
-      "title": "Tim Ahli",
-      "desc": "Memiliki tim ahli dalam pengerjaan bore pile di Karawaci, khususnya membuat pondasi dalam."
+      "title": "Tenaga Kerja Ahli & Berpengalaman",
+      "desc": "Didukung tim teknisi bore pile bersertifikat dan berjam terbang tinggi yang memahami betul karakter geologi dan formasi tanah di wilayah Karawaci."
     },
     {
-      "title": "Tim berpengalaman di area Karawaci",
-      "desc": "Lebih dari sepuluh tahun mengerjakan proyek di Karawaci. Mulai dari proyek rumah tinggal pribadi hingga proyek komersial. Mulai dari proyek Pribadi, Mandor, dan Developer."
+      "title": "Reputasi Terpercaya di Kawasan Karawaci",
+      "desc": "Berpengalaman lebih dari 10 tahun mengerjakan pondasi bore pile untuk rumah tinggal mewah, ruko niaga, fasilitas perkuliahan, hingga bangunan komersial lainnya."
     }
   ],
   "equipment": {
-    "description": "Kami memiliki beberapa alat untuk pekerjaan bore pile, antara lain:",
+    "description": "Kami menyediakan armada mesin bore pile canggih yang siap disesuaikan dengan kondisi jalan dan spesifikasi proyek Anda di Karawaci:",
     "items": [
       {
         "name": "Mini Crane",
-        "desc": "Kapasitas sedang, untuk diameter 30-80 cm, kedalaman sampai 30m meter. Mini Crane cocok untuk lokasi yang cukup luas dan membutuhkan akses yang baik untuk mobilisasi alat dan pengerjaan. Cocok untuk membuat rumah, ruko, gudang, dan bangunan bertingkat.",
+        "desc": "Mesin bor bertenaga diesel untuk diameter 30 s/d 80 cm hingga kedalaman 30 meter. Pilihan terbaik untuk hunian bertingkat di perumahan modern, ruko sentra niaga, gudang, dan gedung komersial dengan akses jalan mobil.",
         "image": "/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg",
-        "imageAlt": "Mesin bore pile mini crane Agung Perkasa untuk bore pile pondasi rumah, ruko, dan bangunan bertingkat di Karawaci"
+        "imageAlt": "Mesin bore pile mini crane Agung Perkasa untuk pondasi rumah modern dan kawasan komersial di Karawaci"
       },
       {
         "name": "Gawangan",
-        "desc": "Gawangan cocok untuk area yang tidak bisa diakses oleh mini crane. Karena ukuran dan bentuknya yang tidak sebesar mini crane, gawangan cocok untuk area yang memiliki akses terbatas (tidak muat jika mini crane lewat). Diameter 30-80 cm, paling sering digunakan untuk membuat rumah, ruko, dan bangunan 1-2 lantai lainnya di gang sempit.",
+        "desc": "Mesin rakitan modular dengan dimensi ringkas untuk diameter 30-80 cm. Sangat cocok untuk proyek ruko komersial atau rumah modern yang memiliki akses jalan sempit yang tidak muat dilintasi truk mini crane.",
         "image": "/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg",
-        "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk bore pile ketika area tidak bisa dijangkau oleh mini crane di Karawaci"
+        "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk area akses terbatas dan gang di Karawaci"
       },
       {
         "name": "Strauss Pile (bore pile manual)",
-        "desc": "Alat bor manual full menggunakan tenaga manusia dalam proses pengeboran (diputar oleh tukang bore pile), memakai metode dry boring (bor kering). Diameter 20-40cm, cocok untuk lokasi seperti di gang sempit dan area terbatas lainnya yang tidak bisa dijangkau mini crane dan gawangan, karena mobilisasi yang lebih fleksibel (bisa menggunakan motor).",
+        "desc": "Alat bor putar manual dengan tenaga manusia tanpa mesin bising. Menggunakan metode bor kering diameter 20-40 cm, sangat ideal untuk kos-kosan mahasiswa di sekitar kampus universitas atau renovasi rumah di gang padat Karawaci.",
         "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
-        "imageAlt": "Strauss pile (bore pile manual) untuk pondasi di gang sempit dan area terbatas Karawaci lainnya"
+        "imageAlt": "Alat strauss pile manual bebas getaran untuk pondasi rumah tinggal dan kos mahasiswa di Karawaci"
       }
     ]
   },
   "portfolio": {
-    "title": "Portofolio Proyek Bore Pile di Tangerang",
-    "subtitle": "Berikut beberapa proyek bore pile yang sudah kami kerjakan di berbagai wilayah Tangerang Kota dan Kabupaten.",
+    "title": "Portofolio Proyek Bore Pile di Kawasan Karawaci",
+    "subtitle": "Kumpulan bukti pengerjaan pondasi bore pile kami untuk rumah tinggal modern, bangunan komersial, dan sarana publik di wilayah Karawaci & sekitarnya.",
     "items": [
       {
         "image": "/imgs/bore-pile-gading-serpong-medang-tangerang-juni-2026.jpg",
-        "imageAlt": "Proses bore pile mini crane di Gading Serpong, Tangerang",
-        "label": "Proyek di Gading Serpong",
-        "detail": "Bore pile mini crane Ø30cm, untuk rumah di Gading Serpong, Tangerang"
+        "imageAlt": "Pelaksanaan bore pile mini crane untuk perumahan modern 2 lantai di sekitar Karawaci",
+        "label": "Pondasi Hunian Modern Karawaci",
+        "detail": "Bore pile mini crane Ø30cm, kedalaman 13m untuk perumahan modern bertingkat di koridor Karawaci"
       },
       {
         "image": "/imgs/bore-pile-mini-crane-dry-boring-alam-sutera-tangerang-agung-perkasa-20-juni-2026.webp",
-        "imageAlt": "Proses bore pile mini crane metode dry boring di Alam Sutera, Tangerang",
-        "label": "Proyek di Alam Sutera",
-        "detail": "Bore pile mini crane Ø30cm, untuk rumah di Alam Sutera, Tangerang"
+        "imageAlt": "Pengerjaan bore pile mini crane dry boring untuk bangunan komersial di area Karawaci",
+        "label": "Pondasi Area Komersial Karawaci",
+        "detail": "Bore pile mini crane Ø30cm metode bor kering untuk bangunan ruko & komersial modern"
       }
     ]
   },
@@ -229,38 +229,38 @@
   },
   "faq": [
     {
-      "q": "Apakah bore pile cocok untuk kondisi tanah di Karawaci?",
-      "a": "Sangat cocok. Karawaci memiliki tanah eksisting yang stabil untuk pondasi bore pile. Kedalaman yang dibutuhkan umumnya 8-15 meter tergantung lokasi. Kami sudah mengerjakan proyek di Apartemen U-Residence dan Hotel Olive Karawaci dengan hasil memuaskan."
+      "q": "Mengapa bore pile sangat direkomendasikan untuk rumah modern di Karawaci?",
+      "a": "Perumahan modern di Karawaci umumnya bertingkat 2 hingga 3 dengan desain mewah dan beban struktur berat. Struktur tanah Karawaci membutuhkan tumpuan tanah keras di kedalaman 10-16 meter. Metode bore pile memberikan daya dukung maksimal sekaligus aman dari getaran yang berisiko meretakkan bangunan cluster sebelah."
     },
     {
-      "q": "Berapa biaya mobilisasi alat ke Karawaci?",
-      "a": "Untuk wilayah Karawaci: mesin mini crane sekitar Rp3-5 juta, manual sekitar Rp1-2 juta. Biaya tergantung jarak dari gudang kami di Jakarta Utara ke lokasi proyek Anda."
+      "q": "Berapa biaya mobilisasi alat mesin bore pile ke Karawaci?",
+      "a": "Untuk seluruh area Karawaci dan Lippo Karawaci, mobilisasi mesin mini crane atau gawangan berkisar Rp2-4 juta, sedangkan bor manual (strauss pile) berkisar Rp1-1.5 juta. Biaya transparan disesuaikan dengan kemudahan akses jalan ke lokasi proyek Anda."
     },
     {
-      "q": "Apakah melayani proyek apartemen di Lippo Karawaci?",
-      "a": "Ya. Kami melayani proyek apartemen dan hotel di Lippo Karawaci seperti U-Residence. Untuk bangunan tinggi, kami menggunakan bore pile diameter 40-60 cm dengan kedalaman hingga 20 meter."
+      "q": "Apakah melayani bore pile untuk ruko komersial dan gedung kos di sekitar kampus universitas Karawaci?",
+      "a": "Ya, kami sangat sering mengerjakan pondasi ruko 3-4 lantai, deretan cafe/restoran komersial, dan indekos mahasiswa bertingkat dekat universitas di Karawaci. Kami menyediakan diameter 30 cm hingga 60 cm dengan kedalaman yang dirancang kuat menopang aktivitas komersial harian."
     },
     {
-      "q": "Berapa lama waktu pengerjaan bore pile untuk rumah di Karawaci?",
-      "a": "Untuk 16 titik diameter 30cm kedalaman 12m, estimasi 5-7 hari kerja. Kalkulator di atas bisa memberi estimasi lebih akurat."
+      "q": "Berapa estimasi waktu pengerjaan pondasi bore pile rumah di Karawaci?",
+      "a": "Untuk proyek rumah tinggal standar dengan 20-24 titik diameter 30 cm kedalaman 12-13 meter, durasi pengerjaan berkisar 5 hingga 8 hari kerja menggunakan mesin mini crane. Anda dapat menggunakan kalkulator otomatis kami di atas untuk estimasi waktu dan biaya yang lebih akurat."
     },
     {
-      "q": "Apakah wajib ada data sondir untuk proyek di Karawaci?",
-      "a": "Sangat wajib. Data sondir menentukan kedalaman bore pile yang tepat sesuai kondisi tanah Karawaci. Kami bisa membantu mengurus pengujian tanah jika Anda belum punya data sondir."
+      "q": "Apakah perlu uji sondir sebelum pengeboran bore pile di Karawaci?",
+      "a": "Sangat dianjurkan. Laporan sondir memastikan kedalaman lapisan tanah keras yang sebenarnya di lahan Anda, sehingga panjang tiang bore pile presisi tanpa risiko bor kurang dalam atau pemborosan biaya beton cor. Jika belum memiliki data sondir, tim kami siap membantu pengujian sondir di Karawaci."
     },
     {
-      "q": "Bisa pakai material sendiri untuk proyek di Karawaci?",
-      "a": "Bisa. Harga di atas untuk jasa pengeboran saja (sudah termasuk perakitan besi & pengecoran beton). Kami terima material dari klien dengan spesifikasi SNI untuk besi dan K-300 hingga K-400 untuk beton."
+      "q": "Apakah Agung Perkasa melayani jasa borongan bor saja atau termasuk material cor?",
+      "a": "Kami menyediakan opsi fleksibel: jasa pengeboran borong (termasuk ongkos lubang, perakitan besi tulangan, dan pengecoran tiang) di mana material disediakan pemilik proyek, maupun paket komplit terima beres menggunakan besi ulir SNI dan beton ready mix mutu K-300 hingga K-350."
     }
   ],
   "articles": [
     {
       "href": "/artikel/bore-pile-vs-strauss-pile/",
       "image": "/imgs/borepile-dekat-dinding.webp",
-      "imageAlt": "Bore pile mini crane di sebelah dinding (hampir menyentuh dinding)",
+      "imageAlt": "Bore pile mini crane di sebelah dinding bangunan eksisting",
       "category": "Perbandingan",
       "title": "Borepile vs Strauss Pile",
-      "excerpt": "Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik.",
+      "excerpt": "Perbandingan lengkap metode bore pile mesin vs manual untuk menentukan fondasi terbaik bangunan Anda.",
       "date": "Juni 2026"
     },
     {
@@ -269,16 +269,16 @@
       "imageAlt": "Hasil lubang bore pile diameter 30cm yang sudah dimasukan tulangan besi struktur pondasi",
       "category": "Harga",
       "title": "Harga Bore Pile Diameter 30cm",
-      "excerpt": "Lihat harga terbaru 2026 untuk bore pile diameter 30cm.",
+      "excerpt": "Informasi tarif pengeboran bore pile diameter 30cm terbaru tahun 2026 untuk rumah bertingkat.",
       "date": "Juni 2026"
     },
     {
       "href": "/jasa/bore-pile/jakarta/",
       "image": "/imgs/borepile-dan-truk-molen.webp",
-      "imageAlt": "Harga bore pile Jakarta 2026 terbaru",
+      "imageAlt": "Pengecoran bore pile menggunakan truk mixer ready mix",
       "category": "Harga",
       "title": "Harga Bore Pile Jakarta 2026",
-      "excerpt": "Informasi terkini tentang harga bore pile di wilayah Jakarta untuk tahun 2026.",
+      "excerpt": "Informasi terkini tentang estimasi harga bore pile di wilayah Jabodetabek untuk tahun 2026.",
       "date": "Juni 2026"
     }
   ],
@@ -309,62 +309,62 @@
   "additionalCosts": [
     {
       "title": "Mobilisasi Alat Bore Pile",
-      "text": "Mini crane: Rp2-4jt | Strauss pile (bore pile manual): Rp1-1.5jt. Biaya disesuaikan dengan jarak lokasi proyek."
+      "text": "Mini crane: Rp2-4jt | Strauss pile (bore pile manual): Rp1-1.5jt. Disesuaikan dengan kemudahan akses jalan menuju lokasi proyek di Karawaci."
     },
     {
-      "title": "Minimal Order",
-      "text": "Mesin mini crane & gawangan: 200 meter | Strauss Pile (Manual): 100 meter (di bawah itu silakan hubungi kami)."
+      "title": "Minimal Volume Pekerjaan",
+      "text": "Pengeboran mesin mini crane & gawangan: 200 meter | Strauss Pile manual: 100 meter (tersedia penawaran khusus untuk volume di bawah standar)."
     },
     {
-      "title": "Sedot Lumpur",
-      "text": "Jika memakai bore pile mesin gawangan dan mini crane menggunakan metode <strong>wash boring (bor basah)</strong>, perkiraan biaya tambahannya sekitar: Rp800.000 - Rp1.200.000/rit (tergantung volume)"
+      "title": "Pembuangan / Sedot Lumpur",
+      "text": "Untuk metode <strong>wash boring (bor basah)</strong>, lumpur hasil sirkulasi pengeboran dapat disedot tangki dengan estimasi biaya: Rp800.000 - Rp1.200.000/rit."
     },
     {
-      "title": "Data Sondir",
-      "text": "Sangat wajib untuk menentukan kedalaman pengeboran yang tepat hingga mencapai lapisan tanah keras."
+      "title": "Uji Penyelidikan Tanah (Sondir)",
+      "text": "Sangat dianjurkan guna memastikan tiang pondasi mencapai kedalaman tanah keras dengan daya dukung beban yang optimal."
     }
   ],
   "soilReasons": {
     "title": "Mengapa Bore Pile Pilihan Tepat untuk Wilayah Karawaci?",
-    "description": "Wilayah Karawaci memiliki kondisi tanah yang <strong>bervariasi dan di beberapa tempat cukup lunak</strong>. Metode bore pile menjadi solusi pondasi paling tepat karena:",
+    "description": "Perkembangan kawasan Karawaci yang didominasi <strong>perumahan modern, kampus universitas ternama, dan koridor komersial</strong> membutuhkan fondasi yang stabil di atas tanah lempung setempat. Metode bore pile menjadi solusi terbaik karena:",
     "points": [
       {
-        "title": "Kedalaman hingga 30 meter",
-        "desc": "Mampu menembus lapisan tanah lunak hingga <a href=\"https://journal.jgu.ac.id/index.php/jgers/article/view/40\" target=\"_blank\" rel=\"noopener noreferrer\">mencapai tanah keras</a>."
+        "title": "Daya Jangkau Kedalaman hingga 30 Meter",
+        "desc": "Mampu menembus lapisan tanah lunak atau urugan hingga <a href=\"https://journal.jgu.ac.id/index.php/jgers/article/view/40\" target=\"_blank\" rel=\"noopener noreferrer\">mencapai lapisan tanah keras</a> dengan kapasitas daya dukung tinggi."
       },
       {
-        "title": "Diameter fleksibel (30-120cm)",
-        "desc": "Bisa disesuaikan dengan <a href=\"https://library.gunadarma.ac.id/repository/perencanaan-fondasi-bored-pile-pada-gedung-perkantoran-10-lantai-di-karawaci-pusat-skripsi\" target=\"_blank\" rel=\"noopener noreferrer\">beban bangunan</a>."
+        "title": "Diameter Variatif (30-80 cm)",
+        "desc": "Dapat dikonfigurasikan fleksibel sesuai <a href=\"https://library.gunadarma.ac.id/repository/perencanaan-fondasi-bored-pile-pada-gedung-perkantoran-10-lantai-di-karawaci-pusat-skripsi\" target=\"_blank\" rel=\"noopener noreferrer\">beban struktural gedung komersial maupun rumah tapak</a> tanpa risiko pemborosan material."
       },
       {
-        "title": "Minim getaran",
-        "desc": "Aman untuk bangunan di sekitar proyek, jadi tidak merusak tanah dan dinding tetangga Anda."
+        "title": "Bebas Getaran Struktural",
+        "desc": "Sangat aman bagi bangunan tetangga di area cluster perumahan modern karena proses pengeboran tidak menimbulkan dentuman getaran seperti tiang pancang."
       },
       {
-        "title": "Minim polusi suara",
-        "desc": "Suaranya tidak terlalu mengganggu tetangga sekitar proyek, apalagi jika proyek dilakukan di area padat, tapi terkadang ada tetangga yang merasa terganggu oleh suara yang dihasilkan, jadi kami juga menyediakan solusi untuk mengurangi suaranya (misal diberikan peredam suara)."
+        "title": "Kebisingan Rendah (Minim Polusi Suara)",
+        "desc": "Suara mesin pengeboran relatif hening dan ramah bagi lingkungan residensial serta kawasan pendidikan kampus yang membutuhkan ketenangan."
       },
       {
-        "title": "Metode wash boring",
-        "desc": "Bor basah sangat efektif untuk tanah berair atau rawa seperti di Karawaci Utara."
+        "title": "Dukungan Metode Bor Kering & Bor Basah",
+        "desc": "Metode wash boring efektif untuk tanah lempung basah, sementara dry boring sangat cocok untuk menjaga area cluster tetap bersih dan rapi."
       }
     ],
-    "conclusion": "<p>Setiap lokasi memiliki karakteristik tanah yang berbeda. Kami dapat menyesuaikan teknik bore pile untuk memastikan keberhasilan proyek di setiap wilayah di Karawaci.</p><p><strong>Portofolio kami di Karawaci:</strong> Kami telah berpengalaman mengerjakan berbagai proyek rumah, ruko, gudang dan bangunan lain di seluruh wilayah Karawaci dan sekitarnya.</p>"
+    "conclusion": "<p>Karakteristik tanah di kawasan Karawaci, Lippo Village, dan Cibodas memiliki keunikan tersendiri. Kami menyesuaikan alat dan metode pengeboran untuk memastikan kestabilan struktur bangunan Anda dalam jangka panjang.</p><p><strong>Pengalaman Proyek di Karawaci:</strong> Kami telah berpengalaman mengerjakan aneka proyek rumah tinggal mewah di cluster modern, ruko komersial, kafe, asrama mahasiswa, hingga gedung bertingkat di seluruh penjuru Karawaci.</p>"
   },
   "priceUpdatedAt": "2026-08-19",
-  "projectNote": "<strong>Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan. Kecepatan pengerjaan dipengaruhi oleh kondisi lapangan, akses lokasi, karakteristik tanah, dan yang paling penting adalah pasokan air yang cukup untuk metode wash boring.<br><br>Butuh harga khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
+  "projectNote": "<strong>Catatan:</strong> Estimasi harga di atas sudah mencakup jasa pengeboran, perakitan besi tulangan, dan pengecoran tiang, <strong>belum termasuk penyediaan material</strong> (beton ready mix dan besi). Rincian di atas diadaptasi dari proyek nyata di lapangan. Kecepatan pengerjaan dipengaruhi akses mobilitas alat, kondisi stratigrafi tanah, dan ketersediaan pasokan air pada metode wash boring.<br><br>Butuh penawaran khusus diameter 30cm untuk rumah modern Anda? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {
       "diameter": "30 cm",
-      "usage": "rumah 1-2 lantai (paling banyak dipilih)"
+      "usage": "rumah cluster modern 1-2 lantai & kos mahasiswa (paling banyak dipilih)"
     },
     {
       "diameter": "40-50 cm",
-      "usage": "ruko, kantor, gudang, rumah sakit"
+      "usage": "ruko komersial, gedung perkantoran, kafe, klinik"
     },
     {
-      "diameter": "60-110 cm",
-      "usage": "hotel, gedung bertingkat"
+      "diameter": "60-80 cm",
+      "usage": "hotel, gedung universitas/perkuliahan, apartemen low-rise"
     }
   ]
 }

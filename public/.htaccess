@@ -6,7 +6,18 @@ RewriteBase /
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Redirect .html to trailing slash (/)
+# === REDIRECT SPESIFIK URL LAMA YANG SUDAH RANKING ===
+# Harga bore-pile-Xcm.html → harga/bore-pile/Xcm/
+RewriteRule ^harga/bore-pile-30cm\.html$ /harga/bore-pile/30cm/ [R=301,L]
+RewriteRule ^harga/bore-pile-40cm\.html$ /harga/bore-pile/40cm/ [R=301,L]
+RewriteRule ^harga/bore-pile-50cm\.html$ /harga/bore-pile/50cm/ [R=301,L]
+RewriteRule ^harga/bore-pile-60cm\.html$ /harga/bore-pile/60cm/ [R=301,L]
+RewriteRule ^harga/bore-pile-80cm\.html$ /harga/bore-pile/80cm/ [R=301,L]
+
+# Galeri: /galeri/ tidak punya index.html, redirect ke galeri/gallery/
+RewriteRule ^galeri/?$ /galeri/gallery/ [R=301,L]
+
+# Redirect .html to trailing slash (/) — generic
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+(.*)\.html\ HTTP/
 RewriteRule ^(.*)\.html$ /$1/ [R=301,L]
 

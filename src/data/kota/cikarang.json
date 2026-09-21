@@ -5,12 +5,12 @@
   "geoRegion": "ID-JB",
   "geoPlacename": "Cikarang, Indonesia",
   "heroImage": "/imgs/jasa-bore-pile-bekasi-agung-perkasa.webp",
-  "heroAlt": "Proses pengeboran bore pile mini crane di Bekasi untuk pondasi rumah di Bekasi",
-  "heroCaption": "Proses pengeboran bore pile menggunakan alat mini crane di Bekasi",
+  "heroAlt": "Proses pengeboran pondasi bore pile mini crane untuk konstruksi gudang dan pabrik di Cikarang Jababeka MM2100",
+  "heroCaption": "Pengerjaan bore pile mesin mini crane spesialis kawasan industri dan pergudangan di Cikarang",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "<strong>Harga bore pile Cikarang 2026</strong> untuk jasa pengeboran saja mulai dari <strong>Rp120.000/m untuk mesin (mini crane)</strong>, dan manual atau strauss pile mulai dari <strong>Rp70.000/m</strong>. Melayani seluruh kawasan Cikarang Pusat, Selatan, Utara, Timur, Barat, Jababeka, Lippo Cikarang, Deltamas, MM2100, dan sekitarnya.",
-  "localBusinessDesc": "Jasa Bore Pile & Strauss pile Cikarang terpercaya. Harga Mesin mulai Rp120.000/m, manual Rp70.000/m. Melayani Cikarang Pusat, Barat, Selatan, Timur, Utara. Konsultasi gratis.",
+  "heroText": "<strong>Biaya jasa bore pile Cikarang 2026</strong> untuk pekerjaan pengeboran pondasi mulai dari <strong>Rp120.000/m menggunakan mesin mini crane</strong> dan <strong>Rp70.000/m untuk strauss pile manual</strong>. Spesialis pondasi tiang bor untuk pabrik, gudang logistik, ruko, dan perumahan di kawasan industri MM2100, Jababeka, GIIC Deltamas, Lippo Cikarang, EJIP, hingga Cikarang Pusat, Selatan, Utara, Barat, dan Timur.",
+  "localBusinessDesc": "Jasa bore pile dan strauss pile profesional di Cikarang. Melayani pengeboran pondasi pabrik, hanggar gudang, ruko komersial, dan rumah di Jababeka, MM2100, Deltamas, serta seluruh wilayah Cikarang. Harga kompetitif & survey lokasi gratis.",
   "mobilizationCost": "Mini crane: Rp2-4jt | Strauss pile (bore pile manual): Rp1-1.5jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -22,31 +22,31 @@
         "diameter": "30 cm",
         "price": 120000,
         "depth": "30 meter",
-        "suitable": "Rumah 1-2 lantai"
+        "suitable": "Rumah tinggal 1-2 lantai, ruko, pondasi pagar kawasan industri"
       },
       {
         "diameter": "40 cm",
         "price": 135000,
         "depth": "30 meter",
-        "suitable": "Ruko, kantor"
+        "suitable": "Ruko bertingkat, workshop, kantor operasional pabrik"
       },
       {
         "diameter": "50 cm",
         "price": 190000,
         "depth": "30 meter",
-        "suitable": "Gudang, pabrik kecil"
+        "suitable": "Gudang logistik, struktur baja berat, hanggar industri"
       },
       {
         "diameter": "60 cm",
         "price": null,
         "depth": "30 meter",
-        "suitable": "Hotel 3-4 lantai"
+        "suitable": "Pondasi mesin pabrik bergetar, hotel, gedung perkantoran 4-5 lantai"
       },
       {
         "diameter": "80 cm",
         "price": null,
         "depth": "30 meter",
-        "suitable": "Gedung 5-8 lantai"
+        "suitable": "Silo industri, crane runway pabrik, konstruksi gedung bertingkat tinggi"
       }
     ],
     "manual": [
@@ -54,63 +54,63 @@
         "diameter": "20 cm",
         "price": 75000,
         "depth": "10 meter",
-        "suitable": "Area sangat sempit"
+        "suitable": "Pagar keliling, pos security, saluran drainase pabrik"
       },
       {
         "diameter": "25 cm",
         "price": 85000,
         "depth": "10 meter",
-        "suitable": "Gang kecil"
+        "suitable": "Rumah 1 lantai, kanopi bentang sedang, area padat sempit"
       },
       {
         "diameter": "30 cm",
         "price": 100000,
         "depth": "10 meter",
-        "suitable": "Rumah, ruko 1-2 lantai (tanah padat)"
+        "suitable": "Rumah tinggal 2 lantai, ruko di perkampungan/gang sempit Cikarang"
       },
       {
         "diameter": "40 cm",
         "price": 120000,
         "depth": "10 meter",
-        "suitable": "Rumah, ruko 2 lantai (tanah padat)"
+        "suitable": "Ruko 2 lantai, workshop kecil pada tanah padat"
       }
     ],
     "hasHidrolik": false
   },
   "factors": [
     {
-      "title": "Diameter & Kedalaman",
-      "text": "Semakin besar diameter (30cm, 40cm, 50cm, dst) dan semakin dalam pengeboran yang diperlukan hingga tanah keras (8-25 meter tergantung lokasi), maka biaya per meter semakin tinggi (dihitung sesuai diameter dan kedalaman pengeboran)."
+      "title": "Dimensi Diameter & Target Kedalaman Bor",
+      "text": "Pemilihan diameter (30 cm sampai 80 cm) serta kedalaman pengeboran hingga menembus lapisan tanah keras Cikarang (rata-rata 12-24 meter) berbanding lurus dengan penggunaan mata bor dan konsumsi mesin per meter lari."
     },
     {
-      "title": "Kondisi Tanah Bekasi",
-      "text": "Tanah di Bekasi bervariasi. Bekasi Utara dan Cikarang cenderung lunak (bekas rawa) membutuhkan pengeboran lebih dalam. Bekasi Selatan relatif lebih padat. Ini bisa mempengaruhi biaya bore pile di Bekasi (misal butuh pengeboran lebih dalam)."
+      "title": "Karakteristik Lapisan Geologi Cikarang",
+      "text": "Area Cikarang Utara dan Cikarang Barat mayoritas berupa tanah aluvial bekas rawa dan sawah yang memerlukan penetrasi lebih dalam dengan metode bor basah (wash boring). Sementara area Cikarang Selatan dan Deltamas memiliki profil tanah padas yang lebih stabil."
     },
     {
-      "title": "Jarak Proyek Dari Gudang Kami",
-      "text": "Biaya mobilisasi alat disesuaikan dengan jarak dari gudang kami di Jakarta Utara. Bekasi Kota (Rp2-3jt), Cikarang/Tambun (Rp3-4jt)."
+      "title": "Akses Kawasan Industri & Perumahan",
+      "text": "Lokasi proyek di kawasan industri seperti Jababeka, MM2100, atau GIIC memiliki akses jalan lebar bagi truk tronton pengangkut mini crane. Sebaliknya, pengerjaan di perumahan padat atau ruko tepi jalan protokol membutuhkan pengkondisian akses khusus."
     },
     {
-      "title": "Volume Pekerjaan",
-      "text": "Minimal order jasa bore pile Bekasi: mesin 200 meter, strauss pile 100 meter. Hubungi kami untuk volume di bawah itu."
+      "title": "Total Volume Pekerjaan (Meter Lari)",
+      "text": "Kebutuhan pondasi mesin mini crane memiliki minimal volume 200 meter, sedangkan strauss pile manual 100 meter. Proyek kawasan industri dengan total akumulasi volume besar akan memperoleh penawaran harga per meter yang jauh lebih ekonomis."
     },
     {
-      "title": "Akses & Tingkat Kesulitan Lapangan",
-      "text": "Kawasan industri Cikarang/Tambun, perumahan padat Bekasi Kota jika akses terbatas, biasanya bisa mempengaruhi biaya."
+      "title": "Kepatuhan K3 & Regulasi Kawasan",
+      "text": "Pekerjaan konstruksi di dalam zona manufaktur Cikarang mewajibkan standar safety K3 ketat, izin kerja (permit to work), dan APD lengkap yang selalu dipatuhi oleh seluruh kru terlatih kami."
     },
     {
-      "title": "Jenis & Skala Proyek di Bekasi",
-      "text": "Proyek rumah tinggal pribadi di Bekasi biasanya lebih terjangkau, sementara proyek pabrik di Cikarang, gudang di Tambun, atau proyek besar lainnya bisa mempengaruhi harga jasa karena memiliki perbedaan spesifikasi dan volume pengerjaan."
+      "title": "Ketersediaan Air Kerja & Kolam Sirkulasi",
+      "text": "Metode wash boring memerlukan suplai air konstan dan kolam sirkulasi lumpur (mud pit) di tapak proyek. Manajemen lumpur bor yang rapi sangat penting agar tidak mencemari lingkungan pabrik atau perumahan sekitar."
     }
   ],
-  "sondirNote": "Tips untuk proyek bore pile di Bekasi: Lakukan pengecekan data sondir tanah Bekasi terlebih dahulu agar kedalaman pengeboran bisa ditentukan secara tepat. Perhatikan perbedaan karakteristik tanah antara Bekasi Utara (lunak) dan Bekasi Selatan (lebih padat).",
+  "sondirNote": "Rekomendasi Pondasi di Cikarang: Pastikan pengujian soil test atau data sondir (CPT) telah dilakukan sebelum penetapan kedalaman bore pile di kawasan industri Cikarang (MM2100, Jababeka, Deltamas). Nilai konus qc di wilayah ini umumnya baru mencapai tanah keras pada kedalaman 14 hingga 22 meter untuk mencegah amblasnya beban struktur industri.",
   "projects": [
     {
-      "title": "Gudang di Kawasan Industri Tambun",
+      "title": "Gudang Logistik & Workshop di Cikarang",
       "image": "/imgs/borepile-tambun-utara-bekasi.webp",
-      "imageAlt": "Proyek bore pile mini crane di Tambun Utara, Cikarang untuk gudang kawasan industri",
-      "imageCaption": "Bore Pile mini crane di Tambun Utara, Cikarang",
-      "specs": "Bore pile mesin mini crane Ø50cm, kedalaman 18m, 16 titik<br>Metode: Wash Boring (Bor basah)",
+      "imageAlt": "Pengerjaan bore pile mini crane untuk pondasi hanggar gudang logistik di kawasan industri Cikarang",
+      "imageCaption": "Pengeboran bore pile mini crane pada proyek gudang industri kawasan Cikarang",
+      "specs": "Bore pile mesin mini crane Ø50cm, kedalaman 18m, 16 titik<br>Metode: Wash Boring (Bor Basah)",
       "costCalc": "18m × Rp190.000 × 16 = Rp54.720.000",
       "mobilization": "Rp3.500.000",
       "total": "Rp58.220.000",
@@ -118,80 +118,80 @@
       "hasImage": true
     },
     {
-      "title": "Rumah 1 Lantai di Cikarang",
+      "title": "Ekspansi Pabrik Manufaktur di Kawasan Jababeka",
       "image": null,
       "imageAlt": null,
       "imageCaption": null,
-      "specs": "Strauss pile (bore pile manual) Ø30cm, kedalaman 6m, 17 titik",
-      "costCalc": "6m × Rp85.000 × 17 = Rp8.670.000",
-      "mobilization": "Rp1.500.000",
-      "total": "Rp10.170.000",
-      "time": "6-8 hari kerja",
+      "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 15m, 20 titik<br>Metode: Wash Boring (Bor Basah)",
+      "costCalc": "15m × Rp135.000 × 20 = Rp40.500.000",
+      "mobilization": "Rp3.500.000",
+      "total": "Rp44.000.000",
+      "time": "7-9 hari kerja",
       "hasImage": false
     },
     {
-      "title": "Rumah 2 Lantai di Cikarang Selatan",
+      "title": "Ruko Komersial & Kantor di Cikarang Selatan",
       "image": null,
       "imageAlt": null,
       "imageCaption": null,
-      "specs": "Bore pile mesin mini crane Ø30cm, kedalaman 12m, 17 titik<br>Metode: Dry Boring (Bor kering)",
-      "costCalc": "12m × Rp127.000 × 17 = Rp25.000.000",
+      "specs": "Bore pile mesin mini crane Ø30cm, kedalaman 12m, 18 titik<br>Metode: Dry Boring (Bor Kering)",
+      "costCalc": "12m × Rp120.000 × 18 = Rp25.920.000",
       "mobilization": "Rp3.000.000",
-      "total": "Rp28.000.000",
+      "total": "Rp28.920.000",
       "time": "5-7 hari kerja",
       "hasImage": false
     }
   ],
   "whyUs": [
     {
-      "title": "Memakai alat yang baik",
-      "desc": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, dan strauss pile."
+      "title": "Peralatan Modern & Terkalibrasi Standar Industri",
+      "desc": "Armada mesin mini crane dan gawangan dirawat prima dengan performa tinggi, siap memenuhi standar kelayakan alat berat untuk proyek di kawasan industri MM2100, Jababeka, dan sekitarnya."
     },
     {
-      "title": "Efisiensi waktu & Komitmen kualitas",
-      "desc": "Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam, khususnya bore pile di Cikarang."
+      "title": "Kecepatan Pengerjaan & Efisiensi Jadwal Proyek",
+      "desc": "Didukung tim operator berpengalaman yang bekerja sigap dan terorganisir demi memastikan target penyelesaian pondasi tercapai tepat waktu tanpa mengorbankan mutu struktural."
     },
     {
-      "title": "Tim Ahli",
-      "desc": "Memiliki tim ahli dalam pengerjaan bore pile di Cikarang, khususnya untuk proyek di kawasan industri dan perumahan."
+      "title": "Personil Ahli K3 & Spesialis Geoteknik Cikarang",
+      "desc": "Memahami betul dinamika tanah lunak, tanah timbunan, dan karakteristik lempung ekspansif Cikarang, lengkap dengan penerapan SOP K3 yang ketat di lokasi kerja."
     },
     {
-      "title": "Tim berpengalaman di area Cikarang",
-      "desc": "Lebih dari sepuluh tahun mengerjakan proyek di Cikarang. Mulai dari proyek rumah tinggal pribadi hingga proyek pabrik di kawasan industri."
+      "title": "Portofolio Luas di Sektor Industri & Komersial",
+      "desc": "Pengalaman lebih dari satu dekade menangani pondasi hanggar gudang, struktur pabrik, showroom, ruko bisnis, hingga hunian bertingkat di seluruh penjuru Cikarang."
     }
   ],
   "equipment": {
-    "description": "Kami memiliki beberapa alat untuk pekerjaan bore pile, antara lain:",
+    "description": "Armada dan teknologi mesin bore pile kami yang siap dimobilisasi ke lokasi proyek Cikarang:",
     "items": [
       {
         "name": "Mini Crane",
-        "desc": "Kapasitas sedang, diameter 30-80 cm, kedalaman sampai 30m. Cocok untuk rumah, ruko, gudang di Cikarang.",
+        "desc": "Solusi utama pengeboran pondasi berkapasitas tinggi diameter 30-80 cm kedalaman s/d 30 meter. Sangat ideal untuk pabrik, gudang, dan ruko di kawasan industri Cikarang.",
         "image": "/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg",
-        "imageAlt": "Mesin bore pile mini crane Agung Perkasa untuk bore pile pondasi rumah, ruko, dan bangunan bertingkat di Cikarang"
+        "imageAlt": "Mesin bore pile mini crane Agung Perkasa untuk pondasi pabrik, gudang, dan ruko di kawasan industri Cikarang"
       },
       {
-        "name": "Gawangan",
-        "desc": "Untuk area yang tidak bisa diakses mini crane. Diameter 30-80 cm, cocok untuk gang sempit di Cikarang.",
+        "name": "Mesin Gawangan",
+        "desc": "Rangka mesin bor fleksibel untuk lokasi dengan ketinggian terbatas, sudut pabrik sempit, atau lahan padat yang tidak dapat diakses alat mini crane.",
         "image": "/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg",
-        "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk bore pile ketika area tidak bisa dijangkau oleh mini crane di Cikarang"
+        "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk area proyek dengan akses sempit di Cikarang"
       },
       {
         "name": "Strauss Pile (Manual)",
-        "desc": "Alat bor manual full tenaga manusia, metode dry boring. Diameter 20-40cm, cocok untuk gang sempit di Cikarang yang tidak bisa dijangkau crane.",
+        "desc": "Alat bor putar manual tenaga manusia untuk diameter 20-40 cm kedalaman s/d 10 meter. Solusi praktis tanpa polusi suara untuk pagar, dinding penahan, dan rumah di gang sempit.",
         "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
-        "imageAlt": "Strauss pile (bore pile manual) untuk pondasi di gang sempit dan area terbatas Cikarang lainnya"
+        "imageAlt": "Alat strauss pile manual Agung Perkasa untuk pondasi pagar dan area terbatas di Cikarang"
       }
     ]
   },
   "portfolio": {
-    "title": "Portofolio Proyek Bore Pile di Bekasi",
-    "subtitle": "Berikut beberapa proyek bore pile yang sudah kami kerjakan di berbagai wilayah Bekasi dan Cikarang.",
+    "title": "Portofolio Proyek Bore Pile di Kawasan Cikarang",
+    "subtitle": "Dokumentasi riil pekerjaan pengeboran tiang pondasi dalam untuk fasilitas industri, pergudangan, dan bangunan komersial di Cikarang.",
     "items": [
       {
         "image": "/imgs/borepile-tambun-utara-bekasi.webp",
-        "imageAlt": "Proyek bore pile mini crane di kawasan industri Tambun Bekasi",
-        "label": "Tambun Utara, Bekasi",
-        "detail": "Bore pile mini crane Ø50cm di Tambun Utara, Bekasi"
+        "imageAlt": "Proyek bore pile mini crane di kawasan industri Cikarang untuk pondasi gudang",
+        "label": "Kawasan Industri Cikarang",
+        "detail": "Pengeboran bore pile mini crane Ø50cm untuk gudang logistik dan fasilitas workshop industri Cikarang"
       }
     ]
   },
@@ -232,28 +232,28 @@
   },
   "faq": [
     {
-      "q": "Berapa kedalaman bore pile yang ideal untuk tanah di Cikarang?",
-      "a": "Untuk wilayah Cikarang, kedalaman bore pile bervariasi tergantung lokasi. Cikarang Utara dan Cikarang (bekas rawa) membutuhkan kedalaman 12-20 meter, sementara Cikarang Selatan (tanah lebih padat) cukup 8-15 meter. Data sondir sangat menentukan kedalaman pasti tanah keras."
+      "q": "Berapa kedalaman bore pile yang ideal untuk konstruksi gudang dan pabrik di Cikarang?",
+      "a": "Untuk kawasan industri Cikarang (Jababeka, MM2100, GIIC, EJIP), kedalaman bore pile umumnya berkisar antara 14 hingga 22 meter agar mencapai lapisan tanah keras (bearing layer) dengan nilai sondir qc > 200 kg/cm². Khusus area Cikarang Utara dan Barat yang didominasi tanah timbunan atau bekas rawa, penetrasi tiang bor sering kali mencapai 18-24 meter."
     },
     {
-      "q": "Apakah bore pile cocok untuk kawasan industri Cikarang dan Tambun?",
-      "a": "Sangat cocok. Kawasan industri Cikarang dan Tambun memiliki tanah timbunan yang lunak. Bore pile Ø40-50cm dengan kedalaman 15-20 meter adalah solusi paling tepat untuk pabrik, gudang, dan bangunan industri lainnya. Kami sudah banyak mengerjakan proyek di kawasan tersebut."
+      "q": "Mengapa bore pile lebih direkomendasikan dibanding tiang pancang di kawasan industri Cikarang?",
+      "a": "Kawasan industri aktif seperti MM2100 dan Jababeka membatasi aktivitas yang memicu getaran keras karena dapat merusak kalibrasi mesin produksi pabrik sekitar serta mengganggu operasional. Bore pile mini crane bekerja secara rotari hidrolik tanpa tumbukan (vibration-free), aman dipasang tepat di sebelah dinding pabrik eksisting tanpa risiko keretakan struktur."
     },
     {
-      "q": "Apa perbedaan tanah Cikarang Utara dan Cikarang Selatan untuk bore pile?",
-      "a": "Cikarang Utara (termasuk Cikarang) tanahnya lebih lunak karena bekas rawa dan timbunan. Membutuhkan pengeboran lebih dalam (12-20m) untuk mencapai tanah keras. Cikarang Selatan tanahnya relatif lebih padat, cukup 8-15m. Kami selalu menyesuaikan metode dan kedalaman berdasarkan kondisi tanah dan data sondir di lokasi proyek Anda."
+      "q": "Metode apa yang paling efektif untuk tanah Cikarang: wash boring atau dry boring?",
+      "a": "Metode wash boring (bor basah) adalah opsi terbaik untuk sebagian besar wilayah Cikarang karena lapisan tanah bawahnya cenderung jenuh air dan berpasir, di mana sirkulasi lumpur bentonite berfungsi menahan dinding lubang dari kelongsoran. Metode dry boring (bor kering) dapat diaplikasikan pada lapisan lempung padat di Cikarang Selatan dengan kedalaman lebih dangkal."
     },
     {
-      "q": "Berapa biaya mobilisasi bore pile ke Cikarang, Cikarang, atau Tambun?",
-      "a": "Biaya mobilisasi tergantung jarak dari gudang kami di Jakarta Utara: Cikarang Kota Rp2-3 juta, Cikarang Rp3-4 juta, Tambun Rp3.5-4.5 juta. Untuk proyek di bawah 200m (mesin) atau 100m (manual), biaya mobilisasi bisa lebih tinggi proporsional."
+      "q": "Berapa estimasi biaya mobilisasi mesin bore pile ke kawasan Cikarang?",
+      "a": "Biaya mobilisasi armada mini crane ke kawasan Jababeka, MM2100, Deltamas, maupun Cikarang Pusat berkisar Rp3.000.000 - Rp4.000.000 per rit (sudah termasuk bongkar muat dan kru teknis). Untuk alat strauss pile manual berkisar Rp1.000.000 - Rp1.500.000. Biaya ini sangat transparan dan dicantumkan jelas dalam penawaran RAB."
     },
     {
-      "q": "Apa keunggulan bore pile dibandingkan tiang pancang di Cikarang?",
-      "a": "Di Cikarang yang banyak area pemukiman padat, bore pile lebih unggul karena minim getaran dan suara. Tidak seperti tiang pancang yang menimbulkan getaran keras dan bisa merusak dinding tetangga. Selain itu, bore pile bisa mencapai kedalaman lebih dalam (30m) untuk menembus tanah lunak khas Cikarang Utara."
+      "q": "Apakah tim Agung Perkasa memenuhi standar K3 dan izin kerja pabrik di Cikarang?",
+      "a": "Ya, kami terbiasa mematuhi SOP K3 ketat yang berlaku di pengelola kawasan industri Cikarang. Seluruh operator dan kru kami dilengkapi APD standar industri, memahami prosedur keselamatan kerja (permit to work), dan siap mengikuti safety induction yang disyaratkan pihak manajemen kawasan atau pabrik Anda."
     },
     {
-      "q": "Apakah bisa survey lokasi dulu sebelum eksekusi bore pile di Cikarang?",
-      "a": "Bisa. Kami siap melakukan survey lokasi gratis ke seluruh wilayah Cikarang, Cikarang, dan Tambun. Kami akan cek akses jalan, kondisi tanah, pasokan listrik dan air (jika wash boring). Konsultasi tanpa biaya hubungi kami untuk BOQ."
+      "q": "Apakah bisa melakukan survey lokasi proyek gratis sebelum kesepakatan harga di Cikarang?",
+      "a": "Tentu saja. Kami menyediakan layanan survey lokasi gratis ke seluruh area Cikarang. Tim kami akan mengevaluasi akses mobilisasi alat berat, mengecek ketersediaan sumber air dan listrik, mempelajari data sondir tanah, serta menyusun estimasi anggaran biaya (RAB) bore pile paling efisien untuk proyek Anda."
     }
   ],
   "articles": [
@@ -311,63 +311,63 @@
   "googleAdsId": "AW-16649506462",
   "additionalCosts": [
     {
-      "title": "Mobilisasi Alat Bore Pile",
-      "text": "Mini crane: Rp2-4jt | Strauss pile (bore pile manual): Rp1-1.5jt. Biaya disesuaikan dengan jarak lokasi proyek."
+      "title": "Mobilisasi Armada Bore Pile",
+      "text": "Mini crane: Rp3-4jt | Strauss pile (bore pile manual): Rp1-1.5jt. Tarif disesuaikan dengan koordinat lokasi proyek di area Cikarang."
     },
     {
-      "title": "Minimal Order",
-      "text": "Mesin mini crane & gawangan: 200 meter | Strauss Pile (Manual): 100 meter (di bawah itu silakan hubungi kami)."
+      "title": "Ketentuan Minimal Volume Order",
+      "text": "Mesin mini crane & gawangan: minimal akumulasi 200 meter | Strauss pile manual: minimal 100 meter. Hubungi tim kami untuk konsultasi volume di bawah batas minimum."
     },
     {
-      "title": "Sedot Lumpur",
-      "text": "Jika memakai bore pile mesin gawangan dan mini crane menggunakan metode <strong>wash boring (bor basah)</strong>, perkiraan biaya tambahannya sekitar: Rp800.000 - Rp1.200.000/rit (tergantung volume)"
+      "title": "Pengelolaan & Pembuangan Lumpur Bor",
+      "text": "Untuk pekerjaan bore pile mesin metode <strong>wash boring (bor basah)</strong> di dalam kawasan industri atau area steril, estimasi biaya armada tangki sedot lumpur sekitar: Rp800.000 - Rp1.200.000/rit."
     },
     {
-      "title": "Data Sondir",
-      "text": "Sangat wajib untuk menentukan kedalaman pengeboran yang tepat hingga mencapai lapisan tanah keras."
+      "title": "Pengujian Data Sondir (Soil Test)",
+      "text": "Sangat diwajibkan sebagai acuan teknis engineering guna menentukan kedalaman pasti hingga tanah keras sebelum pengeboran dieksekusi."
     }
   ],
   "soilReasons": {
-    "title": "Mengapa Bore Pile Pilihan Tepat untuk Wilayah Cikarang?",
-    "description": "Wilayah Cikarang memiliki kondisi tanah yang <strong>bervariasi dan di beberapa tempat cukup lunak</strong>. Metode bore pile menjadi solusi pondasi paling tepat karena:",
+    "title": "Mengapa Bore Pile Menjadi Solusi Utama Fondasi di Kawasan Cikarang?",
+    "description": "Wilayah Cikarang memiliki topografi dan karakteristik tanah yang <strong>heterogen—mulai dari tanah urug kawasan industri hingga bekas rawa</strong>. Metode bore pile terbukti paling handal untuk konstruksi beban berat karena:",
     "points": [
       {
-        "title": "Kedalaman hingga 30 meter",
-        "desc": "Mampu menembus lapisan tanah lunak hingga <a href=\"https://journal.jgu.ac.id/index.php/jgers/article/view/40\" target=\"_blank\" rel=\"noopener noreferrer\">mencapai tanah keras</a>."
+        "title": "Daya Jangkau Kedalaman hingga 30 Meter",
+        "desc": "Mampu menembus lapisan tanah lunak tebal hingga bertumpu kuat pada <a href=\"https://journal.jgu.ac.id/index.php/jgers/article/view/40\" target=\"_blank\" rel=\"noopener noreferrer\">lapisan tanah keras (bearing layer)</a> untuk menopang beban pabrik dan gudang."
       },
       {
-        "title": "Diameter fleksibel (30-120cm)",
-        "desc": "Bisa disesuaikan dengan <a href=\"https://library.gunadarma.ac.id/repository/perencanaan-fondasi-bored-pile-pada-gedung-perkantoran-10-lantai-di-cikarang-pusat-skripsi\" target=\"_blank\" rel=\"noopener noreferrer\">beban bangunan</a>."
+        "title": "Variasi Diameter Fleksibel (30 s/d 80 cm)",
+        "desc": "Mudah disesuaikan dengan kebutuhan kalkulasi <a href=\"https://library.gunadarma.ac.id/repository/perencanaan-fondasi-bored-pile-pada-gedung-perkantoran-10-lantai-di-cikarang-pusat-skripsi\" target=\"_blank\" rel=\"noopener noreferrer\">beban aksial dan beban momen</a> bangunan industri maupun komersial."
       },
       {
-        "title": "Minim getaran",
-        "desc": "Aman untuk bangunan di sekitar proyek, jadi tidak merusak tanah dan dinding tetangga Anda."
+        "title": "Minim Getaran & Bebas Risiko Retak",
+        "desc": "Sistem pengeboran hidrolik tidak menimbulkan gelombang tumbukan ke tanah, sehingga sangat aman bagi struktur dinding pabrik eksisting dan fasilitas di sebelah proyek."
       },
       {
-        "title": "Minim polusi suara",
-        "desc": "Suaranya tidak terlalu mengganggu tetangga sekitar proyek, apalagi jika proyek dilakukan di area padat, tapi terkadang ada tetangga yang merasa terganggu oleh suara yang dihasilkan, jadi kami juga menyediakan solusi untuk mengurangi suaranya (misal diberikan peredam suara)."
+        "title": "Tingkat Kebisingan Rendah (Low Noise)",
+        "desc": "Operasional mesin mini crane tidak menimbulkan polusi suara bising berlebih, memenuhi standar toleransi lingkungan kawasan industri maupun perumahan padat Cikarang."
       },
       {
-        "title": "Metode wash boring",
-        "desc": "Bor basah sangat efektif untuk tanah berair atau rawa seperti di Cikarang Utara."
+        "title": "Metode Wash Boring yang Teruji",
+        "desc": "Teknik bor basah dengan sirkulasi cairan sangat efektif menstabilkan dinding lubang bor pada tanah berair atau bekas persawahan di Cikarang Utara dan Barat."
       }
     ],
-    "conclusion": "<p>Setiap lokasi memiliki karakteristik tanah yang berbeda. Kami dapat menyesuaikan teknik bore pile untuk memastikan keberhasilan proyek di setiap wilayah di Cikarang.</p><p><strong>Portofolio kami di Cikarang:</strong> Kami telah berpengalaman mengerjakan berbagai proyek rumah, ruko, gudang dan bangunan lain di seluruh wilayah Cikarang dan sekitarnya.</p>"
+    "conclusion": "<p>Karakteristik tanah Cikarang menuntut teknik pondasi yang tepat dan presisi. Agung Perkasa siap memberikan solusi pondasi tiang bor yang kokoh, ekonomis, dan terpercaya untuk keberhasilan investasi konstruksi Anda di Cikarang.</p><p><strong>Pengalaman Proyek di Cikarang:</strong> Kami berpengalaman menangani puluhan proyek tiang bore pile untuk kawasan pergudangan, workshop manufaktur, ruko komersial, hingga perumahan di Jababeka, MM2100, Deltamas, dan sekitarnya.</p>"
   },
   "priceUpdatedAt": "2026-08-19",
-  "projectNote": "<strong>Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan. Kecepatan pengerjaan dipengaruhi oleh kondisi lapangan, akses lokasi, karakteristik tanah, dan yang paling penting adalah pasokan air yang cukup untuk metode wash boring.<br><br>Butuh harga khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
+  "projectNote": "<strong>Catatan Teknis:</strong> Simulasi perhitungan biaya di atas adalah jasa pengeboran lubang, perakitan besi tulangan, dan pengecoran beton (<strong>di luar pengadaan material semen/ready mix dan besi beton</strong>). Data di atas diambil dari dokumentasi proyek riil kami di lapangan. Kecepatan pengerjaan dipengaruhi oleh kontur tanah, kelancaran pasokan air untuk wash boring, dan akses masuk alat berat di kawasan proyek.<br><br>Ingin konsultasi harga bore pile diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Cek informasi harga bore pile diameter 30cm terlengkap &rarr;</a>",
   "tips": [
     {
       "diameter": "30 cm",
-      "usage": "rumah 1-2 lantai (paling banyak dipilih)"
+      "usage": "Rumah 1-2 lantai, ruko, pagar panel kawasan industri"
     },
     {
       "diameter": "40-50 cm",
-      "usage": "ruko, kantor, gudang, rumah sakit"
+      "usage": "Gudang logistik, hanggar workshop, struktur pabrik, klinik"
     },
     {
       "diameter": "60-110 cm",
-      "usage": "hotel, gedung bertingkat"
+      "usage": "Pondasi mesin berat, jembatan, silo, gedung perkantoran 4-8 lantai"
     }
   ]
 }
