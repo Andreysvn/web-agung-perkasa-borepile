@@ -1,4 +1,4 @@
-<IfModule mod_rewrite.c>
+﻿<IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
 
@@ -7,7 +7,7 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # === REDIRECT SPESIFIK URL LAMA YANG SUDAH RANKING ===
-# Harga bore-pile-Xcm.html → harga/bore-pile/Xcm/
+# Harga bore-pile-Xcm.html â†’ harga/bore-pile/Xcm/
 RewriteRule ^harga/bore-pile-30cm\.html$ /harga/bore-pile/30cm/ [R=301,L]
 RewriteRule ^harga/bore-pile-40cm\.html$ /harga/bore-pile/40cm/ [R=301,L]
 RewriteRule ^harga/bore-pile-50cm\.html$ /harga/bore-pile/50cm/ [R=301,L]
@@ -17,21 +17,21 @@ RewriteRule ^harga/bore-pile-80cm\.html$ /harga/bore-pile/80cm/ [R=301,L]
 # Galeri: /galeri/ tidak punya index.html, redirect ke galeri/gallery/
 RewriteRule ^galeri/?$ /galeri/gallery/ [R=301,L]
 
-# === REDIRECT URL LAMA FLAT → HIERARKI WILAYAH ===
+# === REDIRECT URL LAMA FLAT â†’ HIERARKI WILAYAH ===
 # Tangerang Selatan
-RewriteRule ^jasa/bore-pile-bsd/?$ /jasa/bore-pile/tangerang-selatan/bsd/ [R=301,L]
-RewriteRule ^jasa/bore-pile-ciputat/?$ /jasa/bore-pile/tangerang-selatan/ciputat/ [R=301,L]
-RewriteRule ^jasa/bore-pile-pamulang/?$ /jasa/bore-pile/tangerang-selatan/pamulang/ [R=301,L]
-RewriteRule ^jasa/bore-pile-tangerang-selatan/?$ /jasa/bore-pile/tangerang-selatan/ [R=301,L]
-RewriteRule ^jasa/bore-pile-bintaro/?$ /jasa/bore-pile/tangerang-selatan/bintaro/ [R=301,L]
+RewriteRule ^jasa/bore-pile-bsd(\.html|/?)?$ /jasa/bore-pile/tangerang-selatan/bsd/ [R=301,L]
+RewriteRule ^jasa/bore-pile-ciputat(\.html|/?)?$ /jasa/bore-pile/tangerang-selatan/ciputat/ [R=301,L]
+RewriteRule ^jasa/bore-pile-pamulang(\.html|/?)?$ /jasa/bore-pile/tangerang-selatan/pamulang/ [R=301,L]
+RewriteRule ^jasa/bore-pile-tangerang-selatan(\.html|/?)?$ /jasa/bore-pile/tangerang-selatan/ [R=301,L]
+RewriteRule ^jasa/bore-pile-bintaro(\.html|/?)?$ /jasa/bore-pile/tangerang-selatan/bintaro/ [R=301,L]
 # Tangerang
-RewriteRule ^jasa/bore-pile-karawaci/?$ /jasa/bore-pile/tangerang/karawaci/ [R=301,L]
+RewriteRule ^jasa/bore-pile-karawaci(\.html|/?)?$ /jasa/bore-pile/tangerang/karawaci/ [R=301,L]
 # Bogor
-RewriteRule ^jasa/bore-pile-cibubur/?$ /jasa/bore-pile/bogor/cibubur/ [R=301,L]
+RewriteRule ^jasa/bore-pile-cibubur(\.html|/?)?$ /jasa/bore-pile/bogor/cibubur/ [R=301,L]
 # Bekasi
-RewriteRule ^jasa/bore-pile-cikarang/?$ /jasa/bore-pile/bekasi/cikarang/ [R=301,L]
+RewriteRule ^jasa/bore-pile-cikarang(\.html|/?)?$ /jasa/bore-pile/bekasi/cikarang/ [R=301,L]
 
-# Redirect .html to trailing slash (/) — generic
+# Redirect .html to trailing slash (/) â€” generic
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+(.*)\.html\ HTTP/
 RewriteRule ^(.*)\.html$ /$1/ [R=301,L]
 
@@ -43,14 +43,4 @@ RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !(.*)/$
 RewriteRule ^(.*)$ /$1/ [L,R=301]
-</IfModule>
-
-<IfModule mod_headers.c>
-    # Content Security Policy (CSP)
-    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://analytics.ahrefs.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self' data: https://cdnjs.cloudflare.com; connect-src 'self' https://analytics.ahrefs.com https://www.google-analytics.com https://stats.g.doubleclick.net https://region1.google-analytics.com; frame-src 'self' https://www.google.com;"
-
-    # Keamanan Tambahan
-    Header set X-Frame-Options "SAMEORIGIN"
-    Header set X-Content-Type-Options "nosniff"
-    Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
