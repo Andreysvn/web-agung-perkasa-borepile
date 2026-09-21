@@ -5,12 +5,12 @@
   "geoRegion": "ID-JB",
   "geoPlacename": "Bogor",
   "heroImage": "/imgs/jasa-bore-pile-bogor-agung-perkasa.webp",
-  "heroAlt": "Proses pengeboran bore pile mini crane di Bogor untuk pondasi bangunan di Bogor",
-  "heroCaption": "Proses pengeboran bore pile menggunakan alat mini crane di Bogor",
+  "heroAlt": "Pengerjaan pondasi bore pile mini crane untuk proyek bangunan di tanah berkontur perbukitan Bogor",
+  "heroCaption": "Pengeboran bore pile mini crane menembus tanah merah dan cadas di wilayah Bogor",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "Harga jasa bore pile Bogor 2026 untuk jasa pengeboran saja mulai dari Rp120.000/m untuk mesin (mini crane), dan manual atau strauss pile mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Bogor, Cibinong, Gunung Putri, Cileungsi.",
-  "localBusinessDesc": "Jasa bore pile Bogor terpercaya. Harga mesin Rp120.000/m, manual Rp75.000/m. Melayani seluruh Bogor dan sekitarnya.",
+  "heroText": "Harga jasa bore pile Bogor 2026 untuk pekerjaan pengeboran mulai dari Rp120.000/m menggunakan mesin mini crane, dan strauss pile (manual) mulai Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Gunakan kalkulator estimasi biaya kami untuk menghitung rencana anggaran pondasi villa, ruko, maupun rumah tinggal Anda di kontur tanah merah, perbukitan, hingga cadas keras Bogor. Melayani seluruh wilayah Kota Bogor, Sentul, Cibinong, Ciawi, Gunung Putri, hingga kawasan Puncak.",
+  "localBusinessDesc": "Spesialis jasa bore pile dan strauss pile Bogor terpercaya. Ahli mengatasi tanah merah, cadas, dan kontur berbukit villa Puncak. Harga mesin mulai Rp120.000/m & manual Rp75.000/m. Layanan se-Bogor.",
   "mobilizationCost": "Mini crane: Rp3-5jt | Strauss pile (bore pile manual): Rp1-2jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -22,31 +22,31 @@
         "diameter": "30 cm",
         "price": 120000,
         "depth": "30 meter",
-        "suitable": "Rumah 1-2 lantai"
+        "suitable": "Rumah tinggal 1-2 lantai di tanah padat Bogor"
       },
       {
         "diameter": "40 cm",
         "price": 135000,
         "depth": "30 meter",
-        "suitable": "Ruko, kantor"
+        "suitable": "Ruko bertingkat & villa lereng perbukitan"
       },
       {
         "diameter": "50 cm",
         "price": 190000,
         "depth": "30 meter",
-        "suitable": "Gudang, pabrik kecil"
+        "suitable": "Gudang logistik, pabrik, & resort Bogor"
       },
       {
         "diameter": "60 cm",
         "price": null,
         "depth": "30 meter",
-        "suitable": "Hotel 3-4 lantai"
+        "suitable": "Hotel 3-4 lantai & retaining wall lereng"
       },
       {
         "diameter": "80 cm",
         "price": null,
         "depth": "30 meter",
-        "suitable": "Gedung 5-8 lantai"
+        "suitable": "Gedung bertingkat 5-8 lantai di Bogor"
       }
     ],
     "manual": [
@@ -54,150 +54,150 @@
         "diameter": "20 cm",
         "price": 75000,
         "depth": "10 meter",
-        "suitable": "Area sangat sempit"
+        "suitable": "Area sangat sempit & pondasi pagar perumahan"
       },
       {
         "diameter": "25 cm",
         "price": 85000,
         "depth": "10 meter",
-        "suitable": "Gang kecil"
+        "suitable": "Akses gang pemukiman padat di Kota Bogor"
       },
       {
         "diameter": "30 cm",
         "price": 100000,
         "depth": "10 meter",
-        "suitable": "Rumah, ruko 1-2 lantai (tanah padat)"
+        "suitable": "Rumah tinggal & ruko 1-2 lantai (tanah merah padat)"
       },
       {
         "diameter": "40 cm",
         "price": 120000,
         "depth": "10 meter",
-        "suitable": "Rumah, ruko 2 lantai (tanah padat)"
+        "suitable": "Rumah 2 lantai & renovasi villa di lahan sempit"
       }
     ],
     "hasHidrolik": false
   },
   "factors": [
     {
-      "title": "Diameter & Kedalaman",
-      "text": "Semakin besar diameter (30cm, 40cm, 50cm, dst) dan semakin dalam pengeboran yang diperlukan hingga tanah keras di Bogor, maka biaya per meter semakin tinggi."
+      "title": "Diameter Bor & Kedalaman Tembus Cadas",
+      "text": "Pemilihan diameter bor (30 cm hingga 80 cm) serta kedalaman pengeboran hingga menyentuh lapisan cadas keras Bogor sangat menentukan durasi pengerjaan dan biaya per meter lari."
     },
     {
-      "title": "Kondisi Tanah Bogor",
-      "text": "Tanah di Bogor bervariasi. Contohnya seperti di wilayah utara (Cibinong, Gunung Putri) yang memiliki karakteristik tanah eksisting yang padat. Wilayah selatan (Ciawi, Cisarua, Megamendung) karakteristik tanah bekas gunung api dengan campuran batu. Kota Bogor karakteristik tanah eksisting di pusat kota."
+      "title": "Struktur Tanah Merah & Batuan Vulkanik",
+      "text": "Karakteristik tanah Bogor sangat bervariasi: wilayah utara (Cibinong, Sentul, Gunung Putri) didominasi lempung tanah merah padat, sedangkan wilayah selatan (Ciawi, Megamendung, Cisarua Puncak) memiliki tanah berbatu cadas bekas letusan gunung api yang menuntut ketelitian khusus."
     },
     {
-      "title": "Jarak Proyek Dari Gudang Kami",
-      "text": "Biaya mobilisasi alat disesuaikan dengan jarak dari gudang kami di Jakarta Utara. Bogor (Rp3-5jt) tergantung lokasi."
+      "title": "Tingginya Curah Hujan Wilayah Bogor",
+      "text": "Sebagai Kota Hujan, curah hujan tinggi menuntut manajemen sirkulasi air bor dan pembuatan bak endapan lumpur yang tertata rapi agar lubang bor tidak mudah runtuh saat proses wash boring."
     },
     {
-      "title": "Volume Pekerjaan",
-      "text": "Minimal order jasa bore pile Bogor: mesin 200 meter, strauss pile 100 meter. Hubungi kami untuk volume di bawah itu."
+      "title": "Topografi Berbukit & Kemiringan Lahan (Slope)",
+      "text": "Pengerjaan pondasi pada kontur perbukitan curam, seperti pembangunan villa di Puncak, memerlukan perataan tapak alat mini crane yang kokoh demi keamanan dan stabilitas pengeboran."
     },
     {
-      "title": "Akses & Tingkat Kesulitan Lapangan",
-      "text": "Kawasan Puncak seperti di Ciawi dan Cisarua yang memiliki medan berbukit dan akses terbatas biasanya bisa mempengaruhi biaya mulai dari transportasi dan pengerjaan bore pile."
+      "title": "Jarak Tempuh Armada dari Gudang Kami",
+      "text": "Biaya mobilisasi armada mesin mini crane maupun peralatan manual disesuaikan dengan jarak tempuh dari pangkalan kami ke lokasi proyek Anda di seluruh area Bogor."
     },
     {
-      "title": "Jenis & Skala Proyek di Bogor",
-      "text": "Proyek rumah tinggal pribadi ataupun proyek bangunan lainnya di Bogor biasanya lebih terjangkau, sementara proyek perumahan skala besar di Cibinong atau vila di Puncak memiliki spesifikasi dan biaya berbeda karena karakteristik tanah dan lokasi."
+      "title": "Total Volume Pekerjaan (Meter Lari)",
+      "text": "Kami memberikan tarif paling kompetitif untuk volume pengeboran besar (standar minimal order mesin 200 meter, manual 100 meter), dengan negosiasi bersahabat untuk volume di bawah batas minimum."
     }
   ],
-  "sondirNote": "Tips untuk proyek bore pile di Bogor: Lakukan pengecekan data sondir tanah Bogor terlebih dahulu agar kedalaman pengeboran bisa ditentukan secara tepat. Perhatikan perbedaan karakteristik tanah antara Bogor utara (padat) dan Bogor selatan (berbukit/bekas gunung api).",
+  "sondirNote": "Rekomendasi teknis proyek di Bogor: Mengingat tingginya curah hujan serta ragam kontur perbukitan dengan lapisan tanah merah dan batuan cadas keras, pastikan melakukan uji sondir (CPT) terlebih dahulu. Data sondir memastikan kedalaman tiang bore pile mencapai lapisan tanah keras secara presisi tanpa pemborosan anggaran.",
   "projects": [
     {
-      "title": "Asrama Pesantren AZ Zikra, Bogor",
+      "title": "Pembangunan Gedung Asrama Pesantren AZ Zikra, Bogor",
       "image": "/imgs/borepile-asrama-pesantren-az-zikra-bogor-agung-perkasa.jpg",
-      "imageAlt": "Proyek bore pile mini crane di diameter 40, kedalaman 8m lokasi sebelah masjid al zikra untuk bangunan asrama pesantren az zikra Gunung Sindur, Bogor",
-      "imageCaption": "Bore Pile mini crane di Gunung Sindur, Bogor",
-      "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 8m, 80 titik<br>Metode: Wash Boring (Bor basah)",
-      "costCalc": "8m × Rp135.000 × 80 = Rp86.400.000",
+      "imageAlt": "Pekerjaan bore pile mini crane diameter 40cm sedalam 8 meter untuk pondasi asrama pesantren Az Zikra di Bogor",
+      "imageCaption": "Pengeboran bore pile mini crane pada struktur tanah merah di Gunung Sindur, Bogor",
+      "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 8m, 80 titik<br>Metode: Wash Boring (Sirkulasi bor basah)",
+      "costCalc": "8m × Rp135.000 × 80 titik = Rp86.400.000",
       "mobilization": "Rp4.000.000",
       "total": "Rp90.400.000",
-      "time": "21-23 hari kerja",
+      "time": "18-22 hari kerja",
       "hasImage": true
     },
     {
-      "title": "Perumahan di Gunung Putri, Bogor",
+      "title": "Pondasi Villa Bertingkat di Kontur Perbukitan Puncak, Cisarua Bogor",
       "image": null,
       "imageAlt": null,
       "imageCaption": null,
-      "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 22 titik<br>Metode: Wash Boring (Bor basah)",
-      "costCalc": "14m × Rp135.000 × 22 = Rp41.580.000",
-      "mobilization": "Rp4.000.000",
-      "total": "Rp45.580.000",
-      "time": "6-8 hari kerja",
+      "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 12m, 24 titik<br>Metode: Dry Boring menembus lapisan tanah cadas berbukit",
+      "costCalc": "12m × Rp135.000 × 24 titik = Rp38.880.000",
+      "mobilization": "Rp4.500.000",
+      "total": "Rp43.380.000",
+      "time": "8-10 hari kerja",
       "hasImage": false
     },
     {
-      "title": "Rumah 1 Lantai di Bogor Selatan",
+      "title": "Pondasi Rumah Tinggal & Dinding Penahan di Tanah Merah Bogor Selatan",
       "image": null,
       "imageAlt": null,
       "imageCaption": null,
-      "specs": "Strauss pile (bore pile manual) Ø30cm, kedalaman 5m, 34 titik",
-      "costCalc": "5m × Rp95.000 × 15 = Rp16.150.000",
+      "specs": "Strauss pile (bore pile manual) Ø30cm, kedalaman 6m, 28 titik",
+      "costCalc": "6m × Rp75.000 × 28 titik = Rp12.600.000",
       "mobilization": "Rp1.500.000",
-      "total": "Rp17.650.000",
-      "time": "13-16 hari kerja",
+      "total": "Rp14.100.000",
+      "time": "7-9 hari kerja",
       "hasImage": false
     }
   ],
   "whyUs": [
     {
-      "title": "Memakai alat yang baik",
-      "desc": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, dan strauss pile."
+      "title": "Armada Lengkap Siap Menembus Lapisan Cadas",
+      "desc": "Peralatan mini crane, gawangan, dan strauss pile selalu dalam kondisi prima dengan mata bor khusus yang tangguh menembus tanah merah padat hingga lapisan cadas vulkanik Bogor."
     },
     {
-      "title": "Efisiensi waktu & Komitmen kualitas",
-      "desc": "Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam, khususnya bore pile di Bogor."
+      "title": "Spesialis Medan Perbukitan & Kontur Lereng Miring",
+      "desc": "Operator dan teknisi kami terlatih mengeksekusi pengeboran pada lahan berundak, lereng perbukitan, serta area villa di Puncak dan Sentul dengan standar keselamatan tinggi."
     },
     {
-      "title": "Tim Ahli",
-      "desc": "Memiliki tim ahli dalam pengerjaan bore pile di Bogor, khususnya untuk proyek di perumahan dan kawasan berbukit."
+      "title": "Strategi Kerja Efektif di Wilayah Bercurah Hujan Tinggi",
+      "desc": "Bogor bercurah hujan tinggi; tim kami menerapkan manajemen lubang bor dan drainase lumpur terarah guna mencegah longsornya dinding galian bor saat hujan turun."
     },
     {
-      "title": "Tim berpengalaman di area Bogor",
-      "desc": "Lebih dari sepuluh tahun mengerjakan proyek di Bogor. Mulai dari proyek rumah tinggal pribadi hingga proyek komersial dan perumahan skala besar."
+      "title": "Minim Getaran & Aman bagi Bangunan Tetangga",
+      "desc": "Metode pengeboran tanpa getaran benturan keras, sangat aman diaplikasikan di kawasan klaster perumahan padat Bogor tanpa risiko meretakkan tembok tetangga."
     }
   ],
   "equipment": {
-    "description": "Kami memiliki beberapa alat untuk pekerjaan bore pile, antara lain:",
+    "description": "Kami menyediakan beragam armada mesin dan alat bore pile modern untuk segala kondisi medan di Bogor:",
     "items": [
       {
         "name": "Mini Crane",
-        "desc": "Kapasitas sedang, diameter 30-80 cm, kedalaman sampai 30m. Cocok untuk rumah, ruko, gudang di Bogor.",
+        "desc": "Kapasitas bertenaga untuk diameter 30-80 cm hingga kedalaman 30 meter. Pilihan utama untuk menembus tanah cadas pada proyek villa, gedung, ruko, dan perumahan di Bogor.",
         "image": "/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg",
-        "imageAlt": "Mesin bore pile mini crane Agung Perkasa untuk bore pile pondasi rumah, ruko, dan bangunan bertingkat di Bogor"
+        "imageAlt": "Mesin bore pile mini crane Agung Perkasa untuk pondasi bangunan bertingkat dan villa di Bogor"
       },
       {
         "name": "Gawangan",
-        "desc": "Untuk area yang tidak bisa diakses mini crane. Diameter 30-80 cm, cocok untuk gang sempit di Bogor.",
+        "desc": "Rangka mesin bor fleksibel untuk lokasi dengan akses terbatas atau gang pemukiman di Bogor yang tidak dapat dimasuki armada mini crane.",
         "image": "/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg",
-        "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk bore pile ketika area tidak bisa dijangkau oleh mini crane di Bogor"
+        "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk pekerjaan bore pile di gang sempit pemukiman Bogor"
       },
       {
         "name": "Strauss Pile (Manual)",
-        "desc": "Alat bor manual full tenaga manusia, metode dry boring. Diameter 20-40cm, cocok untuk gang sempit di Bogor yang tidak bisa dijangkau crane.",
+        "desc": "Pengeboran manual tenaga putar manusia (dry boring) diameter 20-40 cm hingga kedalaman 10 meter. Solusi hemat biaya mulai Rp75.000/m untuk rumah tinggal di gang sempit Bogor.",
         "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
-        "imageAlt": "Strauss pile (bore pile manual) untuk pondasi di gang sempit dan area terbatas Bogor lainnya"
+        "imageAlt": "Alat strauss pile manual Agung Perkasa untuk pondasi rumah tinggal di gang pemukiman Bogor"
       }
     ]
   },
   "portfolio": {
     "title": "Portofolio Proyek Bore Pile di Bogor",
-    "subtitle": "Berikut beberapa proyek bore pile yang sudah kami kerjakan di berbagai wilayah Bogor.",
+    "subtitle": "Dokumentasi nyata hasil pengerjaan pondasi bore pile kami di berbagai medan perumahan, pondok pesantren, dan lereng perbukitan Bogor.",
     "items": [
       {
         "image": "/imgs/borepile-asrama-pesantren-az-zikra-bogor-agung-perkasa.jpg",
-        "imageAlt": "Proyek bore pile mini crane diameter 40cm, kedalaman 8m di sebelah masjid az zikra untuk bangunan asrama pesantren az zikra Gunung Sindur, Bogor",
-        "label": "Asrama Pesantren AZ Zikra di Gunung Sindur, Bogor",
-        "detail": "Bore pile mini crane Ø40cm untuk bangunan asrama pesantren"
+        "imageAlt": "Pengerjaan bore pile mini crane diameter 40cm kedalaman 8m untuk bangunan asrama pesantren Az Zikra di Bogor",
+        "label": "Gedung Asrama Pesantren AZ Zikra di Gunung Sindur, Bogor",
+        "detail": "Pengeboran bore pile mini crane Ø40cm sedalam 8 meter untuk struktur pondasi gedung asrama santri."
       },
       {
         "image": "/imgs/bore-pile-mini-crane-tanah-sareal-bogor-agung-perkasa-20-juni-2026.webp",
-        "imageAlt": "Proses bore pile mini crane diameter 30 dan 40, kedalaman 8m, 80 titik metode wash boring untuk rumah di Tanah Sareal, Bogor",
-        "label": "Rumah di Tanah Sareal, Bogor",
-        "detail": "Bore pile mini crane Ø30cm dan Ø40, kedalaman 8m, 80 titik untuk rumah di Tanah Sareal, Bogor"
+        "imageAlt": "Pengeboran bore pile mini crane diameter 30cm dan 40cm kedalaman 8m metode wash boring di Tanah Sareal Bogor",
+        "label": "Hunian Rumah Tinggal di Tanah Sareal, Bogor",
+        "detail": "Pondasi mini crane kombinasi Ø30cm & Ø40cm sedalam 8m sebanyak 80 titik pada lapisan tanah merah Bogor."
       }
     ]
   },
@@ -235,56 +235,56 @@
   },
   "faq": [
     {
-      "q": "Berapa kedalaman bore pile yang ideal untuk tanah di Bogor?",
-      "a": "Untuk wilayah Bogor, kedalaman bore pile bervariasi tergantung lokasi. Wilayah utara (Cibinong, Gunung Putri) tanah eksisting padat, kedalaman 8-12 meter. Kota Bogor 8-14 meter. Wilayah selatan (Ciawi, Cisarua) berbukit dengan campuran batu, kedalaman 4-8 meter sudah cukup. Data sondir sangat menentukan kedalaman pasti tanah keras."
+      "q": "Berapa kedalaman bore pile yang ideal untuk kondisi tanah di Bogor?",
+      "a": "Kedalaman bore pile di wilayah Bogor bervariasi sesuai lapisan tanah kerasnya. Di area selatan yang berbukit seperti Ciawi dan Puncak, batuan cadas padat umumnya dicapai pada kedalaman 6-10 meter. Sedangkan di Kota Bogor serta kawasan utara seperti Cibinong dan Sentul, tanah merah lempung padat biasanya berada di kedalaman 8-14 meter. Hasil uji sondir (CPT) sangat menentukan kedalaman tiang yang presisi."
     },
     {
-      "q": "Apakah bore pile cocok untuk proyek di kawasan Puncak (Ciawi, Cisarua)?",
-      "a": "Sangat cocok. Kawasan Puncak memiliki tanah bekas gunung api dengan campuran batu. Metode dry boring (bor kering) sangat efektif untuk tanah berbukit ini. Contohnya seperti proyek vila dan rumah di Ciawi, Cisarua, dan Megamendung."
+      "q": "Apakah metode bore pile aman dan efektif untuk pembangunan villa di lereng perbukitan Puncak Bogor?",
+      "a": "Sangat aman dan justru merupakan rekomendasi terbaik. Kontur miring di lereng Puncak (Ciawi, Cisarua, Megamendung) membutuhkan tiang pondasi dalam yang mengunci lapisan cadas batuan vulkanik untuk mencegah pergeseran tanah atau longsor. Bore pile minim getaran sehingga tidak merusak stabilitas lereng di sekitarnya."
     },
     {
-      "q": "Apa perbedaan tanah di Bogor utara dan selatan?",
-      "a": "Bogor utara (Cibinong, Gunung Putri) tanah eksisting padat, cocok untuk berbagai metode. Bogor selatan (Ciawi, Cisarua, Megamendung) tanah bekas gunung api dengan campuran batu dan lebih berbukit. Kami selalu menyesuaikan metode dan kedalaman berdasarkan kondisi tanah di lokasi proyek Anda."
+      "q": "Bagaimana teknis pengeboran bore pile saat menghadapi curah hujan tinggi di Bogor?",
+      "a": "Sebagai spesialis di Kota Hujan, kami menyiapkan manajemen air kerja dan sirkulasi lumpur secara teratur. Kami membuat parit pembuangan serta bak penampungan lumpur sementara agar area kerja tidak tergenang, dan mempercepat tahapan pembersihan dasar lubang bor sebelum proses pengecoran beton dilakukan."
     },
     {
-      "q": "Berapa biaya mobilisasi bore pile ke Bogor?",
-      "a": "Biaya mobilisasi tergantung jarak dari gudang kami di Jakarta Utara: Kota Bogor Rp3-4 juta, Cibinong Rp3.5-4.5 juta, Puncak (Ciawi, Cisarua) Rp4-5 juta. Untuk proyek di bawah 200m (mesin) atau 100m (manual), biaya mobilisasi bisa lebih tinggi proporsional."
+      "q": "Berapa estimasi biaya mobilisasi alat bore pile ke lokasi proyek di Bogor?",
+      "a": "Biaya mobilisasi armada mini crane berkisar Rp3-4 juta untuk area Kota Bogor dan Cibinong, serta Rp4-5 juta untuk kawasan perbukitan Puncak atau Sentul. Sementara untuk alat strauss pile manual, biaya mobilisasi jauh lebih ekonomis yaitu sekitar Rp1-2 juta tergantung kemudahan akses jalan masuk armada angkut."
     },
     {
-      "q": "Apa keunggulan bore pile dibandingkan tiang pancang di Bogor?",
-      "a": "Di Bogor yang banyak area perumahan dan kawasan berbukit, bore pile lebih unggul karena minim getaran dan suara. Tidak seperti tiang pancang yang menimbulkan getaran keras dan berisiko merusak dinding tetangga. Selain itu, metode dry boring sangat efektif untuk tanah perbukitan di Bogor selatan."
+      "q": "Apa keunggulan bore pile dibanding tiang pancang untuk konstruksi di Bogor?",
+      "a": "Bore pile tidak menimbulkan getaran benturan dahsyat dan tidak berisik layaknya tiang pancang drop hammer. Di kawasan Bogor yang dipenuhi perumahan padat, kontur lereng villa, dan tebing miring, tiang pancang berisiko memicu retak dinding tetangga serta mengganggu stabilitas tanah. Bore pile merupakan solusi paling aman dan ramah lingkungan sekitar."
     },
     {
-      "q": "Apakah bisa survey lokasi dulu sebelum eksekusi bore pile di Bogor?",
-      "a": "Bisa. Kami siap melakukan survey lokasi gratis ke seluruh wilayah Bogor. Tim kami akan cek akses jalan, pasokan listrik dan air jika wash boring (bor basah), dan kondisi tanah untuk proyek Anda. Konsultasi tanpa biaya hubungi kami."
+      "q": "Apakah Agung Perkasa melayani survey lokasi gratis ke seluruh area Bogor?",
+      "a": "Ya, kami menyediakan layanan survey lokasi dan konsultasi teknis gratis di seluruh Kota dan Kabupaten Bogor. Teknisi kami akan meninjau kontur lahan, lebar jalan masuk alat, sumber air untuk wash boring, serta menghitung estimasi anggaran biaya pondasi yang paling efisien bagi Anda."
     }
   ],
   "articles": [
     {
       "href": "/artikel/bore-pile-vs-strauss-pile/",
       "image": "/imgs/borepile-dekat-dinding.webp",
-      "imageAlt": "Perbandingan bore pile vs strauss pile untuk pondasi bangunan",
+      "imageAlt": "Perbandingan bore pile vs strauss pile untuk pondasi bangunan di Bogor",
       "category": "Perbandingan",
       "title": "Borepile vs Strauss Pile",
-      "excerpt": "Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik.",
+      "excerpt": "Perbandingan lengkap metode pondasi bore pile mesin dan strauss pile manual untuk bangunan Anda.",
       "date": "Juni 2026"
     },
     {
       "href": "/harga/bore-pile/30cm/",
       "image": "/imgs/hasil-lubang-borepile.webp",
-      "imageAlt": "Harga bore pile diameter 30cm untuk pondasi rumah",
+      "imageAlt": "Harga bore pile diameter 30cm untuk pondasi rumah tinggal di Bogor",
       "category": "Harga",
       "title": "Harga Bore Pile Diameter 30cm",
-      "excerpt": "Lihat harga terbaru 2026 untuk bore pile diameter 30cm.",
+      "excerpt": "Daftar tarif terbaru 2026 pengeboran bore pile diameter 30cm untuk rumah dan ruko.",
       "date": "Juni 2026"
     },
     {
       "href": "/jasa/bore-pile/jakarta/",
       "image": "/imgs/borepile-dan-truk-molen.webp",
-      "imageAlt": "Harga bore pile Jakarta 2026 terbaru",
+      "imageAlt": "Harga bore pile Jabodetabek 2026 terbaru",
       "category": "Harga",
       "title": "Harga Bore Pile Jakarta 2026",
-      "excerpt": "Informasi terkini tentang harga bore pile di wilayah Jakarta untuk tahun 2026.",
+      "excerpt": "Informasi komparasi harga bore pile di wilayah Jabodetabek untuk tahun 2026.",
       "date": "Juni 2026"
     }
   ],
@@ -314,63 +314,63 @@
   "googleAdsId": "AW-16649506462",
   "additionalCosts": [
     {
-      "title": "Mobilisasi Alat Bore Pile",
-      "text": "Mini crane: Rp3-5jt | Strauss pile (bore pile manual): Rp1-2jt. Biaya disesuaikan dengan jarak lokasi proyek."
+      "title": "Mobilisasi Alat & Kru Kerja",
+      "text": "Mini crane: Rp3-5jt | Strauss pile manual: Rp1-2jt. Besaran biaya disesuaikan dengan jarak tempuh dan kondisi medan jalan menuju lokasi proyek di Bogor."
     },
     {
-      "title": "Minimal Order",
-      "text": "Mesin mini crane & gawangan: 200 meter | Strauss Pile (Manual): 100 meter (di bawah itu silakan hubungi kami)."
+      "title": "Standar Minimal Order",
+      "text": "Bore pile mesin mini crane & gawangan: minimal 200 meter lari | Strauss Pile manual: minimal 100 meter lari (tersedia negosiasi khusus untuk volume di bawah batas minimum)."
     },
     {
-      "title": "Sedot Lumpur",
-      "text": "Jika memakai bore pile mesin gawangan dan mini crane menggunakan metode <strong>wash boring (bor basah)</strong>, perkiraan biaya tambahannya sekitar: Rp800.000 - Rp1.200.000/rit (tergantung volume)"
+      "title": "Pengelolaan Buangan Lumpur Bor",
+      "text": "Untuk metode <strong>wash boring (bor basah)</strong>, sirkulasi lumpur dikelola pada bak kontrol. Jika memerlukan jasa sedot dan buang lumpur tangki ke luar tapak proyek, estimasi biaya sekitar Rp800.000 - Rp1.200.000 per rit."
     },
     {
-      "title": "Data Sondir",
-      "text": "Sangat wajib untuk menentukan kedalaman pengeboran yang tepat hingga mencapai lapisan tanah keras."
+      "title": "Uji Penyelidikan Tanah (Data Sondir CPT)",
+      "text": "Sangat dianjurkan untuk kontur tanah merah dan perbukitan cadas Bogor guna menetapkan titik elevasi tanah keras secara akurat sebelum pengeboran."
     }
   ],
   "soilReasons": {
-    "title": "Mengapa Bore Pile Pilihan Tepat untuk Wilayah Bogor?",
-    "description": "Wilayah Bogor memiliki kondisi tanah yang <strong>bervariasi dan di beberapa tempat cukup lunak</strong>. Metode bore pile menjadi solusi pondasi paling tepat karena:",
+    "title": "Mengapa Bore Pile Solusi Terbaik untuk Kondisi Tanah & Kontur Wilayah Bogor?",
+    "description": "Bogor memiliki karakteristik geografis istimewa dengan <strong>curah hujan tinggi, kontur perbukitan miring, serta lapisan tanah merah hingga batuan cadas vulkanik</strong>. Pondasi bore pile menjadi pilihan paling unggul karena:",
     "points": [
       {
-        "title": "Kedalaman hingga 30 meter",
-        "desc": "Mampu menembus lapisan tanah lunak hingga <a href=\"https://journal.jgu.ac.id/index.php/jgers/article/view/40\" target=\"_blank\" rel=\"noopener noreferrer\">mencapai tanah keras</a>."
+        "title": "Menembus Tanah Lunak hingga Cadas Keras 30 Meter",
+        "desc": "Mampu menembus lapisan tanah merah atas yang gembur akibat resapan air hujan hingga <a href=\"https://journal.jgu.ac.id/index.php/jgers/article/view/40\" target=\"_blank\" rel=\"noopener noreferrer\">mencapai tanah keras</a> atau batuan cadas di kedalaman yang kokoh."
       },
       {
-        "title": "Diameter fleksibel (30-120cm)",
-        "desc": "Bisa disesuaikan dengan <a href=\"https://library.gunadarma.ac.id/repository/perencanaan-fondasi-bored-pile-pada-gedung-perkantoran-10-lantai-di-bogor-pusat-skripsi\" target=\"_blank\" rel=\"noopener noreferrer\">beban bangunan</a>."
+        "title": "Fleksibilitas Diameter Menopang Beban Konstruksi",
+        "desc": "Diameter tiang fleksibel (30 cm sampai 80 cm) disesuaikan dengan perhitungan struktural <a href=\"https://library.gunadarma.ac.id/repository/perencanaan-fondasi-bored-pile-pada-gedung-perkantoran-10-lantai-di-bogor-pusat-skripsi\" target=\"_blank\" rel=\"noopener noreferrer\">beban bangunan</a> seperti villa bertingkat, ruko, maupun gedung komersial."
       },
       {
-        "title": "Minim getaran",
-        "desc": "Aman untuk bangunan di sekitar proyek, jadi tidak merusak tanah dan dinding tetangga Anda."
+        "title": "Minim Getaran & Menjaga Kestabilan Lereng",
+        "desc": "Proses pengeboran tidak menghasilkan getaran hentakan tanah, menjamin kestabilan tanah tebing di sekitarnya serta aman bagi dinding rumah tetangga."
       },
       {
-        "title": "Minim polusi suara",
-        "desc": "Suaranya tidak terlalu mengganggu tetangga sekitar proyek, apalagi jika proyek dilakukan di area padat, tapi terkadang ada tetangga yang merasa terganggu oleh suara yang dihasilkan, jadi kami juga menyediakan solusi untuk mengurangi suaranya (misal diberikan peredam suara)."
+        "title": "Ramah Lingkungan & Minim Polusi Suara",
+        "desc": "Suara mesin bore pile jauh lebih hening dibanding tiang pancang, sangat ideal untuk pengerjaan di kawasan hunian tenang, villa peristirahatan, maupun area padat penduduk Bogor."
       },
       {
-        "title": "Metode wash boring",
-        "desc": "Bor basah sangat efektif untuk tanah berair atau rawa seperti di Bogor Utara."
+        "title": "Metode Bor Basah & Bor Kering Fleksibel",
+        "desc": "Wash boring sangat efektif melarutkan tanah merah padat berair, sedangkan dry boring tangguh menembus tanah cadas berbatu di wilayah perbukitan Bogor Selatan."
       }
     ],
-    "conclusion": "<p>Setiap lokasi memiliki karakteristik tanah yang berbeda. Kami dapat menyesuaikan teknik bore pile untuk memastikan keberhasilan proyek di setiap wilayah di Bogor.</p><p><strong>Portofolio kami di Bogor:</strong> Kami telah berpengalaman mengerjakan berbagai proyek rumah, ruko, gudang dan bangunan lain di seluruh wilayah Bogor dan sekitarnya.</p>"
+    "conclusion": "<p>Karakteristik tanah di setiap sudut Bogor sangat beraneka ragam—dari dataran padat Cibinong hingga lereng berbatu di Puncak. Keahlian teknik bore pile kami memastikan setiap tiang berdiri kokoh di atas lapisan tanah pendukung terkuat.</p><p><strong>Pengalaman Kami di Bogor:</strong> Kami terbiasa menangani aneka proyek villa eksklusif di perbukitan, rumah tinggal cluster, ruko, hingga gedung fasilitas publik di seluruh penjuru Bogor.</p>"
   },
   "priceUpdatedAt": "2026-08-19",
-  "projectNote": "<strong>Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan. Kecepatan pengerjaan dipengaruhi oleh kondisi lapangan, akses lokasi, karakteristik tanah, dan yang paling penting adalah pasokan air yang cukup untuk metode wash boring.<br><br>Butuh harga khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
+  "projectNote": "<strong>Catatan:</strong> Estimasi rincian biaya di atas sudah mencakup jasa pengeboran lubang, perakitan besi tulangan cakar ayam, serta pengecoran adukan beton (<strong>belum termasuk pengadaan material beton ready-mix dan besi tulangan</strong>). Pengerjaan di wilayah Bogor sangat dipengaruhi oleh cuaca hujan harian, kemiringan kontur tanah perbukitan, kekerasan lapisan cadas, serta ketersediaan debit air kerja metode wash boring.<br><br>Ingin mengetahui paket harga khusus diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat rincian lengkap harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {
       "diameter": "30 cm",
-      "usage": "rumah 1-2 lantai (paling banyak dipilih)"
+      "usage": "rumah tinggal 1-2 lantai & pondasi pagar perumahan (paling diminati di Bogor)"
     },
     {
       "diameter": "40-50 cm",
-      "usage": "ruko, kantor, gudang, rumah sakit"
+      "usage": "villa lereng perbukitan Puncak, ruko, sekolah, gudang logistik"
     },
     {
       "diameter": "60-110 cm",
-      "usage": "hotel, gedung bertingkat"
+      "usage": "hotel, resort pegunungan, gedung bertingkat, retaining wall penahan longsor"
     }
   ]
 }

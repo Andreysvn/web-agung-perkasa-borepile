@@ -1,4 +1,6 @@
 ---
+import { formatPrices } from '../../utils/priceFormatter.js';
+
 interface Props {
     data: {
         heroImage: string;
@@ -17,10 +19,10 @@ const { heroImage, heroAlt, heroCaption, heroWidth = '372', heroHeight = '350', 
 
 <div class="illustration">
     <div class="illustration-img">
-        <img src={heroImage} alt={heroAlt} title={`Bore Pile Mini Crane ${cityName}`} width={heroWidth} height={heroHeight} fetchpriority="high">
-        <div class="caption">{heroCaption}</div>
+        <img src={heroImage} alt={formatPrices(heroAlt)} title={`Bore Pile Mini Crane ${cityName}`} width={heroWidth} height={heroHeight} fetchpriority="high">
+        <div class="caption">{formatPrices(heroCaption)}</div>
     </div>
     <div class="illustration-text">
-        <p set:html={heroText}></p>
+        <p set:html={formatPrices(heroText)}></p>
     </div>
 </div>

@@ -5,112 +5,112 @@
   "geoRegion": "ID-JB",
   "geoPlacename": "Bandung",
   "heroImage": "/imgs/borepile-mesin-biru.webp",
-  "heroAlt": "Proses pengeboran bore pile mini crane di Bandung untuk proyek konstruksi",
-  "heroCaption": "Proses pengeboran bore pile menggunakan alat mini crane di Bandung",
+  "heroAlt": "Pengeboran bore pile mini crane di kontur lereng perbukitan Bandung untuk pondasi bangunan bertingkat",
+  "heroCaption": "Operasional mesin bore pile mini crane pada lahan berkontur lereng kawasan perbukitan Bandung",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "Harga jasa bore pile Bandung 2026 untuk jasa pengeboran saja mulai dari Rp120.000/m untuk mesin (mini crane), dan manual atau strauss pile mulai dari Rp70.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Bandung Utara, Selatan, Barat, dan Cimahi.",
-  "localBusinessDesc": "Jasa bore pile Bandung terpercaya. Harga mesin Rp120.000/m, manual Rp70.000/m. Melayani seluruh Bandung dan sekitarnya.",
+  "heroText": "Harga jasa bore pile Bandung 2026 untuk pekerjaan pengeboran mesin (mini crane) mulai dari Rp120.000/m, dan bore pile manual (strauss pile) mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Dengan kondisi geografis Bandung yang didominasi kontur perbukitan, lereng curam, cuaca dingin bercurah hujan tinggi, serta akses jalan pemukiman yang padat dan sempit, kami menyediakan armada mesin mini crane lincah serta tim ahli berpengalaman di medan terjal. Gunakan kalkulator estimasi biaya otomatis di bawah untuk merencanakan anggaran pondasi proyek Anda di seluruh Bandung Utara, Bandung Selatan, Bandung Barat, hingga Cimahi.",
+  "localBusinessDesc": "Jasa bore pile Bandung profesional spesialis pondasi medan perbukitan, lereng terjal, dan akses jalan sempit. Tarif mesin mini crane mulai Rp120.000/m dan manual strauss pile Rp75.000/m. Melayani Bandung Raya dan Cimahi.",
   "mobilizationCost": "Mini crane: Rp5-7jt | Strauss pile (bore pile manual): Rp2-3jt",
-  "manualPriceMin": 70000,
+  "manualPriceMin": 75000,
   "manualPriceMax": 120000,
   "localPrices": {
-    "manualMin": 70000,
+    "manualMin": 75000,
     "manualMax": 120000,
     "mesin": [
       {
         "diameter": "30 cm",
         "price": 120000,
         "depth": "30 meter",
-        "suitable": "Rumah 1-2 lantai"
+        "suitable": "Rumah 1-2 lantai di area lereng/perbukitan"
       },
       {
         "diameter": "40 cm",
         "price": 135000,
         "depth": "30 meter",
-        "suitable": "Ruko, kantor"
+        "suitable": "Ruko, villa bertingkat, perkantoran"
       },
       {
         "diameter": "50 cm",
         "price": 190000,
         "depth": "30 meter",
-        "suitable": "Gudang, pabrik kecil"
+        "suitable": "Gudang, resto tebing, pabrik kecil"
       },
       {
         "diameter": "60 cm",
         "price": null,
         "depth": "30 meter",
-        "suitable": "Hotel 3-4 lantai"
+        "suitable": "Hotel 3-4 lantai, resort lereng"
       },
       {
         "diameter": "80 cm",
         "price": null,
         "depth": "30 meter",
-        "suitable": "Gedung 5-8 lantai"
+        "suitable": "Gedung 5-8 lantai, apartemen"
       }
     ],
     "manual": [
       {
         "diameter": "20 cm",
-        "price": 70000,
+        "price": 75000,
         "depth": "10 meter",
-        "suitable": "Area sangat sempit"
+        "suitable": "Area sangat sempit / gang padat Bandung"
       },
       {
         "diameter": "25 cm",
-        "price": 75000,
+        "price": 80000,
         "depth": "10 meter",
-        "suitable": "Gang kecil"
+        "suitable": "Gang kecil perumahan padat penduduk"
       },
       {
         "diameter": "30 cm",
-        "price": 80000,
+        "price": 85000,
         "depth": "10 meter",
-        "suitable": "Rumah, ruko 1-2 lantai (tanah padat)"
+        "suitable": "Rumah tinggal 1-2 lantai (lahan datar/stabil)"
       },
       {
         "diameter": "40 cm",
-        "price": 100000,
+        "price": 105000,
         "depth": "10 meter",
-        "suitable": "Rumah, ruko 2 lantai (tanah padat)"
+        "suitable": "Rumah tinggal 2 lantai & ruko akses terbatas"
       }
     ],
     "hasHidrolik": false
   },
   "factors": [
     {
-      "title": "Diameter & Kedalaman",
-      "text": "Semakin besar diameter (30cm, 40cm, 50cm, dst) dan semakin dalam pengeboran yang diperlukan hingga tanah keras di Bandung, maka biaya per meter semakin tinggi."
+      "title": "Dimensi Diameter & Kedalaman Titik Bor",
+      "text": "Besaran diameter tiang pondasi (30cm hingga 80cm) serta kedalaman pengeboran hingga menyentuh batuan keras (hard strata) tanah Bandung secara langsung menentukan durasi pengerjaan dan biaya per meter lari."
     },
     {
-      "title": "Kondisi Tanah Bandung",
-      "text": "Tanah di Bandung bervariasi. Wilayah utara (Dago, Setiabudi, Lembang) tanahnya berbukit dan berbatuan. Wilayah selatan (Dayeuhkolot, Buahbatu) tanahnya lebih padat. Bandung juga memiliki tanah andosol (bekas gunung api) yang berbeda dengan tanah di Jakarta."
+      "title": "Variasi Karakteristik Tanah Bandung (Andosol Lereng vs Cekungan Lempung)",
+      "text": "Formasi tanah Bandung sangat beragam. Wilayah Bandung Utara (Dago, Setiabudi, Ciumbuleuit, Lembang) berupa dataran tinggi perbukitan dengan tanah andosol vulkanik dan lapisan berbatu. Sedangkan kawasan Bandung Selatan (Dayeuhkolot, Buahbatu, Gedebage) didominasi tanah lempung lunak bekas endapan danau purba yang membutuhkan pendekatan teknik bor basah (wash boring)."
     },
     {
-      "title": "Jarak Proyek Dari Gudang Kami",
-      "text": "Biaya mobilisasi alat disesuaikan dengan jarak dari gudang kami di Jakarta Utara. Bandung (Rp5-7jt) tergantung lokasi."
+      "title": "Jarak Mobilisasi & Tingkat Kemiringan Akses Lapangan",
+      "text": "Ongkos mobilisasi peralatan diperhitungkan dari titik logistik kami menuju lokasi di Bandung (rata-rata Rp5-7jt), dengan perhitungan khusus pada lokasi terpencil atau medan lereng perbukitan yang memiliki tanjakan ekstrem."
     },
     {
-      "title": "Volume Pekerjaan",
-      "text": "Minimal order jasa bore pile Bandung: mesin 200 meter, strauss pile 100 meter. Hubungi kami untuk volume di bawah itu."
+      "title": "Volume Total Meter Pengeboran",
+      "text": "Standar pemesanan minimal jasa bore pile di Bandung adalah 200 meter lari untuk mesin mini crane/gawangan dan 100 meter untuk strauss pile manual. Untuk volume di bawah ketentuan tersebut, kami tetap siap membantu melalui kalkulasi penyesuaian khusus."
     },
     {
-      "title": "Akses & Tingkat Kesulitan Lapangan",
-      "text": "Kawasan utara (Dago, Setiabudi) akses terbatas dan medan berbukit, kawasan selatan akses lebih luas. Ini mempengaruhi biaya pengerjaan."
+      "title": "Aksesibilitas Jalan Sempit & Manuver Armada Mini Crane",
+      "text": "Banyak lokasi pembangunan di Bandung berada di kawasan gang padat atau jalan perumahan berliku. Armada mini crane kompak dan perlengkapan strauss pile kami siap masuk ke area sempit tanpa mengganggu kenyamanan tetangga maupun merusak fasilitas warga sekitar."
     },
     {
-      "title": "Jenis & Skala Proyek di Bandung",
-      "text": "Proyek rumah tinggal pribadi di Bandung lebih terjangkau, sementara proyek hotel di Dago atau apartemen di pusat kota memiliki spesifikasi dan biaya berbeda."
+      "title": "Skala Bangunan & Pengaruh Iklim Dingin Dataran Tinggi",
+      "text": "Mulai dari pondasi villa mewah di lereng tebing hingga perumahan cluster di Bandung Barat, tim kami memperhitungkan curah hujan tinggi dan suhu dingin pegunungan agar proses pengeboran dan pengecoran beton pondasi tetap berjalan sesuai standar mutu."
     }
   ],
-  "sondirNote": "Tips untuk proyek bore pile di Bandung: Lakukan pengecekan data sondir tanah Bandung terlebih dahulu agar kedalaman pengeboran bisa ditentukan secara tepat. Perhatikan perbedaan karakteristik tanah antara Bandung utara (berbukit) dan selatan (lebih padat).",
+  "sondirNote": "Rekomendasi teknis proyek di Bandung: Sangat disarankan melakukan pengujian sondir (CPT) sebelum pengeboran. Elevasi tanah keras di Bandung memiliki variasi signifikan akibat kontur perbukitan curam di zona utara dan lapisan lempung tebal di cekungan selatan.",
   "projects": [
     {
-      "title": "Rumah Mewah di Dago, Bandung",
+      "title": "Pondasi Villa Bertingkat di Lereng Dago Pakar, Bandung",
       "image": "/imgs/borepile-mesin-biru.webp",
-      "imageAlt": "Proyek bore pile mini crane di Dago Bandung untuk rumah mewah",
-      "imageCaption": "Bore Pile mini crane di Dago Bandung",
-      "specs": "Bore pile mesin mini crane Ø30cm, kedalaman 12m, 20 titik<br>Metode: Dry Boring (Bor kering) - tanah berbukit",
+      "imageAlt": "Pekerjaan bore pile mesin mini crane untuk pondasi villa tebing di Dago Pakar Bandung",
+      "imageCaption": "Pengeboran bore pile mini crane pada area berlereng terjal Dago Pakar Bandung",
+      "specs": "Bore pile mesin mini crane Ø30cm, kedalaman 12m, 20 titik<br>Metode: Dry Boring (bor kering) pada lahan lereng tanah andosol berbatu",
       "costCalc": "12m × Rp120.000 × 20 = Rp28.800.000",
       "mobilization": "Rp6.000.000",
       "total": "Rp34.800.000",
@@ -118,11 +118,11 @@
       "hasImage": true
     },
     {
-      "title": "Perumahan di Cikaum, Bandung",
+      "title": "Perumahan Cluster di Area Berbukit Padalarang, Bandung Barat",
       "image": null,
       "imageAlt": null,
       "imageCaption": null,
-      "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 22 titik<br>Metode: Dry Boring (Bor kering)",
+      "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 22 titik<br>Metode: Dry Boring dengan instalasi casing proteksi dinding tanah",
       "costCalc": "14m × Rp135.000 × 22 = Rp41.580.000",
       "mobilization": "Rp6.000.000",
       "total": "Rp47.580.000",
@@ -130,68 +130,68 @@
       "hasImage": false
     },
     {
-      "title": "Rumah 1 Lantai di Dayeuhkolot, Bandung",
+      "title": "Rumah Tinggal Akses Gang Sempit di Dayeuhkolot, Bandung",
       "image": null,
       "imageAlt": null,
       "imageCaption": null,
-      "specs": "Strauss pile (bore pile manual) Ø30cm, kedalaman 6m, 14 titik",
-      "costCalc": "6m × Rp80.000 × 14 = Rp6.720.000",
+      "specs": "Strauss pile (bore pile manual) Ø30cm, kedalaman 6m, 14 titik<br>Metode: Strauss pile manual kering bebas getaran di pemukiman padat",
+      "costCalc": "6m × Rp85.000 × 14 = Rp7.140.000",
       "mobilization": "Rp2.000.000",
-      "total": "Rp8.720.000",
+      "total": "Rp9.140.000",
       "time": "4-6 hari kerja",
       "hasImage": false
     }
   ],
   "whyUs": [
     {
-      "title": "Memakai alat yang baik",
-      "desc": "Kami memakai alat bor yang baik dan terawat, seperti mini crane, gawangan, dan strauss pile."
+      "title": "Armada Mini Crane Ringkas untuk Akses Sempit & Tanjakan Curam",
+      "desc": "Unit mesin mini crane kami dirancang dengan dimensi ringkas dan bertenaga kuat, sangat lincah melewati jalan sempit perumahan padat serta tanjakan terjal di kawasan perbukitan Bandung."
     },
     {
-      "title": "Efisiensi waktu & Komitmen kualitas",
-      "desc": "Kami mengusahakan kecepatan pengerjaan dan tetap menjaga kualitas jasa yang kami berikan karena didukung tim yang sudah ahli dalam bidang pondasi dalam, khususnya bore pile di Bandung."
+      "title": "Paham Mendalam Karakter Tanah & Cuaca Dingin Basah Bandung",
+      "desc": "Didukung pengalaman bertahun-tahun menaklukkan tanah andosol vulkanik berbutir kasar di utara dan lempung cekungan di selatan, dengan metode kerja yang adaptif saat musim hujan dataran tinggi."
     },
     {
-      "title": "Tim Ahli",
-      "desc": "Memiliki tim ahli dalam pengerjaan bore pile di Bandung, khususnya untuk proyek di tanah berbukit dan andosol."
+      "title": "Pengeboran Ramah Lingkungan & Minim Getaran (Zero Vibration)",
+      "desc": "Sistem putaran auger pada mesin mini crane maupun strauss pile manual bekerja senyap tanpa getaran benturan, melindungi dinding hunian tetangga dan menjaga kestabilan tanah tebing di sekitarnya."
     },
     {
-      "title": "Tim berpengalaman di area Bandung",
-      "desc": "Lebih dari sepuluh tahun mengerjakan proyek di Bandung. Mulai dari proyek rumah tinggal pribadi hingga proyek hotel di Dago."
+      "title": "Akurasi Pengeboran Berdasarkan Data Sondir & Garansi Kualitas",
+      "desc": "Setiap titik bor dikerjakan tegak lurus hingga menembus lapisan tanah keras teruji, memastikan struktur pondasi bangunan berdiri kokoh dalam jangka panjang tanpa biaya tersembunyi."
     }
   ],
   "equipment": {
-    "description": "Kami memiliki beberapa alat untuk pekerjaan bore pile, antara lain:",
+    "description": "Kami mengoperasikan berbagai jenis peralatan bore pile terawat yang disesuaikan dengan kontur lahan Bandung:",
     "items": [
       {
         "name": "Mini Crane",
-        "desc": "Kapasitas sedang, diameter 30-80 cm, kedalaman sampai 30m. Cocok untuk rumah, ruko, hotel di Bandung.",
+        "desc": "Mesin bor kompak berkapasitas tinggi untuk diameter 30-80 cm hingga kedalaman 30m. Pilihan utama untuk proyek villa tebing, ruko, perumahan, dan hotel di area berbukit Bandung.",
         "image": "/imgs/icons/bore-pile-mesin-mini-crane-icon-agung-perkasa.svg",
-        "imageAlt": "Mesin bore pile mini crane Agung Perkasa untuk bore pile pondasi rumah, ruko, dan bangunan bertingkat di Bandung"
+        "imageAlt": "Mesin bore pile mini crane Agung Perkasa untuk pondasi bangunan di lahan berkontur dan jalan sempit Bandung"
       },
       {
         "name": "Gawangan",
-        "desc": "Untuk area yang tidak bisa diakses mini crane. Diameter 30-80 cm, cocok untuk gang sempit di Bandung.",
+        "desc": "Mesin bore pile rakitan fleksibel untuk mengebor diameter 30-80 cm di lahan sempit atau halaman terbatas di Bandung yang tidak dapat dimasuki mini crane.",
         "image": "/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg",
-        "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk bore pile ketika area tidak bisa dijangkau oleh mini crane di Bandung"
+        "imageAlt": "Mesin bore pile sistem gawangan Agung Perkasa untuk pondasi bangunan di gang sempit Bandung"
       },
       {
         "name": "Strauss Pile (Manual)",
-        "desc": "Alat bor manual full tenaga manusia, metode dry boring. Diameter 20-40cm, cocok untuk gang sempit di Bandung yang tidak bisa dijangkau crane.",
+        "desc": "Metode bor manual mengandalkan tenaga manusia (dry boring) untuk diameter 20-40 cm. Pilihan paling hemat mulai Rp75.000/m untuk kawasan padat permukiman di Bandung.",
         "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
-        "imageAlt": "Strauss pile (bore pile manual) untuk pondasi di gang sempit dan area terbatas Bandung lainnya"
+        "imageAlt": "Pengeboran strauss pile manual Agung Perkasa untuk pondasi rumah tinggal di gang padat Bandung"
       }
     ]
   },
   "portfolio": {
     "title": "Portofolio Proyek Bore Pile di Bandung",
-    "subtitle": "Berikut beberapa proyek bore pile yang sudah kami kerjakan di berbagai wilayah Bandung.",
+    "subtitle": "Dokumentasi pekerjaan pondasi bore pile kami yang telah selesai di berbagai zona Bandung Raya.",
     "items": [
       {
         "image": "/imgs/borepile-mesin-biru.webp",
-        "imageAlt": "Proyek bore pile mini crane di Dago Bandung",
-        "label": "Dago, Bandung",
-        "detail": "Bore pile mini crane Ø30cm untuk rumah mewah"
+        "imageAlt": "Proyek pengeboran bore pile mini crane untuk villa lereng di Dago Pakar Bandung",
+        "label": "Dago Pakar, Bandung Utara",
+        "detail": "Bore pile mini crane Ø30cm penahan lereng tebing hunian villa"
       }
     ]
   },
@@ -223,28 +223,32 @@
   },
   "faq": [
     {
-      "q": "Berapa kedalaman bore pile yang ideal untuk tanah di Bandung?",
-      "a": "Untuk wilayah Bandung, kedalaman bore pile bervariasi tergantung lokasi. Wilayah utara (Dago, Setiabudi) tanah berbukit, kedalaman 8-15 meter. Wilayah selatan (Dayeuhkolot, Buahbatu) lebih padat, cukup 6-12 meter. Data sondir sangat menentukan kedalaman pasti."
+      "q": "Berapa tarif jasa bore pile dan strauss pile per meter di Bandung tahun 2026?",
+      "a": "Tarif jasa bore pile mesin (mini crane) di Bandung mulai dari Rp120.000/m untuk diameter 30 cm. Sementara untuk bore pile manual (strauss pile) tarifnya sangat ekonomis mulai dari Rp75.000/m untuk diameter 20 cm. Total biaya ditentukan oleh diameter lubang, kedalaman tanah keras, topografi lahan, dan kemudahan akses alat."
     },
     {
-      "q": "Apakah bore pile cocok untuk tanah berbukit di Bandung?",
-      "a": "Sangat cocok. Bandung utara memiliki tanah berbukit dan andosol (bekas gunung api). Metode dry boring (bor kering) sangat efektif untuk tanah berbukit. Bore pile diameter 30-40cm dengan kedalaman 8-15 meter adalah solusi paling tepat untuk rumah mewah dan hotel di Dago dan Setiabudi."
+      "q": "Mengapa pondasi bore pile sangat cocok untuk kawasan lereng dan perbukitan di Bandung Utara?",
+      "a": "Wilayah Bandung Utara seperti Dago, Ciumbuleuit, Setiabudi, dan Lembang memiliki kontur lereng miring dan tanah andosol vulkanik. Bore pile menggunakan sistem putaran auger tanpa ketukan hammer sehingga tidak memicu getaran yang berisiko menimbulkan pergeseran tebing (longsor) atau meretakkan struktur bangunan milik tetangga."
     },
     {
-      "q": "Apa perbedaan tanah di Bandung utara dan selatan?",
-      "a": "Bandung utara tanahnya berbukit dan berbatuan (tanah andosol). Bandung selatan tanahnya relatif lebih padat. Kami selalu menyesuaikan metode dan kedalaman berdasarkan kondisi tanah di lokasi proyek Anda."
+      "q": "Bagaimana solusi bore pile jika lokasi proyek berada di gang sempit atau pemukiman padat Bandung?",
+      "a": "Kami memiliki armada mini crane dengan sasis ringkas yang dirancang khusus untuk jalan lingkungan perumahan. Jika lokasi berada di gang yang sangat sempit dan tidak dapat dilalui kendaraan roda empat, kami menyediakan opsi mesin gawangan atau metode strauss pile manual yang hanya membutuhkan ruang kerja selebar 1–1,5 meter."
     },
     {
-      "q": "Berapa biaya mobilisasi bore pile ke Bandung?",
-      "a": "Biaya mobilisasi tergantung jarak dari gudang kami di Jakarta Utara: Bandung Utara Rp5-6 juta, Bandung Selatan Rp5.5-6.5 juta, Cimahi Rp5-6 juta. Untuk proyek di bawah 200m (mesin) atau 100m (manual), biaya mobilisasi bisa lebih tinggi proporsional."
+      "q": "Apa perbedaan karakteristik tanah antara Bandung Utara dan Bandung Selatan dalam proses pengeboran?",
+      "a": "Bandung Utara didominasi tanah berbutir kasar vulkanik andosol dan lapisan berbatu pada elevasi tinggi, sehingga umum dikerjakan dengan metode bor kering (dry boring). Sebaliknya, wilayah Bandung Selatan (seperti Dayeuhkolot dan Gedebage) merupakan kawasan cekungan bekas danau purba dengan lapisan lempung lunak dan muka air tanah tinggi, sehingga lebih tepat ditangani menggunakan metode bor basah (wash boring) disertai sirkulasi lumpur bentonite."
     },
     {
-      "q": "Apa keunggulan bore pile dibandingkan tiang pancang di Bandung?",
-      "a": "Di Bandung yang banyak area perumahan dan tanah berbukit, bore pile lebih unggul karena minim getaran dan suara. Tidak seperti tiang pancang yang menimbulkan getaran keras dan bisa merusak dinding tetangga. Metode dry boring sangat efektif untuk tanah berbukit di Bandung utara."
+      "q": "Bagaimana tim mengantisipasi cuaca dingin dan curah hujan tinggi khas dataran tinggi Bandung?",
+      "a": "Curah hujan yang tinggi di Bandung dapat membuat dinding lubang bor berisiko runtuh sebelum dicor. Tim kami selalu mengantisipasinya dengan pemasangan pipa casing penahan longsor, pemompaan air kerja yang optimal, dan percepatan proses pengecoran beton bertulang segera setelah kedalaman tanah keras tercapai."
     },
     {
-      "q": "Apakah bisa survey lokasi dulu sebelum eksekusi bore pile di Bandung?",
-      "a": "Bisa. Kami siap melakukan survey lokasi gratis ke seluruh wilayah Bandung. Tim teknis kami akan cek akses jalan, kondisi tanah, dan memberikan rekomendasi diameter serta kedalaman terbaik untuk proyek Anda. Konsultasi tanpa biaya."
+      "q": "Berapa estimasi biaya mobilisasi mesin bore pile ke lokasi di Bandung dan Cimahi?",
+      "a": "Biaya mobilisasi armada mesin mini crane ke area Bandung berkisar Rp5.000.000 hingga Rp7.000.000 tergantung jarak tempuh dan elevasi medan (Bandung Kota, Bandung Utara/Lembang, Bandung Selatan, hingga Cimahi/Padalarang). Untuk metode bor manual (strauss pile), biaya mobilisasi lebih terjangkau di kisaran Rp2.000.000 sampai Rp3.000.000."
+    },
+    {
+      "q": "Apakah Agung Perkasa menyediakan survey lokasi secara gratis sebelum proyek bore pile di Bandung?",
+      "a": "Ya, kami memberikan layanan survey lokasi gratis ke seluruh area Bandung Raya dan Cimahi. Tim teknisi kami akan mengukur lebar akses jalan armada, mengevaluasi kontur lahan dan kemiringan lereng, menganalisis data uji sondir, serta merancang estimasi anggaran yang transparan dan kompetitif bagi Anda."
     }
   ],
   "articles": [
@@ -307,62 +311,62 @@
   "additionalCosts": [
     {
       "title": "Mobilisasi Alat Bore Pile",
-      "text": "Mini crane: Rp5-7jt | Strauss pile (bore pile manual): Rp2-3jt. Biaya disesuaikan dengan jarak lokasi proyek."
+      "text": "Mini crane: Rp5-7jt | Strauss pile (bore pile manual): Rp2-3jt. Biaya disesuaikan dengan elevasi rute dan jarak lokasi proyek di kawasan Bandung."
     },
     {
-      "title": "Minimal Order",
-      "text": "Mesin mini crane & gawangan: 200 meter | Strauss Pile (Manual): 100 meter (di bawah itu silakan hubungi kami)."
+      "title": "Minimal Order Pekerjaan",
+      "text": "Mesin mini crane & gawangan: 200 meter | Strauss Pile (Manual): 100 meter (untuk volume di bawah kuota minimum, silakan hubungi kami untuk negosiasi terbaik)."
     },
     {
-      "title": "Sedot Lumpur",
-      "text": "Jika memakai bore pile mesin gawangan dan mini crane menggunakan metode <strong>wash boring (bor basah)</strong>, perkiraan biaya tambahannya sekitar: Rp800.000 - Rp1.200.000/rit (tergantung volume)"
+      "title": "Sedot Lumpur (Metode Bor Basah)",
+      "text": "Jika menggunakan mesin bore pile metode <strong>wash boring (bor basah)</strong> pada tanah lunak Bandung Selatan, perkiraan biaya pembuangan lumpur: Rp800.000 - Rp1.200.000/rit tangki pembuangan."
     },
     {
-      "title": "Data Sondir",
-      "text": "Sangat wajib untuk menentukan kedalaman pengeboran yang tepat hingga mencapai lapisan tanah keras."
+      "title": "Data Sondir (Uji Geoteknik)",
+      "text": "Sangat direkomendasikan untuk mengetahui kedalaman pasti lapisan tanah keras di kawasan berbukit maupun cekungan Bandung."
     }
   ],
   "soilReasons": {
-    "title": "Mengapa Bore Pile Pilihan Tepat untuk Wilayah Bandung?",
-    "description": "Wilayah Bandung memiliki kondisi tanah yang <strong>bervariasi dan di beberapa tempat cukup lunak</strong>. Metode bore pile menjadi solusi pondasi paling tepat karena:",
+    "title": "Mengapa Pondasi Bore Pile Menjadi Solusi Terbaik di Kontur Tanah Bandung?",
+    "description": "Topografi Bandung yang berada di dataran tinggi beriklim sejuk dengan hamparan perbukitan curam dan cekungan lempung menghadirkan tantangan struktur tersendiri. Sistem bore pile menjadi fondasi paling unggul dan terpercaya karena:",
     "points": [
       {
-        "title": "Kedalaman hingga 30 meter",
-        "desc": "Mampu menembus lapisan tanah lunak hingga <a href=\"https://journal.jgu.ac.id/index.php/jgers/article/view/40\" target=\"_blank\" rel=\"noopener noreferrer\">mencapai tanah keras</a>."
+        "title": "Daya Tembus Hingga Kedalaman 30 Meter Menembus Tanah Keras",
+        "desc": "Mampu menembus formasi tanah andosol vulkanik gembur di lereng perbukitan hingga <a href=\"https://journal.jgu.ac.id/index.php/jgers/article/view/40\" target=\"_blank\" rel=\"noopener noreferrer\">mencapai lapisan tanah keras yang kokoh</a> untuk menahan beban bangunan bertingkat."
       },
       {
-        "title": "Diameter fleksibel (30-120cm)",
-        "desc": "Bisa disesuaikan dengan <a href=\"https://library.gunadarma.ac.id/repository/perencanaan-fondasi-bored-pile-pada-gedung-perkantoran-10-lantai-di-bandung-pusat-skripsi\" target=\"_blank\" rel=\"noopener noreferrer\">beban bangunan</a>."
+        "title": "Variasi Diameter Fleksibel (30 cm hingga 80 cm)",
+        "desc": "Ukuran lubang bor dapat dikalibrasi secara presisi dengan <a href=\"https://library.gunadarma.ac.id/repository/perencanaan-fondasi-bored-pile-pada-gedung-perkantoran-10-lantai-di-bandung-pusat-skripsi\" target=\"_blank\" rel=\"noopener noreferrer\">perhitungan daya dukung struktur</a>, mulai dari hunian villa di lereng tebing hingga gedung ruko bertingkat."
       },
       {
-        "title": "Minim getaran",
-        "desc": "Aman untuk bangunan di sekitar proyek, jadi tidak merusak tanah dan dinding tetangga Anda."
+        "title": "Bebas Getaran Rusak (Zero Vibration)",
+        "desc": "Metode putaran auger tidak memicu gelombang getar benturan layaknya tiang pancang, sehingga dinding rumah tetangga di gang sempit aman dari keretakan dan tanah lereng terhindar dari pergeseran longsor."
       },
       {
-        "title": "Minim polusi suara",
-        "desc": "Suaranya tidak terlalu mengganggu tetangga sekitar proyek, apalagi jika proyek dilakukan di area padat, tapi terkadang ada tetangga yang merasa terganggu oleh suara yang dihasilkan, jadi kami juga menyediakan solusi untuk mengurangi suaranya (misal diberikan peredam suara)."
+        "title": "Manuver Lincah di Akses Tanjakan Berliku & Gang Perumahan",
+        "desc": "Spesifikasi mesin mini crane yang kompak dan alat strauss pile manual sangat praktis menjangkau lokasi di tanjakan terjal perbukitan Bandung maupun gang pemukiman padat penduduk."
       },
       {
-        "title": "Metode wash boring",
-        "desc": "Bor basah sangat efektif untuk tanah berair atau rawa seperti di Bandung Utara."
+        "title": "Adaptif Terhadap Metode Dry Boring Maupun Wash Boring",
+        "desc": "Bisa diterapkan dengan metode bor kering (dry boring) untuk wilayah perbukitan berbatu di Bandung Utara, atau metode sirkulasi air bor basah (wash boring) pada lapisan tanah lempung basah di Bandung Selatan."
       }
     ],
-    "conclusion": "<p>Setiap lokasi memiliki karakteristik tanah yang berbeda. Kami dapat menyesuaikan teknik bore pile untuk memastikan keberhasilan proyek di setiap wilayah di Bandung.</p><p><strong>Portofolio kami di Bandung:</strong> Kami telah berpengalaman mengerjakan berbagai proyek rumah, ruko, gudang dan bangunan lain di seluruh wilayah Bandung dan sekitarnya.</p>"
+    "conclusion": "<p>Karakteristik tanah di Bandung memiliki kontras tinggi antara zona lereng perbukitan di kawasan utara dan cekungan endapan danau purba di kawasan selatan. Kami mengombinasikan keahlian teknis dan metode bor yang tepat guna menjamin kestabilan pondasi bangunan Anda.</p><p><strong>Portofolio Agung Perkasa di Bandung:</strong> Berpengalaman puluhan tahun menangani pekerjaan bore pile untuk villa tebing di Dago & Lembang, ruko komersial di Setiabudi, hunian cluster di Bandung Barat, hingga pergudangan di Bandung Selatan.</p>"
   },
   "priceUpdatedAt": "2026-08-19",
-  "projectNote": "<strong>Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan. Kecepatan pengerjaan dipengaruhi oleh kondisi lapangan, akses lokasi, karakteristik tanah, dan yang paling penting adalah pasokan air yang cukup untuk metode wash boring.<br><br>Butuh harga khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
+  "projectNote": "<strong>Catatan Teknis:</strong> Biaya yang tercantum sudah meliputi ongkos jasa pengeboran, perakitan besi tulangan, dan pengecoran beton pondasi (<strong>belum termasuk pengadaan material beton ready mix dan besi tulangan</strong>). Contoh di atas adalah dokumentasi pekerjaan nyata yang telah kami selesaikan di lapangan. Durasi dan produktivitas pengerjaan di Bandung dipengaruhi oleh kemiringan lereng, akses jalan armada mini crane, formasi geologi tanah, ketersediaan air kerja, serta kondisi curah hujan dataran tinggi.<br><br>Memerlukan penawaran khusus untuk tiang diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Cek detail daftar harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {
       "diameter": "30 cm",
-      "usage": "rumah 1-2 lantai (paling banyak dipilih)"
+      "usage": "rumah 1-2 lantai di perbukitan / lereng (paling populer)"
     },
     {
       "diameter": "40-50 cm",
-      "usage": "ruko, kantor, gudang, rumah sakit"
+      "usage": "villa bertingkat, ruko, perkantoran, gudang"
     },
     {
       "diameter": "60-110 cm",
-      "usage": "hotel, gedung bertingkat"
+      "usage": "hotel lereng, resort, gedung bertingkat tinggi"
     }
   ]
 }

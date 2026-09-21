@@ -1,4 +1,6 @@
 ---
+import { formatPrices } from '../../utils/priceFormatter.js';
+
 interface Props {
     projects: Array<{
         hasImage?: boolean;
@@ -28,28 +30,28 @@ const { projects, cityName, note } = Astro.props;
             <div class="project-row">
                 {project.hasImage && project.image && (
                     <div class="project-img">
-                        <div class="project-img-wrapper"><img src={project.image} alt={project.imageAlt || ''} loading="lazy" width="400" height="300" data-lightbox="true" style="cursor: pointer;" title="Klik untuk memperbesar"></div>
+                        <div class="project-img-wrapper"><img src={project.image} alt={formatPrices(project.imageAlt) || ''} loading="lazy" width="400" height="300" data-lightbox="true" style="cursor: pointer;" title="Klik untuk memperbesar"></div>
                         {project.imageCaption && (
-                            <div class="project-caption">{project.imageCaption}</div>
+                            <div class="project-caption">{formatPrices(project.imageCaption)}</div>
                         )}
                     </div>
                 )}
                 <div class="project-text">
                     <div class="info-card">
-                        <h3>{project.title}</h3>
-                        <p set:html={project.specs}></p>
-                        {project.method && <p><strong>Metode:</strong> {project.method}</p>}
+                        <h3>{formatPrices(project.title)}</h3>
+                        <p set:html={formatPrices(project.specs)}></p>
+                        {project.method && <p><strong>Metode:</strong> {formatPrices(project.method)}</p>}
                         <p>
                             {project.costLines ? project.costLines.map((line) => (
-                                <Fragment set:html={line + '<br>'}></Fragment>
+                                <Fragment set:html={formatPrices(line) + '<br>'}></Fragment>
                             )) : project.costCalc ? (
-                                <Fragment set:html={project.costCalc + '<br>'}></Fragment>
+                                <Fragment set:html={formatPrices(project.costCalc) + '<br>'}></Fragment>
                             ) : null}
                             {project.mobilization && (
-                                <Fragment set:html={`<strong>+ mobilisasi:</strong> ${project.mobilization}<br>`}></Fragment>
+                                <Fragment set:html={`<strong>+ mobilisasi:</strong> ${formatPrices(project.mobilization)}<br>`}></Fragment>
                             )}
-                            <strong>Total:</strong> <strong class="price-total">{project.total}</strong><br>
-                            <strong>Waktu:</strong> {project.time}
+                            <strong>Total:</strong> <strong class="price-total">{formatPrices(project.total)}</strong><br>
+                            <strong>Waktu:</strong> {formatPrices(project.time)}
                         </p>
                     </div>
                 </div>
@@ -59,7 +61,7 @@ const { projects, cityName, note } = Astro.props;
 
     {note && (
         <div class="project-note">
-            <p set:html={note}></p>
+            <p set:html={formatPrices(note)}></p>
         </div>
     )}
 </section>
