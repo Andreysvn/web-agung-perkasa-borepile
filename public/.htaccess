@@ -2,9 +2,7 @@
 RewriteEngine On
 RewriteBase /
 
-# Force HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 
 # === REDIRECT SPESIFIK URL LAMA YANG SUDAH RANKING ===
 # Harga bore-pile-Xcm.html â†’ harga/bore-pile/Xcm/
@@ -31,6 +29,17 @@ RewriteRule ^jasa/bore-pile-cibubur(\.html|/?)?$ /jasa/bore-pile/bogor/cibubur/ 
 # Bekasi
 RewriteRule ^jasa/bore-pile-cikarang(\.html|/?)?$ /jasa/bore-pile/bekasi/cikarang/ [R=301,L]
 
+# === REDIRECT KOTA UTAMA ===
+RewriteRule ^jasa/bore-pile-jakarta(\.html|/?)?$ /jasa/bore-pile/jakarta/ [R=301,L]
+RewriteRule ^jasa/bore-pile-bogor(\.html|/?)?$ /jasa/bore-pile/bogor/ [R=301,L]
+RewriteRule ^jasa/bore-pile-depok(\.html|/?)?$ /jasa/bore-pile/depok/ [R=301,L]
+RewriteRule ^jasa/bore-pile-tangerang(\.html|/?)?$ /jasa/bore-pile/tangerang/ [R=301,L]
+RewriteRule ^jasa/bore-pile-bekasi(\.html|/?)?$ /jasa/bore-pile/bekasi/ [R=301,L]
+RewriteRule ^jasa/bore-pile-bandung(\.html|/?)?$ /jasa/bore-pile/bandung/ [R=301,L]
+RewriteRule ^jasa/bore-pile-semarang(\.html|/?)?$ /jasa/bore-pile/semarang/ [R=301,L]
+RewriteRule ^jasa/bore-pile-surabaya(\.html|/?)?$ /jasa/bore-pile/surabaya/ [R=301,L]
+RewriteRule ^jasa/bore-pile-karawang(\.html|/?)?$ /jasa/bore-pile/karawang/ [R=301,L]
+
 # Redirect .html to trailing slash (/) â€” generic
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+(.*)\.html\ HTTP/
 RewriteRule ^(.*)\.html$ /$1/ [R=301,L]
@@ -43,4 +52,19 @@ RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !(.*)/$
 RewriteRule ^(.*)$ /$1/ [L,R=301]
+</IfModule>
+
+# === OPTIMASI CACHE (MENGURANGI BEBAN SERVER / MENCEGAH 429) ===
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/html "access plus 5 minutes"
+</IfModule>
+<IfModule mod_dir.c>
+    DirectoryIndex index.html
 </IfModule>
