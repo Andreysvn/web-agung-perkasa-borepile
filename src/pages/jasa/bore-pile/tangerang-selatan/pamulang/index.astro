@@ -1,28 +1,28 @@
-﻿---
-import KotaLayout from '../../layouts/KotaLayout.astro';
-import pricing from '../../data/harga.json';
-import cityData from '../../data/kota/pamulang.json';
+---
+import KotaLayout from '../../../../../layouts/KotaLayout.astro';
+import pricing from '../../../../../data/harga.json';
+import cityData from '../../../../../data/kota/pamulang.json';
 
 // Components
-import Breadcrumb from '../../components/shared/Breadcrumb.astro';
-import PageMeta from '../../components/shared/PageMeta.astro';
-import CityHero from '../../components/city/CityHero.astro';
-import CityCalculator from '../../components/city/CityCalculator.astro';
-import PriceTable from '../../components/shared/PriceTable.astro';
-import CityFactors from '../../components/city/CityFactors.astro';
-import CityAdditionalCosts from '../../components/city/CityAdditionalCosts.astro';
-import CityTips from '../../components/city/CityTips.astro';
-import CityProjects from '../../components/city/CityProjects.astro';
-import CitySoil from '../../components/city/CitySoil.astro';
-import MaterialPackages from '../../components/shared/MaterialPackages.astro';
-import CityGuarantee from '../../components/city/CityGuarantee.astro';
-import CityWhyUs from '../../components/city/CityWhyUs.astro';
-import CityEquipment from '../../components/city/CityEquipment.astro';
-import CityPortfolio from '../../components/city/CityPortfolio.astro';
-import CityKecamatan from '../../components/city/CityKecamatan.astro';
-import FaqSection from '../../components/shared/FaqSection.astro';
-import CityArticles from '../../components/city/CityArticles.astro';
-import CityInternalLinks from '../../components/city/CityInternalLinks.astro';
+import Breadcrumb from '../../../../../components/shared/Breadcrumb.astro';
+import PageMeta from '../../../../../components/shared/PageMeta.astro';
+import CityHero from '../../../../../components/city/CityHero.astro';
+import CityCalculator from '../../../../../components/city/CityCalculator.astro';
+import PriceTable from '../../../../../components/shared/PriceTable.astro';
+import CityFactors from '../../../../../components/city/CityFactors.astro';
+import CityAdditionalCosts from '../../../../../components/city/CityAdditionalCosts.astro';
+import CityTips from '../../../../../components/city/CityTips.astro';
+import CityProjects from '../../../../../components/city/CityProjects.astro';
+import CitySoil from '../../../../../components/city/CitySoil.astro';
+import MaterialPackages from '../../../../../components/shared/MaterialPackages.astro';
+import CityGuarantee from '../../../../../components/city/CityGuarantee.astro';
+import CityWhyUs from '../../../../../components/city/CityWhyUs.astro';
+import CityEquipment from '../../../../../components/city/CityEquipment.astro';
+import CityPortfolio from '../../../../../components/city/CityPortfolio.astro';
+import CityKecamatan from '../../../../../components/city/CityKecamatan.astro';
+import FaqSection from '../../../../../components/shared/FaqSection.astro';
+import CityArticles from '../../../../../components/city/CityArticles.astro';
+import CityInternalLinks from '../../../../../components/city/CityInternalLinks.astro';
 
 // Format harga untuk meta deskripsi
 const mesinMulai = pricing.mesin.find((item) => item.price > 0)?.price.toLocaleString('id-ID') || "120.000";
@@ -34,7 +34,7 @@ const updateDate = new Date(cityData.priceUpdatedAt || pricing.priceUpdatedAt).t
 // SEO
 const seoTitle = `Jasa & Harga Bore Pile ${cityData.name} Terpercaya | Agung Perkasa`;
 const seoDesc = `Jasa Bore Pile & Strauss Pile ${cityData.name} terpercaya. Harga mesin mulai Rp${mesinMulai}/m, manual Rp${manualMulai}/m. Melayani seluruh ${cityData.name}.`;
-const canonical = `https://agungperkasaborepile.com/jasa/${cityData.slug}/`;
+const canonical = `https://agungperkasaborepile.com/jasa/bore-pile/${cityData.slug}/`;
 
 const firstMesinPrice = pricing.mesin[0]?.price || 120000;
 const firstManualPrice = pricing.manual[0]?.price || 70000;
@@ -163,4 +163,3 @@ const serviceSchema = JSON.stringify({
     <!-- Section 16: Internal Links -->
     <CityInternalLinks internalLinks={cityData.internalLinks} />
 </KotaLayout>
-

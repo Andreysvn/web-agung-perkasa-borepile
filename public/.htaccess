@@ -17,6 +17,20 @@ RewriteRule ^harga/bore-pile-80cm\.html$ /harga/bore-pile/80cm/ [R=301,L]
 # Galeri: /galeri/ tidak punya index.html, redirect ke galeri/gallery/
 RewriteRule ^galeri/?$ /galeri/gallery/ [R=301,L]
 
+# === REDIRECT URL LAMA FLAT → HIERARKI WILAYAH ===
+# Tangerang Selatan
+RewriteRule ^jasa/bore-pile-bsd/?$ /jasa/bore-pile/tangerang-selatan/bsd/ [R=301,L]
+RewriteRule ^jasa/bore-pile-ciputat/?$ /jasa/bore-pile/tangerang-selatan/ciputat/ [R=301,L]
+RewriteRule ^jasa/bore-pile-pamulang/?$ /jasa/bore-pile/tangerang-selatan/pamulang/ [R=301,L]
+RewriteRule ^jasa/bore-pile-tangerang-selatan/?$ /jasa/bore-pile/tangerang-selatan/ [R=301,L]
+RewriteRule ^jasa/bore-pile-bintaro/?$ /jasa/bore-pile/tangerang-selatan/bintaro/ [R=301,L]
+# Tangerang
+RewriteRule ^jasa/bore-pile-karawaci/?$ /jasa/bore-pile/tangerang/karawaci/ [R=301,L]
+# Bogor
+RewriteRule ^jasa/bore-pile-cibubur/?$ /jasa/bore-pile/bogor/cibubur/ [R=301,L]
+# Bekasi
+RewriteRule ^jasa/bore-pile-cikarang/?$ /jasa/bore-pile/bekasi/cikarang/ [R=301,L]
+
 # Redirect .html to trailing slash (/) — generic
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+(.*)\.html\ HTTP/
 RewriteRule ^(.*)\.html$ /$1/ [R=301,L]
