@@ -1,0 +1,163 @@
+﻿/*
+ * harga-komponen.css
+ * Style UNIK halaman harga — dimuat via extraCss pada KotaLayout
+ * borepile-kota.css handle shared components
+ * File ini HANYA tambahin style yang belum ada di borepile-kota.css
+ * Wajib pakai CSS variables dari borepile-kota.css, TIDAK hardcoded
+ */
+
+/* DIAMETER BADGE */
+.diameter-badge {
+    background: var(--brand-primary, #1a365d);
+    color: #ffffff; padding: 0.5rem 1rem; border-radius: var(--radius-md, 8px);
+    font-size: 0.85rem; margin-bottom: 1rem;
+    display: inline-block; font-weight: 600;
+}
+
+/* PAGE TITLE */
+.page-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: var(--text-heading, #1a365d);
+    margin-bottom: 1rem; line-height: 1.3;
+}
+
+/* SECTION HEADING */
+.section-heading {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: var(--text-heading, #1a365d);
+    margin-bottom: 1rem; padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color, #cbd5e1);
+}
+.section-heading-sm {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    color: var(--text-heading, #1a365d); margin-bottom: 0.75rem;
+}
+
+/* TIPS SECTION */
+.tips-section {
+    background: var(--bg-page, #f8fafc); padding: 1rem; border-radius: var(--radius-lg, 12px);
+    margin: 1.5rem 0; border-left: 4px solid var(--brand-primary, #1a365d);
+}
+.tips-heading { color: var(--text-heading, #1a365d); margin-bottom: 0.5rem; font-size: 1rem; }
+.tips-section ul { list-style: none; padding: 0; }
+.tips-section li { padding: 0.3rem 0; font-size: 0.95rem; color: var(--text-body, #475569); }
+
+/* PROJECT EXAMPLES */
+.project-examples-section { margin: 2rem 0; }
+.project-heading {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    color: var(--text-heading, #1a365d); margin-bottom: 1rem;
+}
+.project-row { display: flex; flex-wrap: wrap; gap: 1rem; }
+.project-img { flex: 0 0 280px; min-width: 200px; }
+.project-caption {
+    font-size: 0.75rem; color: var(--text-muted, #94a3b8);
+    margin-top: 0.3rem; text-align: center;
+}
+.project-text { flex: 1; min-width: 250px; display: flex; align-items: center; }
+.project-note {
+    background: var(--bg-page, #f8fafc); padding: 1rem; border-radius: var(--radius-lg, 12px);
+    margin-top: 1rem; border-left: 4px solid var(--brand-primary, #1a365d); font-size: 0.9rem;
+    color: var(--text-body, #475569);
+}
+.price-total { color: var(--brand-primary, #1a365d); font-weight: 700; }
+
+/* COMMITMENT BOX */
+.commitment-box {
+    background: var(--bg-page, #f8fafc);
+    padding: 1.5rem; border-radius: var(--radius-lg, 12px); margin: 2rem 0;
+    text-align: center; border: 1px solid var(--border-color, #cbd5e1);
+}
+.commitment-box .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+.commitment-box p { font-size: 0.95rem; line-height: 1.6; color: var(--text-body, #475569); }
+
+/* WHY CHOOSE US */
+.why-section {
+    margin: 2rem 0; padding: 1.5rem; background: var(--bg-surface, #fff);
+    border-radius: var(--radius-lg, 12px); box-shadow: var(--shadow-sm);
+}
+.why-title {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    color: var(--text-heading, #1a365d); margin-bottom: 0.5rem;
+}
+.why-sub { font-size: 0.95rem; color: var(--text-muted, #94a3b8); margin-bottom: 1rem; }
+
+/* PORTFOLIO JAKARTA */
+.portfolio-jakarta-section {
+    margin: 1.5rem 0; padding: 0;
+}
+.portfolio-jakarta-title {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    color: var(--text-heading, #1a365d); margin-bottom: 0.5rem;
+}
+.portfolio-jakarta-sub { font-size: 0.95rem; color: var(--text-muted, #94a3b8); margin-bottom: 1rem; }
+.proyek-jakarta-box { margin-top: 1rem; }
+.proyek-jakarta-heading {
+    font-size: 0.95rem; font-weight: 600;
+    color: var(--text-heading, #1a365d); margin-bottom: 1rem;
+}
+.proyek-jakarta-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+@media (min-width: 640px) { .proyek-jakarta-grid { grid-template-columns: repeat(2, 1fr); } }
+.proyek-jakarta-item {
+    background: var(--bg-surface, #fff); border-radius: var(--radius-md, 8px);
+    overflow: hidden; border: 1px solid var(--border-color, #cbd5e1);
+    transition: all 0.2s ease;
+}
+.proyek-jakarta-item:hover {
+    border-color: var(--brand-primary, #1a365d);
+    box-shadow: var(--shadow-md); transform: translateY(-2px);
+}
+.proyek-jakarta-item img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.proyek-jakarta-caption { padding: 0.75rem; display: flex; flex-direction: column; gap: 0.25rem; }
+.proyek-jakarta-label {
+    font-size: 0.85rem; color: var(--brand-primary, #1a365d);
+    font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.proyek-jakarta-detail { font-size: 0.9rem; color: var(--text-body, #475569); line-height: 1.5; }
+.proyek-jakarta-link { text-align: center; margin-top: 1rem; font-weight: 500; }
+.proyek-jakarta-link a { color: var(--brand-primary, #1a365d); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; }
+.proyek-jakarta-link a:hover { color: var(--brand-primary, #1a365d); }
+
+/* EQUIPMENT CUSTOM LAYOUT */
+.equip-title {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    color: var(--text-heading, #1a365d); margin: 2rem 0 0.5rem;
+}
+.equip-sub { font-size: 0.95rem; color: var(--text-muted, #94a3b8); margin-bottom: 1rem; }
+.equip-icon-inline { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem; }
+.equip-icon-inline img { width: 24px; height: 24px; border-radius: 50%; }
+.equip-icon-inline h4 { font-size: 1rem; color: var(--text-heading, #1a365d); margin: 0; }
+.equip-info p { font-size: 0.85rem; color: var(--text-body, #475569); line-height: 1.5; margin-bottom: 0.3rem; }
+
+/* TEXT HELPERS */
+.text-konsultasi { color: var(--brand-primary, #1a365d); font-weight: 600; }
+
+/* ILLUSTRATION ROW */
+.illustration-row {
+    display: flex; flex-wrap: wrap; gap: 1.5rem;
+    margin: 1.5rem 0; align-items: center;
+}
+.illustration-img {
+    flex: 1; min-width: 200px; text-align: center;
+}
+.illustration-img img {
+    width: 100%; max-width: 400px; height: auto;
+    border-radius: var(--radius-lg, 12px);
+    box-shadow: var(--shadow-md, 0 4px 12px rgba(0,0,0,0.1));
+}
+.illustration-img .caption {
+    font-size: 0.75rem; color: var(--text-muted, #94a3b8);
+    margin-top: 0.3rem;
+}
+.illustration-text {
+    flex: 1.5; color: var(--text-body, #475569);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .illustration-row { flex-direction: column; }
+    .illustration-img { flex: none; }
+    .project-row { flex-direction: column; }
+    .project-img { flex: none; }
+    .project-img img { height: 180px; }
+}

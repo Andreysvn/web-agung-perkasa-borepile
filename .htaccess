@@ -1,0 +1,70 @@
+﻿<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+
+
+# === REDIRECT SPESIFIK URL LAMA YANG SUDAH RANKING ===
+# Harga bore-pile-Xcm.html â†’ harga/bore-pile/Xcm/
+RewriteRule ^harga/bore-pile-30cm\.html$ /harga/bore-pile/30cm/ [R=301,L]
+RewriteRule ^harga/bore-pile-40cm\.html$ /harga/bore-pile/40cm/ [R=301,L]
+RewriteRule ^harga/bore-pile-50cm\.html$ /harga/bore-pile/50cm/ [R=301,L]
+RewriteRule ^harga/bore-pile-60cm\.html$ /harga/bore-pile/60cm/ [R=301,L]
+RewriteRule ^harga/bore-pile-80cm\.html$ /harga/bore-pile/80cm/ [R=301,L]
+
+# Galeri: /galeri/ tidak punya index.html, redirect ke galeri/gallery/
+RewriteRule ^galeri/?$ /galeri/gallery/ [R=301,L]
+
+# === REDIRECT URL LAMA FLAT â†’ HIERARKI WILAYAH ===
+# Tangerang Selatan
+RewriteRule ^jasa/bore-pile-bsd(\.html|/?)?$ /jasa/bore-pile/tangerang-selatan/bsd/ [R=301,L]
+RewriteRule ^jasa/bore-pile-ciputat(\.html|/?)?$ /jasa/bore-pile/tangerang-selatan/ciputat/ [R=301,L]
+RewriteRule ^jasa/bore-pile-pamulang(\.html|/?)?$ /jasa/bore-pile/tangerang-selatan/pamulang/ [R=301,L]
+RewriteRule ^jasa/bore-pile-tangerang-selatan(\.html|/?)?$ /jasa/bore-pile/tangerang-selatan/ [R=301,L]
+RewriteRule ^jasa/bore-pile-bintaro(\.html|/?)?$ /jasa/bore-pile/tangerang-selatan/bintaro/ [R=301,L]
+# Tangerang
+RewriteRule ^jasa/bore-pile-karawaci(\.html|/?)?$ /jasa/bore-pile/tangerang/karawaci/ [R=301,L]
+# Bogor
+RewriteRule ^jasa/bore-pile-cibubur(\.html|/?)?$ /jasa/bore-pile/bogor/cibubur/ [R=301,L]
+# Bekasi
+RewriteRule ^jasa/bore-pile-cikarang(\.html|/?)?$ /jasa/bore-pile/bekasi/cikarang/ [R=301,L]
+
+# === REDIRECT KOTA UTAMA ===
+RewriteRule ^jasa/bore-pile-jakarta(\.html|/?)?$ /jasa/bore-pile/jakarta/ [R=301,L]
+RewriteRule ^jasa/bore-pile-bogor(\.html|/?)?$ /jasa/bore-pile/bogor/ [R=301,L]
+RewriteRule ^jasa/bore-pile-depok(\.html|/?)?$ /jasa/bore-pile/depok/ [R=301,L]
+RewriteRule ^jasa/bore-pile-tangerang(\.html|/?)?$ /jasa/bore-pile/tangerang/ [R=301,L]
+RewriteRule ^jasa/bore-pile-bekasi(\.html|/?)?$ /jasa/bore-pile/bekasi/ [R=301,L]
+RewriteRule ^jasa/bore-pile-bandung(\.html|/?)?$ /jasa/bore-pile/bandung/ [R=301,L]
+RewriteRule ^jasa/bore-pile-semarang(\.html|/?)?$ /jasa/bore-pile/semarang/ [R=301,L]
+RewriteRule ^jasa/bore-pile-surabaya(\.html|/?)?$ /jasa/bore-pile/surabaya/ [R=301,L]
+RewriteRule ^jasa/bore-pile-karawang(\.html|/?)?$ /jasa/bore-pile/karawang/ [R=301,L]
+
+# Redirect .html to trailing slash (/) â€” generic
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+(.*)\.html\ HTTP/
+RewriteRule ^(.*)\.html$ /$1/ [R=301,L]
+
+# Redirect index.html to /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+(.*)index\.html\ HTTP/
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+
+# Add trailing slash if not a file and doesn't have one
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ /$1/ [L,R=301]
+</IfModule>
+
+# === OPTIMASI CACHE (MENGURANGI BEBAN SERVER / MENCEGAH 429) ===
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/html "access plus 5 minutes"
+</IfModule>
+<IfModule mod_dir.c>
+    DirectoryIndex index.html
+</IfModule>
