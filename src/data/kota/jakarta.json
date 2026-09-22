@@ -167,15 +167,15 @@
       },
       {
         "name": "Gawangan",
-        "desc": "Gawangan cocok untuk area yang tidak bisa diakses oleh mini crane. Karena ukuran dan bentuknya yang tidak sebesar mini crane, gawangan cocok untuk area yang memiliki akses terbatas (tidak muat jika mini crane lewat). Ø30-80 cm, paling sering digunakan untuk membuat rumah, ruko, dan bangunan 1-2 lantai lainnya di gang sempit.",
+        "desc": "Gawangan cocok untuk area yang tidak bisa diakses oleh mini crane. Karena ukuran dan bentuknya yang tidak sebesar mini crane, gawangan cocok untuk area yang memiliki akses terbatas (tidak muat jika mini crane lewat). Ø30-80 cm, paling sering digunakan untuk membuat rumah, ruko, dan bangunan 1-2 lantai lainnya di gang sempit (strauss pile).",
         "image": "/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg",
         "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk bore pile ketika area tidak bisa dijangkau oleh mini crane di Jakarta"
       },
       {
         "name": "Strauss Pile (bore pile manual)",
-        "desc": "Alat bor manual full menggunakan tenaga manusia dalam proses pengeboran (diputar oleh tukang bore pile), memakai metode dry boring (bor kering). Ø20-40cm, cocok untuk lokasi seperti di gang sempit dan area terbatas lainnya yang tidak bisa dijangkau mini crane dan gawangan, karena mobilisasi yang lebih fleksibel (bisa menggunakan motor).",
+        "desc": "Alat bor manual full menggunakan tenaga manusia dalam proses pengeboran (diputar oleh tukang bore pile), memakai metode dry boring (bor kering). Ø20-40cm, cocok untuk lokasi seperti di gang sempit (strauss pile) dan area terbatas lainnya yang tidak bisa dijangkau mini crane dan gawangan, karena mobilisasi yang lebih fleksibel (bisa menggunakan motor).",
         "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
-        "imageAlt": "Strauss pile (bore pile manual) untuk pondasi di gang sempit dan area terbatas Jakarta lainnya"
+        "imageAlt": "Strauss pile (bore pile manual) untuk pondasi di gang sempit (strauss pile) dan area terbatas Jakarta lainnya"
       }
     ]
   },
@@ -275,7 +275,7 @@
     },
     {
       "q": "Apakah bore pile bisa dikerjakan di lahan sempit di Jakarta?",
-      "a": "Bisa. Untuk lahan sempit di Jakarta, kami punya solusi <strong>Strauss Pile (bore pile manual)</strong> yang bisa masuk gang sempit dengan mobilisasi pakai motor. Juga ada <strong>Gawangan</strong> untuk area yang tidak bisa dijangkau mini crane. Konsultasikan kondisi lahan Anda, kami siap cek lokasi."
+      "a": "Bisa. Untuk lahan sempit di Jakarta, kami punya solusi <strong>Strauss Pile (bore pile manual)</strong> yang bisa masuk gang sempit (strauss pile) dengan mobilisasi pakai motor. Juga ada <strong>Gawangan</strong> untuk area yang tidak bisa dijangkau mini crane. Konsultasikan kondisi lahan Anda, kami siap cek lokasi."
     },
     {
       "q": "Berapa biaya mobilisasi bore pile ke berbagai wilayah Jakarta?",
@@ -373,7 +373,7 @@
       "usage": "hotel, gedung bertingkat"
     }
   ],
-  "priceUpdatedAt": "2026-08-19",
+  "priceUpdatedAt": "2026-09-22",
   "projectNote": "<strong>Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan. Kecepatan pengerjaan dipengaruhi oleh kondisi lapangan, akses lokasi, karakteristik tanah, dan yang paling penting adalah pasokan air yang cukup untuk metode wash boring.<br><br>Butuh harga khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
   "soilReasons": {
     "title": "Mengapa Bore Pile Pilihan Tepat untuk Wilayah Jakarta?",

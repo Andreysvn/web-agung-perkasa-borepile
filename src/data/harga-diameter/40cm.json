@@ -3,21 +3,21 @@
   "diameterNum": 40,
   "highlightDiameter": "40 cm",
   "title": "Harga Bore Pile 40cm Terbaru 2026 Per Meter | Agung Perkasa",
-  "h1": "Harga Bore Pile Diameter 40cm Terbaru 2026",
+  "h1": "Harga Bore Pile Diameter 40cm: Spesifikasi Komersial (Ruko & Kantor)",
   "canonical": "https://agungperkasaborepile.com/harga/bore-pile/40cm/",
   "badge": "Spesialisasi Diameter 40cm",
   "heroImage": "/imgs/borepile-dan-truk-molen.webp",
-  "heroAlt": "Proses pengeboran bore pile diameter 40cm dengan mini crane di samping truk molen",
-  "heroCaption": "Bore pile mini crane diameter 40cm untuk proyek ruko dan kantor",
-  "heroText": "<strong>Bore pile diameter 40cm</strong> adalah ukuran yang sering digunakan untuk bangunan komersial seperti <strong>ruko, kantor, rumah sakit, dan bangunan 2-3 lantai</strong>. \n                    Kalkulator ini dibuat untuk menghitung estimasi <strong>total biaya</strong> jasa borepile dari harga diameter 40cm (mesin & manual), bisa mengatur harga sendiri sesuai keinginan. Dibuat oleh tim Agung Perkasa Borepile dari data proyek nyata yang kami kerjakan di lapangan.",
-  "descriptionTemplate": "Harga bore pile diameter 40cm terbaru 2026 seluruh Pulau Jawa. Mesin mulai Rp{mesin}/m, manual Rp{manual}/m. Kalkulator estimasi biaya. Konsultasi gratis.",
-  "localBusinessDescTemplate": "Jasa bore pile diameter 40cm terpercaya dengan pengalaman lebih dari 10 tahun. Harga bore pile mesin mulai Rp{mesin}/m, manual mulai Rp{manual}/m.",
+  "heroAlt": "Proses pengeboran bore pile 40cm dengan mesin mini crane untuk pondasi ruko dan kantor",
+  "heroCaption": "Pengeboran bore pile 40cm untuk proyek bangunan komersial",
+  "heroText": "<strong>Bore pile diameter 40cm</strong> adalah standar ukuran pondasi yang paling tepat untuk bangunan komersial kelas menengah seperti <strong>ruko dan gedung perkantoran 2-3 lantai</strong>. \n\nDengan daya dukung beban mencapai 25-40 ton per titik, ukuran 40cm memberikan jaminan kekuatan struktur yang jauh lebih solid dibandingkan 30cm. Ukuran ini sangat aman untuk mencegah risiko bangunan amblas atau retak akibat beban operasional yang berat. Tim Agung Perkasa sudah terbiasa mengerjakan ratusan titik bore pile 40cm dengan rapi, presisi, dan selesai tepat waktu sesuai gambar kerja Anda.",
+  "descriptionTemplate": "Harga jasa bore pile diameter 40cm terbaru 2026. Standar pondasi komersial (ruko & kantor 2-3 lantai). Mesin mulai Rp{mesin}/m. Konsultasi gratis.",
+  "localBusinessDescTemplate": "Kontraktor jasa bore pile terpercaya. Spesialisasi diameter 40cm untuk struktur ruko dan kantor dengan daya dukung 25-40 ton per titik.",
   "defaultDiameter": 40,
   "priceTableNote": "Berikut <strong>harga JASA PENGEBORAN SAJA</strong> (belum termasuk material beton & besi) untuk wilayah Jakarta dan sekitarnya. Kedalaman pengeboran bergantung pada diameter dan kondisi lapisan tanah, di lapangan kami pernah tembus hingga kedalaman 25-30 meter, pastikan cek sondir tanah dahulu agar mengetahui kedalaman yang tepat untuk pengeboran hingga mencapai tanah keras.",
   "mesinHighlight": {
     "diameter": "40 cm",
     "maxDepth": "30 meter",
-    "suitable": "Ruko, kantor 2-3 lantai, rumah sakit"
+    "suitable": "Ruko, Kantor, dan Fasilitas Komersial 2-3 Lantai"
   },
   "showManualHighlight": true,
   "manualNote": "",
@@ -25,7 +25,7 @@
     "diameter": "40 cm",
     "price": "120.000",
     "maxDepth": "10 meter",
-    "suitable": "Ruko, kantor, bangunan 2 lantai (tanah padat)"
+    "suitable": "Renovasi Area Terbatas (Tanah Padat)"
   },
   "factors": [
     {
@@ -182,7 +182,7 @@
   "materialPackage": {
     "diameter": "Diameter 40cm",
     "price": "Hubungi Kami",
-    "includes": "Jasa bor, perakitan besi, dan pengecoran beton. Besi tulangan 6D13 SNI, sengkang D8, beton mix K250",
+    "includes": "Jasa bor, perakitan besi, dan pengecoran beton. Besi standar SNI + beton readymix K300 atau sesuai permintaan.",
     "minOrder": "200m untuk mesin, dan 100m untuk manual",
     "note": "*Harga paket dapat disesuaikan dengan spesifikasi material yang Anda inginkan (K225, K250, K300, dll)."
   },
@@ -254,36 +254,24 @@
   ],
   "faq": [
     {
-      "q": "Apakah bore pile diameter 40cm cukup kuat untuk ruko 2-3 lantai?",
-      "a": "<strong>Sangat cukup.</strong> Dengan kedalaman 10-15 meter, diameter 40cm mampu menahan beban ruko dan kantor 2-3 lantai dengan aman. Daya dukungnya mencapai 25-40 ton."
+      "q": "Apakah bore pile diameter 40cm direkomendasikan untuk ruko 3 lantai?",
+      "a": "<strong>Sangat kuat.</strong> Bangunan ruko 3 lantai biasanya menampung beban operasional yang berat (barang dagangan dan aktivitas orang). Dengan daya dukung 25-40 ton per titik, pondasi bore pile 40cm yang dibor sampai menyentuh tanah keras sudah lebih dari cukup untuk menahan beban ruko 3 lantai dengan aman tanpa risiko amblas."
     },
     {
-      "q": "Berapa standar harga jasa bor diameter 40cm?",
-      "a": "Standar harga jasa bor diameter 40cm: <strong>mesin Rp135.000/m, manual sekitar Rp120.000/m</strong> karena jarang tukang bor manual yang ingin mengambil diameter tersebut (terlalu berat), harga tersebut hanya untuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton (belum termasuk material).\""
+      "q": "Berapa rincian harga jasa bore pile diameter 40cm per meter?",
+      "a": "Untuk wilayah Jabodetabek, harga jasa bor diameter 40cm menggunakan <strong>mesin (Mini Crane/Gawangan) adalah Rp135.000 per meter</strong>. Kami juga menyediakan jasa manual (Strauss Pile) di harga Rp120.000 per meter, namun kami lebih menyarankan pemakaian mesin karena proses pengeboran 40cm secara manual memakan waktu lebih lama. Harga di atas adalah biaya murni untuk jasa bor, perakitan besi tulangan, dan pengecoran (belum termasuk material beton dan besi)."
     },
     {
-      "q": "Bisa pakai bore pile manual untuk diameter 40cm?",
-      "a": "Bisa. Bore pile manual bisa melayani diameter 40cm dengan kedalaman maksimal 10 meter. Harga lebih ekonomis, cocok untuk proyek kecil dan area terbatas dengan tanah padat."
+      "q": "Kapan sebaiknya menggunakan diameter 40cm dibanding 30cm?",
+      "a": "Jika Anda membangun rumah tinggal biasa, diameter 30cm sudah cukup. Namun, jika Anda membangun fasilitas komersial (ruko, perkantoran, minimarket) yang jarak antar-tiangnya (bentang kolom) lebih lebar dan beban bangunannya lebih berat, kami sangat menyarankan Anda naik ke diameter 40cm agar pondasi jauh lebih kokoh dan aman jangka panjang."
     },
     {
-      "q": "Berapa jumlah titik ideal untuk bore pile diameter 40cm?",
-      "a": "Untuk ruko atau kantor dengan luas 150-300m², jumlah titik ideal antara <strong>16-24 titik</strong>. Konsultasikan dengan tim teknis kami untuk perhitungan yang lebih akurat sesuai gambar bangunan Anda."
+      "q": "Berapa titik pondasi yang dibutuhkan untuk ruko ukuran standar?",
+      "a": "Sebagai gambaran kasar, satu unit ruko standar (misalnya ukuran 5x15 meter) dengan struktur 2-3 lantai biasanya membutuhkan <strong>12 hingga 18 titik</strong> bore pile ukuran 40cm. Namun, jumlah pasti dan jarak antar-tiangnya harus selalu mengikuti acuan gambar kerja struktur dari arsitek Anda."
     },
     {
-      "q": "Apakah melayani area Bekasi, Tangerang, Bogor?",
-      "a": "Betul. Kami melayani area <strong>Jabodetabek</strong> (Jakarta, Bekasi, Bogor, Depok, Tangerang)."
-    },
-    {
-      "q": "Apakah melayani area luar Jabodetabek?",
-      "a": "Ya. Kami melayani seluruh area pulau Jawa sesuai permintaan proyek, tetapi ada perbedaan harga mobilisasi alat bore pile."
-    },
-    {
-      "q": "Berapa kedalaman maksimal bore pile diameter 40cm?",
-      "a": "Untuk bore pile mesin (mini crane) diameter 40cm, kedalaman maksimal mencapai <strong>30 meter</strong>. Sedangkan untuk bore pile manual (strauss pile) diameter 40cm, kedalaman maksimal <strong>10 meter</strong>. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir di lokasi proyek Anda. Semakin lunak tanah, semakin dalam pengeboran yang dibutuhkan hingga mencapai tanah keras."
-    },
-    {
-      "q": "Berapa biaya total bore pile 40cm untuk ruko 2 lantai?",
-      "a": "Untuk ruko 2 lantai dengan luas 150-300m², biasanya membutuhkan <strong>16-24 titik</strong> bore pile diameter 40cm dengan kedalaman 10-15 meter. Estimasi biaya jasa bor (belum termasuk material):</p><ul><li><strong>Mesin (Mini Crane):</strong> Rp135.000/m × 12m × 20 titik = <strong>Rp32.400.000</strong> + mobilisasi Rp2-3jt</li><li><strong>Manual (Strauss Pile):</strong> Rp120.000/m × 8m × 20 titik = <strong>Rp19.200.000</strong> + mobilisasi Rp1-1,5jt</li></ul><p>Gunakan <a href=\"#calculator-heading\">kalkulator di atas</a> untuk menghitung estimasi biaya proyek Anda secara lebih akurat."
+      "q": "Bagaimana proses mobilisasi mesin bore pile untuk diameter 40cm?",
+      "a": "Mesin bor Mini Crane dan Gawangan yang kami gunakan bisa diangkut menggunakan truk standar. Selama lokasi proyek (seperti perumahan atau kompleks ruko) memiliki lebar jalan akses minimal 3 meter, mesin kami bisa masuk dan bermanuver menuju titik pengeboran dengan aman tanpa merusak aspal atau paving jalan."
     }
   ],
   "internalLinks": [

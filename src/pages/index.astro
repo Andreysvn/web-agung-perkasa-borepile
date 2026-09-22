@@ -1,11 +1,14 @@
 ﻿---
+import pricing from '../data/harga.json';
+const mesinPrice = pricing.mesin.find(i => i.price > 0)?.price || 120000;
+const manualPrice = pricing.manual.find(i => i.price > 0)?.price || 75000;
+const maxManualDepth = 8;
 // src/pages/index.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { localBusinessSchema } from '../lib/schema.js';
 import config from '../data/config.json';
 import FaIcon from '../components/icons/FaIcon.astro';
 ---
-
 <BaseLayout title="Jasa Bore Pile Profesional Terpercaya" bodyClass="home" preloadImage="/imgs/header-beranda-bore-pile.webp">
 
     <!-- ===== HEADER / HERO ===== -->
@@ -128,7 +131,7 @@ import FaIcon from '../components/icons/FaIcon.astro';
                                 <tr><td>Kedalaman hingga</td><td>30 meter</td><td>10 meter</td></tr>
                                 <tr><td>Kapasitas Beban</td><td>50-200 ton</td><td>10-30 ton</td></tr>
                                 <tr><td>Waktu Pengerjaan</td><td>1-3 titik/hari</td><td>1-3 titik/hari</td></tr>
-                                <tr><td>Biaya</td><td>Rp 120.000 - 360.000/m</td><td>Rp 75.000 - 120.000/m</td></tr>
+                                <tr><td>Biaya</td><td>Mulai Rp {mesinPrice.toLocaleString('id-ID')}/m</td><td>Mulai Rp {manualPrice.toLocaleString('id-ID')}/m</td></tr>
                                 <tr><td>Cocok Untuk</td><td>Proyek sedang, besar, dan tanah lunak</td><td>Proyek kecil, sedang, dan area sempit</td></tr>
                             </tbody>
                         </table>
@@ -166,7 +169,7 @@ import FaIcon from '../components/icons/FaIcon.astro';
                     <img src="/imgs/borepile-mesin-biru.webp" alt="Harga Bore Pile Diameter 30cm" width="600" height="400" loading="lazy">
                     <div class="project-info">
                         <h3>Harga Bore Pile Diameter 30cm</h3>
-                        <p>Khusus untuk rumah 1-2 lantai. Harga mulai dari Rp120.000/m (mesin) & Rp75.000/m (manual atau strauss pile).</p>
+                        <p>Khusus untuk rumah 1-2 lantai. Harga mulai dari Rp{mesinPrice.toLocaleString('id-ID')}/m (mesin) & Rp{manualPrice.toLocaleString('id-ID')}/m (manual atau strauss pile).</p>
                         <a href="/harga/bore-pile/30cm/" class="btn btn-primary">Lihat Harga & Kalkulator â†’</a>
                     </div>
                 </div>
@@ -232,7 +235,7 @@ import FaIcon from '../components/icons/FaIcon.astro';
             <div class="faq-container">
                 <div class="faq-item">
                     <button class="faq-question" aria-label="Jawaban perbedaan borepile dan strauss pile">Apa perbedaan utama antara borepile dan strauss pile? <FaIcon class="fas fa-chevron-down" /></button>
-                    <div class="faq-answer"><p><strong>Borepile</strong> menggunakan mesin bor mini crane atau gawangan, kedalaman hingga 30m dan diameter bisa 30-110cm. <strong>Strauss pile</strong> menggunakan bor manual (menggunakan tenaga manusia), kedalaman hingga 10m, diameter 20-40cm. Perbedaan utamanya adalah borepile menggunakan mesin sedangkan strauss pile menggunakan tenaga manusia, proses pengerjaannya tetap sama yaitu pengeboran, perakitan besi tulangan, dan pengecoran beton langsung di area proyek (tidak seperti tiang pancang).</p></div>
+                    <div class="faq-answer"><p><strong>Borepile</strong> menggunakan mesin bor mini crane atau gawangan, kedalaman hingga 30m dan diameter bisa 30-110cm. <strong>Strauss pile</strong> menggunakan bor manual (menggunakan tenaga manusia), kedalaman hingga ${maxManualDepth}m, diameter 20-40cm. Perbedaan utamanya adalah borepile menggunakan mesin sedangkan strauss pile menggunakan tenaga manusia, proses pengerjaannya tetap sama yaitu pengeboran, perakitan besi tulangan, dan pengecoran beton langsung di area proyek (tidak seperti tiang pancang).</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" aria-label="Jawaban kelebihan dan kekurangan borepile">Apa kelebihan dan kekurangan borepile? <FaIcon class="fas fa-chevron-down" /></button>
@@ -240,7 +243,7 @@ import FaIcon from '../components/icons/FaIcon.astro';
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" aria-label="Jawaban kisaran biaya borepile">Berapa kisaran biaya para jasa borepile dan strauss pile? <FaIcon class="fas fa-chevron-down" /></button>
-                    <div class="faq-answer"><p><strong>Harga terbaru 2026:</strong> Borepile mesin mulai Rp120.000/m, Borepile manual mulai Rp75.000/m. Estimasi biaya dapat dihitung menggunakan kalkulator di artikel kami</p></div>
+                    <div class="faq-answer"><p><strong>Harga terbaru 2026:</strong> Borepile mesin mulai Rp{mesinPrice.toLocaleString('id-ID')}/m, Borepile manual mulai Rp{manualPrice.toLocaleString('id-ID')}/m. Estimasi biaya dapat dihitung menggunakan kalkulator di artikel kami</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" aria-label="Jawaban lama waktu pengerjaan">Berapa lama waktu pengerjaan untuk menyelesaikan pondasi bore pile atau strauss pile? <FaIcon class="fas fa-chevron-down" /></button>
@@ -516,7 +519,9 @@ import FaIcon from '../components/icons/FaIcon.astro';
 
 
     <!-- FAQ Schema injected for rich snippets -->
-    <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Apa perbedaan utama antara borepile dan strauss pile?","acceptedAnswer":{"@type":"Answer","text":"Borepile menggunakan mesin bor mini crane atau gawangan, kedalaman hingga 30m dan diameter bisa 30-80cm. Strauss pile menggunakan bor manual, kedalaman hingga 10m, diameter 20-40cm."}},{"@type":"Question","name":"Apa kelebihan dan kekurangan borepile?","acceptedAnswer":{"@type":"Answer","text":"Kelebihan: Kapasitas beban tinggi, cocok tanah lunak, kedalaman hingga 30m, minim getaran tanah. Kekurangan: Biaya lebih tinggi, perlu area luas untuk mobilisasi alat."}},{"@type":"Question","name":"Berapa kisaran biaya para jasa borepile dan strauss pile?","acceptedAnswer":{"@type":"Answer","text":"Borepile mesin mulai Rp120.000/m, Borepile manual mulai Rp75.000/m."}},{"@type":"Question","name":"Berapa lama waktu pengerjaan untuk menyelesaikan pondasi bore pile atau strauss pile?","acceptedAnswer":{"@type":"Answer","text":"Borepile: 2-4 titik/hari. Strauss Pile: 1-3 titik/hari."}},{"@type":"Question","name":"Apa perbedaan bore pile dengan tiang pancang (pile driving)?","acceptedAnswer":{"@type":"Answer","text":"Bore pile dengan pengeboran (minim getaran) dan bisa mencapai 30m. Tiang pancang dengan pemukulan (getaran besar) maksimal 15-20m. Bore pile aman untuk pemukiman padat."}},{"@type":"Question","name":"Apakah bore pile aman untuk bangunan tetangga sekitar saya?","acceptedAnswer":{"@type":"Answer","text":"Sangat aman. Bore pile menggunakan metode pengeboran, bukan pemukulan seperti tiang pancang. Jadi getaran yang dihasilkan sangat sedikit."}},{"@type":"Question","name":"Apakah wajib ada data sondir sebelum bore pile?","acceptedAnswer":{"@type":"Answer","text":"SANGAT WAJIB. Data sondir (soil test) sangat penting untuk menentukan kedalaman bore pile yang tepat untuk mencapai tanah keras."}},{"@type":"Question","name":"Mana yang lebih baik untuk rumah 2 lantai: bore pile atau tiang pancang?","acceptedAnswer":{"@type":"Answer","text":"Kami lebih merekomendasikan bore pile karena minim getaran, minim polusi suara, dan bisa mencapai tanah keras lebih dalam."}},{"@type":"Question","name":"Apakah bore pile untuk rumah 1 lantai terlalu berlebihan?","acceptedAnswer":{"@type":"Answer","text":"Tidak berlebihan. Biasanya menggunakan strauss pile (manual) mulai Rp75.000/m, sangat terjangkau dan minim getaran."}},{"@type":"Question","name":"Apakah Agung Perkasa melayani proyek di luar Jakarta?","acceptedAnswer":{"@type":"Answer","text":"Benar. Kami melayani seluruh wilayah Jabodetabek dan seluruh wilayah di Pulau Jawa."}},{"@type":"Question","name":"Apakah ada survei lokasi gratis?","acceptedAnswer":{"@type":"Answer","text":"Ya. Kami menyediakan konsultasi dan survei lokasi untuk wilayah Jabodetabek."}},{"@type":"Question","name":"Berapa diameter bore pile yang cocok untuk rumah tinggal?","acceptedAnswer":{"@type":"Answer","text":"Untuk rumah 1-2 lantai umumnya menggunakan diameter 20-30 cm berdasarkan hasil sondir."}},{"@type":"Question","name":"Bagaimana cara mendapatkan penawaran harga bore pile?","acceptedAnswer":{"@type":"Answer","text":"Kirimkan lokasi proyek, gambar kerja, dan data sondir ke tim kami."}}]})}></script>
+    <script type="application/ld+json" set:html={JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Apa perbedaan utama antara borepile dan strauss pile?","acceptedAnswer":{"@type":"Answer","text":"Borepile menggunakan mesin bor mini crane atau gawangan, kedalaman hingga 30m dan diameter bisa 30-80cm. Strauss pile menggunakan bor manual, kedalaman hingga ${maxManualDepth}m, diameter 20-40cm."}},{"@type":"Question","name":"Apa kelebihan dan kekurangan borepile?","acceptedAnswer":{"@type":"Answer","text":"Kelebihan: Kapasitas beban tinggi, cocok tanah lunak, kedalaman hingga 30m, minim getaran tanah. Kekurangan: Biaya lebih tinggi, perlu area luas untuk mobilisasi alat."}},{"@type":"Question","name":"Berapa kisaran biaya para jasa borepile dan strauss pile?","acceptedAnswer":{"@type":"Answer","text":"Borepile mesin mulai Rp120.000/m, Borepile manual mulai Rp75.000/m."}},{"@type":"Question","name":"Berapa lama waktu pengerjaan untuk menyelesaikan pondasi bore pile atau strauss pile?","acceptedAnswer":{"@type":"Answer","text":"Borepile: 2-4 titik/hari. Strauss Pile: 1-3 titik/hari."}},{"@type":"Question","name":"Apa perbedaan bore pile dengan tiang pancang (pile driving)?","acceptedAnswer":{"@type":"Answer","text":"Bore pile dengan pengeboran (minim getaran) dan bisa mencapai 30m. Tiang pancang dengan pemukulan (getaran besar) maksimal 15-20m. Bore pile aman untuk pemukiman padat."}},{"@type":"Question","name":"Apakah bore pile aman untuk bangunan tetangga sekitar saya?","acceptedAnswer":{"@type":"Answer","text":"Sangat aman. Bore pile menggunakan metode pengeboran, bukan pemukulan seperti tiang pancang. Jadi getaran yang dihasilkan sangat sedikit."}},{"@type":"Question","name":"Apakah wajib ada data sondir sebelum bore pile?","acceptedAnswer":{"@type":"Answer","text":"SANGAT WAJIB. Data sondir (soil test) sangat penting untuk menentukan kedalaman bore pile yang tepat untuk mencapai tanah keras."}},{"@type":"Question","name":"Mana yang lebih baik untuk rumah 2 lantai: bore pile atau tiang pancang?","acceptedAnswer":{"@type":"Answer","text":"Kami lebih merekomendasikan bore pile karena minim getaran, minim polusi suara, dan bisa mencapai tanah keras lebih dalam."}},{"@type":"Question","name":"Apakah bore pile untuk rumah 1 lantai terlalu berlebihan?","acceptedAnswer":{"@type":"Answer","text":"Tidak berlebihan. Biasanya menggunakan strauss pile (manual) mulai Rp75.000/m, sangat terjangkau dan minim getaran."}},{"@type":"Question","name":"Apakah Agung Perkasa melayani proyek di luar Jakarta?","acceptedAnswer":{"@type":"Answer","text":"Benar. Kami melayani seluruh wilayah Jabodetabek dan seluruh wilayah di Pulau Jawa."}},{"@type":"Question","name":"Apakah ada survei lokasi gratis?","acceptedAnswer":{"@type":"Answer","text":"Ya. Kami menyediakan konsultasi dan survei lokasi untuk wilayah Jabodetabek."}},{"@type":"Question","name":"Berapa diameter bore pile yang cocok untuk rumah tinggal?","acceptedAnswer":{"@type":"Answer","text":"Untuk rumah 1-2 lantai umumnya menggunakan diameter 20-30 cm berdasarkan hasil sondir."}},{"@type":"Question","name":"Bagaimana cara mendapatkan penawaran harga bore pile?","acceptedAnswer":{"@type":"Answer","text":"Kirimkan lokasi proyek, gambar kerja, dan data sondir ke tim kami."}}]})}></script>
 
 </BaseLayout>
+
+
 

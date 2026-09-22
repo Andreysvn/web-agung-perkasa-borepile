@@ -10,7 +10,7 @@
   "heroWidth": 372,
   "heroHeight": 350,
   "heroText": "Layanan jasa bore pile Depok profesional untuk pondasi rumah tinggal, ruko, perumahan cluster, dan bangunan kos-kosan dekat kawasan kampus (UI, Gunadarma). Tarif pengeboran mesin (mini crane) mulai Rp120.000/m dan bore pile manual (strauss pile) ekonomis mulai Rp75.000/m untuk jalan sempit. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Gunakan kalkulator estimasi biaya praktis kami untuk menghitung kebutuhan anggaran proyek Anda secara instan. Menjangkau seluruh kawasan Depok: Cinere, Sawangan, Margonda, Cimanggis, Bojongsari, Beji, hingga Pancoran Mas.",
-  "localBusinessDesc": "Jasa bore pile dan strauss pile profesional di Depok. Solusi pondasi dalam bebas getaran untuk hunian cluster, kos mahasiswa di area kampus, dan ruko di gang sempit. Tarif mesin mulai Rp120.000/m dan manual mulai Rp75.000/m.",
+  "localBusinessDesc": "Jasa bore pile dan strauss pile profesional di Depok. Solusi pondasi dalam bebas getaran untuk hunian cluster, kos mahasiswa di area kampus, dan ruko di gang sempit (strauss pile). Tarif mesin mulai Rp120.000/m dan manual mulai Rp75.000/m.",
   "mobilizationCost": "Mini crane: Rp2.5-4jt | Strauss pile (bore pile manual): Rp1-1.5jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -96,7 +96,7 @@
     },
     {
       "title": "Akses Jalan & Kepadatan Lingkungan",
-      "text": "Pengerjaan di perumahan cluster padat, area sekitar kampus dengan gang sempit, atau jalan pemukiman dengan portal lingkungan mempengaruhi pemilihan jenis alat: mini crane lincah atau strauss pile manual yang tanpa mengganggu mobilitas warga sekitar."
+      "text": "Pengerjaan di perumahan cluster padat, area sekitar kampus dengan gang sempit (strauss pile), atau jalan pemukiman dengan portal lingkungan mempengaruhi pemilihan jenis alat: mini crane lincah atau strauss pile manual yang tanpa mengganggu mobilitas warga sekitar."
     },
     {
       "title": "Fungsi Bangunan & Skala Konstruksi",
@@ -145,7 +145,7 @@
   "whyUs": [
     {
       "title": "Solusi Handal Akses Sempit & Kawasan Padat",
-      "desc": "Peralatan kami dirancang fleksibel untuk menjangkau gang sempit pemukiman, lingkungan kos-kosan dekat kampus, maupun cluster perumahan Depok tanpa merusak fasilitas jalan lingkungan."
+      "desc": "Peralatan kami dirancang fleksibel untuk menjangkau gang sempit (strauss pile) pemukiman, lingkungan kos-kosan dekat kampus, maupun cluster perumahan Depok tanpa merusak fasilitas jalan lingkungan."
     },
     {
       "title": "Bebas Getaran & Aman bagi Bangunan Tetangga",
@@ -177,9 +177,9 @@
       },
       {
         "name": "Strauss Pile (Manual)",
-        "desc": "Metode bor manual ramah lingkungan bertenaga manusia (dry boring), diameter 20-40 cm. Pilihan tepat untuk gang sempit dekat kampus atau renovasi rumah tanpa akses mesin.",
+        "desc": "Metode bor manual ramah lingkungan bertenaga manusia (dry boring), diameter 20-40 cm. Pilihan tepat untuk gang sempit (strauss pile) dekat kampus atau renovasi rumah tanpa akses mesin.",
         "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
-        "imageAlt": "Alat bor strauss pile manual Agung Perkasa untuk pondasi bangunan di gang sempit dan lingkungan padat Depok"
+        "imageAlt": "Alat bor strauss pile manual Agung Perkasa untuk pondasi bangunan di gang sempit (strauss pile) dan lingkungan padat Depok"
       }
     ]
   },
@@ -219,10 +219,10 @@
     },
     {
       "q": "Mengapa bore pile sangat cocok untuk pembangunan kos-kosan dekat kampus dan perumahan di Depok?",
-      "a": "Kawasan sekitar kampus (UI, Gunadarma) di Beji dan Margonda didominasi kos-kosan dan perumahan padat dengan jarak antarbangunan yang sangat rapat. Bore pile beroperasi tanpa dentuman getaran sehingga tidak merusak dinding rumah tetangga, minim kebisingan, serta memiliki opsi alat kompak (strauss pile & gawangan) yang sanggup bermanuver di gang sempit selebar 1-2 meter."
+      "a": "Kawasan sekitar kampus (UI, Gunadarma) di Beji dan Margonda didominasi kos-kosan dan perumahan padat dengan jarak antarbangunan yang sangat rapat. Bore pile beroperasi tanpa dentuman getaran sehingga tidak merusak dinding rumah tetangga, minim kebisingan, serta memiliki opsi alat kompak (strauss pile & gawangan) yang sanggup bermanuver di gang sempit (strauss pile) selebar 1-2 meter."
     },
     {
-      "q": "Bagaimana solusi pondasi jika proyek berada di gang sempit yang tidak bisa dilalui mini crane?",
+      "q": "Bagaimana solusi pondasi jika proyek berada di gang sempit (strauss pile) yang tidak bisa dilalui mini crane?",
       "a": "Kami menyediakan metode bore pile manual (strauss pile) dan mesin bor sistem gawangan yang dapat dirakit langsung di titik bor. Strauss pile digerakkan oleh tenaga kerja berpengalaman menggunakan pipa stang bor manual (diameter 20-40 cm kedalaman hingga 6-10 meter), menjadikannya solusi terbaik untuk renovasi rumah tinggal maupun pembangunan kos mahasiswa di gang pemukiman sempit Depok."
     },
     {
@@ -331,12 +331,12 @@
       },
       {
         "title": "Keunggulan Metode Wash Boring & Dry Boring",
-        "desc": "Teknik bor basah (wash boring) sangat efektif mengatasi lapisan tanah berair di Depok Utara, sedangkan dry boring manual sangat efisien untuk area berkontur tanah padat di gang sempit."
+        "desc": "Teknik bor basah (wash boring) sangat efektif mengatasi lapisan tanah berair di Depok Utara, sedangkan dry boring manual sangat efisien untuk area berkontur tanah padat di gang sempit (strauss pile)."
       }
     ],
     "conclusion": "<p>Tiap sudut Kota Depok memiliki elevasi tanah dan kepadatan akses yang berbeda-beda. Kami mengaplikasikan teknik bore pile dan strauss pile yang tepat sasaran demi menjamin kekuatan jangka panjang struktur bangunan Anda.</p><p><strong>Portofolio Proyek di Depok:</strong> Kami berpengalaman mengerjakan beragam pondasi hunian cluster di Cinere dan Sawangan, kos-kosan mahasiswa di sekitar kampus UI dan Gunadarma, ruko Margonda, hingga fasilitas komersial di seluruh wilayah Depok.</p>"
   },
-  "priceUpdatedAt": "2026-09-21",
+  "priceUpdatedAt": "2026-09-22",
   "projectNote": "<strong>Catatan:</strong> Rincian estimasi biaya di atas mencakup jasa pengeboran lubang, perakitan besi tulangan tiang, dan pengecoran beton cair, <strong>belum termasuk material fisik</strong> (besi beton dan ready mix). Contoh di atas merupakan rekam jejak proyek riil yang telah kami selesaikan di lapangan Depok. Durasi kerja dipengaruhi oleh akses jalan, tipe tanah, serta kontinuitas pasokan air untuk metode bor basah.<br><br>Memerlukan penawaran khusus diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

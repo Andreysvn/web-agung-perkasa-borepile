@@ -16,6 +16,14 @@ interface Props {
 }
 
 const { equipment, cityName } = Astro.props;
+
+function getEquipmentUrl(name) {
+    const n = name.toLowerCase();
+    if (n.includes('gawang')) return '/alat/gawangan/';
+    if (n.includes('strauss') || n.includes('manual')) return '/alat/strauss-pile/';
+    return '/alat/mini-crane/';
+}
+
 ---
 
 <h3 class="equip-title">Alat yang Kami gunakan di lapangan</h3>
@@ -29,13 +37,18 @@ const { equipment, cityName } = Astro.props;
             ) : (
                 <img class="equip-img" src="/imgs/logo-agung-perkasa-thumb.webp" alt={`Ikon ${item.name}`} width="80" height="80" loading="lazy" />
             )}
-            <div class="equip-info">
+            <div class="equip-info" style="display: flex; flex-direction: column; flex: 1;">
                 <div class="equip-icon-inline">
                     
                     <h4>{item.name}</h4>
                 </div>
                 <p>{item.desc || item.description || ''}</p>
-                <span class="equip-tag">{config.siteName.split(' ')[0]}</span>
+                <div style="margin-top: auto;">
+                    <span class="equip-tag">Agung Perkasa</span>
+                    <div style="margin-top: 10px;">
+                        <a href={getEquipmentUrl(item.name)} style="display: inline-block; font-size: 0.75rem; font-weight: 600; color: #1a365d; text-decoration: none;">Lihat detail selengkapnya &rarr;</a>
+                    </div>
+                </div>
             </div>
         </div>
     ))}

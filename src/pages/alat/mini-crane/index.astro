@@ -1,6 +1,12 @@
 ---
+import pricing from '../../../data/harga.json';
+const manualPrice = pricing.manual.find(i => i.price > 0)?.price || 75000;
+const mesinPrice = pricing.mesin.find(i => i.price > 0)?.price || 120000;
+
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import config from '../../../data/config.json';
+const dateObj = new Date(config.lastUpdated);
+const formattedDate = dateObj.toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
 import { organizationSchema, schemaPhone } from '../../../lib/schema.js';
 
 import FaIcon from '../../../components/icons/FaIcon.astro';
@@ -88,7 +94,7 @@ setTimeout(loadGTM, 3500);
             <div class="article-header">
                 <h1>Mesin Mini Crane untuk Bore Pile: Spesifikasi, Keunggulan, dan Kapan Harus Memilihnya</h1>
                 <div class="article-meta">
-                    <span><FaIcon class="fas fa-calendar-alt" /> 30 Agustus 2026</span>
+                    <span><FaIcon class="fas fa-calendar-alt" /> {formattedDate}</span>
                     <span><FaIcon class="fas fa-user" /> Agung Perkasa Borepile</span>
                     <span><FaIcon class="fas fa-clock" /> 7 menit baca</span>
                 </div>
@@ -141,7 +147,7 @@ setTimeout(loadGTM, 3500);
                     <li><strong>Membutuhkan Akses Luas:</strong> Truk pengangkut mini crane memerlukan jalan setidaknya 2-3 meter lebar untuk mobilisasi.</li>
                     <li><strong>Biaya Operasional Lebih Tinggi:</strong> Dibanding strauss pile, biaya per meter lebih mahal karena penggunaan mesin dan bahan bakar.</li>
                     <li><strong>Kebisingan:</strong> Suara mesin mungkin mengganggu di area pemukiman padat.</li>
-                    <li><strong>Ground Clearance:</strong> Tidak bisa masuk ke area dengan ketinggian langit-langit rendah atau akses tertutup.</li>
+                    <li><strong>Area Bermanuver Kaku:</strong> Karena sasis yang panjang dan kaku, mini crane sulit dikemudikan untuk berbelok patah di lahan sempit atau diposisikan pada lahan yang sangat miring.</li>
                 </ul>
 
                 <h2>Mini Crane vs Alat Lainnya</h2>
@@ -229,7 +235,7 @@ setTimeout(loadGTM, 3500);
                             <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
-                            <p>Harga bervariasi tergantung diameter dan kedalaman. Secara umum berkisar <strong>Rp120.000 - Rp400.000 per meter</strong> (belum termasuk material beton dan tulangan). Untuk penawaran akurat, silakan konsultasi gratis melalui WhatsApp kami.</p>
+                            <p>Harga bervariasi tergantung diameter dan kedalaman. Secara umum berkisar <strong>Rp{mesinPrice.toLocaleString('id-ID')} - Rp400.000 per meter</strong> (belum termasuk material beton dan tulangan). Harga di atas berlaku dengan <strong>syarat minimal volume 200 meter</strong>. Apabila total volume pengerjaan kurang dari 200 meter, silakan hubungi admin kami untuk mendapatkan penawaran harga borongan (lump sum).</p>
                         </div>
                     </div>
 
@@ -324,7 +330,7 @@ setTimeout(loadGTM, 3500);
             }
         },
         "datePublished": "2026-08-30",
-        "dateModified": "2026-08-30",
+        "dateModified": "${config.lastUpdated}",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://agungperkasaborepile.com/alat/mini-crane/"
@@ -355,7 +361,7 @@ setTimeout(loadGTM, 3500);
         },
         "url": "https://agungperkasaborepile.com/",
         "telephone": "+6285710277854",
-        "priceRange": "Rp70.000 - Rp350.000",
+        "priceRange": "Rp{manualPrice.toLocaleString('id-ID')} - Rp350.000",
         "openingHours": "Mo-Su 07:00-23:00",
         "areaServed": [
             { "@type": "City", "name": "Jakarta" },
@@ -394,7 +400,7 @@ setTimeout(loadGTM, 3500);
                 "name": "Berapa biaya bore pile dengan mini crane per meter?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Harga bervariasi tergantung diameter dan kedalaman. Secara umum berkisar Rp120.000 - Rp400.000 per meter (belum termasuk material beton dan tulangan)."
+                    "text": "Harga berkisar Rp{mesinPrice.toLocaleString('id-ID')} - Rp400.000 per meter (minimal volume 200 meter). Untuk volume di bawah 200 meter, silakan hubungi admin kami untuk penawaran harga borongan (lump sum)."
                 }
             },
             {

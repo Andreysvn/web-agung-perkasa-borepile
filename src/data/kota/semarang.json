@@ -84,7 +84,7 @@
     },
     {
       "title": "Akses Lapangan & Kepadatan Lingkungan",
-      "text": "Kawasan industri dan perumahan baru dengan akses jalan lebar memudahkan manuver mini crane. Untuk kawasan pemukiman padat atau gang sempit di pusat kota, kami menyediakan mesin gawangan dan opsi strauss pile manual."
+      "text": "Kawasan industri dan perumahan baru dengan akses jalan lebar memudahkan manuver mini crane. Untuk kawasan pemukiman padat atau gang sempit (strauss pile) di pusat kota, kami menyediakan mesin gawangan (untuk atap rendah) dan opsi strauss pile manual (untuk gang sempit (strauss pile))."
     },
     {
       "title": "Total Volume Pekerjaan (Panjang Kumulatif)",
@@ -122,7 +122,7 @@
       "image": null,
       "imageAlt": null,
       "imageCaption": null,
-      "specs": "Strauss pile (bore pile manual) Ø20cm, kedalaman 6m, 16 titik<br>Metode: Manual Putar - Akses gang sempit padat penduduk",
+      "specs": "Strauss pile (bore pile manual) Ø20cm, kedalaman 6m, 16 titik<br>Metode: Manual Putar - Akses gang sempit (strauss pile) padat penduduk",
       "costCalc": "6m × Rp75.000 × 16 = Rp7.200.000",
       "mobilization": "Rp2.000.000",
       "total": "Rp 7.200.000",
@@ -137,7 +137,7 @@
     },
     {
       "title": "Armada Lengkap & Terawat",
-      "desc": "Mengoperasikan mesin mini crane bertenaga tinggi, bor gawangan fleksibel untuk lorong sempit, hingga alat strauss pile manual yang terawat dan siap mobilisasi cepat."
+      "desc": "Mengoperasikan mesin mini crane bertenaga tinggi, bor gawangan fleksibel untuk atap rendah, hingga alat strauss pile manual yang terawat dan siap mobilisasi cepat."
     },
     {
       "title": "Efisiensi Pengerjaan & Mutu Terjaga",
@@ -167,7 +167,7 @@
         "name": "Strauss Pile (Manual)",
         "desc": "Peralatan bor manual bertenaga manusia dengan sistem putar tanpa kebisingan mesin, diameter 20-40 cm hingga kedalaman 10 meter. Solusi ekonomis untuk gang perkampungan padat Semarang.",
         "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
-        "imageAlt": "Strauss pile bore pile manual Agung Perkasa untuk gang sempit dan kawasan padat pemukiman di Semarang"
+        "imageAlt": "Strauss pile bore pile manual Agung Perkasa untuk gang sempit (strauss pile) dan kawasan padat pemukiman di Semarang"
       }
     ]
   },
@@ -226,8 +226,8 @@
       "a": "Metode wash boring wajib digunakan pada area Semarang Bawah (seperti Semarang Utara, Genuk, Semarang Barat, dan sekitarnya) yang memiliki lapisan tanah lempung basah berair. Air bertekanan dan sirkulasi lumpur diperlukan agar dinding lubang bor tidak longsor sebelum pipa tulangan besi dan adukan beton dimasukkan."
     },
     {
-      "q": "Bagaimana pengerjaan bore pile jika lokasi proyek berada di gang sempit Kota Semarang?",
-      "a": "Kami menyediakan opsi mesin gawangan yang dapat dibongkar pasang sehingga bisa dibawa melalui lorong sempit, serta layanan strauss pile manual tenaga manusia yang hanya membutuhkan ruang gerak selebar satu meter. Ini sangat efektif untuk pembangunan atau renovasi rumah di perkampungan padat tanpa mengganggu kenyamanan tetangga."
+      "q": "Bagaimana pengerjaan bore pile jika lokasi proyek berada di gang sempit (strauss pile) Kota Semarang?",
+      "a": "Kami menyediakan opsi mesin gawangan yang menaranya dapat dibongkar pasang sehingga bisa dikerjakan di bawah atap rendah, serta layanan strauss pile manual tenaga manusia yang hanya membutuhkan ruang gerak selebar satu meter. Ini sangat efektif untuk pembangunan atau renovasi rumah di perkampungan padat tanpa mengganggu kenyamanan tetangga."
     },
     {
       "q": "Apakah perlu uji sondir sebelum memesan jasa bore pile di wilayah Semarang?",
@@ -320,7 +320,7 @@
     ],
     "conclusion": "<p>Tantangan tanah lempung ekspansif dan penurunan tanah di Semarang Bawah serta kontur perbukitan di Semarang Atas menuntut pondasi yang kokoh dan tepat sasaran. Agung Perkasa siap memberikan solusi pondasi bore pile berkualitas tinggi untuk ketahanan bangunan Anda.</p><p><strong>Pengalaman Proyek Semarang:</strong> Kami telah berpengalaman menangani puluhan proyek mulai dari rumah tinggal bertingkat, ruko, gudang, hingga gedung perkantoran di seluruh penjuru Semarang dan Ungaran.</p>"
   },
-  "priceUpdatedAt": "2026-08-19",
+  "priceUpdatedAt": "2026-09-22",
   "projectNote": "<strong>Catatan Lapangan:</strong> Biaya yang tertera merupakan tarif jasa pengeboran, perakitan pembesian, dan pengecoran beton (<strong>belum termasuk pengadaan material beton ready mix dan besi tulangan</strong>). Contoh di atas diambil dari studi kasus pengerjaan riil di lapangan. Durasi pengerjaan dipengaruhi kondisi akses lokasi, karakteristik tanah lempung, serta kelancaran pasokan air kerja untuk metode wash boring.<br><br>Butuh rincian biaya khusus diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Cek detail harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

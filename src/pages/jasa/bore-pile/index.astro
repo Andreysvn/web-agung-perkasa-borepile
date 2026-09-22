@@ -1,4 +1,8 @@
 ---
+import pricing from '../../../data/harga.json';
+const manualPrice = pricing.manual.find(i => i.price > 0)?.price || 75000;
+const mesinPrice = pricing.mesin.find(i => i.price > 0)?.price || 120000;
+
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import config from '../../../data/config.json';
 import { organizationSchema, schemaPhone } from '../../../lib/schema.js';
@@ -17,7 +21,7 @@ const orgLd = JSON.stringify(organizationSchema({
 ---
 
 <BaseLayout title="Jasa Bore Pile Mesin"
-    description="Cari jasa bore pile di kota Anda. Melayani Jakarta, Bekasi, Tangerang, Depok, Bogor, Bandung, Karawang, Semarang, Surabaya. Harga mesin mulai Rp120.000/m dan manual mulai Rp75.000/m."
+    description="Cari jasa bore pile di kota Anda. Melayani Jakarta, Bekasi, Tangerang, Depok, Bogor, Bandung, Karawang, Semarang, Surabaya. Harga mesin mulai Rp{mesinPrice.toLocaleString('id-ID')}/m dan manual mulai Rp{manualPrice.toLocaleString('id-ID')}/m."
     bodyClass="services">
     <Fragment slot="head">
         <!-- Favicon -->

@@ -9,8 +9,8 @@
   "heroCaption": "Pengeboran pondasi bore pile mini crane untuk bangunan pemukiman dan kos di Ciputat",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "<strong>Harga bore pile Ciputat 2026</strong> untuk jasa pengeboran pondasi mulai dari <strong>Rp120.000/m menggunakan mesin mini crane</strong>, serta metode strauss pile (bor manual) mulai <strong>Rp70.000/m</strong>. Solusi tepat untuk pembangunan rumah tinggal, renovasi rumah kost bertingkat di gang sempit, hingga ruko komersial tanpa getaran yang merusak dinding tetangga. Gunakan kalkulator otomatis di bawah untuk menghitung estimasi biaya proyek Anda di Ciputat, Ciputat Timur, Sawah Baru, Sawah Lama, Serua, hingga Cirendeu.",
-  "localBusinessDesc": "Jasa bore pile & strauss pile Ciputat 2026 terpercaya. Harga bor mesin mulai Rp120.000/m, manual Rp70.000/m. Spesialis pondasi rumah tinggal, kos-kosan di pemukiman padat dan akses gang sempit. Tanpa getaran, bergaransi, survey gratis Ciputat & Ciputat Timur.",
+  "heroText": "<strong>Harga bore pile Ciputat 2026</strong> untuk jasa pengeboran pondasi mulai dari <strong>Rp120.000/m menggunakan mesin mini crane</strong>, serta metode strauss pile (bor manual) mulai <strong>Rp70.000/m</strong>. Solusi tepat untuk pembangunan rumah tinggal, renovasi rumah kost bertingkat di gang sempit (strauss pile), hingga ruko komersial tanpa getaran yang merusak dinding tetangga. Gunakan kalkulator otomatis di bawah untuk menghitung estimasi biaya proyek Anda di Ciputat, Ciputat Timur, Sawah Baru, Sawah Lama, Serua, hingga Cirendeu.",
+  "localBusinessDesc": "Jasa bore pile & strauss pile Ciputat 2026 terpercaya. Harga bor mesin mulai Rp120.000/m, manual Rp70.000/m. Spesialis pondasi rumah tinggal, kos-kosan di pemukiman padat dan akses gang sempit (strauss pile). Tanpa getaran, bergaransi, survey gratis Ciputat & Ciputat Timur.",
   "mobilizationCost": "Mini crane: Rp2-4jt | Strauss pile (bore pile manual): Rp1-1.5jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -84,7 +84,7 @@
     },
     {
       "title": "Akses Gang Sempit & Pemukiman Padat",
-      "text": "Sebagian besar wilayah Ciputat dan Ciputat Timur berupa pemukiman padat dengan lebar jalan terbatas. Jika truk mini crane tidak dapat masuk, kami menyediakan mesin gawangan portabel atau strauss pile manual yang dapat menjangkau gang sempit secara leluasa."
+      "text": "Sebagian besar wilayah Ciputat dan Ciputat Timur berupa pemukiman padat dengan lebar jalan terbatas. Jika truk mini crane tidak dapat masuk, kami menyediakan mesin gawangan portabel atau strauss pile manual yang dapat menjangkau gang sempit (strauss pile) secara leluasa."
     },
     {
       "title": "Karakteristik Lapisan Tanah Ciputat",
@@ -132,8 +132,8 @@
     {
       "title": "Rumah Tinggal Gang Sempit di Sawah Lama Ciputat",
       "image": "",
-      "imageAlt": "Pengerjaan pondasi strauss pile manual di gang sempit pemukiman Sawah Lama Ciputat",
-      "imageCaption": "Strauss pile (bor pile manual) untuk rumah tinggal di gang sempit Sawah Lama Ciputat",
+      "imageAlt": "Pengerjaan pondasi strauss pile manual di gang sempit (strauss pile) pemukiman Sawah Lama Ciputat",
+      "imageCaption": "Strauss pile (bor pile manual) untuk rumah tinggal di gang sempit (strauss pile) Sawah Lama Ciputat",
       "specs": "Strauss pile (bore pile manual) Ø30cm, kedalaman 6m, 24 titik",
       "costCalc": "6m × Rp95.000 × 24 = Rp13.680.000",
       "mobilization": "+ mobilisasi: Rp1.200.000",
@@ -177,9 +177,9 @@
       },
       {
         "name": "Strauss Pile (Bore Pile Manual)",
-        "desc": "Pengeboran manual menggunakan mata bor putar spiral tenaga tukang berpengalaman (metode bor kering). Solusi utama untuk proyek rumah tinggal atau kos di dalam gang sempit yang hanya bisa dilalui sepeda motor. Bebas polusi suara dan getaran.",
+        "desc": "Pengeboran manual menggunakan mata bor putar spiral tenaga tukang berpengalaman (metode bor kering). Solusi utama untuk proyek rumah tinggal atau kos di dalam gang sempit (strauss pile) yang hanya bisa dilalui sepeda motor. Bebas polusi suara dan getaran.",
         "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
-        "imageAlt": "Alat strauss pile manual Agung Perkasa untuk pondasi rumah di gang sempit pemukiman Ciputat"
+        "imageAlt": "Alat strauss pile manual Agung Perkasa untuk pondasi rumah di gang sempit (strauss pile) pemukiman Ciputat"
       }
     ]
   },
@@ -229,8 +229,8 @@
   },
   "faq": [
     {
-      "q": "Mengapa bore pile atau strauss pile sangat disarankan untuk lokasi gang sempit di Ciputat?",
-      "a": "Kawasan Ciputat memiliki banyak pemukiman padat dan jalan lingkungan sempit berukuran 1,5 hingga 2,5 meter. Alat berat tiang pancang tidak bisa masuk ke lokasi seperti ini. Metode strauss pile manual maupun mesin bor gawangan kami sangat fleksibel bermanuver di gang sempit, ramah lingkungan, serta tidak menimbulkan getaran benturan yang berisiko meretakkan tembok rumah tetangga."
+      "q": "Mengapa bore pile atau strauss pile sangat disarankan untuk lokasi gang sempit (strauss pile) di Ciputat?",
+      "a": "Kawasan Ciputat memiliki banyak pemukiman padat dan jalan lingkungan sempit berukuran 1,5 hingga 2,5 meter. Alat berat tiang pancang tidak bisa masuk ke lokasi seperti ini. Metode strauss pile manual maupun mesin bor gawangan kami sangat fleksibel bermanuver di gang sempit (strauss pile), ramah lingkungan, serta tidak menimbulkan getaran benturan yang berisiko meretakkan tembok rumah tetangga."
     },
     {
       "q": "Bagaimana rekomendasi bore pile untuk renovasi atau pembangunan rumah kost di Ciputat?",
@@ -242,7 +242,7 @@
     },
     {
       "q": "Berapa lama estimasi pengerjaan bore pile untuk bangunan rumah atau kost di Ciputat?",
-      "a": "Untuk volume standar 16-24 titik bor diameter 30cm dengan kedalaman 10-12 meter, pengerjaan menggunakan mesin mini crane membutuhkan waktu sekitar 4-7 hari kerja. Sementara pengerjaan strauss pile manual di gang sempit berkisar 6-9 hari kerja tergantung tingkat kepadatan tanah setempat."
+      "a": "Untuk volume standar 16-24 titik bor diameter 30cm dengan kedalaman 10-12 meter, pengerjaan menggunakan mesin mini crane membutuhkan waktu sekitar 4-7 hari kerja. Sementara pengerjaan strauss pile manual di gang sempit (strauss pile) berkisar 6-9 hari kerja tergantung tingkat kepadatan tanah setempat."
     },
     {
       "q": "Apakah pengeboran bore pile aman untuk dinding rumah tetangga yang berdempetan di Ciputat?",
@@ -264,7 +264,7 @@
       "imageAlt": "Perbandingan bore pile mini crane vs strauss pile manual untuk proyek pemukiman padat",
       "category": "Panduan Pondasi",
       "title": "Borepile vs Strauss Pile untuk Lahan Sempit",
-      "excerpt": "Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik untuk pemukiman padat dan gang sempit.",
+      "excerpt": "Perbandingan lengkap agar Anda dapat memilih jenis pondasi terbaik untuk pemukiman padat dan gang sempit (strauss pile).",
       "date": "Juni 2026"
     },
     {
@@ -346,7 +346,7 @@
       },
       {
         "title": "Minim Kebisingan Suara",
-        "desc": "Tingkat kebisingan jauh lebih rendah dibanding alat pancang drop hammer. Untuk gang sempit dan pemukiman rapat, metode strauss pile manual bahkan beroperasi nyaris tanpa polusi suara."
+        "desc": "Tingkat kebisingan jauh lebih rendah dibanding alat pancang drop hammer. Untuk gang sempit (strauss pile) dan pemukiman rapat, metode strauss pile manual bahkan beroperasi nyaris tanpa polusi suara."
       },
       {
         "title": "Adaptif untuk Lahan & Gang Sempit",
@@ -355,12 +355,12 @@
     ],
     "conclusion": "<p>Karakteristik tanah dan akses jalan di setiap kelurahan di Ciputat memiliki tantangan tersendiri. Kami siap menyesuaikan konfigurasi mesin bor untuk menjamin efisiensi dan kekuatan pondasi bangunan Anda.</p><p><strong>Pengalaman Proyek di Ciputat:</strong> Kami telah berpengalaman mengerjakan berbagai proyek rumah tinggal pribadi, komplek kos-kosan, ruko, dan bangunan bertingkat di seluruh penjuru Ciputat dan Tangerang Selatan.</p>"
   },
-  "priceUpdatedAt": "2026-08-19",
+  "priceUpdatedAt": "2026-09-22",
   "projectNote": "<strong>Catatan Proyek:</strong> Biaya yang tercantum merupakan estimasi ongkos jasa pengeboran, perakitan rangkaian besi tulangan spiral, dan pengecoran cor beton di lubang tiang, <strong>belum termasuk penyediaan material</strong> (beton dan besi). Kecepatan pelaksanaan pekerjaan dipengaruhi oleh lebar akses jalan pemukiman, daya dukung tanah Ciputat, ketersediaan suplai air untuk bor basah, serta faktor cuaca.<br><br>Memerlukan penawaran khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Cek informasi harga bore pile diameter 30cm selengkapnya &rarr;</a>",
   "tips": [
     {
       "diameter": "20-25 cm",
-      "usage": "pagar, kanopi, rumah 1 lantai di gang sempit (strauss pile manual)"
+      "usage": "pagar, kanopi, rumah 1 lantai di gang sempit (strauss pile) (strauss pile manual)"
     },
     {
       "diameter": "30 cm",

@@ -26,7 +26,9 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
 }).format(new Date(`${pricing.priceUpdatedAt}T00:00:00`));
 ---
 
-<BaseLayout title="Layanan Agung Perkasa | Jasa Bore Pile & Strauss Pile"
+<BaseLayout 
+    title="Layanan Jasa Pemborong Bore Pile & Strauss Pile Terdekat"
+    description="Layanan jasa pemborong bore pile (mesin) & strauss pile (manual) terdekat untuk proyek pondasi rumah dan ruko di Jabodetabek & Jawa. Harga mulai kompetitif."
     bodyClass="services">
     <Fragment slot="head">
         <!-- Favicon -->
@@ -375,7 +377,7 @@ setTimeout(loadGTM, 3500);
                 "name": "Berapa biaya bore pile per meter?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Harga mulai dari Rp75.000 - Rp120.000/meter tergantung diameter, kedalaman, dan jenis alat yang digunakan."
+                    "text": "Harga mulai dari Rp{manualPrice.toLocaleString('id-ID')} - Rp{mesinPrice.toLocaleString('id-ID')}/meter tergantung diameter, kedalaman, dan jenis alat yang digunakan."
                 }
             },
             {

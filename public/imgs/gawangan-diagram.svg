@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+    <defs>
+        <style>
+            .bg { fill: #f8fafc; }
+            .wall { fill: #e2e8f0; }
+            .roof { fill: #cbd5e1; }
+            .ground { fill: #94a3b8; }
+            .machine { fill: #0f172a; }
+            .accent { fill: #3b82f6; }
+            .text { font-family: sans-serif; font-size: 16px; fill: #334155; }
+            .title { font-family: sans-serif; font-size: 24px; font-weight: bold; fill: #0f172a; }
+            .measurement { stroke: #ef4444; stroke-width: 2; stroke-dasharray: 4; }
+            .measurement-text { font-family: sans-serif; font-size: 14px; fill: #ef4444; font-weight: bold; }
+        </style>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="800" height="500" class="bg"/>
+    <rect x="0" y="400" width="800" height="100" class="ground"/>
+    
+    <!-- Building/Roof Context -->
+    <rect x="50" y="50" width="700" height="20" class="roof"/>
+    <rect x="50" y="50" width="20" height="350" class="wall"/>
+    <rect x="730" y="50" width="20" height="350" class="wall"/>
+    
+    <!-- Gawangan Frame (A-Frame / Tripod / Gantry) -->
+    <!-- Left Leg -->
+    <line x1="380" y1="120" x2="300" y2="400" stroke="#0f172a" stroke-width="12" stroke-linecap="round"/>
+    <!-- Right Leg -->
+    <line x1="420" y1="120" x2="500" y2="400" stroke="#0f172a" stroke-width="12" stroke-linecap="round"/>
+    <!-- Top Bar -->
+    <line x1="360" y1="120" x2="440" y2="120" stroke="#0f172a" stroke-width="16" stroke-linecap="round"/>
+    
+    <!-- Drill Pipe -->
+    <line x1="400" y1="120" x2="400" y2="480" stroke="#64748b" stroke-width="8"/>
+    <!-- Drill Bit -->
+    <polygon points="380,480 420,480 400,500" fill="#3b82f6"/>
+    
+    <!-- Diesel Engine (Ground Level) -->
+    <rect x="520" y="320" width="120" height="80" rx="8" class="machine"/>
+    <circle cx="550" cy="360" r="20" class="accent"/>
+    <!-- Hose/Cable from Engine to Top -->
+    <path d="M 520 320 Q 480 200 440 120" fill="none" stroke="#3b82f6" stroke-width="6"/>
+
+    <!-- Measurements & Labels -->
+    <line x1="260" y1="70" x2="260" y2="400" class="measurement"/>
+    <text x="270" y="240" class="measurement-text">Tinggi Atap Terbatas</text>
+    
+    <line x1="120" y1="100" x2="400" y2="100" class="measurement"/>
+    <text x="130" y="90" class="measurement-text">Sistem Knock-Down (Bongkar Pasang)</text>
+    
+    <!-- Labels -->
+    <text x="60" y="30" class="title">Skema Mesin Bore Pile Gawangan</text>
+    <text x="500" y="300" class="text">Mesin Diesel (Sama dgn Mini Crane)</text>
+    <text x="320" y="50" class="text">Bisa dirakit di bawah kanopi/atap</text>
+
+    <!-- Water Pump -->
+    <rect x="200" y="350" width="60" height="50" rx="4" fill="#0f172a"/>
+    <path d="M 260 380 Q 300 400 400 400" fill="none" stroke="#3b82f6" stroke-width="4"/>
+    <text x="180" y="340" class="text">Pompa Air</text>
+</svg>
+

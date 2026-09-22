@@ -1,6 +1,13 @@
 ---
+import pricing from '../../data/harga.json';
+const manualPrice = pricing.manual.find(i => i.price > 0)?.price || 75000;
+const mesinPrice = pricing.mesin.find(i => i.price > 0)?.price || 120000;
+const maxManualDepth = pricing.manual.find(i => i.price > 0)?.maxDepth || 6;
+
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import config from '../../data/config.json';
+const dateObj = new Date(config.lastUpdated);
+const formattedDate = dateObj.toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
 
 import FaIcon from '../../components/icons/FaIcon.astro';
 
@@ -83,7 +90,7 @@ setTimeout(loadGTM, 3500);
             <div class="article-header">
                 <h1>Strauss Pile untuk Lokasi Sempit: Panduan Praktis</h1>
                 <div class="article-meta">
-                    <span><FaIcon class="fas fa-calendar-alt" /> 30 Agustus 2026</span>
+                    <span><FaIcon class="fas fa-calendar-alt" /> {formattedDate}</span>
                     <span><FaIcon class="fas fa-user" /> Agung Perkasa Borepile</span>
                     <span><FaIcon class="fas fa-clock" /> 6 menit baca</span>
                 </div>
@@ -177,7 +184,7 @@ setTimeout(loadGTM, 3500);
             <FaIcon class="fas fa-chevron-down" />
         </button>
         <div class="faq-answer">
-            <p>Biaya strauss pile berkisar <strong>Rp70.000 - Rp100.000 per meter</strong>. Harga ini sudah termasuk pengeboran, perakitan besi, dan pengecoran. Untuk lokasi sangat sempit, mungkin ada biaya tambahan mobilisasi kecil.</p>
+            <p>Biaya strauss pile berkisar <strong>Rp{manualPrice.toLocaleString('id-ID')} - Rp100.000 per meter</strong>. Harga ini sudah termasuk pengeboran, perakitan besi, dan pengecoran. Untuk lokasi sangat sempit, mungkin ada biaya tambahan mobilisasi kecil.</p>
         </div>
     </div>
 
@@ -268,7 +275,7 @@ setTimeout(loadGTM, 3500);
             }
         },
         "datePublished": "2026-08-30",
-        "dateModified": "2026-08-30",
+        "dateModified": "${config.lastUpdated}",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://agungperkasaborepile.com/artikel/strauss-lokasi-sempit/"
@@ -299,7 +306,7 @@ setTimeout(loadGTM, 3500);
         },
         "url": "https://agungperkasaborepile.com/",
         "telephone": "+6285710277854",
-        "priceRange": "Rp70.000 - Rp350.000",
+        "priceRange": "Rp{manualPrice.toLocaleString('id-ID')} - Rp360.000",
         "openingHours": "Mo-Su 07:00-23:00",
         "areaServed": [
             { "@type": "City", "name": "Jakarta" },
@@ -337,7 +344,7 @@ setTimeout(loadGTM, 3500);
             "name": "Berapa biaya strauss pile untuk lokasi sempit?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Biaya strauss pile berkisar Rp70.000 - Rp100.000 per meter. Harga ini sudah termasuk pengeboran, perakitan besi, dan pengecoran. Untuk lokasi sangat sempit, mungkin ada biaya tambahan mobilisasi kecil."
+                "text": "Biaya strauss pile berkisar Rp{manualPrice.toLocaleString('id-ID')} - Rp100.000 per meter. Harga ini sudah termasuk pengeboran, perakitan besi, dan pengecoran. Untuk lokasi sangat sempit, mungkin ada biaya tambahan mobilisasi kecil."
             }
         },
         {

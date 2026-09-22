@@ -88,7 +88,7 @@
     },
     {
       "title": "Aksesibilitas Lokasi & Regulasi Lingkungan",
-      "text": "Mobilisasi mini crane sangat lancar pada akses jalan ROW lebar kawasan industri dan perumahan modern. Namun untuk klaster perumahan mewah, pengelola kawasan mewajibkan pekerjaan minim getaran dan kebersihan ekstra bebas ceceran lumpur. Untuk pemukiman padat di gang sempit Tangerang Kota, unit gawangan atau strauss pile manual menjadi solusi yang paling fleksibel."
+      "text": "Mobilisasi mini crane sangat lancar pada akses jalan ROW lebar kawasan industri dan perumahan modern. Namun untuk klaster perumahan mewah, pengelola kawasan mewajibkan pekerjaan minim getaran dan kebersihan ekstra bebas ceceran lumpur. Untuk pemukiman padat di gang sempit (strauss pile) Tangerang Kota, unit gawangan (untuk area beratap) atau strauss pile manual (untuk gang sempit (strauss pile)) menjadi solusi yang paling fleksibel."
     },
     {
       "title": "Dimensi Diameter & Total Kedalaman Bor",
@@ -177,9 +177,9 @@
       },
       {
         "name": "Strauss Pile (bore pile manual)",
-        "desc": "Alat bor manual hemat biaya yang dioperasikan oleh tenaga ahli terampil dengan sistem dry boring (bor kering). Melayani diameter 20-40 cm hingga kedalaman 10 meter dengan tarif terjangkau mulai Rp75.000/m. Sangat cocok untuk renovasi hunian, pondasi ruko 2 lantai, atau gang sempit yang hanya dapat dijangkau roda dua.",
+        "desc": "Alat bor manual hemat biaya yang dioperasikan oleh tenaga ahli terampil dengan sistem dry boring (bor kering). Melayani diameter 20-40 cm hingga kedalaman 10 meter dengan tarif terjangkau mulai Rp75.000/m. Sangat cocok untuk renovasi hunian, pondasi ruko 2 lantai, atau gang sempit (strauss pile) yang hanya dapat dijangkau roda dua.",
         "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
-        "imageAlt": "Alat strauss pile bor manual terjangkau mulai 75 ribu per meter untuk renovasi rumah gang sempit di Tangerang"
+        "imageAlt": "Alat strauss pile bor manual terjangkau mulai 75 ribu per meter untuk renovasi rumah gang sempit (strauss pile) di Tangerang"
       }
     ]
   },
@@ -351,7 +351,7 @@
     ],
     "conclusion": "<p>Karakteristik tanah dan tantangan lingkungan di setiap sudut Tangerang menuntut penanganan yang cermat. Agung Perkasa menghadirkan tim ahli berpengalaman, armada bor teruji, dan ketelitian kerja untuk memastikan pondasi proyek Anda terpasang kokoh, tepat waktu, dan tepat anggaran.</p><p><strong>Pengalaman Proyek di Tangerang:</strong> Kami telah dipercaya mengerjakan berbagai proyek strategis—mulai dari pembangunan pabrik & gudang industri di Cikupa, Balaraja, dan Jatake, fasilitas kargo dan ruko dekat Bandara Soekarno-Hatta, hingga puluhan hunian mewah di kota mandiri Gading Serpong, Alam Sutera, BSD City, dan Lippo Karawaci.</p>"
   },
-  "priceUpdatedAt": "2026-08-19",
+  "priceUpdatedAt": "2026-09-22",
   "projectNote": "<strong>Catatan Penting:</strong> Estimasi biaya proyek di atas adalah untuk tarif jasa teknis pengeboran, perakitan tulangan besi, dan pengecoran tiang bor (<strong>tidak termasuk pengadaan material</strong> besi beton dan adukan semen ready-mix). Data tersebut diambil dari catatan pekerjaan nyata tim kami di lapangan. Kecepatan kerja dipengaruhi oleh faktor akses armada, cuaca, kekerasan lapisan tanah, serta suplai air kerja untuk metode bor basah.<br><br>Memerlukan penawaran detail untuk tiang diameter 30 cm? <a href=\"/harga/bore-pile/30cm/\">Lihat rincian harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

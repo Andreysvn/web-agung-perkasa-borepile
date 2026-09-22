@@ -177,7 +177,7 @@
       },
       {
         "name": "Strauss Pile (Manual)",
-        "desc": "Pengeboran bor manual hemat biaya bertenaga tukang spesialis. Sangat praktis untuk gang sempit di perumahan padat Bekasi dengan tarif ekonomis mulai Rp 75.000/m.",
+        "desc": "Pengeboran bor manual hemat biaya bertenaga tukang spesialis. Sangat praktis untuk gang sempit (strauss pile) di perumahan padat Bekasi dengan tarif ekonomis mulai Rp 75.000/m.",
         "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
         "imageAlt": "Alat strauss pile bor manual Agung Perkasa untuk pondasi rumah tinggal di gang padat penduduk Bekasi"
       }
@@ -245,7 +245,7 @@
     },
     {
       "q": "Bagaimana mengatasi tantangan jalan sempit dan portal perumahan di pemukiman padat Bekasi?",
-      "a": "Kami memiliki armada <strong>Strauss Pile manual</strong> dan mesin bor <strong>Gawangan modular</strong>. Untuk lokasi yang terhalang portal pendek perumahan atau gang sempit perkotaan, peralatan strauss pile dapat dimobilisasi dengan mudah tanpa mengganggu lalu lintas warga, dengan tarif terjangkau mulai dari Rp 75.000/m."
+      "a": "Kami memiliki armada <strong>Strauss Pile manual</strong> dan mesin bor <strong>Gawangan modular</strong>. Untuk lokasi yang terhalang portal pendek perumahan atau gang sempit (strauss pile) perkotaan, peralatan strauss pile dapat dimobilisasi dengan mudah tanpa mengganggu lalu lintas warga, dengan tarif terjangkau mulai dari Rp 75.000/m."
     },
     {
       "q": "Berapa biaya mobilisasi alat bore pile ke lokasi proyek di wilayah Bekasi?",
@@ -354,7 +354,7 @@
     ],
     "conclusion": "<p>Setiap zona di Bekasi memiliki tantangan geoteknik tersendiri. Tim kami siap menyesuaikan metode dan alat bor terbaik guna menjamin stabilitas jangka panjang bangunan Anda.</p><p><strong>Pengalaman Proyek Kami di Bekasi:</strong> Kami telah sukses menyelesaikan berbagai proyek pondasi bore pile di Tambun, Cikarang, Summarecon Bekasi, Harapan Indah, Grand Galaxy, hingga berbagai kawasan industri strategis di Bekasi dan sekitarnya.</p>"
   },
-  "priceUpdatedAt": "2026-08-19",
+  "priceUpdatedAt": "2026-09-22",
   "projectNote": "<strong>Catatan:</strong> Estimasi biaya di atas mencakup jasa pengeboran, fabrikasi/perakitan besi tulangan, dan pengecoran beton pondasi, <strong>di luar material cor beton dan besi tulangan</strong>. Proyek di atas merupakan dokumentasi riil pengerjaan kami di lapangan. Kelancaran pengerjaan didukung oleh kemudahan akses armada, stabilitas struktur tanah, dan ketersediaan sumber air untuk metode wash boring.<br><br>Memerlukan penawaran khusus bore pile ukuran 30 cm? <a href=\"/harga/bore-pile/30cm/\">Cek informasi harga bore pile diameter 30cm selengkapnya &rarr;</a>",
   "tips": [
     {

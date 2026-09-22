@@ -1,6 +1,13 @@
 ---
+import pricing from '../../data/harga.json';
+const manualPrice = pricing.manual.find(i => i.price > 0)?.price || 75000;
+const mesinPrice = pricing.mesin.find(i => i.price > 0)?.price || 120000;
+const maxManualDepth = pricing.manual.find(i => i.price > 0)?.maxDepth || 6;
+
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import config from '../../data/config.json';
+const dateObj = new Date(config.lastUpdated);
+const formattedDate = dateObj.toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
 
 import FaIcon from '../../components/icons/FaIcon.astro';
 
@@ -83,7 +90,7 @@ setTimeout(loadGTM, 3500);
             <div class="article-header">
                 <h1>Pondasi Bore Pile untuk Area Terbatas: Solusi untuk Lahan Sempit</h1>
                 <div class="article-meta">
-                    <span><FaIcon class="fas fa-calendar-alt" /> 30 Agustus 2026</span>
+                    <span><FaIcon class="fas fa-calendar-alt" /> {formattedDate}</span>
                     <span><FaIcon class="fas fa-user" /> Agung Perkasa Borepile</span>
                     <span><FaIcon class="fas fa-clock" /> 7 menit baca</span>
                 </div>
@@ -156,7 +163,7 @@ setTimeout(loadGTM, 3500);
             <FaIcon class="fas fa-chevron-down" />
         </button>
         <div class="faq-answer">
-            <p><strong>Strauss pile:</strong> minimal 1 meter. <strong>Mini crane:</strong> minimal 2-3 meter. <strong>Gawangan:</strong> minimal 4-5 meter. Untuk akses sangat sempit, strauss pile adalah pilihan paling fleksibel.</p>
+            <p><strong>Strauss pile:</strong> minimal lebar 1 meter. <strong>Mini crane dan Gawangan:</strong> minimal lebar pintu 2 meter untuk masuknya chassis mesin. Keduanya membutuhkan minimal area yang sama.</p>
         </div>
     </div>
 
@@ -176,7 +183,7 @@ setTimeout(loadGTM, 3500);
             <FaIcon class="fas fa-chevron-down" />
         </button>
         <div class="faq-answer">
-            <p>Biaya bervariasi tergantung metode yang dipilih. <strong>Strauss pile Rp70.000-100.000/m</strong>, sedangkan <strong>mini crane Rp120.000-190.000/m</strong>. Harga sudah termasuk pengeboran, perakitan besi, dan pengecoran.</p>
+            <p>Biaya bervariasi tergantung metode yang dipilih. <strong>Strauss pile Rp{manualPrice.toLocaleString('id-ID')}-100.000/m</strong>, sedangkan <strong>mini crane Rp{mesinPrice.toLocaleString('id-ID')}-190.000/m</strong>. Harga sudah termasuk pengeboran, perakitan besi, dan pengecoran.</p>
         </div>
     </div>
 
@@ -267,7 +274,7 @@ setTimeout(loadGTM, 3500);
             }
         },
         "datePublished": "2026-08-30",
-        "dateModified": "2026-08-30",
+        "dateModified": "${config.lastUpdated}",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://agungperkasaborepile.com/artikel/pondasi-area-terbatas/"
@@ -298,7 +305,7 @@ setTimeout(loadGTM, 3500);
         },
         "url": "https://agungperkasaborepile.com/",
         "telephone": "+6285710277854",
-        "priceRange": "Rp70.000 - Rp350.000",
+        "priceRange": "Rp{manualPrice.toLocaleString('id-ID')} - Rp350.000",
         "openingHours": "Mo-Su 07:00-23:00",
         "areaServed": [
             { "@type": "City", "name": "Jakarta" },
@@ -320,7 +327,7 @@ setTimeout(loadGTM, 3500);
             "name": "Berapa minimal lebar akses untuk bore pile?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Strauss pile: minimal 1 meter. Mini crane: minimal 2-3 meter. Gawangan: minimal 4-5 meter. Untuk akses sangat sempit, strauss pile adalah pilihan paling fleksibel."
+                "text": "Strauss pile: minimal lebar 1 meter. Mini crane dan Gawangan: minimal lebar 2 meter."
             }
         },
         {
@@ -336,7 +343,7 @@ setTimeout(loadGTM, 3500);
             "name": "Berapa biaya bore pile untuk area terbatas?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Biaya bervariasi tergantung metode yang dipilih. Strauss pile Rp70.000-100.000/m, sedangkan mini crane Rp120.000-190.000/m. Harga sudah termasuk pengeboran, perakitan besi, dan pengecoran."
+                "text": "Biaya bervariasi tergantung metode yang dipilih. Strauss pile Rp{manualPrice.toLocaleString('id-ID')}-100.000/m, sedangkan mini crane Rp{mesinPrice.toLocaleString('id-ID')}-190.000/m. Harga sudah termasuk pengeboran, perakitan besi, dan pengecoran."
             }
         },
         {

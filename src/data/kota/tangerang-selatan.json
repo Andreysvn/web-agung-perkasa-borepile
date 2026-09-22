@@ -96,7 +96,7 @@
     },
     {
       "title": "Kondisi Akses Jalan & Zonasi Wilayah",
-      "text": "Kawasan mandiri modern seperti BSD City dan Bintaro memiliki akses jalan lebar untuk manuver mini crane, sedangkan pemukiman padat di Ciputat, Pamulang, dan Pondok Aren memerlukan mesin gawangan kompak atau strauss pile manual."
+      "text": "Kawasan mandiri modern seperti BSD City dan Bintaro memiliki akses jalan lebar untuk manuver mini crane, sedangkan pemukiman padat di Ciputat, Pamulang, dan Pondok Aren memerlukan mesin gawangan (untuk atap rendah) atau strauss pile manual (untuk gang sempit (strauss pile))."
     },
     {
       "title": "Skala & Tipologi Konstruksi Proyek",
@@ -177,7 +177,7 @@
       },
       {
         "name": "Strauss Pile (bore pile manual)",
-        "desc": "Metode bor kering manual bertenaga manusia tanpa mesin bising dan bebas getaran. Sangat efektif untuk renovasi rumah di dalam gang sempit pemukiman padat Ciputat dan Pamulang dengan mobilisasi fleksibel.",
+        "desc": "Metode bor kering manual bertenaga manusia tanpa mesin bising dan bebas getaran. Sangat efektif untuk renovasi rumah di dalam gang sempit (strauss pile) pemukiman padat Ciputat dan Pamulang dengan mobilisasi fleksibel.",
         "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
         "imageAlt": "Strauss pile bore pile manual Agung Perkasa bebas getaran untuk gang padat Tangerang Selatan"
       }
@@ -235,8 +235,8 @@
       "a": "Untuk kawasan cluster modern di <strong>BSD City, Bintaro Jaya, dan Alam Sutera</strong>, metode <strong>bore pile mesin mini crane (dry boring atau wash boring)</strong> adalah solusi paling ideal. Metode ini menghasilkan tiang pondasi berdaya dukung tinggi tanpa memicu getaran merusak yang berisiko menimbulkan retak pada bangunan tetangga sekitar."
     },
     {
-      "q": "Apakah bore pile bisa dikerjakan di gang sempit pemukiman padat Tangerang Selatan?",
-      "a": "Bisa. Untuk kawasan pemukiman padat di <strong>Ciputat, Pamulang, atau perkampungan Pondok Aren</strong> dengan akses gang sempit di bawah 2 meter, kami menyediakan metode <strong>strauss pile (bore pile manual)</strong> atau mesin mini gawangan. Mobilisasi sangat praktis, fleksibel, serta tidak membebani jalan lingkungan."
+      "q": "Apakah bore pile bisa dikerjakan di gang sempit (strauss pile) pemukiman padat Tangerang Selatan?",
+      "a": "Bisa. Untuk kawasan pemukiman padat di <strong>Ciputat, Pamulang, atau perkampungan Pondok Aren</strong> dengan akses gang sempit (strauss pile) di bawah 2 meter, kami menyediakan metode <strong>strauss pile (bore pile manual)</strong> atau mesin gawangan (untuk area beratap). Mobilisasi sangat praktis, fleksibel, serta tidak membebani jalan lingkungan."
     },
     {
       "q": "Berapa besaran biaya mobilisasi alat bore pile ke lokasi proyek di Tangerang Selatan?",
@@ -349,7 +349,7 @@
     ],
     "conclusion": "<p>Setiap kawasan di Tangerang Selatan memiliki kontur geoteknik yang berbeda. Kami menyesuaikan teknik bore pile terbaik untuk memastikan konstruksi pondasi kokoh dan tahan lama.</p><p><strong>Pengalaman Proyek di Tangerang Selatan:</strong> Kami terbiasa mengerjakan pondasi untuk hunian cluster, ruko komersial, gedung perkantoran, dan renovasi rumah di BSD City, Bintaro, Ciputat, Pamulang, hingga Serpong.</p>"
   },
-  "priceUpdatedAt": "2026-08-19",
+  "priceUpdatedAt": "2026-09-22",
   "projectNote": "<strong>Catatan:</strong> Biaya di atas sudah mencakup jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton readymix dan besi). Portofolio di atas merupakan proyek nyata yang kami selesaikan di lapangan. Durasi pengerjaan dipengaruhi oleh kemudahan akses, karakteristik tanah, serta suplai air kerja untuk metode wash boring.<br><br>Butuh penawaran spesifik untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

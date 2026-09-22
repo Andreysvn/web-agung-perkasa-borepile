@@ -66,7 +66,7 @@
         "diameter": "30 cm",
         "price": 100000,
         "depth": "10 meter",
-        "suitable": "Rumah tinggal 2 lantai, ruko di perkampungan/gang sempit Cikarang"
+        "suitable": "Rumah tinggal 2 lantai, ruko di perkampungan/gang sempit (strauss pile) Cikarang"
       },
       {
         "diameter": "40 cm",
@@ -177,7 +177,7 @@
       },
       {
         "name": "Strauss Pile (Manual)",
-        "desc": "Alat bor putar manual tenaga manusia untuk diameter 20-40 cm kedalaman s/d 10 meter. Solusi praktis tanpa polusi suara untuk pagar, dinding penahan, dan rumah di gang sempit.",
+        "desc": "Alat bor putar manual tenaga manusia untuk diameter 20-40 cm kedalaman s/d 10 meter. Solusi praktis tanpa polusi suara untuk pagar, dinding penahan, dan rumah di gang sempit (strauss pile).",
         "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
         "imageAlt": "Alat strauss pile manual Agung Perkasa untuk pondasi pagar dan area terbatas di Cikarang"
       }
@@ -354,7 +354,7 @@
     ],
     "conclusion": "<p>Karakteristik tanah Cikarang menuntut teknik pondasi yang tepat dan presisi. Agung Perkasa siap memberikan solusi pondasi tiang bor yang kokoh, ekonomis, dan terpercaya untuk keberhasilan investasi konstruksi Anda di Cikarang.</p><p><strong>Pengalaman Proyek di Cikarang:</strong> Kami berpengalaman menangani puluhan proyek tiang bore pile untuk kawasan pergudangan, workshop manufaktur, ruko komersial, hingga perumahan di Jababeka, MM2100, Deltamas, dan sekitarnya.</p>"
   },
-  "priceUpdatedAt": "2026-08-19",
+  "priceUpdatedAt": "2026-09-22",
   "projectNote": "<strong>Catatan Teknis:</strong> Simulasi perhitungan biaya di atas adalah jasa pengeboran lubang, perakitan besi tulangan, dan pengecoran beton (<strong>di luar pengadaan material semen/ready mix dan besi beton</strong>). Data di atas diambil dari dokumentasi proyek riil kami di lapangan. Kecepatan pengerjaan dipengaruhi oleh kontur tanah, kelancaran pasokan air untuk wash boring, dan akses masuk alat berat di kawasan proyek.<br><br>Ingin konsultasi harga bore pile diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Cek informasi harga bore pile diameter 30cm terlengkap &rarr;</a>",
   "tips": [
     {

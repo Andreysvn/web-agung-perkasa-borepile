@@ -60,7 +60,7 @@
         "diameter": "25 cm",
         "price": 85000,
         "depth": "10 meter",
-        "suitable": "Pos keamanan, pos jaga & gang sempit"
+        "suitable": "Pos keamanan, pos jaga & gang sempit (strauss pile)"
       },
       {
         "diameter": "30 cm",
@@ -145,7 +145,7 @@
   "whyUs": [
     {
       "title": "Alat Mini Crane & Gawangan Siap Tempur",
-      "desc": "Armada mini crane dan gawangan mesin kami selalu dalam kondisi prima melalui inspeksi rutin berkala, siap menangani tanah keras kawasan industri maupun proyek berarea terbatas di Karawang."
+      "desc": "Armada mini crane dan mesin gawangan kami selalu dalam kondisi prima melalui inspeksi rutin berkala, siap menangani tanah keras kawasan industri maupun proyek berarea terbatas di Karawang."
     },
     {
       "title": "Kecepatan Pengerjaan & Standar K3 Ketat",
@@ -177,9 +177,9 @@
       },
       {
         "name": "Strauss Pile (Manual)",
-        "desc": "Alat bor manual murni tenaga kerja terampil dengan metode bor kering (dry boring). Menangani diameter 20-40 cm hingga kedalaman 6-10 meter tanpa getaran dan tanpa bising, cocok untuk gang sempit dan perumahan di Karawang.",
+        "desc": "Alat bor manual murni tenaga kerja terampil dengan metode bor kering (dry boring). Menangani diameter 20-40 cm hingga kedalaman 6-10 meter tanpa getaran dan tanpa bising, cocok untuk gang sempit (strauss pile) dan perumahan di Karawang.",
         "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
-        "imageAlt": "Alat bor strauss pile manual Agung Perkasa untuk pondasi pemukiman dan gang sempit di Karawang"
+        "imageAlt": "Alat bor strauss pile manual Agung Perkasa untuk pondasi pemukiman dan gang sempit (strauss pile) di Karawang"
       }
     ]
   },
@@ -354,7 +354,7 @@
     ],
     "conclusion": "<p>Karakteristik tanah di setiap zona proyek Karawang memerlukan penanganan teknis yang spesifik. Kami memadukan metode bor yang tepat dan armada terawat untuk memastikan keberhasilan pondasi konstruksi Anda.</p><p><strong>Portofolio Karawang:</strong> Agung Perkasa telah berpengalaman mengerjakan berbagai pondasi fasilitas pabrik, gudang penyimpanan logistik, ruko komersial, hingga hunian bertingkat di seluruh penjuru Karawang.</p>"
   },
-  "priceUpdatedAt": "2026-08-19",
+  "priceUpdatedAt": "2026-09-22",
   "projectNote": "<strong>Catatan Penting:</strong> Rincian estimasi biaya di atas sudah mencakup ongkos jasa pengeboran, perakitan rangkaian besi tulangan, dan proses pengecoran beton (<strong>belum termasuk pengadaan material semen, pasir/ready mix, dan besi tulangan</strong>). Contoh hitungan di atas bersumber dari proyek nyata yang kami kerjakan. Durasi pengerjaan dipengaruhi oleh kondisi medan lapangan, kemudahan akses alat berat, serta kelancaran pasokan air kerja untuk metode sirkulasi wash boring.<br><br>Membutuhkan penawaran khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat rincian lengkap harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

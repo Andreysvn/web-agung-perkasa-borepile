@@ -173,11 +173,11 @@
         "name": "Gawangan",
         "desc": "Rangka mesin bor fleksibel untuk lokasi dengan akses terbatas atau gang pemukiman di Bogor yang tidak dapat dimasuki armada mini crane.",
         "image": "/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg",
-        "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk pekerjaan bore pile di gang sempit pemukiman Bogor"
+        "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk pekerjaan bore pile di gang sempit (strauss pile) pemukiman Bogor"
       },
       {
         "name": "Strauss Pile (Manual)",
-        "desc": "Pengeboran manual tenaga putar manusia (dry boring) diameter 20-40 cm hingga kedalaman 10 meter. Solusi hemat biaya mulai Rp75.000/m untuk rumah tinggal di gang sempit Bogor.",
+        "desc": "Pengeboran manual tenaga putar manusia (dry boring) diameter 20-40 cm hingga kedalaman 10 meter. Solusi hemat biaya mulai Rp75.000/m untuk rumah tinggal di gang sempit (strauss pile) Bogor.",
         "image": "/imgs/icons/strauss-pile-icon-agung-perkasa.svg",
         "imageAlt": "Alat strauss pile manual Agung Perkasa untuk pondasi rumah tinggal di gang pemukiman Bogor"
       }
@@ -357,7 +357,7 @@
     ],
     "conclusion": "<p>Karakteristik tanah di setiap sudut Bogor sangat beraneka ragam—dari dataran padat Cibinong hingga lereng berbatu di Puncak. Keahlian teknik bore pile kami memastikan setiap tiang berdiri kokoh di atas lapisan tanah pendukung terkuat.</p><p><strong>Pengalaman Kami di Bogor:</strong> Kami terbiasa menangani aneka proyek villa eksklusif di perbukitan, rumah tinggal cluster, ruko, hingga gedung fasilitas publik di seluruh penjuru Bogor.</p>"
   },
-  "priceUpdatedAt": "2026-08-19",
+  "priceUpdatedAt": "2026-09-22",
   "projectNote": "<strong>Catatan:</strong> Estimasi rincian biaya di atas sudah mencakup jasa pengeboran lubang, perakitan besi tulangan cakar ayam, serta pengecoran adukan beton (<strong>belum termasuk pengadaan material beton ready-mix dan besi tulangan</strong>). Pengerjaan di wilayah Bogor sangat dipengaruhi oleh cuaca hujan harian, kemiringan kontur tanah perbukitan, kekerasan lapisan cadas, serta ketersediaan debit air kerja metode wash boring.<br><br>Ingin mengetahui paket harga khusus diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat rincian lengkap harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

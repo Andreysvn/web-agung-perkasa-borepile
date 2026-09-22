@@ -173,7 +173,7 @@
         "name": "Gawangan",
         "desc": "Mesin bore pile rakitan fleksibel untuk mengebor diameter 30-80 cm di lahan sempit atau halaman terbatas di Bandung yang tidak dapat dimasuki mini crane.",
         "image": "/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg",
-        "imageAlt": "Mesin bore pile sistem gawangan Agung Perkasa untuk pondasi bangunan di gang sempit Bandung"
+        "imageAlt": "Mesin bore pile sistem gawangan Agung Perkasa untuk pondasi bangunan di gang sempit (strauss pile) Bandung"
       },
       {
         "name": "Strauss Pile (Manual)",
@@ -231,7 +231,7 @@
       "a": "Wilayah Bandung Utara seperti Dago, Ciumbuleuit, Setiabudi, dan Lembang memiliki kontur lereng miring dan tanah andosol vulkanik. Bore pile menggunakan sistem putaran auger tanpa ketukan hammer sehingga tidak memicu getaran yang berisiko menimbulkan pergeseran tebing (longsor) atau meretakkan struktur bangunan milik tetangga."
     },
     {
-      "q": "Bagaimana solusi bore pile jika lokasi proyek berada di gang sempit atau pemukiman padat Bandung?",
+      "q": "Bagaimana solusi bore pile jika lokasi proyek berada di gang sempit (strauss pile) atau pemukiman padat Bandung?",
       "a": "Kami memiliki armada mini crane dengan sasis ringkas yang dirancang khusus untuk jalan lingkungan perumahan. Jika lokasi berada di gang yang sangat sempit dan tidak dapat dilalui kendaraan roda empat, kami menyediakan opsi mesin gawangan atau metode strauss pile manual yang hanya membutuhkan ruang kerja selebar 1–1,5 meter."
     },
     {
@@ -340,7 +340,7 @@
       },
       {
         "title": "Bebas Getaran Rusak (Zero Vibration)",
-        "desc": "Metode putaran auger tidak memicu gelombang getar benturan layaknya tiang pancang, sehingga dinding rumah tetangga di gang sempit aman dari keretakan dan tanah lereng terhindar dari pergeseran longsor."
+        "desc": "Metode putaran auger tidak memicu gelombang getar benturan layaknya tiang pancang, sehingga dinding rumah tetangga di gang sempit (strauss pile) aman dari keretakan dan tanah lereng terhindar dari pergeseran longsor."
       },
       {
         "title": "Manuver Lincah di Akses Tanjakan Berliku & Gang Perumahan",
@@ -353,7 +353,7 @@
     ],
     "conclusion": "<p>Karakteristik tanah di Bandung memiliki kontras tinggi antara zona lereng perbukitan di kawasan utara dan cekungan endapan danau purba di kawasan selatan. Kami mengombinasikan keahlian teknis dan metode bor yang tepat guna menjamin kestabilan pondasi bangunan Anda.</p><p><strong>Portofolio Agung Perkasa di Bandung:</strong> Berpengalaman puluhan tahun menangani pekerjaan bore pile untuk villa tebing di Dago & Lembang, ruko komersial di Setiabudi, hunian cluster di Bandung Barat, hingga pergudangan di Bandung Selatan.</p>"
   },
-  "priceUpdatedAt": "2026-08-19",
+  "priceUpdatedAt": "2026-09-22",
   "projectNote": "<strong>Catatan Teknis:</strong> Biaya yang tercantum sudah meliputi ongkos jasa pengeboran, perakitan besi tulangan, dan pengecoran beton pondasi (<strong>belum termasuk pengadaan material beton ready mix dan besi tulangan</strong>). Contoh di atas adalah dokumentasi pekerjaan nyata yang telah kami selesaikan di lapangan. Durasi dan produktivitas pengerjaan di Bandung dipengaruhi oleh kemiringan lereng, akses jalan armada mini crane, formasi geologi tanah, ketersediaan air kerja, serta kondisi curah hujan dataran tinggi.<br><br>Memerlukan penawaran khusus untuk tiang diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Cek detail daftar harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

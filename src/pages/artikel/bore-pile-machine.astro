@@ -1,6 +1,13 @@
 ---
+import pricing from '../../data/harga.json';
+const manualPrice = pricing.manual.find(i => i.price > 0)?.price || 75000;
+const mesinPrice = pricing.mesin.find(i => i.price > 0)?.price || 120000;
+const maxManualDepth = pricing.manual.find(i => i.price > 0)?.maxDepth || 6;
+
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import config from '../../data/config.json';
+const dateObj = new Date(config.lastUpdated);
+const formattedDate = dateObj.toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
 
 import FaIcon from '../../components/icons/FaIcon.astro';
 
@@ -83,7 +90,7 @@ setTimeout(loadGTM, 3500);
             <div class="article-header">
                 <h1>Mesin Bore Pile: Jenis, Cara Kerja, dan Pilih yang Tepat</h1>
                 <div class="article-meta">
-                    <span><FaIcon class="fas fa-calendar-alt" /> 30 Agustus 2026</span>
+                    <span><FaIcon class="fas fa-calendar-alt" /> {formattedDate}</span>
                     <span><FaIcon class="fas fa-user" /> Agung Perkasa Borepile</span>
                     <span><FaIcon class="fas fa-clock" /> 8 menit baca</span>
                 </div>
@@ -172,8 +179,8 @@ setTimeout(loadGTM, 3500);
                         <tr>
                             <td><strong>Biaya/meter</strong></td>
                             <td>Rp150.000-400.000</td>
-                            <td>Rp120.000-190.000</td>
-                            <td>Rp80.000-120.000</td>
+                            <td>Rp{mesinPrice.toLocaleString('id-ID')}-190.000</td>
+                            <td>Rp80.000-{mesinPrice.toLocaleString('id-ID')}</td>
                         </tr>
                         <tr>
                             <td><strong>Akses Minimal</strong></td>
@@ -223,7 +230,7 @@ setTimeout(loadGTM, 3500);
             <FaIcon class="fas fa-chevron-down" />
         </button>
         <div class="faq-answer">
-            <p>Biaya bervariasi tergantung jenis mesin dan wilayah. <strong>Gawangan Rp3-5 juta/hari</strong>, <strong>mini crane Rp2-3 juta/hari</strong>. Harga ini belum termasuk operator dan biaya operasional lainnya.</p>
+            <p>Mesin bore pile seperti Mini Crane dan Gawangan biasanya tidak disewakan secara harian, melainkan diborongkan per meter kedalaman. Harga jasanya sama persis, mulai dari Rp120.000 hingga Rp160.000 per meter tergantung diameternya, dengan batas minimal order 200 meter.</p>
         </div>
     </div>
 
@@ -324,7 +331,7 @@ setTimeout(loadGTM, 3500);
             }
         },
         "datePublished": "2026-08-30",
-        "dateModified": "2026-08-30",
+        "dateModified": "${config.lastUpdated}",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://agungperkasaborepile.com/artikel/bore-pile-machine/"
@@ -355,7 +362,7 @@ setTimeout(loadGTM, 3500);
         },
         "url": "https://agungperkasaborepile.com/",
         "telephone": "+6285710277854",
-        "priceRange": "Rp70.000 - Rp350.000",
+        "priceRange": "Rp{manualPrice.toLocaleString('id-ID')} - Rp360.000",
         "openingHours": "Mo-Su 07:00-23:00",
         "areaServed": [
             { "@type": "City", "name": "Jakarta" },
@@ -385,7 +392,7 @@ setTimeout(loadGTM, 3500);
             "name": "Berapa biaya sewa mesin bore pile per hari?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Biaya bervariasi tergantung jenis mesin dan wilayah. Gawangan Rp3-5 juta/hari, mini crane Rp2-3 juta/hari. Harga ini belum termasuk operator dan biaya operasional lainnya."
+                "text": "Mesin bore pile Mini Crane dan Gawangan tidak disewakan harian, melainkan diborongkan per meter mulai Rp120.000/m dengan spesifikasi harga yang persis sama."
             }
         },
         {

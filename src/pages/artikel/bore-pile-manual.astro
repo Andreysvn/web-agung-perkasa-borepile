@@ -1,6 +1,13 @@
 ---
+import pricing from '../../data/harga.json';
+const manualPrice = pricing.manual.find(i => i.price > 0)?.price || 75000;
+const mesinPrice = pricing.mesin.find(i => i.price > 0)?.price || 120000;
+const maxManualDepth = pricing.manual.find(i => i.price > 0)?.maxDepth || 6;
+
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import config from '../../data/config.json';
+const dateObj = new Date(config.lastUpdated);
+const formattedDate = dateObj.toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
 
 import FaIcon from '../../components/icons/FaIcon.astro';
 
@@ -83,7 +90,7 @@ setTimeout(loadGTM, 3500);
             <div class="article-header">
                 <h1>Bore Pile Manual: Panduan Lengkap Pengeboran Tanpa Mesin Besar</h1>
                 <div class="article-meta">
-                    <span><FaIcon class="fas fa-calendar-alt" /> 30 Agustus 2026</span>
+                    <span><FaIcon class="fas fa-calendar-alt" /> {formattedDate}</span>
                     <span><FaIcon class="fas fa-user" /> Agung Perkasa Borepile</span>
                     <span><FaIcon class="fas fa-clock" /> 7 menit baca</span>
                 </div>
@@ -166,8 +173,8 @@ setTimeout(loadGTM, 3500);
                         </tr>
                         <tr>
                             <td><strong>Biaya</strong></td>
-                            <td>Rp70.000-100.000/m</td>
-                            <td>Rp120.000-400.000/m</td>
+                            <td>Rp{manualPrice.toLocaleString('id-ID')}-100.000/m</td>
+                            <td>Rp{mesinPrice.toLocaleString('id-ID')}-400.000/m</td>
                         </tr>
                         <tr>
                             <td><strong>Akses Area</strong></td>
@@ -223,7 +230,7 @@ setTimeout(loadGTM, 3500);
             <FaIcon class="fas fa-chevron-down" />
         </button>
         <div class="faq-answer">
-            <p>Biaya bore pile manual berkisar <strong>Rp70.000 - Rp100.000 per meter</strong>. Harga ini sudah termasuk pengeboran, perakitan besi, dan pengecoran, namun belum termasuk material beton dan biaya tambahan lainnya.</p>
+            <p>Biaya bore pile manual berkisar <strong>Rp{manualPrice.toLocaleString('id-ID')} - Rp100.000 per meter</strong>. Harga ini sudah termasuk pengeboran, perakitan besi, dan pengecoran, namun belum termasuk material beton dan biaya tambahan lainnya.</p>
         </div>
     </div>
 
@@ -314,7 +321,7 @@ setTimeout(loadGTM, 3500);
             }
         },
         "datePublished": "2026-08-30",
-        "dateModified": "2026-08-30",
+        "dateModified": "${config.lastUpdated}",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://agungperkasaborepile.com/artikel/bore-pile-manual/"
@@ -345,7 +352,7 @@ setTimeout(loadGTM, 3500);
         },
         "url": "https://agungperkasaborepile.com/",
         "telephone": "+6285710277854",
-        "priceRange": "Rp70.000 - Rp350.000",
+        "priceRange": "Rp{manualPrice.toLocaleString('id-ID')} - Rp360.000",
         "openingHours": "Mo-Su 07:00-23:00",
         "areaServed": [
             { "@type": "City", "name": "Jakarta" },
@@ -383,7 +390,7 @@ setTimeout(loadGTM, 3500);
             "name": "Berapa biaya bore pile manual per meter?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Biaya bore pile manual berkisar Rp70.000 - Rp100.000 per meter. Harga ini sudah termasuk pengeboran, perakitan besi, dan pengecoran, namun belum termasuk material beton dan biaya tambahan lainnya."
+                "text": "Biaya bore pile manual berkisar Rp{manualPrice.toLocaleString('id-ID')} - Rp100.000 per meter. Harga ini sudah termasuk pengeboran, perakitan besi, dan pengecoran, namun belum termasuk material beton dan biaya tambahan lainnya."
             }
         },
         {

@@ -54,7 +54,7 @@
         "diameter": "20 cm",
         "price": 75000,
         "depth": "10 meter",
-        "suitable": "Pagar & gang sempit permukiman"
+        "suitable": "Pagar & gang sempit (strauss pile) permukiman"
       },
       {
         "diameter": "25 cm",
@@ -96,7 +96,7 @@
     },
     {
       "title": "Akses Masuk Menuju Lokasi Proyek",
-      "text": "Lokasi proyek di tepi jalan utama Pamulang (Jl. Surya Kencana, Jl. Siliwangi, Jl. Pajajaran) memudahkan manuver armada mini crane. Untuk pengerjaan di gang sempit perumahan padat, tim kami menggunakan mesin gawangan portable atau metode strauss pile manual."
+      "text": "Lokasi proyek di tepi jalan utama Pamulang (Jl. Surya Kencana, Jl. Siliwangi, Jl. Pajajaran) memudahkan manuver armada mini crane. Untuk pengerjaan di gang sempit (strauss pile) perumahan padat, tim kami menggunakan metode strauss pile manual (untuk area sangat sempit) atau mesin gawangan (untuk area beratap rendah)."
     },
     {
       "title": "Peruntukan Hunian Residensial vs Bangunan Usaha",
@@ -233,8 +233,8 @@
       "a": "Untuk rumah tinggal 2 lantai di area perumahan berdataran padat, lapisan tanah keras umumnya ditemukan pada kedalaman 8-12 meter. Namun, untuk lokasi proyek di dekat bekas rawa atau aliran air seperti sekitar Situ Pamulang, kedalaman bor yang dibutuhkan bisa mencapai 12-16 meter. Uji sondir tanah sangat disarankan untuk kepastian data teknis."
     },
     {
-      "q": "Apakah armada bore pile bisa masuk ke perumahan padat atau gang sempit di Pamulang?",
-      "a": "Tentu bisa. Kami memiliki armada yang fleksibel: mesin mini crane untuk jalan komplek cluster selebar minimal 3 meter, mesin gawangan modular untuk lahan terbatas dengan akses sempit, serta perlengkapan strauss pile manual yang dapat diangkut motor masuk ke gang sempit permukiman Pamulang."
+      "q": "Apakah armada bore pile bisa masuk ke perumahan padat atau gang sempit (strauss pile) di Pamulang?",
+      "a": "Tentu bisa. Kami memiliki armada yang fleksibel: mesin mini crane untuk jalan komplek cluster selebar minimal 3 meter, mesin gawangan knock-down untuk lahan terbatas dengan atap rendah, serta perlengkapan strauss pile manual yang dapat diangkut motor masuk ke gang sempit (strauss pile) permukiman Pamulang."
     },
     {
       "q": "Berapa perkiraan biaya mobilisasi alat bore pile ke lokasi proyek di Pamulang?",
@@ -347,7 +347,7 @@
     ],
     "conclusion": "<p>Setiap titik lokasi proyek di Pamulang memiliki profil lapisan tanah yang berbeda. Agung Perkasa selalu menyesuaikan metode bore pile terbaik demi menjamin kekokohan jangka panjang struktur bangunan Anda.</p><p><strong>Pengalaman kami di Pamulang:</strong> Kami telah berpengalaman mengerjakan aneka proyek rumah tinggal, cluster perumahan, ruko, hingga gedung usaha di seluruh penjuru Pamulang dan wilayah Tangerang Selatan.</p>"
   },
-  "priceUpdatedAt": "2026-08-19",
+  "priceUpdatedAt": "2026-09-22",
   "projectNote": "<strong>Catatan Proyek:</strong> Estimasi tarif di atas mencakup upah jasa pengeboran, instalasi perakitan besi tulangan spiral, dan proses pengecoran tiang pondasi bore pile (<strong>tidak termasuk pengadaan material beton & besi</strong>). Kecepatan pengerjaan dipengaruhi kemudahan akses mobilisasi jalan, kontur tanah proyek, serta ketersediaan air kerja jika menggunakan metode wash boring.<br><br>Ingin cek penawaran khusus tiang diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat rincian harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

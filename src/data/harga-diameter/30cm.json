@@ -9,7 +9,7 @@
   "heroImage": "/imgs/bore-pile-rumah-di-pik.webp",
   "heroAlt": "Proses pengeboran bore pile dengan mini crane untuk rumah pribadi di kawasan Pantai Indah Kapuk (PIK)",
   "heroCaption": "Bore pile mini crane untuk rumah pribadi di Pantai Indah Kapuk, Jakarta Utara",
-  "heroText": "<strong>Bore pile diameter 30cm</strong> adalah ukuran paling sering digunakan untuk membuat bangunan, ruko, gedung, dan <strong>rumah 1-2 lantai</strong> di Jakarta. \n                    Kalkulator ini dibuat untuk menghitung estimasi <strong>total biaya</strong> jasa borepile dari harga diameter 30cm (mesin & manual), bisa mengatur harga sendiri sesuai keinginan. Dibuat oleh tim Agung Perkasa Borepile dari data proyek nyata yang kami kerjakan di lapangan.",
+  "heroText": "<strong>Bore pile diameter 30cm</strong> adalah ukuran pondasi yang paling sering dipesan untuk proyek <strong>rumah tinggal 1 hingga 3 lantai</strong> dan juga ruko standar. \n\nKenapa ukuran ini paling laris? Karena dengan kemampuan menahan beban 15 sampai 25 ton per titik, 30cm memberikan kekuatan yang sangat aman untuk bangunan bertingkat, tapi harganya tetap paling hemat di kantong. Selain itu, proses pengeborannya sangat halus sehingga Anda tidak perlu khawatir didemo tetangga karena tembok mereka retak akibat getaran.",
   "descriptionTemplate": "Harga bore pile diameter 30cm terbaru 2026 seluruh Pulau Jawa. Mesin mulai Rp{mesin}/m, manual Rp{manual}/m. Kalkulator estimasi biaya. Konsultasi gratis.",
   "localBusinessDescTemplate": "Jasa bore pile diameter 30cm terpercaya dengan pengalaman lebih dari 10 tahun. Harga bore pile mesin mulai Rp{mesin}/m, manual mulai Rp{manual}/m.",
   "defaultDiameter": 30,
@@ -176,7 +176,7 @@
   "materialPackage": {
     "diameter": "Diameter 30cm",
     "price": "Hubungi kami",
-    "includes": "Jasa bor, perakitan besi, dan pengecoran beton. Besi tulangan 5D13 SNI, sengkang D8, beton mix K250",
+    "includes": "Jasa bor, perakitan besi, dan pengecoran beton. Besi standar SNI + beton readymix K300 atau sesuai permintaan.",
     "minOrder": "200m untuk mesin, dan 100m untuk manual, di bawah itu harga borongan",
     "note": "*Harga paket dapat disesuaikan dengan spesifikasi material yang Anda inginkan (K225, K250, K300, dll)."
   },
@@ -243,11 +243,11 @@
   "faq": [
     {
       "q": "Apakah bore pile diameter 30cm cukup kuat untuk rumah 2 lantai?",
-      "a": "<strong>Cukup.</strong> Dengan kedalaman 8-12 meter, diameter 30cm mampu menahan beban rumah 2 lantai dengan aman. Pastikan data sondir tanah sudah dicek dan ditentukan kedalaman yang tepat."
+      "a": "<strong>Sangat kuat.</strong> Asalkan pengeboran dilakukan sampai benar-benar menyentuh tanah keras, satu titik bore pile 30cm bisa menahan beban 15 sampai 25 ton. Ukuran ini sudah menjadi standar aman yang dipakai banyak kontraktor untuk perumahan 2-3 lantai."
     },
     {
       "q": "Berapa standar harga jasa bor diameter 30cm?",
-      "a": "Standar harga jasa bor diameter 30cm: <strong>mesin Rp120.000/m¹, manual Rp85.000/m¹</strong> untuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton (harga belum termasuk material)."
+      "a": "Untuk wilayah Jabodetabek, standar harga jasa bor diameter 30cm adalah <strong>Rp120.000 per meter jika menggunakan mesin</strong>, dan <strong>Rp100.000 per meter jika menggunakan alat manual (Strauss Pile)</strong>. Harga ini khusus untuk jasa kerja bor, perakitan besi, dan pengecoran (belum termasuk pembelian besi dan beton)."
     },
     {
       "q": "Bisa pakai bore pile manual untuk diameter 30cm?",
@@ -255,7 +255,7 @@
     },
     {
       "q": "Berapa jumlah titik ideal untuk bore pile diameter 30cm?",
-      "a": "Untuk rumah 1-2 lantai standar dengan luas bangunan 100-200m², jumlah titik ideal antara <strong>12-20 titik</strong>. Konsultasikan dengan tim teknis kami untuk perhitungan yang lebih akurat sesuai gambar bangunan Anda."
+      "a": "Untuk rumah 2 lantai standar dengan luas tanah 100-200m², biasanya membutuhkan sekitar <strong>12 sampai 20 titik</strong> pondasi. Tapi untuk jumlah pastinya, kami selalu mengikuti jarak titik kolom yang ada di gambar denah bangunan Anda."
     },
     {
       "q": "Apakah melayani area Bekasi, Tangerang, Bogor?",
@@ -267,11 +267,11 @@
     },
     {
       "q": "Berapa kedalaman maksimal bore pile diameter 30cm?",
-      "a": "Untuk bore pile mesin (mini crane) diameter 30cm, kedalaman maksimal mencapai <strong>30 meter</strong>. Sedangkan untuk bore pile manual (strauss pile) diameter 30cm, kedalaman maksimal <strong>10 meter</strong>. Kedalaman yang dibutuhkan tergantung pada kondisi tanah dan hasil uji sondir di lokasi proyek Anda. Semakin lunak tanah, semakin dalam pengeboran yang dibutuhkan hingga mencapai tanah keras."
+      "a": "Kalau menggunakan mesin (Mini Crane), kami bisa mengebor sedalam <strong>25 sampai 30 meter</strong>. Tapi kalau menggunakan tenaga manual (Strauss Pile), maksimalnya hanya tembus <strong>6 sampai 10 meter</strong> saja. Kedalaman pastinya selalu menyesuaikan seberapa dalam lapisan tanah keras di lokasi Anda."
     },
     {
       "q": "Berapa biaya total bore pile 30cm untuk rumah 2 lantai?",
-      "a": "Untuk rumah 2 lantai dengan luas 100-200m², biasanya membutuhkan <strong>12-20 titik</strong> bore pile diameter 30cm dengan kedalaman 8-12 meter. Estimasi biaya jasa bor (belum termasuk material):</p><ul><li><strong>Mesin (Mini Crane):</strong> Rp120.000/m¹ × 12m × 16 titik = <strong>Rp23.040.000</strong> + mobilisasi Rp2-3jt</li><li><strong>Manual (Strauss Pile):</strong> Rp85.000/m¹ × 8m × 16 titik = <strong>Rp10.880.000</strong> + mobilisasi Rp1-1,5jt</li></ul><p>Gunakan <a href=\"#calculator-heading\">kalkulator di atas</a> untuk menghitung estimasi biaya proyek Anda secara lebih akurat."
+      "a": "<strong>Sangat kuat.</strong> Asalkan pengeboran dilakukan sampai benar-benar menyentuh tanah keras, satu titik bore pile 30cm bisa menahan beban 15 sampai 25 ton. Ukuran ini sudah menjadi standar aman yang dipakai banyak kontraktor untuk perumahan 2-3 lantai."
     }
   ],
   "internalLinks": [

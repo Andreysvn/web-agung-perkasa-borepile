@@ -1,6 +1,12 @@
 ---
+import pricing from '../../data/harga.json';
+const manualPrice = pricing.manual.find(i => i.price > 0)?.price || 75000;
+const mesinPrice = pricing.mesin.find(i => i.price > 0)?.price || 120000;
+
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import config from '../../data/config.json';
+const dateObj = new Date(config.lastUpdated);
+const formattedDate = dateObj.toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
 import { organizationSchema, schemaPhone } from '../../lib/schema.js';
 
 import FaIcon from '../../components/icons/FaIcon.astro';
@@ -112,7 +118,7 @@ setTimeout(loadGTM, 3500);
         <!-- ===== STRAUSS PILE ===== -->
         <a href="/jasa/strauss-pile/jakarta/" class="service-type-card-with-image">
             <div class="card-img-wrapper">
-                <img src="/imgs/borepile-pondasi-rumah.jpg" 
+                <img src="/imgs/strauss-pile-asli-1.jpg" 
                      alt="Jasa Strauss Pile manual untuk pondasi rumah tinggal" 
                      loading="lazy">
             </div>
@@ -206,8 +212,8 @@ setTimeout(loadGTM, 3500);
                     </div>
                     <h3>Gawangan</h3>
                 </div>
-                <p class="equip-sub">Area Sempit</p>
-                <p>Cocok untuk area yang tidak bisa diakses mini crane. Diameter 30-80cm untuk proyek di gang sempit.</p>
+                <p class="equip-sub">Medan Bermanuver Sulit</p>
+                <p>Cocok untuk area padat penduduk, lahan miring/berlumpur, dan titik sudut di mana mini crane sulit bermanuver.</p>
                 <div class="equip-tags">
                     <span class="tag-primary">30-80 cm</span>
                     <span class="tag-secondary">30 m</span>
@@ -268,7 +274,7 @@ setTimeout(loadGTM, 3500);
                             <FaIcon class="fas fa-chevron-down" />
                         </button>
                         <div class="faq-answer">
-                            <p>Harga mulai dari <strong>Rp75.000 - Rp120.000/meter</strong> tergantung diameter, kedalaman, dan jenis alat yang digunakan. Untuk penawaran spesifik, silakan konsultasi gratis melalui WhatsApp.</p>
+                            <p>Harga mulai dari <strong>Rp{manualPrice.toLocaleString('id-ID')} - Rp{mesinPrice.toLocaleString('id-ID')}/meter</strong> tergantung diameter, kedalaman, dan jenis alat yang digunakan. Untuk penawaran spesifik, silakan konsultasi gratis melalui WhatsApp.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -363,7 +369,7 @@ setTimeout(loadGTM, 3500);
                 "name": "Berapa biaya bore pile per meter?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Harga mulai dari Rp75.000 - Rp120.000/meter tergantung diameter, kedalaman, dan jenis alat yang digunakan."
+                    "text": "Harga mulai dari Rp{manualPrice.toLocaleString('id-ID')} - Rp{mesinPrice.toLocaleString('id-ID')}/meter tergantung diameter, kedalaman, dan jenis alat yang digunakan."
                 }
             },
             {

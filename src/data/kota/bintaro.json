@@ -171,9 +171,9 @@
       },
       {
         "name": "Gawangan",
-        "desc": "Mesin bor dengan rangka modular yang fleksibel untuk area yang tidak muat dilalui mini crane. Cocok untuk proyek rumah tinggal atau ruko di gang sempit Bintaro dengan kemampuan diameter 30-80 cm.",
+        "desc": "Mesin bor dengan rangka modular yang fleksibel untuk area yang tidak muat dilalui mini crane. Cocok untuk proyek rumah tinggal atau ruko di gang sempit (strauss pile) Bintaro dengan kemampuan diameter 30-80 cm.",
         "image": "/imgs/icons/bore-pile-mesin-gawangan-icon-agung-perkasa.svg",
-        "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk pembangunan rumah di gang sempit kawasan Bintaro"
+        "imageAlt": "Mesin bore pile gawangan Agung Perkasa untuk pembangunan rumah di gang sempit (strauss pile) kawasan Bintaro"
       },
       {
         "name": "Strauss Pile (bore pile manual)",
@@ -352,7 +352,7 @@
     ],
     "conclusion": "<p>Karakteristik tanah di setiap sektor Bintaro memiliki keunikan tersendiri. Kami menyesuaikan mesin bor dan metode teknis yang tepat untuk memastikan pondasi hunian Anda berdiri kokoh tanpa penurunan tanah.</p><p><strong>Pengalaman Proyek di Bintaro:</strong> Kami telah berpengalaman menangani puluhan proyek pondasi rumah tinggal, cluster hunian, renovasi bertingkat, hingga bangunan komersial di seluruh kawasan Bintaro dan sekitarnya.</p>"
   },
-  "priceUpdatedAt": "2026-08-19",
+  "priceUpdatedAt": "2026-09-22",
   "projectNote": "<strong>Catatan:</strong> Tarif di atas mencakup jasa pengeboran, perakitan tulangan besi, serta pengecoran tiang, <strong>belum termasuk material</strong> beton dan besi. Seluruh contoh proyek di atas adalah pengerjaan nyata kami di lapangan. Kelancaran pengerjaan di perumahan Bintaro didukung oleh ketersediaan akses jalan serta pasokan air kerja jika memakai metode wash boring.<br><br>Membutuhkan penawaran khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat rincian harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

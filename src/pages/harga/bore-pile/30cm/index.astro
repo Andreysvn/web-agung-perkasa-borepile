@@ -6,6 +6,7 @@ import pageData from '../../../../data/harga-diameter/30cm.json';
 import { organizationSchema, localBusinessSchema } from '../../../../lib/schema.js';
 import FaIcon from '../../../../components/icons/FaIcon.astro';
 import CityGuarantee from '../../../../components/city/CityGuarantee.astro';
+import CityEquipment from '../../../../components/city/CityEquipment.astro';
 
 // Components
 import CityCalculator from '../../../../components/city/CityCalculator.astro';
@@ -413,26 +414,7 @@ const seoDesc = pageData.descriptionTemplate.replace('{mesin}', mesinPrice).repl
                 </div>
             </section>
 
-                <h3 class="equip-title">Alat yang Kami gunakan di lapangan</h3>
-                <p class="equip-sub">Kami memiliki beberapa alat untuk pekerjaan bore pile diameter {pageData.diameter}, antara lain:</p>
-
-                <div class="equip-grid">
-                    {pageData.equipment.map(equip => (
-                        <div class="equip-item">
-                            <img class="equip-img" src={equip.image} 
-                                 alt={equip.imageAlt} 
-                                 loading="lazy">
-                            <div class="equip-info">
-                                <div class="equip-icon-inline">
-                                    
-                                    <h4>{equip.name}</h4>
-                                </div>
-                                <p>{equip.desc}</p>
-                                <span class="equip-tag">Agung Perkasa</span>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <CityEquipment equipment={{ items: pageData.equipment, description: `Kami memiliki beberapa alat untuk pekerjaan bore pile diameter ${pageData.diameter}, antara lain:` }} cityName="" />
             </div>
 
             <!-- ===== FAQ ===== -->

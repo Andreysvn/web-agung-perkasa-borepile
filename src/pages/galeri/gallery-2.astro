@@ -1,4 +1,9 @@
 ---
+import pricing from '../../data/harga.json';
+const manualPrice = pricing.manual.find(i => i.price > 0)?.price || 75000;
+const mesinPrice = pricing.mesin.find(i => i.price > 0)?.price || 120000;
+const maxManualDepth = pricing.manual.find(i => i.price > 0)?.maxDepth || 6;
+
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import config from '../../data/config.json';
 import galeri from '../../data/galeri.json';
@@ -18,7 +23,7 @@ const orgLd = JSON.stringify(organizationSchema({
 
 const localBusinessLd = JSON.stringify(localBusinessSchema({
     "description": "Galeri proyek bore pile dan strauss pile Agung Perkasa.",
-    "priceRange": "Rp70.000 - Rp350.000",
+    "priceRange": "Rp{manualPrice.toLocaleString('id-ID')} - Rp350.000",
     "openingHours": "Mo-Su 07:00-23:00"
 }));
 ---
