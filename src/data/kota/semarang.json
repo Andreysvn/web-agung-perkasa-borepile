@@ -172,14 +172,26 @@
     ]
   },
   "portfolio": {
-    "title": "Portofolio Proyek Pondasi Bore Pile di Semarang",
-    "subtitle": "Bukti pengerjaan pondasi bore pile Agung Perkasa di berbagai zona geografis Semarang dan sekitarnya.",
+    "title": "Pengalaman & Referensi Proyek Agung Perkasa",
+    "subtitle": "Berikut adalah beberapa contoh dokumentasi proyek nyata yang telah kami kerjakan. Meskipun basecamp utama kami berada di Jabodetabek, armada dan tim teknis kami siap dimobilisasi secara penuh untuk mengerjakan proyek pondasi bore pile di wilayah Semarang dan sekitarnya.",
     "items": [
       {
-        "image": "/imgs/borepile-mesin-biru.webp",
-        "imageAlt": "Pengerjaan bore pile mini crane Agung Perkasa di kawasan komersial Semarang Bawah",
-        "label": "Semarang Bawah",
-        "detail": "Bore pile mini crane Ø40cm untuk gedung perkantoran di kawasan komersial"
+        "image": "/imgs/borepile-gedung-universitas-paramadina-jaktim.webp",
+        "imageAlt": "Proyek bore pile gedung Universitas Paramadina",
+        "label": "Gedung Universitas (Contoh Proyek)",
+        "detail": "Bore pile mini crane Ø40cm untuk gedung kampus"
+      },
+      {
+        "image": "/imgs/borepile-di-depan-mall-puri-indah-agung-perkasa.jpg",
+        "imageAlt": "Proyek pondasi bangunan komersial depan Mall Puri Indah",
+        "label": "Bangunan Komersial (Contoh Proyek)",
+        "detail": "Bore pile mini crane Ø40cm kedalaman 9m untuk area komersial"
+      },
+      {
+        "image": "/imgs/bore-pile-rumah-green-mansion-jakarta-barat-agung-perkasa.jpeg",
+        "imageAlt": "Pengeboran bore pile untuk perumahan Green Mansion",
+        "label": "Perumahan Padat (Contoh Proyek)",
+        "detail": "Bore pile mini crane Ø30cm dengan metode wash boring (bor basah)"
       }
     ]
   },
