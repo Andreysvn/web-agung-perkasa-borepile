@@ -53,7 +53,9 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
 const seoDesc = pageData.descriptionTemplate.replace('{mesin}', mesinPrice).replace('{manual}', manualPrice || '');
 ---
 
-<KotaLayout 
+<KotaLayout
+    hasGoogleAds={true}
+    googleAdsId="AW-16649506462" 
     title={pageData.title}
     description={seoDesc}
     canonical={pageData.canonical}
