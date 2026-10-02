@@ -1,0 +1,8 @@
+/* Lightbox - Ultra minimal */
+.lightbox-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.9);justify-content:center;align-items:center;padding:20px}
+.lightbox-overlay.active{display:flex}
+.lightbox-img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,.5)}
+.lightbox-caption{text-align:center;color:#fff;font-size:.9rem;margin-top:12px;padding:0 20px}
+.lightbox-close{position:absolute;top:16px;right:20px;background:none;border:none;color:#fff;font-size:2.5rem;cursor:pointer;line-height:1;z-index:10000;padding:0 8px}
+.lightbox-close:hover{color:#e67e22}
+@media(max-width:768px){.lightbox-img{max-width:95vw;max-height:80vh}.lightbox-close{font-size:2rem;top:12px;right:12px}}
