@@ -689,3 +689,13 @@ body, .price-hint, .calculator-note, .calculator-box, .section-desc-center, .art
 a { text-decoration: none !important; }
 a:hover { text-decoration: underline !important; }
 .btn-primary:hover, .btn-secondary:hover, .btn-nav:hover, .btn-cta:hover, .apx-btn:hover, .promo-btn:hover, .btn-wa:hover, .btn-articles-all:hover { text-decoration: none !important; }
+
+/* Accessibility Contrast Fix for WCAG */
+.breadcrumb a, .faq-answer a, p a:not([class*="btn"]), li a:not([class*="btn"]) {
+  text-decoration: underline;
+  color: #0369a1;
+  font-weight: 500;
+}
+.breadcrumb a:hover, .faq-answer a:hover, p a:not([class*="btn"]):hover, li a:not([class*="btn"]):hover {
+  color: #075985;
+}
