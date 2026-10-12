@@ -9,8 +9,8 @@
   "heroCaption": "Pengeboran pondasi bore pile mini crane untuk bangunan pemukiman dan kos di Ciputat",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "<strong>Harga bore pile Ciputat 2026</strong> untuk jasa pengeboran pondasi mulai dari <strong>Rp120.000/m menggunakan mesin mini crane</strong>, serta metode strauss pile (bor manual) mulai <strong>Rp70.000/m</strong>. Solusi tepat untuk pembangunan rumah tinggal, renovasi rumah kost bertingkat di gang sempit (strauss pile), hingga ruko komersial tanpa getaran yang merusak dinding tetangga. Gunakan kalkulator otomatis di bawah untuk menghitung estimasi biaya proyek Anda di Ciputat, Ciputat Timur, Sawah Baru, Sawah Lama, Serua, hingga Cirendeu.",
-  "localBusinessDesc": "Jasa bore pile & strauss pile Ciputat 2026 terpercaya. Harga bor mesin mulai Rp120.000/m, manual Rp70.000/m. Spesialis pondasi rumah tinggal, kos-kosan di pemukiman padat dan akses gang sempit (strauss pile). Tanpa getaran, bergaransi, survey gratis Ciputat & Ciputat Timur.",
+  "heroText": "<strong>Harga bore pile Ciputat 2026</strong> untuk jasa pengeboran pondasi mulai dari <strong>Rp125.000/m menggunakan mesin mini crane</strong>, serta metode strauss pile (bor manual) mulai <strong>Rp70.000/m</strong>. Solusi tepat untuk pembangunan rumah tinggal, renovasi rumah kost bertingkat di gang sempit (strauss pile), hingga ruko komersial tanpa getaran yang merusak dinding tetangga. Gunakan kalkulator otomatis di bawah untuk menghitung estimasi biaya proyek Anda di Ciputat, Ciputat Timur, Sawah Baru, Sawah Lama, Serua, hingga Cirendeu.",
+  "localBusinessDesc": "Jasa bore pile & strauss pile Ciputat 2026 terpercaya. Harga bor mesin mulai Rp125.000/m, manual Rp70.000/m. Spesialis pondasi rumah tinggal, kos-kosan di pemukiman padat dan akses gang sempit (strauss pile). Tanpa getaran, bergaransi, survey gratis Ciputat & Ciputat Timur.",
   "mobilizationCost": "Mini crane: Rp2-4jt | Strauss pile (bore pile manual): Rp1-1.5jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah 1-2 lantai & bangunan kost standar"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Kost 3-4 lantai, ruko, perkantoran"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Klinik, asrama mahasiswa, gudang kecil"
       },
@@ -123,7 +123,7 @@
       "imageAlt": "Proses pengeboran bore pile mini crane metode bor basah di Cirendeu Ciputat",
       "imageCaption": "Pengeboran bore pile mesin mini crane wash boring di Cirendeu Ciputat",
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 18 titik<br>Metode: Wash Boring (Bor Basah)",
-      "costCalc": "14m × Rp135.000 × 18 = Rp34.020.000",
+      "costCalc": "14m × Rp140.000 × 18 = Rp34.020.000",
       "mobilization": "+ mobilisasi: Rp2.500.000",
       "total": "Rp36.520.000",
       "time": "5-6 hari kerja",
@@ -355,7 +355,7 @@
     ],
     "conclusion": "<p>Karakteristik tanah dan akses jalan di setiap kelurahan di Ciputat memiliki tantangan tersendiri. Kami siap menyesuaikan konfigurasi mesin bor untuk menjamin efisiensi dan kekuatan pondasi bangunan Anda.</p><p><strong>Pengalaman Proyek di Ciputat:</strong> Kami telah berpengalaman mengerjakan berbagai proyek rumah tinggal pribadi, komplek kos-kosan, ruko, dan bangunan bertingkat di seluruh penjuru Ciputat dan Tangerang Selatan.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan Proyek:</strong> Biaya yang tercantum merupakan estimasi ongkos jasa pengeboran, perakitan rangkaian besi tulangan spiral, dan pengecoran cor beton di lubang tiang, <strong>belum termasuk penyediaan material</strong> (beton dan besi). Kecepatan pelaksanaan pekerjaan dipengaruhi oleh lebar akses jalan pemukiman, daya dukung tanah Ciputat, ketersediaan suplai air untuk bor basah, serta faktor cuaca.<br><br>Memerlukan penawaran khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Cek informasi harga bore pile diameter 30cm selengkapnya &rarr;</a>",
   "tips": [
     {

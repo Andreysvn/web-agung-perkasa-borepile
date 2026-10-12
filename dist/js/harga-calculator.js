@@ -26,7 +26,7 @@
     const pricing = window.__PRICING__;
     const hargaMesin = pricing
         ? Object.fromEntries(pricing.mesin.map(item => [item.diameter, item.price]))
-        : { 30: 120000, 40: 135000, 50: 190000, 60: 0, 80: 0 };
+        : { 30: 125000, 40: 140000, 50: 195000, 60: 0, 80: 0 };
     const hargaManual = pricing
         ? Object.fromEntries(pricing.manual.map(item => [item.diameter, item.price]))
         : { 20: 75000, 25: 85000, 30: 100000, 40: 120000 };

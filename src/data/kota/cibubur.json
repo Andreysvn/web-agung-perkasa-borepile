@@ -9,8 +9,8 @@
   "heroCaption": "Pengeboran pondasi bore pile menggunakan mesin mini crane di kawasan residensial Cibubur",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "<strong>Harga bore pile Cibubur 2026</strong> untuk jasa pengeboran saja mulai dari <strong>Rp120.000/m untuk mesin (mini crane)</strong>, dan manual atau strauss pile mulai dari <strong>Rp70.000/m</strong>. \n                    Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai spesifikasi bangunan dan hasilnya otomatis keluar. Sangat cocok untuk pondasi rumah tinggal, villa, dan klaster residensial di seluruh Cibubur, mencakup CitraGran, Kota Wisata, Raffles Hills, Legenda Wisata, Cibubur Junction, Kranggan, Ciracas, Cipayung, hingga Cileungsi dan sekitarnya.",
-  "localBusinessDesc": "Jasa bore pile Cibubur terpercaya 2026. Spesialis pondasi kokoh minim getaran untuk rumah tinggal, klaster perumahan elit, dan villa. Mesin mulai Rp120.000/m, manual Rp70.000/m. Melayani seluruh Cibubur dan sekitarnya.",
+  "heroText": "<strong>Harga bore pile Cibubur 2026</strong> untuk jasa pengeboran saja mulai dari <strong>Rp125.000/m untuk mesin (mini crane)</strong>, dan manual atau strauss pile mulai dari <strong>Rp70.000/m</strong>. \n                    Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai spesifikasi bangunan dan hasilnya otomatis keluar. Sangat cocok untuk pondasi rumah tinggal, villa, dan klaster residensial di seluruh Cibubur, mencakup CitraGran, Kota Wisata, Raffles Hills, Legenda Wisata, Cibubur Junction, Kranggan, Ciracas, Cipayung, hingga Cileungsi dan sekitarnya.",
+  "localBusinessDesc": "Jasa bore pile Cibubur terpercaya 2026. Spesialis pondasi kokoh minim getaran untuk rumah tinggal, klaster perumahan elit, dan villa. Mesin mulai Rp125.000/m, manual Rp70.000/m. Melayani seluruh Cibubur dan sekitarnya.",
   "mobilizationCost": "Mini crane: Rp2-4jt | Strauss pile (bore pile manual): Rp1-1.5jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah tinggal 1-2 lantai & villa asri"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Rumah mewah 2-3 lantai, ruko, townhouse"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Villa bertingkat, ruko komersial, gudang"
       },
@@ -123,7 +123,7 @@
       "imageAlt": "Pengeboran bore pile mesin mini crane sistem bor basah untuk villa di Kranggan Cibubur",
       "imageCaption": "Bore pile mesin mini crane wash boring untuk pembangunan villa di Kranggan, Cibubur",
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 20 titik<br>Metode: Wash Boring (Bor basah)",
-      "costCalc": "14m × Rp135.000 × 20 = Rp37.800.000",
+      "costCalc": "14m × Rp140.000 × 20 = Rp37.800.000",
       "mobilization": "+ mobilisasi: Rp3.500.000",
       "total": "Rp41.300.000",
       "time": "5-7 hari kerja",
@@ -354,7 +354,7 @@
     ],
     "conclusion": "<p>Setiap kavling di Cibubur memiliki tantangan kontur tersendiri. Kami menyesuaikan teknik pengeboran bore pile untuk memastikan kesempurnaan pondasi rumah dan villa Anda.</p><p><strong>Pengalaman Kami di Cibubur:</strong> Kami berpengalaman lebih dari satu dekade mengerjakan pondasi rumah tinggal, villa, komplek klaster, dan ruko di seluruh koridor Cibubur dan sekitarnya.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan:</strong> Harga di atas sudah mencakup jasa pengeboran tanah, perakitan besi tulangan, dan pengecoran beton pondasi, <strong>belum termasuk material</strong> (besi dan adukan beton). Proyek di atas adalah dokumentasi asli dari pekerjaan yang telah kami tuntaskan di lapangan. Kelancaran pengerjaan didukung oleh kemudahan akses jalan perumahan, struktur tanah kavling, dan ketersediaan pasokan air jika memakai sistem wash boring.<br><br>Memerlukan penawaran khusus diameter 30cm untuk rumah tinggal? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

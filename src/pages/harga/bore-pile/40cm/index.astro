@@ -3,7 +3,7 @@ import config from '../../../../data/config.json';
 import KotaLayout from '../../../../layouts/KotaLayout.astro';
 import pricing from '../../../../data/harga.json';
 import pageData from '../../../../data/harga-diameter/40cm.json';
-import { organizationSchema, localBusinessSchema } from '../../../../lib/schema.js';
+import { organizationSchema, localBusinessSchema, productSchema as makeProductSchema } from '../../../../lib/schema.js';
 import FaIcon from '../../../../components/icons/FaIcon.astro';
 import CityGuarantee from '../../../../components/city/CityGuarantee.astro';
 import CityEquipment from '../../../../components/city/CityEquipment.astro';
@@ -51,6 +51,22 @@ const formattedMonthYear = new Intl.DateTimeFormat('id-ID', {
 }).format(new Date(`${pricing.priceUpdatedAt}T00:00:00`));
 
 const seoDesc = pageData.descriptionTemplate.replace('{mesin}', mesinPrice).replace('{manual}', manualPrice || '');
+
+const currentMesin = pricing.mesin.find(p => p.diameter === pageData.diameterNum);
+const currentManual = pricing.manual.find(p => p.diameter === pageData.diameterNum);
+const pLow = currentMesin ? currentMesin.price : (currentManual ? currentManual.price : 140000);
+const pHigh = currentMesin ? (currentMesin.maxPrice || currentMesin.price) : pLow;
+const productLd = JSON.stringify(makeProductSchema({
+    name: `Jasa & Harga Bore Pile Diameter ${pageData.diameter}`,
+    description: seoDesc,
+    image: `https://agungperkasaborepile.com${pageData.heroImage}`,
+    canonical: pageData.canonical,
+    lowPrice: pLow,
+    highPrice: pHigh,
+    price: pLow,
+    offerCount: (currentMesin ? 1 : 0) + (currentManual ? 1 : 0) || 1,
+    priceValidUntil: "2027-12-31"
+}));
 ---
 
 <KotaLayout
@@ -63,6 +79,7 @@ const seoDesc = pageData.descriptionTemplate.replace('{mesin}', mesinPrice).repl
     extraCss={["/css/harga-komponen.css"]}
     faqSchema={pageData.faq}
     breadcrumbItems={pageData.breadcrumbs}
+    productSchema={productLd}
 >
     <nav class="breadcrumb" aria-label="Breadcrumb navigasi">
                 {pageData.breadcrumbs.map((item, i) => (

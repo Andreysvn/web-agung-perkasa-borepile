@@ -9,8 +9,8 @@
   "heroCaption": "Pengeboran bore pile mini crane menembus tanah merah dan cadas di wilayah Bogor",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "Harga jasa bore pile Bogor 2026 untuk pekerjaan pengeboran mulai dari Rp120.000/m menggunakan mesin mini crane, dan strauss pile (manual) mulai Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Gunakan kalkulator estimasi biaya kami untuk menghitung rencana anggaran pondasi villa, ruko, maupun rumah tinggal Anda di kontur tanah merah, perbukitan, hingga cadas keras Bogor. Melayani seluruh wilayah Kota Bogor, Sentul, Cibinong, Ciawi, Gunung Putri, hingga kawasan Puncak.",
-  "localBusinessDesc": "Spesialis jasa bore pile dan strauss pile Bogor terpercaya. Ahli mengatasi tanah merah, cadas, dan kontur berbukit villa Puncak. Harga mesin mulai Rp120.000/m & manual Rp75.000/m. Layanan se-Bogor.",
+  "heroText": "Harga jasa bore pile Bogor 2026 untuk pekerjaan pengeboran mulai dari Rp125.000/m menggunakan mesin mini crane, dan strauss pile (manual) mulai Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Gunakan kalkulator estimasi biaya kami untuk menghitung rencana anggaran pondasi villa, ruko, maupun rumah tinggal Anda di kontur tanah merah, perbukitan, hingga cadas keras Bogor. Melayani seluruh wilayah Kota Bogor, Sentul, Cibinong, Ciawi, Gunung Putri, hingga kawasan Puncak.",
+  "localBusinessDesc": "Spesialis jasa bore pile dan strauss pile Bogor terpercaya. Ahli mengatasi tanah merah, cadas, dan kontur berbukit villa Puncak. Harga mesin mulai Rp125.000/m & manual Rp75.000/m. Layanan se-Bogor.",
   "mobilizationCost": "Mini crane: Rp3-5jt | Strauss pile (bore pile manual): Rp1-2jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah tinggal 1-2 lantai di tanah padat Bogor"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Ruko bertingkat & villa lereng perbukitan"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Gudang logistik, pabrik, & resort Bogor"
       },
@@ -111,7 +111,7 @@
       "imageAlt": "Pekerjaan bore pile mini crane diameter 40cm sedalam 8 meter untuk pondasi asrama pesantren Az Zikra di Bogor",
       "imageCaption": "Pengeboran bore pile mini crane pada struktur tanah merah di Gunung Sindur, Bogor",
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 8m, 80 titik<br>Metode: Wash Boring (Sirkulasi bor basah)",
-      "costCalc": "8m × Rp135.000 × 80 titik = Rp86.400.000",
+      "costCalc": "8m × Rp140.000 × 80 titik = Rp86.400.000",
       "mobilization": "Rp4.000.000",
       "total": "Rp90.400.000",
       "time": "18-22 hari kerja",
@@ -123,7 +123,7 @@
       "imageAlt": null,
       "imageCaption": null,
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 12m, 24 titik<br>Metode: Dry Boring menembus lapisan tanah cadas berbukit",
-      "costCalc": "12m × Rp135.000 × 24 titik = Rp38.880.000",
+      "costCalc": "12m × Rp140.000 × 24 titik = Rp38.880.000",
       "mobilization": "Rp4.500.000",
       "total": "Rp43.380.000",
       "time": "8-10 hari kerja",
@@ -357,7 +357,7 @@
     ],
     "conclusion": "<p>Karakteristik tanah di setiap sudut Bogor sangat beraneka ragam—dari dataran padat Cibinong hingga lereng berbatu di Puncak. Keahlian teknik bore pile kami memastikan setiap tiang berdiri kokoh di atas lapisan tanah pendukung terkuat.</p><p><strong>Pengalaman Kami di Bogor:</strong> Kami terbiasa menangani aneka proyek villa eksklusif di perbukitan, rumah tinggal cluster, ruko, hingga gedung fasilitas publik di seluruh penjuru Bogor.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan:</strong> Estimasi rincian biaya di atas sudah mencakup jasa pengeboran lubang, perakitan besi tulangan cakar ayam, serta pengecoran adukan beton (<strong>belum termasuk pengadaan material beton ready-mix dan besi tulangan</strong>). Pengerjaan di wilayah Bogor sangat dipengaruhi oleh cuaca hujan harian, kemiringan kontur tanah perbukitan, kekerasan lapisan cadas, serta ketersediaan debit air kerja metode wash boring.<br><br>Ingin mengetahui paket harga khusus diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat rincian lengkap harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

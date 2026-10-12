@@ -51,7 +51,7 @@ let pricing: PricingData | null = null;
 let hargaMesin: Record<string, number> = {};
 let hargaManual: Record<string, number> = {};
 
-const DEFAULT_HARGA_MESIN: Record<string, number> = { '30': 120000, '40': 135000, '50': 190000, '60': 0, '80': 0 };
+const DEFAULT_HARGA_MESIN: Record<string, number> = { '30': 125000, '40': 140000, '50': 195000, '60': 0, '80': 0 };
 const DEFAULT_HARGA_MANUAL: Record<string, number> = { '20': 75000, '25': 85000, '30': 100000, '40': 120000 };
 const DEFAULT_DIAMETER_MESIN: number[] = [30, 40, 50, 60, 80];
 const DEFAULT_DIAMETER_MANUAL: number[] = [20, 25, 30, 40];

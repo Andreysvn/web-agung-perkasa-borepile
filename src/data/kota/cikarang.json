@@ -9,7 +9,7 @@
   "heroCaption": "Pengerjaan bore pile mesin mini crane spesialis kawasan industri dan pergudangan di Cikarang",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "<strong>Biaya jasa bore pile Cikarang 2026</strong> untuk pekerjaan pengeboran pondasi mulai dari <strong>Rp120.000/m menggunakan mesin mini crane</strong> dan <strong>Rp70.000/m untuk strauss pile manual</strong>. Spesialis pondasi tiang bor untuk pabrik, gudang logistik, ruko, dan perumahan di kawasan industri MM2100, Jababeka, GIIC Deltamas, Lippo Cikarang, EJIP, hingga Cikarang Pusat, Selatan, Utara, Barat, dan Timur.",
+  "heroText": "<strong>Biaya jasa bore pile Cikarang 2026</strong> untuk pekerjaan pengeboran pondasi mulai dari <strong>Rp125.000/m menggunakan mesin mini crane</strong> dan <strong>Rp70.000/m untuk strauss pile manual</strong>. Spesialis pondasi tiang bor untuk pabrik, gudang logistik, ruko, dan perumahan di kawasan industri MM2100, Jababeka, GIIC Deltamas, Lippo Cikarang, EJIP, hingga Cikarang Pusat, Selatan, Utara, Barat, dan Timur.",
   "localBusinessDesc": "Jasa bore pile dan strauss pile profesional di Cikarang. Melayani pengeboran pondasi pabrik, hanggar gudang, ruko komersial, dan rumah di Jababeka, MM2100, Deltamas, serta seluruh wilayah Cikarang. Harga kompetitif & survey lokasi gratis.",
   "mobilizationCost": "Mini crane: Rp2-4jt | Strauss pile (bore pile manual): Rp1-1.5jt",
   "manualPriceMin": 75000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah tinggal 1-2 lantai, ruko, pondasi pagar kawasan industri"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Ruko bertingkat, workshop, kantor operasional pabrik"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Gudang logistik, struktur baja berat, hanggar industri"
       },
@@ -111,7 +111,7 @@
       "imageAlt": "Pengerjaan bore pile mini crane untuk pondasi hanggar gudang logistik di kawasan industri Cikarang",
       "imageCaption": "Pengeboran bore pile mini crane pada proyek gudang industri kawasan Cikarang",
       "specs": "Bore pile mesin mini crane Ø50cm, kedalaman 18m, 16 titik<br>Metode: Wash Boring (Bor Basah)",
-      "costCalc": "18m × Rp190.000 × 16 = Rp54.720.000",
+      "costCalc": "18m × Rp195.000 × 16 = Rp54.720.000",
       "mobilization": "Rp3.500.000",
       "total": "Rp58.220.000",
       "time": "8-10 hari kerja",
@@ -123,7 +123,7 @@
       "imageAlt": null,
       "imageCaption": null,
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 15m, 20 titik<br>Metode: Wash Boring (Bor Basah)",
-      "costCalc": "15m × Rp135.000 × 20 = Rp40.500.000",
+      "costCalc": "15m × Rp140.000 × 20 = Rp40.500.000",
       "mobilization": "Rp3.500.000",
       "total": "Rp44.000.000",
       "time": "7-9 hari kerja",
@@ -135,7 +135,7 @@
       "imageAlt": null,
       "imageCaption": null,
       "specs": "Bore pile mesin mini crane Ø30cm, kedalaman 12m, 18 titik<br>Metode: Dry Boring (Bor Kering)",
-      "costCalc": "12m × Rp120.000 × 18 = Rp25.920.000",
+      "costCalc": "12m × Rp125.000 × 18 = Rp25.920.000",
       "mobilization": "Rp3.000.000",
       "total": "Rp28.920.000",
       "time": "5-7 hari kerja",
@@ -354,7 +354,7 @@
     ],
     "conclusion": "<p>Karakteristik tanah Cikarang menuntut teknik pondasi yang tepat dan presisi. Agung Perkasa siap memberikan solusi pondasi tiang bor yang kokoh, ekonomis, dan terpercaya untuk keberhasilan investasi konstruksi Anda di Cikarang.</p><p><strong>Pengalaman Proyek di Cikarang:</strong> Kami berpengalaman menangani puluhan proyek tiang bore pile untuk kawasan pergudangan, workshop manufaktur, ruko komersial, hingga perumahan di Jababeka, MM2100, Deltamas, dan sekitarnya.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan Teknis:</strong> Simulasi perhitungan biaya di atas adalah jasa pengeboran lubang, perakitan besi tulangan, dan pengecoran beton (<strong>di luar pengadaan material semen/ready mix dan besi beton</strong>). Data di atas diambil dari dokumentasi proyek riil kami di lapangan. Kecepatan pengerjaan dipengaruhi oleh kontur tanah, kelancaran pasokan air untuk wash boring, dan akses masuk alat berat di kawasan proyek.<br><br>Ingin konsultasi harga bore pile diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Cek informasi harga bore pile diameter 30cm terlengkap &rarr;</a>",
   "tips": [
     {

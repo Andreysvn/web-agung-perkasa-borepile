@@ -9,8 +9,8 @@
   "heroCaption": "Proses pengeboran bore pile menggunakan alat mini crane di Jakarta",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "Harga jasa bore pile Jakarta 2026 untuk jasa pengeboran saja mulai dari Rp120.000/m untuk mesin (mini crane), dan manual atau strauss pile mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Jakarta Pusat, Barat, Selatan, Timur, dan Utara.",
-  "localBusinessDesc": "Jasa bore pile Jakarta terpercaya. Harga mesin Rp120.000/m, manual Rp75.000/m. Melayani seluruh Jakarta dan sekitarnya.",
+  "heroText": "Harga jasa bore pile Jakarta 2026 untuk jasa pengeboran saja mulai dari Rp125.000/m untuk mesin (mini crane), dan manual atau strauss pile mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Kalkulator di bawah bisa menghitung estimasi total biaya proyek Anda, tinggal melengkapi sesuai proyek anda dan akan keluar hasilnya secara otomatis. Melayani seluruh Jakarta Pusat, Barat, Selatan, Timur, dan Utara.",
+  "localBusinessDesc": "Jasa bore pile Jakarta terpercaya. Harga mesin Rp125.000/m, manual Rp75.000/m. Melayani seluruh Jakarta dan sekitarnya.",
   "mobilizationCost": "Mesin mini crane: Rp2-3jt | Strauss pile (bore pile manual): Rp1jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah 1-2 lantai"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Ruko, kantor"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Gudang, pabrik kecil"
       },
@@ -107,7 +107,7 @@
       "imageAlt": "Proses pengerjaan bore pile mini crane metode bor kering di Dukuh Patra, Jakarta Selatan 27 Mei 2026",
       "imageCaption": "Bore Pile mini crane metode bor kering di Dukuh Patra, Jakarta Selatan",
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 5m, 40 titik<br>Metode: Dry Boring (Bor kering)",
-      "costCalc": "5m × Rp135.000 × 40 = Rp27.000.000",
+      "costCalc": "5m × Rp140.000 × 40 = Rp27.000.000",
       "mobilization": "+ mobilisasi: Rp3.000.000",
       "total": "Rp30.000.000",
       "time": "14-16 hari kerja",
@@ -131,9 +131,9 @@
       "imageAlt": "Proses pengerjaan bore pile manual (strauss pile) di Kelapa Gading, Jakarta Utara",
       "imageCaption": "Strauss Pile (bore pile manual) di Kelapa Gading, Jakarta Utara",
       "specs": "Strauss pile (bore pile manual) Ø30cm, kedalaman 6m, 12 titik",
-      "costCalc": "6m × Rp85.000 × 12 = Rp6.120.000",
+      "costCalc": "6m × Rp85.000 × 12 = Rp6.125.000",
       "mobilization": "+ mobilisasi: Rp1.000.000",
-      "total": "Rp 6.120.000",
+      "total": "Rp 6.125.000",
       "time": "4-6 hari kerja",
       "hasImage": true
     }
@@ -373,7 +373,7 @@
       "usage": "hotel, gedung bertingkat"
     }
   ],
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Note:</strong> Harga di atas sudah termasuk jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton dan besi). Contoh di atas adalah proyek asli yang pernah kami kerjakan di lapangan. Kecepatan pengerjaan dipengaruhi oleh kondisi lapangan, akses lokasi, karakteristik tanah, dan yang paling penting adalah pasokan air yang cukup untuk metode wash boring.<br><br>Butuh harga khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
   "soilReasons": {
     "title": "Mengapa Bore Pile Pilihan Tepat untuk Wilayah Jakarta?",

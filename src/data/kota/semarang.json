@@ -9,8 +9,8 @@
   "heroCaption": "Pengeboran pondasi bore pile menggunakan mesin mini crane di wilayah Semarang",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "Harga jasa bore pile Semarang 2026 untuk jasa pengeboran saja mulai dari Rp120.000/m untuk mesin (mini crane), dan manual atau strauss pile mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Solusi pondasi dalam terpercaya untuk mengatasi lapisan tanah lempung di kawasan Semarang Bawah maupun kontur perbukitan Semarang Atas. Gunakan kalkulator estimasi di bawah untuk menghitung kebutuhan biaya proyek Anda secara otomatis. Melayani seluruh wilayah Semarang, Ungaran, dan sekitarnya.",
-  "localBusinessDesc": "Jasa bore pile Semarang terpercaya spesialis pondasi tanah lempung Semarang Bawah & Atas. Harga mesin mulai Rp120.000/m, manual Rp75.000/m. Melayani seluruh Semarang dan sekitarnya.",
+  "heroText": "Harga jasa bore pile Semarang 2026 untuk jasa pengeboran saja mulai dari Rp125.000/m untuk mesin (mini crane), dan manual atau strauss pile mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Solusi pondasi dalam terpercaya untuk mengatasi lapisan tanah lempung di kawasan Semarang Bawah maupun kontur perbukitan Semarang Atas. Gunakan kalkulator estimasi di bawah untuk menghitung kebutuhan biaya proyek Anda secara otomatis. Melayani seluruh wilayah Semarang, Ungaran, dan sekitarnya.",
+  "localBusinessDesc": "Jasa bore pile Semarang terpercaya spesialis pondasi tanah lempung Semarang Bawah & Atas. Harga mesin mulai Rp125.000/m, manual Rp75.000/m. Melayani seluruh Semarang dan sekitarnya.",
   "mobilizationCost": "Mini crane: Rp5-7jt | Strauss pile (bore pile manual): Rp2-3jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah 1-2 lantai"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Ruko, kantor"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Gudang, pabrik kecil"
       }
@@ -99,7 +99,7 @@
       "imageAlt": "Pekerjaan pondasi bore pile mini crane Ø40cm untuk gedung kantor di Semarang Bawah",
       "imageCaption": "Bore pile metode wash boring di kawasan komersial Semarang Bawah",
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 15m, 24 titik<br>Metode: Wash Boring (Bor basah) - Lapisan lempung aluvial Semarang Bawah",
-      "costCalc": "15m × Rp135.000 × 24 = Rp48.600.000",
+      "costCalc": "15m × Rp140.000 × 24 = Rp48.600.000",
       "mobilization": "Rp6.000.000",
       "total": "Rp54.600.000",
       "time": "7-9 hari kerja",
@@ -111,7 +111,7 @@
       "imageAlt": null,
       "imageCaption": null,
       "specs": "Bore pile mesin mini crane Ø30cm, kedalaman 12m, 20 titik<br>Metode: Dry Boring (Bor kering) - Lereng perbukitan tanah lempung padas",
-      "costCalc": "12m × Rp120.000 × 20 = Rp28.800.000",
+      "costCalc": "12m × Rp125.000 × 20 = Rp28.800.000",
       "mobilization": "Rp6.500.000",
       "total": "Rp35.300.000",
       "time": "6-8 hari kerja",
@@ -231,7 +231,7 @@
     },
     {
       "q": "Berapa biaya jasa bore pile per meter di Semarang untuk tahun 2026?",
-      "a": "Harga jasa pengeboran saja di Semarang tahun 2026 dimulai dari Rp75.000/meter untuk bore pile manual (strauss pile) diameter 20 cm, dan mulai dari Rp120.000/meter untuk mesin mini crane diameter 30 cm. Tarif pastinya ditentukan oleh pilihan diameter, total kedalaman, dan tingkat kekerasan tanah di lokasi proyek."
+      "a": "Harga jasa pengeboran saja di Semarang tahun 2026 dimulai dari Rp75.000/meter untuk bore pile manual (strauss pile) diameter 20 cm, dan mulai dari Rp125.000/meter untuk mesin mini crane diameter 30 cm. Tarif pastinya ditentukan oleh pilihan diameter, total kedalaman, dan tingkat kekerasan tanah di lokasi proyek."
     },
     {
       "q": "Kapan proyek di Semarang harus memakai metode wash boring (bor basah)?",
@@ -332,7 +332,7 @@
     ],
     "conclusion": "<p>Tantangan tanah lempung ekspansif dan penurunan tanah di Semarang Bawah serta kontur perbukitan di Semarang Atas menuntut pondasi yang kokoh dan tepat sasaran. Agung Perkasa siap memberikan solusi pondasi bore pile berkualitas tinggi untuk ketahanan bangunan Anda.</p><p><strong>Pengalaman Proyek Semarang:</strong> Kami telah berpengalaman menangani puluhan proyek mulai dari rumah tinggal bertingkat, ruko, gudang, hingga gedung perkantoran di seluruh penjuru Semarang dan Ungaran.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan Lapangan:</strong> Biaya yang tertera merupakan tarif jasa pengeboran, perakitan pembesian, dan pengecoran beton (<strong>belum termasuk pengadaan material beton ready mix dan besi tulangan</strong>). Contoh di atas diambil dari studi kasus pengerjaan riil di lapangan. Durasi pengerjaan dipengaruhi kondisi akses lokasi, karakteristik tanah lempung, serta kelancaran pasokan air kerja untuk metode wash boring.<br><br>Butuh rincian biaya khusus diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Cek detail harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

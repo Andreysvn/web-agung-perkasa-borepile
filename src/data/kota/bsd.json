@@ -9,8 +9,8 @@
   "heroCaption": "Pengerjaan bore pile mesin mini crane untuk pondasi ruko dan gedung perkantoran di kawasan BSD City",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "<strong>Harga bore pile BSD City Serpong 2026</strong> untuk jasa pengeboran pondasi profesional mulai dari <strong>Rp120.000/m menggunakan mesin mini crane</strong> dan strauss pile manual mulai dari <strong>Rp70.000/m</strong>. Solusi pondasi dalam kokoh, minim getaran, dan presisi tinggi untuk ruko komersial, gedung kantor modern, serta hunian cluster prestisius di BSD City. Gunakan kalkulator biaya otomatis di bawah ini untuk menghitung estimasi anggaran proyek Anda secara instan. Kami melayani seluruh kawasan BSD City, Serpong, Pagedangan, Cisauk, Gading Serpong, dan sekitarnya.",
-  "localBusinessDesc": "Jasa bore pile BSD City 2026 spesialis pondasi ruko komersial, gedung kantor, dan hunian modern. Mesin mulai Rp120.000/m, manual Rp70.000/m. Minim getaran, garansi 6 tahun, kalkulator online gratis. Melayani seluruh BSD City & Serpong.",
+  "heroText": "<strong>Harga bore pile BSD City Serpong 2026</strong> untuk jasa pengeboran pondasi profesional mulai dari <strong>Rp125.000/m menggunakan mesin mini crane</strong> dan strauss pile manual mulai dari <strong>Rp70.000/m</strong>. Solusi pondasi dalam kokoh, minim getaran, dan presisi tinggi untuk ruko komersial, gedung kantor modern, serta hunian cluster prestisius di BSD City. Gunakan kalkulator biaya otomatis di bawah ini untuk menghitung estimasi anggaran proyek Anda secara instan. Kami melayani seluruh kawasan BSD City, Serpong, Pagedangan, Cisauk, Gading Serpong, dan sekitarnya.",
+  "localBusinessDesc": "Jasa bore pile BSD City 2026 spesialis pondasi ruko komersial, gedung kantor, dan hunian modern. Mesin mulai Rp125.000/m, manual Rp70.000/m. Minim getaran, garansi 6 tahun, kalkulator online gratis. Melayani seluruh BSD City & Serpong.",
   "mobilizationCost": "Mini crane: Rp2-4jt | Strauss pile (bore pile manual): Rp1-1.5jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah cluster modern 1-2 lantai"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Ruko komersial, kantor 3-4 lantai"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Gedung kantor modern, business loft, warehouse"
       },
@@ -111,9 +111,9 @@
       "imageAlt": "Pengerjaan pondasi bore pile mini crane metode bor kering untuk komplek ruko komersial di kawasan BSD City",
       "imageCaption": "Bore pile mini crane metode bor kering pada pembangunan ruko komersial di BSD City",
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 13m, 24 titik<br>Metode: Dry Boring (Bor kering)",
-      "costCalc": "13m × Rp135.000 × 24 = Rp42.120.000",
+      "costCalc": "13m × Rp140.000 × 24 = Rp42.125.000",
       "mobilization": "+ mobilisasi: Rp3.000.000",
-      "total": "Rp45.120.000",
+      "total": "Rp45.125.000",
       "time": "6-8 hari kerja",
       "hasImage": true
     },
@@ -123,7 +123,7 @@
       "imageAlt": "Proses pengeboran bore pile mini crane metode wash boring untuk pondasi gedung kantor di kawasan bisnis BSD",
       "imageCaption": "Bore pile mini crane wash boring untuk pondasi gedung perkantoran bertingkat di BSD City",
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 20 titik<br>Metode: Wash Boring (Bor basah)",
-      "costCalc": "14m × Rp135.000 × 20 = Rp37.800.000",
+      "costCalc": "14m × Rp140.000 × 20 = Rp37.800.000",
       "mobilization": "+ mobilisasi: Rp3.500.000",
       "total": "Rp41.300.000",
       "time": "5-7 hari kerja",
@@ -234,7 +234,7 @@
     },
     {
       "q": "Berapa estimasi biaya jasa bore pile per meter di BSD City tahun 2026?",
-      "a": "Untuk jasa pengeboran dengan mesin mini crane, tarif mulai dari <strong>Rp120.000/meter</strong> untuk diameter 30 cm (cocok untuk rumah cluster) dan <strong>Rp135.000/meter</strong> untuk diameter 40 cm (standar ruko komersial dan kantor). Strauss pile manual mulai dari <strong>Rp70.000 - Rp100.000/meter</strong>. Anda bisa menggunakan kalkulator online di website ini untuk menghitung estimasi biaya proyek secara langsung."
+      "a": "Untuk jasa pengeboran dengan mesin mini crane, tarif mulai dari <strong>Rp125.000/meter</strong> untuk diameter 30 cm (cocok untuk rumah cluster) dan <strong>Rp140.000/meter</strong> untuk diameter 40 cm (standar ruko komersial dan kantor). Strauss pile manual mulai dari <strong>Rp70.000 - Rp100.000/meter</strong>. Anda bisa menggunakan kalkulator online di website ini untuk menghitung estimasi biaya proyek secara langsung."
     },
     {
       "q": "Berapa lama estimasi pengerjaan bore pile untuk ruko komersial 3-4 lantai di BSD?",
@@ -347,7 +347,7 @@
     ],
     "conclusion": "<p>Dengan karakteristik tanah kawasan BSD City yang dinamis, pemilihan teknik bore pile yang presisi menjamin kekokohan jangka panjang bangunan Anda.</p><p><strong>Portofolio Kami di BSD:</strong> Agung Perkasa Borepile berpengalaman mengerjakan beragam pondasi ruko komersial, gedung perkantoran, dan hunian cluster di seluruh area BSD City dan sekitarnya.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan Teknis:</strong> Estimasi harga jasa bore pile di atas sudah meliputi pengerjaan pengeboran tanah, perakitan besi tulangan spiral, dan pengecoran beton (<strong>belum termasuk material</strong> beton readymix dan besi). Studi kasus di atas merupakan dokumentasi proyek riil tim Agung Perkasa Borepile di lapangan. Laju penyelesaian pekerjaan dipengaruhi oleh kesiapan akses gerbang kawasan BSD, kondisi tanah setempat, dan ketersediaan pasokan air kerja jika memakai sistem wash boring.<br><br>Membutuhkan penawaran khusus diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat rincian lengkap harga bore pile 30cm &rarr;</a>",
   "tips": [
     {

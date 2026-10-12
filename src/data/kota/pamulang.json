@@ -9,8 +9,8 @@
   "heroCaption": "Jasa bore pile mini crane berpengalaman untuk konstruksi rumah tinggal dan ruko di Pamulang",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "<strong>Harga bore pile Pamulang 2026</strong> untuk jasa pengeboran pondasi dalam mulai dari <strong>Rp120.000/m menggunakan mesin mini crane</strong>, serta metode strauss pile manual mulai dari <strong>Rp70.000/m</strong>. \n                    Solusi pondasi kokoh bebas getaran untuk pembangunan rumah tinggal, hunian cluster modern, hingga ruko bisnis lokal di kawasan Pamulang yang terus berkembang pesat. Manfaatkan kalkulator estimasi di bawah ini untuk menghitung kebutuhan pondasi proyek Anda secara otomatis. Kami melayani seluruh Pamulang Barat, Pamulang Timur, Pondok Benda, Benda Baru, Kedaung, Bambu Apus, dan Pondok Cabe.",
-  "localBusinessDesc": "Harga bore pile Pamulang 2026 mulai Rp120.000/m (mesin) & Rp70.000/m (manual). Spesialis pondasi rumah cluster, renovasi bertingkat & ruko komersial di Pamulang. Bergaransi resmi.",
+  "heroText": "<strong>Harga bore pile Pamulang 2026</strong> untuk jasa pengeboran pondasi dalam mulai dari <strong>Rp125.000/m menggunakan mesin mini crane</strong>, serta metode strauss pile manual mulai dari <strong>Rp70.000/m</strong>. \n                    Solusi pondasi kokoh bebas getaran untuk pembangunan rumah tinggal, hunian cluster modern, hingga ruko bisnis lokal di kawasan Pamulang yang terus berkembang pesat. Manfaatkan kalkulator estimasi di bawah ini untuk menghitung kebutuhan pondasi proyek Anda secara otomatis. Kami melayani seluruh Pamulang Barat, Pamulang Timur, Pondok Benda, Benda Baru, Kedaung, Bambu Apus, dan Pondok Cabe.",
+  "localBusinessDesc": "Harga bore pile Pamulang 2026 mulai Rp125.000/m (mesin) & Rp70.000/m (manual). Spesialis pondasi rumah cluster, renovasi bertingkat & ruko komersial di Pamulang. Bergaransi resmi.",
   "mobilizationCost": "Mini crane: Rp2-3.5jt | Strauss pile (bore pile manual): Rp1-1.5jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah tinggal 1-2 lantai & townhouse"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Ruko, rukan, kafe, kantor lokal"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Gudang, minimarket, klinik swasta"
       },
@@ -123,7 +123,7 @@
       "imageAlt": "Proses pengeboran pondasi bore pile mini crane untuk bangunan ruko bisnis lokal di Pamulang",
       "imageCaption": "Pengerjaan bore pile mesin mini crane untuk pondasi deretan ruko komersial di jalan utama Pamulang",
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 18 titik<br>Metode: Wash Boring (Bor Basah)",
-      "costCalc": "14m × Rp135.000 × 18 = Rp34.020.000",
+      "costCalc": "14m × Rp140.000 × 18 = Rp34.020.000",
       "mobilization": "+ mobilisasi alat: Rp2.500.000",
       "total": "Rp36.520.000",
       "time": "5-6 hari kerja",
@@ -347,7 +347,7 @@
     ],
     "conclusion": "<p>Setiap titik lokasi proyek di Pamulang memiliki profil lapisan tanah yang berbeda. Agung Perkasa selalu menyesuaikan metode bore pile terbaik demi menjamin kekokohan jangka panjang struktur bangunan Anda.</p><p><strong>Pengalaman kami di Pamulang:</strong> Kami telah berpengalaman mengerjakan aneka proyek rumah tinggal, cluster perumahan, ruko, hingga gedung usaha di seluruh penjuru Pamulang dan wilayah Tangerang Selatan.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan Proyek:</strong> Estimasi tarif di atas mencakup upah jasa pengeboran, instalasi perakitan besi tulangan spiral, dan proses pengecoran tiang pondasi bore pile (<strong>tidak termasuk pengadaan material beton & besi</strong>). Kecepatan pengerjaan dipengaruhi kemudahan akses mobilisasi jalan, kontur tanah proyek, serta ketersediaan air kerja jika menggunakan metode wash boring.<br><br>Ingin cek penawaran khusus tiang diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat rincian harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

@@ -9,8 +9,8 @@
   "heroCaption": "Operasional mesin bore pile mini crane pada lahan berkontur lereng kawasan perbukitan Bandung",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "Harga jasa bore pile Bandung 2026 untuk pekerjaan pengeboran mesin (mini crane) mulai dari Rp120.000/m, dan bore pile manual (strauss pile) mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Dengan kondisi geografis Bandung yang didominasi kontur perbukitan, lereng curam, cuaca dingin bercurah hujan tinggi, serta akses jalan pemukiman yang padat dan sempit, kami menyediakan armada mesin mini crane lincah serta tim ahli berpengalaman di medan terjal. Gunakan kalkulator estimasi biaya otomatis di bawah untuk merencanakan anggaran pondasi proyek Anda di seluruh Bandung Utara, Bandung Selatan, Bandung Barat, hingga Cimahi.",
-  "localBusinessDesc": "Jasa bore pile Bandung profesional spesialis pondasi medan perbukitan, lereng terjal, dan akses jalan sempit. Tarif mesin mini crane mulai Rp120.000/m dan manual strauss pile Rp75.000/m. Melayani Bandung Raya dan Cimahi.",
+  "heroText": "Harga jasa bore pile Bandung 2026 untuk pekerjaan pengeboran mesin (mini crane) mulai dari Rp125.000/m, dan bore pile manual (strauss pile) mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Dengan kondisi geografis Bandung yang didominasi kontur perbukitan, lereng curam, cuaca dingin bercurah hujan tinggi, serta akses jalan pemukiman yang padat dan sempit, kami menyediakan armada mesin mini crane lincah serta tim ahli berpengalaman di medan terjal. Gunakan kalkulator estimasi biaya otomatis di bawah untuk merencanakan anggaran pondasi proyek Anda di seluruh Bandung Utara, Bandung Selatan, Bandung Barat, hingga Cimahi.",
+  "localBusinessDesc": "Jasa bore pile Bandung profesional spesialis pondasi medan perbukitan, lereng terjal, dan akses jalan sempit. Tarif mesin mini crane mulai Rp125.000/m dan manual strauss pile Rp75.000/m. Melayani Bandung Raya dan Cimahi.",
   "mobilizationCost": "Mini crane: Rp5-7jt | Strauss pile (bore pile manual): Rp2-3jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah 1-2 lantai di area lereng/perbukitan"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Ruko, villa bertingkat, perkantoran"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Gudang, resto tebing, pabrik kecil"
       },
@@ -111,7 +111,7 @@
       "imageAlt": "Pekerjaan bore pile mesin mini crane untuk pondasi villa tebing di Dago Pakar Bandung",
       "imageCaption": "Pengeboran bore pile mini crane pada area berlereng terjal Dago Pakar Bandung",
       "specs": "Bore pile mesin mini crane Ø30cm, kedalaman 12m, 20 titik<br>Metode: Dry Boring (bor kering) pada lahan lereng tanah andosol berbatu",
-      "costCalc": "12m × Rp120.000 × 20 = Rp28.800.000",
+      "costCalc": "12m × Rp125.000 × 20 = Rp28.800.000",
       "mobilization": "Rp6.000.000",
       "total": "Rp34.800.000",
       "time": "6-8 hari kerja",
@@ -123,7 +123,7 @@
       "imageAlt": null,
       "imageCaption": null,
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 22 titik<br>Metode: Dry Boring dengan instalasi casing proteksi dinding tanah",
-      "costCalc": "14m × Rp135.000 × 22 = Rp41.580.000",
+      "costCalc": "14m × Rp140.000 × 22 = Rp41.580.000",
       "mobilization": "Rp6.000.000",
       "total": "Rp47.580.000",
       "time": "7-10 hari kerja",
@@ -236,7 +236,7 @@
   "faq": [
     {
       "q": "Berapa tarif jasa bore pile dan strauss pile per meter di Bandung tahun 2026?",
-      "a": "Tarif jasa bore pile mesin (mini crane) di Bandung mulai dari Rp120.000/m untuk diameter 30 cm. Sementara untuk bore pile manual (strauss pile) tarifnya sangat ekonomis mulai dari Rp75.000/m untuk diameter 20 cm. Total biaya ditentukan oleh diameter lubang, kedalaman tanah keras, topografi lahan, dan kemudahan akses alat."
+      "a": "Tarif jasa bore pile mesin (mini crane) di Bandung mulai dari Rp125.000/m untuk diameter 30 cm. Sementara untuk bore pile manual (strauss pile) tarifnya sangat ekonomis mulai dari Rp75.000/m untuk diameter 20 cm. Total biaya ditentukan oleh diameter lubang, kedalaman tanah keras, topografi lahan, dan kemudahan akses alat."
     },
     {
       "q": "Mengapa pondasi bore pile sangat cocok untuk kawasan lereng dan perbukitan di Bandung Utara?",
@@ -365,7 +365,7 @@
     ],
     "conclusion": "<p>Karakteristik tanah di Bandung memiliki kontras tinggi antara zona lereng perbukitan di kawasan utara dan cekungan endapan danau purba di kawasan selatan. Kami mengombinasikan keahlian teknis dan metode bor yang tepat guna menjamin kestabilan pondasi bangunan Anda.</p><p><strong>Portofolio Agung Perkasa di Bandung:</strong> Berpengalaman puluhan tahun menangani pekerjaan bore pile untuk villa tebing di Dago & Lembang, ruko komersial di Setiabudi, hunian cluster di Bandung Barat, hingga pergudangan di Bandung Selatan.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan Teknis:</strong> Biaya yang tercantum sudah meliputi ongkos jasa pengeboran, perakitan besi tulangan, dan pengecoran beton pondasi (<strong>belum termasuk pengadaan material beton ready mix dan besi tulangan</strong>). Contoh di atas adalah dokumentasi pekerjaan nyata yang telah kami selesaikan di lapangan. Durasi dan produktivitas pengerjaan di Bandung dipengaruhi oleh kemiringan lereng, akses jalan armada mini crane, formasi geologi tanah, ketersediaan air kerja, serta kondisi curah hujan dataran tinggi.<br><br>Memerlukan penawaran khusus untuk tiang diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Cek detail daftar harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

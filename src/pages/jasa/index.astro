@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import config from '../../data/config.json';
 import pricing from '../../data/harga.json';
-import { organizationSchema, schemaPhone } from '../../lib/schema.js';
+import { organizationSchema, schemaPhone, productSchema as makeProductSchema } from '../../lib/schema.js';
 
 import FaIcon from '../../components/icons/FaIcon.astro';
 const orgLd = JSON.stringify(organizationSchema({
@@ -24,6 +24,20 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
     month: 'long',
     year: 'numeric'
 }).format(new Date(`${pricing.priceUpdatedAt}T00:00:00`));
+
+const maxMesinPrice = pricing.mesin[pricing.mesin.length - 1]?.maxPrice || pricing.mesin[pricing.mesin.length - 1]?.price || 360000;
+const minMesinPrice = pricing.mesin.find((item) => item.price > 0)?.price || 125000;
+const productLd = JSON.stringify(makeProductSchema({
+    name: "Layanan Jasa Pemborong Bore Pile & Strauss Pile",
+    description: "Layanan kontraktor pondasi bore pile mesin & strauss pile manual profesional untuk rumah, ruko, gudang, dan gedung bertingkat se-Jabodetabek dan Pulau Jawa.",
+    image: `${config.siteUrl}/imgs/logo-agung-perkasa.webp`,
+    canonical: `${config.siteUrl}/jasa/`,
+    lowPrice: minMesinPrice,
+    highPrice: maxMesinPrice,
+    price: minMesinPrice,
+    offerCount: pricing.mesin.length || 5,
+    priceValidUntil: "2027-12-31"
+}));
 ---
 
 <BaseLayout 
@@ -57,6 +71,8 @@ const formattedUpdate = new Intl.DateTimeFormat('id-ID', {
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/jasa.css">
+    <script type="application/ld+json" set:html={orgLd}></script>
+    <script type="application/ld+json" set:html={productLd}></script>
     </Fragment>
 
 

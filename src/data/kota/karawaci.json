@@ -9,8 +9,8 @@
   "heroCaption": "Pengerjaan pondasi bore pile mesin mini crane untuk hunian modern dan kawasan komersial di Karawaci",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "<strong>Layanan bore pile Karawaci 2026</strong> spesialis pondasi kokoh untuk residensial modern, area kampus universitas, hingga kawasan komersial & ruko. Biaya bor mesin mini crane mulai dari <strong>Rp120.000/m</strong> dan bor manual (strauss pile) mulai <strong>Rp70.000/m</strong>. \n                    Gunakan kalkulator estimasi online di bawah ini untuk menghitung simulasi anggaran pengeboran proyek Anda secara instan. Menjangkau Lippo Karawaci, Kelapa Dua, Cibodas, Binong, Curug, hingga seluruh kawasan Tangerang.",
-  "localBusinessDesc": "Jasa bore pile Karawaci profesional 2026: bor mesin mulai Rp120.000/m & strauss pile Rp70.000/m. Solusi pondasi aman bebas retak untuk rumah cluster modern, gedung komersial, ruko, & indekos area universitas. Garansi 6 tahun. Siap survei ke Lippo Karawaci, Binong, Cibodas, dan sekitarnya.",
+  "heroText": "<strong>Layanan bore pile Karawaci 2026</strong> spesialis pondasi kokoh untuk residensial modern, area kampus universitas, hingga kawasan komersial & ruko. Biaya bor mesin mini crane mulai dari <strong>Rp125.000/m</strong> dan bor manual (strauss pile) mulai <strong>Rp70.000/m</strong>. \n                    Gunakan kalkulator estimasi online di bawah ini untuk menghitung simulasi anggaran pengeboran proyek Anda secara instan. Menjangkau Lippo Karawaci, Kelapa Dua, Cibodas, Binong, Curug, hingga seluruh kawasan Tangerang.",
+  "localBusinessDesc": "Jasa bore pile Karawaci profesional 2026: bor mesin mulai Rp125.000/m & strauss pile Rp70.000/m. Solusi pondasi aman bebas retak untuk rumah cluster modern, gedung komersial, ruko, & indekos area universitas. Garansi 6 tahun. Siap survei ke Lippo Karawaci, Binong, Cibodas, dan sekitarnya.",
   "mobilizationCost": "Mini crane: Rp2-4jt | Strauss pile (bore pile manual): Rp1-1.5jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah cluster 1-2 lantai, kost mahasiswa"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Ruko komersial, gedung rukan, kafe"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Klinik, showroom, gedung bisnis"
       },
@@ -123,7 +123,7 @@
       "imageAlt": "Pengerjaan bore pile mesin mini crane wash boring untuk pembangunan ruko komersial di Karawaci",
       "imageCaption": "Bore pile mesin mini crane wash boring proyek ruko komersial di kawasan Karawaci",
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 20 titik<br>Metode: Wash Boring (Bor basah stabil tanah lempung)",
-      "costCalc": "14m × Rp135.000 × 20 = Rp37.800.000",
+      "costCalc": "14m × Rp140.000 × 20 = Rp37.800.000",
       "mobilization": "+ mobilisasi: Rp3.500.000",
       "total": "Rp41.300.000",
       "time": "5-7 hari kerja",
@@ -351,7 +351,7 @@
     ],
     "conclusion": "<p>Karakteristik tanah di kawasan Karawaci, Lippo Village, dan Cibodas memiliki keunikan tersendiri. Kami menyesuaikan alat dan metode pengeboran untuk memastikan kestabilan struktur bangunan Anda dalam jangka panjang.</p><p><strong>Pengalaman Proyek di Karawaci:</strong> Kami telah berpengalaman mengerjakan aneka proyek rumah tinggal mewah di cluster modern, ruko komersial, kafe, asrama mahasiswa, hingga gedung bertingkat di seluruh penjuru Karawaci.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan:</strong> Estimasi harga di atas sudah mencakup jasa pengeboran, perakitan besi tulangan, dan pengecoran tiang, <strong>belum termasuk penyediaan material</strong> (beton ready mix dan besi). Rincian di atas diadaptasi dari proyek nyata di lapangan. Kecepatan pengerjaan dipengaruhi akses mobilitas alat, kondisi stratigrafi tanah, dan ketersediaan pasokan air pada metode wash boring.<br><br>Butuh penawaran khusus diameter 30cm untuk rumah modern Anda? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

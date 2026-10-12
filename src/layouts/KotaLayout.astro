@@ -5,7 +5,8 @@ import Navbar from '../components/global/Navbar.astro';
 import Footer from '../components/global/Footer.astro';
 import GoogleMapsEmbed from '../components/shared/GoogleMapsEmbed.astro';
 import PublisherBox from '../components/shared/PublisherBox.astro';
-import { organizationSchema, localBusinessSchema } from '../lib/schema.js';
+import pricing from '../data/harga.json';
+import { organizationSchema, localBusinessSchema, productSchema as makeProductSchema } from '../lib/schema.js';
 
 export interface Props {
     // SEO & Head
@@ -115,6 +116,22 @@ const faqLd = faqSchema.length > 0 ? JSON.stringify({
     })),
 }) : null;
 
+// Product Schema (Google Price Rich Snippet / Badge Harga)
+const minMesinPrice = pricing.mesin.find(i => i.price > 0)?.price || 125000;
+const maxMesinPrice = pricing.mesin[pricing.mesin.length - 1]?.maxPrice || pricing.mesin[pricing.mesin.length - 1]?.price || 360000;
+
+const finalProductSchema = productSchema || JSON.stringify(makeProductSchema({
+    name: cityName ? `Jasa Bore Pile ${cityName}` : (ogTitle || title),
+    description: ogDescription || description,
+    image: finalOgImage,
+    canonical: canonical,
+    lowPrice: minMesinPrice,
+    highPrice: maxMesinPrice,
+    price: minMesinPrice,
+    offerCount: pricing.mesin.length || 5,
+    priceValidUntil: "2027-12-31"
+}));
+
 // CTA defaults
 const finalCtaTitle = ctaTitle || (cityName ? `Butuh jasa bore pile di ${cityName}?` : `Butuh jasa bore pile profesional?`);
 const finalCtaText = ctaText || 'Dapatkan penawaran harga dari kami.';
@@ -178,7 +195,7 @@ const waLink = `https://wa.me/${config.company.whatsapp}?text=Halo%20Pak%2C%20Sa
     {breadcrumbLd && <script type="application/ld+json" set:html={breadcrumbLd}></script>}
     {faqLd && <script type="application/ld+json" set:html={faqLd}></script>}
     {serviceSchema && <script type="application/ld+json" set:html={serviceSchema}></script>}
-    {productSchema && <script type="application/ld+json" set:html={productSchema}></script>}
+    {finalProductSchema && <script type="application/ld+json" set:html={finalProductSchema}></script>}
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6GBTKJB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

@@ -9,8 +9,8 @@
   "heroCaption": "Aplikasi pengeboran bore pile mini crane untuk pondasi kokoh di area perumahan Depok",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "Layanan jasa bore pile Depok profesional untuk pondasi rumah tinggal, ruko, perumahan cluster, dan bangunan kos-kosan dekat kawasan kampus (UI, Gunadarma). Tarif pengeboran mesin (mini crane) mulai Rp120.000/m dan bore pile manual (strauss pile) ekonomis mulai Rp75.000/m untuk jalan sempit. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Gunakan kalkulator estimasi biaya praktis kami untuk menghitung kebutuhan anggaran proyek Anda secara instan. Menjangkau seluruh kawasan Depok: Cinere, Sawangan, Margonda, Cimanggis, Bojongsari, Beji, hingga Pancoran Mas.",
-  "localBusinessDesc": "Jasa bore pile dan strauss pile profesional di Depok. Solusi pondasi dalam bebas getaran untuk hunian cluster, kos mahasiswa di area kampus, dan ruko di gang sempit (strauss pile). Tarif mesin mulai Rp120.000/m dan manual mulai Rp75.000/m.",
+  "heroText": "Layanan jasa bore pile Depok profesional untuk pondasi rumah tinggal, ruko, perumahan cluster, dan bangunan kos-kosan dekat kawasan kampus (UI, Gunadarma). Tarif pengeboran mesin (mini crane) mulai Rp125.000/m dan bore pile manual (strauss pile) ekonomis mulai Rp75.000/m untuk jalan sempit. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Gunakan kalkulator estimasi biaya praktis kami untuk menghitung kebutuhan anggaran proyek Anda secara instan. Menjangkau seluruh kawasan Depok: Cinere, Sawangan, Margonda, Cimanggis, Bojongsari, Beji, hingga Pancoran Mas.",
+  "localBusinessDesc": "Jasa bore pile dan strauss pile profesional di Depok. Solusi pondasi dalam bebas getaran untuk hunian cluster, kos mahasiswa di area kampus, dan ruko di gang sempit (strauss pile). Tarif mesin mulai Rp125.000/m dan manual mulai Rp75.000/m.",
   "mobilizationCost": "Mini crane: Rp2.5-4jt | Strauss pile (bore pile manual): Rp1-1.5jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah tinggal 1-2 lantai cluster Depok"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Ruko Margonda, gedung kos bertingkat"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Gudang logistik, ruko komersial besar"
       },
@@ -111,7 +111,7 @@
       "imageAlt": "Proses pengeboran pondasi bore pile mini crane dekat gedung bertingkat di Pancoran Mas Depok",
       "imageCaption": "Aktivitas pengeboran bore pile mini crane di sebelah Zamzam Tower, Pancoran Mas, Depok",
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 13m, 34 titik<br>Metode: Wash Boring (Bor basah)",
-      "costCalc": "13m × Rp135.000 × 34 = Rp59.670.000",
+      "costCalc": "13m × Rp140.000 × 34 = Rp59.670.000",
       "mobilization": "Rp3.000.000",
       "total": "Rp62.070.000",
       "time": "8-10 hari kerja",
@@ -123,7 +123,7 @@
       "imageAlt": null,
       "imageCaption": null,
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 13m, 18 titik<br>Metode: Wash Boring (Bor basah)",
-      "costCalc": "13m × Rp135.000 × 18 = Rp31.590.000",
+      "costCalc": "13m × Rp140.000 × 18 = Rp31.590.000",
       "mobilization": "Rp3.500.000",
       "total": "Rp35.090.000",
       "time": "5-7 hari kerja",
@@ -336,7 +336,7 @@
     ],
     "conclusion": "<p>Tiap sudut Kota Depok memiliki elevasi tanah dan kepadatan akses yang berbeda-beda. Kami mengaplikasikan teknik bore pile dan strauss pile yang tepat sasaran demi menjamin kekuatan jangka panjang struktur bangunan Anda.</p><p><strong>Portofolio Proyek di Depok:</strong> Kami berpengalaman mengerjakan beragam pondasi hunian cluster di Cinere dan Sawangan, kos-kosan mahasiswa di sekitar kampus UI dan Gunadarma, ruko Margonda, hingga fasilitas komersial di seluruh wilayah Depok.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan:</strong> Rincian estimasi biaya di atas mencakup jasa pengeboran lubang, perakitan besi tulangan tiang, dan pengecoran beton cair, <strong>belum termasuk material fisik</strong> (besi beton dan ready mix). Contoh di atas merupakan rekam jejak proyek riil yang telah kami selesaikan di lapangan Depok. Durasi kerja dipengaruhi oleh akses jalan, tipe tanah, serta kontinuitas pasokan air untuk metode bor basah.<br><br>Memerlukan penawaran khusus diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

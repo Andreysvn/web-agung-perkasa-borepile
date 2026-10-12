@@ -9,8 +9,8 @@
   "heroCaption": "Proses pengeboran bore pile mini crane dry boring untuk fasilitas industri di Karawang",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "Harga jasa bore pile Karawang 2026 untuk pekerjaan pengeboran pondasi dalam ditawarkan mulai dari Rp120.000/m menggunakan alat mesin (mini crane), serta jasa bor manual (strauss pile) mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Gunakan kalkulator estimasi biaya di bawah ini untuk menghitung kebutuhan pondasi proyek Anda secara otomatis dan transparan. Melayani seluruh wilayah Karawang, termasuk sentra industri KIIC, Suryacipta, KIM, KNIC, Galuh Mas, dan sekitarnya.",
-  "localBusinessDesc": "Jasa bore pile Karawang profesional & bergaransi untuk pabrik manufaktur, gudang logistik, ruko, dan gedung bertingkat. Harga mesin mulai Rp120.000/m dan manual Rp75.000/m. Melayani seluruh Karawang, KIIC, Suryacipta, KIM, dan sekitarnya.",
+  "heroText": "Harga jasa bore pile Karawang 2026 untuk pekerjaan pengeboran pondasi dalam ditawarkan mulai dari Rp125.000/m menggunakan alat mesin (mini crane), serta jasa bor manual (strauss pile) mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Gunakan kalkulator estimasi biaya di bawah ini untuk menghitung kebutuhan pondasi proyek Anda secara otomatis dan transparan. Melayani seluruh wilayah Karawang, termasuk sentra industri KIIC, Suryacipta, KIM, KNIC, Galuh Mas, dan sekitarnya.",
+  "localBusinessDesc": "Jasa bore pile Karawang profesional & bergaransi untuk pabrik manufaktur, gudang logistik, ruko, dan gedung bertingkat. Harga mesin mulai Rp125.000/m dan manual Rp75.000/m. Melayani seluruh Karawang, KIIC, Suryacipta, KIM, dan sekitarnya.",
   "mobilizationCost": "Mini crane: Rp3.5-5jt | Strauss pile (bore pile manual): Rp1.5-2jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah tinggal, mess karyawan, kantor 1-2 lantai"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Ruko komersial, kantor cabang, fasilitas workshop"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Gudang logistik, hanggar penyimpanan, struktur pabrik"
       },
@@ -111,7 +111,7 @@
       "imageAlt": "Pekerjaan bore pile mini crane dry boring untuk fasilitas pabrik di Kawasan Industri KIIC Karawang",
       "imageCaption": "Pengeboran bore pile mini crane Ø50cm untuk pabrik manufaktur di KIIC Karawang",
       "specs": "Bore pile mesin mini crane Ø50cm, kedalaman 15 meter, 24 titik pondasi struktur<br>Metode: Dry Boring (bor kering tanah lempung padat industri)",
-      "costCalc": "15m × Rp190.000 × 24 = Rp68.400.000",
+      "costCalc": "15m × Rp195.000 × 24 = Rp68.400.000",
       "mobilization": "Rp4.000.000",
       "total": "Rp72.400.000",
       "time": "8-12 hari kerja",
@@ -123,7 +123,7 @@
       "imageAlt": null,
       "imageCaption": null,
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 12 meter, 20 titik pondasi kolom gudang<br>Metode: Dry Boring (kondisi tanah padat kawasan industri)",
-      "costCalc": "12m × Rp135.000 × 20 = Rp32.400.000",
+      "costCalc": "12m × Rp140.000 × 20 = Rp32.400.000",
       "mobilization": "Rp4.000.000",
       "total": "Rp36.400.000",
       "time": "5-7 hari kerja",
@@ -241,7 +241,7 @@
   "faq": [
     {
       "q": "Berapa kisaran harga jasa bore pile per meter di Karawang untuk tahun 2026?",
-      "a": "Tarif jasa bore pile Karawang tahun 2026 dimulai dari <strong>Rp120.000/meter</strong> untuk mesin mini crane (diameter 30 cm) dan <strong>Rp75.000/meter</strong> untuk strauss pile manual (diameter 20 cm). Total biaya dipengaruhi oleh diameter tiang, kedalaman lapisan tanah keras berdasarkan data sondir, volume total titik pengeboran, dan lokasi proyek (seperti kawasan industri KIIC, Suryacipta, KIM, atau area perumahan Karawang Kota)."
+      "a": "Tarif jasa bore pile Karawang tahun 2026 dimulai dari <strong>Rp125.000/meter</strong> untuk mesin mini crane (diameter 30 cm) dan <strong>Rp75.000/meter</strong> untuk strauss pile manual (diameter 20 cm). Total biaya dipengaruhi oleh diameter tiang, kedalaman lapisan tanah keras berdasarkan data sondir, volume total titik pengeboran, dan lokasi proyek (seperti kawasan industri KIIC, Suryacipta, KIM, atau area perumahan Karawang Kota)."
     },
     {
       "q": "Mengapa bore pile sangat ideal untuk pembangunan pabrik dan gudang di KIIC serta Suryacipta?",
@@ -366,7 +366,7 @@
     ],
     "conclusion": "<p>Karakteristik tanah di setiap zona proyek Karawang memerlukan penanganan teknis yang spesifik. Kami memadukan metode bor yang tepat dan armada terawat untuk memastikan keberhasilan pondasi konstruksi Anda.</p><p><strong>Portofolio Karawang:</strong> Agung Perkasa telah berpengalaman mengerjakan berbagai pondasi fasilitas pabrik, gudang penyimpanan logistik, ruko komersial, hingga hunian bertingkat di seluruh penjuru Karawang.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan Penting:</strong> Rincian estimasi biaya di atas sudah mencakup ongkos jasa pengeboran, perakitan rangkaian besi tulangan, dan proses pengecoran beton (<strong>belum termasuk pengadaan material semen, pasir/ready mix, dan besi tulangan</strong>). Contoh hitungan di atas bersumber dari proyek nyata yang kami kerjakan. Durasi pengerjaan dipengaruhi oleh kondisi medan lapangan, kemudahan akses alat berat, serta kelancaran pasokan air kerja untuk metode sirkulasi wash boring.<br><br>Membutuhkan penawaran khusus untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat rincian lengkap harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

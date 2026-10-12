@@ -9,8 +9,8 @@
   "heroCaption": "Pengerjaan pondasi bore pile profesional dengan alat mini crane di kawasan Tangerang Selatan",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "<strong>Harga bore pile Tangerang Selatan 2026</strong> untuk layanan pengeboran profesional mulai dari <strong>Rp120.000/m untuk mesin mini crane</strong>, serta metode strauss pile manual mulai <strong>Rp75.000/m</strong>. Kami menjangkau kawasan kota mandiri modern (BSD City, Bintaro Jaya, Alam Sutera) hingga area pemukiman padat perkotaan di Ciputat, Pamulang, Pondok Aren, Serpong, dan Setu.",
-  "localBusinessDesc": "Spesialis jasa bore pile dan strauss pile profesional di Tangerang Selatan. Harga mesin mulai Rp120.000/m, manual mulai Rp75.000/m. Melayani BSD City, Bintaro, Ciputat, Pamulang, Serpong, dan sekitarnya. Garansi kokoh & konsultasi gratis.",
+  "heroText": "<strong>Harga bore pile Tangerang Selatan 2026</strong> untuk layanan pengeboran profesional mulai dari <strong>Rp125.000/m untuk mesin mini crane</strong>, serta metode strauss pile manual mulai <strong>Rp75.000/m</strong>. Kami menjangkau kawasan kota mandiri modern (BSD City, Bintaro Jaya, Alam Sutera) hingga area pemukiman padat perkotaan di Ciputat, Pamulang, Pondok Aren, Serpong, dan Setu.",
+  "localBusinessDesc": "Spesialis jasa bore pile dan strauss pile profesional di Tangerang Selatan. Harga mesin mulai Rp125.000/m, manual mulai Rp75.000/m. Melayani BSD City, Bintaro, Ciputat, Pamulang, Serpong, dan sekitarnya. Garansi kokoh & konsultasi gratis.",
   "mobilizationCost": "Mini crane: Rp2-3.5jt | Strauss pile (bore pile manual): Rp1-1.5jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah 1-2 lantai"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Ruko, kantor"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Gudang, pabrik kecil"
       },
@@ -123,7 +123,7 @@
       "imageAlt": "Pengeboran bore pile mesin metode wash boring untuk bangunan ruko komersial di Pondok Aren Bintaro, Tangerang Selatan",
       "imageCaption": "Bore pile mesin mini crane wash boring untuk ruko bertingkat di Bintaro, Tangerang Selatan",
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 20 titik<br>Metode: Wash Boring (Bor basah)",
-      "costCalc": "14m × Rp135.000 × 20 = Rp37.800.000",
+      "costCalc": "14m × Rp140.000 × 20 = Rp37.800.000",
       "mobilization": "+ mobilisasi: Rp3.000.000",
       "total": "Rp40.800.000",
       "time": "5-7 hari kerja",
@@ -349,7 +349,7 @@
     ],
     "conclusion": "<p>Setiap kawasan di Tangerang Selatan memiliki kontur geoteknik yang berbeda. Kami menyesuaikan teknik bore pile terbaik untuk memastikan konstruksi pondasi kokoh dan tahan lama.</p><p><strong>Pengalaman Proyek di Tangerang Selatan:</strong> Kami terbiasa mengerjakan pondasi untuk hunian cluster, ruko komersial, gedung perkantoran, dan renovasi rumah di BSD City, Bintaro, Ciputat, Pamulang, hingga Serpong.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan:</strong> Biaya di atas sudah mencakup jasa pengeboran, perakitan besi tulangan, dan pengecoran beton, <strong>belum termasuk material</strong> (beton readymix dan besi). Portofolio di atas merupakan proyek nyata yang kami selesaikan di lapangan. Durasi pengerjaan dipengaruhi oleh kemudahan akses, karakteristik tanah, serta suplai air kerja untuk metode wash boring.<br><br>Butuh penawaran spesifik untuk diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Lihat detail harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

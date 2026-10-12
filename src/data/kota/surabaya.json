@@ -9,8 +9,8 @@
   "heroCaption": "Pekerjaan pondasi bore pile mini crane profesional di area Surabaya",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "Biaya jasa bore pile Surabaya terbaru 2026 untuk pengeboran pondasi mulai dari Rp120.000/m menggunakan mesin mini crane, serta strauss pile (bor manual) mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Cek daftar harga bore pile 2026 selengkapnya di sini</a>. Gunakan kalkulator estimasi biaya di bawah ini untuk menghitung simulasi RAB proyek Anda secara akurat dan instan. Melayani seluruh wilayah Surabaya Pusat, Surabaya Barat, Surabaya Selatan, Surabaya Timur, hingga kawasan pesisir Surabaya Utara.",
-  "localBusinessDesc": "Jasa bore pile & strauss pile Surabaya berpengalaman. Biaya mesin mini crane mulai Rp120.000/m dan manual Rp75.000/m. Solusi pondasi kokoh tahan tanah gerak & pesisir di Surabaya.",
+  "heroText": "Biaya jasa bore pile Surabaya terbaru 2026 untuk pengeboran pondasi mulai dari Rp125.000/m menggunakan mesin mini crane, serta strauss pile (bor manual) mulai dari Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Cek daftar harga bore pile 2026 selengkapnya di sini</a>. Gunakan kalkulator estimasi biaya di bawah ini untuk menghitung simulasi RAB proyek Anda secara akurat dan instan. Melayani seluruh wilayah Surabaya Pusat, Surabaya Barat, Surabaya Selatan, Surabaya Timur, hingga kawasan pesisir Surabaya Utara.",
+  "localBusinessDesc": "Jasa bore pile & strauss pile Surabaya berpengalaman. Biaya mesin mini crane mulai Rp125.000/m dan manual Rp75.000/m. Solusi pondasi kokoh tahan tanah gerak & pesisir di Surabaya.",
   "mobilizationCost": "Mini crane: Rp5-7jt | Strauss pile (bore pile manual): Rp2-3jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah tinggal 1-2 lantai & ruko"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Ruko komersial, kantor bertingkat"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Gudang logistik, workshop, pabrik"
       },
@@ -111,7 +111,7 @@
       "imageAlt": "Pengerjaan bore pile mini crane untuk proyek gedung komersial di kawasan padat Surabaya Pusat",
       "imageCaption": "Aplikasi pondasi bore pile mini crane tanpa getaran di pusat bisnis Surabaya",
       "specs": "Bore pile mesin mini crane Ø50cm, kedalaman 18m, 24 titik<br>Metode: Wash Boring (Sirkulasi Bor Basah)",
-      "costCalc": "18m × Rp190.000 × 24 = Rp82.080.000",
+      "costCalc": "18m × Rp195.000 × 24 = Rp82.080.000",
       "mobilization": "Rp6.000.000",
       "total": "Rp88.080.000",
       "time": "10-12 hari kerja",
@@ -123,7 +123,7 @@
       "imageAlt": null,
       "imageCaption": null,
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 15m, 20 titik<br>Metode: Wash Boring (Tanah Aluvial Industri)",
-      "costCalc": "15m × Rp135.000 × 20 = Rp40.500.000",
+      "costCalc": "15m × Rp140.000 × 20 = Rp40.500.000",
       "mobilization": "Rp6.000.000",
       "total": "Rp46.500.000",
       "time": "7-9 hari kerja",
@@ -252,7 +252,7 @@
     },
     {
       "q": "Berapa rincian harga jasa bore pile manual dan mesin di Surabaya tahun 2026?",
-      "a": "Tarif jasa pengeboran bore pile manual (strauss pile) di Surabaya mulai dari Rp75.000/meter untuk diameter 20 cm. Sedangkan untuk pengerjaan mesin mini crane mulai dari Rp120.000/meter untuk diameter 30 cm. Tarif ini mencakup jasa pengeboran, instalasi besi tulangan, dan pengecoran beton (tidak termasuk material). Biaya mobilisasi mesin berkisar Rp5–7 juta dan alat manual Rp2–3 juta tergantung lokasi proyek."
+      "a": "Tarif jasa pengeboran bore pile manual (strauss pile) di Surabaya mulai dari Rp75.000/meter untuk diameter 20 cm. Sedangkan untuk pengerjaan mesin mini crane mulai dari Rp125.000/meter untuk diameter 30 cm. Tarif ini mencakup jasa pengeboran, instalasi besi tulangan, dan pengecoran beton (tidak termasuk material). Biaya mobilisasi mesin berkisar Rp5–7 juta dan alat manual Rp2–3 juta tergantung lokasi proyek."
     },
     {
       "q": "Bagaimana teknik penanganan pengeboran pada tanah pesisir Surabaya yang berair tinggi?",
@@ -349,7 +349,7 @@
     ],
     "conclusion": "<p>Struktur geologi Surabaya yang dinamis—mulai dari wilayah pesisir Kenjeran hingga dataran lempung komersial Surabaya Barat—membutuhkan penanganan pondasi yang cermat dan tepat sasaran. Kami siap memberikan solusi bore pile yang terukur demi ketahanan jangka panjang konstruksi Anda.</p><p><strong>Pengalaman Proyek Surabaya:</strong> Kami telah sukses menggarap pondasi untuk ratusan unit ruko komersial, pabrik, gudang logistik, gedung perkantoran, dan hunian bertingkat di seluruh penjuru Surabaya.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan:</strong> Biaya di atas mencakup jasa pengerjaan pengeboran, fabrikasi besi tulangan, dan pengecoran adukan beton (<strong>belum termasuk material</strong> beton curah dan besi tulangan). Seluruh contoh di atas merupakan dokumentasi proyek riil yang telah kami selesaikan. Estimasi durasi dipengaruhi oleh kondisi medan proyek, kemudahan akses alat, karakteristik tanah, serta kelancaran pasokan air kerja untuk metode wash boring.<br><br>Memerlukan penawaran khusus diameter 30cm? <a href=\"/harga/bore-pile/30cm/\">Cek rincian harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {

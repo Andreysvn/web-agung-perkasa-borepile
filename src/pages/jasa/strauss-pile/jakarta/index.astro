@@ -1,14 +1,14 @@
-﻿---
+---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import config from '../../../../data/config.json';
 import pricing from '../../../../data/harga.json';
-import { organizationSchema, localBusinessSchema } from '../../../../lib/schema.js';
+import { organizationSchema, localBusinessSchema, productSchema as makeProductSchema } from '../../../../lib/schema.js';
 
 import FaIcon from '../../../../components/icons/FaIcon.astro';
 import CityGuarantee from '../../../../components/city/CityGuarantee.astro';
 
 const manualPrice = pricing.manual.find(item => item.price > 0)?.price || 75000;
-const mesinPrice = pricing.mesin.find(item => item.price > 0)?.price || 120000;
+const mesinPrice = pricing.mesin.find(item => item.price > 0)?.price || 125000;
 const manualPriceStr = manualPrice.toLocaleString('id-ID');
 const mesinPriceStr = mesinPrice.toLocaleString('id-ID');
 
@@ -20,6 +20,19 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
     "areaServed": [
             { "@type": "City", "name": "Jakarta" }
         ]
+}));
+
+const maxManualPrice = pricing.manual[pricing.manual.length - 1]?.price || 120000;
+const productLd = JSON.stringify(makeProductSchema({
+    name: "Jasa Strauss Pile Jakarta",
+    description: `Jasa Strauss Pile (bore pile manual) Jakarta 2026. Harga mulai Rp${manualPriceStr}/m. Solusi pondasi untuk lahan sempit & gang padat. Konsultasi gratis.`,
+    image: `${config.siteUrl}/imgs/hasil-lubang-borepile.webp`,
+    canonical: "https://agungperkasaborepile.com/jasa/strauss-pile/jakarta/",
+    lowPrice: manualPrice,
+    highPrice: maxManualPrice,
+    price: manualPrice,
+    offerCount: pricing.manual.length || 4,
+    priceValidUntil: "2027-12-31"
 }));
 ---
 
@@ -47,6 +60,9 @@ const localBusinessLd = JSON.stringify(localBusinessSchema({
         <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="F3ndI7tGSH1XWvznEXqZgQ" defer></script>
         
         <link rel="stylesheet" href="/css/borepile-kota.css">
+        <script type="application/ld+json" set:html={orgLd}></script>
+        <script type="application/ld+json" set:html={localBusinessLd}></script>
+        <script type="application/ld+json" set:html={productLd}></script>
     </Fragment>
 
     <a href="#main-content" class="skip-link">Langsung ke konten utama</a>

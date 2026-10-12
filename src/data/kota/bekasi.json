@@ -9,8 +9,8 @@
   "heroCaption": "Pengeboran pondasi bore pile mini crane profesional di area Bekasi",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "Layanan spesialis jasa bore pile Bekasi 2026 profesional dan bergaransi, melayani kawasan perumahan klaster modern hingga zona industri terpadat. Tarif jasa pengeboran ekonomis mulai dari Rp75.000/m untuk metode manual (strauss pile) dan mulai Rp120.000/m menggunakan alat mesin mini crane. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Manfaatkan fitur kalkulator di bawah ini untuk mengestimasikan total RAB pondasi proyek Anda secara akurat sesuai spesifikasi lapangan. Melayani seluruh wilayah Kota Bekasi, Kabupaten Bekasi, Cikarang, Tambun, Cibitung, dan sekitarnya.",
-  "localBusinessDesc": "Jasa bore pile Bekasi profesional & berpengalaman. Biaya bore pile manual mulai Rp 75.000/m dan mesin mini crane mulai Rp 120.000/m. Solusi pondasi dalam minim getaran untuk kawasan industri Cikarang, Tambun, serta klaster perumahan modern se-Bekasi.",
+  "heroText": "Layanan spesialis jasa bore pile Bekasi 2026 profesional dan bergaransi, melayani kawasan perumahan klaster modern hingga zona industri terpadat. Tarif jasa pengeboran ekonomis mulai dari Rp75.000/m untuk metode manual (strauss pile) dan mulai Rp125.000/m menggunakan alat mesin mini crane. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Manfaatkan fitur kalkulator di bawah ini untuk mengestimasikan total RAB pondasi proyek Anda secara akurat sesuai spesifikasi lapangan. Melayani seluruh wilayah Kota Bekasi, Kabupaten Bekasi, Cikarang, Tambun, Cibitung, dan sekitarnya.",
+  "localBusinessDesc": "Jasa bore pile Bekasi profesional & berpengalaman. Biaya bore pile manual mulai Rp 75.000/m dan mesin mini crane mulai Rp 125.000/m. Solusi pondasi dalam minim getaran untuk kawasan industri Cikarang, Tambun, serta klaster perumahan modern se-Bekasi.",
   "mobilizationCost": "Mini crane: Rp2-4jt | Strauss pile (bore pile manual): Rp1-1.5jt",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah tinggal 1-2 lantai, ruko perumahan"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Ruko modern, perkantoran komersial"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Gudang logistik, workshop, pabrik ringan"
       },
@@ -111,7 +111,7 @@
       "imageAlt": "Pengeboran bore pile mini crane metode wash boring untuk konstruksi gudang logistik Tambun Bekasi",
       "imageCaption": "Bore pile mini crane pengerjaan pondasi gudang di Tambun Utara, Bekasi",
       "specs": "Bore pile mesin mini crane Ø50cm, kedalaman 18m, 16 titik<br>Metode: Wash Boring (Bor basah)",
-      "costCalc": "18m × Rp190.000 × 16 = Rp54.720.000",
+      "costCalc": "18m × Rp195.000 × 16 = Rp54.720.000",
       "mobilization": "Rp3.500.000",
       "total": "Rp58.220.000",
       "time": "8-10 hari kerja",
@@ -135,7 +135,7 @@
       "imageAlt": null,
       "imageCaption": null,
       "specs": "Bore pile mesin mini crane Ø30cm, kedalaman 12m, 17 titik<br>Metode: Dry Boring (Bor kering)",
-      "costCalc": "12m × Rp120.000 × 17 = Rp24.480.000",
+      "costCalc": "12m × Rp125.000 × 17 = Rp24.480.000",
       "mobilization": "Rp3.000.000",
       "total": "Rp27.480.000",
       "time": "5-7 hari kerja",
@@ -354,7 +354,7 @@
     ],
     "conclusion": "<p>Setiap zona di Bekasi memiliki tantangan geoteknik tersendiri. Tim kami siap menyesuaikan metode dan alat bor terbaik guna menjamin stabilitas jangka panjang bangunan Anda.</p><p><strong>Pengalaman Proyek Kami di Bekasi:</strong> Kami telah sukses menyelesaikan berbagai proyek pondasi bore pile di Tambun, Cikarang, Summarecon Bekasi, Harapan Indah, Grand Galaxy, hingga berbagai kawasan industri strategis di Bekasi dan sekitarnya.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan:</strong> Estimasi biaya di atas mencakup jasa pengeboran, fabrikasi/perakitan besi tulangan, dan pengecoran beton pondasi, <strong>di luar material cor beton dan besi tulangan</strong>. Proyek di atas merupakan dokumentasi riil pengerjaan kami di lapangan. Kelancaran pengerjaan didukung oleh kemudahan akses armada, stabilitas struktur tanah, dan ketersediaan sumber air untuk metode wash boring.<br><br>Memerlukan penawaran khusus bore pile ukuran 30 cm? <a href=\"/harga/bore-pile/30cm/\">Cek informasi harga bore pile diameter 30cm selengkapnya &rarr;</a>",
   "tips": [
     {

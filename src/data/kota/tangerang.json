@@ -9,8 +9,8 @@
   "heroCaption": "Proses pengeboran pondasi bore pile menggunakan alat mini crane di kawasan Tangerang",
   "heroWidth": 372,
   "heroHeight": 350,
-  "heroText": "Harga jasa bore pile Tangerang 2026 untuk sistem mesin mini crane mulai dari Rp120.000/m, sedangkan strauss pile (bor pile manual) mulai Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Gunakan kalkulator estimasi biaya di bawah untuk menghitung kebutuhan pondasi proyek Anda secara akurat dan transparan. Kami melayani seluruh wilayah Kota Tangerang, Kabupaten Tangerang, kawasan industri & pabrik Cikupa-Balaraja, zona logistik kargo Bandara Soekarno-Hatta, hingga klaster residensial modern Gading Serpong, BSD City, Alam Sutera, Lippo Karawaci, dan Cipondoh.",
-  "localBusinessDesc": "Jasa bore pile Tangerang profesional bergaransi. Tarif bor mesin mulai Rp120.000/m, manual strauss pile mulai Rp75.000/m. Solusi pondasi kokoh bebas getaran untuk pabrik, gudang bandara, ruko, dan klaster hunian modern di Tangerang.",
+  "heroText": "Harga jasa bore pile Tangerang 2026 untuk sistem mesin mini crane mulai dari Rp125.000/m, sedangkan strauss pile (bor pile manual) mulai Rp75.000/m. <a href=\"/harga/bore-pile-2026/\">Lihat daftar harga bore pile 2026 lengkap di sini</a>. Gunakan kalkulator estimasi biaya di bawah untuk menghitung kebutuhan pondasi proyek Anda secara akurat dan transparan. Kami melayani seluruh wilayah Kota Tangerang, Kabupaten Tangerang, kawasan industri & pabrik Cikupa-Balaraja, zona logistik kargo Bandara Soekarno-Hatta, hingga klaster residensial modern Gading Serpong, BSD City, Alam Sutera, Lippo Karawaci, dan Cipondoh.",
+  "localBusinessDesc": "Jasa bore pile Tangerang profesional bergaransi. Tarif bor mesin mulai Rp125.000/m, manual strauss pile mulai Rp75.000/m. Solusi pondasi kokoh bebas getaran untuk pabrik, gudang bandara, ruko, dan klaster hunian modern di Tangerang.",
   "mobilizationCost": "Mesin mini crane: Rp2.000.000 - Rp4.000.000 | Strauss pile (manual): Rp1.000.000 - Rp1.500.000",
   "manualPriceMin": 75000,
   "manualPriceMax": 120000,
@@ -20,19 +20,19 @@
     "mesin": [
       {
         "diameter": "30 cm",
-        "price": 120000,
+        "price": 125000,
         "depth": "30 meter",
         "suitable": "Rumah 1-2 lantai di klaster modern"
       },
       {
         "diameter": "40 cm",
-        "price": 135000,
+        "price": 140000,
         "depth": "30 meter",
         "suitable": "Ruko, rukan, kantor komersial, gudang logistik"
       },
       {
         "diameter": "50 cm",
-        "price": 190000,
+        "price": 195000,
         "depth": "30 meter",
         "suitable": "Pabrik, workshop industri, gudang bertonase besar"
       },
@@ -123,7 +123,7 @@
       "imageAlt": "Pengerjaan tiang bore pile mini crane metode wash boring untuk konstruksi pabrik industri di Cikupa Tangerang",
       "imageCaption": "Bore pile mesin mini crane wash boring untuk pondasi beban berat di Cikupa, Kabupaten Tangerang",
       "specs": "Bore pile mesin mini crane Ø40cm, kedalaman 14m, 20 titik<br>Metode: Wash Boring (Bor Basah)",
-      "costCalc": "14m × Rp135.000 × 20 = Rp37.800.000",
+      "costCalc": "14m × Rp140.000 × 20 = Rp37.800.000",
       "mobilization": "+ mobilisasi: Rp3.500.000",
       "total": "Rp41.300.000",
       "time": "5-7 hari kerja",
@@ -230,7 +230,7 @@
   "faq": [
     {
       "q": "Berapa biaya jasa bore pile mesin dan manual di Tangerang tahun 2026?",
-      "a": "Untuk jasa pengeboran bore pile mesin mini crane di Tangerang, harga mulai dari <strong>Rp120.000/m</strong> (diameter 30 cm). Sedangkan untuk metode manual (strauss pile) tarifnya sangat ekonomis mulai dari <strong>Rp75.000/m</strong> (diameter 20 cm). Tarif sudah termasuk pekerjaan pengeboran, instalasi rangkaian besi tulangan, dan pengecoran cor beton."
+      "a": "Untuk jasa pengeboran bore pile mesin mini crane di Tangerang, harga mulai dari <strong>Rp125.000/m</strong> (diameter 30 cm). Sedangkan untuk metode manual (strauss pile) tarifnya sangat ekonomis mulai dari <strong>Rp75.000/m</strong> (diameter 20 cm). Tarif sudah termasuk pekerjaan pengeboran, instalasi rangkaian besi tulangan, dan pengecoran cor beton."
     },
     {
       "q": "Mengapa bore pile sangat aman untuk klaster perumahan modern seperti BSD, Gading Serpong, dan Alam Sutera?",
@@ -351,7 +351,7 @@
     ],
     "conclusion": "<p>Karakteristik tanah dan tantangan lingkungan di setiap sudut Tangerang menuntut penanganan yang cermat. Agung Perkasa menghadirkan tim ahli berpengalaman, armada bor teruji, dan ketelitian kerja untuk memastikan pondasi proyek Anda terpasang kokoh, tepat waktu, dan tepat anggaran.</p><p><strong>Pengalaman Proyek di Tangerang:</strong> Kami telah dipercaya mengerjakan berbagai proyek strategis—mulai dari pembangunan pabrik & gudang industri di Cikupa, Balaraja, dan Jatake, fasilitas kargo dan ruko dekat Bandara Soekarno-Hatta, hingga puluhan hunian mewah di kota mandiri Gading Serpong, Alam Sutera, BSD City, dan Lippo Karawaci.</p>"
   },
-  "priceUpdatedAt": "2026-10-02",
+  "priceUpdatedAt": "2026-10-12",
   "projectNote": "<strong>Catatan Penting:</strong> Estimasi biaya proyek di atas adalah untuk tarif jasa teknis pengeboran, perakitan tulangan besi, dan pengecoran tiang bor (<strong>tidak termasuk pengadaan material</strong> besi beton dan adukan semen ready-mix). Data tersebut diambil dari catatan pekerjaan nyata tim kami di lapangan. Kecepatan kerja dipengaruhi oleh faktor akses armada, cuaca, kekerasan lapisan tanah, serta suplai air kerja untuk metode bor basah.<br><br>Memerlukan penawaran detail untuk tiang diameter 30 cm? <a href=\"/harga/bore-pile/30cm/\">Lihat rincian harga bore pile diameter 30cm &rarr;</a>",
   "tips": [
     {
