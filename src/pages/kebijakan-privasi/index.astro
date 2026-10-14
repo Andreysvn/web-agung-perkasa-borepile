@@ -1,0 +1,93 @@
+---
+// src/pages/kebijakan-privasi/index.astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import config from '../../data/config.json';
+import FaIcon from '../../components/icons/FaIcon.astro';
+
+const formattedDate = new Date("2026-10-14").toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
+const title = "Kebijakan Privasi (Privacy Policy)";
+const description = "Kebijakan Privasi resmi Agung Perkasa Borepile. Komitmen kami dalam menjaga dan melindungi kerahasiaan data privasi pengunjung dan klien kami.";
+---
+
+<BaseLayout 
+    title={title}
+    description={description}
+    bodyClass="article-page"
+>
+    <Fragment slot="head">
+        <link rel="stylesheet" href="/css/harga.css">
+        <link rel="stylesheet" href="/css/artikel.css">
+    </Fragment>
+
+    <div class="blog-container">
+        <!-- ===== BREADCRUMB ===== -->
+        <nav class="breadcrumb" aria-label="Breadcrumb navigasi">
+            <a href="/">Beranda</a>
+            <span class="separator">/</span>
+            <span class="current" aria-current="page">Kebijakan Privasi</span>
+        </nav>
+
+        <!-- ===== ARTICLE HEADER ===== -->
+        <div class="article-header">
+            <h1>Kebijakan Privasi (Privacy Policy)</h1>
+            <div class="article-meta">
+                <span><FaIcon class="fas fa-calendar-alt" /> {formattedDate}</span>
+                <span><FaIcon class="fas fa-user" /> Agung Perkasa Borepile</span>
+                <span><FaIcon class="fas fa-shield-alt" /> Kebijakan Perlindungan Data</span>
+            </div>
+        </div>
+
+        <!-- ===== ARTICLE CONTENT ===== -->
+        <div class="article-content">
+            <h2>1. Pendahuluan</h2>
+            <p>Selamat datang di situs resmi <strong>Agung Perkasa Borepile</strong>. Kami sangat menghargai dan menjunjung tinggi privasi data setiap calon klien, pengunjung website, dan mitra kerja kami. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi yang Anda berikan saat mengakses situs web maupun saat berkonsultasi mengenai jasa pondasi bore pile dan strauss pile.</p>
+            <p>Dengan mengakses dan menggunakan situs ini, Anda menyetujui prinsip dan ketentuan pengelolaan informasi yang tertuang dalam kebijakan ini.</p>
+
+            <h2>2. Informasi yang Kami Kumpulkan</h2>
+            <p>Sebagai penyedia jasa kontraktor pondasi dalam, informasi yang kami terima murni digunakan untuk keperluan teknis dan komunikasi penawaran harga proyek:</p>
+            <ul>
+                <li><strong>Informasi Kontak Pribadi:</strong> Nama lengkap, nomor telepon / WhatsApp, alamat email, dan lokasi proyek yang Anda kirimkan melalui formulir penawaran, kalkulator biaya, atau chat WhatsApp resmi kami.</li>
+                <li><strong>Informasi Teknis Pekerjaan:</strong> Spesifikasi pondasi yang Anda butuhkan (seperti diameter bore pile, estimasi kedalaman, jumlah titik, metode pengeboran basah/kering, atau lampiran data sondir tanah).</li>
+                <li><strong>Data Kunjungan Situs:</strong> Data statistik standar seperti alamat IP, tipe peramban (browser), perangkat yang digunakan, dan durasi kunjungan yang tercatat secara otomatis untuk optimalisasi teknis sistem web.</li>
+            </ul>
+
+            <h2>3. Penggunaan Informasi</h2>
+            <p>Informasi yang kami peroleh hanya dimanfaatkan untuk tujuan operasional resmi dan profesional:</p>
+            <ul>
+                <li>Menghitung estimasi Rencana Anggaran Biaya (RAB) dan mengirimkan penawaran harga resmi kepada Anda.</li>
+                <li>Menjadwalkan survei lapangan dan konsultasi teknis langsung ke lokasi proyek Anda.</li>
+                <li>Penyusunan dokumen kontrak kerja sama (SPK) serta koordinasi mobilisasi peralatan mesin mini crane / gawangan ke lapangan.</li>
+                <li>Meningkatkan kualitas layanan, kecepatan halaman website, dan kenyamanan interaksi pengguna.</li>
+            </ul>
+
+            <h2>4. Penggunaan Cookie & Iklan Google Ads</h2>
+            <p>Situs web ini menggunakan <em>cookies</em> dan layanan pelacakan analitik seperti Google Analytics dan Google Ads (Google Tag) guna mengukur efektivitas kampanye informasi dan periklanan kami di mesin pencari Google.</p>
+            <p>Layanan pihak ketiga ini dapat menggunakan cookie untuk mengenali perangkat Anda dan menyajikan informasi jasa konstruksi yang relevan sesuai minat Anda di Google. Cookie ini tidak dapat mengakses data pribadi rahasia atau file di dalam komputer maupun ponsel Anda. Anda dapat mengatur atau mematikan fitur cookie melalui pengaturan peramban (browser) Anda kapan saja.</p>
+
+            <h2>5. Jaminan Keamanan & Kerahasiaan Data</h2>
+            <p>Kami memegang komitmen penuh bahwa <strong>data pribadi Anda TIDAK AKAN PERNAH dijual, disewakan, dialihkan, atau dibagikan kepada pihak ketiga mana pun</strong> untuk tujuan komersial atau spam pihak lain.</p>
+            <div class="info-box">
+                <h4>Komitmen Privasi Agung Perkasa</h4>
+                <p>Seluruh dokumen teknis proyek, denah arsitektur, hasil uji sondir, dan rincian kontak klien disimpan secara aman dan hanya dapat diakses oleh tim teknis kami yang berwenang untuk pelaksanaan proyek Anda.</p>
+            </div>
+
+            <h2>6. Tautan ke Layanan Pihak Ketiga</h2>
+            <p>Situs kami memuat tautan langsung ke layanan pihak ketiga yang terpercaya, seperti aplikasi <strong>WhatsApp</strong> untuk chat konsultasi dan <strong>Google Maps</strong> untuk penunjuk arah lokasi kantor/gudang kami. Penggunaan layanan tersebut tunduk pada kebijakan privasi masing-masing platform penyedia.</p>
+
+            <h2>7. Hak Pengunjung</h2>
+            <p>Anda berhak setiap saat untuk menanyakan data Anda yang tersimpan di sistem kami, meminta pembaruan jika terdapat kekeliruan nomor kontak, atau meminta kami menghapus riwayat konsultasi proyek Anda setelah pengerjaan selesai.</p>
+
+            <h2>8. Perubahan Kebijakan Privasi</h2>
+            <p>Kami dapat memperbarui dokumen Kebijakan Privasi ini sewaktu-waktu sesuai penyesuaian regulasi hukum di Indonesia maupun perkembangan operasional situs. Versi terbaru akan selalu menampilkan tanggal pembaruan di bagian atas halaman ini.</p>
+
+            <h2>9. Kontak & Pengaduan</h2>
+            <p>Jika Anda memiliki pertanyaan lebih lanjut seputar privasi data atau ingin berkonsultasi mengenai proyek pondasi, Anda dapat menghubungi kami melalui kontak resmi:</p>
+            <ul>
+                <li><strong>Nama Perusahaan:</strong> {config.company.name}</li>
+                <li><strong>Alamat Kantor / Workshop:</strong> {config.company.address}</li>
+                <li><strong>Telepon / WhatsApp:</strong> {config.company.phone}</li>
+                <li><strong>Email Resmi:</strong> {config.company.email}</li>
+            </ul>
+        </div>
+    </div>
+</BaseLayout>

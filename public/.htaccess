@@ -24,8 +24,9 @@ RewriteRule ^jasa/bore-pile-tangerang-selatan(\.html|/?)?$ /jasa/bore-pile/tange
 RewriteRule ^jasa/bore-pile-bintaro(\.html|/?)?$ /jasa/bore-pile/tangerang-selatan/bintaro/ [R=301,L]
 # Tangerang
 RewriteRule ^jasa/bore-pile-karawaci(\.html|/?)?$ /jasa/bore-pile/tangerang/karawaci/ [R=301,L]
-# Bogor
-RewriteRule ^jasa/bore-pile-cibubur(\.html|/?)?$ /jasa/bore-pile/bogor/cibubur/ [R=301,L]
+# Jakarta (Cibubur)
+RewriteRule ^jasa/bore-pile-cibubur(\.html|/?)?$ /jasa/bore-pile/jakarta/cibubur/ [R=301,L]
+RewriteRule ^jasa/bore-pile/bogor/cibubur(\.html|/?)?$ /jasa/bore-pile/jakarta/cibubur/ [R=301,L]
 # Bekasi
 RewriteRule ^jasa/bore-pile-cikarang(\.html|/?)?$ /jasa/bore-pile/bekasi/cikarang/ [R=301,L]
 

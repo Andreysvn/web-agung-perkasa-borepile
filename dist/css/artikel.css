@@ -3,6 +3,47 @@
    ============================================================ */
 
 /* --------------------------------------------
+   0. CONTAINER & BREADCRUMB
+   -------------------------------------------- */
+.blog-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 120px 24px 60px;
+    box-sizing: border-box;
+}
+
+.breadcrumb {
+    padding: 0.5rem 0;
+    margin-bottom: 1.2rem;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.breadcrumb a {
+    color: var(--primary-color, #1a3a6e);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.breadcrumb a:hover {
+    color: var(--secondary-color, #e67e22);
+    text-decoration: underline;
+}
+
+.breadcrumb .separator {
+    color: #94a3b8;
+    user-select: none;
+}
+
+.breadcrumb .current {
+    color: #475569;
+    font-weight: 600;
+}
+
+/* --------------------------------------------
    1. ARTICLE HEADER
    -------------------------------------------- */
 .article-header {
